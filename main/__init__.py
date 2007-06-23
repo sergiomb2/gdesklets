@@ -53,7 +53,7 @@ _ = Translator("gdesklets")
 
 
 NAME = "gDesklets"
-VERSION = "0.35.4"
+VERSION = "0.35.5"
 COPYRIGHT = u"Copyright \xa9 2003 - 2006 The gDesklets Team"
 DESCRIPTION = _("A desktop applet system for GNOME")
 AUTHORS = ( "Martin Grimme <martin@pycage.de>",
@@ -67,7 +67,7 @@ DOCUMENTERS = ("Martin Grimme <martin@pycage.de>",
 ICON = os.path.join(HOME, "data", "gdesklets.png")
 CREDITS = (
            (_("Version %s") % (VERSION,),
-           (u"Copyright \xa9 2003 - 2006", "The gDesklets Team")),
+           (u"Copyright \xa9 2003 - 2007", "The gDesklets Team")),
 
            (_("Core Programming:"),
            ("Martin Grimme", "Christian Meyer", "Jesse Andrews",
