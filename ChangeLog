@@ -7,7 +7,7 @@
 
 2007-06-23  Christian Meyer  <chrisime@gnome.org>
 
-	* utils/x11.c: Applied patch provided by Chris Wang.
+	* utils/x11.c: Applied patch provided by Chris Wang (#406961).
 	* libdesklets/system: Likewise.
 
 2007-04-25  Christophe Merlet  <redfox@redfoxcenter.org>
