@@ -1,0 +1,324 @@
+<section id="tutor-1st-steps"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>First Steps</title>
+
+  <para>This tutorial teaches you how to get started in programming on the
+    <application>gDesklets</application> platform. It is an updated and revised
+    version of the former HOWTO "How to Make Desklets" by Martin Grimme.</para>
+
+
+
+<section id="tutor-1st-steps-intro"><title>Introduction</title>
+
+  <section><title>The Parts of a Desklet</title>
+    <para>Each desklet consists of a window which contents are defined in a
+      <filename>.display</filename> file (which is in plain XML).
+      Controls are used to interact with the system.</para>
+
+    <para>You can easily create new desklets without any programming knowledge
+      by using existing controls in a new <filename>.display</filename> file.
+      The first part of this tutorial will teach you how.</para>
+
+    <para>Now, let's dive into the wonderful world of desklets and
+      have fun!</para>
+  </section>
+</section>
+
+
+
+<section><title>Part I: Creating .display Files</title>
+  
+  <section><title>The "Hello World!" Desklet</title>
+  
+    <para>We will begin with the obligatory
+      <emphasize>"Hello World!"</emphasize> desklet, which is very easy with
+      <application>gDesklets</application>. Save the
+      <filename>.display</filename> file as <filename>hello.display</filename>
+      and load it into <application>gDesklets</application>. This is a simple
+      static desklet without interaction.</para>
+  
+    <programlisting><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display window-flags="sticky" bg-color="white">
+  <label value="Hello, World of Desklets!" font="Serif 20" color="red"/>
+</display>
+    ]]></programlisting>
+
+    <para>The example uses the two elements <command>&lt;display&gt;</command>
+      (the display window) and <command>&lt;label&gt;</command> (a text label).
+      Elements can be configured by setting properties on them.
+      We want the display to be sticky (visible on all virtual desktops), so
+      we set the <property>window-flag</property> to <literal>sticky</literal>.
+      You can look up the available properties of each element in the reference
+      part of this book.</para>
+
+    <para>Every visual element can be positioned by giving the
+      <property>x</property> and <property>y</property> properties. Because
+      <literal>0</literal> is the default value for the coordinates, you can
+      omit  setting these properties in the label if it should be positioned
+      at <literal>(0, 0)</literal>.</para>
+
+  </section>
+
+
+  <section><title>Grouping of Elements</title>
+
+    <para>If you have already worked with vector based drawing programs, you
+      probably know the principle of grouping: several objects behave as if
+      they were one object and can be moved around as a whole.
+      The <command>&lt;group&gt;</command> container element in
+      <application>gDesklets</application> basically does the same.</para>
+
+    <para>Take a look at the following example. It illustrates how to group
+      targets together so that they can be positioned as one big object.</para>
+
+    <programlisting><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display window-flags="sticky" bg-color="white">
+  <label value="#1"/>
+
+  <group x="20" y="20" bg-color="green">
+    <label x="0" y="0" value="#2"/>
+    <label x="0" y="50" value="#3"/>
+    <label x="50" y="0" value="#4"/>
+  </group>
+</display>
+    ]]></programlisting>
+
+    <para>Now play around with the <property>x</property> and
+      <property>y</property> coordinate values of the <command>group</command>
+      and watch what happens with the labels <literal>#2, #3, #4</literal>.
+      </para>
+
+    <para>Some container elements accept only a single child. The
+      <command>group</command> counts as a single element, no matter what it
+      contains. So it can be used to put complex things into such containers.
+      </para>
+
+    <para>As you have already seen, you can set the background of a
+      <command>group</command>. You can create empty groups just to make color
+      bars. Use the <property>width</property> and <property>height</property>
+      properties to set their size, since an empty <command>group</command>
+      without a given size will collapse immediately in order to take only as
+      much space as its (non-existent) children would need.</para>
+
+    <programlisting><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display window-flags="sticky" bg-color="white" width="310" height="20">
+  <group bg-color="navy" x="5" y="5" width="300" height="10"/>
+</display>
+    ]]></programlisting>
+
+  </section>
+
+
+
+  <section><title>Relative Positioning</title>
+
+    <para>Get ready for learning about one of the most powerful positioning
+      techniques for display elements:
+      <emphasize>relative positioning</emphasize>.</para>
+
+    <para>Until now, you have placed elements by using fixed coordinates. But
+      usually you often don't know what the correct coordinate values are.
+      Imagine you want to place a percent sign next to a numeric value. The
+      value could have one to three digits, so there is no fixed position for
+      the percent sign. It should instead be place relative to the position
+      of the numeric value. This is where the <property>relative-to</property>
+      property comes into play.</para>
+
+    <para>Possible relative positionings are right to the other element, below
+      it, or below to the right of it. The appropriate values for
+      <property>relative-to</property> are "<literal>id, x</literal>",
+      "<literal>id, y</literal>", and "<literal>id, xy</literal>",
+      respectively.</para>
+
+    <para>The <property>x</property> and <property>y</property> coordinate
+      properties can still be used but are then interpreted as if the origin
+      where on the right, left, or bottom edge of the other element,
+      respectively.
+      Negative values may be used as well for overlapping effects. You can
+      use anchors (see XXX) for a finer control of relative positioning.</para>
+
+    <para>Let's take a look at the example with the percent sign to see how it
+      is done:</para>
+
+    <programlisting><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display window-flags="sticky" bg-color="white">
+  <label id="fill" value="95" font="Serif 32"/>
+  <label relative-to="fill, x" value="%" font="Serif 32"/>
+</display>
+    ]]></programlisting>
+
+    <para>This looks quite unspectacular, but whenever the width of the numeric
+      value label changed, the position of the percent sign would dynamically
+      adjust to the right place.</para>
+
+  </section>
+
+
+
+  <section><title>Positioning Anchors</title>
+
+    <para>When you set the coordinates of an element, its top left corner will
+      usually go to the specified position. This is because the default
+      <emphasize>positioning anchor</emphasize> is the top left corner.
+      There are nine positioning anchors available in total:</para>
+
+    <itemizedlist>
+      <listitem>nw - top left corner</listitem>
+      <listitem>n - middle of the top edge</listitem>
+      <listitem>ne - top right corner</listitem>
+      <listitem>e - middle of the right edge</listitem>
+      <listitem>se - bottom right corner</listitem>
+      <listitem>s - middle of the bottom edge</listitem>
+      <listitem>sw - bottom left corner</listitem>
+      <listitem>w - middle of the left edge</listitem>
+      <listitem>center - center of the element</listitem>
+    </itemizedlist>
+
+    <para>You can change the positioning anchor by setting the
+      <property>anchor</property> to one of the nine values above. The following
+      example illustrates the result of each anchor position. The coordinate
+      values of all labels are <literal>(50, 50)</literal>, but they all have
+      different positions.</para>
+
+    <programlisting><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display window-flags="sticky" bg-color="white" width="100" height="100">
+  <label x="50" y="50" anchor="nw" value="NW" font="Serif 20" color="red"/>
+  <label x="50" y="50" anchor="n" value="N" font="Serif 20" color="green"/>
+  <label x="50" y="50" anchor="ne" value="NE" font="Serif 20" color="blue"/>
+  <label x="50" y="50" anchor="e" value="E" font="Serif 20" color="yellow"/>
+  <label x="50" y="50" anchor="se" value="SE" font="Serif 20" color="purple"/>
+  <label x="50" y="50" anchor="s" value="S" font="Serif 20" color="darkred"/>
+  <label x="50" y="50" anchor="sw" value="SW" font="Serif 20" color="grey70"/>
+  <label x="50" y="50" anchor="w" value="W" font="Serif 20" color="grey50"/>
+  <label x="50" y="50" anchor="center" value="C" font="Serif 20"
+         color="black"/>
+</display>
+    ]]></programlisting>
+
+  </section>
+
+
+
+  <section><title>Unit-based Layouting</title>
+
+  </section>
+
+
+
+  <section><title>The Array</title>
+
+    <para>The <command>array</command> is a container elementes, which lets you
+      create dynamically growing/shrinking displays like e.g. task bars.
+      It consists of a set of similar child elements.</para>
+
+    <para>An <command>array</command> is used like a <command>group</command>
+      that can only have one child element (a <command>group</command> with
+      several children counts as one element and can of course be used in an
+      <command>array</command> container). The following example creates a
+      static array of several labels:</para>
+
+    <programlisting><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display window-flags="sticky" bg-color="#ffffffa0">
+
+  <array layout="vertical" length="10">
+    <label value="Text" font="16"/>
+  </array>
+
+</display>
+    ]]></programlisting>
+
+    <para>By default, an <command>array</command> has no visible children.
+      You can set the array length by using the <property>length</property>.
+      The <property>layout</property> on the other hand, can be used for
+      setting the layout of the child elements in the array, if you don't
+      layout them yourself.</para>
+
+    <para>The next example shows you how you can control an
+      <command>array</command> with inline scripting.</para>
+
+    <programlisting><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display bg-color="white">
+
+  <array id="myarray" layout="vertical" length="1">
+    <label value="Trapped inside an array."/>
+  </array>
+
+  <group id="btn1" relative-to="myarray, y" bg-color="grey70"
+         on-click="Dsp.myarray.length += 1">
+    <label value="Grow"/>
+  </group>
+
+  <group relative-to="btn1, x" x="20" bg-color="grey70"
+         on-click="if (Dsp.myarray.length != 1): Dsp.myarray.length -= 1">
+    <label value="Shrink"/>
+  </group>
+  
+</display>
+    ]]></programlisting>
+
+  </section>
+
+
+
+  <section><title>Meta Information</title>
+
+    <para>Display files can contain information about themselves and about their
+      authors. It is not required to provide such data, but it is
+      <emphasize>strongly recommended to do so!</emphasize>
+      Applications, like the graphical shell, can parse this data and use it
+      to show information about each display file.</para>
+
+    <para>Meta information is stored in the <command>&lt;meta&gt;</command> tag.
+      This tag has to be a child of the <command>&lt;display&gt;</command> tag
+      and is recognized by <application>gDesklets</application> since version
+      0.22. Older versions will complain that the
+      <command>&lt;meta&gt;</command> tag is unknown, but otherwise still work.
+      </para>
+
+    <para>The <command>&lt;meta&gt;</command> tag accepts a set of attributes
+      which describe the display. The following example demonstrates the usage
+      of the most common attributes:</para>
+
+    <programlisting><![CDATA[
+<display>
+  
+  <meta author="A. Nonymous"
+        name="Cool Desklet"
+        version="1.0"
+        description="This is a very cool desklet. ^_^"
+        preview="gfx/preview.png"/>
+
+  ...
+
+</display>
+    ]]></programlisting>
+
+    <para>The <property>preview</property> attribute is e.g. used by the
+      graphical shell to display preview images. You can lookup the valid
+      meta attributes in the reference.</para>
+
+  </section>
+</section>
+
+
+
+<section><title>Part II: Using Controls</title>
+
+  <para>To be written...</para>
+
+</section>
+
+</section>

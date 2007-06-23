@@ -1,0 +1,684 @@
+# gdesklets italian translation.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gdesklets package.
+# Luigi Maselli <riccio at inmail sk>, 2003.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gdesklets\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-10-05 12:04+0200\n"
+"PO-Revision-Date: 2004-10-05 11:18+0100\n"
+"Last-Translator: Francesco Paolo Lovergine <frankie@debian.org>\n"
+"Language-Team: Italian <frankie@debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+
+#: config/ConfigDialog.py:34 display/DisplayConfigurator.py:15
+msgid "Configuration"
+msgstr "Configurazione"
+
+#: config/ConfigDialog.py:101
+#, python-format
+msgid "No such item: %s"
+msgstr "Voce non presente: %s"
+
+#: Controls/Calendar/__init__.py:9
+msgid "Monday"
+msgstr "Lunedì"
+
+#: Controls/Calendar/__init__.py:9
+msgid "Tuesday"
+msgstr "Martedì"
+
+#: Controls/Calendar/__init__.py:9
+msgid "Wednesday"
+msgstr "Mercoledì"
+
+#: Controls/Calendar/__init__.py:9
+msgid "Thursday"
+msgstr "Giovedì"
+
+#: Controls/Calendar/__init__.py:10
+msgid "Friday"
+msgstr "Venerdì"
+
+#: Controls/Calendar/__init__.py:10
+msgid "Saturday"
+msgstr "Sabato"
+
+#: Controls/Calendar/__init__.py:10
+msgid "Sunday"
+msgstr "Domenica"
+
+#: Controls/Calendar/__init__.py:12
+msgid "January"
+msgstr "Gennaio"
+
+#: Controls/Calendar/__init__.py:12
+msgid "February"
+msgstr "Febbraio"
+
+#: Controls/Calendar/__init__.py:12
+msgid "March"
+msgstr "Marzo"
+
+#: Controls/Calendar/__init__.py:12
+msgid "April"
+msgstr "Aprile"
+
+#: Controls/Calendar/__init__.py:13
+msgid "May"
+msgstr "Maggio"
+
+#: Controls/Calendar/__init__.py:13
+msgid "June"
+msgstr "Giugno"
+
+#: Controls/Calendar/__init__.py:13
+msgid "July"
+msgstr "Luglio"
+
+#: Controls/Calendar/__init__.py:13
+msgid "August"
+msgstr "Agosto"
+
+#: Controls/Calendar/__init__.py:13
+msgid "September"
+msgstr "Settembre"
+
+#: Controls/Calendar/__init__.py:14
+msgid "October"
+msgstr "Ottobre"
+
+#: Controls/Calendar/__init__.py:14
+msgid "November"
+msgstr "Novembre"
+
+#: Controls/Calendar/__init__.py:14
+msgid "December"
+msgstr "Dicembre"
+
+#: data/gdesklets.desktop.in.h:1
+msgid "A desktop applet system for GNOME"
+msgstr "Un sistema applet desktop per GNOME"
+
+#: data/gdesklets.xml.in.h:1
+msgid "gDesklets display"
+msgstr "visore gDesklets"
+
+#: display/ContainerTarget.py:126
+#, python-format
+msgid "The %(name)s container accepts only one child."
+msgstr "Il contenitore %(name)s accetta solo un figlio."
+
+#: display/DataTarget.py:170
+#, python-format
+msgid "No such property: %s"
+msgstr "Attributo assente: %s"
+
+#: display/DataTarget.py:171
+#, python-format
+msgid "The element <b>%(name)s</b> does not have the <b>%(key)s</b> property."
+msgstr "L'elemento <b>%(name)s</b> non ha l'attributo <b>%(key)s</b> ."
+
+#: display/DisplayConfigurator.py:40
+msgid "This display is not configurable."
+msgstr "Questo visore non è configurabile."
+
+#: display/Display.py:33
+msgid "_Configure display"
+msgstr "_Configura visore"
+
+#: display/Display.py:34
+msgid "_Move display"
+msgstr "_Sposta il visore"
+
+#: display/Display.py:36
+msgid "Re_start display"
+msgstr "Riavvia visore_"
+
+#: display/Display.py:37
+msgid "_Remove display"
+msgstr "_Rimuovi visore"
+
+#: display/Display.py:735
+msgid "Do you really want to remove this display ?"
+msgstr "Vuoi davvero cancellare questo visore ?"
+
+#: display/Display.py:736
+msgid ""
+"This display will no longer be displayed and its configuration will be "
+"purged."
+msgstr ""
+"Questo visore non sarà più visualizzato e la sua configurazione sarà "
+"eliminata."
+
+#: factory/DisplayFactory.py:100
+msgid "Error while configuring display"
+msgstr "Errore nella configurazione visore"
+
+#: factory/DisplayFactory.py:101
+msgid ""
+"A display could not be configured properly. It will most likely be broken "
+"and you should consider removing it."
+msgstr ""
+"Un visore potrebbe non essere configurato correttamente. Probabilmente è "
+"difettoso e si dovrebbe considerare di rimuoverlo."
+
+#: factory/DisplayFactory.py:220
+msgid "Could not load sensor"
+msgstr "Non è possibile caricare il sensore '%(name)s'"
+
+#: factory/SensorFactory.py:68
+#, python-format
+msgid "Error in sensor '%(name)s'"
+msgstr "Errore nel sensore '%(name)s'"
+
+#: factory/SensorFactory.py:69
+msgid ""
+"An error occurred while loading a sensor. This most likely means that your "
+"system does not fulfill all its requirements."
+msgstr ""
+"Errore nel caricamento del sensore. Questo significa che il sistema non "
+"rispetta tutti i vincoli necessari."
+
+#: factory/SensorFactory.py:85
+#, python-format
+msgid "Error in sensor %(name)s"
+msgstr "Errore nel sensore '%(name)s'"
+
+#: factory/SensorFactory.py:86
+msgid "An error occurred while running a sensor."
+msgstr "Errore nella esecuzione di un sensore."
+
+#: factory/SensorFactory.py:93
+#, python-format
+msgid "Could not find sensor '%(name)s'"
+msgstr "Non è possibile trovare il sensore '%(name)s'"
+
+#: factory/SensorFactory.py:94
+msgid ""
+"A sensor could not be found. This usually means that it has not been "
+"installed."
+msgstr ""
+"Impossible trovare un sensore. Questo significa in genere che non è "
+"installato."
+
+#: gdesklets:19
+msgid ""
+"Usage: gdesklets [option] <command> [arguments...]\n"
+"\n"
+"<command>: open <files>\t(Opens the given display files)\n"
+"\tstart\t(Runs the gDesklets daemon)\n"
+"\tstop\t(Stops the gDesklets daemon)\n"
+"\tlist\t(Lists open displays)\n"
+"\trestart\t(Restarts the gDesklets daemon)\n"
+"\tprofile <profile> (Switches to the given profile)\n"
+"\tprofile\t(Shows the current and the available profiles)\n"
+"\tshell\t(Opens the graphical shell)\n"
+"\tslay\t(Kills the daemon -- use in emergency)\n"
+"\tabout\t(Prints information about gDesklets)\n"
+"\tversion\t(Prints gDesklets version)\n"
+"\thelp\t(Displays this text)\n"
+"\n"
+"[option]: --translucent (Enables translucency on the xorg 6.8.0 server)\n"
+msgstr ""
+"Impiego: gdesklets [opzione] <comando> [argomenti...]\n"
+"\n"
+"<comando>: open <files>\t(Apre i file di visore indicato)\n"
+"\tstart\t(Lancia il demone gDesklets)\n"
+"\tstop\t(Termina il demone gDesklets)\n"
+"\tlist\t(Elenca i visori aperti)\n"
+"\trestart\t(Riavvia il demone gDesklets)\n"
+"\tprofile <profile> (Passa al profilo indicato)\n"
+"\tprofile\t(Mostra ii profili corrente e disponibili)\n"
+"\tshell\t(Apre la shell grafica)\n"
+"\tslay\t(Uccide il demone -- da usare in emergenza)\n"
+"\tabout\t(Scrive informazioni su gDesklets)\n"
+"\tversion\t(Scrive la versione di gDesklets)\n"
+"\thelp\t(Mostra questo testo)\n"
+"\n"
+"[opzione]: --translucent (Abilita l'effetto traslucido del server xorg "
+"6.8.0)\n"
+
+#: gdesklets:97
+msgid "Starting gdesklets-daemon..."
+msgstr "Partenza di gdesklets-daemon..."
+
+#: gdesklets:103
+msgid "Shutting down gdesklets-daemon..."
+msgstr "Chiusura di gdesklets-daemon..."
+
+#: gdesklets:117
+msgid "Restarting gdesklets-daemon..."
+msgstr "Riavvio di gdesklets-daemon..."
+
+#: gdesklets:124
+#, c-format
+msgid "Current profile: %s"
+msgstr "Profilo corrente: %s"
+
+#: gdesklets:135
+#, c-format
+msgid "New profile: %s"
+msgstr "Nuovo profilo: %s"
+
+#: gdesklets:138
+#, c-format
+msgid "Available profiles: %s"
+msgstr "Profili disponibili: %s"
+
+#: gdesklets:143
+#, c-format
+msgid "This is %s, version %s."
+msgstr "Questo è %s, versione %s."
+
+#: gdesklets:166
+msgid "Invalid command. Please try one of the following commands!"
+msgstr "Comando non valido. Si prega di usare uno dei comandi seguenti!"
+
+#: gdesklets-daemon:99
+msgid "You need a recent version of PyGTK to run this program."
+msgstr "Occorre una versione recente di PyGTK per eseguire questo programma."
+
+#: gdesklets-daemon:112
+msgid "Could not find X display."
+msgstr "Impossible trovare il schermo X"
+
+#: gdesklets-daemon:119
+msgid "You must NOT run gDesklets as super user (root)."
+msgstr "Non eseguire gDesklets come root."
+
+#: gdesklets-daemon:141
+msgid "Could not fork daemon."
+msgstr "Impossibile riprodurre il demone."
+
+#: libdesklets/convert.py:18
+#, python-format
+msgid "%.2f TB"
+msgstr "%.2f TB"
+
+#: libdesklets/convert.py:20
+#, python-format
+msgid "%.2f GB"
+msgstr "%.2f GB"
+
+#: libdesklets/convert.py:22
+#, python-format
+msgid "%.2f MB"
+msgstr "%.2f MB"
+
+#: libdesklets/convert.py:24
+#, python-format
+msgid "%.2f kB"
+msgstr "%.2f kB"
+
+#: libdesklets/convert.py:26
+#, python-format
+msgid "%d B"
+msgstr "%d B"
+
+#: main/AboutDialog.py:7
+#, python-format
+msgid "Version %s"
+msgstr "Versione %s"
+
+#: main/AboutDialog.py:10
+msgid "Core Programming:"
+msgstr "Programmazione base:"
+
+#: main/AboutDialog.py:14
+msgid "Architecture Design:"
+msgstr "Disegno della architettura:"
+
+#: main/AboutDialog.py:17
+msgid "GNOME Integration:"
+msgstr "Integrazione in GNOME:"
+
+#: main/AboutDialog.py:21
+msgid "Artwork:"
+msgstr "Grafica:"
+
+#: main/AboutDialog.py:24
+msgid "Website:"
+msgstr "Sito web:"
+
+#: main/AboutDialog.py:43
+msgid "About gDesklets"
+msgstr "A proposito di gDesklets"
+
+#: main/client.py:193
+msgid "This software is licensed under the terms of the GNU GPL."
+msgstr "Questo software è licenziato nei termini di GNU GPL."
+
+#: main/client.py:231
+#, python-format
+msgid "Connecting to daemon [%s]"
+msgstr "Connessione al demone [%s]"
+
+#: main/client.py:245
+msgid "Cannot establish connection to daemon: timeout!"
+msgstr "Impossible stabilire una connessione con il demone: tempo scaduto!"
+
+#: main/client.py:251
+#, python-format
+msgid "Connected to daemon in %d microseconds."
+msgstr "Connesso al demone in %d microsecondi."
+
+#: main/client.py:254
+#, python-format
+msgid "Connected to daemon in %d milliseconds."
+msgstr "Connesso al demone in %d millisecondi"
+
+#: main/LogViewer.py:19
+msgid "Log Messages"
+msgstr "Messaggi di Log"
+
+#: main/Starter.py:91
+msgid "_Manage desklets"
+msgstr "_Gestione desklets"
+
+#: main/Starter.py:93
+msgid "_View log"
+msgstr "_Visualizza log"
+
+#: main/Starter.py:94 shell/plugins/Help/__init__.py:45
+#, fuzzy
+msgid "_About..."
+msgstr "Inform_azioni"
+
+#: main/Starter.py:96
+msgid "_Stop daemon"
+msgstr "_Termina demon"
+
+#: main/Starter.py:178
+msgid "File does not exist."
+msgstr "Il file non esiste"
+
+#: main/Starter.py:186
+#, python-format
+msgid "Could not open display file '%(path)s'"
+msgstr "Non è possibile aprire il file visore «%(path)s»"
+
+#: main/Starter.py:187
+msgid "The display file could not be opened because the file was not readable."
+msgstr "Il file visore non può essere aperto perché non è leggibile."
+
+#: main/Starter.py:198
+#, python-format
+msgid "Invalid display file '%(path)s'"
+msgstr "File visore errato «%(path)s»"
+
+#: main/Starter.py:199
+msgid "The display file contains invalid data and could not be loaded."
+msgstr "Il file visore contiene dati errati e non può essere caricato."
+
+#: main/Starter.py:443
+msgid ""
+"Could not connect to gnome-session. GNOME session management will not be "
+"available for this application."
+msgstr ""
+"Impossibile connettere gnome-session. La gestione di sessione di GNOME non "
+"sarà disponibile per questa applicazione."
+
+#: scripting/Script.py:111 scripting/Script.py:238 scripting/Script.py:252
+msgid "Error in script"
+msgstr "Errore nello script"
+
+#: scripting/Script.py:112 scripting/Script.py:253
+msgid "An error occurred while executing a script."
+msgstr "Un errore è avvenuto durante l'esecuzione di uno script."
+
+#: scripting/Script.py:239
+msgid "An error occurred while loading a script."
+msgstr "Un errore è avvenuto nel caricamento di uno script."
+
+#: sensor/Sensor.py:430
+msgid "translator_credits"
+msgstr "Luigi Maselli <riccio at inmail sk>"
+
+#: Sensors/FontSelector/__init__.py:86
+msgid "Fonts"
+msgstr "Tipi di caratteri"
+
+#: Sensors/FontSelector/__init__.py:87
+msgid "Fonts settings"
+msgstr "Impostazioni caratteri"
+
+#: Sensors/FontSelector/__init__.py:90
+#, python-format
+msgid "Font #%i:"
+msgstr "Carattere #%i:"
+
+#: Sensors/FontSelector/__init__.py:92
+#, python-format
+msgid "Font #%i used in the labels"
+msgstr "Carattere #%i usato nelle etichette"
+
+#: Sensors/FontSelector/__init__.py:93
+#, python-format
+msgid "Font color #%i:"
+msgstr "Carattere colore #%i:"
+
+#: Sensors/FontSelector/__init__.py:95
+#, python-format
+msgid "Font color #%i used in the labels"
+msgstr "Carattere colore #%i usato nelle etichette"
+
+#: shell/plugins/ControlBrowser/ControlInspector.py:20
+#, python-format
+msgid "%s Control"
+msgstr "%s Controllo"
+
+#: shell/plugins/ControlBrowser/__init__.py:31
+msgid "by interface"
+msgstr "per interfaccia"
+
+#: shell/plugins/ControlBrowser/__init__.py:32
+#: shell/plugins/DisplayBrowser/__init__.py:77
+msgid "alphabetically"
+msgstr "alfabeticamente"
+
+#: shell/plugins/ControlBrowser/__init__.py:76
+#, python-format
+msgid "Found %d controls."
+msgstr "Trovati %d controlli"
+
+#: shell/plugins/ControlBrowser/__init__.py:79
+#: shell/plugins/DisplayBrowser/__init__.py:98
+msgid "Invalid search expression."
+msgstr "Espressione di ricerca non valida."
+
+#: shell/plugins/DisplayBrowser/__init__.py:42
+msgid "_Run selected display"
+msgstr "_Esegui il visore selezionato"
+
+#: shell/plugins/DisplayBrowser/__init__.py:75
+msgid "by category"
+msgstr "per categoria"
+
+#: shell/plugins/DisplayBrowser/__init__.py:76
+msgid "by author"
+msgstr "per autore"
+
+#: shell/plugins/DisplayBrowser/__init__.py:95
+#, python-format
+msgid "Found %d displays."
+msgstr "Trovati %d visori"
+
+#: shell/plugins/DisplayBrowser/__init__.py:115
+msgid "No description available"
+msgstr "Nessuna descrizione disponibile"
+
+#: shell/plugins/Help/__init__.py:37
+msgid "_Help"
+msgstr "_Aiuto"
+
+#. menu.set_item("Help/Contents", gtk.STOCK_HELP, _("_Contents"), None)
+#. menu.set_item("Help/Intro", None, _("_Getting Started"), None)
+#. menu.set_item("Help/Devel", None, _("_Developer's Manual"), None)
+#. menu.set_separator("Help/Separator")
+#: shell/plugins/Help/__init__.py:42
+msgid "_Tip of the Day"
+msgstr "_Suggerimento del giorno"
+
+#: shell/plugins/Help/TipOfTheDay.py:23
+msgid "Tip of the Day"
+msgstr "Suggerimento del giorno"
+
+#: shell/plugins/Help/TipOfTheDay.py:26
+msgid "Show tips at startup"
+msgstr "Mostra suggerimenti all'avvio"
+
+#: shell/plugins/Help/tips.py:2
+msgid ""
+"You can find lots of desktop applets for use\n"
+"with gDesklets at\n"
+"\n"
+"http://gdesklets.gnomedesktop.org"
+msgstr ""
+"Si trovano molte applet di scrivania da usare\n"
+"con gDesklets su\n"
+"\n"
+"http://gdesklets.gnomedesktop.org"
+
+#: shell/plugins/Help/tips.py:7
+msgid ""
+"You can install new desktop applets easily by\n"
+"dragging the download link for the package\n"
+"from your web browser into the gDesklets Shell."
+msgstr ""
+"Si possono installare nuove applet di scrivania facilmente\n"
+"trascinando l'indirizzo di download per il pacchetto\n"
+"dal tuo browser per il web nella Shell di gDesklets."
+
+#: shell/plugins/Help/tips.py:11
+msgid ""
+"Click the right mouse button on a desktop\n"
+"applet or press F10 to open the popup menu."
+msgstr ""
+"Cliccare con il pulsante destro del mouse sulla applet di\n"
+"scrivania o premere F10 per aprire un menu a comparsa."
+
+#: shell/plugins/Help/tips.py:14
+msgid ""
+"You can move the applets around the screen\n"
+"by holding down the middle mouse button.\n"
+"\n"
+"If your mouse has only two buttons,\n"
+"hold down both of them simultaneously\n"
+"in order to simulate the middle button."
+msgstr ""
+"Si possono spostare le applet sullo schermo\n"
+"tenendo premuto il pulsante centrale del mouse.\n"
+"\n"
+"Se il mouse ha solo due pulsanti,\n"
+"si premano entrambi contemporaneamente\n"
+"per simulare il pulsante centrale."
+
+#: shell/plugins/Help/tips.py:21
+msgid ""
+"You can have different profiles of\n"
+"desktop applets and switch between them.\n"
+"\n"
+"Select \"Profiles->New profile...\" from\n"
+"the menu bar to create new profiles.\n"
+"\n"
+"Empty profiles get discarded automatically."
+msgstr "Si possono"
+
+#: shell/plugins/Help/tips.py:29
+msgid ""
+"The search bar accepts complex search\n"
+"expressions for finding your applets."
+msgstr ""
+"La barra di ricerca accetta espressioni di ricerca\n"
+"complesse per trovare delle applet."
+
+#: shell/plugins/Help/tips.py:32
+msgid ""
+"Search expressions may contain wildcards:\n"
+"\n"
+" ? matches any one character\n"
+" * matches zero or more characters"
+msgstr ""
+"Le espressioni di ricerca possono contenere dei metacaratteri:\n"
+"\n"
+" ? corrisponde a un carattere qualsiasi\n"
+" * corrisponde a nessuno o più caratteri qualsiasi"
+
+#: shell/plugins/PackageInstaller/Downloader.py:30
+msgid "Retrieving:"
+msgstr "Caricamento:"
+
+#: shell/plugins/PackageInstaller/__init__.py:27
+msgid "_Install package..."
+msgstr "_Installa pacchetto..."
+
+#: shell/plugins/PackageInstaller/__init__.py:66
+msgid "Invalid package"
+msgstr "Pacchetto non valido"
+
+#: shell/plugins/PackageInstaller/__init__.py:67
+msgid ""
+"The supplied file could not be opened as a package. It is either corrupted "
+"or not of the correct file type."
+msgstr ""
+"Il file fornito non può essere aperto come pacchetto. Può essere corrotto o "
+"di tipo non corretto."
+
+#: shell/plugins/PackageInstaller/__init__.py:81
+msgid "Installation complete"
+msgstr "Installazione completa"
+
+#: shell/plugins/PackageInstaller/__init__.py:82
+msgid "The package has been installed successfully."
+msgstr "Il pacchetto è stato installato con successo."
+
+#: shell/plugins/PackageInstaller/__init__.py:85
+msgid "Installation failed"
+msgstr "Installazione fallita"
+
+#: shell/plugins/PackageInstaller/__init__.py:86
+msgid ""
+"The package could not be installed because it contained no installable files."
+msgstr ""
+"Il pacchetto non può essere installato perché contiene file non installabili."
+
+#: shell/plugins/Profiles/__init__.py:23
+msgid "_Profiles"
+msgstr "_Profili"
+
+#: shell/plugins/Profiles/__init__.py:25
+msgid "New profile..."
+msgstr "Nuovo profilo..."
+
+#: shell/plugins/Profiles/__init__.py:79
+msgid "New profile"
+msgstr "Nuovo profilo"
+
+#: shell/plugins/Profiles/__init__.py:95
+msgid "Enter the name for a new profile:"
+msgstr "Inserire il nome di un nuovo profilo:"
+
+#: shell/plugins/Shell/__init__.py:69
+msgid "_File"
+msgstr "_File"
+
+#: shell/SearchBar.py:20
+msgid "Search"
+msgstr "Cerca"
+
+#: utils/dialog.py:78
+#, python-format
+msgid "Details (%d lines)"
+msgstr "Dettagli (%d linee)"
+
+#: utils/vfs.py:38
+#, python-format
+msgid "Could not open file %s."
+msgstr "Non è possibile aprire il file %s."

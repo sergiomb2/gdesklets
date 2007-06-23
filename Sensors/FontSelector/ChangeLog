@@ -1,0 +1,23 @@
+2003-12-19  Martin Grimme  <martin@pycage.de>
+
+	* __init__.py (FontSelector.__init__): Fixed Python 2.2 compatibility.
+
+2003-09-29  Martin Grimme  <martin@pycage.de>
+
+	* __init__.py: Integrated improvements by Psi. The sensor uses config
+	callbacks now instead of polling.
+
+2003-09-15  Martin Grimme  <martin@pycage.de>
+
+	* __init__.py (FontSelector.__init__): Fixed incompatibility with
+	Python <= 2.2.
+
+2003-09-11  Martin Grimme  <martin@pycage.de>
+
+	* __init__.py (FontSelector.__init__): Converted the font arguments
+	tuple into a list. This is required for pop() operations.
+
+2003-09-09  Martin Grimme  <martin@pycage.de>
+
+	* __init__.py (FontSelector.__init__): Added handling of arguments for
+	default fonts and colors.

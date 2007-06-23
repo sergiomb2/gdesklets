@@ -1,0 +1,78 @@
+#! /usr/bin/env python
+
+#
+# Log file viewer for gDesklets.
+#
+
+from main import LOGFILE, ICON
+from main import _
+from utils.HIGDialog import HIGDialog
+from utils.LogView import LogView
+
+import gobject
+import gtk
+import os
+import select
+
+
+#
+# Class for viewing log files.
+#
+class LogViewer(HIGDialog):
+
+    def __init__(self, logfile):
+
+        HIGDialog.__init__(self, buttons = (gtk.STOCK_CLOSE,
+                                            gtk.RESPONSE_CLOSE))
+        self.set_property("skip-taskbar-hint", False)
+        self.set_title(_("Log Messages"))
+
+        # set the icon
+        self.set_icon(gtk.gdk.pixbuf_new_from_file(ICON))
+
+        self.__logview = LogView()
+        self.__logview.set_size_request(-1, 240)
+
+        scrwin = gtk.ScrolledWindow()
+        scrwin.set_policy(gtk.POLICY_NEVER, gtk.POLICY_AUTOMATIC)
+        scrwin.add(self.__logview)
+
+        align = gtk.Alignment(0.0, 0.0, 0.0, 0.0)
+        align.set_border_width(6)
+        align.add(scrwin)
+
+        self.vbox.pack_start(align, False, False, 0)
+        gobject.timeout_add(600, self.show_all)
+
+        def stop(*args):
+            gtk.main_quit()
+
+        button = self.action_area.get_children()[-1]
+        button.connect("clicked", stop)
+        self.connect("destroy", stop)
+
+        fd = open(logfile, "r")
+        gobject.timeout_add(500, self.__read_log, fd)
+
+
+    #
+    # Reads the log in a non-blocking way.
+    #
+    def __read_log(self, fd):
+
+        rs, ws, xs = select.select([fd], [], [], 0.01)
+        if (rs):
+            d = fd.read()
+            if (d):
+                self.__logview.append(d)
+            
+        return True
+        
+
+
+if (not os.path.exists(LOGFILE)):
+    print "No log file available."
+
+else:
+    viewer = LogViewer(LOGFILE)
+    gtk.main()

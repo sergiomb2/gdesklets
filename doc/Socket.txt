@@ -1,0 +1,85 @@
+Socket
+======
+
+Introduction
+------------
+  External programs such as the frontend can talk to the gDesklets daemon
+  through a socket. Thus, it's possible to remote-control the daemons.
+
+
+
+The "client" Module
+-------------------
+  The module "main/client" can be used by external programs to talk to the
+  daemons through a object-oriented interface, e.g.
+
+    from main import client
+
+    daemons = client.list_daemons()
+    d = daemons[0]
+    print d.version()
+    print d.profiles()
+    ident = d.open_display("http://www.pycage.de/misc/nested_arrays.display")
+    d.set_profile("myprofile")
+    d.shutdown()
+
+
+Commands
+--------
+  The daemon understands the following commands:
+
+    current_profile ()
+      RETURNS str               The name of the current profile.
+    ---
+
+    displays ()
+      RETURNS str-list          The list of the IDs of the currently open
+                                displays.
+    ---
+
+    geometry (id)
+      PARAM   str id            The ID of the display.
+      RETURNS int*int*int*int   Tuple of the x, y, width, height.
+    ---
+
+    open_display (path)
+      PARAM   str path          The (VFS-)path of the display file to open.
+      RETURNS str               The ID of the new display.
+    ---
+
+    open_plug (path)
+      PARAM   str path          The (VFS-)path of the display file to open.
+      RETURNS str*long          The ID of the new display and the XID of the
+                                plug
+    ---
+
+    profiles ()
+      RETURNS str-list          The list of the names of the existing profiles.
+    ---
+
+    set_current_profile (name)
+      PARAM   str name          The name of the profile.
+    ---
+
+    set_position (id, x, y)
+      PARAM   str id            The ID of the display.
+      PARAM   int x             The x-coord of the display.
+      PARAM   int y             The y-coord of the display.
+    ---
+
+    shutdown ()
+    ---
+
+    version ()
+      RETURNS str*str           Tuple with the name and version of the
+                                gDesklets daemon.
+    ---
+
+  Type conversion is transparently handled by the "client" module. The daemon
+  does only accept strings.
+
+
+
+Format of Transported Data
+--------------------------
+  <Taz, please explain the data format here :) >

@@ -1,0 +1,12 @@
+<!-- This file contains the shared-mime-info information for gDesklets -->
+
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/x-gdesklets-display">
+    <sub-class-of type="text/xml"/>
+    <_comment>gDesklets display</_comment>
+    <glob pattern="*.display"/>
+    <magic priority="60">
+      <match type="string" value="&lt;display" offset="0:128"/>
+    </magic>
+  </mime-type>
+</mime-info>

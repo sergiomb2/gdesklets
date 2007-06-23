@@ -1,0 +1,2404 @@
+2007-04-25  Christophe Merlet  <redfox@redfoxcenter.org>
+
+	* configure.in: Added "oc" (Occitan) to ALL_LINGUAS.
+
+2007-01-24  Pema Geyleg  <pema.geyleg@gmail.com>
+
+	* configure.in: Added 'dz' to ALL_LINGUAS.
+
+=== 0.35.4 release ===
+
+2006-10-05  Christian Meyer  <chrisime@gnome.org>
+
+	* Fixed deprecation warnings and use Exception where necessary.
+	* configure.in: Removed a line break.
+
+2006-10-05  Christian Meyer  <chrisime@gnome.org>
+
+	* gdesklets: chmod'ing .gdesklets DIR and some subdirs to 0700.
+	* main/__init__.py: Added Joe as docu guy.
+
+2006-09-30  Christian Meyer  <chrisime@gnome.org>
+
+	* scripting/Script.py (Script.__script_launch): Included lauri's patch.
+
+2006-09-28  Christian Meyer  <chrisime@gnome.org>
+
+	* TODO: OOPS! The old todo page isn't available anymore.
+	* shell/plugins/Help/tips.py: gnomedesktop is dead baby...
+
+2006-09-28  Christian Meyer  <chrisime@gnome.org>
+
+	* layout/Unit.py (Unit.copy): Also remember the % value.
+
+2006-09-27  Christian Meyer  <chrisime@gnome.org>
+
+	* display/TargetCanvas.py (TargetCanvas.__render): Also accept values
+	for width, height like "2cm", etc.
+
+2006-09-27  Christian Meyer  <chrisime@gnome.org>
+
+	* configure.in: Bumped to 0.35.4.
+
+2006-09-27  Christian Meyer  <chrisime@gnome.org>
+
+	* gdesklets:
+	* gdesklets-daemon:
+	* display/Display.py:
+	* display/GlassWindow.py:
+	* display/targetregistry.py:
+	* libdesklets/system/*:
+	* main/*:
+	* utils/BGWatcher.py:
+	* utils/wallpaper.py: Removed WIN32 support. It won't work anyway and
+	the next major version of gDesklets will "natively" support other
+	operating systems.
+
+2006-09-25  Christian Meyer  <chrisime@gnome.org>
+
+	* utils/tiling.c: Minor changes (removed unnecessary checks, ...).
+
+2006-09-24  Christian Meyer  <chrisime@gnome.org>
+
+	* layout/LayoutObject.py (LayoutObject._update_geometry): Partial fix
+	for #357443.
+
+2006-09-24  Christian Meyer  <chrisime@gnome.org>
+
+	* display/TargetFrame.py: (TargetFrame.__init__) removed unused
+	variables, (TargetFrame.__on_observe_size) needed a small rewrite
+
+	* display/TargetGroup.py, display/TargetGroup2.py: Don't
+	remove(self.__image) since tiling.c now has its own destructor.
+
+	* display/TargetImage.py: Don't delete Tiling widget in delete().
+
+	* utils/tiling.c: Introducation of a (hopefully) proper destructor.
+	Renamed tiling_new to tiling_init. Also added some G_(UN)LIKELYs based
+	onmy observations.
+
+2006-09-20  Joe Sapp  <nixphoeni@yahoo.com>
+
+        * display/{GlassWindow,TargetBonoboControl}.py,
+        layout/{Unit,LayoutObject}.py, main/DisplayList.py,
+        sensor/Sensor.py, utils/{__init__,error}.py,
+        po/*.po, docs: Made typographical fixes (bug #315209).
+
+2006-09-20  Joe Sapp  <nixphoeni@yahoo.com>
+
+        * utils/eggtrayicon.c: Added background transparency to the tray icon
+        (bug #341228).  Thanks to Peter Grundstrom for the patch.
+
+2006-09-19  Raivis Dejus  <orvils@gmail.com>
+
+        * configure.in: made ALL_LINGUAS to be in one un-split line.
+        * po/lv.po: Added Latvian Translation as a fix for bug 354322
+
+2006-08-31  Joe Sapp  <nixphoeni@yahoo.com>
+
+	* gdesklets: Fixed the check for pyORBit to be >= 2.0.1 rather than ==.
+
+2006-08-30  Raivis Dejus  <orvils@gmail.com>
+
+        * configure.in: Added "lv" (Latvian) to ALL_LINGUAS.
+        * po/lv.po: Added Latvian Translation.
+
+2006-04-17  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* configure.in: Remove obsolete entry for no_NO.
+	* po/no.po: And the translation.
+
+2006-03-19  Ilkka Tuohela  <hile@iki.fi>
+
+	* configure.in: Added fi to ALL_LINGUAS.
+
+2006-02-28  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* configure.in: Added 'gl' to ALL_LINGUAS.
+
+2006-01-24  Clytie Siddall <clytie@riverland.net.au>
+
+	* configure.in	Added vi in ALL_LINGUAS line.
+	
+2006-01-21  Chao-Hsiung Liao  <j_h_liau@yahoo.com.tw>
+
+	* configure.in: Add "zh_HK" to ALL_LINGUAS.
+	
+2006-01-15  Martin Grimme  <martin@pycage.de>
+
+	* config/DaemonConfigger.py: Added some this-does-not-work-with-GTK-2.8
+	message.
+
+2006-01-10  Martin Grimme  <martin@pycage.de>
+
+	* README: Brought README up to date.
+
+	* shell/plugins/Help/__init__.py: Fixed state saving of the
+	Tip-of-the-Day dialog.
+
+	* configure.in: 
+	* main/__init__.py (VERSION): Raised version number to 0.35.3.
+
+	* display/Makefile.am (install_DATA): Added TargetGroup2.py, our ugly
+	workaround.
+
+	* display/TargetGauge.py: Implemented workaround for missing clipping
+	in GTK 2.8.
+
+	* */*: Removed Null object references completely. 
+
+2005-12-06  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* configure.in: Added nb to ALL_LINGUAS.
+
+2005-10-16  Martin Grimme  <martin@pycage.de>
+
+	* Makefile.am: Removed NullObject.py.
+
+2005-10-09  Martin Grimme  <martin@pycage.de>
+
+	* */*: Checked in some modifications by Christian Meyer. Null object
+	has been removed.
+
+2005-08-01  Christian Meyer  <chrisime@gnome.org>
+
+	* display/ContainerTarget.py (delete): Execute DisplayTarget.delete()
+	last in the function.
+
+2005-07-31  Christian Meyer  <chrisime@gnome.org>
+
+	* display/Display.py:
+	* display/GlassWindow.py:
+	* display/TargetCanvas.py:
+	* display/TargetFrame.py:
+	* display/TargetGroup.py:
+	* display/TargetImage.py:
+	* display/TargetLabel.py:
+	* main/TrayIcon.py:
+	* utils/KeyBinding.py:
+	* utils/wallpaper.py: try/except C modules.
+
+	* configure.in: Removed --enable-gnome stuff, pure nonsense. Added
+	--enable-debug. Simplified --enable-more-warnings. Removed gconf
+	checks. Tightened dependency check a bit.
+
+	* data/gdesklets-display-thumbnail.schemas.in:
+	* data/Makefile.am: Removed schema file. Doesn't work anymore. Yay, no
+	                    more gconf.
+
+	* utils/Makefile.am: Use -as-needed.
+
+	* utils/x11.c (grab_ungrab_key): Implement exception handling. Fixed
+	                                 PyMODINIT_FUNC.
+	* utils/KeyBinding.py (bind_key): Catch the exception here.
+
+	* tiling.c: Use unsigned int where appropriate, thanks gcc4. Use
+	PyMODINIT_FUNC.
+
+2005-07-25  Christian Meyer  <chrisime@gnome.org>
+
+	* configure.in:
+	* Makefile.am:
+	* tools/: Removed thumbnailer. Dœesn't work anymore.
+
+2005-07-17  Pawan Chitrakar  <pawan@nplinux.org>
+
+	* configure.in: Added ne in ALL_LINGUAS
+
+2005-07-11  Martin Grimme  <martin@pycage.de>
+
+	* display/Window.py (Window.__set_window_flags): 
+	* display/TargetDisplay.py (TargetDisplay.__init__): "managed" window
+	flag is useless and now deprecated. It has no effect.
+
+	* config/ConfigKeyBinding.py (ConfigKeyBinding.__on_change): Removed
+	print statement.
+
+	* display/GlassWindow.py: Small fix to make it work better on slow
+	systems.
+
+2005-07-10  Martin Grimme  <martin@pycage.de>
+
+	* display/GlassWindow.py (GlassWindow._set_flag_below): Small fix.
+	(GlassWindow._set_flag_above): Same here.
+
+2005-07-09  Martin Grimme  <martin@pycage.de>
+
+	* config/StateSaver.py: No longer overwrites an old config file with the
+	new format because 0.35 and 0.35.1 cannot start with an unrecognized
+	config format.
+
+	* config/Backend.py (_Backend.set_file): Added method for changing the
+	file of the config file.
+
+2005-07-04  Martin Grimme  <martin@pycage.de>
+
+	* configure.in: Check for gtk+-2.0.pc before gdk-pixbuf-2.0.pc.
+
+	* display/DisplayTarget.py (DisplayTarget.__action_callback): Small
+	improvement.
+
+2005-07-03  Martin Grimme  <martin@pycage.de>
+
+	* display/Display.py (Display.send_event): Fixed bug #306951
+	(click events shadow release events).
+
+	* shell/Plugin.py: Don't use the StateSaver here as long as the DB
+	cannot be shared.
+
+	* main/Starter.py (Starter.__add_display): Put new desklets into Float
+	mode if necessary.
+
+	* display/Window.py: Some minor improvements.
+
+	* config/StateSaver.py: Only sync data if something has changed.
+
+2005-07-02  Martin Grimme  <martin@pycage.de>
+
+	* config/ConfigInteger.py (ConfigInteger.__init__): Fixed "<integer>
+	saves floating point values" bug.
+
+	* display/TargetPlotter.py (TargetPlotter.__plot): Fixed history bug.
+
+2005-06-28  Martin Grimme  <martin@pycage.de>
+
+	* config/StateSaver.py (StateSaverServer.__init__): Use the new config
+	backend.
+
+	* config/Makefile.am (install_DATA): Added Backend.py, the new
+	(backwards-compatible) config backend which replaces the shelve module
+	from Python. We gain more portability that way. Berkely DB is known to
+	be incompatible to itself. ;)
+
+	* main/__init__.py (VERSION): Raised version number to 0.35.2.
+
+	* configure.in: Raised version number to 0.35.2 and fixed the bugzilla
+	module name typo.
+
+	* README: Added section about Float mode.
+
+	* config/settings.py (float_key): <Shift> <F12> is the default key.
+
+	* main/transition.py (msg): Updated message.
+
+	* configure.in:
+	* utils/Makefile.am: Removed old ewmh module.
+
+	* display/GlassWindow.py: Use x11 module instead of the old ewmh module.
+
+2005-06-27  Martin Grimme  <martin@pycage.de>
+
+	* display/Window.py: Implemented Float-mode handling.
+
+2005-06-25  Martin Grimme  <martin@pycage.de>
+
+	* config/ConfigKeyBinding.py: Implemented missing functionality.
+
+	* display/Window.py (Window.__on_button): Fixed focus issue.
+
+2005-06-24  Martin Grimme  <martin@pycage.de>
+
+	* config/DaemonConfigger.py: Added configuration item for key binding.
+
+	* config/settings.py (float_key): Added keybinding setting for Float
+	mode.
+
+	* utils/Makefile.am: Added x11.c for X11-specific stuff (EWMH,
+	key bindings).
+	(install_DATA): Added KeyBinding.py.
+
+	* main/Starter.py: Added keybinding and Float mode stuff.
+
+	* display/Window.py (Window.set_float_mode): Added method for toggling
+	Float mode.
+
+	* config/ConfigDialog.py (ConfigDialog.__ITEM_TABLE): Added
+	ConfigKeyBinding config widget.
+
+	* config/Makefile.am (install_DATA): Added ConfigKeyBinding.py.
+
+2005-06-20  Martin Grimme  <martin@pycage.de>
+
+	* main/Starter.py (Starter.__handle_open_display_with_id): The user can
+	disable the desklet load notification now.
+
+2005-06-19  Martin Grimme  <martin@pycage.de>
+
+	* config/DaemonConfigger.py: Added new options.
+
+	* config/settings.py (show_load_splash): Added requested configuration
+	item.
+
+2005-06-17  Martin Grimme  <martin@pycage.de>
+
+	* display/DisplayTarget.py (DisplayTarget.__init__): Default coordinates
+	of the other tags are (0, 0). This fixes an anchoring bug.
+
+	* display/TargetDisplay.py (TargetDisplay.__init__): Default coordinates
+	for <display> are unset.
+
+	* data/Makefile.am (uninstall-local): Fixed missing "\". Thanks to
+	Al_Berto for reporting.
+
+	* utils/ErrorFormatter.py (_ErrorFormatter.format): 
+	* utils/error.py (_Error.handle): Some cleanups and improvements.
+
+	* utils/__init__.py (_pretty_excepthook): Changed log message for
+	unhandled exceptions.
+
+2005-06-15  Martin Grimme  <martin@pycage.de>
+
+	* display/GlassWindow.py: Little bug fix.
+
+2005-06-14  Martin Grimme  <martin@pycage.de>
+
+	* main/Starter.py (Starter.__add_display): Close display if
+	initializing failed.
+
+	* utils/error.py (_Error.handle): Print out filename.
+
+	* utils/Element.py: Removed old code.
+
+	* utils/dialog.py (_queue_dialog): It's a bit cleaner now.
+
+2005-06-13  Martin Grimme  <martin@pycage.de>
+
+	* sensor/Sensor.py: 
+	* factory/SensorFactory.py (_SensorFactory.create_sensor): Use improved
+	error handling.
+
+	* utils/dialog.py: Cleaned up.
+
+2005-06-11  Martin Grimme  <martin@pycage.de>
+
+	* utils/error.py (_Error.handle): Improved some output strings.
+
+	* utils/dialog.py (user_error): Added a checkbox for ignoring more
+	errors from a particular desklet.
+
+2005-06-08  Martin Grimme  <martin@pycage.de>
+
+	* display/TargetImage.py: Fixed rescaling issue.
+
+	* display/TargetLabel.py (TargetLabel.__init__): 
+	* display/TargetFrame.py (TargetFrame.__init__): 
+	* display/TargetAlignment.py (TargetAlignment.__init__): Fixed RTL
+	orientation.
+
+	* utils/ErrorFormatter.py: 
+	* utils/Element.py: 
+	* utils/DOM.py: 
+	* utils/dialog.py: 
+	* scripting/Script.py: 
+	* scripting/ElementWrapper.py: 
+	* main/Starter.py: 
+	* factory/DisplayFactory.py (_DisplayFactory.create_display): 
+	* display/targetregistry.py (create): 
+	* display/DisplayTarget.py (DisplayTarget._setp_relative_to): 
+	* display/ContainerTarget.py (ContainerTarget.new_child): 
+	* config/ConfigDialog.py (ConfigDialog._invoke_callback): Improved
+	error handling.
+
+	* README: Updated to reflect latest version.
+
+	* utils/vfs.py: urllib backend does work now. gnome-vfs is no longer
+	mandatory.
+
+	* main/__init__.py (VERSION): Raised version number to 0.35.1.
+	* configure.in: Added missing dependency for ewmh stuff.
+	Raised version number to 0.35.1.
+
+	* utils/Makefile.am (install_DATA): Added error.py.
+
+2005-05-26  Martin Grimme  <martin@pycage.de>
+
+	* configure.in: 
+	* main/__init__.py (VERSION): Raised version number to 0.35.
+
+	* layout/LayoutObject.py (LayoutObject._update_all): Should still work.
+
+2005-05-25  Martin Grimme  <martin@pycage.de>
+
+	* display/DisplayTarget.py (DisplayTarget.__geometry_callback): It's
+	faster that way.
+
+	* display/TargetLabel.py: Cleaned up.
+
+	* display/TargetCanvas.py (TargetCanvas.__on_observe_size): Fixed size
+	watching stuff.
+	
+	* display/DisplayTarget.py (DisplayTarget.__geometry_callback): 
+	* display/TargetArray.py (TargetArray.__on_observe_children): 
+	* display/TargetImage.py: Small optimizations.
+
+2005-05-22  Martin Grimme  <martin@pycage.de>
+
+	* configure.in: 
+	* main/__init__.py (VERSION): Raised version number to 0.35.
+
+	* display/DisplayTarget.py (DisplayTarget._setp_relative_to): Fixed bug.
+
+2005-05-20  Martin Grimme  <martin@pycage.de>
+
+	* display/DisplayTarget.py (DisplayTarget.__geometry_callback): Small
+	performance increase.
+	(DisplayTarget.__geometry_callback): Fixed the recently introduced
+	jerky rendering.
+
+2005-05-17  Martin Grimme  <martin@pycage.de>
+
+	* config/ConfigButton.py (ConfigButton.get_widgets): <button> no longer
+	spans the whole width.
+
+	* config/ConfigButton.py (ConfigButton.update): 
+	* config/ConfigDialog.py (ConfigDialog.build): Bug fix for <button>.
+
+	* scripting/Script.py (Script.__handle_error): Bug fix.
+
+2005-05-16  Martin Grimme  <martin@pycage.de>
+
+	* utils/tiling.c (tile): Fixed typo.
+
+	* display/TargetLabel.py (TargetLabel.__render_text): Small fix.
+
+2005-05-16  Christian Meyer  <chrisime@gnome.org>
+
+	* configure.in: Bumped version to 0.35-rc1.
+	* main/__init__.py: likewise
+
+	* NEWS: Slight update.
+
+	* main/transtion.py: Add a release candidate note.
+
+2005-05-16  Martin Grimme  <martin@pycage.de>
+
+	* main/__init__.py (VERSION): 
+	* configure.in: Raised version number to 0.35rc1.
+
+	* gdesklets-daemon (_gdesklets_main): Include transtion module in order
+	to display a version transition message to the user.
+
+	* main/Makefile.am (install_DATA): Added transition.py.
+
+2005-05-15  Christian Meyer  <chrisime@gnome.org>
+
+	* README: Updated to reflect changes.
+
+2005-05-14  Martin Grimme  <martin@pycage.de>
+
+	* display/Window.py (Window.__set_struts): The desktop-borders property
+	can now use percentage values.
+
+2005-05-12  Martin Grimme  <martin@pycage.de>
+
+	* display/TargetGroup.py (TargetGroup.__set_background): Fixed bug with
+	background resizing.
+
+2005-05-12  Christian Meyer  <chrisime@gnome.org>
+
+	* README: Updated.
+
+	* gdesklets:
+	* config/StateSaver.py:
+	* main/__init__.py:
+	* main/Starter.py:
+	* plugin/ControlRegistry.py: Removed various files under .gdesklets/ to
+	more appropriate directories.
+
+2005-05-11  Martin Grimme  <martin@pycage.de>
+
+	* layout/Unit.py (Unit.__init__): Empty string in the constructor means
+	the Unit will be unset.
+
+	* display/TargetDisplay.py (TargetDisplay.__init__): 
+	* display/Window.py (Window.__set_struts): desktop-borders uses a list
+	of Unit values now.
+
+	* display/GlassWindow.py (GlassWindow.resize): Fixed a bug with window
+	resizing.
+
+	* scripting/Script.py (Script.call_function): Print a traceback to the
+	log if a inline script function fails.
+
+	* utils/wallpaper.py (_crop_coords): Fixed coordinates cropping for the
+	current wallpaper tiling implementation.
+
+	* layout/LayoutObject.py: Layouting is more accurate now for difficult
+	cases.
+
+2005-05-09  Christian Meyer  <chrisime@gnome.org>
+
+	* display/TargetPlotter.py (TargetPlotter.__parse_color): More robust.
+
+2005-05-07  Martin Grimme  <martin@pycage.de>
+
+	* display/DisplayTarget.py (DisplayTarget._setp_relative_to): Made the
+	error message more precise.
+
+	* main/__init__.py (DISPLAY): Some characters in the DISPLAY environment
+	variable might be invalid for filenames. Escape those.
+
+	* display/TargetLabel.py: Some fixes and improvements.
+
+	* display/DisplayTarget.py (DisplayTarget._setp_relative_to.f): Complain
+	if "relative-to" gets an invalid reference.
+
+2005-05-07  Christian Meyer  <chrisime@gnome.org>
+
+	* config/StateSaver.py: Fix #172019.
+
+2005-05-07  Martin Grimme  <martin@pycage.de>
+
+	* display/TargetGroup.py (TargetGroup.__on_observe_size): Small
+	improvement in memory consumption. A <group> without a background
+	doesn't have to store a background pixmap in memory.
+
+	* factory/ControlFactory.py (_ControlFactory.get_control): Fixed path
+	issue reported by Humpel. The HDDTemp control can be used now.
+
+	* shell/plugins/Help/TipOfTheDay.py (TipOfTheDay.__init__): Fixed
+	TipOfTheDay dialog for GTK 2.6.
+
+2005-05-06  Martin Grimme  <martin@pycage.de>
+
+	* Controls/Time/__init__.py: Applied patch by Joerg Leis to fix
+	bug #172098 (ITime doesn't consider Daylight Savings Time). Thanks,
+	Joerg!
+
+2005-05-06  Christian Meyer  <chrisime@gnome.org>
+
+	* main/DisplayList.py (DisplayList.__load_list): Ignore displaylist
+	file if it is corrupt.
+
+2005-05-06  Martin Grimme  <martin@pycage.de>
+
+	* layout/LayoutObject.py: Fixed children bounding box stuff completely.
+
+	* layout/HashPQueue.py (HashPQueue): Small improvements.
+
+	* gdesklets (check_user): Fixed bug with missing directories.
+
+2005-05-05  Martin Grimme  <martin@pycage.de>
+
+	* layout/LayoutObject.py (LayoutObject._update_bbox): Fixed bug with
+	resizing the children bounding box. It didn't shrink correctly.
+
+2005-05-01  Martin Grimme  <martin@pycage.de>
+
+	* scripting/Script.py (Script.__init__): Made MenuItem available in the
+	scripting environment.
+
+	* display/Display.py (Display.open_menu): Always work on a copy of the
+	menu.
+
+	* display/DisplayTarget.py (DisplayTarget._setp_menu): Fixed.
+
+	* layout/LayoutObject.py (LayoutObject.send_action): Fixed stuff for
+	containers with a border width.
+
+	* display/Display.py (Display.add_sensor.set_menu): Fixed menu stuff
+	for the (deprecated) sensor menu.
+
+2005-04-30  Martin Grimme  <martin@pycage.de>
+
+	* display/Makefile.am (install_DATA): Added MenuItem.py.
+
+	* display/Display.py (Display.set_sensitive): Removed dead method.
+	(Display.open_menu): Uses the new MenuItem class now.
+
+	* display/Window.py (Window.__on_motion): Don't send motion events to
+	the display while dragging it around.
+
+2005-04-29  Martin Grimme  <martin@pycage.de>
+
+	* display/Window.py (Window.__on_observe_display): 
+	* display/Display.py: 
+	* display/DisplayTarget.py: Added "cursor" property and implemented
+	cursor handling.
+
+2005-04-28  Martin Grimme  <martin@pycage.de>
+
+	* config/Makefile.am (install_DATA): Added ConfigButton.py.
+
+	* config/ConfigDialog.py (ConfigDialog.build): Added <button>.
+
+	* config/ConfigWidget.py (ConfigWidget.call_callback): Moved calling the
+	callback handler into a separate function.
+
+	* display/GlassWindow.py (GlassWindow._set_type_hint_dock): Made DOCK
+	type window stuff work properly again. Dunno why PyGTK can't handle
+	this. :/
+
+	* display/Display.py (Display.set_prop): Support for desktop struts.
+
+	* display/TargetGroup.py: Moved <display> stuff into its own class which
+	is derived from <group>. This makes the code a bit cleaner.
+
+	* display/Makefile.am (install_DATA): Added TargetDisplay.py.
+
+	* display/Window.py (Window.__set_struts): Implemented support for
+	desktop struts; areas of the desktop which can't be covered by maximized
+	windows.
+
+2005-04-28  Christian Meyer  <chrisime@gnome.org>
+
+	* utils/tiling.c: Fixed gcc4 warnings.
+
+2005-04-26  Martin Grimme  <martin@pycage.de>
+
+	* display/TargetLabel.py (TargetLabel.__render_text): Fixed bug with
+	wrong text color in translucency mode.
+
+2005-04-25  Martin Grimme  <martin@pycage.de>
+
+	* display/GlassWindow.py (GlassWindow.resize): Fixed window resizing.
+
+	* display/TargetLabel.py: Completely got rid of gtk.Label. By rendering
+	the label into a pixmap, we can support translucent text and more.
+	The alpha channel can now be used for text colors.
+
+	* display/DisplayTarget.py (DisplayTarget._setp_relative_to): Bug fix.
+
+	* utils/tiling.c (set_from_drawable): Added function for setting an
+	image from a XPixmap, optionally restoring the alpha channel.
+
+	* utils/utils.* (parse_gdk_pixmap): Added new parse function.
+
+2005-04-24  Martin Grimme  <martin@pycage.de>
+
+	* utils/tiling.c: 
+	* libdesklets/system/gtop.c: Some cleanups by Christian.
+
+	* display/Display.py: Make use of that function. 
+
+	* utils/__init__.py (request_idle_call): Added a function similar to
+	'request_call' but working as an idle handler.
+
+2005-04-22  Martin Grimme  <martin@pycage.de>
+
+	* utils/filter.*: 
+	* utils/render.*: 
+	* utils/tiling.c: Some code-cosmetic changes by Christian.
+
+2005-04-21  Martin Grimme  <martin@pycage.de>
+
+	* display/Makefile.am (install_DATA): Removed TargetMenu.py and
+	TargetMenuItem.py.
+
+	* display/targetregistry.py (_targets): Remove TargetMenu and
+	TargetMenuItem.
+
+	* display/TargetImage.py: 
+	* display/TargetGroup.py: 
+	* display/TargetFrame.py: Makes use of tiling.c.
+
+	* display/TargetAlignment.py (TargetAlignment._setp_alignment): Fixed
+	for the new geometry engine.
+
+	* display/Display.py: 
+	* display/DisplayTarget.py (DisplayTarget._setp_menu): Cleaned up menu
+	stuff.
+
+	* display/GlassWindow.py: Makes use of tiling.c.
+
+	* config/ConfigColor.py (ConfigColor._setp_value): Fixed for latest
+	change in utils.__init__.py.
+
+	* layout/LayoutObject.py: Small fixes/improvements.
+
+	* main/TrayIcon.py (TrayIcon.__init__): Makes use of tiling.c.
+
+	* utils/__init__.py (parse_color): Returns a (r, g, b, a) tuple now.
+
+	* utils/wallpaper.py (get_wallpaper): Makes use of tiling.c.
+
+	* utils/Makefile.am (install_DATA): Removed TilingImage.py,
+	tilingimage.c. Added render.*, filter.*.
+
+	* utils/tiling.c: Rewritten as a PyGTK widget.
+
+2005-04-17  Martin Grimme  <martin@pycage.de>
+
+	* utils/vfs.py (escape_path): Fixed missing return.
+
+	* utils/tilingimage.c (tiling_image_set_from_data): Fixed our new leak.
+
+2005-04-16  Martin Grimme  <martin@pycage.de>
+
+	* display/TargetArray.py (TargetArray.__remove_child): When removing an
+	object, we also have to remove its representation from the geometry
+	engine.
+
+	* display/TargetAlignment.py: 
+	* display/ContainerTarget.py: 
+	* display/DisplayTarget.py: 
+	* display/Display.py: Use LayoutObject for finding the target object
+	for action handling. It works already, but the transition is not
+	finished yet. There's still a lot to cleanup / remove.
+
+	* layout/LayoutObject.py: Added callback-based action handling stuff.
+
+	* utils/__init__.py (request_call): Make it more smooth with idle_add.
+
+	* display/TargetLabel.py (TargetLabel.__set_value): 
+	* display/TargetImage.py (TargetImage._setp_image_size): Small geometry
+	handling fix.
+
+2005-04-14  Abel Cheung  <maddog@linuxhall.org>
+
+	* configure.in: Added "zh_CN" "zh_TW" to ALL_LINGUAS.
+
+2005-04-11  Martin Grimme  <martin@pycage.de>
+
+	* layout/LayoutObject.py (LayoutObject): Turned class into a new-style
+	class.
+
+	* Makefile.am (SUBDIRS): Added missing layout subdir.
+
+2005-04-09  Martin Grimme  <martin@pycage.de>
+
+	* layout/LayoutObject.py: Some small fixes.
+
+	* display/TargetImage.py: Cleaned up.
+
+2005-04-08  Christian Meyer  <chrisime@gnome.org>
+
+	* utils/tiling.c: Don't register the functions in the module.
+	Removed tiling_methods array, since we don't have any members.
+
+2005-04-08  Martin Grimme  <martin@pycage.de>
+
+	* display/TargetFrame.py: Removed dead code.
+
+	* configure.in: Added Makefile for layout subdirectory.
+
+	* utils/datatypes.py: 
+	* utils/typeconverter.py: 
+	* utils/Makefile.am (install_DATA): 
+	* layout/Makefile.am (install_DATA): 
+	* scripting/Script.py: 
+	* layout/LayoutObject.py: 
+	* display/TargetLabel.py: 
+	* display/TargetImage.py: 
+	* display/TargetGauge: 
+	* display/TargetFrame.py: 
+	* display/TargetExpander.py: 
+	* display/TargetEntry.py: 
+	* display/TargetCanvas.py: 
+	* display/TargetArray.py: 
+	* display/TargetAlignment.py: 
+	* display/DisplayTarget.py: 
+	* display/Display.py: 
+	* display/ContainerTarget.py: 
+	* config/ConfigUnit.py: Moved Unit.py into layout package.
+
+	* display/TargetFrame.py: Fixed.
+
+2005-04-08  Christian Meyer  <chrisime@gnome.org>
+
+	* utils/Element.py (Element.get_name): Implemented.
+
+	* display/TargetFrame.py: Removed get_container_geometry and
+	__compute_size, since it wasn't used nowhere at all.
+	Also use utils' parse_color function.
+
+	* display/TargetGroup.py: Use utils' parse_color function.
+
+	* config/ConfigColor.py (ConfigColor.__parse_color): Removed.
+	(ConfigColor.__on_change): Shift instead of dividing.
+	(ConfigColor._setp_value): Use utils' parse_color function.
+
+	* main/__init__.py: No need for HAVE_GNOME anymore.
+
+	* utils/__init__.py (parse_color): Added this function, more
+	appropriate here.
+
+	* utils/TilingImage.py: Simplified a bit.
+
+	* utils/tiling.c:
+	* utils/tilingimage.{c, h}: Implemented show, hide, set_size.
+	(tiling_image_tile_image_on_bg): Fixed.
+
+2005-04-08  Martin Grimme  <martin@pycage.de>
+
+	* utils/Unit.py (Unit.set_100_percent): Fixed.
+
+	* display/TargetLabel.py: 
+	* display/TargetImage.py: 
+	* display/TargetGroup.py: 
+	* display/TargetFrame.py: 
+	* display/TargetCanvas.py: 
+	* display/TargetArray.py: 
+	* display/ContainerTarget.py: 
+	* display/DisplayTarget.py: 
+	* display/Display.py: Extracted geometry engine into a separate
+	stand-alone package.
+
+	* layout/Makefile.am (install_DATA): Added new files.
+
+	* main/RemoteSocket.py (RemoteSocket.start): Fixed bug #173051
+	(stop did not work n FreeBSD) with patch by Franz Klammer.
+
+2005-04-06  Christian Meyer  <chrisime@gnome.org>
+
+	* main/TrayIcon.py: Use set_from_file from utils/tiling.c.
+
+	* utils/tiling.c (set_from_file):
+	* utils/tilingimage.h (tiling_image_set_from_file):
+	* utils/tilingimage.c (tiling_image_set_from_file): New, implemented.
+
+	* utils/tilingimage.c (tiling_image_new): Fixed constructor *g*.
+
+2005-04-05  Martin Grimme  <martin@pycage.de>
+
+	* configure.in: 
+	* utils/Makefile.am: Added tilingimage.c and tilingimage.h.
+
+	* display/TargetImage.py (TargetImage.__render_image): 
+	* utils/wallpaper.py (get_wallpaper): 
+	* utils/tilingimage.c: 
+	* utils/tiling.c: 
+	* utils/TilingImage.py: Moved pixbuf stuff to C.
+
+2005-04-04  Martin Grimme  <martin@pycage.de>
+
+	* configure.in: Removed pyorbit entry. It's not an immediate dependency,
+	but one of gnome-python.
+
+2005-04-03  Christian Meyer  <chrisime@gnome.org>
+
+	* display/GlassWindow.py (GlassWindow.py.__init__): Removed useless
+	pixbuf.
+
+	* config/Win32Backend.py: Removed.
+	* config/Makefile.am: Removed entry.
+
+2005-04-02  Martin Grimme  <martin@pycage.de>
+
+	* utils/Unit.py (Unit.__hash__): Added hashing method.
+	
+2005-04-01  Steve Murphy  <murf@e-tools.com>
+
+        * configure.in: Added "rw" to ALL_LINGUAS.
+
+2005-04-01  Christian Meyer  <chrisime@gnome.org>
+
+	* display/TargetGroup.py (TargetGroup.__set_background): Check for
+	existing uri here.
+	* display/TargetFrame.py (TargetFrame.__set_border): likewise
+
+	* util/ewmh.py (_change_state): The X.SubstructureNotifyMask should
+	suffice.
+
+2005-03-31  Christian Meyer  <chrisime@gnome.org>
+
+	* utils/vfs.py (escape_path): Try to use the gnomevfs function and
+	fallback if it doesn't exist (escape_string seems to exist only in
+	newer gnomevfs versions).
+
+	* main/Starter.py (Start.__handle_shutdown): Hack to make the "Stop
+	daemon" item in the systray work.
+
+2005-03-31  Martin Grimme  <martin@pycage.de>
+
+	* config/Makefile.am (install_DATA): Removed GConfBackend.py.
+
+	* config/StateSaver.py (StateSaverServer.__check_key): Added "-" to the
+	list of valid characters since some sensors used it.
+
+	* sensor/Sensor.py: Removed unneccessary stuff.
+
+	* config/ConfigManager.py: Rewrote to use StateSaver as backend.
+
+	* main/Starter.py (Starter.__pipeline): Try to finish the pipeline if
+	an error occurs.
+
+2005-03-31  Christian Meyer  <chrisime@gnome.org>
+
+	* util/vfs.py: Replace the urllib2 methods by their urllib equivalent.
+
+	* gdesklets (_check_system): We don't need gconf, gnome and gtkhtml2
+	anymore, yay!
+
+	+ config/ConfigDialog.py (ConfigDialog._invoke_callback): Tell the user
+	to inform the other about the error in the desklet.
+
+2005-03-31  Martin Grimme  <martin@pycage.de>
+
+	* config/ConfigDialog.py (ConfigDialog._invoke_callback): Added error
+	dialog for invalid function calls.
+
+	* scripting/Script.py (Script.execute): Added parameter to disable
+	immediate error handling.
+
+2005-03-30  Christian Meyer  <chrisime@gnome.org>
+
+	* display/GlassWindow.py (GlassWindow._set_type_hint_dock):
+	Implemented, originally an ewmh function.
+
+	* utils/ewmh.py: Implemented, needs python-xlib. The C implementation
+	will be removed soon.
+
+2005-03-30  Martin Grimme  <martin@pycage.de>
+
+	* main/Starter.py: Moved the startup feedback dialog into its own class.
+
+	* main/MetaData.py (MetaData.__read_meta): Uses the vfs module now.
+
+	* display/DisplayTarget.py (DisplayTarget._getp_geometry): Fixed for
+	scripts like SideCandy which want to access geometry values during
+	initialization.
+	(DisplayTarget.set_position):
+	(DisplayTarget.set_size): It's faster this way.
+
+2005-03-29  Martin Grimme  <martin@pycage.de>
+
+	* display/DisplayTarget.py (DisplayTarget._getp_geometry): Fixed
+	bug #172011 (coordinates floating away).
+
+	* display/TargetArray.py (TargetArray.__add_child): Forgot to unlock
+	new array children. Fixed.
+
+	* display/ContainerTarget.py (ContainerTarget.unlock_geometry): Fixed
+	unlocking of empty container widgets.
+
+	* main/RemoteSocket.py (RemoteSocket.__client_handler): Correctly close
+	the client socket so that the shell doesn't hang.
+
+2005-03-28  Martin Grimme  <martin@pycage.de>
+
+	* display/Display.py (Display.initialize): 
+	* display/DisplayTarget.py (DisplayTarget.unlock_geometry): 
+	* display/ContainerTarget.py (ContainerTarget.unlock_geometry): We get
+	another speed boost in display loading by initially locking down the
+	geometry engine.
+
+2005-03-28  Martin Grimme  <martin@pycage.de>
+
+	* display/TargetCanvas.py (TargetCanvas.__render): Small performance
+	increase with SVG DOM updates.
+
+	* main/DisplayList.py (DisplayList.remove_display): Fixed bug.
+
+2005-03-27  Martin Grimme  <martin@pycage.de>
+
+	* main/Starter.py (Starter.__pipeline): Hilight error if something
+	fails.
+
+2005-03-27  Christian Meyer  <chrisime@gnome.org>
+
+	* README: travail101 fixed our bad english, thanks :-)
+
+	* utils/vfs.py: Make vfs module actually work.
+
+2005-03-27  Martin Grimme  <martin@pycage.de>
+
+	* main/RemoteSocket.py (RemoteSocket.__client_handler): Added timeout.
+
+	* utils/__init__.py (request_call): 
+	* display/DisplayTarget.py: 
+	* display/ContainerTarget.py (ContainerTarget._propagate_geometry): 
+	Another fine speed boost.
+
+2005-03-26  Christian Meyer  <chrisime@gnome.org>
+
+	* config/ConfigURI.py: Better check if pixbuf is None.
+
+	* display/GlassWindow.py: Set window manager name to unknown if
+	there's no valid one.
+
+	* utils/svg.c: Check if pixbuf has been created.
+
+	* config/DisplayConfigger.py: Removed dead code.
+	
+2005-03-26  Martin Grimme  <martin@pycage.de>
+
+	* main/Starter.py (Starter.__handle_open_display_with_id): Added
+	experimental loading feedback dialog. Still needs more love, but already
+	demonstrates the advantage of command pipelining.
+
+	* configure.in: 
+	* main/__init__.py (VERSION): Raised version number to 0.34.99CVS.
+
+	* main/Starter.py: 
+	* main/RemoteSocket.py (RemoteSocket.__client_handler): Implemented
+	experimental command pipelining to gain more control over the startup
+	process in order to tune it.
+
+2005-03-25  Martin Grimme  <martin@pycage.de>
+
+	* config/DisplayConfigger.py: Fixed.
+	(DisplayConfigger.remove_config): Fixed remove method.
+
+	* config/StateSaver.py (StateSaverServer.list): Fixed return value.
+
+2005-03-25  Christian Meyer  <chrisime@gnome.org>
+
+	* config/StateSaver.py (StateSaverServer.list): Implemented.
+	(StateSaverServer.__check_key): Don't be so strict.
+
+	* config/DisplayConfigger.py:
+	* shell/Plugin.py: Replaced the gconf backend by StateSaver.
+
+	* README: Major update.
+
+	* display/TargetImage.py (TargetImage.__render_image): Re-enable the
+	saturation feature.
+
+	* utils/tiling.c (set_saturation): Implemented.
+	(render_to_image): Use it here.
+
+2005-03-24  Christian Meyer  <chrisime@gnome.org>
+
+	* gdesklets-daemon (_write_pid) (_redirect_to_logfile): Try/except to
+	catch IOError's.
+
+	* NEWS: Updated.
+
+2005-03-24  Martin Grimme  <martin@pycage.de>
+
+	* ctrlinfo: 
+	* plugin/ControlRegistry.py (ControlRegistry.__register_control): Made
+	this more robust against bad controls.
+
+2005-03-23  Martin Grimme  <martin@pycage.de>
+
+	* main/__init__.py (VERSION): 
+	* configure.in: Raised version number to 0.34.3.
+
+	* utils/vfs.py (escape_path): Fixed for gnome-python 2.6.
+
+	* configure.in: Added missing statement.
+
+	* data/Makefile.am: Fixed wrong syntax.
+
+2005-03-23  Christian Meyer  <chrisime@gnome.org>
+
+	* tools/gdesklets-display-thumbnailer.c: Replace strstr() by
+	g_strrstr(). Shouldn't break anything.
+
+	* ctrlinfo:
+	* shell/plugins/Shell/__init__.py:
+	* utils/MetaDataRegistry.py: Use vfs module instead of urllib(2).
+	
+	* plugin/ControlRegistry.py: likewise.
+	(ControlRegistry.__register_control): Check if there's a colon, try to
+	circumvent broken Controls.
+
+	* utils/BGWatcher.py: Removed gconf weirdness. Also fixed a
+	pycage-on-drugs thingy.
+
+	* utils/BGWatcher.py (BGWatcher.__init__): Fixed, because of removal in
+	wallpaper.py.
+
+	* utils/vfs.py: Added (un)escape functions.
+
+	* main/client.py (client.get_daemon): Fixed.
+
+	* main/DisplayList∵py: Use them.
+	(DisplayList.commit): Use a lock file to make sure no concurrent writes
+	occur.
+
+2005-03-22  Martin Grimme  <martin@pycage.de>
+
+	* main/Starter.py (Starter.__remove_display): Call the garbage
+	collector after removing a display in order to clean up.
+
+2005-03-22  Christian Meyer  <chrisime@gnome.org>
+
+	* gdesklets (check_system): Remove a traceback.
+
+	* main/client.py (client.get_daemon): Tell the user to check the log
+	file, if the connection failed.
+
+	* utils/wallpaper.py: Removed unused functions.
+
+2005-03-21  Christian Meyer  <chrisime@gnome.org>
+
+	* configure.in: added --enable-gnome-support, eventually, trying to
+	get rid off gconf and other gnome deps.
+	* data/Makefile.am: likewise (thanks goes to chpe from epiphany for his
+	patience)
+
+2005-03-20  Martin Grimme  <martin@pycage.de>
+
+	* display/DisplayTarget.py (DisplayTarget.adjust_geometry): Fixed bug
+	with zero-coordinates.
+
+	* display/Display.py (Display.__init__): Provide the display path to the
+	Script object.
+
+	* scripting/Script.py (Script.__script_launch): Present the display
+	path to the user instead of the ID.
+
+	* display/TargetGroup.py (TargetGroup.__init__): Added "path" property
+	for <display>.
+
+2005-03-20  Christian Meyer  <chrisime@gnome.org>
+
+	* config/ConfigDialog.py (ConfigDialog.build): Tell the user if there's
+	nothing to configure.
+	* utils/tiling.c (grab_background): A colormap isn't needed.
+
+2005-03-19  Christian Meyer  <chrisime@gnome.org>
+
+	* utils.tiling.c (grab_background): Use some gdk functions, fix an
+	error. Revert the inlining of some functions.
+
+	* configure.in: Removed gconf dependency from tiling.
+
+2005-03-19  Martin Grimme  <martin@pycage.de>
+
+	* utils/tiling.c (tile_transparency): Got rid of GConf dependency here.
+	Thanks to the adesklets project for the alternative way to capture the
+	background.
+
+	* display/ContainerTarget.py (ContainerTarget.handle_action): Fixed bug
+	which occured when the pointer leaves the desklet window.
+
+	* display/Window.py (Window.__init__): Fixed pqn's bug.
+	GTK's POINTER_MOTION_HINT_MASK seems to be buggy, so we have to handle
+	it ourselves.
+
+2005-03-15  Christian Meyer  <chrisime@gnome.org>
+
+	* shell/plugins/PackageInstaller/Downloader.py: Removed gnomevfs
+	depencency.
+
+	* main/__init__.py: Check for gnomevfs and use urllib2 otherwise.
+	* utils/vfs.py: Fix to make urllib2 working with local paths.
+
+	* gdesklets (check_system): Removed gnomevfs check.
+
+2005-03-15  Martin Grimme  <martin@pycage.de>
+
+	* utils/tiling.c (tile_on_image): Force an alpha channel even on opaque
+	images to avoid strange results with XComposite stuff.
+
+2005-03-14  Martin Grimme  <martin@pycage.de>
+
+	* utils/tiling.c (render_to_image): Render to pixbuf in C code to gain
+	more possibilities.
+
+	* display/TargetImage.py: Fixed leak and added "opacity" property.
+
+2005-03-14  Christian Meyer  <chrisime@gnome.org>
+
+	* README: Updated, to reflect changes.
+
+2005-03-13  Martin Grimme  <martin@pycage.de>
+
+	* display/DataTarget.py (DataTarget.handle_action): 
+	* display/Display.py (Display.send_action): Only print warning once.
+
+	* plugin/ControlRegistry.py (ControlRegistry.get_control): Fixed bug.
+
+	* factory/ControlFactory.py: Uses the caching ControlRegistry now.
+
+	* utils/Makefile.am (install_DATA): Added MetaDataRegistry.py.
+
+	* plugin/Makefile.am (install_DATA): Added ControlRegistry.py.
+
+	* Makefile.am (install_SCRIPTS): Added ctrlinfo tool.
+
+	* main/__init__.py (VERSION): 
+	* configure.in: Raised version number to 0.34.2.
+
+	* config/ConfigURI.py: Added preview function for previewing images in
+	the file dialog.
+
+2005-03-12  Martin Grimme  <martin@pycage.de>
+
+	* display/Window.py: Fixed bug.
+	
+	* display/Makefile.am (install_DATA): 
+	* display/Window.py: 
+	* display/Plug.py: Removed DisplayContainer as it's no longer needed
+	since 0.34.1.
+
+	* display/Display.py (Display.build_configurator): 
+	* config/ConfigDialog.py (ConfigDialog.set_path): 
+	* config/ConfigWidget.py: 
+	* config/ConfigURI.py (ConfigURI.get_widgets.open_filedialog): Fixed
+	path issue with <uri> config item.
+
+	* gdesklets (check_system): Fixed check.
+
+2005-03-10  Martin Grimme  <martin@pycage.de>
+
+	* scripting/Script.py (Script.call_function): Fixed bug.
+
+2005-03-06  Martin Grimme  <martin@pycage.de>
+
+	* gdesklets-logview: Removed threading stuff. The logfile viewer works
+	much better now.
+
+	* display/Display.py (Display.child_observer): Save window position
+	after every movement.
+
+	* config/StateSaver.py (StateSaverServer.__flush): Fixed flushing the
+	cache.
+
+	* display/Display.py (Display.remove_display): 
+	* display/Window.py (Window.__on_observe_display): Fixed bug in
+	switching profiles on the fly.
+
+2005-03-03  Martin Grimme  <martin@pycage.de>
+
+	* display/GlassWindow.py: 
+	* display/Window.py (Window.__set_window_flags): Fixed bug.
+
+	* main/RemoteSocket.py (RemoteSocket.__client_handler): Cleaned up.
+
+	* factory/DisplayFactory.py: 
+	* main/Starter.py: 
+	* display/Window.py: 
+	* display/Display.py: Refactoring.
+
+	* utils/__init__.py (request_call): Added convenient function for
+	achieving less CPU load in many GTK-related functions.
+
+	* display/TargetLabel.py (TargetLabel.__set_font): Don't render fonts
+	smaller than 5pt as 5pt anymore.
+
+2005-03-01  Martin Grimme  <martin@pycage.de>
+
+	* gdesklets: Catch loading errors.
+
+	* main/RemoteSocket.py (RemoteSocket.__client_handler): Log the error
+	here.
+
+	* config/StateSaver.py (StateSaverServer.__init__): Disabled the change
+	from Feb 27th as it causes problems. We have to address the flushing
+	issue in another way.
+
+	* utils/DOM.py (DOM.__modify_standalone): Fixed bug with replacing the
+	"standalone" flag.
+
+2005-02-27  Martin Grimme  <martin@pycage.de>
+
+	* config/StateSaver.py (StateSaverServer.__flush): Flush the cache
+	regularly to ensure that config gets stored on disk or it'll be lost
+	after receiving a SIGKILL signal.
+
+2005-02-24  Martin Grimme  <martin@pycage.de>
+
+	* configure.in: 
+	* main/__init__.py (VERSION): Raised version number to 0.34.1.
+
+	* gdesklets (Command.parse_command): Added configure command.
+
+	* main/client.py (RemoteConnection.configure): Added configure method.
+
+	* main/Starter.py (Starter.__init__): Registered handler for CONFIGURE.
+
+	* main/remotecommands.py (COMMAND_CONFIGURE): Added CONFIGURE command.
+
+	* utils/Unit.py (Unit.__getitem__): Made the log message a warning.
+
+	* utils/__init__.py (_log): Added "is_warning" parameter for messages
+	which should only be displayed once.
+
+2005-02-23  Christian Meyer  <chrisime@gnome.org>
+
+	* gdesklets-daemon (_write_pid): try/except makedirs.
+
+2005-02-20  Martin Grimme  <martin@pycage.de>
+
+	* display/TargetGroup.py (TargetGroup._setp_bg_uri): 
+	* display/TargetImage.py (TargetImage._setp_uri): Fixed bug.
+
+2005-02-20  Christian Meyer  <chrisime@gnome.org>
+
+	* Controls/ArrayBuffer/: Updated to version 1.3.
+
+2005-02-19  Martin Grimme  <martin@pycage.de>
+
+	* plugin/Interface.py: 
+	* factory/ControlFactory.py (_ControlFactory.get_control): 
+	* shell/plugins/ControlBrowser/__init__.py: 
+	* scripting/ControlWrapper.py: 
+	* plugin/PluginRegistry.py (PluginRegistry.__register_plugin): Fixed
+	broken ID stuff.
+
+	* utils/ErrorFormatter.py (_ErrorFormatter.format): 
+	* utils/LogView.py (LogView.__markup): Changed markup tags to look
+	better when viewing unformatted.
+
+	* gdesklets: Fixed bug.
+
+2005-02-19  Christian Meyer  <chrisime@gnome.org>
+
+	* utils/ErrorFormatter.py: Removed double import.
+
+	* display/DataTarget.py (DataTarget.handle_action): Don't put the other
+	message in a new line.
+
+2005-02-19  Martin Grimme  <martin@pycage.de>
+
+	* gdesklets (Command.parse_args): Made --no-tray-icon option work.
+
+	* display/TargetGroup.py: Fixed some URI stuff.
+
+	* gdesklets-daemon (_write_pid): Create USERHOME here.
+
+	* gdesklets: Fixed a bit.
+
+	* gdesklets-daemon (_write_pid): Shell no longer crashes when started first before
+	there is a ~/.gdesklets dir.
+
+	* gdesklets-logview: No longer crashes if no log file exists.
+
+2005-02-18  Christian Meyer  <chrisime@gnome.org>
+
+	* Controls/ArrayBuffer/: Updated to pqn's latest version.
+
+2005-02-18  Martin Grimme  <martin@pycage.de>
+
+	* shell/plugins/PackageInstaller/__init__.py (Installer_Package.init): 
+	* shell/plugins/DisplayBrowser/__init__.py (UI_DisplayBrowser.init): Added
+	Separators.
+
+	* config/DaemonConfigger.py (DaemonConfigger.__load_config): Use default values
+	from settings.py.
+
+	* main/__init__.py (VERSION): Raised version number to 0.34.
+
+	* display/TargetImage.py (TargetImage.__init__): Fixed bug.
+
+	* utils/ErrorFormatter.py (_ErrorFormatter.format): Load code file using vfs.
+
+	* scripting/Script.py (Script.__handle_error): More accurate error hilighting.
+	(Script.__handle_error): Fixed bug.
+
+	* utils/Unit.py (Unit.__cmp__): Added error message.
+
+	* display/Display.py (Display.child_observer): 
+	* display/DisplayTarget.py (DisplayTarget._getp_geometry): Fixed bug.
+
+2005-02-17  Martin Grimme  <martin@pycage.de>
+
+	* display/TargetGauge.py (TargetGauge._setp_fill): Only allow values in the valid
+	range.
+
+	* configure.in: 
+	* Controls/Makefile.am (SUBDIRS): Added ArrayBuffer.
+
+2005-02-16  Martin Grimme  <martin@pycage.de>
+
+	* Controls/EventPipe/__init__.py (EventPipe): Keep It Stupid And Simple.
+	EventPipe works so much better now!
+	(EventPipe.__set_subs): Desklets can cancel subscriptions themselves
+	now.
+
+	* display/Window.py (Window.__init__): Removed dead code line.
+
+	* config/ConfigTitle.py (ConfigTitle.get_widgets): 
+	* config/ConfigDialog.py (ConfigDialog.build): Added some space above
+	title widgets.
+
+	* config/settings.py (editor): Made "gnome-text-editor" the default.
+
+2005-02-16  Christian Meyer  <chrisime@gnome.org>
+
+	* config/DaemonConfigger.py: Add a nice icon.
+	* config/settings.py:
+	* display/Display.py: Don't hardcode the editor, let the user decide.
+
+	* config/ConfigDialog.py (ConfigDialog.set_banner): Fixed a warning.
+
+	* factory/DisplayFactory.py (DisplayFactory.startElement): Trimmed
+	warning about deprecated Sensors.
+
+2005-02-16  Martin Grimme  <martin@pycage.de>
+
+	* gdesklets-logview (LogViewer.__init__): Added window icon.
+
+	* config/ConfigDialog.py (ConfigDialog.set_banner): Added a banner at
+	the top of the dialog.
+
+	* display/Display.py (Display.set_metadata): Added method for setting
+	the display's metadata. For now we just put it into the config dialog.
+
+	* factory/DisplayFactory.py (_DisplayFactory.create_display): Sends
+	metadata to the Display now.
+
+2005-02-15  Martin Grimme  <martin@pycage.de>
+
+	* display/TargetPlotter.py (TargetPlotter.__plot): Incorporated patch by
+	Matthijs ten Berge for "scale-holdmax" and "scale-bidir" properties.
+	Thanks, Matthijs!
+
+	* display/DisplayTarget.py (DisplayTarget.get_anchored_coords): 
+	Unit.Unit(w.as_pt() / 2, Unit.UNIT_PT) can be written as w / 2 now. :)
+
+	* display/GlassWindow.py: Fixed bug. Composite translucency works again.
+
+2005-02-14  Christian Meyer  <chrisime@gnome.org>
+
+	* display/DisplayTarget.py: Rollback.
+
+	* utils/TypeConverter.py: is now typeconverter.py
+
+	* factory/DisplayFactory.py:
+	* sensor/Sensor.py:
+	* utils/Element.py: Use typeconverter.
+
+	* config/ConfigWidget.py (ConfigWidget._set_config): Added a note about
+	the exception which won't be thrown, because "value" always exists.
+
+	* sensor/Sensor.py (Sensor.get_config):
+	* utils/typeconverter.py (str2type): Fixed.
+
+2005-02-14  Martin Grimme  <martin@pycage.de>
+
+	* config/DaemonConfigger.py (DaemonConfigger.__read_cmd_line): Moved
+	command line parsing here.
+
+	* config/settings.py: Removed command line parsing from here.
+
+	* utils/Unit.py: Implemented scalar multiplication and
+	division.
+
+	* config/DaemonConfigger.py: Implemented loading and saving of
+	configuration.
+
+	* config/ConfigManager.py: Removed dead import statement.
+
+	* utils/Unit.py: Changing the DPI value works now.
+
+2005-02-13  Christian Meyer  <chrisime@gnome.org>
+
+	* shell/plugins/PackageInstaller/__init__.py: Ask the user to enter an
+	URI in a politer way ;-)
+
+	* shell/plugins/DisplayBrowser/__init__.py: Normally this doesn't
+	belong here, but the shell is a collection of garbage anyway:
+	Implement "Run a (remote) desklet...".
+
+	* display/GlassWindow.py: gtk.gdk.visual_get_best_with_depth() doesn't
+	throw an exception, so there's no need to catch.
+	Use "Null" again for ewmh.
+
+	* utils/Unit.py: there's no need for a private function being static!
+	Beside that, usualy cleanups.
+
+	* display/DisplayTarget.py: Cleanups.
+
+2005-02-13  Martin Grimme  <martin@pycage.de>
+
+	* shell/plugins/Help/__init__.py (Shell_Help.init): Fixed bug.
+
+	* config/ConfigDPI.py (ConfigDPI.__on_change): Fixed wrong datatype.
+
+	* display/GlassWindow.py (GlassWindow.__init__): Toggling translucency
+	works now.
+
+	* utils/Unit.py: Set the dpi value here.
+
+	* config/settings.py (dpi): Added dpi setting.
+
+	* config/DaemonConfigger.py (DaemonConfigger.__setter): Implemented
+	reading/setting dpi value.
+	Implemented reading/setting translucency.
+
+	* display/Display.py (Display.__init__): Use DisplayConfigger here.
+
+	* config/Makefile.am (install_DATA): Added ConfigDPI.py,
+	DisplayConfigger.py, DaemonConfigger.py.
+
+	* config/ConfigDialog.py: Made this class a generic base class.
+
+	* main/Starter.py: Added configuration dialog for the daemon.
+
+2005-02-13  Christian Meyer  <chrisime@gnome.org>
+
+	* utils/HIGDialog.py (HIGDialog.__init__): Changed parameter order.
+	* utils/dialog.py: modified, due changes in HIGDialog.py.
+	* gdesklets-logview:
+	* gdesklets-migration-tool:
+	* config/ConfigDialog.py:
+	* display/DisplayConfigurator.py:
+	* main/DisplayList.py:
+	* shell/plugins/ControlBrowser/ControlInspector.py:
+	* shell/plugins/Profiles/__init__.py: likewise.
+
+	* shell/plugins/PackageInstaller/__init__.py: Implemented remote file
+	installation.
+
+	* gdesklets-daemon:
+	* utils/__init__.py: Moved the log() function and exception_hook to
+	utils.
+
+2005-02-13  Martin Grimme  <martin@pycage.de>
+
+	* display/TargetCanvas.py (TargetCanvas.__render): Use the DOM class.
+
+	* display/Display.py (Display.set_prop): Use DOM for shaping.
+
+	* utils/Makefile.am (install_DATA): Added DOM.py.
+
+2005-02-12  Martin Grimme  <martin@pycage.de>
+
+	* configure.in: Added missing Makefile.
+
+	* config/ConfigDialog.py (ConfigDialog.__updater): Implemented regular
+	updater task for the config items.
+
+2005-02-11  Martin Grimme  <martin@pycage.de>
+
+	* config/ConfigDialog.py (ConfigDialog.__add_line): Fixed tooltips.
+
+	* Controls/EventPipe/IEventPipe.py (IEventPipe.event): Fixed permission.
+
+2005-02-11  Christian Meyer  <chrisime@gnome.org>
+
+	* display/TargetArray.py: Removed __slots__ here, doesn't make sense
+	and doesn't work!
+
+	* display/ContainerTarget.py:
+	* display/DataTarget.py:
+	* display/Display.py:
+	* display/DisplayTarget.py:
+	* display/Window.py: Introduced __slots__ here, seems to work, we'll
+	see if it's useful.
+
+	* utils/Observable.py: Derive from object.
+
+	* utils/BGWatcher.py:
+	* utils/BinTree.py:
+	* utils/Element.py:
+	* utils/ErrorFormatter.py:
+	* utils/QueryParser.py:
+	* utils/TargetSettings.py:
+	* utils/Unit.py:
+	* utils/WindowSnapper.py:
+	* utils/logger.py (SynWriter): Likewise(if not already), use __slots__.
+
+2005-02-11  Martin Grimme  <martin@pycage.de>
+
+	* Controls/Makefile.am (SUBDIRS): Added EventPipe.
+
+2005-02-10  Martin Grimme  <martin@pycage.de>
+
+	* config/ConfigBoolean.py (ConfigBoolean._setp_value): Fixed "ping-pong"
+	bug.
+
+	* utils/tiling.c (make_row): Fixed tiling color bug.
+
+2005-02-10  Christian Meyer  <chrisime@gnome.org>
+
+	* display/TargetBonoboControl.py: Prepend "Warning:" to the log
+	message∵
+
+	* main/Starter.py (Starter.__add_display): Likewise.
+	(Starter.__remove_display): Likewise. Now really shows which display
+	it's removing.
+
+	* utils/__init__.py (run_in_main_thread): Improve exception handling,
+	don't show the user the unreadable traceback, it's nasty!
+
+	* utils/eggtrayicon.{c, h}: Removed as much code as possible; most
+	things aren't needed by gdesklets.
+
+2005-02-10  Martin Grimme  <martin@pycage.de>
+
+	* config/ConfigFont.py (ConfigFont._setp_value): Always emit a
+	"font-set" signal.
+
+	* config/ConfigBoolean.py (ConfigBoolean._setp_value): Always emit a
+	"toggled" signal.
+
+	* config/ConfigWidget.py (ConfigWidget.update): Added "initialized" flag
+	to make sure initial settings don't get lost if they match the default
+	values.
+
+2005-02-10  Christian Meyer  <chrisime@gnome.org>
+
+	* display/TargetImage.py (TargetImage.__render_image): Make sure scale
+	is always at least 0.1.
+
+	* display/TargetArray.py:
+	* display/Layouter.py: Made these bits nicer.
+
+	* display/ContainerTarget.py (ContainerTarget.new_child): Return if an
+	exception occured.
+	(ContainerTarget._propagate_geometry): Also request_adjust_geometry
+	here, looks like it's ok.
+	* display/targetregistry.py: Log() here if an element was requested
+	which doesn't exist.
+
+	* scripting/ControlWrapper.py: Catch the KeyError's here.
+
+	* utils/LogViewer.py: Played with colors.
+
+	* utils/vfs.py: Log the messages as "Warning:".
+
+2005-02-09  Martin Grimme  <martin@pycage.de>
+
+	* main/Starter.py: 
+	* main/client.py (RemoteConnection.open_display_with_id): 
+	* main/RemoteSocket.py (RemoteSocket.__client_handler): 
+	* utils/xdr.py: Simplified client-daemon communication.
+
+	* config/ConfigEnum.py (ConfigEnum.__init__): Fixed typo.
+
+2005-02-09  Christian Meyer  <chrisime@gnome.org>
+
+	* config/ConfigBoolean.py: fixed a typo.
+
+2005-02-09  Martin Grimme  <martin@pycage.de>
+
+	* config/ConfigEnum.py (ConfigEnum._setp_items): Fixed bug. The list
+	gets properly cleared now.
+	Added "selection" property.
+
+2005-02-09  Christian Meyer  <chrisime@gnome.org>
+
+	* configure.in: #166704 should be really fixed now.
+	* data/Makefile.am: Check if UPDATE_MIME_DATABASE really exists.
+
+2005-02-08  Christian Meyer  <chrisime@gnome.org>
+
+	* configure.in: Addressing #166704. Bumped version to 0.34.
+
+	* shell/plugins/Shell/__init__.py: Removed gnome stuff.
+
+2005-02-08  Martin Grimme  <martin@pycage.de>
+
+	* config/ConfigColor.py (ConfigColor._setp_value): 
+	* config/ConfigString.py (ConfigString._setp_value): 
+	* config/ConfigURI.py (ConfigURI._setp_value): Fixed bug. Thanks to
+	pqn for reporting.
+
+2005-02-08  Christian Meyer  <chrisime@gnome.org>
+
+	* display/TargetHTML.py: Fixed read_entire_file again (older gnomevfs
+	versions block the whole process).
+
+2005-02-05  Christian Meyer  <chrisime@gnome.org>
+
+	* display/DataTarget.py:
+	* display/Display.py:
+	* factory/DisplayFactory.py:
+	* libdesklets/system/Arch.py:
+	* utils/Unit.py: Get rid off the warnings module and use our own log()
+	function.
+
+	* display/DisplayTarget.py: Small cleanup.
+
+	* utils/LogView.py (LogViewer.__markup): Adopt to make it work with
+	log(), otherwise keywords wouldn't be hilighted.
+
+2005-02-06  Martin Grimme  <martin@pycage.de>
+
+	* display/Display.py (Display.set_prop): Implemented experimental
+	support for dynamic window shapes using SVG.
+
+	* scripting/Script.py (Script.__script_add_timer): Accept floats for
+	intervals as well.
+
+	* display/ContainerTarget.py (ContainerTarget._propagate_geometry): 
+	* display/DisplayTarget.py (DisplayTarget.request_adjust_geometry): 
+	Gained a huge performance boost by avoiding redundant calls of
+	adjust_geometry().
+
+	* config/ConfigUnit.py (ConfigUnit.__on_change): Fixed behavior.
+
+2005-02-05  Christian Meyer  <chrisime@gnome.org>
+
+	* display/Display.py:
+	* display/TargetCanvas.py:
+	* display/TargetExpander.py:
+	* display/TargetHTML.py:
+	* display/TargetImage.py:
+	* utils/TilingImage.py:
+	* utils/vfs.py: Improved exception handling if a file doesn't exist.
+	Needs some testing if it's ready enough.
+
+	* utils/Makefile.am: Also remove the .so and .la* files.
+
+	* ewmh.c:
+	* svg.c:
+	* systray.c:
+	* utils.c: Some changes which should make gDesklets more portable.
+
+2005-02-05  Martin Grimme  <martin@pycage.de>
+
+	* config/Makefile.am (install_DATA): Added ConfigUnit.py.
+
+	* config/ConfigDialog.py (ConfigDialog.__ITEM_TABLE): Added <unit>
+	config item.
+
+	* utils/Unit.py (Unit.__repr__): Fixed bug.
+
+	* main/RemoteSocket.py (RemoteSocket.__client_handler): Made log message
+	more descriptive.
+
+	* main/Starter.py (Starter.__remove_display): Fixed bug.
+
+	* config/ConfigDialog.py: 
+	* config/ConfigWidget.py (ConfigWidget._set_config): Save values with
+	datatype info.
+
+	* utils/Element.py: 
+	* utils/datatypes.py: Much nicer now.
+
+	* scripting/Script.py (Script.set_value): Implemented a better and more
+	robust way of setting values in the scripting environment.
+
+	* utils/Unit.py (Unit.__init__): Taught the constructor to handle string
+	input.
+
+2005-02-04  Martin Grimme  <martin@pycage.de>
+
+	* display/GlassWindow.py (GlassWindow.__get_window_manager): Don't
+	rely on the proper datatype for the _NET_WM_NAME property (UTF8_STRING)
+	because some stupid window managers use a wrong type anyway.
+	(GlassWindow.__init__): Use pitch black to avoid a visible background
+	layer with the XComposite extension.
+
+2005-02-01  Martin Grimme  <martin@pycage.de>
+
+	* config/ConfigWidget.py (ConfigWidget.update): Catch the exception
+	here.
+
+	* scripting/Script.py (Script.get_value): Let the exception be raised
+	here.
+
+	* config/ConfigFloat.py (ConfigFloat._setp_increment): Implemented
+	"increment" property for setting the size of increments of the spin
+	button.
+
+2005-02-01  Christian Meyer  <chrisime@gnome.org>
+
+	* MAINTAINERS: Added.
+
+	* AUTHORS: Updated.
+
+2005-01-31  Martin Grimme  <martin@pycage.de>
+
+	* scripting/Script.py (Script.__script_launch): Implemented secure
+	launch command.
+
+	* config/StateSaver.py (DefaultStateSaver): Added DefaultStateSaver for
+	storing internal states. This is a singleton object.
+
+	* utils/HIGDialog.py (HIGDialog.__init__): Made dialog text selectable.
+
+2005-01-31  Christian Meyer  <chrisime@gnome.org>
+
+	* gdesklets: Removed check for gnome.ui, since we removed that.
+
+2005-01-31  Christian Meyer  <chrisime@gnome.org>
+
+	* gdesklets:
+	* main/Starter.py:
+	* main/__init__.py:
+	* main/remotecommands.py
+	* main/client.py:
+	* shell/plugins/gDeskletsClient/__init__.py: Removed gnome-session
+	support, it never entirely worked. xfce users will be happy now, since
+	it was conflicting with xfce-session. If you still want to start
+	gdesklets on GNOME startup you can add it in gnome-session-properties.
+	This also saves some memory and maybe has also a performance impact.
+	:-)
+
+2005-01-30  Christian Meyer  <chrisime@gnome.org>
+
+	* main/client.py (get_daemon): Made the parameter of os.system() a
+	little bit nicer.
+
+2005-01-30  Martin Grimme  <martin@pycage.de>
+
+	* config/StateSaver.py (StateSaverServer): Fixed to protect from
+	"known-location attacks".
+
+	* gdesklets (usage_and_exit): Added option --no-tray-icon to help
+	message.
+
+	* main/client.py (get_daemon): Pass on options to daemon.
+
+	* main/Starter.py (Starter.__init__): 
+	* config/settings.py (show_tray_icon): Added switch for disabling the
+	tray icon. Fixes #162588.
+
+	* display/Target*.py:
+	* display/ContainerTarget.py: 
+	* display/DataTarget.py: 
+	* display/DisplayTarget.py: Added name argument.
+
+	* display/targetregistry.py (create): Specify element name on creation.
+	
+
+2005-01-30 Christian Meyer  <chrisime@gnome.org>
+
+	* main/RemoteSocket.py (RemoteSocket.start): Made socket connection
+	more robust.
+
+	* main/Control.py (Control._remove_timer): There's no timeout_remove,
+	it's called source_remove.
+
+	* README: Updated for DAU's sake ;-)
+
+	* gdesklets: Introduced class Command and moved most code there.
+
+	* main/Starter.py: Removed shutil import, whitespace cleanups.
+
+2005-01-30  Martin Grimme  <martin@pycage.de>
+
+	* main/Control.py (Control._update): run_in_main_thread to avoid
+	deadlocks.
+
+	* config/ConfigEnum.py (ConfigEnum.__on_change): Bug fix for empty
+	<enum> item list.
+
+	* factory/DisplayFactory.py (_DisplayFactory.create_display): Fixed bug
+	with dynamic <enum> config items.
+
+	* display/Display.py (Display.build_configurator): Method for building
+	the configurator.
+
+	* config/ConfigDialog.py (ConfigDialog.build): Removed add_item method,
+	do the stuff in the new build method.
+
+	* utils/Element.py (Element.set_prop): Improved type error dialog
+	message.
+
+	* utils/datatypes.py: Some improvements.
+
+2005-01-29  Martin Grimme  <martin@pycage.de>
+
+	* config/ConfigEnum.py (ConfigEnum._setp_value): Fixed updating bug.
+
+2005-01-29  Christian Meyer  <chrisime@gnome.org>
+
+	* display/TargetImage.py:
+	* utils/TilingImage.py: Removed the run_nonblocking thing, doesn't
+	work, at least not for me at the moment.
+
+	* main/RemoteSocket.py: Lots of love here. Basically, I'm trying to
+	catch every possible which makes debugging quite easy...
+
+	* utils/xdr.py: Raise XDRError instead of assert data != 0.
+
+2005-01-28  Martin Grimme  <martin@pycage.de>
+
+	* main/RemoteSocket.py (RemoteSocket): Got rid of threads altogether.
+	This gave us an unexpected boost in overall performance of the core
+	and more stability. Threading in Python sucks.
+
+	* config/ConfigWidget.py (ConfigWidget._set_config): Significant
+	startup performance improvement.
+
+	* utils/__init__.py (run_nonblocking.worker): Fixed typo.
+
+	* utils/TilingImage.py (TilingImage.set_from_file): 
+	* display/TargetImage.py (TargetImage.__load_image): Load images
+	non-blocking.
+
+	* gdesklets (slay): Remove the dead socket file as well.
+
+	* config/Makefile.am (install_DATA): Removed obsolete ConfigSettings.py.
+
+	* utils/__init__.py (run_nonblocking): Added function for running
+	(thread-safe) functions in a new thread, while the main thread waits
+	in a nonblocking way.
+
+	* sensor/Sensor.py (Sensor.get_config): Check for UNDEF sentinel here.
+	Sensor.py is the last class that uses the ConfigManager. Maybe we can
+	ditch it soon.
+
+	* config/ConfigManager.py (_ConfigManager.UNDEF): Provide the UNDEF
+	sentinel from the backend.
+
+	* factory/SensorFactory.py: ConfigManager is not needed in here.
+
+	* shell/plugins/Shell/__init__.py (UI_Shell.__on_file_drop): 
+	* shell/plugins/PackageInstaller/Package.py: 
+	* scripting/Script.py (Script.__handle_error): 
+	* display/Display.py (Display.__handle_source): Fixed bug #165178
+	(white space in filenames).
+
+	* main/Starter.py (Starter.__remove_display): Fixed recently introduced
+	"duplicated display" bug.
+
+	* config/Win32Backend.py (Win32Backend.UNDEF): 
+	* config/GConfBackend.py (GConfBackend.UNDEF): Added UNDEF value.
+
+	* config/ConfigURI.py: 
+	* config/ConfigTitle.py: 
+	* config/ConfigString.py: 
+	* config/ConfigInteger.py: 
+	* config/ConfigFont.py: 
+	* config/ConfigFloat.py: 
+	* config/ConfigEnum.py: 
+	* config/ConfigColor.py: 
+	* config/ConfigBoolean.py: 
+	* config/ConfigWidget.py: 
+	* config/ConfigDialog.py: Rewrote prefs system to be dynamic and
+	scriptable.
+
+	* display/Display.py: Cleaned up and improved prefs system.
+
+	* factory/DisplayFactory.py: Cleaned up and improved <prefs> parsing.
+
+	* utils/Element.py: Some fixes.
+
+	* utils/HIGDialog.py (HIGDialog.__init__): Added option for preventing
+	the dialog from self-destruction.
+
+2005-01-27  Christian Meyer  <chrisime@gnome.org>
+
+	* main/Starter.py: Fixed a bug when removing displays.
+
+2005-01-26  Christian Meyer  <chrisime@gnome.org>
+
+	* main/DisplayList.py:
+	* main/Starter.py: Many countless tweaks. :-)
+
+2005-01-25  Christian Meyer  <chrisime@gnome.org>
+
+	* Controls/System/__init__.py: Fixed "which" property.
+
+	* main/Starter.py (Starter.__load_position): Don't be so harsh about
+	the missing position file.
+
+	* gdesklets (check_first_run): Implemented, checks if the user is
+	running gDesklets for the first time.
+
+	* main/__init__.py: Moved creation of ".gdesklets/" to
+	check_first_run() in gdesklets.
+
+2005-01-24  Martin Grimme  <martin@pycage.de>
+
+	* utils/Element.py (Element.set_prop_from_string): Fixed bug.
+
+	* utils/datatypes.py (TYPE_FLOAT): Accept integers as floats, too.
+
+2005-01-24  Christian Meyer  <chrisime@gnome.org>
+
+	* gdesklets: Marked some text for translation.
+
+	* gdesklets-daemon: Moved check_user() to gdesklets
+
+	* main/Starter.py:
+	* main/__init__.py: Improved exception handling, bumped version to
+	0.33.1.99.
+
+	* main/client.py (client.__get_daemon): Just use "start" for win32
+	to launch the daemon for now.
+
+	* gdesklets:
+	* main/DisplayList.py:
+	* shell/plugins/gDeskletsClient/__init__.py: Catch the KeyError if a
+	path and/or a profile isn't in the list.
+
+	* plugin/PluginRegistry.py (PluginRegistry.__scan_repository): Revert
+	to use print again, there's no log() in the __builtin__, when the
+	shell is executed.
+
+	* display/targetregistry.py (targetregistry.create): We only need to
+	have the dict access in the try/except block.
+
+	* display/ContainerTarget.py (ContainerTarget.new_child):
+	* display/Display.py (Display.new_child): Catch the KeyError here.
+
+2005-01-23  Martin Grimme  <martin@pycage.de>
+
+	* display/Display.py: Moved target-specific stuff from Script here.
+
+	* scripting/Script.py: Removed target-specific stuff from here.
+
+	* scripting/Makefile.am (install_DATA): Removed TargetWrapper.py,
+	added (more general) ElementWrapper.py.
+
+	* utils/datatypes.py: Datatypes are functions which check for the type.
+
+	* utils/TypeConverter.py: TypeConverter is a singleton class now.
+
+	* sensor/Sensor.py: 
+	* factory/DisplayFactory.py: New syntax for TypeConverter.
+
+	* display/TargetLabel.py (TargetLabel.__init__): A label has to accept
+	everything printable for its value.
+
+	* display/targetregistry.py (create): Element name shouldn't be set by
+	a method.
+
+	* display/DataTarget.py: Moved property and datatype stuff to Element.
+
+	* utils/Makefile.am (install_DATA): Added Element.py.
+
+	* display/GlassWindow.py (GlassWindow.__init__): Translucency works,
+	but Windows' translucency capabilities are very limited when compared
+	to Xorg.
+	(GlassWindow.__init__): Fixed typo.
+
+2005-01-22  Martin Grimme  <martin@pycage.de>
+
+	* display/GlassWindow.py (GlassWindow.__init__): Experimental
+	translucency on win32.
+
+	* utils/TilingImage.py (TilingImage.tile_on_image_win32): Resurrecting
+	old code to get things work on win32. I feel like a necromancer.
+	(TilingImage.tile_on_image_win32): Fixed bug.
+
+2005-01-22  Christian Meyer  <chrisime@gnome.org>
+
+	* main/__init__.py: Set USERHOME to $APPDATA\gDesklets for win32.
+
+	* main/client.py: Make starting of the daemon work in win32.
+
+2005-01-22  Martin Grimme  <martin@pycage.de>
+
+	* main/client.py (get_daemon): Launch the daemon on win32.
+	(daemon_is_running): Runs on win32.
+	(get_daemon): Use daemon_is_running to check if the daemon is running,
+	instead of duplicating code.
+
+	* display/targetregistry.py: Disabled some elements for win32.
+
+	* main/Starter.py (Starter.__handle_set_startup_command): Win32 does not
+	need gnome-session support.
+
+	* gdesklets-daemon (gdesklets_main): Wrap gtk.main() in threads_enter
+	and threads_leave. This is more correct and required on win32.
+
+	* utils/__init__.py (run_in_main_thread_win32): Experimental win32
+	compatibility.
+	Fixed typo.
+	(run_in_main_thread): Removed win32 special case. It's fortunately not
+	needed.
+
+	* main/client.py (RemoteConnection.__init__): 
+	(get_daemon): 
+	* main/Starter.py (Starter.__init__): 
+	* main/RemoteSocket.py (RemoteSocket.__init__): Experimental win32
+	compatibility.
+	(RemoteSocket.__init__): Fixed typo.
+	(RemoteSocket.__init__): Typo again, argh!
+
+	* config/ConfigSettings.py: 
+	* display/GlassWindow.py: 
+	* utils/BGWatcher.py (BGWatcher.__init__): Experimental win32
+	compatibility.
+
+	* utils/wallpaper.py (get_wallpaper): Fixed bug.
+
+2005-01-22  Christian Meyer  <chrisime@gnome.org>
+
+	* displayDisplay.py: Removed NullObject import.
+	* libdesklets/hddtemp.py: likewise.
+	* sensor/MetaSensor.py: likewise.
+	* sensor/Sensor.py: likewise.
+	* utils/HIGDialog.py: likewise.
+	* main/__init__.py: likewise, also fixed path where data should be
+	stored if gdesklets' running under Windows.
+
+	* utils/wallpaper.py: No tiling in win32.
+
+	* Controls/URI/__init__.py: Removed gnomevfs dep.
+
+	* libdesklets/system/__init__.py: Don't import gtop on win32 systems.
+
+	* gdesklets: just use print, don't redirect to stderr.
+	* libdesklets/hddtemp.py: Use log().
+	* plugin/PluginRegistry.py: likewise.
+
+2005-01-22  Martin Grimme  <martin@pycage.de>
+
+	* utils/vfs.py: 
+	* utils/TilingImage.py: 
+	* config/ConfigManager.py: Experimental win32 compatibility.
+	* config/Makefile.am (install_DATA): Added experimental win32 backend.
+
+	* gdesklets-daemon: Removed redundant check for Xserver.
+	Some experimental win32 compatibility.
+	Bug fix.
+	(redirect_to_logfile): /dev/null? Never heard...
+
+	* main/__init__.py: Experimental win32 compatibility.
+
+	* utils/vfs.py (exists): Implemented exists() function.
+
+	* utils/TilingImage.py: 
+	* main/Starter.py: 
+	* factory/DisplayFactory.py: 
+	* display/TargetHTML.py: 
+	* display/Display.py: 
+	* display/TargetExpander.py: 
+	* display/TargetCanvas.py: 
+	* display/TargetImage.py: Uses vfs.py now.
+
+	* utils/Makefile.am (install_DATA): Added vfs.py to move gnomevfs
+	dependency out of the core.
+
+2005-01-21  Martin Grimme  <martin@pycage.de>
+
+	* config/ConfigColor.py (ConfigColor.__parse_color): Fixed. We have to
+	return integer alpha values here.
+
+	* config/ConfigFont.py: Got rid of gnome.ui.FontPicker.
+
+	* display/TargetPlotter.py (TargetPlotter.__plot): Fixed.
+
+	* config/ConfigColor.py: Got rid of gnome.ui.ColorPicker.
+
+	* display/TargetLabel.py (TargetLabel.__set_color): Ignores alpha
+	channel and thus accept color values with alpha channel now.
+
+	* display/TargetPlotter.py (TargetPlotter.__plot): Fixed bug with empty
+	history.
+
+	* display/TargetHTML.py (TargetHTML.__on_link_clicked): Removed
+	redundant resolving of URL.
+
+2005-01-20  Christian Meyer  <chrisime@gnome.org>
+
+	* config/ConfigEnum.py: Removed gnome.ui import statement.
+	* shell/plugins/Shell/__init__.py: likewise.
+
+	* display/TargetArray.py:
+	* display/TargetBonoboControl.py:
+	* display/TargetGroup.py:
+	* display/TargetImage.py:
+	* display/TargetLabel.py:
+	* display/TargetPlotter.py: Code review.
+
+	* factory/SensorFactory.py (SensorFactory.create_sensor): Fixed
+	ErrorFormatter.
+
+	* sensor/Sensor.py: Removed __on_about and __on_quit.
+
+	* sensor/SensorConfigurator.py: Removed gnome.ui dependency.
+
+2005-01-20  Christian Meyer  <chrisime@gnome.org>
+
+	* TODO: Updated.
+
+2005-01-18  Martin Grimme  <martin@pycage.de>
+
+	* scripting/Script.py (Script.__script_add_timer): Fixed bug.
+	'0' is a valid timeout value, of course.
+
+	* config/ConfigURI.py (ConfigURI.__init__.on_ok): Immediately set the
+	property after selecting a file with the filechooser. Don't wait for
+	the entry to lose focus.
+	(ConfigURI.__init__): Converted to GtkFileChooser.
+
+	* utils/TilingImage.py (TilingImage.set_from_file): Fixed bug.
+
+	* display/TargetFrame.py (TargetFrame.__redraw_frame): Small bug fix for
+	borders with size zero.
+
+2005-01-16  Martin Grimme  <martin@pycage.de>
+
+	* display/TargetCanvas.py (DOMBuilder.__modify_standalone): Rip out
+	standalone = 'no' because that doesn't work without net access and
+	slows down with net access.
+
+	* scripting/Script.py (Script.__init__): Made exception names available
+	in the sandbox.
+
+2005-01-15  Martin Grimme  <martin@pycage.de>
+
+	* display/TargetCanvas.py (DOMBuilder.__init__): Added error hilighting
+	for SVG code as well.
+
+	* factory/DisplayFactory.py (_DisplayFactory.create_display): Use the
+	new "lineno" parameter here to clean up this mess.
+
+	* utils/ErrorFormatter.py (_ErrorFormatter.format): Added "lineno"
+	parameter.
+
+	* gdesklets-daemon (pretty_excepthook): Print a deep trace here.
+
+	* utils/ErrorFormatter.py (_ErrorFormatter.format): Made this function
+	more robust.
+	(_ErrorFormatter.format): Cleaned up a bit.
+
+2005-01-15  Christian Meyer  <chrisime@gnome.org>
+
+	* utils/dialog.py (dialog._set_details): Fixed layout/bug.
+
+	* scripting/Script.py (Script.call_function): Removed traceback print.
+
+	* main/Starter.py: Changed print statements.
+
+	* gdesklets-daemon: Better message for the first log entry.
+
+2005-01-15  Martin Grimme  <martin@pycage.de>
+
+	* utils/ErrorFormatter.py (_ErrorFormatter.format): Dig deep to find
+	more. Implemented support for digging deep into the backtrace.
+	It's just not used anywhere yet.
+
+2005-01-14  Martin Grimme  <martin@pycage.de>
+
+	* scripting/Script.py: Use the scriptlet objects for keeping track of
+	the scripts.
+	(Script.get_value): 
+	(Script.set_value): Create a scriptlet here, too.
+
+	* display/Display.py (Display.execute_callback_script): 
+	* factory/DisplayFactory.py (_DisplayFactory.endElement): Create
+	scriptlet objects.
+
+	* scripting/Makefile.am (install_DATA): Added Scriptlet.py.
+
+	* utils/ErrorFormatter.py (_ErrorFormatter.format): 
+	* factory/DisplayFactory.py (_DisplayFactory.create_display): 
+	* scripting/Script.py (Script.__handle_error): One stupid bug chasing
+	the next one; I really should go to bed now. *g*
+	But at least we have nice hilighting of XML parse errors now.
+
+2005-01-14  Christian Meyer  <chrisime@gnome.org>
+
+	* config/ConfigSettings.py (ConfigSettings.initialize): Use log().
+
+	* factory/DisplayFactory.py (DisplayFactory.create_display): Improved
+	exception handling here. Pop up a dialog if a script can't be loaded.
+
+2005-01-13  Christian Meyer  <chrisime@gnome.org>
+
+	* display/*: Use log() instead of print >> sys.stderr now.
+	* display/TargetImage.py (TargetImage.__load_image): Always load
+	image, even if it's the same one.
+
+	* main/*: likewise.
+	* main/LogViewer.py: Removed.
+	* main/Makefile.am: likewise
+
+	* utils/*: likewise.
+
+	* gdesklets-daemon: Use pretty_excepthook now.
+
+2005-01-13  Martin Grimme  <martin@pycage.de>
+
+	* scripting/Script.py (Script.__handle_error): 
+	* utils/ErrorFormatter.py (_ErrorFormatter.format): Added special
+	treatment for parser errors.
+
+	* scripting/Script.py (Script.get_value): Fixed bug.
+
+2005-01-13  Christian Meyer  <chrisime@gnome.org>
+
+	* factory/DisplayFactory.py (DisplayFactory.endElement): Check if bind
+	attribute exists for tags which need it.
+
+	* scripting/Script.py: Code Review!
+	Moved "import sys" to __handle_error.
+	(Script.__script_add_timer): if the type of the interval isn't correct
+	or interval isn't given, show an error dialog.
+	(Script.__script_get_control): check if interface really exists, show
+	an error dialog if it doesn't.
+	(Script.get_value): check if name exists in the environment and if
+	it's empty. Added a TODO, because we still have to check the type.
+
+2005-01-13  Martin Grimme  <martin@pycage.de>
+
+	* scripting/Script.py (Script.__handle_error): Enabled dialogs.
+	(Script.__handle_error): Fixed an IndexError. Still not satisfying,
+	but good enough for the time being.
+
+	* utils/dialog.py (_set_details): Uses GtkExpander and LogView widget
+	now.
+
+	* display/DataTarget.py: 
+	* display/TargetCanvas.py: 
+	* factory/DisplayFactory.py (_DisplayFactory.create_display): 
+	* factory/SensorFactory.py (_SensorFactory.create_sensor): 
+	* main/Starter.py (Starter.__create_display): 
+	* shell/plugins/DisplayBrowser/__init__.py
+	(UI_DisplayBrowser.__on_remove.remove): 
+	* shell/plugins/PackageInstaller/__init__.py
+	(Installer_Package.__install_file): dialog.warning call changed.
+
+2005-01-12  Martin Grimme  <martin@pycage.de>
+
+	* scripting/Script.py: Implemented fancy hilighting of bad line of
+	scripting code in case of an error.
+
+	* gdesklets-daemon: Added log() to __builtins__ and use ErrorFormatter
+	in the except hook.
+
+	* utils/Makefile.am (install_DATA): Added ErrorFormatter.py.
+	* utils/ErrorFormatter.py: Added.
+
+	* gdesklets-logview: Uses the LogView widget.
+
+	* utils/LogView.py: Added.
+	* utils/Makefile.am (install_DATA): Added LogView.py.
+
+2005-01-12  Christian Meyer  <chrisime@gnome.org>
+
+	* gdesklets-logview:
+	* display/DisplayConfigurator.py:
+	* shell/plugins/ControlBrowser/ControlInspector.py:
+	* shell/plugins/Profiles/__init__.py: Removed commented line.
+
+	* config/ConfigDialog.py (ConfigDialog.set_items): Don't mark the
+	error message for translation.
+	* config/ConfigSettings.py (ConfigSettings.show): Catch the exception.
+	
+	* display/GlassWindow.py: Improved exception handling (catch correct
+	exception types).
+
+	* dev/controlproducer.py: Nice little toy, which creates controls from
+	a xml file. Still, much work to do here.
+
+	* shell/plugins/PackageInstaller/Downloader.py: Small cleanup.
+
+2005-01-11  Martin Grimme  <martin@pycage.de>
+
+	* main/__init__.py (init): Import gnome.ui early to make GNOME happy.
+
+2005-01-11  Benoît Dejean  <TazForEver@dlfp.org>
+
+	* gdesklets:
+	* main/__init__.py: Moved _check_system to gdesklets
+	-> 'gdesklets check'
+	
+	* utils/xdr.py: New send_error() function.
+
+2005-01-10  Christian Meyer  <chrisime@gnome.org>
+
+	* display/ContainerTarget.py:
+	* display/Display.py:
+	* display/GlassWindow.py:
+	* display/TargetEntry.py:
+	* display/TargetHTML.py:
+	* display/TargetLabel.py:
+	* display/Window.py:
+	* main/AboutDialog.py:
+	* main/Control.py:
+	* main/Starter.py:
+	* scripting/Script.py:
+	* sensor/Sensor.py:
+	* shell/plugins/PackageInstaller/Downloader.py:
+	* shell/plugins/PackageInstaller/__init__.py:
+	* utils/BGWatcher.py:
+	* utils/__init__.py: s/gtk.idle_add/gobject.idle_add and
+	s/gtk.timeout_add/gobject.timeout_add.
+
+2005-01-10  Martin Grimme  <martin@pycage.de>
+
+	* config/GConfBackend.py: Removed the error message which we don't
+	need anymore because of the initial requirements checking.
+
+	* main/__init__.py (_check_system): Implemented DAU-friendly
+	requirements checking.
+	(init): Fixed missing imports.
+	(_check_system): Fixed check for gnome-python > 2.6
+
+2005-01-10  Christian Meyer  <chrisime@gnome.org>
+
+	* configure.in: Check for gnome-python, pygtk and pyorbit. I removed
+	that check some time ago...
+
+
+	
+*** for older entries please see the file ChangeLog.pre0.34 in CVS ***
+	
+/* vim: set tabstop=8 noet: */

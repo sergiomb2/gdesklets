@@ -1,0 +1,96 @@
+<section id="dsp-tag-label" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;label&gt;</title>
+
+  <para>A label for displaying one or more lines of text. The Pango markup
+    language can be used for marking up passages of text.</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/dsp-label" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">color</entry>
+        <entry valign="top">color</entry>
+        <entry valign="top">(system default)</entry>
+        <entry valign="top">The text color. You cannot use an alpha channel for
+          colors here. The text color can also be changed with markup tags in
+          the running text.
+          (<emph>[new in 0.35]</emph> the alpha channel can be used!)</entry>
+      </row>
+      <row>
+        <entry valign="top">font</entry>
+        <entry valign="top">font</entry>
+        <entry valign="top">(system default)</entry>
+        <entry valign="top">The text font. The font can also be changed with
+          markup tags in the running text.</entry>
+      </row>
+      <row>
+        <entry valign="top">value</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The text to display. It has to be in valid UTF-8
+          encoding and has to escape characters which are reserved in XML by
+          using the usual XML entities.</entry>
+      </row>
+      <row>
+        <entry valign="top">wrap-at</entry>
+        <entry valign="top">unit</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The width at which the label should wrap to the
+          next line.  Wrapping is disabled by default.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+
+  <section><title>Examples</title>
+
+    <programlisting><![CDATA[
+<display>
+
+  <label value="gDesklets rocks!" font="Sans 3cm" color="red"/>
+  
+  <label id="line2" 
+    value="This is a really long line, but it will be
+    wrapped at 1 CM because I'm going to tell it to!  
+    I'll wrap it to 1/2 an inch in the script though..." 
+    wrap-at="1cm"/>
+
+</display>
+
+<script>
+  
+  # The following will change the wrapping to 0.5 inches
+  Dsp.line2.wrap_at = Unit( 0.5, IN )
+
+</script>
+    ]]></programlisting>
+
+  </section>
+
+</section>

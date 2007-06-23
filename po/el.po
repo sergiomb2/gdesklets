@@ -1,0 +1,1102 @@
+# translation of el.po to Greek
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) Free Software Foundation 2003
+# Kostas Papadimas <pkst@gnome.org>, 2003
+# Stathis Kamperis <stathisk@med.auth.gr>, 2005
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: el\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-09-12 13:49+0300\n"
+"PO-Revision-Date: 2005-08-31 18:57+0200\n"
+"Last-Translator: Stathis Kamperis <stathisk@med.auth.gr>\n"
+"Language-Team: Greek <nls@tux.hellug.gr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0\n"
+
+#: ../config/ConfigDialog.py:103
+msgid "Invalid Function Call"
+msgstr "Μη έγκυρη κλήση συνάρτησης"
+
+#: ../config/ConfigDialog.py:104
+#, python-format
+msgid ""
+"There is no function called <b>%s</b>.\n"
+"This means that there's an error in the desklet's code. You should inform "
+"the author of the desklet about this problem."
+msgstr ""
+"Δεν υπάρχει συνάρτηση με το όνομα<b>%s</b>.\n"
+"Αυτό σημαίνει ότι υπάρχει ένα σφάλμα στον κώδικα του desklet. Θα πρέπει να "
+"ενημερώσετε το συγγραφέα αυτού του desklet σχετικά με το πρόβλημα."
+
+#: ../config/ConfigDialog.py:217 ../display/DisplayConfigurator.py:32
+msgid "This desklet is not configurable."
+msgstr "Αυτό το desklet δεν είναι παραμετροποιήσιμο."
+
+#: ../config/ConfigUnit.py:57
+msgid "pixel"
+msgstr "εικονοστοιχείο"
+
+#: ../config/ConfigUnit.py:58
+msgid "point"
+msgstr "σημείο"
+
+#: ../config/ConfigUnit.py:59
+msgid "cm"
+msgstr "εκατοστά"
+
+#: ../config/ConfigUnit.py:60
+msgid "inch"
+msgstr "ίντσα"
+
+#: ../config/DaemonConfigger.py:17
+msgid "Editor to view/edit the desklet source code"
+msgstr "Διορθωτής για προβολή/επεξεργασία του πηγαίου κώδικα του desklet"
+
+#: ../config/DaemonConfigger.py:18
+msgid "Your favorite editor"
+msgstr "Ο αγαπημένος σας διορθωτής"
+
+#: ../config/DaemonConfigger.py:20
+msgid "XComposite support (requires composition manager)"
+msgstr "Υποστήριξη XComposite (απαιτεί το διαχειριστή στοιχειοθεσίας)"
+
+#: ../config/DaemonConfigger.py:21
+msgid ""
+"\n"
+"     <small><i>"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:22
+msgid "this does not work with GTK 2.8 or higher for technical reasons"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:23
+msgid "</i></small>"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:24
+msgid "Translucency (takes effect after restarting a display)"
+msgstr "Ημιδιαφάνεια (τίθεται σε ισχύ μετά την επανεκκίνηση της εμφάνισης)"
+
+#: ../config/DaemonConfigger.py:26
+msgid "Screen Resolution (DPI)"
+msgstr "Ανάλυση οθόνης (DPI)"
+
+#: ../config/DaemonConfigger.py:28
+msgid ""
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
+"\"</b> wide"
+msgstr ""
+"Προσαρμόστε την παραπάνω τιμή ώστε η ράβδος να είναι ακριβώς <b>5 εκ.</b> ή "
+"<b>1.97\"</b> πλατιά"
+
+#: ../config/DaemonConfigger.py:32
+msgid "Behavior"
+msgstr "Συμπεριφορά"
+
+#: ../config/DaemonConfigger.py:33
+msgid "Show _tray icon (takes effect after restart)"
+msgstr ""
+"Εμφάνιση _εικονιδίου στον πίνακα εφαρμογών (τίθεται σε ισχύ μετά την "
+"επανεκκίνηση)"
+
+#: ../config/DaemonConfigger.py:35
+msgid "Show _notification while loading a desklet"
+msgstr "Εμφάνιση _ειδοποίησης κατά τη φόρτωση του desklet"
+
+#: ../config/DaemonConfigger.py:37
+msgid "Key for toggling Float mode:"
+msgstr "Πλήκτρο για εναλλαγή σε λειτουργία ταλάντευσης"
+
+#: ../config/DaemonConfigger.py:49 ../config/DisplayConfigger.py:27
+#: ../display/DisplayConfigurator.py:16
+msgid "Configuration"
+msgstr "Διαμόρφωση"
+
+#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:74
+msgid "A desktop applet system for GNOME"
+msgstr "Ένα σύστημα εφαρμογιδίων επιφάνειας εργασίας για το GNOME"
+
+#: ../data/gdesklets.xml.in.h:1
+msgid "gDesklets display"
+msgstr "εμφάνιση gDesklets"
+
+#: ../display/Display.py:84
+msgid "_Configure desklet"
+msgstr "_Ρύθμιση desklet"
+
+#: ../display/Display.py:86
+msgid "_Move desklet"
+msgstr "_Μετακίνηση desklet"
+
+#: ../display/Display.py:89
+msgid "_View Source"
+msgstr "_Προβολή κώδικα"
+
+#: ../display/Display.py:92
+msgid "Re_start desklet"
+msgstr "Επανε_κίνηση desklet"
+
+#: ../display/Display.py:94
+msgid "_Remove desklet"
+msgstr "Α_φαίρεση desklet"
+
+#: ../display/Display.py:982 ../shell/plugins/DisplayBrowser/__init__.py:142
+msgid "Do you really want to remove this desklet ?"
+msgstr "Θέλετε στ' αλήθεια να αφαιρέσετε αυτό το desklet;"
+
+#: ../display/Display.py:983
+msgid ""
+"This desklet will no longer be displayed and its configuration will be "
+"purged."
+msgstr ""
+"Αυτό το desklet δεν θα εμφανίζεται πλέον και η διαμόρφωσή του θα "
+"εκκαθαριστεί."
+
+#: ../display/DisplayTarget.py:417
+#, python-format
+msgid "Element \"%s\" does not exist"
+msgstr "Το στοιχείο \"%s\" δεν υπάρχει"
+
+#: ../display/DisplayTarget.py:418
+msgid ""
+"The <tt>relative-to</tt> property requires a reference to an existing "
+"display element within the same parent container."
+msgstr ""
+"Η <tt>σχετική-με</tt> ιδιότητα απαιτεί μια αναφορά σε υπάρχον στοιχείο "
+"εμφάνισης μέσα στο ίδιο πατρικό δοχείο."
+
+#: ../display/targetregistry.py:52
+#, python-format
+msgid "Unknown element <b>&lt;%s&gt;</b>"
+msgstr "Άγνωστο στοιχείο <b>&lt;%s&gt;</b>"
+
+#: ../display/targetregistry.py:53
+msgid ""
+"Either there is a typo in the .display file or you have an incompatible "
+"version of gDesklets."
+msgstr ""
+"Είτε υπάρχει κάποιο τυπογραφικό λάθος στο αρχείο .display είτε έχετε μια "
+"ασύμβατη έκδοση του gDesklets."
+
+#: ../factory/DisplayFactory.py:89 ../utils/DOM.py:31
+msgid "XML parse error"
+msgstr "Σφάλμα ανάλυσης έκφρασης XML"
+
+#: ../factory/DisplayFactory.py:90
+msgid "This .display file has invalid XML syntax."
+msgstr "Το αρχείο .display έχει μη έγκυρη XML σύνταξη."
+
+#: ../factory/DisplayFactory.py:208
+msgid "File doesn't exist or couldn't be loaded"
+msgstr "Το αρχείο δεν υπάρχει ή δεν ήταν δυνατή η φόρτωσή του"
+
+#: ../factory/DisplayFactory.py:210
+msgid "A file which contains a script isn't available for further execution."
+msgstr "Δεν υπάρχει κάποιο αρχείο δέσμης για περαιτέρω εκτέλεση."
+
+#: ../factory/DisplayFactory.py:233
+msgid "Could not load sensor"
+msgstr "Αδύνατη η φόρτωση του αισθητήρα"
+
+#: ../factory/DisplayFactory.py:249
+#, python-format
+msgid "&lt;%s&gt; needs a bind attribute"
+msgstr "&lt;%s&gt; χρειάζεται μια ιδιότητα δεσμού"
+
+#: ../factory/DisplayFactory.py:251
+msgid "The &lt;prefs&gt; section of this desklet file is broken."
+msgstr "Το &lt;prefs&gt; τμήμα αυτού του αρχείου desklet είναι αλλοιωμένο."
+
+#: ../factory/SensorFactory.py:75
+#, python-format
+msgid "Could not find sensor '%(name)s'"
+msgstr "Αδύνατη η εύρεση του αισθητήρα '%(name)s'"
+
+#: ../factory/SensorFactory.py:76
+msgid ""
+"A sensor could not be found. This usually means that it has not been "
+"installed."
+msgstr ""
+"Δεν βρέθηκε κάποιος αισθητήρας. Αυτό συνήθως σημαίνει ότι δεν έχει "
+"εγκατασταθεί."
+
+#: ../gdesklets:29
+msgid "You must NOT run gDesklets as super user (root)."
+msgstr "ΔΕΝ πρέπει να τρέχετε το gDesklets ως υπερ-χρήσητης (root)."
+
+#: ../gdesklets:43
+msgid "Checking requirements:"
+msgstr "Έλεγχος απαιτήσεων:"
+
+#: ../gdesklets:47
+msgid "Python version => 2.3.0 is required."
+msgstr "Απαιτείται έκδοση Python => 2.3.0."
+
+#: ../gdesklets:51
+msgid "libexpat version 1.95.7 is broken. Please upgrade!"
+msgstr "Η έκδοση libexpat 1.95.7 είναι ασυνεπής. Παρακαλώ αναβαθμίστε!"
+
+#: ../gdesklets:54
+msgid "SAX parser is required, some SuSE versions ship without it."
+msgstr ""
+"Απαιτείται ο αναλυτής εκφράσεων SAX, μερικές εκδόσεις SuSe δεν τον "
+"συμπεριλαμβάνουν."
+
+#: ../gdesklets:58
+msgid ""
+"GTK python bindings (pygtk2) version >= 2.4.0 and GTK+ version >= 2.4.0 are "
+"required."
+msgstr ""
+"Απαιτούνται οι δεσμοί GTK python (pygtk2) έκδοση >= 2.4.0 και GTK+ έκδοση >= "
+"2.4.0."
+
+#: ../gdesklets:62
+msgid "ORBit python bindings (pyorbit) version == 2.0.1 are required."
+msgstr "Απαιτούνται οι δεσμοί ORBit python (pyorbit) έκδοση == 2.0.1."
+
+#: ../gdesklets:65
+msgid "bonobo python bindings are required."
+msgstr "Απαιτούνται οι δεσμοί bonobo python."
+
+#: ../gdesklets:74
+msgid "found"
+msgstr "βρέθηκε"
+
+#: ../gdesklets:78
+msgid "missing"
+msgstr "αγνοείται"
+
+#: ../gdesklets:84
+msgid "Version check failed."
+msgstr "Ο έλεγχος της έκδοσης απέτυχε."
+
+#: ../gdesklets:85
+#, c-format
+msgid ""
+"\n"
+"%s\n"
+msgstr ""
+"\n"
+"%s\n"
+
+#: ../gdesklets:86
+msgid ""
+"Please make sure that the required software is installed.\n"
+"Also try to avoid having multiple versions of a library/binding on your "
+"system.\n"
+"gDesklets won't work if you don't have all necessary dependencies installed\n"
+"on your system.\n"
+"\n"
+"THE STARTUP WILL BE CANCELLED NOW!\n"
+msgstr ""
+"Παρακαλώ βεβαιωθείτε ότι το απαιτούμενο λογισμικό είναι εγκατεστημένο.\n"
+"Επίσης αποφύγετε να έχετε πολλαπλές εκδόσεις της ίδια βιβλιοθήκης/δεσμών στο "
+"σύστημά σας.\n"
+"Το gDesklets δεν θα δουλέψει αν δεν έχετε όλες τις απαραίτητες εξαρτήσεις "
+"εγκατεστημένες\n"
+"στο σύστημά σας.\n"
+"\n"
+"Η ΕΚΚΙΝΗΣΗ ΘΑ ΑΚΥΡΩΘΕΙ ΤΩΡΑ!\n"
+
+#: ../gdesklets:102
+msgid ""
+"\n"
+"You're running gDesklets for the first time.\n"
+"gDesklets will start a requirements check now...\n"
+msgstr ""
+"\n"
+"Τρέχετε το gDesklets για πρώτη φορά.\n"
+"Το gDesklets θα ξεκινήσει έναν έλεγχο απαιτήσεων τώρα...\n"
+
+#: ../gdesklets:113
+msgid ""
+"Usage: gdesklets [option] <command> [arguments...]\n"
+"\n"
+"\t<command>\n"
+"\t\topen    <files>   (Opens the given desklet files)\n"
+"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
+"\t\tstop              (Stops the gDesklets daemon)\n"
+"\t\tlist              (Lists open desklets)\n"
+"\t\trestart           (Restarts the gDesklets daemon)\n"
+"\t\tprofile <profile> (Switches to the given profile)\n"
+"\t\tprofile           (Shows the current and the available profiles)\n"
+"\t\tshell             (Opens the graphical shell)\n"
+"\t\tslay              (Kills the daemon -- use in emergency)\n"
+"\t\tstatus            (Checks daemon status)\n"
+"\t\tabout             (Prints information about gDesklets)\n"
+"\t\tversion           (Prints gDesklets version)\n"
+"\t\tconfigure         (Opens the configuration dialog)\n"
+"\t\thelp              (Displays this text)\n"
+"\t\tcheck             (Checks requirements)\n"
+"\n"
+"\t[option]\n"
+"\t\t--no-tray-icon    (disables the systray icon)\n"
+"\t\t--translucent     (enables translucency on the xorg servers)\n"
+msgstr ""
+"Χρήση: gdesklets [επιλογή] <εντολή> [ορίσματα...]\n"
+"\n"
+"\t<εντολή>\n"
+"\t\topen    <αρχεία>   (Ανοίγει τα δοθέντα αρχεία desklets)\n"
+"\t\tstart             (Τρέχει το δαίμονα gDesklets, αυτό είναι "
+"προεπιλεγμένο)\n"
+"\t\tstop              (Τερματισμός του δαίμονα gDesklets)\n"
+"\t\tlist              (Εμφανίζει τα ανοιχτά desklets)\n"
+"\t\trestart           (Επανεκκίνηση του δαίμονα gDesklets)\n"
+"\t\tprofile <profile> (Αλλάζει στο δοθέν προφίλ)\n"
+"\t\tprofile           (Εμφανίζει το τρέχον και τα διαθέσιμα προφίλ)\n"
+"\t\tshell             (Ανοίγει το γραφικό κέλυφος)\n"
+"\t\tslay              (Σκοτώνει το δαίμονα -- χρησιμοποιήστε μόνο σε "
+"επείγουσες καταστάσεις)\n"
+"\t\tstatus            (Ελέγχει την κατάσταση του δαίμονα)\n"
+"\t\tabout             (Εκτυπώνει πληροφορίες σχετικά με τo gDesklets)\n"
+"\t\tversion           (Εκτυπώνει την έκδοση του gDesklets)\n"
+"\t\tconfigure         (Ανοίγει το διάλογο διαμόρφωσης)\n"
+"\t\thelp              (Εμφανίζει αυτό το κείμενο)\n"
+"\t\tcheck             (Ελέγχει τις απαιτήσεις)\n"
+"\n"
+"\t[option]\n"
+"\t\t--no-tray-icon    (απενεργοποιεί τον πίνακα εικονιδίων του συστήματος)\n"
+"\t\t--translucent     (ενεργοποιοεί την ημιδιαφάνεια στους εξυπηρετητές "
+"xorg)\n"
+
+#: ../gdesklets:186 ../gdesklets:260
+#, c-format
+msgid "Could not open desklet %s."
+msgstr "Αδύνατο το άνοιγμα του desklet %s."
+
+#: ../gdesklets:268
+msgid "Starting gdesklets-daemon..."
+msgstr "Έναρξη δαίμονα gdesklets..."
+
+#: ../gdesklets:274
+msgid "Shutting down gdesklets-daemon..."
+msgstr "Τερματισμός δαίμονα gdesklets..."
+
+#: ../gdesklets:286
+#, c-format
+msgid "Currently open displays in profile \"%s\":\n"
+msgstr "Τρέχουσες ανοικτές εμφανίσεις στο προφίλ \"%s\":\n"
+
+#: ../gdesklets:291
+#, c-format
+msgid "Currently there aren't any desklets in profile \"%s\""
+msgstr "Αυτή τη στιγμή δεν υπάρχουν desklets στο προφίλ \"%s\""
+
+#: ../gdesklets:295
+msgid "Restarting gdesklets-daemon..."
+msgstr "Επανεκκίνηση δαίμονα gdesklets..."
+
+#: ../gdesklets:308
+msgid "gdesklets-daemon is running"
+msgstr "Ο δαίμονας gdesklets τρέχει"
+
+#: ../gdesklets:310
+msgid "gdesklets-daemon is not running"
+msgstr "Ο δαίμονας gdesklets δεν τρέχει"
+
+#: ../gdesklets:314
+#, c-format
+msgid "Current profile: %s"
+msgstr "Τρέχον προφίλ: %s"
+
+#: ../gdesklets:325
+#, c-format
+msgid "New profile: %s"
+msgstr "Νέο προφίλ: %s"
+
+#: ../gdesklets:328
+#, c-format
+msgid "Available profiles: %s"
+msgstr "Διαθέσιμα προφίλ: %s"
+
+#: ../gdesklets:332
+#, c-format
+msgid "This is %s, version %s."
+msgstr "Αυτό είναι %s, έκδοση %s."
+
+#: ../gdesklets:360
+msgid "Nothing to slay."
+msgstr "Τίποτε να σκοτωθεί."
+
+#: ../gdesklets:385
+msgid "Invalid command. Please try one of the following commands:"
+msgstr "Μη έγκυρη εντολή. Παρακαλώ δοκιμάστε μία από τις ακόλουθες εντολές:"
+
+#: ../gdesklets-daemon:20
+msgid "You need a recent version of PyGTK to run this program.\n"
+msgstr ""
+"Χρειάζεται μια πρόσφατη έκδοση του PyGTK για να τρέξετε αυτό το πρόγραμμα.\n"
+
+#: ../gdesklets-daemon:48
+msgid "Could not fork daemon.\n"
+msgstr "Αδύνατη η διακλάδωση (fork) του δαίμονα.\n"
+
+#: ../gdesklets-daemon:69 ../gdesklets-daemon:89
+#, c-format
+msgid "The following error occurred: %s\n"
+msgstr "Συνέβη το εξής σφάλμα: %s\n"
+
+#: ../libdesklets/convert.py:21
+#, python-format
+msgid "%.2f TB"
+msgstr "%.2f TB"
+
+#: ../libdesklets/convert.py:23
+#, python-format
+msgid "%.2f GB"
+msgstr "%.2f TB"
+
+#: ../libdesklets/convert.py:25
+#, python-format
+msgid "%.2f MB"
+msgstr "%.2f TB"
+
+#: ../libdesklets/convert.py:27
+#, python-format
+msgid "%.2f kB"
+msgstr "%.2f TB"
+
+#: ../libdesklets/convert.py:29
+#, python-format
+msgid "%d B"
+msgstr "%d B"
+
+#: ../main/AboutDialog.py:21
+msgid "About gDesklets"
+msgstr "Περί gDesklets"
+
+#: ../main/client.py:283
+#, python-format
+msgid "Connecting to daemon [%s]"
+msgstr "Σύνδεση στο δαίμονα [%s]"
+
+#: ../main/client.py:300
+msgid ""
+"Cannot establish connection to daemon: timeout!\n"
+"The log file might help you solving the problem."
+msgstr ""
+"Αδύνατη η εγκατάσταση σύνδεσης με το δαίμονα: τάιμ-άουτ!\n"
+"Το αρχείο καταγραφής μπορεί να σας βοηθήσει να λύσετε το πρόβλημα."
+
+#: ../main/client.py:306
+#, python-format
+msgid "Connected to daemon in %d microseconds."
+msgstr "Έγινε σύνδεση με το δαίμονα σε %d μικροδευτερόλεπτα."
+
+#: ../main/client.py:309
+#, python-format
+msgid "Connected to daemon in %d milliseconds."
+msgstr "Έγινε σύνδεση με το δαίμονα σε %d χιλιοστά του δευτερολέπτου."
+
+#: ../main/__init__.py:84
+#, python-format
+msgid "Version %s"
+msgstr "Έκδοση %s"
+
+#: ../main/__init__.py:87
+msgid "Core Programming:"
+msgstr "Προγραμματισμός πυρήνα:"
+
+#: ../main/__init__.py:91
+msgid "Architecture Design:"
+msgstr "Σχεδίαση αρχιτεκτονικής:"
+
+#: ../main/__init__.py:94
+msgid "GNOME Integration:"
+msgstr "Ενοποίηση GNOME"
+
+#: ../main/__init__.py:98
+msgid "Artwork:"
+msgstr "Καλλιτεχνική εργασία:"
+
+#: ../main/__init__.py:101
+msgid "Website:"
+msgstr "Ιστότοπος:"
+
+#: ../main/__init__.py:104
+msgid "Thank you:"
+msgstr "Σας ευχαριστώ:"
+
+#: ../main/Starter.py:103
+msgid "_Manage desklets"
+msgstr "_Διαχείριση desklets"
+
+#: ../main/Starter.py:106
+msgid "_Configuration"
+msgstr "_Διαμόρφωση"
+
+#: ../main/Starter.py:108
+msgid "_View log"
+msgstr "Προβολή αρχείου καταγραφής"
+
+#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:41
+msgid "_About..."
+msgstr "Πε_ρί..."
+
+#: ../main/Starter.py:114
+msgid "_Stop daemon"
+msgstr "_Σταμάτημα δαίμονα"
+
+#: ../main/Starter.py:230
+#, python-format
+msgid "Could not open desklet file \"%s\""
+msgstr "Αδύνατο το άνοιγμα του αρχείου desklet \"%s\""
+
+#: ../main/Starter.py:231
+msgid "The desklet file could not be opened because the file was not readable."
+msgstr "Αδύνατο το άνοιγμα του αρχείου desklet επειδή δεν ήταν αναγνώσιμο."
+
+#. CVS warning :)
+#: ../main/transition.py:42
+msgid ""
+"This is a CVS version of gDesklets. CVS versions represent the current state "
+"of development and might be unstable or cause problems from time to time.\n"
+"\n"
+"If you're new to gDesklets, it is thus highly recommended to <b>not</b> use "
+"a CVS version, but a stable release!\n"
+"\n"
+"If you still want to run the CVS version instead of a stable release "
+"version, we'd highly appreciate it if you report any weird behavior to the "
+"developers.\n"
+"\n"
+"Experienced users are encouraged to try a CVS version, though!"
+msgstr ""
+"Αυτή είναι μια έκδοση του gDesklets από το CVS. Οι εκδόσεις από το CVS "
+"αντιπροσωπεύουν την τρέχουσα κατάσταση της ανάπτυξης και μπορεί να είναι "
+"ασταθείς ή να προκαλούν προβλήματα από καιρό σε καιρό.\n"
+"\n"
+"Αν είστε νέος στο gDesklets, σας συστήνουμε σε καμία περίπτωση να <b>μη</b> "
+"χρησιμοποιήσετε μια έκδοση από το CVS, αλλά μία σταθερή έκδοση.\n"
+"\n"
+"Αν παρ' όλα αυτά θέλετε να τρέξετε μία έκδοση από το CVS αντί μια σταθερή "
+"έκδοση, θα το εκτιμούσαμε ιδιαίτερα αν αναφέρατε κάποια περίεργη συμπεριφορά "
+"της στους κατασκευαστές.\n"
+"\n"
+"Ωστόσο, ενθαρρύνουμε τους έμπειρους χρήστες να χρησιμοποιήσουν μια έκδοση "
+"από το CVS!"
+
+#: ../main/transition.py:54
+msgid ""
+"This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
+"Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
+"This version might break your configuration or it won't restore it from an "
+"earlier release. In most cases this is intentional, since gDesklets is still "
+"in its early stages of development.\n"
+"\n"
+"Thanks for testing this release candidate!"
+msgstr ""
+"Αυτή είναι μια <b>υποψήφια έκδοση</b> της επερχόμενης έκδοσης του "
+"gDesklets.\n"
+"Παρακαλώ δοκιμάστε την και αναφέρετε bugs στο <i>http://bugzilla.gnome.org</"
+"i>\n"
+"Αυτή η έκδοση μπορεί να αλλοιώσει τη διαμόρφωσή σας ή δεν θα την ανακτήσει "
+"από μια υπάρχουσα έκδοση. Στις περισσότερες περιπτώσεις αυτό γίνεται "
+"σκόπιμα, καθώς το gDesklets βρίσκεται ακόμη σε πρώιμα στάδια ανάπτυξης.\n"
+"\n"
+"Ευχαριστούμε που δοκιμάζετε αυτήν την υποψήφια έκδοση!"
+
+#. our informative transition message which we can change with
+#. every release
+#: ../main/transition.py:65
+msgid ""
+"This version of gDesklets features the Float mode: press a key and all your "
+"desklets will come to front, floating above your applications, until you "
+"press that key again!\n"
+"The default keybinding is &lt;Shift&gt; &lt;F12&gt;, but you can easily "
+"change that in the configuration dialog.\n"
+"\n"
+"Please note that due to limitations of older X servers, you might see blocks "
+"around desklets in Float mode. This cannot be solved in a satisfying way "
+"except for switching the X server to real translucency (Xorg 6.8 and above)."
+msgstr ""
+"Αυτή η έκδοση του gDesklets υποστηρίζει τη λειτοργία ταλάντευσης: πατήστε "
+"ένα κουμπί και όλα τα desklets θα έρθουν μπροστά, πάνω από όλες τις "
+"εφαρμογές σας, μέχρι να πατήσετε εκείνο το κουμπί ξανά!\n"
+"Ο προεπιλεγμένος δεσμός πλήκτρου είναι το &lt;Shift&gt; &lt;F12&gt;, αλλά "
+"εύκολα μπορείτε να το αλλάξετεαπό το διάλογο της διαμόρφωσης.\n"
+"\n"
+"Παρακαλώ σημείωστε ότι εξαιτίας περιορισμών των παλαιότερων εξυπηρετητών X, "
+"μπορεί να παρατηρήσετε μπλοκςγύρω από τα desklets στη λειτουργία "
+"ταλάντευσης. Αυτό δε μπορεί να λυθεί ικανοποιητικά εκτός και αν αλλάξετεσε "
+"πραγματική ημιδιαφάνεια (Xorg 6.8 και πάνω)."
+
+#: ../main/transition.py:80
+msgid "Please note (this message will appear only once):"
+msgstr "Παρακαλώ προσέξτε (αυτό το μήνυμα θα εμφανιστεί μόνο μία φορά):"
+
+#: ../plugin/Interface.py:200 ../plugin/Interface.py:227
+msgid "no description"
+msgstr "χωρίς περιγραφή"
+
+#: ../scripting/Script.py:154
+msgid "Error in add_timer function"
+msgstr "Σφάλμα στη συνάρτηση add_timer"
+
+#: ../scripting/Script.py:155
+#, python-format
+msgid "\"%s\" isn't a valid integer value!"
+msgstr "\"%s\" δεν είναι μια έγκυρη ακέραιη τιμή!"
+
+#: ../scripting/Script.py:199
+#, python-format
+msgid "No Control could be found for interface %s"
+msgstr "Δεν βρέθηκε αντικείμενο για τη διασύνδεση %s"
+
+#: ../scripting/Script.py:201
+msgid "This means that a functionality won't be available during execution!"
+msgstr ""
+"Αυτό σημαίνει ότι κάποια λειτουργία δεν θα είναι διαθέσιμη κατά την εκτέλεση!"
+
+#: ../scripting/Script.py:234
+msgid "Security Risk"
+msgstr "Κίνδυνος ασφάλειας"
+
+#: ../scripting/Script.py:235
+#, python-format
+msgid ""
+"The desklet %s wants to execute a system command:\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"To protect your system from malicious programs, you can deny the execution "
+"of this command.\n"
+"\n"
+"If you are sure that the command is harmless, you may permanently allow this "
+"desklet instance to run it."
+msgstr ""
+"Το desklet %s θέλει να εκτελέσει μια εντολή συστήματος:\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"Για να προστατέψε το σύστημά σας από κακόβουλα προγράμματα, μπορείτε να "
+"αρνηθείτε την εκτέλεση της εντολής.\n"
+"\n"
+"Αν είστε σίγουρος ότι η εντολή είναι ακίνδυνη, μπορείτε να επιτρέψετε μόνιμα "
+"αυτό το desklet να την εκτελεί."
+
+#: ../scripting/Script.py:248
+msgid "Deny!"
+msgstr "Άρνηση!"
+
+#: ../scripting/Script.py:249
+msgid "Allow once"
+msgstr "Να επιτραπεί μόνο για μία φορά"
+
+#: ../scripting/Script.py:250
+msgid "Allow for this desklet"
+msgstr "Να επιτρέπεται για αυτό το desklet"
+
+#: ../Sensors/FontSelector/__init__.py:86
+msgid "Fonts"
+msgstr "Γραμματοσειρές"
+
+#: ../Sensors/FontSelector/__init__.py:87
+msgid "Fonts settings"
+msgstr "Ρυθμίσεις γραμματοσειρών"
+
+#: ../Sensors/FontSelector/__init__.py:90
+#, python-format
+msgid "Font #%i:"
+msgstr "Γραμματοσειρά  #%i:"
+
+#: ../Sensors/FontSelector/__init__.py:92
+#, python-format
+msgid "Font #%i used in the labels"
+msgstr "Η γραμματοσειρά #%i χρησιμοποιείται στις ετικέτες"
+
+#: ../Sensors/FontSelector/__init__.py:93
+#, python-format
+msgid "Font color #%i:"
+msgstr "Χρώμα γραμματοσειράς #%i:"
+
+#: ../Sensors/FontSelector/__init__.py:95
+#, python-format
+msgid "Font color #%i used in the labels"
+msgstr "Το χρώμα γραμματοσειράς #%i χρησιμοποιείται στις ετικέτες"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:16
+#, python-format
+msgid "%s Control"
+msgstr "%s Αντικείμενο"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:55
+msgid "Interface Name"
+msgstr "Όνομα διασύνδεσης"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:58
+msgid "Property Name"
+msgstr "Όνομα ιδιότητας"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:61
+msgid "Property Access"
+msgstr "Πρόσβαση ιδιότητας"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:64
+msgid "Property Description"
+msgstr "Περιγραφή ιδιότητας"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:27
+msgid "by interface"
+msgstr "με βάση τη διασύνδεση"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:28
+#: ../shell/plugins/DisplayBrowser/__init__.py:80
+msgid "alphabetically"
+msgstr "αλφαβητικά"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:72
+#, python-format
+msgid "Found %d controls."
+msgstr "Βρέθηκαν %d αντικείμενα."
+
+#: ../shell/plugins/ControlBrowser/__init__.py:75
+#: ../shell/plugins/DisplayBrowser/__init__.py:158
+msgid "Invalid search expression."
+msgstr "Μη έγκυρη φράση αναζήτησης."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:40
+msgid "R_emove selected desklet"
+msgstr "_Αφαίρεση επιλεγμένου desklet"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
+msgid "_Run (remote) desklet..."
+msgstr "_Εκτέλεση (απομακρυσμένου) desklet..."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:45
+msgid "R_un selected desklet"
+msgstr "Ε_κτέλεση επιλεγμένου desklet"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:78
+msgid "by category"
+msgstr "με βάση την κατηγορία"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:79
+msgid "by author"
+msgstr "με βάση το συγγραφέα"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:130
+msgid "Could not remove"
+msgstr "Αδύνατη η αφαίρεση"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:131
+msgid ""
+"The desklet file could not be removed. This most likely means that you do "
+"not have write permission on it."
+msgstr ""
+"Αδύνατη η αφαίρεση του αρχείου desklet. Αυτό κατά πάσα πιθανότητα σημαίνει "
+"ότι δεν έχετε δικαιώματα εγγραφής πάνω του."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:143
+msgid ""
+"The desklet will be removed from your system and no longer be available."
+msgstr ""
+"Το desklet θα αφαιρεθεί από το σύστημά σας και δεν θα είναι πλέον διαθέσιμο."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#, python-format
+msgid "Found %d desklets"
+msgstr "Βρέθηκαν %d desklets"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:177
+msgid "No description available"
+msgstr "Δεν υπάρχει διαθέσιμη περιγραφή"
+
+#: ../shell/plugins/Help/__init__.py:37
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+#: ../shell/plugins/Help/__init__.py:38
+msgid "_Tip of the Day"
+msgstr "_Συμβουλή της ημέρας"
+
+#: ../shell/plugins/Help/TipOfTheDay.py:24
+msgid "Tip of the Day"
+msgstr "Συμβουλή της ημέρας"
+
+#: ../shell/plugins/Help/TipOfTheDay.py:32
+msgid "Show tips at startup"
+msgstr "Εμφάνιση συμβουλών κατά την έναρξη"
+
+#: ../shell/plugins/Help/tips.py:2
+#, fuzzy
+msgid ""
+"You can find lots of desktop applets for use\n"
+"with gDesklets at\n"
+"\n"
+"http://www.gdesklets.org\n"
+"and\n"
+"http://gdesklets.gnomedesktop.org"
+msgstr ""
+"Μπορείτε να βρείτε πολλά desklets για χρήση\n"
+"με το gDesklets στο\n"
+"\n"
+"http://gdesklets.gnomedesktop.org"
+
+#: ../shell/plugins/Help/tips.py:9
+msgid ""
+"You can install new desktop applets easily by\n"
+"dragging the download link for the package\n"
+"from your web browser into the gDesklets Shell."
+msgstr ""
+"Μπορείτε εύκολα να εγκαταστήσετε νέα desklets\n"
+"σέρνοντας το σύνδεσμο του πακέτου\n"
+"από το φυλλομετρητή σας στο Κέλυφος gDesklets."
+
+#: ../shell/plugins/Help/tips.py:13
+msgid ""
+"Click the right mouse button on a desktop\n"
+"applet or press F10 to open the popup menu."
+msgstr ""
+"Πατήστε το δεξί κουμπί του ποντικιού πάνω σε κάποιο\n"
+"εφαρμογίδιο της επιφάνειας εργασίας ή πατήστε F10 για\n"
+"να ανοίξετε το αναδυόμενο μενού."
+
+#: ../shell/plugins/Help/tips.py:16
+msgid ""
+"You can move the applets around the screen\n"
+"by holding down the middle mouse button.\n"
+"\n"
+"If your mouse has only two buttons,\n"
+"hold down both of them simultaneously\n"
+"in order to simulate the middle button."
+msgstr ""
+"Μπορείτε να μετακινήσετε τα εφαρμογίδια στην οθόνη\n"
+"κρατώντας πατημένο το μεσαίο κουμπί του ποντικιού.\n"
+"\n"
+"Αν το ποντίκι σας έχει μόνο δύο κουμπιά,\n"
+"κρατήστε τα πατημένα ταυτόχρονα\n"
+"για να εξομοιώσετε το μεσαίο κουμπί."
+
+#: ../shell/plugins/Help/tips.py:23
+msgid ""
+"You can have different profiles of\n"
+"desktop applets and switch between them.\n"
+"\n"
+"Select \"Profiles->New profile...\" from\n"
+"the menu bar to create new profiles.\n"
+"\n"
+"Empty profiles get discarded automatically."
+msgstr ""
+"Μπορείτε να έχετε διαφορετικά προφίλ από\n"
+"desklets και να αλλάζετε ανάμεσα σε αυτά.\n"
+"\n"
+"Επιλέξτε \"Προφίλ->Νέο προφίλ...\" από\n"
+"τη μπάρα του μενού για να δημιουργήσετε νέα προφίλ.\n"
+"\n"
+"Τα άδεια προφίλ απορρίπτονται αυτόματα."
+
+#: ../shell/plugins/Help/tips.py:31
+msgid ""
+"The search bar accepts complex search\n"
+"expressions for finding your applets."
+msgstr ""
+"Η μπάρα αναζήτησης δέχεται σύνθετες\n"
+"φράσεις αναζήτησης για τα εφαρμογίδια σας."
+
+#: ../shell/plugins/Help/tips.py:34
+msgid ""
+"Search expressions may contain wildcards:\n"
+"\n"
+" ? matches any one character\n"
+" * matches zero or more characters"
+msgstr ""
+"Οι φράσεις αναζήτησης μπορούν να περιέχουν σύμβολα υποκατάστασης:\n"
+"\n"
+" ? ταιριάζει οποιονδήποτε χαρακτήρα\n"
+" * ταιριάζει κανέναν ή περισσότερους χαρακτήρες"
+
+#: ../shell/plugins/Help/tips.py:39
+msgid ""
+"Have a good idea for a desklet?\n"
+"Write your own!  See the Developer's\n"
+"book for more details."
+msgstr ""
+
+#: ../shell/plugins/PackageInstaller/Downloader.py:29
+msgid "Retrieving:"
+msgstr "Ανάκτηση:"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:26
+msgid "I_nstall remote package..."
+msgstr "Ε_γκατάσταση απομακρυσμένου πακέτου..."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:27
+msgid "_Install package..."
+msgstr "_Εγκατάσταση πακέτου..."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:97
+msgid "Invalid package"
+msgstr "Μη έγκυρο πακέτο"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:98
+msgid ""
+"The supplied file could not be opened as a package. It is either corrupted "
+"or not of the correct file type."
+msgstr ""
+"Αδύνατο το άνοιγμα του παρεχόμενου αρχείου ως πακέτου. Είτε είναι αλλοιωμένο "
+"είτε λάθος τύπου."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:115
+msgid "Installation failed"
+msgstr "Η εγκατάσταση απέτυχε"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:116
+msgid ""
+"The package could not be installed because it contained no installable files."
+msgstr "Αδύνατη η εγκατάσταση του πακέτου επειδή δεν περιείχε αρχεία."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:119
+msgid "Installation complete"
+msgstr "Η εγκατάσταση ολοκληρώθηκε"
+
+#: ../shell/plugins/Profiles/__init__.py:18
+msgid "_Profiles"
+msgstr "_Προφίλ"
+
+#: ../shell/plugins/Profiles/__init__.py:20
+msgid "New profile..."
+msgstr "Νέο προφίλ..."
+
+#: ../shell/plugins/Profiles/__init__.py:75
+msgid "New profile"
+msgstr "Νέο προφίλ"
+
+#: ../shell/plugins/Profiles/__init__.py:76
+msgid "Enter the name for a new profile"
+msgstr "Εισάγετε το όνομα του νέου προφίλ"
+
+#: ../shell/plugins/Shell/__init__.py:62
+msgid "_File"
+msgstr "_Αρχείο"
+
+#: ../shell/SearchBar.py:20
+msgid "Search"
+msgstr "Αναζήτηση"
+
+#: ../utils/dialog.py:46
+#, python-format
+msgid "_Details (%d lines)"
+msgstr "_Λεπτομέρειες (%d γραμμές)"
+
+#: ../utils/dialog.py:194
+msgid "_Ignore errors from this desklet"
+msgstr "_Αγνόηση σφαλμάτων από αυτό το desklet"
+
+#: ../utils/DOM.py:32
+msgid "An invalid graphics code was loaded into a canvas."
+msgstr "Ένας μη έγκυρος γραφικός κώδικας φορτώθηκε στον κανβά."
+
+#: ../utils/DOM.py:153
+#, python-format
+msgid "No such element: %s"
+msgstr "Δεν υπάρχει τέτοιο στοιχείο: %s"
+
+#: ../utils/DOM.py:154
+#, python-format
+msgid "The element with ID <b>%s</b> does not exist in the SVG image."
+msgstr "Το στοχείο με αναγνωριστικό <b>%s</b> δεν υπάρχει στην SVG εικόνα."
+
+#: ../utils/DOM.py:182 ../utils/Element.py:91
+#, python-format
+msgid "No such property: %s"
+msgstr "Δεν υπάρχει τέτοια ιδιότητα: %s"
+
+#: ../utils/DOM.py:183
+#, python-format
+msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
+msgstr "Το στοιχείο SVG <b>%s</b> δεν έχει την ιδιότητα <b>%s</b>."
+
+#: ../utils/Element.py:92
+#, python-format
+msgid "The element <b>%s</b> does not have the <b>%s</b> property."
+msgstr "Το στοιχείο <b>%s</b> δεν έχει την ιδιότητα <b>%s</b>."
+
+#: ../utils/Element.py:96 ../utils/Element.py:126
+msgid "Permission Error"
+msgstr "Σφάλμα άδειας"
+
+#: ../utils/Element.py:97
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
+msgstr "Η ιδιότητα <b>%s</b> του στοιχείου <b>%s</b> δεν είναι εγγράψιμη."
+
+#: ../utils/Element.py:105
+msgid "Type Error"
+msgstr "Τυπογραφικό σφάλμα"
+
+#: ../utils/Element.py:106
+#, python-format
+msgid ""
+"The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
+"Expected <b>%s</b>, but got <b>%s</b>."
+msgstr ""
+"Η ιδιότητα <b>%s</b> του στοιχείου <b>%s</b> δέχτηκε μια τιμή λανθασμένου "
+"τύπου.\n"
+"Αναμενόταν <b>%s</b>, αλλά δέχτηκε <b>%s</b>."
+
+#: ../utils/Element.py:127
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
+msgstr "Η ιδιότητα <b>%s</b> του στοιχείου <b>%s</b> δεν είναι αναγνώσιμη."
+
+#: ../utils/error.py:158
+msgid "Runtime Error"
+msgstr "Σφάλμα εκτέλεσης"
+
+#: ../utils/error.py:160
+msgid "An error occurred while executing a desklet."
+msgstr "Ένα σφάλμα συνέβη κατά την εκτέλεση του desklet."
+
+#~ msgid ""
+#~ "An error occurred while loading a sensor. This most likely means that the "
+#~ "sensor is broken or simply not installed."
+#~ msgstr ""
+#~ "Δημιουργήθηκε ένα σφάλμα κατά τη φόρτωση του αισθητήρα. Αυτό μάλλον "
+#~ "σημαίνει ότι είτε ο αισθητήρας είναι χαλασμένος ή δεν είναι "
+#~ "εγκατεστημένος."
+
+#~ msgid "Error while configuring display"
+#~ msgstr "Σφάλμα κατά τη ρύθμιση εμφάνισης"
+
+#~ msgid ""
+#~ "A display could not be configured properly. It will most likely be broken "
+#~ "and you should consider removing it."
+#~ msgstr ""
+#~ "Η εμφάνιση δεν μπορεί να ρυθμιστεί σωστά. Μάλλον είναι χαλασμένη και θα "
+#~ "πρέπει να την αφαιρέσετε."
+
+#~ msgid "Could not add display"
+#~ msgstr "Αδυναμία προσθήκης εμφάνισης"
+
+#~ msgid "Welcome to %(name)s<i>!</i>"
+#~ msgstr "Καλώς ήλθατε στο %(name)s<i>!</i>"
+
+#~ msgid ""
+#~ "It looks like you are running %(name)s for the first time.\n"
+#~ "\n"
+#~ "You can add new displays by launching them in your file manager.\n"
+#~ "\n"
+#~ "<b>Have fun,</b>\n"
+#~ "  <i>the %(name)s developers</i>"
+#~ msgstr ""
+#~ "Φαίνεται ότι εκτελείτε το %(name)s για πρώτη φορά.\n"
+#~ "\n"
+#~ "Μπορείτε να προσθέσετε νέες εμφανίσεις με το να τις εκκινείτε στον "
+#~ "διαχειριστή αρχείων σας.\n"
+#~ "\n"
+#~ "<b>Καλή Διασκέδαση,</b>\n"
+#~ "  <i>οι δημιοτργοί του %(name)s</i>"
+
+#~ msgid "Invalid display file '%(path)s'"
+#~ msgstr "Μη έγκυρο αρχείο εμφάνισης '%(path)s'"
+
+#~ msgid "_Quit"
+#~ msgstr "Έ_ξοδος"
+
+#~ msgid "translator_credits"
+#~ msgstr "Κώστας Παπαδήμας <pkst@gnome.org>"

@@ -1,0 +1,68 @@
+<section id="dsp-tag-group" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;group&gt;</title>
+
+  <para>This container groups several child elements together in order to
+    treat them as a whole. You can use the group for building complex child
+    elements for containers which accept only one child element, such as
+    the <link linkend="dsp-tag-array">&lt;array&gt;</link>, or the
+    <link linkend="dsp-tag-gauge">&lt;gauge&gt;</link>.</para>
+
+  <para>
+    <tip>
+      <para>Empty groups with a forced size and some background can be used as
+        colored or textured rectangles.</para>
+    </tip>
+  </para>
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">bg-color</entry>
+        <entry valign="top">color</entry>
+        <entry valign="top">#00000000</entry>
+        <entry valign="top">The background color of the group. You can use the
+          alpha channel for color values to achieve translucency.</entry>
+      </row>
+      <row>
+        <entry>bg-uri</entry>
+        <entry>URI</entry>
+        <entry></entry>
+        <entry valign="top">The background image of the group. Overrides
+          <property>bg-color</property>. If the image does not fit the window,
+            it gets tiled over it.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+  <section><title>Examples</title>
+
+    <programlisting><![CDATA[
+<group id="lgroup">
+  <label id="label1" value="label1"/>
+  <label id="label2" value="label2" relative-to="label1, xy"
+      x="10" y="10"/>
+</group>
+<label relative-to="lgroup, y" y="25" value="label3"/>
+    ]]></programlisting>
+
+  </section>
+
+</section>

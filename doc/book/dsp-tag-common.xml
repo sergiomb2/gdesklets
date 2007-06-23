@@ -1,0 +1,262 @@
+<section id="dsp-tag-common" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title id="dsp-tag-common-title">Common Tag Attributes and Handlers</title>
+
+  <para>The display tags, i.e. the tags representing visible display elements,
+    support a set of common attributes and action handlers.</para>
+
+
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">anchor</entry>
+        <entry valign="top">direction</entry>
+        <entry valign="top">nw</entry>
+        <entry valign="top"><link linkend="layout-anchors">Positioning anchor</link>
+          of the element. It determines which point is used for positioning using the
+          <parameter>x, y</parameter> properties.</entry>
+      </row>
+      <row>
+        <entry valign="top">cursor</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top"><emphasize>[New in 0.35]</emphasize> The
+          <link linkend="apdx-cursors">name of the mouse cursor</link> which will be displayed
+          when the mouse pointer enters the element. Set this property to an empty string
+          in order to revert that setting.</entry>
+      </row>
+      <row>
+        <entry valign="top">index-path</entry>
+        <entry valign="top">integer list</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">Read-only property for retrieving the index of the
+          element with in an <link linkend="dsp-tag-array">array</link>.
+          This is a list because arrays can be nested, thus requiring multiple
+          indexes to address an element.</entry>
+      </row>
+      <row>
+        <entry valign="top">menu</entry>
+        <entry valign="top">object</entry>
+        <entry valign="top"></entry>
+        <entry valign="top"><emphasize>[New in 0.35]</emphasize> The menu to be displayed.
+          Whenever you assign a menu (a list of MenuItem objects) to this property,
+          it will immediately popup.</entry>
+      </row>
+      <row>
+        <entry valign="top">relative-to</entry>
+        <entry valign="top">string list</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">
+          <para>Usage: <userinput>relative-to="id, dir"</userinput></para>
+          Places the element relative to the element with
+          ID <parameter>id</parameter>.</entry>
+      </row>
+      <row>
+        <entry valign="top">x</entry>
+        <entry valign="top">unit</entry>
+        <entry valign="top">0</entry>
+        <entry valign="top">X coordinate of the element.</entry>
+      </row>
+      <row>
+        <entry valign="top">y</entry>
+        <entry valign="top">unit</entry>
+        <entry valign="top">0</entry>
+        <entry valign="top">Y coordinate of the element.</entry>
+      </row>
+      <row>
+        <entry valign="top">width</entry>
+        <entry valign="top">unit</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">Width of the element.</entry>
+      </row>
+      <row>
+        <entry valign="top">height</entry>
+        <entry valign="top">unit</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">Height coordinate of the element.</entry>
+      </row>
+      <row>
+        <entry valign="top">id</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">Unique ID of the element. The ID is used for
+          referencing the element.</entry>
+      </row>
+      <row>
+        <entry valign="top">visible</entry>
+        <entry valign="top">boolean</entry>
+        <entry valign="top">true</entry>
+        <entry valign="top">Visibility state of the element. Either
+          <literal>true</literal> (visible) or <literal>false</literal>
+          (hidden). Hidden elements don't consume
+          any space and can thus not detect mouse events.</entry>
+      </row>
+
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+
+  <section><title>Action Handlers</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Event Members</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">on-click</entry>
+        <entry valign="top">
+          <para>button: integer</para>
+          <para>x: unit</para>
+          <para>y: unit</para>
+        </entry>
+        <entry valign="top">Handler for mouse click events. A click consists of
+          pressing and releasing a mouse button without moving the pointer
+          significantly.</entry>
+      </row>
+      <row>
+        <entry valign="top">on-doubleclick</entry>
+        <entry valign="top">
+          <para>button: integer</para>
+          <para>x: unit</para>
+          <para>y: unit</para>
+        </entry>
+        <entry valign="top">Like <parameter>on-click</parameter>, but only
+          reacts on double clicks.</entry>
+      </row>
+      <row>
+        <entry valign="top">on-enter</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">Handler for <literal>enter</literal> events that
+          are triggered every
+          time the mouse pointer enters the element.</entry>
+      </row>
+      <row>
+        <entry valign="top">on-file-drop</entry>
+        <entry valign="top">
+          <para>files: URI list</para>
+        </entry>
+        <entry valign="top">Handler for dropping files after drag-and-drop
+          operations. This only accepts files to be dropped.</entry>
+      </row>
+      <row>
+        <entry valign="top">on-key-press</entry>
+        <entry valign="top">
+          <para>key: string</para>
+        </entry>
+        <entry valign="top">Handler for key presses.</entry>
+      </row>
+      <row>
+        <entry valign="top">on-key-release</entry>
+        <entry valign="top">
+          <para>key: string</para>
+        </entry>
+        <entry valign="top">Handler for key releases.</entry>
+      </row>
+      <row>
+        <entry valign="top">on-leave</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">Like <parameter>on-enter</parameter>, but for
+          <literal>leave</literal> events.</entry>
+      </row>
+      <row>
+        <entry valign="top">on-link-drop</entry>
+        <entry valign="top">
+          <para>links: URI list</para>
+        </entry>
+        <entry valign="top">Handler for dropping browser links after
+          drag-and-drop operations.</entry>
+      </row>
+      <row>
+        <entry valign="top">on-menu</entry>
+        <entry valign="top">script</entry>
+        <entry valign="top">Handler for the popup menu, reacting when the user
+          opens the popup-menu.</entry>
+      </row>
+      <row>
+        <entry valign="top">on-motion</entry>
+        <entry valign="top">
+          <para>x: unit</para>
+          <para>y: unit</para>
+        </entry>
+        <entry valign="top">Handler for <literal>mouse motion</literal>
+          events.</entry>
+      </row>
+      <row>
+        <entry valign="top">on-press</entry>
+        <entry valign="top">
+          <para>button: integer</para>
+          <para>x: unit</para>
+          <para>y: unit</para>
+        </entry>
+        <entry valign="top">Like <parameter>on-click</parameter>, but reacts on
+          pressing a button.</entry>
+      </row>
+      <row>
+        <entry valign="top">on-release</entry>
+        <entry valign="top">
+          <para>button: integer</para>
+          <para>x: unit</para>
+          <para>y: unit</para>
+        </entry>
+        <entry valign="top">Like <parameter>on-click</parameter>, but reacts on
+          releasing a button.</entry>
+      </row>
+      <row>
+        <entry valign="top">on-scroll</entry>
+        <entry valign="top">
+          <para>direction: integer</para>
+        </entry>
+        <entry valign="top">Handler for <literal>mouse wheel</literal>
+          events.  The <userinput>direction</userinput> property is 0 for a 
+          scroll up event and 1 for a scroll down.</entry>
+      </row>
+
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+  </section>
+   
+   
+   
+  <section><title>Examples</title> 
+  
+    Sample from SideCandy displays:
+    <programlisting><![CDATA[
+<group id="slider"
+       on-click="if (sc_behavior == 'click'): slide(self, SC_IN, SC_OUT)"
+       on-doubleclick="if (sc_behavior == 'double'): slide(self, SC_IN, SC_OUT)"
+       on-enter="if (sc_behavior == 'enter'): slide(self, SC_IN, SC_OUT)"
+       on-leave="if (sc_behavior == 'enter'): slide(self, SC_IN, SC_OUT)"
+       on-scroll="scroll_me(self.event.direction)">
+    ]]></programlisting>
+
+  </section>
+
+</section>

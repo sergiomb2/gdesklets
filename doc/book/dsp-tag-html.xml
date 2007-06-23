@@ -1,0 +1,79 @@
+<section id="dsp-tag-html" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;html&gt;</title>
+
+  <para>This element renders HTML documents by using the
+    <application>gtkhtml2</application> engine.</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/dsp-html" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">data</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">A string of HTML code to display.</entry>
+      </row>
+      <row>
+        <entry valign="top">loading</entry>
+        <entry valign="top">boolean</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">Read-only property which is <literal>true</literal>
+          while the site is still being loaded.</entry>
+      </row>
+      <row>
+        <entry valign="top">scollbars</entry>
+        <entry valign="top">boolean</entry>
+        <entry valign="top">true</entry>
+        <entry valign="top">Whether to display scrollbars or not.</entry>
+      </row>
+      <row>
+        <entry valign="top">uri</entry>
+        <entry valign="top">URI</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The URI of the HTML document to display.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+
+  <section><title>Examples</title>
+
+    <programlisting><![CDATA[
+<display bg-color="grey50" anchor="center" x="50%" y="50%">
+
+  <frame>
+    <html uri="http://gdesklets.gnomedesktop.org" width="30cm" height="20cm"/>
+  </frame>
+ 
+</display>
+    ]]></programlisting>
+
+  </section>
+
+</section>

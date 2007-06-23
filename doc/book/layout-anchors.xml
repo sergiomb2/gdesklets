@@ -1,0 +1,33 @@
+<section id="layout-anchors" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Anchors</title>
+
+  <para>The <emphasize>anchor</emphasize> of a display element is the point
+    of the element which is used for positioning. If you place an element at
+    the coordinates <literal>(10, 10)</literal>, then the element will be
+    positioned with its anchor lying on that point.</para>
+
+  <para>The default anchor is the top-left corner, which is called
+    <literal>nw</literal> in <application>gDesklets</application>, because it
+    is in the north-west, if you assume north pointing upwards.</para>
+
+  <para>By changing the <property>anchor</property> property to another value,
+    you can easily achieve some fancy layouts. For instance, by setting the
+    anchor to <literal>se</literal>, and placing the element at
+    <literal>(100%, 100%)</literal>, you can align the element with the
+    bottom-right corner of its container.</para>
+
+  <para>The valid anchor positions are:</para>
+
+  <itemizedlist>
+    <listitem><literal>nw</literal> - north-west, the top-left corner</listitem>
+    <listitem><literal>n</literal> - north, the middle of the top edge</listitem>
+    <listitem><literal>ne</literal> - north-east, the top-right corner</listitem>
+    <listitem><literal>e</literal> - east, the middle of the right edge</listitem>
+    <listitem><literal>se</literal> - south-east, the bottom-right corner</listitem>
+    <listitem><literal>s</literal> - south, the middle of the bottom edge</listitem>
+    <listitem><literal>sw</literal> - south-west, the bottom-left corner</listitem>
+    <listitem><literal>w</literal> - west, the middle of the left edge</listitem>
+    <listitem><literal>center</literal> - the center of the element</listitem>
+  </itemizedlist>
+
+</section>

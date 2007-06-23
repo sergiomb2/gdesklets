@@ -1,0 +1,72 @@
+<chapter id="meta" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Meta-Data</title>
+
+<section id="meta-tag"><title>&lt;meta&gt;</title>
+
+  <para>The <literal>meta</literal> tag contains information about your
+    desklet shown in the shell.</para>
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">author</entry>
+        <entry valign="top">The name of the person(s) who wrote the
+          desklet.</entry>
+      </row>
+      <row>
+        <entry valign="top">category</entry>
+        <entry valign="top">The category in which the desklet should
+          be.</entry>
+      </row>
+      <row>
+        <entry valign="top">dependency</entry>
+        <entry valign="top">The minimum version of <application>gDesklets</application>
+          on which the desklet is dependent.</entry>
+      </row>
+      <row>
+        <entry valign="top">description</entry>
+        <entry valign="top">A short description of the desklet.</entry>
+      </row>
+      <row>
+        <entry valign="top">name</entry>
+        <entry valign="top">The name of the desklet.</entry>
+      </row>
+      <row>
+        <entry valign="top">preview</entry>
+        <entry valign="top">Path to an image representing the display.  This
+          could be an icon or an actual screenshot, for example.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+  <programlisting><![CDATA[
+<display>
+
+  <meta author="George D. Esklet"
+        version="0.1"
+        name="MyFirstDesklet"
+        category="misc/utilities"
+        description="A display to show off my Python-writing skills."
+        dependency="0.33.1"
+        preview="gfx/icon.png"/>
+
+</display>
+  ]]></programlisting>
+</section>
+
+</chapter>

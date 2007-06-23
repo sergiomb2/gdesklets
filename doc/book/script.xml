@@ -1,0 +1,13 @@
+<chapter id="script"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Scripting</title>
+
+  <para>Static display elements can be brought to life with scripting. This
+    chapter describes scripting in detail.</para>
+
+  <xi:include href="script-language.xml"/>
+  <xi:include href="script-sandbox.xml"/>
+  <xi:include href="script-using.xml"/>
+  <xi:include href="script-menu.xml"/>
+  <xi:include href="script-builtins.xml"/>
+
+</chapter>

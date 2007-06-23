@@ -1,0 +1,46 @@
+There are three major parts which are loosely coupled together:
+
+ - the managing part loads .display files and sensors, starts desklets and
+   keeps track of them (main.*, factory.*)
+
+ - the display part displays the widgets (display.*)
+
+ - the sensor part runs the sensors (sensor.*)
+
+
+The Observer Pattern is used for most of the communication between these parts.
+Each observable object is derived from utils.Observable and may send commands
+and arguments with each update call. The observer uses the command to find out
+what action to take. Display could e.g. send commands like CLOSE or
+RESTART to Starter. Commands are usually implemented as constant values
+(integers) as class variables in the Observables.
+
+ Example:
+ ------------------------------------------------------------------------------
+  class A(Observable):
+      OBS_CMD_FOO = 0
+      def foo(self): self.update_observer(self.OBS_CMD_FOO, 1, 2, 3)
+
+  class B:
+      def __init__(self):
+          a = A()
+          a.add_observer(self.__on_observe_a)
+      def __on_observe_a(self, src, cmd, *args):
+          if (cmd == src.OBS_CMD_FOO):
+              a, b, c = args
+              print "foo", a, b, c
+ ------------------------------------------------------------------------------
+
+
+ The major observing relations:
+ ------------------------------------------------------------------------------
+    +---------------+          +-----------------+          +--------------+
+    | sensor.Sensor | <------- | display.Display | <------- | main.Starter |
+    +---------------+          +-----------------+          +--------------+
+ ------------------------------------------------------------------------------
+
+
+The display part makes heavy use of observers internally:
+Targets with a position relative to another target observe the other target for
+size and position changes. Container targets are observing their children for
+position change requests in order to reposition them.

@@ -1,0 +1,437 @@
+<section id="tutor-hello"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>"Hello World!" and More</title>
+
+<para>by Martin Grimme</para>
+
+
+<section><title>Introduction</title>
+
+  <para>"Hello World!" is traditionally the first program which you write when
+    learning a new language. The "Hello World!" for
+    <application>gDesklets</application> is remarkably easy. Therefore, we will
+    extend it a bit. This tutorial will let you take a peek into
+    advanced things like configuration dialogs, action handlers, event objects,
+    and inline scripting to give you a quick overview.</para>
+
+</section>
+
+
+
+<section><title>Ready, Set, Go!</title>
+
+  <para>You don't need much for creating desklets. Just make sure that you have
+    these things ready:</para>
+
+  <itemizedlist>
+    <listitem>the <application>gDesklets</application> platform</listitem>
+    <listitem>this book</listitem>
+    <listitem>your favorite text editor (the author recommends
+      <application>gedit</application> for writing desklets)</listitem>
+  </itemizedlist>
+
+  <para>Now, open your text editor and let's start the show!</para>
+
+</section>
+
+
+
+<section><title>Hello World!</title>
+
+  <para>The first "Hello World!" desklet will be easy. It will just open a
+    window saying "Hello World!" to the user.</para>
+
+  <para>Copy the following lines into your editor and save the file as
+    <filename>hello.display</filename>.</para>
+
+  <programlisting><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display>
+
+  <label value="Hello World!"/>
+
+</display>
+  ]]></programlisting>
+
+  <para>Run and enjoy your first self-made desklet. Now, wasn't that easy?
+    </para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/hello-plain" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>It's a bit tiny, indeed. But we can change the font size to make the
+    text more readable. How about a font which is three centimeters high?</para>
+
+  <programlisting><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display>
+
+  <label value="Hello World!" font="Sans 3cm"/>
+
+</display>
+  ]]></programlisting>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/hello-big" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>Much better! Why don't we change the label color as well?</para>
+
+  <programlisting><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display>
+
+  <label value="Hello World!" font="Sans 3cm" color="red"/>
+
+</display>
+  ]]></programlisting>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/hello-color" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+</section>
+
+
+
+<section><title>Make it Configurable</title>
+
+  <para>Not everybody likes red labels. It would be better to let the user
+    change the color. This can be achieved with the preferences system.</para>
+
+  <para>First, we have to give our label an ID, so that we can call it by its
+    name later. This is done with the <property>id</property> property.
+    The ID can be any alphanumeric string as long as its a unique ID within the
+    <filename>.display</filename> file. Just call it
+    "<literal>mylabel</literal>" for now.</para>
+
+  <programlisting><![CDATA[
+<label id="mylabel" value="Hello World!" font="Sans 3cm" color="red"/>
+  ]]></programlisting>
+
+  <para>Now that we have given a name to the label, we can bind its
+    <property>color</property> (or any other property, too) to a preferences
+    dialog.</para>
+
+  <para>The preferences dialog is defined within the
+    <command>&lt;prefs&gt;</command> tag. We need a color selector bound to the
+    label:</para>
+
+  <programlisting><![CDATA[
+<color label="Text Color:" bind="Dsp.mylabel.color"/>
+  ]]></programlisting>
+
+  <para>As you can see, the color selector has a label text, with which it
+    appears in the dialog. The interesting part is the
+    <property>bind</property> property, however. With <property>bind</property>,
+    you can bind any readable and writable object to a configuration element.
+    In our "Hello World!" example, this is the <property>color</property>
+    property of the label. To avoid namespace clutter, all display elements
+    sit within the <literal>Dsp</literal> namespace. That's why we need the
+    "<literal>Dsp.</literal>" prefix before "<literal>mylabel</literal>".</para>
+
+  <para>Here is our working configurable "Hello World!" desklet:</para>
+
+  <programlisting><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display>
+
+  <label id="mylabel" value="Hello World!" font="Sans 3cm" color="red"/>
+
+  <prefs>
+
+    <color label="Text Color:" bind="Dsp.mylabel.color"/>
+
+  </prefs>
+
+</display>
+  ]]></programlisting>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/hello-prefs" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>The label color is fully configurable now. Restart the desklet
+    or <application>gDesklets</application> and you will see that the
+    configuration has been saved across sessions. Making a desklet configurable
+    couldn't be easier!</para>
+
+  <para>For an excercise, you can try to make the label font and the text
+    configurable as well. That way you can already get used to using this book
+    as a reference book.</para>
+</section>
+
+
+
+<section><title>Adding Life</title>
+
+  <para>Until now, our "Hello World!" was pretty static and boring.
+    We are going to change this now. Let's use some scripting to make
+    it alive.</para>
+
+  <para>First of all, we add an image and let it appear behind the label. To
+    make it appear behind the label, set it before it in the
+    <filename>.display</filename> file. That way the label will be in front.
+    </para>
+
+  <programlisting><![CDATA[
+<image uri="/usr/share/pixmaps/gdesklets.png"/>
+<label id="mylabel" value="Hello World!" font="Sans 3cm" color="red"/>
+  ]]></programlisting>
+
+  <para>Every display element provides hooks, where you can put action handlers
+    in. These hooks are properties as well, and accept Python scripts. To make
+    the image react on entering with the mouse pointer, we have to setup the
+    <property>on-enter</property> handler.</para>
+
+  <programlisting><![CDATA[
+<image uri="/usr/share/pixmaps/gdesklets.png" on-enter="print 'entering'"/>
+  ]]></programlisting>
+
+  <para>Instead of the simple <literal>print</literal> statement, we could
+    also modify properties. For example, change the size of the image.</para>
+
+  <para>Before you start adding an ID to the image as well, keep in mind that
+    action handlers let you refer to the element where the action occurred using
+    the <literal>self</literal> reference. Changing the image size on entering
+    the image is thus as simple as this, without the need for an ID:</para>
+
+  <programlisting><![CDATA[
+<image uri="/usr/share/pixmaps/gdesklets.png" on-enter="self.scale = 2"/>
+  ]]></programlisting>
+
+  <para>The <property>on-leave</property> handler gets activated when the mouse
+    leaves the element again. In that case, we want to reset the image to its
+    original size again. Here's the full code so far:</para>
+
+  <programlisting><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display>
+
+  <image uri="/usr/share/pixmaps/gdesklets.png"
+         on-enter="self.scale = 2"
+         on-leave="self.scale = 1"/>
+  <label id="mylabel" value="Hello World!" font="Sans 3cm" color="red"/>
+
+  <prefs>
+
+    <color label="Text Color:" bind="Dsp.mylabel.color"/>
+
+  </prefs>
+
+</display>
+  ]]></programlisting>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/hello-action" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+</section>
+
+
+
+<section><title>More Fancy Stuff</title>
+
+  <para>The last challenge in our "Hello World!" tutorial will be to make the
+    image draggable with the mouse pointer. Does this sound difficult?
+    Don't worry, it's not complicated at all.</para>
+
+  <para>At first, we have to be aware that there are two states now:</para>
+
+  <itemizedlist>
+    <listitem>State 1: the image is not being dragged</listitem>
+    <listitem>State 2: the image is being dragged</listitem>
+  </itemizedlist>
+
+  <para>It is important to keep track of the current state. Initially we are
+    in state 1. As soon as the user presses the mouse button,
+    we enter state 2 and remain in that state until she releases the button
+    again. Then we enter state 1 again. If we're in state 2, we have to watch
+    the pointer movements and move the image to the current pointer position.
+    </para>
+
+  <para>To keep track of the state, we need some variable. This will inevitably
+    lead us to inline scripting. Inline scripts are Python scripts which can
+    directly interact with the display elements. Action handlers were your first
+    encounter with inline scripts already. But you can also put scripts inside
+    the <command>&lt;script&gt;</command> tag, like this:</para>
+
+  <programlisting><![CDATA[
+<script>
+
+  # this is some inline script
+
+  a = 1
+  b = 2
+  print a + b
+
+  # we can also modify properties of display elements here
+  Dsp.mylabel.value = "Hallo Welt!"
+
+</script>
+  ]]></programlisting>
+
+  <para>Most times, scripts require us to use characters, which are reserved by
+    XML, such as "&lt;", "&gt;", or "&amp;". They can be entered by using the
+    common XML entities instead, e.g. "&amp;lt;", "&amp;gt;", or "&amp;amp;".
+    While this is neccessary for action handler scripts, we can use
+    <emphasize>CDATA</emphasize> sections in the
+    <command>&lt;script&gt;</command> tag to avoid it. A CDATA section is a
+    section which the XML parser doesn't parse. Therefore, there is no need
+    for escaping reserved characters.</para>
+
+  <para>Any text within "<literal>&lt;![CDATA[</literal>" and
+    <literal>"]]&gt;</literal>" is ignored by the XML parser. It is always safe
+    to enclose inline scripts in a CDATA section, like this:</para>
+
+  <programlisting><![CDATA[
+<script><![CDATA[
+
+  ...
+
+]]>]]&gt;<![CDATA[</script>
+  ]]></programlisting>
+
+  <para>Back to our problem. The current state can be remembered by using a
+    script variable:</para>
+
+  <programlisting><![CDATA[
+<script><![CDATA[
+
+  # the initial state
+  state = 1
+
+]]>]]&gt;<![CDATA[</script>
+  ]]></programlisting>
+
+  <para>The <property>on-press</property> handler is responsible for
+    taking actions when the user presses the mouse button.
+    The <property>on-release</property> handler is called on releasing
+    the button. Therefore, we use these two action handlers for setting the
+    current state:</para>
+
+  <programlisting><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display on-press="state = 2"
+         on-release="state = 1">
+
+  <image uri="/usr/share/pixmaps/gdesklets.png"
+         on-enter="self.scale = 2"
+         on-leave="self.scale = 1"/>
+  <label id="mylabel" value="Hello World!" font="Sans 3cm" color="red"/>
+
+  <prefs>
+
+    <color label="Text Color:" bind="Dsp.mylabel.color"/>
+
+  </prefs>
+
+
+  <script><![CDATA[
+
+    # the initial state
+    state = 1
+
+  ]]>]]&gt;<![CDATA[</script>
+
+</display>
+  ]]></programlisting>
+
+  <para>The last action handler needed for this tutorial is the
+    <property>on-motion</property> handler. It gets called whenever the mouse
+    is being moved. Since we want to capture motion events on the whole display,
+    we put this handler into the <command>&lt;display&gt;</command> tag.</para>
+
+  <para>We're going to call a <literal>move()</literal> function in the
+    action handler. This function, of course, should only be used if we're
+    currently in state 2:</para>
+
+  <programlisting><![CDATA[
+<display on-press="state = 2"
+         on-release="state = 1"
+         on-motion="if (state == 2): move(self.event.x, self.event.y)">
+  ]]></programlisting>
+
+  <para>The <literal>self.event</literal> object is an event object of the
+    action handler. Every action handler provides an event object with
+    information about the action. In this example the current position of the
+    mouse pointer can read from the <property>x</property> and
+    <property>y</property> properties. Please note that the event object is
+    only available within the action handler.</para>
+
+  <para>For the last part, the <literal>move()</literal> function has to be
+    implemented. This function takes the current pointer position and modifies
+    the <property>x</property> and <property>y</property> properties of the
+    image in order to move it.
+    This time, we really need to give the image an ID.</para>
+
+  <para>The complete code now looks like this:</para>
+
+  <programlisting><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display on-press="state = 2"
+         on-release="state = 1"
+         on-motion="if (state == 2): move(self.event.x, self.event.y)">
+
+  <image id="img" uri="/usr/share/pixmaps/gdesklets.png"
+         on-enter="self.scale = 2"
+         on-leave="self.scale = 1"/>
+  <label id="mylabel" value="Hello World!" font="Sans 3cm" color="red"/>
+
+  <prefs>
+
+    <color label="Text Color:" bind="Dsp.mylabel.color"/>
+
+  </prefs>
+
+
+  <script><![CDATA[
+
+    # the initial state
+    state = 1
+
+    def move(x, y):
+
+        Dsp.img.x = x
+        Dsp.img.y = y
+
+  ]]>]]&gt;<![CDATA[</script>
+
+</display>
+  ]]></programlisting>
+
+  <para>Now that you've finished this tutorial, you should have got a good
+    overview of most concept of the <application>gDesklets</application>
+    platform. However, this tutorial covered many, but not all parts of the
+    platform. There's still lots to be explored!</para>
+
+</section>
+
+</section>

@@ -1,0 +1,400 @@
+#! /usr/bin/env python
+
+from main import client, DISPLAY, HOME, USERHOME
+from main import LOGFILE, LOG_PATH, PID_PATH, REGISTRY_PATH, SOCKET_PATH
+from main.DisplayList import DisplayList
+from utils import i18n
+
+import utils
+
+import os
+import sys
+import __builtin__
+__builtin__._ = i18n.Translator("gdesklets")
+
+
+_DISPLAYLIST = os.path.join(USERHOME, "displays")
+_DSPLIST = DisplayList(_DISPLAYLIST)
+
+
+#
+# Check if user starts gdesklets as root
+#
+def check_user():
+
+    if (os.getuid() == 0):
+        print _("You must NOT run gDesklets as super user (root).")
+        sys.exit(1)
+
+    utils.makedirs(os.path.join(USERHOME, "Displays"))
+    utils.makedirs(os.path.join(USERHOME, "Controls"))
+    utils.makedirs(os.path.join(LOG_PATH))
+    utils.makedirs(os.path.join(REGISTRY_PATH))
+    # chmod'ing USERHOME and subdirs to 700, otherwise it might become a
+    # security risk
+    os.chmod(USERHOME, 0700)
+    os.chmod(REGISTRY_PATH, 0700)
+    os.chmod(LOG_PATH, 0700)
+
+
+
+#
+# Runs dependency checks and returns whether all checks went fine.
+#
+def check_system():
+
+    print _("Checking requirements:")
+
+    for modules, predicate, message in (
+        ( ("sys",), lambda m : m.version_info[:2] >= (2, 3),
+          _("Python version >= 2.3.0 is required.")
+        ),
+        ( ("xml.parsers.expat",),
+          lambda m: m.parsers.expat.version_info != (1, 95, 7),
+          _("libexpat version 1.95.7 is broken. Please upgrade!")
+        ),
+        ( ("xml.sax",), lambda m: m,
+          _("SAX parser is required, some SuSE versions ship without it.")
+        ),
+        ( ("gtk",), lambda m : m.pygtk_version >= (2, 4, 0) and \
+                              m.gtk_version >= (2, 4, 0),
+          _("GTK python bindings (pygtk2) version >= 2.4.0 and "
+            "GTK+ version >= 2.4.0 are required.")
+        ),
+        ( ("ORBit",), lambda m : m.__version__ >= (2, 0, 1),
+          _("ORBit python bindings (pyorbit) version >= 2.0.1 are required.")
+        ),
+        ( ("bonobo.ui",), lambda m : m,
+          _("bonobo python bindings are required.")
+        )
+    ):
+
+        loaded = None
+        for m in modules:
+            print " - %s ..." % m,
+            try:
+                loaded = __import__(m)
+                print _("found")
+                break
+            except Exception:
+                pass
+            print _("missing")
+
+        try:
+            if (not predicate(loaded)):
+                raise RuntimeError
+        except Exception:
+            print _("Version check failed.")
+            print _("\n%s\n" % message)
+            print _("Please make sure that the required software is "
+                    "installed.\nAlso try to avoid having multiple versions "
+                    "of a library/binding on your system.\ngDesklets won't "
+                    "work if you don't have all necessary dependencies "
+                    "installed\non your system.\n\nTHE STARTUP WILL BE "
+                    "CANCELLED NOW!\n")
+            return False
+
+
+    print "Requirements checking done. Your system looks ok!"
+    return True
+
+
+def check_first_run():
+
+    if (not os.path.exists(USERHOME)):
+        print _("\nYou're running gDesklets for the first time.\ngDesklets "
+                "will start a requirements check now...\n")
+        if (not check_system()):
+            sys.exit(1)
+
+
+def usage_and_exit():
+
+    """ prints how to use gdesklets"""
+
+    print _(
+        "Usage: gdesklets [option] <command> [arguments...]\n"
+        "\n"
+        "\t<command>\n"
+        "\t\topen    <files>   (Opens the given desklet files)\n"
+        "\t\tstart             (Runs the gDesklets daemon, this is default)\n"
+        "\t\tstop              (Stops the gDesklets daemon)\n"
+        "\t\tlist              (Lists open desklets)\n"
+        "\t\trestart           (Restarts the gDesklets daemon)\n"
+        "\t\tprofile <profile> (Switches to the given profile)\n"
+        "\t\tprofile           (Shows the current and the available profiles)\n"
+        "\t\tshell             (Opens the graphical shell)\n"
+        "\t\tslay              (Kills the daemon -- use in emergency)\n"
+        "\t\tstatus            (Checks daemon status)\n"
+        "\t\tabout             (Prints information about gDesklets)\n"
+        "\t\tversion           (Prints gDesklets version)\n"
+        "\t\tconfigure         (Opens the configuration dialog)\n"
+        "\t\thelp              (Displays this text)\n"
+        "\t\tcheck             (Checks requirements)\n"
+        "\n"
+        "\t[option]\n"
+        "\t\t--no-tray-icon    (disables the systray icon)\n"
+        "\t\t--translucent     (enables translucency on the xorg servers)\n"
+        )
+    sys.exit(1)
+
+
+class Command(object):
+
+    def __init__(self, args):
+
+        self.__args = args
+        self.__command = ""
+        self.__files = []
+
+
+
+    def __client_daemon(self):
+
+        """ Returns the daemon if available, otherwise informs the user that
+            something went wrong """
+
+        try:
+            ndaemon = client.get_daemon()
+
+        except StandardError, exc:
+            print ("Error while starting gdesklets-daemon\n"
+                   "More information about this crash is available in \"%s\"."
+                   % LOGFILE)
+            print exc
+            return
+
+        ndaemon.set_remove_command(os.path.abspath(sys.argv[0]) + " _remove")
+
+        return ndaemon
+
+
+
+    def __open_profile(self, profile):
+
+        """ Opens passed profile """
+
+        daemon = self.__client_daemon()
+        displays = _DSPLIST.get_displays(profile)
+        for myident in displays:
+            try:
+                mypath = _DSPLIST.lookup_display(myident)[-1]
+            except KeyError, exc:
+                log(`exc`)
+                continue
+
+            try:
+                daemon.open_display_with_id(mypath, myident)
+            except Exception:
+                print _("Could not open desklet %s.") % mypath
+                continue
+
+
+
+    def __close_profile(self, profile):
+
+        """ Closes passed profile """
+
+        daemon = self.__client_daemon()
+        displays = _DSPLIST.get_displays(profile)
+        for myident in displays:
+            daemon.close_display(myident)
+
+
+
+    def parse_args(self):
+
+        try:
+
+            try:
+                self.__args.remove("--translucent")
+            except Exception:
+                pass
+
+            try:
+                self.__args.remove("--no-tray-icon")
+            except Exception:
+                pass
+
+            try:
+                self.__args.remove("--debug")
+            except Exception:
+                pass
+
+            try:
+                index = self.__args.index("--sm-config-prefix")
+                del args[index:index+2]
+            except Exception:
+                pass
+
+            try:
+                index = self.__args.index("--sm-client-id")
+                del args[index:index+2]
+            except Exception:
+                pass
+
+            if (not self.__args):
+                self.__args = ["start"]
+
+            self.__command = self.__args.pop(0)
+            self.__files = self.__args
+
+        except Exception:
+            usage_and_exit()
+
+
+
+    def parse_command(self):
+
+        if (self.__command == "open"):
+            if (len(self.__files) == 0):
+                usage_and_exit()
+
+            daemon = self.__client_daemon()
+            for item in self.__files:
+                if (0 < item.find("://") < 8):
+                   path = item
+                else:
+                   path = os.path.abspath(item)
+
+                try:
+                    ident = daemon.open_display(path)
+                except Exception:
+                    print _("Could not open desklet %s.") % path
+                    continue
+
+                prof = _DSPLIST.get_profile()
+                _DSPLIST.add_display(prof, path, ident)
+                _DSPLIST.commit()
+
+        elif (self.__command == "start"):
+            print _("Starting gdesklets-daemon...")
+            myprofile = _DSPLIST.get_profile()
+            self.__open_profile(myprofile)
+
+        elif (self.__command == "stop"):
+            if (client.daemon_is_running()):
+                print _("Shutting down gdesklets-daemon...")
+                self.__client_daemon().shutdown()
+
+        elif (self.__command == "shell"):
+            cmd = "%s >/dev/null &" % (os.path.join(HOME, "gdesklets-shell"))
+            os.system(cmd)
+
+        elif (self.__command == "list"):
+            myprofile = _DSPLIST.get_profile()
+            display_list = _DSPLIST.get_displays(myprofile)
+
+            if (display_list):
+                print _("Currently open displays in profile \"%s\":\n"
+                        % (myprofile,))
+                for display in display_list:
+                    print _DSPLIST.lookup_display(display)[1]
+            else:
+                print _("Currently there aren't any desklets in profile "
+                        "\"%s\"" % (myprofile,))
+
+        elif (self.__command == "restart"):
+            print _("Restarting gdesklets-daemon...")
+
+            if (client.daemon_is_running()):
+                cmd = "%s stop && sleep 3 && %s start" \
+                      % (sys.argv[0], sys.argv[0])
+            else:
+                cmd = "%s start" % (sys.argv[0],)
+
+            os.system(cmd)
+
+        elif (self.__command == "status"):
+
+            if (client.daemon_is_running()):
+                print _("gdesklets-daemon is running")
+            else:
+                print _("gdesklets-daemon is not running")
+
+        elif (self.__command == "profile"):
+            current_profile = _DSPLIST.get_profile()
+            print _("Current profile: %s") % (current_profile,)
+
+            if (self.__files):
+                new_profile = self.__files[0]
+                if (new_profile != current_profile):
+                   # close displays of the old profile
+                   self.__close_profile(current_profile)
+                   # start displays of the new profile
+                   self.__open_profile(new_profile)
+                   _DSPLIST.set_profile(new_profile)
+                   _DSPLIST.commit()
+                   print _("New profile: %s") % (new_profile,)
+            else:
+                profiles_list = ", ".join(_DSPLIST.get_profiles())
+                print _("Available profiles: %s") % (profiles_list,)
+
+        elif (self.__command == "version"):
+            name, version = self.__client_daemon().version()
+            print _("This is %s, version %s.") % (name, version)
+
+        elif (self.__command == "about"):
+            name, copy_right, gnu = self.__client_daemon().about()
+            print "%s\n%s\n\n%s" % (name, copy_right, gnu)
+
+        elif (self.__command == "configure"):
+            self.__client_daemon().configure()
+
+        elif (self.__command == "help"):
+            usage_and_exit()
+
+        elif (self.__command == "_remove"):
+            ident = self.__files[0]
+            _DSPLIST.remove_display(ident)
+            try:
+                _DSPLIST.commit()
+            except StandardError:
+                log("Could not remove \"%s\"." % (ident,))
+
+        elif (self.__command == "slay"):
+
+            import time
+            import signal
+
+            try:
+                pid = int(open(PID_PATH).read())
+            except Exception:
+                sys.exit(_("Nothing to slay."))
+
+            for sig in signal.SIGINT, signal.SIGTERM, signal.SIGKILL:
+
+                try:
+                    os.kill(pid, sig)
+                except OSError:
+                    break
+
+                time.sleep(1)
+
+            try:
+                os.remove(PID_PATH)
+                os.remove(os.path.join(SOCKET_PATH, DISPLAY))
+            except OSError:
+                pass
+
+
+        elif (self.__command == "check"):
+
+            if (not check_system()):
+                sys.exit(1)
+
+        else:
+            print _("Invalid command. Please try one of the following "
+                    "commands:")
+            usage_and_exit()
+
+
+
+command = Command(sys.argv[1:])
+if (len(sys.argv) > 1 and sys.argv[1] != "check"):
+    check_first_run()
+
+check_user()
+command.parse_args()
+command.parse_command()
+

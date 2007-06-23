@@ -1,0 +1,439 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Victor Jónsson <victor@victorjonson.is>, 2004.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: gdesklets\n"
+"POT-Creation-Date: 2004-05-12 21:17+0000\n"
+"PO-Revision-Date: 2004-05-12 21:28-0000\n"
+"Last-Translator: Samuel Jon Gunnarsson <sammi@techattack.nu>\n"
+"Language-Team: Icelandic <gnome@techattack.nu>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#.
+#. FontSelector sensor by Psi (psiz _at_ free _dot_ fr)
+#. Adopted and modified by Martin Grimme.
+#.
+#. the number of fonts
+#. the font settings
+#. the color settings
+#. setup configuration entries
+#. end for
+#.
+#. Font init
+#.
+#. end if
+#: Sensors/FontSelector/__init__.py:86
+msgid "Fonts"
+msgstr "Leturgerðir"
+
+#: Sensors/FontSelector/__init__.py:87
+msgid "Fonts settings"
+msgstr "Stillingar leturgerða"
+
+#: Sensors/FontSelector/__init__.py:90
+#, python-format
+msgid "Font #%i:"
+msgstr "Leturgerð #%i:"
+
+#: Sensors/FontSelector/__init__.py:92
+#, python-format
+msgid "Font #%i used in the labels"
+msgstr "Leturgerð #%i notuð í merkin"
+
+#: Sensors/FontSelector/__init__.py:93
+#, python-format
+msgid "Font color #%i:"
+msgstr "Litur leturgerðar #%i:"
+
+#: Sensors/FontSelector/__init__.py:95
+#, python-format
+msgid "Font color #%i used in the labels"
+msgstr "Litur leturgerðar #%i notaður í merkjunum"
+
+#. end for
+#.
+#. Class for the browser's main window. This class simply acts as a mediator for
+#. its widgets.
+#.
+#. what we accept for drag & drop
+#: browser/MainWindow.py:66
+#: browser/TipOfTheDay.py:20
+msgid "Tip of the Day"
+msgstr "Heilræði dagsins"
+
+#: browser/TipOfTheDay.py:23
+msgid "Show tips at startup"
+msgstr "Sýna heilræði í byrjun"
+
+#  make the close button the default button
+#  Module for holding runtime settings.
+#  public settings : default values
+#  parsing command line arguments.
+#: config/settings.py:38
+msgid "Usage: gdesklets <OPTION> <my.display>\n"
+msgstr "Notkun: gdesklets <VALMÖGULEIKI> <mitt.display>\n"
+
+#: config/settings.py:39
+msgid "Options:\n"
+msgstr "Valmöguleikar\n"
+
+#: config/settings.py:40
+msgid "\t--no-config\t\tignore the configuration stored in the database (GConf)"
+msgstr "\t--no-config\t\thunsa stillingarnar geymdar í gagnagrunninum (GConf)"
+
+#: config/settings.py:42
+msgid "\t--orig-coords\t\tset the coordinates for every display to the upper left corner"
+msgstr "\t--orig-coords\t\tStilla hnitin fyrir hverja skjámyndset the coordinates for every display to the upper left corner"
+
+#: config/settings.py:44
+msgid "\t--translucent\t\tuse a translucent ARGB visual, you don't want to use this option unless you're running a composition manager"
+msgstr ""
+
+#: config/settings.py:47
+msgid "\t--version\t\toutput version information and exit"
+msgstr "\t--version\t\tSýna útgáfunúmer og hætta"
+
+#  end for
+#  Parses the given list of command line arguments. This is usually
+#  sys.argv[1:].
+#  end for
+#: data/gdesklets.desktop.in.h:1
+msgid "A desktop applet system for GNOME"
+msgstr ""
+
+#: data/gdesklets.keys.in.h:1
+msgid "gDesklets display file"
+msgstr "gDesklets skjámyndaskrá"
+
+#.
+#. Abstract class for targets that can contain others.
+#.
+#. the list is necessary for preserving order
+#. mapping: id -> child
+#. mapping: child -> id
+#. the relative-relations: id_of_relative -> [child]
+#.
+#. Observer callback for watching children.
+#.
+#. handle relative positioning
+#.
+#. Sets the relative of a child.
+#.
+#.
+#. Creates a new child of the given type.
+#.
+#: display/ContainerTarget.py:125
+#, python-format
+msgid "The %(name)s container accepts only one child."
+msgstr "%(name)s gámurinn tekur aðeins við einum hlut."
+
+#.
+#. Override this method if the container size differs from the target size.
+#.
+#.
+#. Returns the border size of this container. Override this method to return
+#. the sizes of the four borders (left, top, right, bottom).
+#.
+#.
+#. Returns the bounding box occupied by the children of this container.
+#.
+#.
+#. Containers which set index values for the children override this method.
+#.
+#.
+#. Sets the size of this container.
+#.
+#.
+#. Returns the geometry value that should be used for unset values.
+#.
+#.
+#. Tells other targets about geometry changes.
+#.
+#. tell percentual children about the new size
+#. end for
+#.
+#. Propagate LEAVE events to all children.
+#.
+#. end if
+#.
+#. Class for the display configurator. It displays the configurators of the
+#. sensors of a display.
+#.
+#: display/DisplayConfigurator.py:15
+msgid "Configuration"
+msgstr "Stillingar"
+
+#. close button
+#. close functions
+#. end for
+#. use a special page when there are no config options
+#: display/DisplayConfigurator.py:40
+msgid "This display is not configurable."
+msgstr "Þessi skjámynd er ekki stillanleg"
+
+#. only use the notebook when there are more than one pages
+#. end if
+#.
+#. Reacts on closing the window.
+#.
+#. process any callbacks before destroying yourself
+#.
+#. Registry for DataTargets. To add a new target just add an appropriate entry
+#. to _REGISTRY.
+#.
+#.
+#. Creates and returns the given target.
+#.
+#.
+#. Returns the class for the given target name.
+#.
+#.
+#. Class for creating Displays from XML data.
+#.
+#. a stack of (tagname, attributes) pairs for remembering the nesting
+#. of elements
+#. a stack of (type, settings, children) tuples to remember the children
+#. of elements; children is a list of (type, settings, children) tuples
+#. a list of the sensors for the display
+#.
+#. Parses the given XML data and returns a new Display object.
+#.
+#. parse display data
+#. abort if an parse error occurred
+#. add the sensors
+#. add the children and configure
+#. a stack trace could be useful for debugging
+#. make the corrupt display visible so that the user can
+#. remove it
+#. self.__display.show()
+#. self.__display.set_decorated(1)
+#. dsp.set_size_request(500, 100)
+#. self.__display.set_title("Broken display in %s" %broken_display )
+#. self.__display.set_transparency_mode(0, 500, 100)
+#: factory/DisplayFactory.py:101
+msgid "Error while configuring display"
+msgstr "Villa við stillingu birtingar"
+
+#: factory/DisplayFactory.py:102
+msgid "A display could not be configured properly. It will most likely be broken and you should consider removing it."
+msgstr "Ekki tókst að stilla skjámynd eðlilega. Hún er líklega biluð og þú ættir að íhuga að fjarlægja hana."
+
+#  Creates a TargetSettings object from the given Attributes object.
+#  remember everything for later
+#  ignore the <meta> tag for now
+#  self.__script = ""
+#  end if
+#  nesting errors in XML are detected by the SAX parser; if we
+#  get here, it means our parser is buggy, not the XML input
+#  self.__display.execute_script(self.__script)
+#  if there is no ID given, guess a unique one
+#  build the tree of children from bottom up
+#  Factory class for dynamically loaded Sensors.
+#  a set to remember the modules loaded so far
+#  get instance of the configuration manager
+#  Creates and returns a Sensor of the given type or None if the Sensor
+#  could not be created.
+#  reload old modules to force using the latest version; this
+#  means we can edit modules while running gDesklets
+#  TODO: clean up
+#  a stack trace could be useful for debugging sensors
+#  a stack trace could be useful for debugging sensors
+#  end for
+#: factory/SensorFactory.py:82
+#, python-format
+msgid "Could not load sensor '%(name)s'"
+msgstr "Gat ekki hlaðið skynjara '%(name)s'"
+
+#: factory/SensorFactory.py:83
+msgid "An error occurred while loading a sensor. This most likely means that the sensor is broken or simply not installed."
+msgstr "Villa kom upp meðan reynt var að hlaða inn skynjara. Þetta þýðir líklegast til að skynjarinn sé bilaður eða einfaldlega ekki uppsettur."
+
+#. This class starts, restarts and kills Displays
+#. the set of open displays as a hashtable "id -> display"
+#. the paths of the display files "id -> path"
+#. the saved positions of the displays "id -> (x, y)"
+#. the communication socket
+#. set the message handlers for the socket
+#. socket ready, start handling requests
+#. setup a nice systray icon
+#.
+#. Reacts on observer messages from the display.
+#.
+#. end if
+#.
+#. Waits until the given callback returns TRUE.
+#.
+#.
+#. Adds the given display.
+#.
+#. container = Window(dsp)
+#. gtk.timeout_add(500, dsp.set_position, x, y)
+#. gtk.timeout_add(500, container.place_by_user)
+#. gtk.timeout_add(500, dsp.set_position)
+#. self.__wait_for(container.is_placed)
+#. endif
+#. end if
+#.
+#. Creates and returns a new display from the given data, or None in case
+#. of an error.
+#.
+#: main/Starter.py:162
+#, python-format
+msgid "Could not open display file '%(path)s'"
+msgstr "Gat ekki opnað skjámyndaskrá '%(path)s'"
+
+#: main/Starter.py:164
+msgid "The display file could not be opened because the file was not readable."
+msgstr "Ekki tókst að opna skjámyndaskránna því hún er ekki læsileg."
+
+#: main/Starter.py:176
+#, python-format
+msgid "Invalid display file '%(path)s'"
+msgstr "Ógild skjámyndaskrá '%(path)s'"
+
+#: main/Starter.py:177
+msgid "The display file contains invalid data and could not be loaded."
+msgstr "Skjámyndaskráin inniheldur ógild gögn og ekki er hægt að nota hana."
+
+#  Removes the given display.
+#  better use python2.3 dict.pop
+#  Purges unused config entries.
+#  rep doesn't start with any ident
+#  so we can safely purge it
+#  get paths to purge
+#  empty are ignored
+#  relative paths are relative to USERHOME
+#  make sure that only paths below USERHOME can be purged
+#  end for
+#  end for_else
+#  end for
+#  Loads the display positions from file.
+#  Saves the current display positions to a file.
+#  FIXME: create a good unique ID
+#  ident = str(time.time())
+#  :section Sensor
+#  :  para The [cmd:Sensor] class is an abstract base class where new sensors are
+#  derived from. This class takes care of communication with the
+#  [app:gDesklets] core, so you can fully concentrate on the sensor
+#  itself.
+#  :class Sensor |
+#  Abstract base class for all sensors. Every sensor has to inherit from this
+#  class.
+#  the path of this sensor
+#  configuration manager for sensor properties
+#  the ID of this sensor
+#  the configuration watcher callback
+#  flag for stopping the sensor
+#  when stopping, the flag is set to True, then the callback is called
+#  converter for data types
+#  Sets the ID of this sensor.
+#  :function get_id | |
+#  Returns the ID of this sensor. It is not yet valid in the
+#  constructor.
+#  :  return string
+#  :/function
+#  Sets the configuration ID for this sensor.
+#  If the user has set a callback function for watching the config,
+#  the config will be watched.
+#  :function get_config_id | |
+#  Returns the unique config ID of the sensor. You can use the ID
+#  if you need to store data in other places.
+#  :  return string
+#  :/function
+#  :function set_config | key, value |
+#  Stores the given value in the configuration base.
+#  :  param key   | string | The key name.
+#  :  param value | string | The value to set.
+#  :/function
+#  self.__config_lock.acquire()
+#  self.__to_set.append((key, value))
+#  self.__config_lock.release()
+#  :function get_config | key |
+#  Returns the configuration value for the given key.
+#  :  param  key | string | The key name.
+#  :  return string
+#  :/function
+#  :function watch_config | callback |
+#  Registers a watcher for config changes.
+#  :  param callback | function | The callback function for configuration
+#  changes.
+#  :/function
+#  :function _set_config_type | key, type, default |
+#  Sets the data types to be used for the configuration values.
+#  Use this method in the constructor of your sensor.
+#  :  param  key | string | The name of the configuration key.
+#  :  param  type | enum  | The data type of the configuration key.
+#  :  param  default | string | The default value or unset keys.
+#  :/function
+#  :function get_path | | Returns the filesystem path of the sensor. Use this
+#  method if you want to load resource files that come
+#  with the sensor.
+#  :  return string
+#  :/function
+#  :function set_path_to_purge | paths |
+#  Sets the paths which are to be removed when the desklet that
+#  uses the sensor gets removed.
+#  If your sensor creates files, you need to specify the paths here
+#  in order to clean up.
+#  :  param  paths | string list | The paths to purge.
+#  :/function
+#  :function new_output || Returns a new empty [cmd:TargetSettings] object for sending data to
+#  the display.
+#  :  return TargetSettings
+#  :/function
+#  :function send_output | output | Sends the given [cmd:TargetSettings] object to the display.
+#  [emph:Never call this method from within a thread!]
+#  :  param  output | TargetSettings | The object for sending to the display.
+#  :/function
+#  :function add_timer | interval, callback, *args | Adds a timeout function with the given
+#  interval in ms.
+#  :  param  interval | int | The timeout interval between each invokation of the callback.
+#  :  param  callback | function | The callback function.
+#  :/function
+#  :function add_thread | threadfunction, *args | Adds and runs a new thread.
+#  Use this to start new threads. It's recommended to put blocking actions into threads
+#  in order to not block [app:gDesklets].
+#  :  param threadfunction | function | The thread function.
+#  :/function
+#  the thread should not start before setup is complete, therefore
+#  we are using the GTK idle handler
+#  Sends an action to this sensor.
+#  :function call_function | call, path, *args | Method for handling action calls from the
+#  display. Sensors have to override this method. [emph:This method may soon be
+#  deprecated!]
+#  :  param  call | string | The function to call.
+#  :  param  path | int list | The path of the target on which the action occurred.
+#  :  param  args | any list | The list of arguments for the function call.
+#  :/function
+#  Stops this sensor and cleans up.
+#  shut down sensor
+#  :function is_stopped | | Returns whether this sensor has been stopped. Use this method to
+#  check if your threads have to terminate.
+#  :  return bool
+#  :/function
+#  :function _shutdown | | Executes tasks for sensor shutdown. Override this method if your
+#  sensor has to clean up things after it has been terminated.
+#  :/function
+#  :function _new_configurator | | Creates and returns an empty new sensor configurator.
+#  [emph:This method may soon be deprecated!]
+#  :  return SensorConfigurator.
+#  :/function
+#  Returns the configurator of this sensor.
+#  Method for duplicating the display using this sensor
+#  :function open_menu | menu | Opens the given popup menu. The menu is a list of
+#  [cmd:(label:str, sensitive:bool, submenu:list, callback:function, args: list)]
+#  tuples.
+#  :  param  menu | list | The menu to open.
+#  :/function
+#  Reacts on changes in the configuration and delegates the call to the
+#  user's callback.
+#: sensor/Sensor.py:428
+msgid "translator_credits"
+msgstr "Victor Jónsson"
+

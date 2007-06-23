@@ -1,0 +1,721 @@
+2005-10-16  Martin Grimme  <martin@pycage.de>
+
+	* system/Arch.py: Removed NullObject.
+
+2005-07-26  Christian Meyer  <chrisime@gnome.org>
+
+	* system/gtop.c: Synced with gnome-python-extras.
+
+2005-01-25  Christian Meyer  <chrisime@gnome.org>
+
+	* system/gtop.c: Synced with gnome-python-extras.
+	Removed check for libgtop2.8.0, we already rely on that version.
+
+2005-01-22  Christian Meyer  <chrisime@gnome.org>
+
+	* system/ArchFactory.py: Fixed typo, it's called "HAVE_WIN32".
+
+2005-01-22  Christian Meyer  <chrisime@gnome.org>
+
+	* system/ArchFactory.py: Introduced win32 support.
+	* system/Windows/: New.
+
+2005-01-15  Benoît Dejean  <TazForEver@dlfp.org>
+
+	* system/gtop.c: (open_files_entry_to_Struct): Reverted.
+
+2005-01-15  Christian Meyer  <chrisime@gnome.org>
+
+	* system/Arch.py: Removed imports which aren't needed.
+	* system/ArchFactory.py: Use log().
+
+2005-01-15  Benoît Dejean  <TazForEver@dlfp.org>
+
+	* system/gtop.c: (register_constants): Fixed compilation agains libgtop < 2.9.4
+
+2005-01-14  Benoît Dejean  <TazForEver@dlfp.org>
+
+	* system/gtop.c: (gtop_fsusage), (open_files_entry_to_Struct),
+	(gtop_proc_open_files), (register_constants): Updated agains libgtop 2.9.4.
+
+2005-01-11  Benoît Dejean  <TazForEver@dlfp.org>
+
+	* system/gtop.c: (get_smp_cpu), (gtop_cpu): Updated.
+
+2005-01-07  Benoît Dejean  <TazForEver@dlfp.org>
+
+	* system/libgtop.py: Removed ! WTH this file is still here :D
+
+2005-01-01  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/gtop.c: (my_dict_add_and_decref): Added.
+	(gtop_loadavg),
+	(gtop_uptime), (gtop_fsusage), (mountentry_to_Struct), (gtop_mem),
+	(gtop_swap), (gtop_netload), (gtop_ppp), (get_smp_cpu), (gtop_cpu),
+	(gtop_proc_state), (gtop_proc_kernel), (map_entry_to_Struct),
+	(gtop_proc_mem), (gtop_proc_segment), (gtop_proc_signal),
+	(get_smp_time), (gtop_proc_time), (gtop_proc_uid):
+	Fixed reference leaks with PyDict_SetItemString.
+	Closes #162547.
+
+2004-12-27  Benoît Dejean  <tazforever@dlfp.org>
+
+	* hddtemp.py: Renamed
+	temp()		-> poll()
+	all_temp()	-> poll_all()
+
+2004-12-22  Benoît Dejean  <tazforever@dlfp.org>
+
+	* hddtemp.py: Cleaned + franglais error messages.
+
+2004-12-21  Benoît Dejean  <tazforever@dlfp.org>
+
+	* hddtemp.py: Re-implemented with re. Works with multiple devices.
+
+2004-12-21  Benoît Dejean  <tazforever@dlfp.org>
+
+	* hddtemp.py: According to the manpage, hddtemp gives temp in °F or °C,
+	but not in K. So i removed the code to handle temp in K. But the result
+	still has °F, °C and K.
+
+2004-12-21  Benoît Dejean  <tazforever@dlfp.org>
+
+	* hddtemp.py: temp(device) ->
+	Struct { ...., .temp = Struct { .centigrade = 50.0, .fahrenheit = 122.0, .kelvin = 323.16 }, ... }
+
+ p2004-12-20  Benoît Dejean  <tazforever@dlfp.org>
+
+	* Makefile.am:
+	* hddtemp.py: Added.
+	Features : 
+		temp(device), all_temp(), available_devices()
+	I'll do IHDDTemp asap.
+	
+	* system/gtop.c: (struct_items): Fixed to be just like utils.Struct.items.
+
+2004-12-16  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/gtop.c: (gtop_mountlist), (gtop_proc_map): Made static.
+
+2004-12-16  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/gtop.c: Fixed macro substitution.
+
+2004-12-15  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/gtop.c: (gtop_proc_args): Glib < 2.5.3 fix.
+
+2004-12-12  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/Makefile.am: Killed warnings.
+	
+	* system/gtop.c: (gtop_proc_args), (gtop_netload),
+	(register_constants): Works with libgtop 2.6
+
+2004-12-12  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/Arch.py:
+	* system/Net.py: Removed unused import.
+	
+	* system/Swap.py: Fixed.
+	
+	* system/__init__.py: Remove __all__
+	
+	ISystem is imcomplete. Need to write a ISystem2. That would be good test
+	for interface and controls inheritance. ISystem2 = ISystem + misc
+
+2004-12-11  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/gtop.c: (gtop_proc_mem), (gtop_proc_segment):
+	* system/libgtop.py: 3 functions left.
+	Fixed netlist : available with libgtop > 2.9.0
+
+2004-12-11  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/gtop.c: (get_smp), (gtop_proc_state), (gtop_proc_kernel),
+	(map_entry_to_Struct), (gtop_proc_map), (register_constants):
+	* system/libgtop.py: 5 functions left to convert.
+
+2004-12-11  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/gtop.c: (get_smp), (gtop_cpu), (gtop_proc_state),
+	(register_constants):
+	* system/libgtop.py: A few more functions.
+
+2004-12-11  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/Makefile.am:
+	* system/gtop.c: (_struct_build_repr), (_struct_new),
+	(struct_items), (struct_init), (struct_dealloc), (struct_repr),
+	(struct_hash), (struct_getattr), (struct_compare),
+	(guin64_checked_mult), (gtop_loadavg), (gtop_uptime),
+	(gtop_fsusage), (my_g_strv_length), (gtop_proc_args),
+	(mountentry_to_Struct), (gtop_mountlist), (gtop_mem), (gtop_swap),
+	(gtop_netlist), (hwaddress_format_for_display), (gtop_netload),
+	(gtop_proclist), (gtop_ppp), (register_constants), (gtop_at_exit),
+	(initgtop): Added.
+	* system/libgtop.py: Replaced a bunch of functions by gtop.*
+	TODO: check agains libgtop2.6
+
+2004-11-29  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/Makefile.am: little fix. But still doesn't distcheck.
+
+2004-11-11  Benoît Dejean  <tazforever@dlfp.org>
+
+	* convert.py: Added TODO.
+
+2004-11-06  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/Makefile.am: Updated.
+
+2004-10-30  Martin Grimme  <martin@pycage.de>
+
+	* __init__.py (Warner.__getattr__): Raise a DeprecationWarning instead
+	of printing a message.
+
+2004-10-25  Martin Grimme  <martin@pycage.de>
+
+	* Network.py (Network.__poll_net_info): Fixed compatibility bug.
+
+2004-10-05  Benoît Dejean  <tazforever@dlfp.org>
+
+	* controls/.cvsignore:
+	* controls/Makefile.am:
+	* controls/__init__.py: Added.
+
+2004-09-11  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/Linux/PPC.py:
+	* system/Linux/Sparc.py:
+	* system/Linux/X86.py:
+	* system/OpenBSD/Generic.py: Fixed epydoc typo.
+
+2004-09-07  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/Linux/PPC.py: Fixed cpu_speed regex. Fixed cpu_cache().
+
+2004-09-05  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/Linux/PPC.py: Fixed CPU cache regex.
+
+2004-08-16  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/FreeBSD/Generic.py: Added missing import.
+	Closes #150253.
+
+2004-07-30  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/glibtop.c: Fixed compilation with libgtop 2.7.4.
+
+2004-07-09  Martin Grimme  <martin@pycage.de>
+
+	* Makefile.am (install_DATA): Added missing file.
+
+2004-06-30  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/libgtop.py (cpu): Fixed unresolved XCPU_FREQUENCY.
+	(net_load): nothing to fix.
+
+2004-06-29  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/Makefile.am: Wasn't incomplete. Rollback.
+
+2004-06-29  Martin Grimme  <martin@pycage.de>
+
+	* system/Makefile.am: Fixed incomplete Makefile.am.
+
+2004-06-29  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/Arch.py: s/libgtop/glibtop.
+
+2004-06-28  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/glibtop.c: (get_cpu): Fixed.
+	
+	* system/libgtop.py: Fixed import statement.
+
+2004-06-04  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/Arch.py:
+	* system/__init__.py: Removed arch().
+	Renamed kernel()       -> kernel_version()
+		machine_name() -> hostname()
+		perating_sys() -> perating_system()
+		
+	* system/libgtop.py: Renamed memory() -> mem(). (Back to previous version).
+
+2004-06-04  Christian Meyer  <chrisime@gnome.org>
+
+	* system/Arch.py: Added some functions which I missed so much ;-)
+	(arch, kernel, machine_name, operating_sys)
+	* system/__init__.py (__all__): Added them here.
+	* system/libgtop.py: s/mem/memory
+
+2004-06-01  Christian Meyer  <chrisime@gnome.org>
+
+        * system/libgtop.py: Alphabetically ordered the functions.
+        * system/__init__.py: Completed __all__. Fixed typo.
+	* system/FreeBSD/Generic.py: likewise
+	* system/Linux/X86.py: Added missing import struct. Fixed cpu_model().
+	* system/NetBSD/Generic.py: likewise
+	* system/OpenBSD/Generic.py: likewise
+
+2004-05-30  Martin Grimme  <martin@pycage.de>
+
+	* __init__.py: Added compatibility hack for ill-behaving sensors which
+	directly import glibtop.
+
+2004-05-28  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/Linux/Generic.py: Removed a print statement.
+
+	* convert.py: Fixed.
+
+	* Makefile.am:
+	* system/FreeBSD/Makefile.am:
+	* system/Linux/Makefile.am:
+	* system/NetBSD/Makefile.am:
+	* system/OpenBSD/Makefile.am: Updated.
+
+2004-05-21  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/CPU.py: Renamed __get_cpu -> _get_cpu.
+
+2004-05-21  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/Arch.py: Fixed typo. Re-added Arch._init. After call, self._init
+	is bind to Null. (Smart way to ensure that _init is called once)
+	
+	* system/ArchFactory.py: Call _init() before returning arch.
+	
+	* system/Device.py: Added missing Device.__init__
+	
+	* system/Linux/Generic.py:
+	* system/Linux/PPC.py:
+	* system/Linux/Sparc.py:
+	* system/Linux/X86.py: Cleaned.
+
+2004-05-21  Christian Meyer  <chrisime@gnome.org>
+
+	* system/Arch.py (Arch.__init__): Hopefully fixed self.__cpu_cpus list.
+	* system/Linux/Sparc (Sparc.cpu_speed): Return type is float now.
+	* system/OpenBSD/Generic.py: likewise
+
+2004-05-20  Christian Meyer  <chrisime@gnome.org>
+
+	* system/Arch.py: Added epy-documentation.
+	* system/NetDevice.py: Renamed to Net.py∵
+	* system/Makefile.am: Added Device.py, Net.py and Swap.py.
+
+2004-05-20  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/Arch.py:
+	* system/CPU.py: s/SMP/CPU. CPU inherits from Total.
+	
+	* system/Arch.py:
+	* system/CPU.py:
+	* system/Device.py: Added base class for all devices.
+	* system/NetDevice.py:
+	* system/Swap.py: Added.
+
+2004-05-19  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/Arch.py:
+	* system/CPU.py: Added.
+	* system/libgtop.py:
+	* system/libgtop_const.c: (main): Added glibtop.NCPU
+	Working on SMP support. Cleaned.
+
+	* system/Makefile.am: Added NetDevice.py and CPU.py.
+
+2004-05-18  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/NetBSD/Generic.py (Generic.users): Added. Thanks chrisime.
+	* system/OpenBSD/Generic.py (Generic.users): Added. Thanks moose :D
+
+2004-05-17  Benoît Dejean  <tazforever@dlfp.org>
+
+	* system/FreeBSD/Generic.py (Generic.users): Added. Thanks Cyp !
+	* system/Linux/Generic.py (Generic.users): These users() are ~200x
+	faster on single processor system, and ~15x faster on SMP.
+
+	* system/Linux/X86.py (X86.cpu_speed): Fixed indentation.
+
+2004-05-17  Christian Meyer  <chrisime@gnome.org>
+
+        * system/Arch.py (Arch.__init__): Call __init_net_devices() here.
+        (Arch.__init__net_devices): Have a dict of network devices and init
+        them. They can be polled by calling net_speed(dev).
+        (Arch.__init__net_device): Renamed (Arch.__init__net_devices).
+        (Arch.__poll_net_device): Removed, essentially it's called net_speed
+        now.
+        (Arch.users): Shorter now and it should also work on *BSD.
+        * system/Linux/Generic.py (Generic.users): Re-added, since it's about
+        20 times faster than Arch.users(). We need information on BSD systems.
+
+2004-05-16  Christian Meyer  <chrisime@gnome.org>
+
+        * system/*: Cleanups, integrated NetDevice in Arch. Added epydoc
+        comments.
+
+2004-05-16  Benoît Dejean  <tazforever@dlfp.org>
+
+        * system/ArchFactory.py:
+        * system/Linux/X86.py: Added X86_64 support.
+        * system/Linux/Generic.py (users): Added comment.
+
+2004-05-14  Christian Meyer  <chrisime@gnome.org>
+
+        * system/Arch.py: First iteration to integrate the NetDevice class.
+
+2004-05-06  Benoît Dejean <tazforever@dlfp.org>
+
+        * Sys.py:
+        * system/glibtop.c: (get_uptime):
+        * system/libgtop.py:
+        * system/libgtop_const.c: (main): Added get_uptime.boot_time if available.
+
+        * system/glibtop.c: (get_loadavg), (get_proc_signal): Fixed bug with
+        array size and ADD_TUPLE. Added ARRAY_SIZE.
+
+        * Disk.py: Fixed bug with new glibtop.get_fsusage().
+
+2004-04-29  Christian Meyer  <chrisime@gnome.org>
+
+        * xdg/: removed, hopefully there will be packages for any distribution.
+        * Makefile.am: adopted.
+
+2004-04-21  Benoît Dejean  <tazforever@dlfp.org>
+
+        * system/libgtop.py: Fixed import statement.
+        Added 'total' to fsusage.
+
+        * system/glibtop_tmpl.i:
+        * system/glibtop.c: (pyglibtop_init): Give a warning libgtop
+        is too old.
+
+2004-04-21  Christian Meyer  <chrisime@gnome.org>
+
+        * system/FreeBSD/Makefile.am:
+        * system/Linux/Makefile.am:
+        * system/NetBSD/Makefile.am:
+        * system/OpenBSD/Makefile.am: added missing EXTRA_DIST.
+        * xdg: added pyxdg-0.6 from freedesktop.org.
+        * Makefile.am: added xdg to SUBDIRS.
+
+2004-04-20  Benoît Dejean <tazforever@dlfp.org>
+
+        * system/glibtop.c: (map_entry_to_PyTuple),
+        (mountentry_to_PyTuple): Inlined.
+
+        * system/libgtop.py: Added functions. Implemented some. WIP.
+
+2004-04-19  Benoît Dejean  <tazforever@dlfp.org>
+
+        * system/Arch.py: Added documentation.
+        * system/ArchFactory.py: Added NetBSD.
+        Added missing imports.
+
+2004-04-19  Christian Meyer  <chrisime@gnome.org>
+
+        * system/FreeBSD,
+        * system/NetBSD,
+        * system/OpenBSD: Added Makefile.am
+        * system/Makefile.am: fixed.
+        * system/ArchFactory.py: Fixed sparc and ppc parts.
+
+2004-04-19  Benoît Dejean  <tazforever@dlfp.org>
+
+        * system/FreeBSD/Generic.py:
+        * system/Linux/Generic.py:
+        * system/Linux/PPC.py:
+        * system/Linux/Sparc.py:
+        * system/Linux/X86.py:
+        * system/OpenBSD/Generic.py:
+        * system/NetBSD/Generic.py: Fixed import statements.
+
+        * system/NetBSD/__init__.py:
+        * system/FreeBSD/__init__.py:
+        * system/Linux/__init__.py:
+        * system/OpenBSD/__init__.py: Added.
+
+        * system/ArchFactory.py: Added new archs.
+        Fixed import statements.
+
+        * system/Linux/Sparc.py: Fixed typo.
+        (cpu_bogomips): Added.
+
+2004-04-19  Christian Meyer  <chrisime@gnome.org>
+
+        * system/FreeBSD,
+        * system/NetBSD,
+        * system/OpenBSD: created
+        * system/FreeBSD.py: renamed and put into system/FreeBSD/
+        * system/NetBSD.py: renamed and put into system/NetBSD/
+        * system/OpenBSD.py: renamed and put into system/OpenBSD/
+
+2004-04-19  Christian Meyer  <chrisime@gnome.org>
+
+        * system/Linux.py: removed.
+        * system/Linux: created this directory.
+        * system/Linux/Generic.py: split off of system/Linux.py.
+        * system/Linux/PPC.py: likewise.
+        * system/Linux/Sparc.py: likewise.
+        * system/Linux/X86.py: likewise.
+
+2004-04-19  Benoît Dejean  <tazforever@dlfp.org>
+
+        * system/NetBSD.py: Fixed model regex.
+        Broke long lines.
+
+        * system/Arch.py: Added comments.
+        (swap_speed): Added. Changed returned type to tuple. Fixed.
+
+        * system/NetDevice.py: Renamed Struct fields.
+        Changed returned type to tuple.
+
+        * system/libgtop.py: Removed TODO item.
+
+2004-04-19  Christian Meyer  <chrisime@gnome.org>
+
+        * system/ArchFactory.py (_detect_arch): Added athlon.
+        * system/NetBSD.py: Added.
+
+2004-04-13  Benoît Dejean  <tazforever@dlfp.org>
+
+        * convert.py: CAPITALIZED constants.
+
+        * system/Arch.py: Added _init method.
+        The virtual destructor trick is not that tricky.
+        * system/ArchFactory.py: Fixed.
+        * system/Linux.py: Fixed.
+        * system/__init__.py: Fixed. Added __all__.
+        * system/NetDevice.py: Added. Class for handling network device.
+
+2004-04-03  Martin Grimme  <martin@pycage.de>
+
+        * system/Makefile.am: Added.
+        * Makefile.am: Moved glibtop stuff into subdirectory.
+
+2004-04-03  Benoît Dejean  <tazforever@dlfp.org>
+
+        * CPU.py:
+        * Disk.py:
+        * Memory.py:
+        * Network.py:
+        * Sys.py: Changed import glibtop statements.
+
+        * glibtop_const.c: Added.
+        * __init__.py: Fixed import statement.
+
+        * system/libgtop.py:
+        * system/__init__.py:
+        * system/Arch.py:
+        * system/FreeBSD.py:
+        * system/Linux.py:
+        * system/ArchFactory.py:
+        * system/OpenBSD.py: Added.
+
+2004-02-20  Martin Grimme  <martin@pycage.de>
+
+        * Memory.py (Memory.__poll_mem): Reverted API break for now.
+
+        * Disk.py (Disk.__poll_size): Reverted API break for now.
+
+2004-01-25  Martin Grimme  <martin@pycage.de>
+
+        * Makefile.am (INCLUDES): Adjusted Makefile.am.
+
+2004-01-23  Martin Grimme  <martin@pycage.de>
+
+        * glibtop.c: Applied compatibility patch by Benoît Dejean.
+
+2004-01-19  Christian Meyer  <chrisime@gnome-de.org>
+
+        * Sys.py: Added new methods. No implementation done yet.
+
+2004-01-19  Christian Meyer  <chrisime@gnome-de.org>
+
+        * CPU.py: Added documentation. Rearranged code a bit.
+        * Network.py: Fixed typo. It's called "get_ipaddr".
+
+2004-01-19  Christian Meyer  <chrisime@gnome-de.org>
+
+        * Network.py: Optimized code and added some new methods which return the
+        MTU, flags, subnet address and the transfer errors.
+
+2004-01-16  Christian Meyer  <chrisime@gnome-de.org>
+
+        * Disk.py: Added documentation. (__poll_fsusage) added.
+        (__poll_size): Returns free size now. Forgot that.
+        * Memory.py: Likewise.
+        (__poll_mem): Returns free size now.
+        * Network.py: Added documentation.
+
+2003-12-27  Christian Meyer  <chrisime@gnome-de.org>
+
+        * Disk.py: Fixed bug where cached value was used all the time and
+                   nobody cared about actual value.
+        * Network.py: Fixed #127240. Thanks!
+
+2003-12-24  Christian Meyer  <chrisime@gnome-de.org>
+
+        * __init__.py: Added missing function signatures.
+        * Memory.py (__poll_mem): Fixed return value.
+        * Sys.py (__poll_name), (__poll_kernel): Implemented.
+
+2003-12-24  Martin Grimme  <martin@pycage.de>
+
+        * __init__.py (sys): Removed debugging print statement.
+
+        * Makefile.am (LIBGTOP_VERSION_CODE): Added version detection for
+        libgtop.
+        * Imported latest glibtop version.
+
+2003-12-23  Christian Meyer  <chrisime@gnome-de.org>
+
+        * Convert.py: Added some more convenience functions.
+        * __init__.py: Added function signatures.
+        * Disk.py (Disk.__poll_fs): Implemented.
+          (Disk.__init__): It's also now caching the values of the other
+          two functions.
+        * Memory.py: Removed unnecessary functions. Tweaked polling.
+        * Sys.py: Tweaked polling.
+
+2003-12-09  Martin Grimme  <martin@pycage.de>
+
+        * Makefile.am (EXTRA_DIST): Bug fix in Makefile.am.
+
+        * Imported latest glibtop version. Thanks Benoît! It should build with
+        libgtop 2.5 now.
+
+2003-11-18  Martin Grimme  <martin@pycage.de>
+
+        * Memory.py (Memory.__poll_mem): Bug fix patch by Alexander Leidinger
+        and Franz Klammer.
+
+        * CPU.py (CPU.__poll_cpu): Integrated FreeBSD compatibiliy patch by
+        Alexander Leidinger.
+
+2003-11-11  Christian Meyer  <chrisime@gnome-de.org>
+
+        * Memory.py: Removed comment(ed code).
+        Some classes need further adoption!
+
+2003-11-10  Martin Grimme  <martin@pycage.de>
+
+        * glibtop.i:
+        glibtop.c: Imported latest glibtop version.
+
+2003-11-08  Martin Grimme  <martin@pycage.de>
+
+        * Sys.py (Sys.__poll_load_avg): Less digits for the floating points.
+
+2003-11-07  Martin Grimme  <martin@pycage.de>
+
+         * Sys.py: Cleaned up.
+
+        * Disk.py: Cleaned up and fixed bug.
+
+2003-11-06  Martin Grimme  <martin@pycage.de>
+
+        * Makefile.am (install_DATA): Added glibtop.py.
+
+        * CPU.py (CPU.__poll_cpu): Bug (typo) fix.
+
+        * Network.py: Cleaned up.
+
+        * CPU.py: Cleaned up.
+
+2003-11-05  Martin Grimme  <martin@pycage.de>
+
+        * Disk.py: Converted to use libgtop.
+
+        * Network.py: Converted to use libgtop.
+
+        * Sys.py: Converted to use libgtop.
+
+        * Memory.py: Converted to use libgtop.
+
+        * CPU.py: Converted to use libgtop.
+
+2003-10-31  Martin Grimme  <martin@pycage.de>
+
+        * Makefile.am: Added libgtop wrapper by Benoît Dejean.
+
+2003-10-28  Christian Meyer  <chrisime@gnome-de.org>
+
+        * Sys.py: Simplified.
+        * __init__.py: Added missing function.
+
+2003-10-26  Christian Meyer  <chrisime@gnome-de.org>
+
+        * Sys.py: Vastly improved class by using python functions. Removed
+        sys_start, because it's not useful. (poll_users) added.
+        * Network.py: Incresed poll time for get_devices.
+
+2003-10-25  Christian Meyer  <chrisime@gnome-de.org>
+
+        * Memory.py: (poll_mem) Fixed free memory.
+
+2003-10-25  Christian Meyer  <chrisime@gnome-de.org>
+
+        * Sys.py: (poll_load_avg) Use uptime command now to get avg load.
+
+2003-10-14  Christian Meyer  <chrisime@gnome-de.org>
+
+        * Network.py: (poll_in_out) Removed divisor for speed_out. Don't know
+        why it was there.
+
+2003-10-09  Christian Meyer  <chrisime@gnome-de.org>
+
+        * CPU.py: Fix for ppc architecture.
+        * Memory.py: Cleanup.
+        * Network.py: Cleanup.
+
+2003-09-21  Sebastien Bacher  <seb128@debian.org>
+
+        * Memory.py:
+        Fixed bug with 2.6 kernels.
+
+2003-09-13  Martin Grimme  <martin@pycage.de>
+
+        * Network.py (Network.__poll_ipaddr): Changed way of retrieving IP
+        address. Used the suggestion from the forum:
+        http://gnomesupport.org/forums/viewtopic.php?p=21882#21882
+        (Network.__poll_in_out): Fixed overflow error:
+        http://gnomesupport.org/forums/viewtopic.php?p=21882#21882
+
+2003-09-09  Martin Grimme  <martin@pycage.de>
+
+        * Sys.py (Sys.__poll_tasks): Implemented retrieving of running tasks.
+
+2003-09-08  Martin Grimme  <martin@pycage.de>
+
+        * polling.py (_Poller.poll): Fixed bug where a timeout of 0 did not
+        work as "poll only once".
+
+        * Disk.py: Converted to use the polling wrapper.
+
+        * Memory.py (Memory.__poll_total_ram): Use /proc/kcore to determine
+        total size of RAM.
+
+2003-09-07  Martin Grimme  <martin@pycage.de>
+
+        * libdesklets/Memory.py: Converted to use the polling wrapper.
+
+        * libdesklets/Sys.py: Converted to use the polling wrapper.
+
+2003-09-05  Christian Meyer  <chrisime@gnome-de.org>
+
+        * Network.py: (get_net_in_out): Fixed speed_in, speed_out.
+
+2003-09-04  Christian Meyer  <chrisime@gnome-de.org>
+
+        * CPU.py: Moved class from Sensor/Sysinfo/ here.
+        * Disk.py: Likewise.
+        * Memory.py: Likewise.
+        * Network.py: Likewise.
+        * Sys.py: Likewise.
+        * system/Linux/__init__.py:

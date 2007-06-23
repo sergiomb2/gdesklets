@@ -1,0 +1,10 @@
+#! /usr/bin/env python
+
+from utils import i18n
+import __builtin__
+__builtin__._ = i18n.Translator("gdesklets")
+
+from shell.PluginRegistry import registry
+
+shell = registry.get_plugin("UI_Shell")
+shell.run()

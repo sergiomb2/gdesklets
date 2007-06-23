@@ -1,0 +1,28 @@
+DataTarget provides the following methods for handling properties:
+
+ * set_prop(key, value)
+ * get_prop(key)
+ * _register_property(name, datatype, setter, getter)
+ * _setp(key, value)
+ * _getp(key)
+ * _register_action(actionname)
+
+
+Targets call the _register_property() method in their constructor to register
+their properties. The setter and getter methods should then be called
+
+ * _setp_xyz
+ * _getp_xyz
+
+If you don't have to react on setting/getting the propertiy, you may just
+specify the generic setter and getter _setp() and/or _getp(). In most cases
+_getp() is good enough so that you usually don't need to implement a getter
+function. Just make sure to call _setp() from your setter function if it does
+exist.
+
+Action handlers are special properties and actions have to be registered with
+_register_action(). The name of the handler property will be the action's name
+with prefix "on-".
+
+The methods set_prop() and get_prop() don't have to be implemented, overriden,
+or used.

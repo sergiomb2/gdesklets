@@ -1,0 +1,390 @@
+gDesklets - GNOME Desktop Applets
+=================================
+
+1. Introduction
+---------------
+  'gDesklets' provides an advanced architecture for desktop applets - tiny
+  displays that sit on your desktop in a symbiotic relationship of eye candy and
+  usefulness.
+  Populate your desktop with status meters, icon bars, weather sensors,
+  news tickers... whatever you can imagine! Virtually anything is possible and
+  may even be available some day.
+
+
+
+2. Requirements (the package names are the debian ones!)
+---------------
+  * Python 2.3 or higher (some distributions ship broken Python 2.4 packages),
+    if you want to compile gdesklets you'll have to install the development
+    package, too!
+
+  * SuSE users will need the additional python-xml package, gDesklets won't
+    work without it!
+
+  * python-gtk2 2.4 or higher (*)
+
+  * python-gtk2-dev if you want to compile gDesklets
+
+  * python-pyorbit 2.0.1 (**)
+
+  * python-gnome2 2.6.x or higher (***)
+
+  * python-gnome2-dev if you want to compile gDesklets
+
+  * libexpat (try to avoid 1.95.7 since it seems to be buggy!)
+
+  * libgtop2 (2.8.0 or higher is recommended)
+
+  * libgtop2-dev if you want to compile gDesklets
+
+  * librsvg (2.8.0 or higher from http://librsvg.sf.net)
+
+  * librsvg-dev if you want to compile gDesklets
+
+  * some sensors or controls may have extra requirements
+
+The following remarks apply to Mandrake 10.1, SuSE 9.2 and Fedora Core 3. Of
+course, they apply to older versions as well:
+
+(*) SuSE, Mandrake and Fedora 2 & 1 are shipping versions which are too old,
+so you will have to find newer versions, the ones currently shipped will not
+work! You can try to find them at rpmseek.com or rpmfind.net.
+
+(**) Recent Mandrake and older SuSE or Fedora versions ship 2.0.0 which won't
+work; you have to upgrade to 2.0.1.
+
+(***) SuSE, Mandrake and Fedora 2 & 1 are shipping old versions; please find
+newer versions for your distribution. These distributions split up
+gnome-python2 in small packages. To avoid problems install every gnome-python2
+package.
+
+Debian Sarge has all the necessary packages and should work out of the box.
+gDesklets won't work on older versions of Debian.
+
+Pascal Bleser created some packages for SuSE 9.2. They are available at
+http://linux01.gwdg.de/~pbleser/
+
+gDesklets is available in the Fedora Extras software collection for
+Fedora Core 3 and later.
+
+Mandrake Cooker (and v10.2 when it's out) usually has all the necessary
+dependencies. If you have an older version of Mandrake (v10.1 and below), use a
+source RPM and build gDesklets for your system.
+
+If gDesklets won't start, it usually means that either one or more dependencies
+aren't installed. In some cases the bindings and libraries which are involved
+are broken. In that case, you either have to reinstall your packages or if that
+won't help try compiling them from source. Also make sure that you don't have
+more than one version of a required package on your system!
+
+gDesklets runs a dependency check when you're starting it for the first time.
+The check makes sure that everything's ok. In case it doesn't start, follow the
+instructions.
+
+
+
+3. Installation
+---------------
+  First make sure that you have all necessary dependencies installed on your
+  system!
+  In addition to that you also need the (gtk/gnome) python devel packages.
+  If you're new to Linux please don't try to compile gDesklets; it's for your
+  own protection.
+
+   $ ./autogen.sh (if you're compiling a CVS version)
+   $ ./configure
+   $ make
+   $ su -c "make install"
+
+  If you want 'gDesklets' to appear on the GNOME menu, be sure to put it where
+  GNOME can find it, e.g.:
+  $ ./configure --prefix=/usr --sysconfdir=/etc
+
+
+  Sensors can be installed by copying them into the directory
+  '~/.gdesklets/Sensors' or into 'PREFIX/Sensors' where PREFIX is the
+  installation path of 'gDesklets', e.g. '/usr/share/gdesklets'.
+  Most sensors come packaged as handy executable installer files which you just
+  have to run in order to get the sensor installed.
+
+  Controls can be installed by copying them into the directory
+  '~/.gdesklets/Controls' or into 'PREFIX/Controls'.
+
+  Displays don't get installed anywhere special. It's up to the distributors
+  where to install the .display files. The preferred places, however, are
+  '~/.gdesklets/Displays' and 'PREFIX/Displays'. The graphical shell assumes
+  that the displays can be found there.
+
+  The recommended way for users to install displays/sensors/controls is by
+  using the graphical shell (see below).
+
+
+
+4. Usage
+--------
+  If you chose GNOME integration, the graphical shell will be available in
+  the Accessories menu. Otherwise, you will have to run it by hand:
+
+    $ gdesklets shell
+
+
+4.1 The Command Line Tool
+-------------------------
+  The command line tool 'gdesklets' allows you to perform all administration
+  tasks from the command line.
+
+  Display files can be opened using
+
+    $ gdesklets open <displayfile> [displayfile] ...
+
+  If the gdesklets-daemon wasn't already running, this will start the daemon as
+  well. You can only have one daemon per X-Display. The daemon can be stopped
+  again by calling
+
+    $ gdesklets stop
+
+
+  Usage of the command line frontend:
+
+    gdesklets [option] <command> [arguments...]
+
+    <command>
+               open <files>      (Opens the given display files)
+               start             (Runs the gDesklets daemon)
+               stop              (Stops the gDesklets daemon)
+               list              (Lists open displays)
+               restart           (Restarts the gDesklets daemon)
+               profile <profile> (Switches to the given profile)
+               profile           (Shows the current and the available profiles)
+               shell             (Opens the graphical shell)
+               slay              (Kills the daemon -- use in emergency)
+               status            (Checks daemon status)
+               about             (Prints information about gDesklets)
+               version           (Prints gDesklets version)
+               configure         (Opens the configuration dialog)
+               help              (Displays this text)
+               check             (Dependency check for python bindings)
+
+    [option]
+               --no-tray-icon    (disables the systray icon)
+               --translucent     (enables translucency on the xorg servers)
+
+  The '--translucent' option relies on the XComposite extension of your XServer.
+  Although this extension usually works, it might still be slow or unstable on
+  some systems.
+  If you don't pass a command, the script will fall back to "gdesklets start"
+  which is the default.
+
+
+4.2 The gDesklets-Shell
+-----------------------
+  The shell is a graphical frontend for managing your desklets. You can start
+  it either by selecting it from the GNOME menu (Accessories -> gDesklets),
+  the tray icon popup menu, or by calling:
+
+    $ gdesklets shell
+
+  The shell currently lets you create and switch between profiles, install new
+  desklets, and search for installed desklets. New desklets can be installed by
+  dragging links from your web browser or files from the file manager into its
+  window, or by selecting the menu item "File -> Install package...".
+
+
+4.3 Working with Displays
+-------------------------
+  Displays stick to your mouse pointer when you first run them. Choose the
+  desired position and press the left button to place it.
+  You can move displays around by pressing and holding down the middle mouse
+  button (or both mouse buttons if your mouse only has two buttons).
+  'gDesklets' will remember the new position of the display for the future.
+
+  If you press the right mouse button over a display, a popup menu will open.
+  It depends on the display what you will see there, but the following items
+  are always available:
+
+    Configure display                Opens the configuration dialog for this
+                                     display. It depends on the display what
+                                     you can configure.
+
+    Move display                     Lets you move the display around. Press the
+                                     left mouse button once you have found a
+                                     good place.
+
+    View Source                      Opens the default editor so you can view
+                                     and edit the display files. This is quite
+                                     handy for developers and people who want to
+                                     learn more about gDesklets.
+
+    Restart display                  Restarts this display. This menu item is
+                                     mainly for sensor debugging.
+
+    Remove display                   Removes this display from your desktop.
+
+
+4.4 Float Mode
+--------------
+  Press <Shift> <F12> to switch to Float mode, where all your desklets come to
+  front, floating above your applications. If you press the keys again, they
+  will return to their original position.
+  The keybinding can be freely changed in the configuration dialog.
+
+  Note: Due to limitations of older X servers, you might see blocks around
+        desklets in Float mode. This cannot be solved in a satisfying way except
+        for switching the X server to real translucency (Xorg 6.8 and above).
+
+
+4.5 Logfile
+-----------
+  The gdesklets-daemon writes a log file. That file can be found in
+    ~/.gdesklets/logs/gdesklets<display>.log
+  where <display> is the name of the X-Display.
+
+  You can select the item "View log" in the popup menu of the tray icon to view
+  the log messages.
+
+
+
+5. Supported Window Managers
+----------------------------
+  In order to run on as many desktops as possible, gDesklets relies on the
+  EWMH specification from freedesktop.org. This specification is respected
+  among many window managers. We currently know of the following EWMH compliant
+  window managers:
+
+    * metacity
+    * xfwm4
+    * openbox
+    * enlightenment (>= 0.16.6, see http://enlightenment.org/pages/news.html)
+    * fvwm (2.5.x, see http://www.fvwm.org/features.php)
+    * sawfish (+PATCH: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=210518)
+    * kwin
+    * evilwm
+    * recent fluxbox versions
+    * waimea
+    * ...and certainly some others which we forgot here.
+
+
+
+6. Bugs
+-------
+  If you encounter bugs which are not listed here, please post a bug report
+  at bugzilla.gnome.org for 'gdesklets'. Please don't report useless bug
+  reports, like "gDesklets crashes" without checking the log file first, because
+  that doesn't tell us much. Also make sure, that you have all the necessary
+  dependencies installed.
+  If the log says: "ImportError: No module named X" then you clearly don't have
+  the python module "X" installed on your system.
+  We are going to close useless bug reports immediately(!), so please save your
+  time and ours and be smart!
+
+  * some versions of sawfish show applets with the 'below' flag set above
+    other windows; please read section 5. "Supported Window Managers" for a
+    patch for a bug in sawfish
+    (sawfish appears to be a dead project, so it's very unlikely that it'll ever
+    get fixed upstream)
+
+  * transparency might be broken on Xinerama displays; we do not have Xinerama
+    and thus cannot test it. If you want to help testing, please drop us a mail
+
+
+
+7. Memory Consumption and Memory Leaks
+--------------------------------------
+  This is taken seriously. In every release we're addressing these issues.
+  Unfortunately, gDesklets is relying on libraries which contain their own bugs
+  or leaks. In some places it's possible to create a work-around. Sometimes, we
+  have to wait until an issue in bugzilla is fixed.
+  gDesklets itself shouldn't leak. We've checked the relevant C code to make
+  sure of that.
+  At startup the program claims 16 MB of RAM. In the future we're going to
+  decrease that number. Some people in the GNOME and GTK+ community are also
+  addressing these problems at a lower level (gtk+ and gnome libraries).
+  gDesklets will automatically benefit from these efforts.
+
+
+
+8. Community
+------------
+  The site 'http://gdesklets.gnomedesktop.org' is the place where you can
+  get new desklets or upload your own creations for sharing them with other
+  users.
+
+  There you can also find a link 'Discussion Forum' leading you to the official
+  'gDesklets' discussion forum.
+
+  Discussion and Help
+  http://www.gdesklets.org/?mod=forum/forum
+
+  gDesklets Developer's Book  (for developing on the gDesklets platform)
+  http://www.pycage.de/develbook/
+
+  A printed reference in German language is available from
+  'Software & Support Verlag GmbH'. The book 'Exploring Python' covers desklet
+  development on 34 pages.
+
+  You can meet the 'gDesklets' developers and other fans on the IRC channel
+  #gdesklets on GIMPnet (irc.gimp.org).
+
+
+
+9. Thanks
+---------
+  I'd like to thank all people who supported (and are still supporting) me so
+  well with 'gDesklets'. Please complain if I forgot you... ;)
+
+  * Christian Meyer -- ideas, autotools tweaks and core/sensor programming
+
+  * Jesse Andrews -- core/sensor programming
+
+  * Johannes "Waldgeist" Rebhan -- artwork
+
+  * Christian Neumair -- installation
+
+  * Sebastien Bacher -- man page and lots of other stuff
+
+  * Benoît Dejean -- libgtop2 bindings and lots of code improvements
+
+  * Marius M.M. -- www.gdesklets.org website and forum
+
+  * Luke Stroven -- gdesklets.gnomedesktop.org and former 'gDesklets' forum
+
+  * James Henstridge -- excellent GTK bindings for Python
+
+  * Joe Sapp -- helping with the Developer's Book
+
+  * VidaLinux (http://desktop.vidalinux.com/) -- sponsoring the
+    www.gdesklet.org domain
+
+
+
+10. License and Disclaimer
+--------------------------
+  This software is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTIBILITY or FITNESS
+  FOR A PARTICULAR PURPOSE. See the file 'COPYING' for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this software; if not, write to the
+
+    Free Software Foundation, Inc., 59 Temple Place, Suite 390, Boston,
+    MA  02111-1307  USA
+
+  This software is provided "as is" and the author is not and cannot be made
+  responsible for any damage resulting from the use of this software.
+
+
+
+-------------------------------------------------------------------------------
+'gDesklets' is copyright (c) 2003 - 2006 by
+                             Martin Grimme   <martin@pycage.de>,
+                             Christian Meyer <chrisime@gnome-de.org>,
+                             Jesse Andrews   <jdandr2@cs.uky.edu>
+                             Benoît Dejean   <tazforever@dlfp.org>
+
+'glibtop Python wrapper' in libdesklets
+            is copyright (c) 2003 - 2005 by Benoît Dejean <tazforever@dlfp.org>
+            (see http://dejean.benoit.free.fr/software/glibtop/glibtop.html)
+
+The latest version of 'gDesklets' can be found at http://www.gdesklets.org/
+The 'gDesklets' CVS repository can be found in GNOME CVS ('gdesklets' and
+'gdesklets-extras').

@@ -1,0 +1,47 @@
+#! /usr/bin/env python
+
+# This tool loads a given control and outputs information about the control.
+#
+# The output consists of multiple lines of key-value pairs, where the value
+# is URL-quoted, e.g.:
+#
+#   ID2:ITime%3A7qktelp6tw29ve5p8q3lxn6bs-2
+
+
+from plugin.Interface import Interface
+
+import os
+import sys
+
+
+def output(key, value):
+
+    from utils import vfs
+    print "%s:%s" % (key, vfs.escape_path(value))
+
+
+sys.path.append(os.curdir)
+cwd = os.getcwd()
+
+try:
+    path = sys.argv[1]
+    if (path[-1] == os.sep): path = path[:-1]
+    os.chdir(os.path.dirname(path))
+    m = __import__(os.path.basename(path))
+    cls = m.get_class()
+
+    ifaces = " ".join([ Interface.get_id(i)
+                        for i in Interface.get_interfaces(cls) ])
+    tazifaces = " ".join([ Interface.get_taz_style_id(i)
+                           for i in Interface.get_interfaces(cls) ])
+
+
+    output("PATH", path)
+    for iface in Interface.get_interfaces(cls):
+        output("ID2", ifaces)
+        output("ID1", tazifaces)
+
+except:
+    sys.exit(1)
+
+os.chdir(cwd)

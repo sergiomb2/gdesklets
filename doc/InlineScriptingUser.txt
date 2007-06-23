@@ -1,0 +1,32 @@
+Inline Scripting from a User's Point of View
+============================================
+
+The <script> Tag
+----------------
+  The <script> tag can be used for adding inline scripts into .display files.
+  The script can either be entered directly between the <script> and </script>
+  tags or saved as an external file to which is referenced by the "uri"
+  attribute. It is possible to have more than one <script> tag, but all inline
+  scripts in a .display share the same environment.
+
+Action Handlers
+---------------
+  The second place where you can use scripts are the "on-xyz" action handler
+  attributes in tags. Since action handlers share the same inline scripting
+  environment you can call inline functions or access other elements from
+  there.
+
+The "self" Reference
+--------------------
+  Action handler scripts have access to the "self" reference, which represents
+  the object where the action occurred.
+
+Event Structure
+---------------
+  The "self" reference in an action handler contains an "event" with several
+  properties depending on the type of event. A motion event e.g. has properties
+  for the x and y coordinates of the mouse pointer:
+
+    x = self.event.x
+    y = self.event.y
+    print "Current mouse pointer coordinate: (%d, %d)" % (x, y)

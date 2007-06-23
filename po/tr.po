@@ -1,0 +1,786 @@
+# translation of gdesklets to Turkish
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER
+# Rıdvan CAN <ridvan@linuxdeneyimi.com>, 2003
+# Burçin Dönmez <bdonmez@cisunix.unh.edu>, 2004
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gdesklets\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-05-18 21:09+0300\n"
+"PO-Revision-Date: 2004-05-17 02:52-0400\n"
+"Last-Translator: Burçin Dönmez <bdonmez@cisunix.unh.edu>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#.
+#. FontSelector sensor by Psi (psiz _at_ free _dot_ fr)
+#. Adopted and modified by Martin Grimme.
+#.
+#. the number of fonts
+#. the font settings
+#. the color settings
+#. setup configuration entries
+#. end for
+#.
+#. Font init
+#.
+#. end if
+#: Sensors/FontSelector/__init__.py:86
+msgid "Fonts"
+msgstr "Yazıtipleri"
+
+#: Sensors/FontSelector/__init__.py:87
+msgid "Fonts settings"
+msgstr "Yazıtipi ayarları"
+
+#: Sensors/FontSelector/__init__.py:90
+#, python-format
+msgid "Font #%i:"
+msgstr "Yazıtipi #%i:"
+
+#: Sensors/FontSelector/__init__.py:92
+#, python-format
+msgid "Font #%i used in the labels"
+msgstr "Etiketlerde kullanılan yazıtipi #%i"
+
+#: Sensors/FontSelector/__init__.py:93
+#, python-format
+msgid "Font color #%i:"
+msgstr "Yazıtipi rengi #%i:"
+
+#: Sensors/FontSelector/__init__.py:95
+#, python-format
+msgid "Font color #%i used in the labels"
+msgstr "Etiketlerde kullanılan yazıtipi rengi #%i"
+
+#. end for
+#.
+#. Class for the browser's main window. This class simply acts as a mediator for
+#. its widgets.
+#.
+#. what we accept for drag & drop
+#: browser/MainWindow.py:66 browser/TipOfTheDay.py:20
+msgid "Tip of the Day"
+msgstr "Günün İpucu"
+
+#: browser/TipOfTheDay.py:23
+msgid "Show tips at startup"
+msgstr "İpuçlarını başlangıçta göster"
+
+#. make the close button the default button
+#.
+#. Module for holding runtime settings.
+#.
+#. public settings : default values
+#.
+#. parsing command line arguments.
+#.
+#: config/settings.py:38
+msgid "Usage: gdesklets <OPTION> <my.display>\n"
+msgstr "Kullanım şekli: gdesklets <SEÇENEK> <my.display>\n"
+
+#: config/settings.py:39
+msgid "Options:\n"
+msgstr "Seçenekler:\n"
+
+#: config/settings.py:40
+msgid ""
+"\t--no-config\t\tignore the configuration stored in the database (GConf)"
+msgstr ""
+"\t--no-config\t\tveritabanında saklanan yapılandırmayı gözardı et (GConf)"
+
+#: config/settings.py:42
+msgid ""
+"\t--orig-coords\t\tset the coordinates for every display to the upper left "
+"corner"
+msgstr "\t--orig-coords\t\tbütün görünüm koordinatlarını sol üst köşe yap"
+
+#: config/settings.py:44
+msgid ""
+"\t--translucent\t\tuse a translucent ARGB visual, you don't want to use this "
+"option unless you're running a composition manager"
+msgstr ""
+"\t--translucent\t\t ARGB görünümünü saydam kullanmak için, bu seçeneği "
+"kullanmak istemezsiniz eğer yazma yöneticisini kullanmıyorsanız."
+
+#: config/settings.py:47
+msgid "\t--version\t\toutput version information and exit"
+msgstr "\t--version\t\tsürüm bilgisini göster ve çık"
+
+#.
+#. Parses the given list of command line arguments. This is usually
+#. sys.argv[1:].
+#.
+#. end for
+#: data/gdesklets.desktop.in.h:1
+msgid "A desktop applet system for GNOME"
+msgstr "GNOME için masaüstü sistem uygulamacığı"
+
+#: data/gdesklets.keys.in.h:1 data/gdesklets.xml.in.h:1
+msgid "gDesklets display"
+msgstr "gDesklets ekranı"
+
+#.
+#. Abstract class for targets that can contain others.
+#.
+#. the list is necessary for preserving order
+#. mapping: id -> child
+#. mapping: child -> id
+#. the relative-relations: id_of_relative -> [child]
+#.
+#. Observer callback for watching children.
+#.
+#. handle relative positioning
+#.
+#. Sets the relative of a child.
+#.
+#.
+#. Creates a new child of the given type.
+#.
+#: display/ContainerTarget.py:126
+#, python-format
+msgid "The %(name)s container accepts only one child."
+msgstr "%(name)s taşıyıcısı sadece bir oğul kabul ediyor."
+
+#.
+#. Override this method if the container size differs from the target size.
+#.
+#.
+#. Returns the border size of this container. Override this method to return
+#. the sizes of the four borders (left, top, right, bottom).
+#.
+#.
+#. Returns the bounding box occupied by the children of this container.
+#.
+#.
+#. Containers which set index values for the children override this method.
+#.
+#.
+#. Sets the size of this container.
+#.
+#.
+#. Returns the geometry value that should be used for unset values.
+#.
+#.
+#. Tells other targets about geometry changes.
+#.
+#. tell percentual children about the new size
+#. end for
+#.
+#. Propagate LEAVE events to all children.
+#.
+#. end if
+#.
+#. Class for display windows.
+#.
+#. observer commands
+#. the display menu
+#: display/Display.py:28
+msgid "_Configure display"
+msgstr "_Görüntüyü yapılandır"
+
+#: display/Display.py:29
+msgid "_Move"
+msgstr "_Taşı"
+
+#: display/Display.py:31
+msgid "Re_start display"
+msgstr "Görünümü _Tekrar Başlat"
+
+#: display/Display.py:32
+msgid "_Remove display"
+msgstr "Görüntüyü Kaldı_r"
+
+#. the deprecated sensor menu
+#. FIXME: remove eventually
+#. the container of this display
+#. the root TargetGroup
+#. the scripting environment
+#. the path of the .display file
+#. the unique ID of this display
+#. the sensors of this window
+#. the last position of the mouse pointer (used for filtering out
+#. unwanted events)
+#. mapping between sensors and targets; which target watches
+#. which sensor?
+#. (sensor, port) -> (target, property)
+#. temporary data for remembering the position of the last mouse click
+#. whether the display reacts on events
+#. the menu to open
+#. set up event handlers
+#.
+#. Sets the container of the display.
+#.
+#. set geometry
+#.
+#. Executes the given script.
+#.
+#.
+#. Executes the given callback script.
+#.
+#.
+#. Adds the given target to the scripting environment.
+#.
+#.
+#. Sets the sensitive flag of the display. Insensitive displays don't react
+#. on user events.
+#.
+#.
+#. Returns the path of the .display file.
+#.
+#.
+#. Returns the display.
+#.
+#.
+#. Opens the configuration dialog for this display.
+#.
+#.
+#. Removes this display.
+#.
+#. del self.__group
+#.
+#. Reacts on closing the window.
+#.
+#. self.__remove_display()
+#.
+#. Sends the given action with an event object to the display.
+#.
+#. analyze call to see if it's a legacy call
+#. FIXME: remove eventually :)
+#.
+#. Has to be called when a menu is to open. Do not open the menu yourself.
+#.
+#.
+#. Reacts on button events.
+#.
+#. determine action
+#. end if
+#. extend the menu or create one if there's none
+#. add separator
+#. end if
+#. FIXME: remove eventually :)
+#. end if
+#. end if
+#. end if
+#.
+#. Reacts on moving the mouse.
+#.
+#. some window managers send a LEAVE event for mouse clicks;
+#. work around this
+#. don't do redundant work
+#.
+#. Reacts on rolling the mouse wheel.
+#.
+#.
+#. Observer for sensors.
+#.
+#. propagate the incoming sensor output
+#. elif (cmd == src.OBS_CMD_DUPLICATE):
+#. dsp_uri = admin.get_displays().get(self.__id)
+#. if (dsp_uri): admin.add_display(dsp_uri)
+#. handle legacy menus from sensors
+#. FIXME: remove eventually :)
+#.
+#. Observer for the container.
+#.
+#. if (cw != w):
+#. self.__group.set_xml_prop("width", `w`)
+#. self.__ebox.set_size_request(4, 4)
+#. if (ch != h):
+#. self.__group.set_xml_prop("height", `h`)
+#. self.__ebox.set_size_request(4, 4)
+#.
+#. Observer for the root group.
+#.
+#. end if
+#. end if
+#.
+#. Calls a function of a Sensor.
+#.
+#. the sensor is an external module, so we make sure it cannot crash
+#. the application
+#. end for
+#.
+#. Sets the anchored position of the display.
+#.
+#.
+#. Sets the configuration settings.
+#.
+#. extract array indexes
+#. get all (target, property) tuples that are watching the given
+#. sensor key and notify the targets
+#. special handling for arrays
+#. end for
+#. end for
+#.
+#. Sets the configuration.
+#.
+#. save for later when we have a container
+#.
+#. Adds a sensor to this display.
+#.
+#.
+#. Returns the sensor with the given ID. Returns None if the sensor does not
+#. exist.
+#.
+#.
+#. Returns the ID of the given sensor.
+#.
+#.
+#. Maps a sensor output to a target.
+#.
+#.
+#. Returns the anchored geometry of this display.
+#.
+#.
+#. Returns a unique ID string.
+#.
+#.
+#. Class for the display configurator. It displays the configurators of the
+#. sensors of a display.
+#.
+#: display/DisplayConfigurator.py:15
+msgid "Configuration"
+msgstr "Yapılandırma"
+
+#. close button
+#. close functions
+#. end for
+#. use a special page when there are no config options
+#: display/DisplayConfigurator.py:40
+msgid "This display is not configurable."
+msgstr "Bu gösterim yapılandırılamaz."
+
+#. only use the notebook when there are more than one pages
+#. end if
+#.
+#. Reacts on closing the window.
+#.
+#. process any callbacks before destroying yourself
+#.
+#. Registry for DataTargets. To add a new target just add an appropriate entry
+#. to _REGISTRY.
+#.
+#.
+#. Creates and returns the given target.
+#.
+#.
+#. Returns the class for the given target name.
+#.
+#.
+#. Class for creating Displays from XML data.
+#.
+#. a stack of (tagname, attributes) pairs for remembering the nesting
+#. of elements
+#. a stack of (type, settings, children) tuples to remember the children
+#. of elements; children is a list of (type, settings, children) tuples
+#. a list of the sensors for the display
+#.
+#. Parses the given XML data and returns a new Display object.
+#.
+#. parse display data
+#. abort if an parse error occurred
+#. add the sensors
+#. add the children and configure
+#. a stack trace could be useful for debugging
+#. make the corrupt display visible so that the user can
+#. remove it
+#. self.__display.show()
+#. self.__display.set_decorated(1)
+#. dsp.set_size_request(500, 100)
+#. self.__display.set_title("Broken display in %s" %broken_display )
+#. self.__display.set_transparency_mode(0, 500, 100)
+#: factory/DisplayFactory.py:99
+msgid "Error while configuring display"
+msgstr "Görüntü yapılandırılırken hata"
+
+#: factory/DisplayFactory.py:100
+msgid ""
+"A display could not be configured properly. It will most likely be broken "
+"and you should consider removing it."
+msgstr ""
+"Görüntüleme uygun biçimde yapılandırılamadı. Büyük ihtimalle bozulmuş "
+"olabilir ve onu ortadan kaldırmayı düşünmelisiniz."
+
+#.
+#. Creates a TargetSettings object from the given Attributes object.
+#.
+#. remember everything for later
+#. ignore the <meta> tag for now
+#. self.__script = ""
+#. end if
+#. nesting errors in XML are detected by the SAX parser; if we
+#. get here, it means our parser is buggy, not the XML input
+#. self.__display.execute_script(self.__script)
+#. if there is no ID given, guess a unique one
+#. attrs.get("id", "id" + str(self.__id_count))
+#. build the tree of children from bottom up
+#.
+#. Factory class for dynamically loaded Sensors.
+#.
+#. a set to remember the modules loaded so far
+#. get instance of the configuration manager
+#.
+#. Creates and returns a Sensor of the given type or None if the Sensor
+#. could not be created.
+#.
+#. reload old modules to force using the latest version; this
+#. means we can edit modules while running gDesklets
+#. TODO: clean up
+#. a stack trace could be useful for debugging sensors
+#. a stack trace could be useful for debugging sensors
+#. end for
+#: factory/SensorFactory.py:82
+#, python-format
+msgid "Could not load sensor '%(name)s'"
+msgstr "'%(name)s' algılayıcıları yüklenemedi"
+
+#: factory/SensorFactory.py:83
+msgid ""
+"An error occurred while loading a sensor. This most likely means that the "
+"sensor is broken or simply not installed."
+msgstr ""
+"Algılayıcıyı yüklerken bir hata oluştu. Büyük bir olasılıkla algılayıcı "
+"hatalı veya kurulmamış anlamına geliyor."
+
+#. This class starts, restarts and kills Displays
+#. the set of open displays as a hashtable "id -> display"
+#. the paths of the display files "id -> path"
+#. the saved positions of the displays "id -> (x, y)"
+#. the communication socket
+#. set the message handlers for the socket
+#. socket ready, start handling requests
+#. setup a nice systray icon
+#.
+#. Reacts on observer messages from the display.
+#.
+#. end if
+#.
+#. Waits until the given callback returns TRUE.
+#.
+#.
+#. Adds the given display.
+#.
+#. container = Window(dsp)
+#. gtk.timeout_add(500, dsp.set_position, x, y)
+#. gtk.timeout_add(500, container.place_by_user)
+#. gtk.timeout_add(500, dsp.set_position)
+#. self.__wait_for(container.is_placed)
+#. endif
+#. end if
+#.
+#. Creates and returns a new display from the given data, or None in case
+#. of an error.
+#.
+#: main/Starter.py:162
+#, python-format
+msgid "Could not open display file '%(path)s'"
+msgstr "'%(path)s' görünümü açılamıyor"
+
+#: main/Starter.py:164
+msgid "The display file could not be opened because the file was not readable."
+msgstr "Dosya okunabilir olmadığı için  görüntü dosyası açılamadı."
+
+#: main/Starter.py:176
+#, python-format
+msgid "Invalid display file '%(path)s'"
+msgstr "'%(path)s' geçersiz görüntü dosyası"
+
+#: main/Starter.py:177
+msgid "The display file contains invalid data and could not be loaded."
+msgstr "Görüntü dosyası geçersiz veri içeriyor ya da yüklü değil."
+
+#.
+#. Removes the given display.
+#.
+#. better use python2.3 dict.pop
+#.
+#. Purges unused config entries.
+#.
+#. rep doesn't start with any ident
+#. so we can safely purge it
+#. get paths to purge
+#. empty are ignored
+#. relative paths are relative to USERHOME
+#. make sure that only paths below USERHOME can be purged
+#. end for
+#. end for_else
+#. end for
+#.
+#. Loads the display positions from file.
+#.
+#.
+#. Saves the current display positions to a file.
+#.
+#. FIXME: create a good unique ID
+#. ident = str(time.time())
+#. :section Sensor
+#.
+#. :  para The [cmd:Sensor] class is an abstract base class where new sensors are
+#. derived from. This class takes care of communication with the
+#. [app:gDesklets] core, so you can fully concentrate on the sensor
+#. itself.
+#.
+#. :class Sensor |
+#. Abstract base class for all sensors. Every sensor has to inherit from this
+#. class.
+#.
+#. the path of this sensor
+#. configuration manager for sensor properties
+#. the ID of this sensor
+#. the configuration watcher callback
+#. flag for stopping the sensor
+#. when stopping, the flag is set to True, then the callback is called
+#. converter for data types
+#.
+#. Sets the ID of this sensor.
+#.
+#.
+#. :function get_id | |
+#. Returns the ID of this sensor. It is not yet valid in the
+#. constructor.
+#. :  return string
+#. :/function
+#.
+#.
+#. Sets the configuration ID for this sensor.
+#. If the user has set a callback function for watching the config,
+#. the config will be watched.
+#.
+#.
+#. :function get_config_id | |
+#. Returns the unique config ID of the sensor. You can use the ID
+#. if you need to store data in other places.
+#. :  return string
+#. :/function
+#.
+#.
+#. :function set_config | key, value |
+#. Stores the given value in the configuration base.
+#. :  param key   | string | The key name.
+#. :  param value | string | The value to set.
+#. :/function
+#.
+#. self.__config_lock.acquire()
+#. self.__to_set.append((key, value))
+#. self.__config_lock.release()
+#.
+#. :function get_config | key |
+#. Returns the configuration value for the given key.
+#. :  param  key | string | The key name.
+#. :  return string
+#. :/function
+#.
+#.
+#. :function watch_config | callback |
+#. Registers a watcher for config changes.
+#. :  param callback | function | The callback function for configuration
+#. changes.
+#. :/function
+#.
+#.
+#. :function _set_config_type | key, type, default |
+#. Sets the data types to be used for the configuration values.
+#. Use this method in the constructor of your sensor.
+#. :  param  key | string | The name of the configuration key.
+#. :  param  type | enum  | The data type of the configuration key.
+#. :  param  default | string | The default value or unset keys.
+#. :/function
+#.
+#.
+#. :function get_path | | Returns the filesystem path of the sensor. Use this
+#. method if you want to load resource files that come
+#. with the sensor.
+#. :  return string
+#. :/function
+#.
+#.
+#. :function set_path_to_purge | paths |
+#. Sets the paths which are to be removed when the desklet that
+#. uses the sensor gets removed.
+#. If your sensor creates files, you need to specify the paths here
+#. in order to clean up.
+#. :  param  paths | string list | The paths to purge.
+#. :/function
+#.
+#.
+#. :function new_output || Returns a new empty [cmd:TargetSettings] object for sending data to
+#. the display.
+#. :  return TargetSettings
+#. :/function
+#.
+#.
+#. :function send_output | output | Sends the given [cmd:TargetSettings] object to the display.
+#. [emph:Never call this method from within a thread!]
+#. :  param  output | TargetSettings | The object for sending to the display.
+#. :/function
+#.
+#.
+#. :function add_timer | interval, callback, *args | Adds a timeout function with the given
+#. interval in ms.
+#. :  param  interval | int | The timeout interval between each invokation of the callback.
+#. :  param  callback | function | The callback function.
+#. :/function
+#.
+#.
+#. :function add_thread | threadfunction, *args | Adds and runs a new thread.
+#. Use this to start new threads. It's recommended to put blocking actions into threads
+#. in order to not block [app:gDesklets].
+#. :  param threadfunction | function | The thread function.
+#. :/function
+#.
+#. the thread should not start before setup is complete, therefore
+#. we are using the GTK idle handler
+#.
+#. Sends an action to this sensor.
+#.
+#.
+#. :function call_function | call, path, *args | Method for handling action calls from the
+#. display. Sensors have to override this method. [emph:This method may soon be
+#. deprecated!]
+#. :  param  call | string | The function to call.
+#. :  param  path | int list | The path of the target on which the action occurred.
+#. :  param  args | any list | The list of arguments for the function call.
+#. :/function
+#.
+#.
+#. Stops this sensor and cleans up.
+#.
+#. shut down sensor
+#.
+#. :function is_stopped | | Returns whether this sensor has been stopped. Use this method to
+#. check if your threads have to terminate.
+#. :  return bool
+#. :/function
+#.
+#.
+#. :function _shutdown | | Executes tasks for sensor shutdown. Override this method if your
+#. sensor has to clean up things after it has been terminated.
+#. :/function
+#.
+#.
+#. :function _new_configurator | | Creates and returns an empty new sensor configurator.
+#. [emph:This method may soon be deprecated!]
+#. :  return SensorConfigurator.
+#. :/function
+#.
+#.
+#. Returns the configurator of this sensor.
+#.
+#.
+#. Method for duplicating the display using this sensor
+#.
+#.
+#. :function open_menu | menu | Opens the given popup menu. The menu is a list of
+#. [cmd:(label:str, sensitive:bool, submenu:list, callback:function, args: list)]
+#. tuples.
+#. :  param  menu | list | The menu to open.
+#. :/function
+#.
+#.
+#. Reacts on changes in the configuration and delegates the call to the
+#. user's callback.
+#.
+#: sensor/Sensor.py:428
+msgid "translator_credits"
+msgstr "Burçin Dönmez <bdonmez@cisunix.unh.edu>"
+
+#~ msgid "Could not add display"
+#~ msgstr "Görüntü eklenemiyor"
+
+#~ msgid "The display could not be added because the file does not exist."
+#~ msgstr "Dosya okunabilir olmadığı için görüntü dosyası eklenemedi."
+
+#~ msgid "\t--profile=myprofile\tuse \"myprofile\" as profile."
+#~ msgstr "\t--profile=myprofile\tkullanım şekli \"myprofile\" belgisi."
+
+#~ msgid "_About"
+#~ msgstr "_Hakkında"
+
+#~ msgid "_Quit"
+#~ msgstr "Çı_kış"
+
+#~ msgid "Pixbuf"
+#~ msgstr "Pixbuf"
+
+#~ msgid "A GdkPixbuf to display"
+#~ msgstr "Görüntülenecek GdkPixbuf"
+
+#~ msgid "Filename"
+#~ msgstr "Dosyaadı"
+
+#, fuzzy
+#~ msgid "Filename to load and display"
+#~ msgstr "Görüntü eklenemiyor"
+
+#~ msgid "Stock ID"
+#~ msgstr "Depo Kimliği"
+
+#~ msgid "Stock ID for a stock image to display"
+#~ msgstr "Görüntülenecek depo resmi için Depo Kimliği"
+
+#, fuzzy
+#~ msgid "Animation"
+#~ msgstr "Yapılandırma"
+
+#~ msgid "GdkPixbufAnimation to display"
+#~ msgstr "Görüntülenecek GdkPixbufAnimation"
+
+#~ msgid "Image type"
+#~ msgstr "Resim çeşidi"
+
+#~ msgid "The representation being used for image data"
+#~ msgstr "Resim bilgisi için kullanılacak sunum"
+
+#~ msgid "Size"
+#~ msgstr "Büyüklük"
+
+#~ msgid "The size of the icon"
+#~ msgstr "Simge büyüklüğü"
+
+#~ msgid "Blinking"
+#~ msgstr "Yanıp Sönme"
+
+#~ msgid "Whether or not the status icon is blinking"
+#~ msgstr "Durum simgesi yanıp sönme durumu"
+
+#~ msgid "Orientation"
+#~ msgstr "Yönlendirme"
+
+#~ msgid "The orientation of the tray."
+#~ msgstr "Tepsi yönlendirmesi."
+
+#~ msgid ""
+#~ "The sensor %(path)s\n"
+#~ "has attempted to access the core from within\n"
+#~ "a thread. In order to prevent a disaster, the\n"
+#~ "thread will be terminated."
+#~ msgstr ""
+#~ "Algılayıcı %(path)s\n"
+#~ "iş parçacığına çekirdekten erişmeye çalıştı\n"
+#~ "Çöküşü durdurmak için iş parçacığı sonlandırılacak."
+
+#~ msgid "Illegal operation"
+#~ msgstr "Geçersiz işlem"
+
+#~ msgid "Welcome to %(name)s<i>!</i>"
+#~ msgstr "Hoşgeldiniz %(name)s<i>!</i>"
+
+#~ msgid ""
+#~ "It looks like you are running %(name)s for the first time.\n"
+#~ "\n"
+#~ "You can add new displays by launching them in your file manager.\n"
+#~ "\n"
+#~ "<b>Have fun,</b>\n"
+#~ "  <i>the %(name)s developers</i>"
+#~ msgstr ""
+#~ "%(name)s için ilk çalıştırma zamanı.\n"
+#~ "\n"
+#~ "Onlara dosya yöneticinizden yeni görüntüler ekleyebilirsiniz.\n"
+#~ "\n"
+#~ "<b>Eğlen</b>\n"
+#~ "  <i>%(name)s geliştirici</i>"

@@ -1,0 +1,80 @@
+Targets have a user geometry and a real geometry. The user geometry contains
+geometry values set through the properties. E.g. if the "x" value is set to
+"50%", the user geometry will contain 50% for the "x" value. The real geometry,
+on the other hand, will hold the real "x" coordinates given in pixels.
+Containers have a special container geometry as well, which may differ from
+the real geometry in that it describes the geometry of the inner container
+space only.
+
+Geometries consist of:
+ - x
+ - y
+ - width
+ - height
+
+The user geometry values may be set any time. Calling adjust_geometry() later
+does the conversion into real geometry values and sets the geometry. Targets
+that want to force the real geometry directly should call
+set_size(width, height) instead of calling set_size_request(width, height)
+directly.
+
+
+The methods' behavior in pseudo code:
+-------------------------------------
+
+#
+# Adjusts the geometry of the target.
+#
+adjust_geometry():
+
+  if (not have user geometry):
+    take geometry from children bounding box (in case of a container) \
+        or use the old geometry
+    
+  elif (have percentual geometry value):
+    compute geometry from parent's size
+
+  else:
+    geometry = user_geometry
+
+  if (have relative target):
+    geometry += offset
+
+  if (geometry changed):
+    set geometry values
+    self.set_size_request()
+    propagate_geometry()
+
+
+
+#
+# Tells other targets about the geometry changes.
+#
+propagate_geometry():
+
+  parent.adjust_geometry()
+  if (am container):
+    for all child in children with percentual values:
+      child.adjust_geometry()
+
+  self.update_observer(OBS_GEOMETRY)
+
+
+
+#
+# Sets the size of the target in pixels (real geometry).
+#
+set_size(width, height):
+
+  if (size changed):
+    set new geometry values
+    self.adjust_geometry()
+
+
+
+The size of the targets are handled by the system above. Some containers are
+able to assign targets to positions. These have to connect to the GEOMETRY
+signal and ask for the real geometry.
+
+Targets observing relative targets also have to connect to the GEOMETRY signal,
+but have to invoke a adjust_geometry() then.

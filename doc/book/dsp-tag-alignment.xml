@@ -1,0 +1,64 @@
+<section id="dsp-tag-alignment" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;alignment&gt;</title>
+
+  <para>This is a container for aligning a child horizontally and vertically.
+    You have to set the size of the container to be bigger than its child,
+    or the aligning will show no effect. It can only have one child.</para>
+
+  <note>
+    <para>This element is deprecated and should not be used in new code.
+      The same effects can be achieved with anchors and percentual positioning.
+      </para>
+    <para><command>&lt;alignment&gt;</command> will be removed in the 0.40
+      release!</para>
+  </note>
+
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">align-x</entry>
+        <entry valign="top">float</entry>
+        <entry valign="top">0.5</entry>
+        <entry valign="top">Horizontal alignment value. Ranges from
+          <literal>0.0</literal> (left) to <literal>1.0</literal> (right).
+          </entry>
+      </row>
+      <row>
+        <entry valign="top">align-y</entry>
+        <entry valign="top">float</entry>
+        <entry valign="top">0.5</entry>
+        <entry valign="top">Vertical alignment value. Ranges from
+          <literal>0.0</literal> (top) to <literal>1.0</literal> (bottom).
+          </entry>
+      </row>
+
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+
+  <section><title>Examples</title>
+
+    <para>Since this element is deprecated we don't provide an exmple.</para>
+
+  </section>
+
+</section>

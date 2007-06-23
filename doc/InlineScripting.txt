@@ -1,0 +1,74 @@
+Inline scripting allows you to embed scripting code, which is able to interact
+with its environment, into a .display file.
+A very high priority purpose of inline scripting is to de-couple sensors from
+desklets. As of now, most sensors are quite desklet-specific and handle GUI
+behavior. Inline scripting will move GUI handling from the sensors into the
+.display and thus makes sensors to what they were supposed to be:
+desklet-independent data source components.
+
+E.g.:
+
+  <label id="mylabel" value="..."/>
+  <script language="python">
+    # let's modify the label's text
+    mylabel.value = "TEST"
+  </script>
+
+
+What inline scripting provides:
+
+ - access/modify target properties
+ - call sensor functions
+
+
+Where inline scripts may occur:
+
+ - inside <script>...</script> tags.
+ - in external files loaded by the <script uri="..."/> tag
+ - in action handlers, e.g. <label on-click="foo(); print 'Foo!'"/>
+
+
+Inline scripts in <script> tags will be executed as soon as they are loaded.
+Created objects (e.g. classes, functions) will remain in a sandbox environment
+and may later be accessed from scripts in action handlers. Scripts in action
+handlers get executed every time the action occurs.
+Each display has its own sandbox and all scripts of a display share the same
+sandbox.
+
+
+
+Implementation
+--------------
+
+Scripting is only a thin layer on top of the gDesklets architecture. A Script
+object encapsulating the sandbox environment is associated with each display.
+Scripts get executed in that object. The environment, which is just a
+dictionary in case of Python, can loaded with arbitrary external objects.
+
+Targets can be accessed by their XML IDs and properties can be accessed as a
+member, e.g.
+
+  # set the label's text
+  mylabel.value = "New Text"
+
+To make this possible, every target is wrapped by a TargetWrapper class. This
+class overrides __setattr__() and __getattr__() to simulate properties. In case
+of __setattr__() we just delegate to target.set_config().
+
+Arrays are a special case. They have only one child with one XML ID, but this
+child may be duplicated several times with individual settings. Therefore,
+elements in arrays have to be accessed using array syntax, e.g.
+
+  myimage.uri[2] = "gdesklets.png"
+
+The implementation is as follows. Whenever a target with a non-empty index
+path is to be inserted into the script's environment, it will be inserted into
+an array with the name of the ID instead. 
+If the array does not yet exist, create it. If it's not big enough, grow it
+by filling up the space with None values.
+
+In case of nested arrays, new arrays will be created as elements of the array
+with the name of the ID. That way we can use multiple index values in the
+script:
+
+  myimage[2][0] = "gdesklets.png"

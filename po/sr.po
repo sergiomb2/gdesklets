@@ -1,0 +1,641 @@
+# Serbian translation of gdesklets
+# Courtesy of Prevod.org team (http://www.prevod.org/) -- 2003.
+#
+# This file is distributed under the same license as the gdesklets package.
+#
+# Maintainer: Данило Шеган <dsegan@gmx.net>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gdesklets\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-02-20 09:11+0100\n"
+"PO-Revision-Date: 2004-02-20 09:14+0100\n"
+"Last-Translator: Данило Шеган <danilo@prevod.org>\n"
+"Language-Team: Serbian (sr) <serbiangnome-listaL@nongnu.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#.
+#. FontSelector sensor by Psi (psiz _at_ free _dot_ fr)
+#. Adopted and modified by Martin Grimme.
+#.
+#. the number of fonts
+#. the font settings
+#. the color settings
+#. setup configuration entries
+#. end for
+#.
+#. Font init
+#.
+#. end if
+#: Sensors/FontSelector/__init__.py:86
+msgid "Fonts"
+msgstr "Фонтови"
+
+#: Sensors/FontSelector/__init__.py:87
+msgid "Fonts settings"
+msgstr "Подешавања фонтова"
+
+#: Sensors/FontSelector/__init__.py:90
+#, python-format
+msgid "Font #%i:"
+msgstr "Фонт #%i:"
+
+#: Sensors/FontSelector/__init__.py:92
+#, python-format
+msgid "Font #%i used in the labels"
+msgstr "Коришћени фонт #%i у ознакама"
+
+#: Sensors/FontSelector/__init__.py:93
+#, python-format
+msgid "Font color #%i:"
+msgstr "Боја фонта #%i:"
+
+#: Sensors/FontSelector/__init__.py:95
+#, python-format
+msgid "Font color #%i used in the labels"
+msgstr "Коришћена боја фонта #%i у ознакама"
+
+#. end for
+#.
+#. Class for the browser's main window. This class simply acts as a mediator for
+#. its widgets.
+#.
+#. what we accept for drag & drop
+#: browser/MainWindow.py:66 browser/TipOfTheDay.py:20
+msgid "Tip of the Day"
+msgstr "Савет дана"
+
+#: browser/TipOfTheDay.py:23
+msgid "Show tips at startup"
+msgstr "Прикажи савете по покретању"
+
+#. make the close button the default button
+#: data/gdesklets.desktop.in.h:1
+msgid "A desktop applet system for GNOME"
+msgstr "Систем програмчића за радну површину Гнома"
+
+#: data/gdesklets.keys.in.h:1
+msgid "gDesklets display file"
+msgstr "Датотека приказа gDesklets-а"
+
+#.
+#. Abstract class for targets that can contain others.
+#.
+#. the list is necessary for preserving order
+#. mapping: id -> child
+#. mapping: child -> id
+#: display/ContainerTarget.py:86
+#, python-format
+msgid "The %(name)s container accepts only one child."
+msgstr "Садржалац %(name)s прихвата само један елемент."
+
+#. dialog.warning(_("Too many children"), msg % vars())
+#.
+#. Override this method if the container size differs from the target size.
+#.
+#.
+#. Returns the border size of this container. Override this method to return
+#. the sizes of the four borders (left, top, right, bottom).
+#.
+#.
+#. Returns the bounding box occupied by the children of this container.
+#.
+#.
+#. Sets the size of this container.
+#.
+#.
+#. Returns the geometry value that should be used for unset values.
+#.
+#.
+#. Tells other targets about geometry changes.
+#.
+#. tell percentual children about the new size
+#. end for
+#.
+#. Class for the display configurator. It displays the configurators of the
+#. sensors of a display.
+#.
+#: display/DisplayConfigurator.py:15
+msgid "Configuration"
+msgstr "Подешавање"
+
+#. close button
+#. close functions
+#. end for
+#. use a special page when there are no config options
+#: display/DisplayConfigurator.py:40
+msgid "This display is not configurable."
+msgstr "Овај приказ није подесив."
+
+#. only use the notebook when there are more than one pages
+#. end if
+#.
+#. Reacts on closing the window.
+#.
+#. process any callbacks before destroying yourself
+#.
+#. Registry for DataTargets. To add a new target just add an appropriate entry
+#. to _REGISTRY.
+#.
+#.
+#. Registry for DataTargets. Each target requires an entry in this list.
+#. The entry format is a tuple consisting of:
+#.
+#. * name         The name of the target to be used in .display files
+#. * classname    The name of the class (the module has to be of the same name)
+#.
+#. :include TargetAlignment.py
+#. :include TargetArray.py
+#. :include TargetCanvas.py
+#. :include TargetBonoboControl.py
+#. :include TargetExpander.py
+#.
+#. Returns the class for the given target name.
+#.
+#.
+#. Returns the names of the targets without their own ID.
+#.
+#. initialize the registry
+#. ignore errors
+#. ignore errors
+#.
+#. Class for creating Displays from XML data.
+#.
+#.
+#. Parses the given XML data and returns a new Display object.
+#.
+#. parse display data
+#. abort if an parse error occurred
+#. add the sensors
+#. add the DefaultSensor
+#. we don't wanna override watch settings from the .display
+#. add the children and configure
+#. a stack trace could be useful for debugging
+#. make the corrupt display visible so that the user can
+#. remove it
+#. self.__display.show()
+#. self.__display.set_decorated(1)
+#. self.__display.set_title("Broken display in %s" %broken_display )
+#. self.__display.set_transparency_mode(0, 500, 100)
+#: factory/DisplayFactory.py:99
+msgid "Error while configuring display"
+msgstr "Грешка при подешавању приказа"
+
+#: factory/DisplayFactory.py:100
+msgid ""
+"A display could not be configured properly. It will most likely be broken "
+"and you should consider removing it."
+msgstr ""
+"Нисам успео да подесим приказ. Највероватније ће бити неисправан и пожељно "
+"је да га уклоните."
+
+#.
+#. Creates a TargetSettings object from the given Attributes object.
+#.
+#. ignore the <meta> tag for now
+#. if there is no ID given, guess a unique one
+#. remember everything for later
+#. nesting errors in XML are detected by the SAX parser; if we get
+#. here, it means our parser is buggy, not the XML input
+#.
+#. Factory class for dynamically loaded Sensors.
+#.
+#. a set to remember the modules loaded so far
+#. get instance of the configuration manager
+#.
+#. Creates and returns a Sensor of the given type or None if the Sensor
+#. could not be created.
+#.
+#. reload old modules to force using the latest version; this
+#. means we can edit modules while running gDesklets
+#. a stack trace could be useful for debugging sensors
+#. a stack trace could be useful for debugging sensors
+#. end for
+#: factory/SensorFactory.py:81
+#, python-format
+msgid "Could not load sensor '%(name)s'"
+msgstr "Не могу да учитам сензор „%(name)s“"
+
+#: factory/SensorFactory.py:82
+msgid ""
+"An error occurred while loading a sensor. This most likely means that the "
+"sensor is broken or simply not installed."
+msgstr ""
+"Дошло је до грешке при учитавању сензора. Ово највероватније значи да је "
+"сензор неисправан или да уопште није инсталиран."
+
+#.
+#. Class for parsing command line arguments.
+#.
+#.
+#. Parses the given list of command line arguments. This is usually
+#. sys.argv[1:].
+#.
+#. end for
+#. load displays
+#: main/CmdLineParser.py:63
+msgid "Could not add display"
+msgstr "Не могу да отворим приказ"
+
+#: main/CmdLineParser.py:64
+msgid "The display could not be added because the file does not exist."
+msgstr "Нисам могао да додам приказ зато што датотека не постоји."
+
+#. end for
+#. end if
+#: main/CmdLineParser.py:77
+msgid "Usage: gdesklets <OPTION> <my.display>\n"
+msgstr "Употреба: gdesklets <ОПЦИЈА> <мој.display>\n"
+
+#: main/CmdLineParser.py:78
+msgid "Options:\n"
+msgstr "Опције:\n"
+
+#: main/CmdLineParser.py:79
+msgid ""
+"\t--no-config\t\tignore the configuration stored in the database (GConf)"
+msgstr "\t--no-config\t\tзанемари подешавања смештена у бези (ГКонф)"
+
+#: main/CmdLineParser.py:81
+msgid ""
+"\t--orig-coords\t\tset the coordinates for every display to the upper left "
+"corner"
+msgstr "\t--orig-coords\t\tпостави координате за сваки приказ на горњи леви угао"
+
+#: main/CmdLineParser.py:83
+msgid "\t--profile=myprofile\tuse \"myprofile\" as profile."
+msgstr "\t--profile=мојпрофил\tкористи „мојпрофил“ за профил."
+
+#: main/CmdLineParser.py:84
+msgid "\t--version\t\toutput version information and exit"
+msgstr "\t--version\t\tиспиши податке о издању и заврши"
+
+#. This class starts, restarts and kills Displays
+#. the set of open displays as a hashtable "id -> display"
+#. setup a nice systray icon
+#.
+#. Reacts on observer messages from the display.
+#.
+#. end if
+#.
+#. Reacts on changing the user profile.
+#.
+#. shut down displays
+#. load displays
+#.
+#. Reacts on changes in the list of displays.
+#.
+#. check whether displays have been added
+#. end for
+#. check whether displays have been removed
+#. end for
+#.
+#. Waits until the given callback returns TRUE.
+#.
+#.
+#. Adds the given display.
+#.
+#. win.move(-2000, -2000)
+#. endif
+#. end if
+#.
+#. Creates and returns a new display from the given data, or None in case
+#. of an error.
+#.
+#: main/Starter.py:157
+#, python-format
+msgid "Could not open display file '%(path)s'"
+msgstr "Не могу да отворим датотеку приказа „%(path)s“"
+
+#: main/Starter.py:159
+msgid "The display file could not be opened because the file was not readable."
+msgstr "Није могао да отвори датотеку приказа пошто је датотека нечитљива."
+
+#: main/Starter.py:171
+#, python-format
+msgid "Invalid display file '%(path)s'"
+msgstr "Неисправна датотека приказа „%(path)s“"
+
+#: main/Starter.py:172
+msgid "The display file contains invalid data and could not be loaded."
+msgstr "Датотека приказа садржи неисправне податке и не може се учитати."
+
+#.
+#. Removes the given display.
+#.
+#.
+#. Purges unused config entries.
+#.
+#. rep doesn't start with any ident
+#. so we can safely purge it
+#. get paths to purge
+#. empty are ignored
+#. relative paths are relative to USERHOME
+#. make sure that only paths below USERHOME can be purged
+#. end for
+#. end for_else
+#. end for
+#.
+#. Starts up all displays.
+#.
+#. watches main/displays in the configuration base and calls on_watch if
+#. something's changed
+#. :section Sensor
+#.
+#. :  para The [cmd:Sensor] class is an abstract base class where new sensors are
+#. derived from. This class takes care of communication with the
+#. [app:gDesklets] core, so you can fully concentrate on the sensor
+#. itself.
+#.
+#. :class Sensor |
+#. Abstract base class for all sensors. Every sensor has to inherit from this
+#. class.
+#.
+#. the identity of the main thread
+#. the path of this sensor
+#. configuration manager for sensor properties
+#. the user profile to be used
+#. the ID of this sensor
+#. the configuration watcher callback
+#. flag for stopping the sensor
+#. converter for data types
+#.
+#. Runs the given function in the main thread.
+#.
+#.
+#. Sets the user profile of this sensor.
+#.
+#.
+#. Sets the ID of this sensor.
+#.
+#.
+#. :function get_id | |
+#. Returns the ID of this sensor. It is not yet valid in the
+#. constructor.
+#. :  return string
+#. :/function
+#.
+#.
+#. Sets the configuration ID for this sensor.
+#. If the user has set a callback function for watching the config,
+#. the config will be watched.
+#.
+#.
+#. :function get_config_id | |
+#. Returns the unique config ID of the sensor. You can use the ID
+#. if you need to store data in other places.
+#. :  return string
+#. :/function
+#.
+#.
+#. :function set_config | key, value |
+#. Stores the given value in the configuration base.
+#. :  param key   | string | The key name.
+#. :  param value | string | The value to set.
+#. :/function
+#.
+#. self.__config_lock.acquire()
+#. self.__to_set.append((key, value))
+#. self.__config_lock.release()
+#.
+#. :function get_config | key |
+#. Returns the configuration value for the given key.
+#. :  param  key | string | The key name.
+#. :  return string
+#. :/function
+#.
+#.
+#. :function watch_config | callback |
+#. Registers a watcher for config changes.
+#. :  param callback | function | The callback function for configuration
+#. changes.
+#. :/function
+#.
+#.
+#. :function _set_config_type | key, type, default |
+#. Sets the data types to be used for the configuration values.
+#. Use this method in the constructor of your sensor.
+#. :  param  key | string | The name of the configuration key.
+#. :  param  type | enum  | The data type of the configuration key.
+#. :  param  default | string | The default value or unset keys.
+#. :/function
+#.
+#.
+#. :function get_path | | Returns the filesystem path of the sensor. Use this
+#. method if you want to load resource files that come
+#. with the sensor.
+#. :  return string
+#. :/function
+#.
+#.
+#. :function set_path_to_purge | paths |
+#. Sets the paths which are to be removed when the desklet that
+#. uses the sensor gets removed.
+#. If your sensor creates files, you need to specify the paths here
+#. in order to clean up.
+#. :  param  paths | string list | The paths to purge.
+#. :/function
+#.
+#.
+#. :function new_output || Returns a new empty [cmd:TargetSettings] object for sending data to
+#. the display.
+#. :  return TargetSettings
+#. :/function
+#.
+#.
+#. :function send_output | output | Sends the given [cmd:TargetSettings] object to the display.
+#. [emph:Never call this method from within a thread!]
+#. :  param  output | TargetSettings | The object for sending to the display.
+#. :/function
+#.
+#.
+#. :function add_timer | interval, callback, *args | Adds a timeout function with the given
+#. interval in ms.
+#. :  param  interval | int | The timeout interval between each invokation of the callback.
+#. :  param  callback | function | The callback function.
+#. :/function
+#.
+#.
+#. :function add_thread | threadfunction, *args | Adds and runs a new thread.
+#. Use this to start new threads. It's recommended to put blocking actions into threads
+#. in order to not block [app:gDesklets].
+#. :  param threadfunction | function | The thread function.
+#. :/function
+#.
+#. the thread should not start before setup is complete, therefore
+#. we are using the GTK idle handler
+#.
+#. Sends an action to this sensor.
+#.
+#.
+#. :function call_function | call, path, *args | Method for handling action calls from the
+#. display. Sensors have to override this method. [emph:This method may soon be
+#. deprecated!]
+#. :  param  call | string | The function to call.
+#. :  param  path | int list | The path of the target on which the action occurred.
+#. :  param  args | any list | The list of arguments for the function call.
+#. :/function
+#.
+#.
+#. Stops this sensor and cleans up.
+#.
+#. shut down sensor
+#.
+#. :function is_stopped | | Returns whether this sensor has been stopped. Use this method to
+#. check if your threads have to terminate.
+#. :  return bool
+#. :/function
+#.
+#.
+#. :function _shutdown | | Executes tasks for sensor shutdown. Override this method if your
+#. sensor has to clean up things after it has been terminated.
+#. :/function
+#.
+#.
+#. :function _new_configurator | | Creates and returns an empty new sensor configurator.
+#. [emph:This method may soon be deprecated!]
+#. :  return SensorConfigurator.
+#. :/function
+#.
+#.
+#. Returns the configurator of this sensor.
+#.
+#.
+#. Method for duplicating the display using this sensor
+#.
+#.
+#. :function open_menu | menu | Opens the given popup menu. The menu is a list of
+#. [cmd:(label:str, sensitive:bool, submenu:list, callback:function, args: list)]
+#. tuples.
+#. :  param  menu | list | The menu to open.
+#. :/function
+#.
+#: sensor/Sensor.py:415
+msgid "_Configure display"
+msgstr "_Подеси приказ"
+
+#: sensor/Sensor.py:416
+msgid "Re_start display"
+msgstr "Поно_во покрени приказ"
+
+#: sensor/Sensor.py:417
+msgid "_Remove display"
+msgstr "_Уклони приказ"
+
+#: sensor/Sensor.py:419
+msgid "_About"
+msgstr "_О програму"
+
+#: sensor/Sensor.py:421
+msgid "_Quit"
+msgstr "_Изађи"
+
+#.
+#. Reacts on changes in the configuration and delegates the call to the
+#. user's callback.
+#.
+#: sensor/Sensor.py:465
+msgid "translator_credits"
+msgstr ""
+"Данило Шеган <dsegan@gmx.net>\n"
+"\n"
+"Prevod.org — превод на српски језик."
+
+#: utils/eggstatusicon.c:154
+msgid "Pixbuf"
+msgstr "Pixbuf"
+
+#: utils/eggstatusicon.c:155
+msgid "A GdkPixbuf to display"
+msgstr "GdkPixbuf за приказ"
+
+#: utils/eggstatusicon.c:162
+msgid "Filename"
+msgstr "Име датотеке"
+
+#: utils/eggstatusicon.c:163
+msgid "Filename to load and display"
+msgstr "Датотека за учитавање и приказ"
+
+#: utils/eggstatusicon.c:170
+msgid "Stock ID"
+msgstr "ИБ испоручене"
+
+#: utils/eggstatusicon.c:171
+msgid "Stock ID for a stock image to display"
+msgstr "ИБ испоручене слике за приказ"
+
+#: utils/eggstatusicon.c:178
+msgid "Animation"
+msgstr "Анимација"
+
+#: utils/eggstatusicon.c:179
+msgid "GdkPixbufAnimation to display"
+msgstr "GdkPixbufAnimation за приказ"
+
+#: utils/eggstatusicon.c:186
+msgid "Image type"
+msgstr "Врста слике"
+
+#: utils/eggstatusicon.c:187
+msgid "The representation being used for image data"
+msgstr "Начин представљања података слике"
+
+#: utils/eggstatusicon.c:195
+msgid "Size"
+msgstr "Величина"
+
+#: utils/eggstatusicon.c:196
+msgid "The size of the icon"
+msgstr "Величина иконе"
+
+#: utils/eggstatusicon.c:205
+msgid "Blinking"
+msgstr "Треперење"
+
+#: utils/eggstatusicon.c:206
+msgid "Whether or not the status icon is blinking"
+msgstr "Да ли икона стања трепери"
+
+#: utils/eggtrayicon.c:118
+msgid "Orientation"
+msgstr "Усмерење"
+
+#: utils/eggtrayicon.c:119
+msgid "The orientation of the tray."
+msgstr "Усмерење фиоке."
+
+#~ msgid ""
+#~ "The sensor %(path)s\n"
+#~ "has attempted to access the core from within\n"
+#~ "a thread. In order to prevent a disaster, the\n"
+#~ "thread will be terminated."
+#~ msgstr ""
+#~ "Сензор %(path)s\n"
+#~ "је покушао да приступи језгру из нити.\n"
+#~ "Ради спречавања катастрофе, нит ће бити\n"
+#~ "окончана."
+
+#~ msgid "Illegal operation"
+#~ msgstr "Неисправна операција"
+
+#~ msgid "Welcome to %(name)s<i>!</i>"
+#~ msgstr "Добродошли у %(name)s<i>!</i>"
+
+#~ msgid ""
+#~ "It looks like you are running %(name)s for the first time.\n"
+#~ "\n"
+#~ "You can add new displays by launching them in your file manager.\n"
+#~ "\n"
+#~ "<b>Have fun,</b>\n"
+#~ "  <i>the %(name)s developers</i>"
+#~ msgstr ""
+#~ "Изгледа да по први пут користите %(name)s.\n"
+#~ "\n"
+#~ "Можете додати нове приказе покретањем из вашег управника датотекама.\n"
+#~ "\n"
+#~ "<b>Уживајте,</b>\n"
+#~ "  <i>%(name)s програмери</i>"

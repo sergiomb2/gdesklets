@@ -1,0 +1,213 @@
+<section id="tutor-tutor"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Tutorial Meta-Tutorial</title>
+
+<para>by Martin Grimme</para>
+
+
+<section><title>Introduction</title>
+
+  <para>You can contribute to the tutorials chapter by writing new tutorials.
+    This meta-tutorial shows you how to write compliant tutorials for this
+    book.</para>
+     
+</section>
+
+
+
+<section><title>DocBook</title>
+
+  <para>DocBook is a widely used standard for writing documentation. It is a
+    semantic markup language based on SGML. Recently, DocBook has been ported
+    to XSLT stylesheets, so that any XSLT processor can process DocBook sources.
+    The XSLT stylesheets we are using for generating HTML pages are those of
+    the <application>yelp</application> project, because they are fast and
+    produce good output.</para>
+
+  <para>It's not the purpose of this tutorial to teach you DocBook. There are
+    plenty of other tutorials available, which do a much better job at that.
+    Here is a collection of resources to get you started with DocBook:</para>
+
+  <itemizedlist>
+    <listitem><ulink url="http://www.docbook.org"/> - The home of DocBook. You
+      can find lots of information and documentation there.</listitem>
+    <listitem><ulink url="http://docbook.sourceforge.net"/> - The DocBook Open
+      Repository is the official home of the DocBook stylesheets.</listitem>
+    <listitem><ulink url="http://www.docbook.org/tdg/en/html/docbook.html"/> -
+      DocBook: The Definitive Guide. The name says it all. This is the online
+      version of the most comprehensive DocBook book out there by
+      Norman Walsh and Leonard Muellner.</listitem>
+    <listitem><ulink url="http://developer.gnome.org/projects/gdp/handbook/gdp-handbook/index.html"/> -
+      GNOME Handbook of Writing Software Documentation. This online book is a
+      good source of information for writing software documentation with
+      DocBook.</listitem>
+    <listitem><ulink url="http://www.bartleby.com/141/"/> - The Elements of
+      Style. This book is about good writing style.</listitem>
+  </itemizedlist>
+
+</section>
+
+
+
+<section><title>Template</title>
+
+  <para>To make stuff look uniform, please use the provided template for
+    writing tutorials. You can copy and paste it into a new file from below:
+    </para>
+
+  <literallayout><xi:include href="tutor-TEMPLATE.xml" parse="text"/></literallayout>
+
+  <para>The filename must start with "<filename>tutor-</filename>" and have the
+    extension "<filename>.xml</filename>". After the hyphen, you include the
+    (abbreviated) name of your tutorial. This name must be unique within the
+    whole book. The same name with the "<literal>tutor-</literal>" prefix goes
+    into the <property>id</property> attribute in the <command>section</command>
+    tag in the first line of the document.</para>
+
+</section>
+
+
+
+<section><title>Screenshots</title>
+
+  <para>A picture is worth a thousand words. Screenshots (and diagrams) help you
+    illustrate what you're talking about. Please make good use of them because
+    the reader will appreciate it.</para>
+
+  <para>Screenshots can be included in DocBook like this:</para>
+
+  <programlisting><![CDATA[
+<screenshot>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="gfx/my-image" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+  ]]></programlisting>
+
+  <para>Please note that the filename does not get the suffix here. The file
+    itself has the <filename>.png</filename> suffix, of course. The included
+    files have to be in the PNG format (GIF used to be non-free and is now
+    deprecated, and JPEG isn't free either).</para>
+
+  <para>The filename of the screenshot must be unique within the book, too.
+    It is recommended to start all filenames with the (abbreviated) name of
+    your tutorial.</para>
+
+</section>
+
+
+
+<section><title>Showing XML</title>
+
+  <para>In a tutorial for <application>gDesklets</application>, it's often
+    necessary to show example code which is XML. Example code can be
+    displayed with the <command>&lt;programlisting&gt;</command> tag:</para>
+
+  <programlisting><![CDATA[
+<programlisting>
+
+  ...
+
+</programlisting>
+  ]]></programlisting>
+
+  <para>A problem, however, is that the XML code of course uses characters
+    which are reserved by XML, such as "&lt;" and "&gt;". You can get around
+    this limitation by putting the example into a CDATA section:</para>
+
+  <programlisting><![CDATA[
+<programlisting><![CDATA[
+
+  ...
+
+]]>]]&gt;<![CDATA[</programlisting>
+  ]]></programlisting>
+
+  <para>There remains only one problem: CDATA sections cannot be nested. So,
+    what if your example contains CDATA sections as well?</para>
+
+  <para>The solution is to split the CDATA section into two CDATA sections
+    at the point where the CDATA section in the example code ends:</para>
+
+  <programlisting><![CDATA[
+<programlisting><![CDATA[
+
+  <![CDATA[ ... ]]>]]&gt;<![CDATA[
+
+]]>]]&gt;<![CDATA[</programlisting>
+  ]]></programlisting>
+
+  <para>must be written as</para>
+
+  <programlisting><![CDATA[
+<programlisting><![CDATA[
+
+  ...
+  <![CDATA[ ... ]]>]]&gt;]]&amp;gt;&lt;![CDATA[<![CDATA[
+  
+]]>]]&gt;<![CDATA[</programlisting>
+  ]]></programlisting>
+
+  <para>This might look confusing at first, but the simple rule is that every
+    occurrence of "<literal>]]&gt;</literal>" has just to be extended with
+    "<literal>]]&amp;gt;&lt;![CDATA[</literal>".</para>
+
+</section>
+
+
+
+<section><title>Previewing Your Work</title>
+
+  <para>To preview the new tutorial file, you have to embed it into a valid
+    DocBook file. The tutorial file is just a section and not a complete
+    DocBook file.</para>
+
+  <para>The easiest way to embed it into a DocBook file is by getting the
+    DocBook sources of this book from CVS and include your file in the
+    tutorials chapter.</para>
+
+  <para>You can retrieve the DocBook sources like this:</para>
+
+  <screen>
+    <prompt>$> </prompt><userinput>export CVSROOT=:pserver:anonymous@anoncvs.gnome.org/cvs/gnome</userinput>
+    <prompt>$> </prompt><userinput>cvs login</userinput>
+    (press <key>Enter</key> when asked for a password)
+    <prompt>$> </prompt><userinput>cvs co gdesklets/doc/book</userinput>
+  </screen>
+
+  <para>Then you can include your tutorial in the file
+    <filename>tutor.xml</filename> using XInclude like this:</para>
+
+  <programlisting><![CDATA[
+...
+
+  <xi:include href="tutor-xml.xml"/>
+  <xi:include href="tutor-hello.xml"/>
+  <xi:include href="tutor-canvas.xml"/>
+  ...
+  <xi:include href="tutor-mytutorial.xml"/>
+
+...
+  ]]></programlisting>
+
+  <para>The book can be previewed with the <application>yelp</application> tool
+    of the <application>GNOME</application> desktop:</para>
+
+  <screen>
+    <prompt>$> </prompt><userinput>yelp ghelp://$PWD/book.xml</userinput>
+  </screen>
+
+  <para>The script <filename>make-html.sh</filename> can be called to convert
+    the DocBook files to HTML using the <application>yelp</application>
+    stylesheets (<application>yelp</application> must be installed):</para>
+
+  <screen>
+    <prompt>$> </prompt><userinput>./make-html.sh book.xml output</userinput>
+  </screen>
+
+  <para>The book can then be found in <filename>output/index.html</filename>.
+    </para>
+</section>
+
+</section>

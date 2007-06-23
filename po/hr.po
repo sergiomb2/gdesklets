@@ -1,0 +1,178 @@
+# Translation of gdesklets to Croatiann
+# Copyright (C) Croatiann team
+# Translators: Automatski Prijevod <>,Denis Lackovic <delacko@fly.srk.fer.hr>,pr pr <delacko@192.168.0.1>,
+msgid ""
+msgstr ""
+"Project-Id-Version: gdesklets 0\n"
+"POT-Creation-Date: 2004-02-01 16:55+0100\n"
+"PO-Revision-Date: 2004-02-01 16:55+CET\n"
+"Last-Translator: auto\n"
+"Language-Team: Croatian <lokalizacija@linux.hr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: TransDict server\n"
+
+#: Sensors/FontSelector/__init__.py:86
+msgid "Fonts"
+msgstr "Pisma"
+
+#: Sensors/FontSelector/__init__.py:87
+msgid "Fonts settings"
+msgstr "Postavke pisma"
+
+#: Sensors/FontSelector/__init__.py:90
+msgid "Font #%i:"
+msgstr "Pismo #%i:"
+
+#: Sensors/FontSelector/__init__.py:92
+msgid "Font #%i used in the labels"
+msgstr "Korišteno pismo #%i u oznakama"
+
+#: Sensors/FontSelector/__init__.py:93
+msgid "Font color #%i:"
+msgstr "Boja pisma #%i:"
+
+#: Sensors/FontSelector/__init__.py:95
+msgid "Font color #%i used in the labels"
+msgstr "Korištena boja pisma #%i u oznakama"
+
+#: browser/MainWindow.py:66 browser/TipOfTheDay.py:20
+msgid "Tip of the Day"
+msgstr "Savjet dana"
+
+#: browser/TipOfTheDay.py:23
+msgid "Show tips at startup"
+msgstr "Pokaži savjete pri pokretanju"
+
+#: data/gdesklets.desktop.in.h:1
+msgid "A desktop applet system for GNOME"
+msgstr "Sustav appleta za radnu površinu Gnomea"
+
+#: data/gdesklets.keys.in.h:1
+msgid "gDesklets display file"
+msgstr "Datoteka prikaza gDeskletsa"
+
+#: display/DisplayConfigurator.py:15
+msgid "Configuration"
+msgstr "Postava"
+
+#: display/DisplayConfigurator.py:40
+msgid "This display is not configurable."
+msgstr "Ovaj prikaz nije podesiv."
+
+#: factory/DisplayFactory.py:96
+msgid "Error while configuring display"
+msgstr "Greška pri podešavanju prikaza"
+
+#: factory/DisplayFactory.py:97
+msgid ""
+"A display could not be configured properly. It will most likely be broken "
+"and you should consider removing it."
+msgstr ""
+"Nisam uspio podesiti prikaz. Najvjerojatnije će biti neispravan i poželjno "
+"je da ga uklonite."
+
+#: factory/SensorFactory.py:81
+msgid "Could not load sensor '%(name)s'"
+msgstr "Ne mogu učitati senzor „%(name)s“"
+
+#: factory/SensorFactory.py:82
+msgid ""
+"An error occurred while loading a sensor. This most likely means that the "
+"sensor is broken or simply not installed."
+msgstr ""
+"Došlo je do greške pri učitavanju senzora. Ovo najvjerojatnije znači da je "
+"senzor neispravan ili da uopće nije instaliran."
+
+#: main/CmdLineParser.py:59
+msgid "Could not add display"
+msgstr "Ne mogu otvoriti prikaz"
+
+#: main/CmdLineParser.py:60
+msgid "The display could not be added because the file does not exist."
+msgstr "Nisam mogao dodati prikaz zato što datoteka ne postoji."
+
+#: main/CmdLineParser.py:73
+msgid "Usage: gdesklets <OPTION> <my.display>\n"
+msgstr ""
+
+#: main/CmdLineParser.py:74
+msgid "Options:\n"
+msgstr "Mogućnosti:\n"
+
+#: main/CmdLineParser.py:75
+msgid "\t--no-config\t\tignore the configuration stored in the database (GConf)"
+msgstr ""
+
+#: main/CmdLineParser.py:77
+msgid ""
+"\t--orig-coords\t\tset the coordinates for every display to the upper left "
+"corner"
+msgstr ""
+
+#: main/CmdLineParser.py:79
+msgid "\t--profile=myprofile\tuse \"myprofile\" as profile."
+msgstr ""
+
+#: main/CmdLineParser.py:80
+msgid "\t--version\t\toutput version information and exit"
+msgstr ""
+
+#: main/Starter.py:145
+msgid "Could not open display file '%(path)s'"
+msgstr "Ne mogu otvoriti datoteku prikaza „%(path)s“"
+
+#: main/Starter.py:147
+msgid "The display file could not be opened because the file was not readable."
+msgstr "Nisam mogao otvoriti datoteku prikaza jer je datoteka nečitljiva."
+
+#: main/Starter.py:159
+msgid "Invalid display file '%(path)s'"
+msgstr "Neispravna datoteka prikaza „%(path)s“"
+
+#: main/Starter.py:160
+msgid "The display file contains invalid data and could not be loaded."
+msgstr "Datoteka prikaza sadrži neispravne podatke i ne može se učitati."
+
+#: sensor/Sensor.py:227
+#, python-format
+msgid ""
+"The sensor %(path)s\n"
+"has attempted to access the core from within\n"
+"a thread. In order to prevent a disaster, the\n"
+"thread will be terminated."
+msgstr ""
+"Senzorr %(path)s\n"
+"je pokušao pristupiti jezgri iz\n"
+"niti. Kako bi sprječili katastrofu, nit\n"
+"će biti ugašena."
+
+#: sensor/Sensor.py:231
+msgid "Illegal operation"
+msgstr "Nedozvoljena operacija"
+
+#: sensor/Sensor.py:348
+msgid "_Configure display"
+msgstr "_Podešavanje prikaza"
+
+#: sensor/Sensor.py:349
+msgid "Re_start display"
+msgstr "Pono_vo pokreni prikaz"
+
+#: sensor/Sensor.py:350
+msgid "_Remove display"
+msgstr "_Ukloni prikaz"
+
+#: sensor/Sensor.py:352
+msgid "_About"
+msgstr "_O"
+
+#: sensor/Sensor.py:354
+msgid "_Quit"
+msgstr "_Završi"
+
+#: sensor/Sensor.py:398
+msgid "translator_credits"
+msgstr "lokalizacija@linux.hr"
+

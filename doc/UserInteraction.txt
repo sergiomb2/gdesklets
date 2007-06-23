@@ -1,0 +1,62 @@
+Because targets usually don't have their own X windows, but draw on the
+toplevel window (the display), you cannot detect events on them. Therefore,
+events are detected on the display window and propagated along the target
+hierarchy.
+Every display target implements the handle_action() method is recursively
+called. Targets which have action handlers set on the action will invoke these
+handlers.
+
+See this example:
+
+  The user clicks on the 2nd                Display
+  label in the array. Display             /         \
+  detects the click and calls            /           \ 
+  handle_action() on the Group.     Label             Group
+  The Label is not covered by                       /       \
+  the mouse, so it hasn't to be                    /         \
+  notified.                                   Array           Image
+  The Group recursively calls               /   |   \
+  handle_action() on the Array,            /    |    \
+  which in turn calls it on its       Label   Label   Label
+  2nd label (because this one is
+  covered by the mouse). The label              |\
+  does not have any children, so                *click*
+  the recursion terminates here.
+  2D hashing is used by containers to find the children covered by the mouse.
+
+ENTER and LEAVE events cannot be detected directly by the display for targets,
+of course. Targets detect ENTER and LEAVE by checking if an action has occurred
+on them. The method notify_handle_action() is called each time an action
+occurs and tells the target whether the action occurred on it.
+ACTION -> NO-ACTION transitions trigger LEAVE events, and NO-ACTION -> ACTION
+transitions trigger ENTER events.
+
+
+Action handlers are functions provided by sensors. An action string as given in
+.display files looks like this:
+
+ <id>:<function>(<arg>, ...)
+
+ with <id> being the sensor's ID, <function> being the function name provided
+ by the sensor, and <arg> being an argument value.
+
+You may omit "<id>:" to address the default sensor that is part of every
+display. If "<function>" takes no user arguments, you may also omit the
+brackets (this is due to backwards compatibility with the old syntax < 0.23).
+You may specify more than one handler per action by separating the function
+calls by commas. You may use commas and closing brackets within quotations.
+Otherwise you have to escape them using the \ character.
+
+Examples:
+  on-enter="iconbar:enter"
+  on-leave="iconbar:leave()"
+  on-click="exec(echo -e '\a')"
+  on-scroll="s:foo(1, 2, '3,4'), s:bar('foobar', foo\,bar)"
+
+The user-defined arguments (those in the brackets) get appended to the action
+specific arguments. Thus, if you call "foo(1, 2, 3)" in the on-motion handler,
+the sensor will receive the argument list [x, y, 1, 2, 3] because the on-click
+handler also sends the mouse pointer coordinates to the sensor.
+
+NOTE: Action handlers in versions >= 0.30 will be inline script functions.
+      Sensor functions will be deprecated, too, as they become useless.

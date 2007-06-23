@@ -1,0 +1,991 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gdesklets.HEAD.pot\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-24 11:28+0000\n"
+"PO-Revision-Date: 2007-03-27 22:18+0530\n"
+"Last-Translator: yangka <yanang_ka@hotmail.com>\n"
+"Language-Team: Dzongkha <pgeyleg@dit.gov.bt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplural=2;plural=(n!=1)\n"
+"X-Poedit-Language: Dzongkha\n"
+"X-Poedit-Country: Bhutan\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../config/ConfigDialog.py:103
+msgid "Invalid Function Call"
+msgstr "ནུས་ཅན་མ་ཡིན་པའི་ལས་འགན་བོད་བརྡ་"
+
+#: ../config/ConfigDialog.py:104
+#, python-format
+msgid ""
+"There is no function called <b>%s</b>.\n"
+"This means that there's an error in the desklet's code. You should inform the author of the desklet about this problem."
+msgstr ""
+"<b>%s</b>ཟེར་མི་ལས་འགན་ཡོད་རང་མེད།\n"
+"དེ་འབད་ནི་དེ་གིས་ ཌེཀསི་ལེཊི་གི་ ཨང་རྟགས་ནང་ལུ་འཛོལ་བ་ཡོད་པའི་རྟགས་ཨིན། ཁྱོད་ཀྱིས་ དཀའ་ངལ་འདི་གི་སྐོར་ལས་ དེཀསི་ལེཊི་གི་དབང་འཛིན་ལུ་བརྡ་སླབ་འབད་དགོ"
+
+#: ../config/ConfigDialog.py:217
+#: ../display/DisplayConfigurator.py:32
+msgid "This desklet is not configurable."
+msgstr "ཌེཀསི་ལེཊི་འདི་ རིམ་སྒྲིག་འབད་མ་བཏུབ་མི་ཨིན།"
+
+#: ../config/ConfigUnit.py:57
+msgid "pixel"
+msgstr "པིག་སེལ་"
+
+#: ../config/ConfigUnit.py:58
+msgid "point"
+msgstr "ཡིག་ཚད་"
+
+#: ../config/ConfigUnit.py:59
+msgid "cm"
+msgstr "སི་ཨེམ་"
+
+#: ../config/ConfigUnit.py:60
+msgid "inch"
+msgstr "ཨིནཅི་"
+
+#: ../config/DaemonConfigger.py:17
+msgid "Editor to view/edit the desklet source code"
+msgstr "དེཀསི་ལེཊི་འབྱུང་ཁུངས་ཨང་རྟགས་དེ་ སྟོན་ནི་/ཞུན་དག་འབད་ནིའི་དོན་ལུ་ཞུན་དག་པ་"
+
+#: ../config/DaemonConfigger.py:18
+msgid "Your favorite editor"
+msgstr "ཁྱོད་ཀྱི་དགའ་མི་ཞུན་དག་པ་"
+
+#: ../config/DaemonConfigger.py:20
+msgid "XComposite support (requires composition manager)"
+msgstr "ཨེགསི་སྣ་སྡུད་ཅན་གྱི་རྒྱབ་སྐྱོར་(གནད་སྡུད་འཛིན་སྐྱོང་པ་དགོས་མཁོ་ཡོདཔ་ཨིན་)"
+
+#: ../config/DaemonConfigger.py:21
+msgid ""
+"\n"
+"     <small><i>"
+msgstr ""
+"\n"
+"     <ཆུང་ཀུ><i>"
+
+#: ../config/DaemonConfigger.py:22
+msgid "this does not work with GTK 2.8 or higher for technical reasons"
+msgstr "འདི་གིས་ ཐབས་རིག་གི་གནད་དོན་ཚུ་གི་དོན་ལུ་ ཇི་ཊི་ཀེ་ ༢.༨་དང་གཅིག་ཁར་ལཱ་གཡོག་མི་འབད་"
+
+#: ../config/DaemonConfigger.py:23
+msgid "</i></small>"
+msgstr "</i></ཆུང་ཀུ>"
+
+#: ../config/DaemonConfigger.py:24
+msgid "Translucency (takes effect after restarting a display)"
+msgstr "ཕྱད་དྭངས་གསལ་གྱི་རང་བཞིན (བཀྲམ་སྟོན་འབད་ནི་དེ་ལོག་འགོ་བཙུགས་ཞིནམ་ལས་ ནུས་པ་འབྱུངམ་ཨིན་)"
+
+#: ../config/DaemonConfigger.py:26
+msgid "Screen Resolution (DPI)"
+msgstr "གསལ་གཞི་ཧུམ་ཆ་(ཌི་པི་ཨའི་)"
+
+#: ../config/DaemonConfigger.py:28
+msgid "Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97\"</b> wide"
+msgstr "ཕྲ་རིང་གྱི་རྒྱ་ཅན་དེ་<b>༥ cm </b> ཡང་ན་ <b>༡.༩༧་\"</b> ཏག་ཏག་འོང་ནིའི་དོན་ལུ་ ལྟག་ལུ་ཡོད་མི་གནས་གོང་དེ་བདེ་སྒྲིག་འབད་"
+
+#: ../config/DaemonConfigger.py:32
+msgid "Behavior"
+msgstr "སྤྱོད་ལམ་"
+
+#: ../config/DaemonConfigger.py:33
+msgid "Show _tray icon (takes effect after restart)"
+msgstr "ཤོག་སྣོད་ངོས་དཔར་སྟོན་(ལོག་འགོ་བཙུགས་ཚར་ཞིནམ་ལས་ནུས་པ་འབྱུངམ་ཨིན་(_t)"
+
+#: ../config/DaemonConfigger.py:35
+msgid "Show _notification while loading a desklet"
+msgstr "ཌེཀསི་ལེཊི་ཅིག་ཕབ་ལེན་འབད་བའི་སྐབས་ལུ་ བརྡ་བསྐུལ་སྟོན་(_n)"
+
+#: ../config/DaemonConfigger.py:37
+msgid "Key for toggling Float mode:"
+msgstr "ལྡིང་ནིའི་ཐབས་ལམ་སོར་སྟོན་འབད་ནིའི་དོན་ལུ་ལྡེ་མིག:"
+
+#: ../config/DaemonConfigger.py:49
+#: ../config/DisplayConfigger.py:27
+#: ../display/DisplayConfigurator.py:16
+msgid "Configuration"
+msgstr "རིམ་སྒྲིག་"
+
+#: ../data/gdesklets.desktop.in.h:1
+#: ../main/__init__.py:58
+msgid "A desktop applet system for GNOME"
+msgstr "ཇི་ནོམ་གྱི་དོན་ལུ་ ཌེཀསི་ཊོབ་ཨེཔ་ལེཊི་རིམ་ལུགས་ཅིག་"
+
+#: ../data/gdesklets.xml.in.h:1
+msgid "gDesklets display"
+msgstr "ཇི་ཌེཀསི་ལེཊི་བཀྲམ་སྟོན་"
+
+#: ../display/Display.py:84
+msgid "_Configure desklet"
+msgstr "ཌེཀསི་ལེཊི་རིམ་སྒྲིག་འབད་(_C)"
+
+#: ../display/Display.py:86
+msgid "_Move desklet"
+msgstr "ཌེཀསི་ལེཊི་སྤོ་བཤུད་འབད་(_M)"
+
+#: ../display/Display.py:89
+msgid "_View Source"
+msgstr "འབྱུང་ཁུངས་སྟོན་(_V)"
+
+#: ../display/Display.py:92
+msgid "Re_start desklet"
+msgstr "ཌེཀསི་ལེཊི་ལོག་འགོ་བཙུགས་(_s)"
+
+#: ../display/Display.py:94
+msgid "_Remove desklet"
+msgstr "ཌེཀསི་ལེཊི་རྩ་སྐྲད་གཏང་(_R)"
+
+#: ../display/Display.py:978
+#: ../shell/plugins/DisplayBrowser/__init__.py:142
+msgid "Do you really want to remove this desklet ?"
+msgstr "ཁྱོད་ཀྱིས་ཐད་རི་འབའ་རི་ཌེཀསི་ལེཊི་འདི་རྩ་བསྐྲད་གཏང་ནི་ཨིན་ན་?"
+
+#: ../display/Display.py:979
+msgid "This desklet will no longer be displayed and its configuration will be purged."
+msgstr "ཌེཀསི་ལེཊི་འདི་ད་ལས་ཕར་བཀྲམ་སྟོན་མ་འབད་བར་བཞག་ནི་ཨིན་པའི་ཁར་ལུ་ དེ་གི་རིམ་སྒྲིག་དེ་ཕྱིར་ཕྱིར་བསྐྲད་འབད་འོང་།"
+
+#: ../display/DisplayTarget.py:417
+#, python-format
+msgid "Element \"%s\" does not exist"
+msgstr "རྒྱུ་རྫས་\"%s\" མེད་"
+
+#: ../display/DisplayTarget.py:418
+msgid "The <tt>relative-to</tt> property requires a reference to an existing display element within the same parent container."
+msgstr "<tt>དང་-འབྲེལ་བའི་</tt>རྒྱུ་དངོས་དེ་ལུ་ རྩ་ལག་འཛིན་སྣོད་གཅིག་པའི་ནང་འཁོད་ལུ་ ད་ལྟོ་ཡོད་པའི་བཀྲམ་སྟོན་ཅིག་ལུ་གཞི་བསྟུན་ཅིག་དགོཔ་འདུག་"
+
+#: ../display/targetregistry.py:45
+#, python-format
+msgid "Unknown element <b>&lt;%s&gt;</b>"
+msgstr "མ་ཤེས་པའི་རྒྱུ་རྫས་<b>&lt;%s&gt;</b>"
+
+#: ../display/targetregistry.py:46
+msgid "Either there is a typo in the .display file or you have an incompatible version of gDesklets."
+msgstr "བཀྲམ་སྟོན་ཡིག་སྣོད་དེ་ནང་ལུ་ ཊའི་པོ་ཅིག་ཡོདཔ་ཨིནམ་དང་ ཡང་ན་ ཁྱོད་ལུ་ཇི་ཌེཀསི་ལེཊི་གི་མཐུན་མིན་ཅན་གྱི་ཐོན་རིམ་ཅིག་འདུག"
+
+#: ../factory/DisplayFactory.py:89
+#: ../utils/DOM.py:31
+msgid "XML parse error"
+msgstr "ཨེགསི་ཨེམ་ཨེལ་ མིང་དཔྱད་འཛོལ་བ་"
+
+#: ../factory/DisplayFactory.py:90
+msgid "This .display file has invalid XML syntax."
+msgstr "བཀྲམ་སྟོན་ཡིག་སྣོད་འདི་ནང་ལུ་ ནུས་མེད་ཨེགསི་ཨེམ་ཨེལ་ཚིག་སྦྱོར་འདུག་"
+
+#: ../factory/DisplayFactory.py:208
+msgid "File doesn't exist or couldn't be loaded"
+msgstr "ཡིག་སྣོད་མེད་ ཡང་ན་ ཕབ་ལེན་འབད་མི་ཚུགས་"
+
+#: ../factory/DisplayFactory.py:210
+msgid "A file which contains a script isn't available for further execution."
+msgstr "ཡིག་ཚུགས་ཡོད་མི་ཡིག་སྣོད་དེ་ དེ་ལས་ལྷག་སྟེ་ལག་ལེན་འཐབ་ནིའི་དོན་ལུ་ འཐོབ་མི་ཚུགས།"
+
+#: ../factory/DisplayFactory.py:233
+msgid "Could not load sensor"
+msgstr "ཚོར་འཕྲུལ་ཕབ་ལེན་འབད་མ་ཚུགས་"
+
+#: ../factory/DisplayFactory.py:249
+#, python-format
+msgid "&lt;%s&gt; needs a bind attribute"
+msgstr "&lt;%s&gt; བསྡམས་ཡོད་པའི་ཁྱད་ཆོས་ཅིག་དགོཔ་འདུག་"
+
+#: ../factory/DisplayFactory.py:251
+msgid "The &lt;prefs&gt; section of this desklet file is broken."
+msgstr "ཌེཀསི་ལེཊི་ཡིག་སྣོད་འདི་གི་ དབྱེ་ཚན་&lt;prefs&gt དེ་ཆད་ཡར་སོང་ནུག"
+
+#: ../factory/SensorFactory.py:75
+#, python-format
+msgid "Could not find sensor '%(name)s'"
+msgstr "ཚོར་འཕྲུལ་  '%(name)s' འཚོལ་མ་འཐོབ་(མིང་)་གི་"
+
+#: ../factory/SensorFactory.py:76
+msgid "A sensor could not be found. This usually means that it has not been installed."
+msgstr "ཚོར་འཕྲུལ་འཚོལ་མི་འཐོབ། འདི་གིས་སྤྱིར་གཏང་ལུ་ ཁོ་ར་གཞི་བཙུགས་འབད་དེ་མེད་པའི་དོན་སྟོནམ་ཨིན།"
+
+#: ../gdesklets:26
+msgid "You must NOT run gDesklets as super user (root)."
+msgstr "ཁྱོད་ཀྱིས་ ཇི་ཌེགསི་ལེཊི་དེ་ ལག་ལེཔ་ཡང་དག་སྦེ་གཡོག་བཀོལ་ནི་མི་འོང་།(རྩ་བ་)"
+
+#: ../gdesklets:46
+msgid "Checking requirements:"
+msgstr "དགོས་མཁོ་ཚུ་ཞིབ་དཔྱད་འབད་དོ:"
+
+#: ../gdesklets:50
+msgid "Python version >= 2.3.0 is required."
+msgstr "པ་ཡི་ཐཱོན་ ཐོན་རིམ་>= ༢.༣.༠་འདི་དགོཔ་འདུག"
+
+#: ../gdesklets:54
+msgid "libexpat version 1.95.7 is broken. Please upgrade!"
+msgstr "ལིབ་ཨེགསི་པེཊི་ཐོན་རིམ་༡.༩༥.༧ འདི་ཆད་ཡར་སོང་ནུག ཡར་བསྐྱེད་འབད་དགོ་ཡ!"
+
+#: ../gdesklets:57
+msgid "SAX parser is required, some SuSE versions ship without it."
+msgstr "ཨེསི་ཨེ་ཨེགསི་ མིང་དཔྱད་འབད་མི་འདི་དགོཔ་འདུག་ ཨེསི་ཡུ་ཨེསི་ཨི་ ཐོན་རིམ་ཚུ་གིས་དེ་མེད་པར་སྐྱེལ་འདྲེན་འབདཝ་ཨིན།"
+
+#: ../gdesklets:61
+msgid "GTK python bindings (pygtk2) version >= 2.4.0 and GTK+ version >= 2.4.0 are required."
+msgstr "ཇི་ཊུ་ཀེ་ པའི་ཐོན་ སྡམ་ཐག་(pygtk2) ཐོན་རིམ་>=༢.༤.༠ དང་ ཇི་ཊི་ཀེ་+ཐོན་རིམ་>=༢.༤.༠ ཚུ་དགོཔ་ཡོད།"
+
+#: ../gdesklets:65
+msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
+msgstr "ཨོར་བིཊི་ པའི་ཐོན་བསྡམ་ཐག་(pyorbit) ཐོན་རིམ་>= ༢.༠.༡ ཚུ་དགོཔ་ཡོད།"
+
+#: ../gdesklets:68
+msgid "bonobo python bindings are required."
+msgstr "བོ་ནོ་བོ་ པའི་ཐོན་བསྡམ་ཐག་ཚུ་དགོཔ་འདུག།"
+
+#: ../gdesklets:77
+msgid "found"
+msgstr "ཐོབ་"
+
+#: ../gdesklets:81
+msgid "missing"
+msgstr "བརླག་སྟོར་ཞུགས་པ་"
+
+#: ../gdesklets:87
+msgid "Version check failed."
+msgstr "ཐོན་རིམ་ཞིབ་དཔྱད་འཐུས་ཤོར་འབྱུང་ཡོདཔ་"
+
+#: ../gdesklets:88
+#, c-format
+msgid ""
+"\n"
+"%s\n"
+msgstr ""
+"\n"
+"%s\n"
+
+#: ../gdesklets:89
+msgid ""
+"Please make sure that the required software is installed.\n"
+"Also try to avoid having multiple versions of a library/binding on your system.\n"
+"gDesklets won't work if you don't have all necessary dependencies installed\n"
+"on your system.\n"
+"\n"
+"THE STARTUP WILL BE CANCELLED NOW!\n"
+msgstr ""
+"དགོས་མཁོ་ཡོད་པའི་མཉེན་ཆས་འདི་གཞི་བཙུགས་འབད་དེ་ཡོདཔ་ངེས་གཏན་བཟོ།\n"
+"དེ་མ་ཚད་ ཁྱོད་རའི་རིམ་ལུགས་གུ་དཔེ་མཛོད་/བསྡམ་ཐག་གི་ཐོན་རིམ་ཚུ་སྣ་མང་སྦེ་བཞག་ནི་དེ་ཡང་གང་དྲག་སྤང་ནི་ལུ་འབད་བརྩོལ་བསྐྱེད།\n"
+"ཁྱོད་ཀྱིས་ ཁྱོད་རའི་རིམ་ལུགས་གུ་ དགོས་མཁོ་ཡོད་པའི་བརྟེན་འབྲེལ་ཚུ་གཞི་བཙུགས་འབད་དེ་མེད་པ་ཅིན་ ཇི་ཌེཀསི་ལེཊི་ཚུ་གིས་\n"
+"ལཱ་གཡོག་མི་འབད།\n"
+"\n"
+"འགོ་བཙུགས་དེ་ད་ལྟོ་ཆ་མེད་གཏང་འོང་ཡ་!\n"
+
+#: ../gdesklets:105
+msgid ""
+"\n"
+"You're running gDesklets for the first time.\n"
+"gDesklets will start a requirements check now...\n"
+msgstr ""
+"\n"
+"ཁྱོད་ཀྱིས་ འགོ་དང་པ་ ཇི་ཌེཀསི་ལེཊི་གཡོག་བཀོལ་དོ།\n"
+"ཇི་ཌེཀསི་ལེཊི་ཚུ་གིས་ དགོས་མཁོཟི་ཞིབ་དཔྱད་ད་ལྟོ་འགོ་བཙུགས་འོང་་་་།\n"
+
+#: ../gdesklets:116
+msgid ""
+"Usage: gdesklets [option] <command> [arguments...]\n"
+"\n"
+"\t<command>\n"
+"\t\topen    <files>   (Opens the given desklet files)\n"
+"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
+"\t\tstop              (Stops the gDesklets daemon)\n"
+"\t\tlist              (Lists open desklets)\n"
+"\t\trestart           (Restarts the gDesklets daemon)\n"
+"\t\tprofile <profile> (Switches to the given profile)\n"
+"\t\tprofile           (Shows the current and the available profiles)\n"
+"\t\tshell             (Opens the graphical shell)\n"
+"\t\tslay              (Kills the daemon -- use in emergency)\n"
+"\t\tstatus            (Checks daemon status)\n"
+"\t\tabout             (Prints information about gDesklets)\n"
+"\t\tversion           (Prints gDesklets version)\n"
+"\t\tconfigure         (Opens the configuration dialog)\n"
+"\t\thelp              (Displays this text)\n"
+"\t\tcheck             (Checks requirements)\n"
+"\n"
+"\t[option]\n"
+"\t\t--no-tray-icon    (disables the systray icon)\n"
+"\t\t--translucent     (enables translucency on the xorg servers)\n"
+msgstr ""
+"བེད་སྤྱོད་:ཇི་ཌེཀསི་ལེཊི་[གདམ་ཁ་]<command>[སྒྲུབ་རྟགས...]\n"
+"\n"
+"\t<command>\n"
+"\t\topen    <ཡིག་སྣོད་ཚུ་>   (གྲ་སྒྲིག་ཡོད་པའི་དེཀསི་ལེཊི་ཡིག་སྣོད་དེ་ཁ་ཕྱེཝ་ཨིན་)\n"
+"\t\tstart             (ཇི་ཌེཀསི་ལེཊི་ ཌེ་མོན་དེ་བཀག་བཞགཔ་ཨིན། འདི་སྔོན་སྒྲིག་ཨིན་)\n"
+"\t\tstop              (ཇི་ཌེཀསི་ལེཊི་ ཌེ་མོན་དེ་བཀག་བཞགཔ་ཨིན)\n"
+"\t\tlist              (ཁ་ཕྱཻ་ཡོད་པའི་ཌེཀསི་ལེཊི་ཚུ་ཐོ་འགོད་འབདཝ་ཨིན་)\n"
+"\t\trestart           (ཇི་ཌེཀསི་ལེཊི་ ཌེ་མོན་དེ་ལོག་འགོ་བཙུགསཔ་ཨིན།)\n"
+"\t\tprofile <profile> གྲ་སྒྲིག་ཡོད་པའི་གསལ་སྡུད་དེ་ལུ་སོར་འགྱུར་འབདཝ་ཨིན།)\n"
+"\t\tprofile           (ད་ལྟོ་ཡོད་མི་དང་ འཐོབ་ཚུགས་པའི་གསལ་སྡུད་ཚུ་སྟོནམ་ཨིན།)\n"
+"\t\tshell             (ཚད་རིས་ཅན་གྱི་ཤལ་དེ་ཁ་ཕྱེཝ་ཨིན།)\n"
+"\t\tslay              (ཌེ་མོན་གསདཔ་ཨིན་-- ཉེན་འཚུབས་ཀྱི་སྐབས་ལུ་ལག་ལེན་འཐབ།)\n"
+"\t\tstatus            (ཌེ་མོན་གནས་ཚད་ཞགབ་དཔྱད་འབདཝ་ཨིན།)\n"
+"\t\tabout             (ཇི་ཌེཀསི་ལེཊི་གི་བརྡ་དོན་ཚུ་གི་སྐོར་ལས་དཔར་བསྐྲུན་འབདཝ་ཨིན།)\n"
+"\t\tversion           (ཇི་ཌེཀསི་ལེཊི་ཚུ་གི་ཐོན་རིམ་དཔར་བསྐྲུན་འབདཝ་ཨིན།)\n"
+"\t\tconfigure         (རིམ་སྒྲིག་ཌིའི་ལོག་དེ་ཁ་ཕྱེཝ་ཨིན།)\n"
+"\t\thelp              (ཚིག་ཡིག་འདི་བཀྲམ་སྟོན་འབདཝ་ཨིན།)\n"
+"\t\tcheck             (དགོས་མཁོ་ཚུ་ཞིབ་དཔྱད་འབདཝ་ཨིན།)\n"
+"\n"
+"\t[གདམ་ཁ་]\n"
+"\t\t--ཤོག་སྣོད་-ངོས་དཔར་-མིན་འདུག་    (སཱསི་ཊེ་རེ་ངོས་དཔར་ལྕོགས་མིན་བཟོཝ་ཨིན།)\n"
+"\t\t--འོད་བརྒྱུད་ཅན་    (ཨེགསི་ཨོ་ཨཱར་ཇི་ སར་བར་དེ་ཚུ་གུ་འོད་བརྒྱུད་ཅན་ལྕོགས་ཅན་བཟོཝ་ཨིན།)\n"
+
+#: ../gdesklets:189
+#: ../gdesklets:263
+#, c-format
+msgid "Could not open desklet %s."
+msgstr "ཌེཀསི་ལེཊི་%s ཁ་ཕྱེ་མ་ཚུགས།"
+
+#: ../gdesklets:271
+msgid "Starting gdesklets-daemon..."
+msgstr "ཇི་ཌེཀསི་ལེཊི་-ཌེ་མཱོན་འགོ་བཙུགས་དོ་་་"
+
+#: ../gdesklets:277
+msgid "Shutting down gdesklets-daemon..."
+msgstr "ཇི་ཌེཀསི་ལེཊི་-ཌེ་མཱོན་ཁ་བསྡམ་དོ་་་"
+
+#: ../gdesklets:289
+#, c-format
+msgid "Currently open displays in profile \"%s\":\n"
+msgstr "གསལ་སྡུད་ \"%s\" ནང་ལུ་ཡོད་མི་བཀྲམ་སྟོན་ཚུ་ད་ལྟོ་ཁ་ཕྱེ:\n"
+
+#: ../gdesklets:294
+#, c-format
+msgid "Currently there aren't any desklets in profile \"%s\""
+msgstr "ད་ལྟོ་ གསལ་སྡུད་\"%s\"ནང་ལུ་ཌེཀསི་ལེཊི་ཅིག་ཡང་མིན་འདུག"
+
+#: ../gdesklets:298
+msgid "Restarting gdesklets-daemon..."
+msgstr "ཇི་ཌེཀསི་ལེཊི་ ཌེ་མཱོན་ལོག་འགོ་བཙུགས་དོ་་་་"
+
+#: ../gdesklets:311
+msgid "gdesklets-daemon is running"
+msgstr "ཇི་ཌེཀསི་ལེཊི་ ཌེ་མཱོན་འདི་གཡོག་བཀོལ་དོ་"
+
+#: ../gdesklets:313
+msgid "gdesklets-daemon is not running"
+msgstr "ཇི་ཌེཀསི་ལེཊི་ ཌེ་མཱོན་འདི་གཡོག་མ་བཀོལ་"
+
+#: ../gdesklets:317
+#, c-format
+msgid "Current profile: %s"
+msgstr "ད་ལྟོའི་གསལ་སྡུད:%s"
+
+#: ../gdesklets:328
+#, c-format
+msgid "New profile: %s"
+msgstr "གསལ་སྡུད་གསརཔ:%s"
+
+#: ../gdesklets:331
+#, c-format
+msgid "Available profiles: %s"
+msgstr "འཐོབ་ཚུགས་པའི་གསལ་སྡུད:%s"
+
+#: ../gdesklets:335
+#, c-format
+msgid "This is %s, version %s."
+msgstr "འ་ནི་འདི་%s་ཐོན་རིམ་ %s་ཨིན་"
+
+#: ../gdesklets:363
+msgid "Nothing to slay."
+msgstr "གསད་ནི་ག་ནི་ཡང་མིན་འདུག་"
+
+#: ../gdesklets:387
+msgid "Invalid command. Please try one of the following commands:"
+msgstr "ནུས་མེད་བརྡ་བཀོད། འོག་གི་བརྡ་བཀོད་ཚུ་གི་གྲས་ལས་ཅིག་ལུ་འབད་བརྩོལ་བསྐྱེད་གནང་:"
+
+#: ../gdesklets-daemon:20
+msgid "You need a recent version of PyGTK to run this program.\n"
+msgstr "ཁྱོད་ཀྱིས་ ལས་རིམ་འདི་གཡོག་བཀོལ་ནིའི་དོན་ལུ་ པི་ཝའི་ཇི་ཊི་ཀེ་གི་འཕྲལ་གྱི་ཐོན་རིམ་ཅིག་འགོཔ་འདུག\n"
+
+#: ../gdesklets-daemon:45
+msgid "Could not fork daemon.\n"
+msgstr "ཌེ་མཱོན་ཁ་སྤེལ་མི་ཚུགས།\n"
+
+#: ../gdesklets-daemon:66
+#: ../gdesklets-daemon:86
+#, c-format
+msgid "The following error occurred: %s\n"
+msgstr "འོག་གི་འཛོལ་བ་བྱུང་ཡོད:%s\n"
+
+#: ../libdesklets/convert.py:21
+#, python-format
+msgid "%.2f TB"
+msgstr "%.2f ཊི་བི་"
+
+#: ../libdesklets/convert.py:23
+#, python-format
+msgid "%.2f GB"
+msgstr "%.2f ཇི་བི་"
+
+#: ../libdesklets/convert.py:25
+#, python-format
+msgid "%.2f MB"
+msgstr "%.2f ཨེམ་བི་"
+
+#: ../libdesklets/convert.py:27
+#, python-format
+msgid "%.2f kB"
+msgstr "%.2f ཀེ་བི་"
+
+#: ../libdesklets/convert.py:29
+#, python-format
+msgid "%d B"
+msgstr "%d བི་"
+
+#: ../main/AboutDialog.py:21
+msgid "About gDesklets"
+msgstr "ཇི་ཌེཀསི་ལེཊི་གི་སྐོར་ལས་"
+
+#: ../main/client.py:276
+#, python-format
+msgid "Connecting to daemon [%s]"
+msgstr " ཌེ་མཱོན་[%s] ལུ་མཐུད་དོ་"
+
+#: ../main/client.py:293
+msgid ""
+"Cannot establish connection to daemon: timeout!\n"
+"The log file might help you solving the problem."
+msgstr ""
+"ཌེ་མཱོན་ལུ་འབྲེལ་ལམ་གཞི་འཛུགས་འབད་མི་ཚུགས:ངལ་མཚམས་ཨིན་ན!\n"
+"དྲན་དེབ་ཡིག་སྣོད་དེ་གིས་ དཀའ་ངལ་བསལ་ནི་ལུ་གྲོགས་རམ་འབད་འོང་།"
+
+#: ../main/client.py:299
+#, python-format
+msgid "Connected to daemon in %d microseconds."
+msgstr "%d མའི་ཀོརོ་སྐར་ཆ་གི་ནང་ལུ་ ཌེ་མོན་ལུ་འབྲེལ་མཐུད་འབད་ནུག"
+
+#: ../main/client.py:302
+#, python-format
+msgid "Connected to daemon in %d milliseconds."
+msgstr "%dམི་ལི་སྐར་ཆའི་ནང་ལུ་ ཌེ་མོན་ལུ་འབྲེལ་མཐུད་འབད་ནུག"
+
+#: ../main/__init__.py:69
+#, python-format
+msgid "Version %s"
+msgstr "ཐོན་རིམ་%s"
+
+#: ../main/__init__.py:72
+msgid "Core Programming:"
+msgstr "ནང་སྙིང་ལས་རིམ་བཟོ་ནི:"
+
+#: ../main/__init__.py:76
+msgid "Architecture Design:"
+msgstr "བཟོ་བཀོད་བཀོད་སྒྲིག:"
+
+#: ../main/__init__.py:79
+msgid "GNOME Integration:"
+msgstr "ཇི་ནོམ་མཉམ་སྒྲིལ:"
+
+#: ../main/__init__.py:83
+msgid "Artwork:"
+msgstr "སྒྱུ་རྩལ་ལཱ་གཡོག:"
+
+#: ../main/__init__.py:86
+msgid "Website:"
+msgstr "ཝེབ་ས་ཁོངས:"
+
+#: ../main/__init__.py:89
+msgid "Thank you:"
+msgstr "བཀྲིན་ཆེ་:"
+
+#: ../main/Starter.py:102
+msgid "_Manage desklets"
+msgstr "ཌེཀསི་ལེཊི་ཚུ་འཛིན་སྐྱོང་འཐབ་(_M)"
+
+#: ../main/Starter.py:105
+msgid "_Configuration"
+msgstr "རིམ་སྒྲིག་(_C)"
+
+#: ../main/Starter.py:107
+msgid "_View log"
+msgstr "དྲན་དེབ་སྟོན་(_V)"
+
+#: ../main/Starter.py:110
+#: ../shell/plugins/Help/__init__.py:41
+msgid "_About..."
+msgstr "སྐོར་ལས་་་་(_A)"
+
+#: ../main/Starter.py:113
+msgid "_Stop daemon"
+msgstr "ཌེ་མཱོན་བཀག་བཞག(_S)"
+
+#: ../main/Starter.py:227
+#, python-format
+msgid "Could not open desklet file \"%s\""
+msgstr "ཌེཀསི་ལེཊི་ཡིག་སྣོད་\"%s\" ཁ་ཕྱེ་མི་ཚུགས།"
+
+#: ../main/Starter.py:228
+msgid "The desklet file could not be opened because the file was not readable."
+msgstr "ཌེཀསི་ལེཊི་ཡིག་སྣོད་དེ་ཁ་ཕྱེ་མི་ཚུགས་ ག་ཅི་སྦེ་ཟེར་བ་ཅིན་ ཡིག་སྣོད་དེ་ལྷག་བཏུབ་མི་ཅིག་མེན་པས།"
+
+#. CVS warning :)
+#: ../main/transition.py:42
+msgid ""
+"This is a CVS version of gDesklets. CVS versions represent the current state of development and might be unstable or cause problems from time to time.\n"
+"\n"
+"If you're new to gDesklets, it is thus highly recommended to <b>not</b> use a CVS version, but a stable release!\n"
+"\n"
+"If you still want to run the CVS version instead of a stable release version, we'd highly appreciate it if you report any weird behavior to the developers.\n"
+"\n"
+"Experienced users are encouraged to try a CVS version, though!"
+msgstr ""
+"འ་ནི་འདི་ དེཀསི་ལེཊི་ཚུ་གི་ སི་ཝི་ཨེསི་ དོན་རིམ་ཅིག་ཅིག་ཨིན། སི་ཝི་ཨེསི་ཐོན་རིམ་དེ་གིས་ གོང་འཕེལ་གྱི་ད་ལྟོའི་གནས་ལུགས་དེ་སྟོནམ་ཨིནམ་དང་ རྩ་བརྟན་མི་འོང་ནི་དང་ ཡང་ན་ འཕྲལ་འཕྲལ་སྦེ་རང་ དཀའ་ངལ་འབྱུང་འོང་།\n"
+"\n"
+"ཁྱོད་ཌེགསི་ལེཊི་ལུ་གསརཔ་ཨིན་པ་ཅིན་ རྩ་བརྟན་གསར་བཏོན་འདི་ལགལེན་འཐབ་ནི་མ་གཏོགས་ སི་ཝི་ཨེསི་དོན་རིམ་དེ་ལག་ལེན་<b>མ་འཐབ་</b>ཟེར་འོས་སྦྱོར་འབད་ཡོདཔ་ཨིན་ཡ་!\n"
+"\n"
+"ཁྱོད་ཀྱིས་ད་ལྟོ་ཡང་ རྩ་བརྟན་ཡོད་པའི་གསར་སྟོན་ཐོན་རིམ་དེ་གི་ཚབ་ལུ་ སི་ཝི་ཨེསི་དོན་རིམ་དེ་གཡོག་བཀོལ་ནི་ཨིན་པ་ཅིན་ ཝེརཌི་སྤྱོད་ལམ་དེ་བཟོ་མི་ལུ་སྙན་ཞུ་འབད་བ་ཅིན་ ང་བཅས་ཀྱིས་ངལ་རངས་སྦོམ་ཡོད།\n"
+"\n"
+"ཉམས་མྱོང་ཡོད་མི་ལག་ལེན་པ་ཚུ་ སི་ཝི་ཨེསི་དོན་རིམ་དེ་ལུ་ འབད་བརྩོལ་བསྐྱེད་བཅུག་ནི་ལུ་སེམས་ཤུགས་བསྐྱེད་བཅུགཔ་ཨིན།"
+
+#: ../main/transition.py:54
+msgid ""
+"This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
+"Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
+"This version might break your configuration or it won't restore it from an earlier release. In most cases this is intentional, since gDesklets is still in its early stages of development.\n"
+"\n"
+"Thanks for testing this release candidate!"
+msgstr ""
+"འ་ནི་འདི་ ད་ལྟོ་འོང་ནི་ཨིན་མི་ ཇི་ཌེཀསི་ལེཊི་ གསར་བསྟོན་ཅིག་གི་ <b>གསར་སྟོན་མི་ངོ་ཅིག་ཨིན།\n"
+"འདི་ཞིབ་དཔྱད་འབད་ཞིནམ་ལས་ རྐྱེན་ཚུ་ <i>http://bugzilla.gnome.org</i>ལུ་སྙན་ཞུ་འབད་གནང་།\n"
+"ཐོན་རིམ་འདི་གིས་ ཁྱོད་རའི་རིམ་སྒྲིག་རྒྱུན་ཆད་བཅུག་ནིའི་ཉེན་ཁ་ཡོདཔ་ཨིནམ་དང་ ཡང་ན་ འདི་གིས་ ཧེ་མའི་གསར་སྟོན་ནང་ལས་སོར་འཆུད་མེན་པས།  ཇི་ཌེཀསི་ལེཊི་འདི་ད་ལྟོ་ཡང་ཁོ་རའི་ ཧེ་མའི་གོ་རིམ་གྱི་གོང་འཕེལ་ནང་ལུ་ཡོདཔ་ལས་ གནད་དོན་མང་ཆེ་ཤོས་ཅིག་ནང་ལུ་རང་ འ་ནི་འདི་བསམ་བཞིན་འབདཝ་འབདཝ་ཅིག་ཨིན།\n"
+"\n"
+"གསར་སྟོན་མི་ངོ་འདི་ཞིབ་དཔྱད་འབད་གནང་མི་དེ་ལུ་ བཀྲིན་ཆེ་!"
+
+#. our informative transition message which we can change with
+#. every release
+#: ../main/transition.py:65
+msgid ""
+"This version of gDesklets features the Float mode: press a key and all your desklets will come to front, floating above your applications, until you press that key again!\n"
+"The default keybinding is &lt;Shift&gt; &lt;F12&gt;, but you can easily change that in the configuration dialog.\n"
+"\n"
+"Please note that due to limitations of older X servers, you might see blocks around desklets in Float mode. This cannot be solved in a satisfying way except for switching the X server to real translucency (Xorg 6.8 and above)."
+msgstr ""
+"ཇི་ཌེཀསི་ལེཊི་གི་ཐོད་རིམ་འདི་གིས་ ལྡིང་ནིའི་ཐབས་ལམ་སྟོནམ་ཨིན:ཁྱོད་ཀྱིས་ལྡེ་མིག་ཅིག་ལུ་ཨེབ་པ་ཅིན་ ཁྱོད་རའི་ཌེཀསི་ལེཊིསི་ཚུ་ཆ་མཉམ་རང་ ཁྱོད་ཀྱི་གློག་རིམ་ལྟག་ལས་འཕུར་ལྡིང་འབད་དེ་ ལྡེ་མིག་དེ་ལུ་ལོག་མ་ཨེབ་ཚུན་ཚོད་ གདོང་ཁ་མཐོན་འོང་ཡ!\n"
+"སྔོན་སྒྲིག་ལྡེ་མིག་སྡམ་ཐག་དེ་&lt;Shift&gt; &lt;F12&gt;, ཚུ་ཨིན་ དེ་འབདཝ་ད་ ཁྱདོ་ཀྱིས་དེ་ཚུ་འཇམ་ཏོང་ཏོ་སྦེ་ རིམ་སྒྲིག་ཌའི་ལོག་ལུ་བསྒྱུར་བཅོས་འབད་ཚུགས།\n"
+"\n"
+"ཁྱོད་ཀྱིས་ཤེས་དགོཔ་དེ་ ཨེགསི་སར་བར་རྙིངམ་ཚུ་ཚད་འཛིན་འབད་ནི་དེ་གིས་ ཁྱོད་ཀྱིས་ལྡིང་ནིའི་ཐབས་ལམ་ནང་ལུ་ཡོད་མི་ཌེཀསི་ལེཊི་གི་མཐའ་འཁོར་སྟེ་ སྡེབ་ཚན་ཚུ་མཐོང་འོང་། ཨེགསི་སར་བར་དེ་ ཕྱེད་དྭངས་གསལ་གྱི་རང་བཞིན་ངེ་མ་ལུ་སོར་འསྒྱུར་འབད་ནིའི་དོན་ལུ་མ་གཏོགས་ འདི་ངལ་རངས་ཏོག་ཏོ་སྦེ་རྩ་ལས་རང་དཀའ་ངལ་གསལ་མི་ཚུཁགས།(Xorg ༦.༨ ལས་ལྷག་པའི་)."
+
+#: ../main/transition.py:80
+msgid "Please note (this message will appear only once):"
+msgstr "དྲན་འཛིན་བཀོད་གནང་(ཡིག་འཕྲིན་འདི་གིས་ ཚར་གཅིག་རྐྱངམ་ཅིག་འབྱུང་འོང་):"
+
+#: ../plugin/Interface.py:200
+#: ../plugin/Interface.py:227
+msgid "no description"
+msgstr "འགྲེལ་བཤད་མེད་"
+
+#: ../scripting/Script.py:154
+msgid "Error in add_timer function"
+msgstr "དུས་ཚོད་བཀོད་མི་ཁ་སྐོང་ལས་འགན་དེ་ནང་ལུ་འཛོལ་བ་འདུག(_t)"
+
+#: ../scripting/Script.py:155
+#, python-format
+msgid "\"%s\" isn't a valid integer value!"
+msgstr "\"%s\" འདི་ནུས་ཅན་གྱི་ཧྲིལ་ཨང་གནས་གོང་མེན་ཡ!"
+
+#: ../scripting/Script.py:199
+#, python-format
+msgid "No Control could be found for interface %s"
+msgstr "ངོས་འདྲ་བ་%sགི་དོན་ལུ་ཚད་འཛིན་ཅིག་མི་འཐོབ།"
+
+#: ../scripting/Script.py:201
+msgid "This means that a functionality won't be available during execution!"
+msgstr "འགི་གིས་ ལས་འགན་དེ་ ལག་ལེན་འཐབ་པའི་སྐབས་ལུ་ འཐོབ་མི་ཚུགས་ཡ!"
+
+#: ../scripting/Script.py:241
+msgid "Security Risk"
+msgstr "སྲུང་སྐྱོབ་ཀྱི་ཉེན་ཁ་"
+
+#: ../scripting/Script.py:242
+#, python-format
+msgid ""
+"The desklet %s wants to execute a system command:\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"To protect your system from malicious programs, you can deny the execution of this command.\n"
+"\n"
+"If you are sure that the command is harmless, you may permanently allow this desklet instance to run it."
+msgstr ""
+"ཌེཀསི་ལེཊི་%s དེ་གིས་རིམ་ལུགས་བརྡ་བཀོད་ལགལེན་འཐབ་དགོ་མནོཝ་འདུག:\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"ཁྱོད་རའི་རིམ་ལུགས་དེ་ ངན་སེམས་ཅན་གྱི་ལས་རིམ་ཚུ་ནང་ལས་ཉེན་སྐྱོབ་འབད་ནིའི་དོན་ལུ་ ཁྱོད་ཀྱིས་བརྡ་བཀོད་འདི་གི་ལག་ལེན་དེ་སྣང་སྤང་སྟེ་བཞག་ཚུགས།\n"
+"\n"
+"ཁྱོད་ཀྱིས་བརྡ་བཀོད་དེ་གནོད་པ་མེད་མི་ཅིག་ཨིན་པས་ཟེར་ངེས་གཏན་ཤེས་པ་ཅིན་ ཁྱོད་ཀྱིས་ ཌེཀསི་ལེཊི་དུས་སྐབས་དེ་ རྟག་བརྟན་སྦེ་ གཡོག་བཀོལ་བཅུང་རུང་བཏུབ།"
+
+#: ../scripting/Script.py:255
+msgid "Deny!"
+msgstr "ཉན་མི་བཏུབ་པས་ཡ!"
+
+#: ../scripting/Script.py:256
+msgid "Allow once"
+msgstr "ཚར་གཅིག་བཅུག"
+
+#: ../scripting/Script.py:257
+msgid "Allow for this desklet"
+msgstr "ཌེཀསི་ལེཊི་འདི་གི་དོན་ལུ་བཅུག་"
+
+#: ../Sensors/FontSelector/__init__.py:86
+msgid "Fonts"
+msgstr "ཡིག་གཟུགས་ཚུ་"
+
+#: ../Sensors/FontSelector/__init__.py:87
+msgid "Fonts settings"
+msgstr "ཡིག་གཟུགས་ཚུ་གི་སྒྲིག་སྟངས་"
+
+#: ../Sensors/FontSelector/__init__.py:90
+#, python-format
+msgid "Font #%i:"
+msgstr "ཡིག་གཟུགས་#%i:"
+
+#: ../Sensors/FontSelector/__init__.py:92
+#, python-format
+msgid "Font #%i used in the labels"
+msgstr "ཡིག་གཟུགས་#%i ཁ་ཡིག་ནང་ལུ་ལག་ལེན་འཐབ་ཡོདཔ་"
+
+#: ../Sensors/FontSelector/__init__.py:93
+#, python-format
+msgid "Font color #%i:"
+msgstr "ཡིག་གཟུགས་ཚོས་གཞི་#%i:"
+
+#: ../Sensors/FontSelector/__init__.py:95
+#, python-format
+msgid "Font color #%i used in the labels"
+msgstr "ཡིག་གཟུགས་ཚོས་གཞི་#%i ཁ་ཡིག་ནང་ལུ་ལག་ལེན་འཐབ་ཡོདཔ་"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:16
+#, python-format
+msgid "%s Control"
+msgstr "%s ཚད་འཛིན་"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:55
+msgid "Interface Name"
+msgstr "ངོས་འདྲ་བའི་མིང་"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:58
+msgid "Property Name"
+msgstr "རྒྱུ་དངོས་ཀྱི་མིང་"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:61
+msgid "Property Access"
+msgstr "རྒྱུ་དངོས་འཛུལ་སྤྱོད་འབད་ནི་"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:64
+msgid "Property Description"
+msgstr "རྒྱུ་དངོས་ཀྱི་འགྲེལ་བཤད་"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:27
+msgid "by interface"
+msgstr "ངོས་འདྲ་བ་གིས་"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:28
+#: ../shell/plugins/DisplayBrowser/__init__.py:80
+msgid "alphabetically"
+msgstr "ཀ་ཁའི་གོ་རིམ་བཞིན་"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:72
+#, python-format
+msgid "Found %d controls."
+msgstr "%d ཚད་འཛིན་ཐོབ་ཡོདཔ།"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:75
+#: ../shell/plugins/DisplayBrowser/__init__.py:158
+msgid "Invalid search expression."
+msgstr "ནུས་མེད་འཚོལ་ཞིབ་གསལ་བརྗོད།"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:40
+msgid "R_emove selected desklet"
+msgstr "སེལ་འཐུ་འབད་ཡོད་པའི་ཌེཀསི་ལེཏི་རྩ་བསྐྲད་གཏང་(_e)"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
+msgid "_Run (remote) desklet..."
+msgstr "(ཐག་རིང་གི་)ཌེཀསི་ལེཊི་གཡོག་བཀོལ་་་(_R)"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:45
+msgid "R_un selected desklet"
+msgstr "སེལ་འཐུ་འབད་ཡོད་པའི་ཌེཀསི་ལེཊི་གཡོག་བཀོལ(_u)"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:78
+msgid "by category"
+msgstr "དབྱེ་རིམ་གྱིས་"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:79
+msgid "by author"
+msgstr "རྩོམ་པ་པོ་གིས་"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:130
+msgid "Could not remove"
+msgstr "རྩ་བསྐྲད་གཏང་མ་ཚུགས་"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:131
+msgid "The desklet file could not be removed. This most likely means that you do not have write permission on it."
+msgstr "ཌེཀསི་ལེཊི་ཡིག་སྣོད་དེ་ རྩ་བསྐྲད་གཏང་མི་ཚུགས། དེ་ཡང་ ཁྱོད་གིས་འདིའི་གུ་འབྲི་ནིའི་གནང་བ་མེད་ཟེར་སླབ་པའི་རྟགས་ཨིན།"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:143
+msgid "The desklet will be removed from your system and no longer be available."
+msgstr "ཌེཀསི་ལེཊི་དེ་ ཁྱོད་ཀྱི་རིམ་ལུགས་ནང་ལས་རྩ་བསྐྲད་གཏང་ནི་ཨིནམ་ལས་ ད་ལས་ཕར་འཐོབ་མི་ཚུགས།"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#, python-format
+msgid "Found %d desklets"
+msgstr "%dཌེཀསི་ལེཊི་ཐོབ་ཡོདཔ་"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:177
+msgid "No description available"
+msgstr "འགྲེལ་བཤད་ཅིག་ཡང་མིན་འདུག་"
+
+#: ../shell/plugins/Help/__init__.py:37
+msgid "_Help"
+msgstr "གྲོགས་རམ་(_H)"
+
+#: ../shell/plugins/Help/__init__.py:38
+msgid "_Tip of the Day"
+msgstr "ཉིནམ་དེ་གི་ཕན་བསླབ་(_T)"
+
+#: ../shell/plugins/Help/TipOfTheDay.py:24
+msgid "Tip of the Day"
+msgstr "ཉིནམ་དེ་གི་ཕན་བསླབ་"
+
+#: ../shell/plugins/Help/TipOfTheDay.py:32
+msgid "Show tips at startup"
+msgstr "ཕན་བསླབ་ཚུ་འགོ་བཙུགས་གུ་སྟོན་"
+
+#: ../shell/plugins/Help/tips.py:2
+msgid ""
+"You can find lots of desktop applets for use\n"
+"with gDesklets at\n"
+"\n"
+"http://www.gdesklets.org\n"
+"and\n"
+"http://gdesklets.zencomputer.ca/"
+msgstr ""
+"ཁྱོད་ཀྱིས་ ཇི་ཌེཀསི་ལེཊི་དང་གཅིག་ཁར་ ལག་ལེན་འཐབ་ནིའི་དོན་ལུ་ ཌེཀསི་ཊོབ་ཨེཔ་ལེཊིསི་\n"
+"ལེ་ཤ་རང་འཚོལ་འཐོབ།\n"
+"\n"
+"http://www.gdesklets.org\n"
+"and\n"
+"http://gdesklets.zencomputer.ca/"
+
+#: ../shell/plugins/Help/tips.py:9
+msgid ""
+"You can install new desktop applets easily by\n"
+"dragging the download link for the package\n"
+"from your web browser into the gDesklets Shell."
+msgstr ""
+"ཁྱོད་ཀྱིས་ ཇི་ཌེཀསི་ལེཊི་ཤེལ་དེ་ནང་ལུ་ ཁྱོད་རའི་ཝེབ་བརའུ་ཟར་ནང་ལུ་ཡོད་མི་\n"
+"ཐུམ་སྒྲིལ་དེ་གི་དོན་ལུ་ ཕབ་ལེན་འབྲེལ་ལམ་དེ་འདྲུད་ཞིནམ་ལས་\n"
+"ཁྱདོ་ཀྱིས་འཇམ་ཏོང་ཏོ་སྦེ་ ཌེཀསི་ཊོབ་ཨེཔ་ལེཊིསི་གསརཔ་གཞི་བཙུགས་འབད་ཚུགས།"
+
+#: ../shell/plugins/Help/tips.py:13
+msgid ""
+"Click the right mouse button on a desktop\n"
+"applet or press F10 to open the popup menu."
+msgstr ""
+"གཡས་ཀྱི་མའུསུ་ཨེབ་རྟ་དེ་ ཌེཀསི་ཊོབ་ཨེཔ་ལེཊི་ཅིག་གུ་\n"
+"ཨེབ་གཏང་འབད་ ཡང་ན་ པོཔ་ཨཔ་དཀར་ཆག་དེ་ལག་ལེན་འཐབ་ནིའི་དོན་ལུ་ F10 ཨེབ།"
+
+#: ../shell/plugins/Help/tips.py:16
+msgid ""
+"You can move the applets around the screen\n"
+"by holding down the middle mouse button.\n"
+"\n"
+"If your mouse has only two buttons,\n"
+"hold down both of them simultaneously\n"
+"in order to simulate the middle button."
+msgstr ""
+"ཁྱོད་ཀྱིས་བར་ན་ལུ་ཡོད་མི་ མའུསི་ཨེབ་རྟ་དེ་མར་འཆང་པའི་ཐོག་ལས་\n"
+"ཨེཔ་ལེཊིསི་དེ་གསལ་གཞི་མཐའ་སྐོར་སྟེ་སྤོ་བཤུད་འབད་ཚུགས།\n"
+"\n"
+"ཁྱདོ་ཀྱི་མའུསུ་དེ་ལུ་ ཨེབ་རྟ་གཉིས་ལས་མེད་པ་ཅིན་\n"
+"བར་ན་གི་ཨེབ་རྟ་དེ་ཅོག་མཚུངས་བཟོ་ནིའི་དོན་ལུ་\n"
+"ཁོང་གཉིས་ཆ་རང་ དུས་མཉམ་ལུ་མར་འཆང་བཞག"
+
+#: ../shell/plugins/Help/tips.py:23
+msgid ""
+"You can have different profiles of\n"
+"desktop applets and switch between them.\n"
+"\n"
+"Select \"Profiles->New profile...\" from\n"
+"the menu bar to create new profiles.\n"
+"\n"
+"Empty profiles get discarded automatically."
+msgstr ""
+"ཁྱོད་ཀྱིས་ ཌེཀསི་ཊོབ་ཨེཔ་ལེཊིསི་གི་གསལ་སྡུད་སོ་སོ་འཐོབ་ཚུགས་ནི་ཨིནམ་དང་\n"
+"དེ་ཚུ་གི་བར་ན་ལུ་སོར་བསྒྱུར་འབད་དགོ\n"
+"\n"
+"གསལ་སྡུད་གསརཔ་ཅིག་གསར་བསྐྲུན་འབད་ནིའི་དོན་ལུ་\n"
+"དཀར་ཆག་ཕྲ་རིང་ནངལས་\n"
+"\n"
+" \"Profiles->New profile...\"སེལ་འཐུ་འབད།གསལ་སྡུད་སྟོངམ་ཡོད་མི་ཚུ་ རང་བཞིན་གིས་བཏོན་གཏང་འོང་།"
+
+#: ../shell/plugins/Help/tips.py:31
+msgid ""
+"The search bar accepts complex search\n"
+"expressions for finding your applets."
+msgstr ""
+"འཚོལ་ཞིབ་ཕྲ་རིང་དེ་གིས་ ཁྱོད་རའི་ཨེཔ་ལེཊིསི་འཚོལ་ནིའི་དོན་ལུ་\n"
+"གོ་དཀའ་བའི་འཚོལ་ཞིབ་དེ་དང་ལེན་འབདཝ་ཨིན།"
+
+#: ../shell/plugins/Help/tips.py:34
+msgid ""
+"Search expressions may contain wildcards:\n"
+"\n"
+" ? matches any one character\n"
+" * matches zero or more characters"
+msgstr ""
+"འཚོལ་ཞིབ་གསལ་བརྗོད་ནང་ལུ་ཝའིལི་ཌི་ ཤོག་བྱང་འོང་:\n"
+"\n"
+" ? ཡིག་འབྲུ་གང་རུང་ཅིག་ལུ་མཐུན་སྒྲིག་འོངམ་ཨིན་\n"
+" * ཀླད་ཀོར་་དང་ ཡང་ན་ དེ་ལས་ལྷག་པའི་ཡིག་འབྲུ་དང་མཐུན་སྒྲིག་འོངམ་ཨིན།"
+
+#: ../shell/plugins/Help/tips.py:39
+msgid ""
+"Have a good idea for a desklet?\n"
+"Write your own!  See the Developer's\n"
+"book for more details."
+msgstr ""
+"ཌེཀསི་ལེཊི་ཅིག་གི་དོན་ལུ་ གནས་སྐབས་ལེགས་ཤོམ་ཅིག་ཡོད་ག?\n"
+"ཁྱོད་རང་གིས་བྲིས!  ཁ་གསལ་གྱི་དོན་ལུ་\n"
+"བཟོ་མི་ལུ་བལྟ།"
+
+#: ../shell/plugins/PackageInstaller/Downloader.py:29
+msgid "Retrieving:"
+msgstr "ལོག་ལེན་དོ:"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:26
+msgid "I_nstall remote package..."
+msgstr "ཐག་རིང་གི་ཐུམ་སྒྲིལ་གཞི་བཙུགས་འབད་་་་(_n)"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:27
+msgid "_Install package..."
+msgstr " ཐུམ་སྒྲིལ་གཞི་བཙུགསའབད་་་(_I)"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:97
+msgid "Invalid package"
+msgstr "ནུས་མེད་ཐུམ་སྒྲིལ་"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:98
+msgid "The supplied file could not be opened as a package. It is either corrupted or not of the correct file type."
+msgstr "བཀྲམ་སྤེལ་འབད་ཡོད་པའི་ཡིག་སྣོད་དེ་ཐུམ་སྒྲིས་སྦེ་ཁ་ཕྱེ་བཞག་མི་བཏུབ། འདི་ངན་ཅན་ཅིག་ཨིན་ ཡང་ན་ ཡིག་སྣོད་ངེས་བདེན་ཅིག་མེན་པས།"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:115
+msgid "Installation failed"
+msgstr "གཞི་བཙུགས་འཐུས་ཤོར་བྱུང་ནུག་"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:116
+msgid "The package could not be installed because it contained no installable files."
+msgstr "ཐུམ་སྒྲིལ་འདི་གཞི་བཙུགས་འབད་མི་བཏུབ་ ག་ཅི་སྨོ་ཟེར་བ་ཅིན་འདི་ནང་ལུ་ གཞི་བཙུགས་འབད་བཏུབ་པའི་ཡིག་སྣོད་ཚུ་འདུག"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:119
+msgid "Installation complete"
+msgstr "གཞི་བཙུགས་བསྡུ་"
+
+#: ../shell/plugins/Profiles/__init__.py:18
+msgid "_Profiles"
+msgstr "གསལ་སྡུད་ཚུ་(_P)"
+
+#: ../shell/plugins/Profiles/__init__.py:20
+msgid "New profile..."
+msgstr "གསལ་སྡུད་གསརཔ་་་་"
+
+#: ../shell/plugins/Profiles/__init__.py:75
+msgid "New profile"
+msgstr "གསལ་སྡུད་གསརཔ་"
+
+#: ../shell/plugins/Profiles/__init__.py:76
+msgid "Enter the name for a new profile"
+msgstr "གསལ་སྡུད་གསརཔ་གི་དོན་ལས་ མིང་ཅིག་བཙུགས་"
+
+#: ../shell/plugins/Shell/__init__.py:62
+msgid "_File"
+msgstr "ཡིག་སྣོད་(_F)"
+
+#: ../shell/SearchBar.py:20
+msgid "Search"
+msgstr "འཚོལ་ཞིབ་"
+
+#: ../utils/dialog.py:46
+#, python-format
+msgid "_Details (%d lines)"
+msgstr "རྒྱས་བཤད་ (%d གྲལ་ཐིག་ཚུ་)(_D)"
+
+#: ../utils/dialog.py:194
+msgid "_Ignore errors from this desklet"
+msgstr "ཌེཀསི་འདི་ནང་ལས་ འཛོལ་བ་སྣང་མེད་བཞག་(_I)"
+
+#: ../utils/DOM.py:32
+msgid "An invalid graphics code was loaded into a canvas."
+msgstr "ནུས་མེད་ཚད་རིས་ཅིག་ འབྲི་གཞི་ཅིག་གུ་ཕབ་ལེན་འབད་ཡོདཔ་ཨིན།"
+
+#: ../utils/DOM.py:153
+#, python-format
+msgid "No such element: %s"
+msgstr "འདི་བཟུམ་མའི་རྒྱུ་རྫས་མེད:%s"
+
+#: ../utils/DOM.py:154
+#, python-format
+msgid "The element with ID <b>%s</b> does not exist in the SVG image."
+msgstr "ཨའི་ཌི་<b>%s</b དང་གཅིག་ཁར་ཡོད་མི་རྒྱུ་རྫས་དེ་ ཨེསི་ཝི་ཇི་གཟུགས་བརྙན་ནང་ལུ་མེད།"
+
+#: ../utils/DOM.py:182
+#: ../utils/Element.py:91
+#, python-format
+msgid "No such property: %s"
+msgstr "འདི་བཟུམ་མའི་རྒྱུ་དངོས་མེད:%s"
+
+#: ../utils/DOM.py:183
+#, python-format
+msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
+msgstr "ཨེསི་ཝི་ཇི་རྒྱུ་རྫས་<b>%s</b> དེ་ལུ་རྒྱུ་དངོས་<b>%s</b>མིན་འདུག"
+
+#: ../utils/Element.py:92
+#, python-format
+msgid "The element <b>%s</b> does not have the <b>%s</b> property."
+msgstr "རྒྱུ་རྫས་<b>%s</b> དེ་ལུ་རྒྱུ་དངོས་<b>%s</b> མིན་འདུག"
+
+#: ../utils/Element.py:96
+#: ../utils/Element.py:126
+msgid "Permission Error"
+msgstr "གནང་བ་འགྲོལ་ནི་ལུ་འཛོལ་བ་"
+
+#: ../utils/Element.py:97
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
+msgstr "རྒྱུ་རྫས་ཀྱི་<b>%s</b> རྒྱུ་དངོས་ <b>%s</b> འདི་འབྲི་བཏུབ་མི་མེན་པས།"
+
+#: ../utils/Element.py:105
+msgid "Type Error"
+msgstr "ཡིག་དཔར་འཛོལ་བ་"
+
+#: ../utils/Element.py:106
+#, python-format
+msgid ""
+"The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
+"Expected <b>%s</b>, but got <b>%s</b>."
+msgstr ""
+"རྒྱུ་རྫས་ཀྱི་ <b>%s</b> རྒྱུ་དངོས་ <b>%s</b> གནས་གོང་འཛོལ་བ་ཅིག་འཐོབ་ནུག\n"
+"རེ་འདུན་ཡོདཔ་<b>%s</b>, དེ་འབདཝ་ད་<b>%s</b>འཐོབ་ཅི།"
+
+#: ../utils/Element.py:127
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
+msgstr "རྒྱུ་རྫས་ཀྱི་་<b>%s</b> རྒྱུ་དངོས་འདི་ <b>%s</b> ལྷག་མི་བཏུབ་པས།"
+
+#: ../utils/error.py:158
+msgid "Runtime Error"
+msgstr " རཱན་ཊའིམ་འཛོལ་བ་"
+
+#: ../utils/error.py:160
+msgid "An error occurred while executing a desklet."
+msgstr "ཌེཀསི་ལེཊི་འདི་ལག་ལེན་འཐབ་པའི་སྐབས་ལུ་ འཛོལ་བ་བྱུང་ནུག"
+

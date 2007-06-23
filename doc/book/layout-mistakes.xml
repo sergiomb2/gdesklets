@@ -1,0 +1,84 @@
+<section id="layout-mistakes" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Avoid Common Mistakes</title>
+
+  <para>The layouting model used by <application>gDesklets</application> is based
+  on nesting boxes. While this approach is highly flexible, yet easy to understand,
+  there can be cases where the result might not look as expected. This section tries
+  to explain some common mistakes and show why the result does look as it looks.</para>
+  
+
+
+<section><title>Containers Collapse</title>
+
+  <para>If you don't explicity specify a size for a container element, it will
+    just take up as much space as its child elements need. An empty container
+    will thus collapse to the size of a single point.</para>
+    
+  <para>A common mistake is to put only elements with percentual geometry values
+    into a container. A child element with any percentual geometry value does
+    <emph>not</emph> contribute to the container's size because its size or
+    position itself is dependant on the container's size.</para>
+    
+  <para>With older versions of <application>gDesklets</application> the results
+    of such a situation were undefined. With version 0.35,
+    <application>gDesklets</application> switched to a more accurate geometry
+    engine, and the container will collapse correctly.</para>
+    
+</section>
+
+
+
+<section><title>Percentual Size</title>
+
+  <para>Elements with their size given in percentages depend on the size of their
+    parent container. A common mistake is to have a child's size depend on the size
+    of a container which has no defined size, for example:</para>
+    
+  <programlisting><![CDATA[
+  <display width="100" height="100">
+  
+    <frame>
+      
+      <group width="100%" height="100%" bg-color="white"/>
+      
+    </frame>
+  
+  </display>
+  ]]></programlisting>
+
+  <para>As you can seem the <command>group</command> element has it's size
+    depend on the size of the <command>frame</command> container. This container,
+    however, has no defined size. In that case it will collapse to fit its child
+    elements. However, since the child element itself depends on the size of the
+    container, the <command>frame</command> will collapse to a single point
+    (see above).</para>
+    
+  <para>To make the <command>group</command> within the <command>frame</command>
+    occupy the whole window area, the <command>frame</command> also needs to
+    be stretched to the window size:</para>
+
+  <programlisting><![CDATA[
+  <display width="100" height="100">
+  
+    <frame width="100%" height="100%">
+      
+      <group width="100%" height="100%" bg-color="white"/>
+      
+    </frame>
+  
+  </display>
+  ]]></programlisting>
+          
+</section>
+
+
+<section><title>Relative Positioning</title>
+
+  <para>Elements placed relatively to each other have to be in the same parent
+    container. If this is not the case, it depends on the version of
+    <application>gDesklets</application> whether this will raise an error or be
+    silently ignored altogether.</para>
+
+</section>
+
+</section>

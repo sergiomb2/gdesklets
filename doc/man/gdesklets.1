@@ -1,0 +1,194 @@
+.\" Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH gdesklets "1" "August 14, 2004"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+\fBgDesklets\fR \- provides an advanced architecture for desktop applets 
+
+.SH SYNOPSIS
+.B gdesklets 
+[ display ]
+
+.SH DESCRIPTION
+.B gDesklets
+provides an advanced architecture for desktop applets -- tiny displays sitting 
+on your desktop in a symbiotic relationship of eye candy and usefulness.
+.PP
+Populate your desktop with status meters, icon bars, weather sensors, 
+news tickers... whatever you can imagine! Virtually anything is possible 
+and maybe even available some day. 
+
+.SH MIGRATING FROM AN OLDER VERSION
+\fBgDesklets 0.30\fR uses a slightly different way of storing configuration.
+If you want to keep your old configuration, you have to run the
+\fBmigration-tool\fR:
+
+.B $ migration-tool
+
+Many thanks to Dave Masterson for writing this handy wizard!
+
+.SH FIRST START
+You can find an entry in the GNOME menu after a successful installation. 
+This will start the gDesklets Shell where you can install and run desktop
+applets. When you log out or quit 'gDesklets', the settings will be remembered 
+for the next session.
+
+.SH COMMAND LINE TOOL
+The command line tool \fBgdesklets\fR lets you perform all administration tasks
+from the command line.
+
+Display files can be opened using
+
+.B $ gdesklets open <displayfile>
+
+If the gdesklets-daemon wasn't running, this will start up the daemon as
+well. You can only have one daemon per X-display. The daemon can be stopped
+again by calling
+
+.B $ gdesklets stop
+
+
+Usage of the command line frontend:
+
+.B gdesklets [option] <command> [arguments...]
+
+  <command>: open <files>      (Opens the given display files)
+             start             (Runs the gDesklets daemon)
+             stop              (Stops the gDesklets daemon)
+             list              (Lists open displays)
+             restart           (Restarts the gDesklets daemon)
+             profile <profile> (Switches to the given profile)
+             profile           (Shows the current and the available
+                                profiles)
+             shell             (Opens the graphical shell)
+             slay              (Kills the daemon -- use in emergency)
+             about             (Prints information about gDesklets)
+             version           (Prints gDesklets version)
+             help              (Displays this text)
+
+    [option]: --translucent (Enables translucency on the
+                             freedesktop.org XServer)
+
+  The \fB--translucent\fR option is still in an experimental state, though.
+  It may or may not work as expected.
+
+.SH GDESKLETS-SHELL
+The shell is a graphical frontend for managing your desklets. You can start
+it either by selecting it from the GNOME menu (Accessories -> gDesklets),
+by selecting it from the tray icon popup menu, or by calling:
+
+.B $ gdesklets shell
+
+The shell currently lets you create and switch between profiles, install new
+desklets and search for desklets. New desklets can be installed by dragging
+links from your web browser or files from the file manager into its window,
+or by selecting the menu item \fB"File -> Install package..."\fR.
+
+.PP
+Displays (as we call the applets) will usually appear in the top left corner of 
+your screen when you first run them. You can move displays around by pressing 
+and holding down the middle mouse button. 'gDesklets' will remember the new 
+position of the display for the future.
+
+.SH USAGE
+If you press the right mouse button over a display, a popup menu will open. 
+It depends on the display what you will see there, but the following items are 
+always available:
+.PP
+.HP
+\fBConfigure display\fR
+.IP
+Opens the configuration dialog for this display. It depends on the display what 
+you can configure.
+.HP                                   
+\fBRestart display\fR
+.IP
+Restarts this display. This menu item is mainly for sensor debugging.
+.HP
+\fBRemove display\fR
+.IP
+Removes this display from your desktop.
+
+.SH COMMUNITY
+
+The site 'http://gdesklets.gnomedesktop.org' is the place where you can
+get new desklets or upload your own creations for sharing them with other
+users.
+.PP
+The site 'http://gnomesupport.org/forums/viewforum.php?f=23' is the 
+official \fBgDesklets\fR' 'Discussion Forum' where you can get help.
+.PP
+You can meet the \fBgDesklets\fR developers and other fans on the IRC channel
+#gdesklets on GIMPnet (irc.gimp.org).
+
+.SH AUTHOR
+.B gDesklets
+was written by 
+.PP
+  * Martin Grimme <martin@pycage.de>.
+.PP
+  * Christian Meyer <chrisime@gnome-de.org>.
+.PP
+  * Jesse Andrews <jdandr2@cs.uky.edu>.
+.PP
+
+.SH THANKS
+I'd like to thank all people who supported (and are still supporting) me so 
+well with 'gDesklets'. Please complain if I forgot you... ;)
+.PP
+  * Christian Meyer -- ideas and sensor programming
+.PP
+  * Jesse Andrews -- sensor programming
+.PP
+  * Johannes "Waldgeist" Rebhan -- artwork
+.PP
+  * Christian Neumair -- installation
+.PP
+  * Sebastien Bacher -- man page and lots of other stuff
+.PP
+  * Luke Stroven -- gdesklets.gnomedesktop.org and 'gDesklets' forum
+.PP
+  * James Henstridge -- excellent GTK bindings for Python
+
+.SH BUGS
+
+If you encounter bugs which are not listed here, please post a bug report at 
+bugzilla.gnome.org for \fBgDesklets\fR.
+.PP
+  * some versions of sawfish show displays with the 'below' flag set above
+    other windows; this is a bug in sawfish; go complain there :)
+.PP
+  * some buggy versions of 'nautilus' can cause 'gDesklets' to crash when the
+    desktop background is being changed
+.PP
+  * transparency might be broken on Xinerama displays; we do not have Xinerama
+    and thus cannot test it. If you want to help testing, please drop us a mail
+
+.SH LICENCE AND DISCLAIMER
+
+.PP
+This software is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTIBILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the file 'COPYING' for more details.
+.PP
+You should have received a copy of the GNU General Public License along with 
+this software; if not, write to the 
+.PP
+Free Software Foundation, Inc., 59 Temple Place, Suite 390, Boston,
+MA  02111-1307  USA
+.PP
+This software is provided "as is" and the author is not and cannot be made
+responsible for any damage resulting from the use of this software.

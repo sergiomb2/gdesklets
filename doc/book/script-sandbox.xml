@@ -1,0 +1,18 @@
+<section id="script-sandbox" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Sandboxed Execution</title>
+
+  <para>Inline scripts are automatically executed when found in a display.
+    Because <application>gDesklets</application> can load displays from remote
+    locations as well, special care was taken to protect the user by running
+    the code in a sandboxed environment.</para>
+
+  <para>This, however, has the effect that the capabilities of scripting
+    code are limited to modifying the elements of the display. There is no
+    way to read or modify data on the system.</para>
+
+  <para>If there is need for such actions, you have to use
+    <emphasize>controls</emphasize>, which provide a controlled way to access
+    data outside the sandbox. The use of controls is explained in
+    <link linkend="ctrl">another chapter.</link></para>
+
+</section>

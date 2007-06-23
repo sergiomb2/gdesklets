@@ -1,0 +1,1012 @@
+# traditional Chinese translation of gdesklets.
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gdesklets 0.35.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-01-21 02:28+0100\n"
+"PO-Revision-Date: 2006-01-21 16:13+0800\n"
+"Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
+"Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../config/ConfigDialog.py:103
+msgid "Invalid Function Call"
+msgstr "無效的函式呼叫"
+
+#: ../config/ConfigDialog.py:104
+#, python-format
+msgid ""
+"There is no function called <b>%s</b>.\n"
+"This means that there's an error in the desklet's code. You should inform the author of the desklet about this problem."
+msgstr ""
+"沒有名為 <b>%s</b> 的函式。\n"
+"這代表在桌面小程式的程式碼中含有錯誤。您應該通知該桌面小程式的作者這個問題。"
+
+#: ../config/ConfigDialog.py:217
+#: ../display/DisplayConfigurator.py:32
+msgid "This desklet is not configurable."
+msgstr "無法設定這個桌面小程式。"
+
+#: ../config/ConfigUnit.py:57
+msgid "pixel"
+msgstr "像素"
+
+#: ../config/ConfigUnit.py:58
+msgid "point"
+msgstr "點"
+
+#: ../config/ConfigUnit.py:59
+msgid "cm"
+msgstr "公分"
+
+#: ../config/ConfigUnit.py:60
+msgid "inch"
+msgstr "英吋"
+
+#: ../config/DaemonConfigger.py:17
+msgid "Editor to view/edit the desklet source code"
+msgstr "用來檢視/編輯 desklet 原始碼的編輯器"
+
+#: ../config/DaemonConfigger.py:18
+msgid "Your favorite editor"
+msgstr "您喜愛的編輯器"
+
+#: ../config/DaemonConfigger.py:20
+msgid "XComposite support (requires composition manager)"
+msgstr "XComposite 支援（需要構成管理程式）"
+
+#: ../config/DaemonConfigger.py:21
+msgid ""
+"\n"
+"     <small><i>"
+msgstr ""
+"\n"
+"     <small><i>"
+
+#: ../config/DaemonConfigger.py:22
+msgid "this does not work with GTK 2.8 or higher for technical reasons"
+msgstr "基於技術問題無法在 GTK 2.8 或更高的版本運作"
+
+#: ../config/DaemonConfigger.py:23
+msgid "</i></small>"
+msgstr "</i></small>"
+
+#: ../config/DaemonConfigger.py:24
+msgid "Translucency (takes effect after restarting a display)"
+msgstr "半透明（在重新啟動畫面後才會生效）"
+
+#: ../config/DaemonConfigger.py:26
+msgid "Screen Resolution (DPI)"
+msgstr "螢幕解析度 (DPI)"
+
+#: ../config/DaemonConfigger.py:28
+msgid "Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97\"</b> wide"
+msgstr "調整上面數值使此列變成 <b>5 cm</b> 或 <b>1.97\"</b> 寬"
+
+#: ../config/DaemonConfigger.py:32
+msgid "Behavior"
+msgstr "行為"
+
+#: ../config/DaemonConfigger.py:33
+msgid "Show _tray icon (takes effect after restart)"
+msgstr "顯示系統匣圖示（重新啟動後才生效）(_T)"
+
+#: ../config/DaemonConfigger.py:35
+msgid "Show _notification while loading a desklet"
+msgstr "在載入 desklet 時顯示通知(_N)"
+
+#: ../config/DaemonConfigger.py:37
+msgid "Key for toggling Float mode:"
+msgstr "切換浮動模式的鍵值:"
+
+#: ../config/DaemonConfigger.py:49
+#: ../config/DisplayConfigger.py:27
+#: ../display/DisplayConfigurator.py:16
+msgid "Configuration"
+msgstr "組態"
+
+#: ../data/gdesklets.desktop.in.h:1
+#: ../main/__init__.py:74
+msgid "A desktop applet system for GNOME"
+msgstr "GNOME 桌面面板程式系統"
+
+#: ../data/gdesklets.xml.in.h:1
+msgid "gDesklets display"
+msgstr "gDesklets 畫面"
+
+#: ../display/Display.py:84
+msgid "_Configure desklet"
+msgstr "設定桌面小程式(_C)"
+
+#: ../display/Display.py:86
+msgid "_Move desklet"
+msgstr "移動桌面小程式(_M)"
+
+#: ../display/Display.py:89
+msgid "_View Source"
+msgstr "檢視來源(_V)"
+
+#: ../display/Display.py:92
+msgid "Re_start desklet"
+msgstr "重新啟動桌面小程式(_S)"
+
+#: ../display/Display.py:94
+msgid "_Remove desklet"
+msgstr "移除桌面小程式(_R)"
+
+#: ../display/Display.py:982
+#: ../shell/plugins/DisplayBrowser/__init__.py:142
+msgid "Do you really want to remove this desklet ?"
+msgstr "您確定要移除這個桌面小程式？"
+
+#: ../display/Display.py:983
+msgid "This desklet will no longer be displayed and its configuration will be purged."
+msgstr "此桌面小程式將不再被顯示而它的組態也會被清除。"
+
+#: ../display/DisplayTarget.py:417
+#, python-format
+msgid "Element \"%s\" does not exist"
+msgstr "元素「%s」不存在"
+
+#: ../display/DisplayTarget.py:418
+msgid "The <tt>relative-to</tt> property requires a reference to an existing display element within the same parent container."
+msgstr "<tt>relative-to</tt> 屬性需要在同樣父容器中已存在畫面的參考。"
+
+#: ../display/targetregistry.py:52
+#, python-format
+msgid "Unknown element <b>&lt;%s&gt;</b>"
+msgstr "未知的元素 <b>&lt;%s&gt;</b>"
+
+#: ../display/targetregistry.py:53
+msgid "Either there is a typo in the .display file or you have an incompatible version of gDesklets."
+msgstr "可能是 .display 檔案中有排版上的錯誤或者是您的 gDesklets 版本不相容。"
+
+#: ../factory/DisplayFactory.py:89
+#: ../utils/DOM.py:31
+msgid "XML parse error"
+msgstr "XML 解析錯誤"
+
+#: ../factory/DisplayFactory.py:90
+msgid "This .display file has invalid XML syntax."
+msgstr "這個 .display 檔案包含了無效的 XML 語法。"
+
+#: ../factory/DisplayFactory.py:208
+msgid "File doesn't exist or couldn't be loaded"
+msgstr "檔案不存在或無法讀取"
+
+#: ../factory/DisplayFactory.py:210
+msgid "A file which contains a script isn't available for further execution."
+msgstr "檔案包含的命令稿無法用於往後的執行。"
+
+#: ../factory/DisplayFactory.py:233
+msgid "Could not load sensor"
+msgstr "無法載入偵測器"
+
+#: ../factory/DisplayFactory.py:249
+#, python-format
+msgid "&lt;%s&gt; needs a bind attribute"
+msgstr "&lt;%s&gt; 需要 bind 屬性"
+
+#: ../factory/DisplayFactory.py:251
+msgid "The &lt;prefs&gt; section of this desklet file is broken."
+msgstr "此桌面程式檔案的 &lt;prefs&gt; 部分已損壞。"
+
+#: ../factory/SensorFactory.py:75
+#, python-format
+msgid "Could not find sensor '%(name)s'"
+msgstr "找不到偵測器 '%(name)s'"
+
+#: ../factory/SensorFactory.py:76
+msgid "A sensor could not be found. This usually means that it has not been installed."
+msgstr "找不到偵測器。這通常代表尚未安裝該偵測器。"
+
+#: ../gdesklets:29
+msgid "You must NOT run gDesklets as super user (root)."
+msgstr "您不能以超級使用者(root)身分執行 gDesklets。"
+
+#: ../gdesklets:43
+msgid "Checking requirements:"
+msgstr "檢查所需要件："
+
+#: ../gdesklets:47
+msgid "Python version => 2.3.0 is required."
+msgstr "需要 Python 版本 => 2.3.0。"
+
+#: ../gdesklets:51
+msgid "libexpat version 1.95.7 is broken. Please upgrade!"
+msgstr "libexpat 1.95.7 版已不適用。請升級！"
+
+#: ../gdesklets:54
+msgid "SAX parser is required, some SuSE versions ship without it."
+msgstr "需要 SAX 解析器，某些 SuSE 版本並未安裝它。"
+
+#: ../gdesklets:58
+msgid "GTK python bindings (pygtk2) version >= 2.4.0 and GTK+ version >= 2.4.0 are required."
+msgstr "需要 GTK python bindings (pygtk2) 版本 >= 2.4.0 與 GTK+ 版本 >= 2.4.0 。"
+
+#: ../gdesklets:62
+msgid "ORBit python bindings (pyorbit) version == 2.0.1 are required."
+msgstr "需要 ORBit python 繫結 (pyorbit) 版本 == 2.0.1 。"
+
+#: ../gdesklets:65
+msgid "bonobo python bindings are required."
+msgstr "需要 bonobo python 繫結 。"
+
+#: ../gdesklets:74
+msgid "found"
+msgstr "找到"
+
+#: ../gdesklets:78
+msgid "missing"
+msgstr "遺失"
+
+#: ../gdesklets:84
+msgid "Version check failed."
+msgstr "版本檢查失敗。"
+
+#: ../gdesklets:85
+#, c-format
+msgid ""
+"\n"
+"%s\n"
+msgstr ""
+"\n"
+"%s\n"
+
+#: ../gdesklets:86
+msgid ""
+"Please make sure that the required software is installed.\n"
+"Also try to avoid having multiple versions of a library/binding on your system.\n"
+"gDesklets won't work if you don't have all necessary dependencies installed\n"
+"on your system.\n"
+"\n"
+"THE STARTUP WILL BE CANCELLED NOW!\n"
+msgstr ""
+"請確定需要的軟體都已經安裝。\n"
+"同時請避免在您的系統上同時安裝多個版本的程式庫/繫結。\n"
+"如果您的系統中沒有安裝所有相依套件，gDesklets \n"
+"將無法運作。\n"
+"\n"
+"現在此次啟動程序將被取消！\n"
+
+#: ../gdesklets:102
+msgid ""
+"\n"
+"You're running gDesklets for the first time.\n"
+"gDesklets will start a requirements check now...\n"
+msgstr ""
+"\n"
+"您是第一次使用 gDesklets 。\n"
+"gDesklets 現在將會開始檢查各項要件...\n"
+
+#: ../gdesklets:113
+msgid ""
+"Usage: gdesklets [option] <command> [arguments...]\n"
+"\n"
+"\t<command>\n"
+"\t\topen    <files>   (Opens the given desklet files)\n"
+"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
+"\t\tstop              (Stops the gDesklets daemon)\n"
+"\t\tlist              (Lists open desklets)\n"
+"\t\trestart           (Restarts the gDesklets daemon)\n"
+"\t\tprofile <profile> (Switches to the given profile)\n"
+"\t\tprofile           (Shows the current and the available profiles)\n"
+"\t\tshell             (Opens the graphical shell)\n"
+"\t\tslay              (Kills the daemon -- use in emergency)\n"
+"\t\tstatus            (Checks daemon status)\n"
+"\t\tabout             (Prints information about gDesklets)\n"
+"\t\tversion           (Prints gDesklets version)\n"
+"\t\tconfigure         (Opens the configuration dialog)\n"
+"\t\thelp              (Displays this text)\n"
+"\t\tcheck             (Checks requirements)\n"
+"\n"
+"\t[option]\n"
+"\t\t--no-tray-icon    (disables the systray icon)\n"
+"\t\t--translucent     (enables translucency on the xorg servers)\n"
+msgstr ""
+"使用法： gdesklets [選項] <指令> [引數...]\n"
+"\n"
+"\t<指令>\n"
+"\t\topen    <檔案>   (開啟指定的桌面小程式檔案)\n"
+"\t\tstart             (執行 gDesklets 伺服程式，此為預設值)\n"
+"\t\tstop              (停止 gDesklets  伺服程式)\n"
+"\t\tlist              (列出開啟的桌面小程式)\n"
+"\t\trestart           (重新啟動 gDesklets 伺服程式)\n"
+"\t\tprofile <設定組合> (切換為指定的設定組合)\n"
+"\t\tprofile           (顯示目前的與所有可用的設定組合)\n"
+"\t\tshell             (開啟圖形化系統殼)\n"
+"\t\tslay              (終結伺服程式 -- 用於緊急狀況)\n"
+"\t\tstatus            (檢查伺服程式狀態)\n"
+"\t\tabout             (列出 gDesklets 相關資訊)\n"
+"\t\tversion           (列出 gDesklets 版本)\n"
+"\t\tconfigure         (開啟組態對話盒)\n"
+"\t\thelp              (顯示本段文字)\n"
+"\t\tcheck             (檢查所需要件)\n"
+"\n"
+"\t[選項]\n"
+"\t\t--no-tray-icon    (停用系統匣圖示)\n"
+"\t\t--translucent     (啟用 xorg 伺服器的透明功能)\n"
+
+#: ../gdesklets:186
+#: ../gdesklets:260
+#, c-format
+msgid "Could not open desklet %s."
+msgstr "無法開啟桌面小程式 %s。"
+
+#: ../gdesklets:268
+msgid "Starting gdesklets-daemon..."
+msgstr "啟動 gdesklets-daemon..."
+
+#: ../gdesklets:274
+msgid "Shutting down gdesklets-daemon..."
+msgstr "關閉 gdesklets-daemon..."
+
+#: ../gdesklets:286
+#, c-format
+msgid "Currently open displays in profile \"%s\":\n"
+msgstr "目前設定組合“%s”中開啟的畫面：\n"
+
+#: ../gdesklets:291
+#, c-format
+msgid "Currently there aren't any desklets in profile \"%s\""
+msgstr "目前設定組合“%s”中沒有任何桌面小程式"
+
+#: ../gdesklets:295
+msgid "Restarting gdesklets-daemon..."
+msgstr "重新啟動 gdesklets-daemon..."
+
+#: ../gdesklets:308
+msgid "gdesklets-daemon is running"
+msgstr "gdesklets-daemon 目前正在執行"
+
+#: ../gdesklets:310
+msgid "gdesklets-daemon is not running"
+msgstr "gdesklets-daemon 沒有在執行"
+
+#: ../gdesklets:314
+#, c-format
+msgid "Current profile: %s"
+msgstr "目前的設定組合：%s"
+
+#: ../gdesklets:325
+#, c-format
+msgid "New profile: %s"
+msgstr "新設定組合：%s"
+
+#: ../gdesklets:328
+#, c-format
+msgid "Available profiles: %s"
+msgstr "可用的設定組合：%s"
+
+#: ../gdesklets:332
+#, c-format
+msgid "This is %s, version %s."
+msgstr "這是 %s，版本 %s。"
+
+#: ../gdesklets:360
+msgid "Nothing to slay."
+msgstr "沒有東西可關閉。"
+
+#: ../gdesklets:385
+msgid "Invalid command. Please try one of the following commands:"
+msgstr "無效的指令。請嘗試下列指令："
+
+#: ../gdesklets-daemon:20
+msgid "You need a recent version of PyGTK to run this program.\n"
+msgstr "您需要最新版本的 PyGTK 才能執行此程式。\n"
+
+#: ../gdesklets-daemon:48
+msgid "Could not fork daemon.\n"
+msgstr "無法岔斷伺服程式。\n"
+
+#: ../gdesklets-daemon:69
+#: ../gdesklets-daemon:89
+#, c-format
+msgid "The following error occurred: %s\n"
+msgstr "下列錯誤產生：%s\n"
+
+#: ../libdesklets/convert.py:21
+#, python-format
+msgid "%.2f TB"
+msgstr "%.2f TB"
+
+#: ../libdesklets/convert.py:23
+#, python-format
+msgid "%.2f GB"
+msgstr "%.2f GB"
+
+#: ../libdesklets/convert.py:25
+#, python-format
+msgid "%.2f MB"
+msgstr "%.2f MB"
+
+#: ../libdesklets/convert.py:27
+#, python-format
+msgid "%.2f kB"
+msgstr "%.2f kB"
+
+#: ../libdesklets/convert.py:29
+#, python-format
+msgid "%d B"
+msgstr "%d B"
+
+#: ../main/AboutDialog.py:21
+msgid "About gDesklets"
+msgstr "關於 gDesklets"
+
+#: ../main/client.py:283
+#, python-format
+msgid "Connecting to daemon [%s]"
+msgstr "連線至伺服程式 [%s]"
+
+#: ../main/client.py:300
+msgid ""
+"Cannot establish connection to daemon: timeout!\n"
+"The log file might help you solving the problem."
+msgstr ""
+"不能建立與伺服程式間的連線：連線逾時！\n"
+"紀錄檔可能有助於您解決這個問題。"
+
+#: ../main/client.py:306
+#, python-format
+msgid "Connected to daemon in %d microseconds."
+msgstr "連線到伺服程式於 %d 微秒。"
+
+#: ../main/client.py:309
+#, python-format
+msgid "Connected to daemon in %d milliseconds."
+msgstr "連線到伺服程式於 %d 毫秒。"
+
+#: ../main/__init__.py:84
+#, python-format
+msgid "Version %s"
+msgstr "版本 %s"
+
+#: ../main/__init__.py:87
+msgid "Core Programming:"
+msgstr "核心程式開發："
+
+#: ../main/__init__.py:91
+msgid "Architecture Design:"
+msgstr "架構設計："
+
+#: ../main/__init__.py:94
+msgid "GNOME Integration:"
+msgstr "GNOME 整合："
+
+#: ../main/__init__.py:98
+msgid "Artwork:"
+msgstr "美工："
+
+#: ../main/__init__.py:101
+msgid "Website:"
+msgstr "網站："
+
+#: ../main/__init__.py:104
+msgid "Thank you:"
+msgstr "鳴謝："
+
+#: ../main/Starter.py:103
+msgid "_Manage desklets"
+msgstr "管理桌面小程式(_M)"
+
+#: ../main/Starter.py:106
+msgid "_Configuration"
+msgstr "組態(_C)"
+
+#: ../main/Starter.py:108
+msgid "_View log"
+msgstr "檢視紀錄檔(_V)"
+
+#: ../main/Starter.py:111
+#: ../shell/plugins/Help/__init__.py:41
+msgid "_About..."
+msgstr "關於(_A)..."
+
+#: ../main/Starter.py:114
+msgid "_Stop daemon"
+msgstr "停止伺服程式(_S)"
+
+#: ../main/Starter.py:230
+#, python-format
+msgid "Could not open desklet file \"%s\""
+msgstr "無法開啟桌面小程式檔案“%s”"
+
+#: ../main/Starter.py:231
+msgid "The desklet file could not be opened because the file was not readable."
+msgstr "無法開啟桌面小程式檔案的原因是該檔案不具備可讀權限。"
+
+#. CVS warning :)
+#: ../main/transition.py:42
+msgid ""
+"This is a CVS version of gDesklets. CVS versions represent the current state of development and might be unstable or cause problems from time to time.\n"
+"\n"
+"If you're new to gDesklets, it is thus highly recommended to <b>not</b> use a CVS version, but a stable release!\n"
+"\n"
+"If you still want to run the CVS version instead of a stable release version, we'd highly appreciate it if you report any weird behavior to the developers.\n"
+"\n"
+"Experienced users are encouraged to try a CVS version, though!"
+msgstr ""
+"這是 CVS 版本的 gDesklets。CVS 版本反應的是目前開發的狀況，因此可能不穩定或時時會造成問題。\n"
+"\n"
+"如果您是 gDesklets 新手，強烈建議您<b>不要</b>使用 CVS 版本，應該選擇穩定的正式版！\n"
+"\n"
+"如果您仍然使用 CVS 版本而非穩定的正式版本，我們會十分感謝您將任何不正常的現象回報給開發者。\n"
+"\n"
+"我們也歡迎很有經驗的使用者來嘗試 CVS 版本！"
+
+#: ../main/transition.py:54
+msgid ""
+"This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
+"Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
+"This version might break your configuration or it won't restore it from an earlier release. In most cases this is intentional, since gDesklets is still in its early stages of development.\n"
+"\n"
+"Thanks for testing this release candidate!"
+msgstr ""
+"這是即將釋出的 gDesklets 的<b>釋出候選版</b>。\n"
+"請測試它並將錯誤回報到 <i>http://bugzilla.gnome.org</i>\n"
+"這個版本有可能破壞您的組態或者無法使用上個版本的組態設定。在大多數的情況這是正常的，因為 gDesklets 還在開發的早期階段。\n"
+"\n"
+"感謝您測試這個釋出候選版本！"
+
+#. our informative transition message which we can change with
+#. every release
+#: ../main/transition.py:65
+msgid ""
+"This version of gDesklets features the Float mode: press a key and all your desklets will come to front, floating above your applications, until you press that key again!\n"
+"The default keybinding is &lt;Shift&gt; &lt;F12&gt;, but you can easily change that in the configuration dialog.\n"
+"\n"
+"Please note that due to limitations of older X servers, you might see blocks around desklets in Float mode. This cannot be solved in a satisfying way except for switching the X server to real translucency (Xorg 6.8 and above)."
+msgstr ""
+"這一版的 gDesklet 具有浮動模式的功能：按下一個按鍵，您所有的桌面小程式會帶到前方，浮在您的應用程式之前，直到您再按一次按鍵！\n"
+"預設的組合鍵為 &lt;Shift&gt; &lt;F12&gt;；但是您可以在組態對話方塊中很容易的改變它。\n"
+"\n"
+"請注意，由於舊式 X server 的限制，您可能會在浮動模式中看到桌面小程式周圍有些黑塊。要完全解決這個問題的方法只有更換一個真正支援透明功能的 X server(Xorg 6.8 或更新的版本)。"
+
+#: ../main/transition.py:80
+msgid "Please note (this message will appear only once):"
+msgstr "請注意（這個訊息只會出現一次）："
+
+#: ../plugin/Interface.py:200
+#: ../plugin/Interface.py:227
+msgid "no description"
+msgstr "沒有可用的描述"
+
+#: ../scripting/Script.py:154
+msgid "Error in add_timer function"
+msgstr "add_timer 函式發生錯誤"
+
+#: ../scripting/Script.py:155
+#, python-format
+msgid "\"%s\" isn't a valid integer value!"
+msgstr "“%s”不是有效的整數值！"
+
+#: ../scripting/Script.py:199
+#, python-format
+msgid "No Control could be found for interface %s"
+msgstr "找不到介面 %s 的控制項"
+
+#: ../scripting/Script.py:201
+msgid "This means that a functionality won't be available during execution!"
+msgstr "這代表在執行期間無法使用某些功能！"
+
+#: ../scripting/Script.py:234
+msgid "Security Risk"
+msgstr "安全性風險"
+
+#: ../scripting/Script.py:235
+#, python-format
+msgid ""
+"The desklet %s wants to execute a system command:\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"To protect your system from malicious programs, you can deny the execution of this command.\n"
+"\n"
+"If you are sure that the command is harmless, you may permanently allow this desklet instance to run it."
+msgstr ""
+"桌面小程式 %s 將執行下列系統指令：\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"要保護您的系統避免惡意程式的侵害，您可以拒絕執行這個指令。\n"
+"\n"
+"如果您確定此指令是無害的，您可以永久允許此桌面小程式實體執行它。"
+
+#: ../scripting/Script.py:248
+msgid "Deny!"
+msgstr "拒絕！"
+
+#: ../scripting/Script.py:249
+msgid "Allow once"
+msgstr "允許一次"
+
+#: ../scripting/Script.py:250
+msgid "Allow for this desklet"
+msgstr "允許此桌面小程式"
+
+#: ../Sensors/FontSelector/__init__.py:86
+msgid "Fonts"
+msgstr "字型"
+
+#: ../Sensors/FontSelector/__init__.py:87
+msgid "Fonts settings"
+msgstr "字型設定"
+
+#: ../Sensors/FontSelector/__init__.py:90
+#, python-format
+msgid "Font #%i:"
+msgstr "字型 #%i:"
+
+#: ../Sensors/FontSelector/__init__.py:92
+#, python-format
+msgid "Font #%i used in the labels"
+msgstr "在標籤中使用的字型 #%i"
+
+#: ../Sensors/FontSelector/__init__.py:93
+#, python-format
+msgid "Font color #%i:"
+msgstr "字型色彩 #%i:"
+
+#: ../Sensors/FontSelector/__init__.py:95
+#, python-format
+msgid "Font color #%i used in the labels"
+msgstr "在標籤中使用的字型色彩 #%i"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:16
+#, python-format
+msgid "%s Control"
+msgstr "%s 控制項"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:55
+msgid "Interface Name"
+msgstr "介面名稱"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:58
+msgid "Property Name"
+msgstr "屬性名稱"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:61
+msgid "Property Access"
+msgstr "屬性存取"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:64
+msgid "Property Description"
+msgstr "屬性描述"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:27
+msgid "by interface"
+msgstr "依介面"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:28
+#: ../shell/plugins/DisplayBrowser/__init__.py:80
+msgid "alphabetically"
+msgstr "字母順序"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:72
+#, python-format
+msgid "Found %d controls."
+msgstr "找到 %d 個控制項。"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:75
+#: ../shell/plugins/DisplayBrowser/__init__.py:158
+msgid "Invalid search expression."
+msgstr "無效的搜尋表示式。"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:40
+msgid "R_emove selected desklet"
+msgstr "移除選擇的桌面小程式(_E)"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
+msgid "_Run (remote) desklet..."
+msgstr "執行(移除)桌面小程式(_R)..."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:45
+msgid "R_un selected desklet"
+msgstr "執行選擇的桌面小程式(_U)"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:78
+msgid "by category"
+msgstr "依分類"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:79
+msgid "by author"
+msgstr "依作者"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:130
+msgid "Could not remove"
+msgstr "無法移除"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:131
+msgid "The desklet file could not be removed. This most likely means that you do not have write permission on it."
+msgstr "無法移除這個桌面小程式檔案。這表示很可能您沒有寫入該檔案的權限。"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:143
+msgid "The desklet will be removed from your system and no longer be available."
+msgstr "此桌面小程式將自您的系統移除並且將不能再使用。"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#, python-format
+msgid "Found %d desklets"
+msgstr "找到 %d 個桌面小程式。"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:177
+msgid "No description available"
+msgstr "沒有可用的描述"
+
+#: ../shell/plugins/Help/__init__.py:37
+msgid "_Help"
+msgstr "說明(_H)"
+
+#: ../shell/plugins/Help/__init__.py:38
+msgid "_Tip of the Day"
+msgstr "每日一訣(_T)"
+
+#: ../shell/plugins/Help/TipOfTheDay.py:24
+msgid "Tip of the Day"
+msgstr "每日一訣"
+
+#: ../shell/plugins/Help/TipOfTheDay.py:32
+msgid "Show tips at startup"
+msgstr "啟動時顯示密訣"
+
+#: ../shell/plugins/Help/tips.py:2
+msgid ""
+"You can find lots of desktop applets for use\n"
+"with gDesklets at\n"
+"\n"
+"http://www.gdesklets.org\n"
+"and\n"
+"http://gdesklets.gnomedesktop.org"
+msgstr ""
+"您可以在這裡找到許多給 gDesklets \n"
+"使用的桌面小程式\n"
+"\n"
+"http://www.gdesklets.org\n"
+"與\n"
+"http://gdesklets.gnomedesktop.org"
+
+#: ../shell/plugins/Help/tips.py:9
+msgid ""
+"You can install new desktop applets easily by\n"
+"dragging the download link for the package\n"
+"from your web browser into the gDesklets Shell."
+msgstr ""
+"安裝新的桌面小程式相當簡單，\n"
+"您只要將瀏覽器中該套件的下載\n"
+"連結拖拉到 gDesklets 系統殼即可。"
+
+#: ../shell/plugins/Help/tips.py:13
+msgid ""
+"Click the right mouse button on a desktop\n"
+"applet or press F10 to open the popup menu."
+msgstr ""
+"在桌面小程式上面按滑鼠右鍵或\n"
+"按 F10 即可開啟彈出式選單。"
+
+#: ../shell/plugins/Help/tips.py:16
+msgid ""
+"You can move the applets around the screen\n"
+"by holding down the middle mouse button.\n"
+"\n"
+"If your mouse has only two buttons,\n"
+"hold down both of them simultaneously\n"
+"in order to simulate the middle button."
+msgstr ""
+"您可以按住滑鼠中鍵來讓小程式\n"
+"在螢幕上移動。\n"
+"\n"
+"如果您的滑鼠只有兩個按鍵，\n"
+"同時按住它們也可以模擬中鍵\n"
+"的效果。"
+
+#: ../shell/plugins/Help/tips.py:23
+msgid ""
+"You can have different profiles of\n"
+"desktop applets and switch between them.\n"
+"\n"
+"Select \"Profiles->New profile...\" from\n"
+"the menu bar to create new profiles.\n"
+"\n"
+"Empty profiles get discarded automatically."
+msgstr ""
+"您可以有不同的桌面小程式\n"
+"的設定組合並且可以任意切換。\n"
+"\n"
+"從選單列選擇“設定組合->新增設定組合...”\n"
+"來建立新的設定組合。\n"
+"\n"
+"空的設定組合會被自動放棄。"
+
+#: ../shell/plugins/Help/tips.py:31
+msgid ""
+"The search bar accepts complex search\n"
+"expressions for finding your applets."
+msgstr ""
+"搜尋列支援複雜搜尋表示式\n"
+"以找尋您的桌面小程式。"
+
+#: ../shell/plugins/Help/tips.py:34
+msgid ""
+"Search expressions may contain wildcards:\n"
+"\n"
+" ? matches any one character\n"
+" * matches zero or more characters"
+msgstr ""
+"搜尋表式示可以包含萬用字元：\n"
+"\n"
+" ? 會比對任意單一字元\n"
+" * 會比對零或多個字元"
+
+#: ../shell/plugins/Help/tips.py:39
+msgid ""
+"Have a good idea for a desklet?\n"
+"Write your own!  See the Developer's\n"
+"book for more details."
+msgstr ""
+"對桌面小程式很棒的想法嗎？\n"
+"不妨自己寫一個吧！請查閱開發者手冊\n"
+"以獲取更多資訊。"
+
+#: ../shell/plugins/PackageInstaller/Downloader.py:29
+msgid "Retrieving:"
+msgstr "正在取回:"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:26
+msgid "I_nstall remote package..."
+msgstr "安裝遠端套件(_N)..."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:27
+msgid "_Install package..."
+msgstr "安裝套件(_I)..."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:97
+msgid "Invalid package"
+msgstr "無效的套件"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:98
+msgid "The supplied file could not be opened as a package. It is either corrupted or not of the correct file type."
+msgstr "所提供的檔案無法開啟為套件。它可能已毀損或者不是正確的檔案類型。"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:115
+msgid "Installation failed"
+msgstr "安裝過程失敗"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:116
+msgid "The package could not be installed because it contained no installable files."
+msgstr "無法安裝該程式，因為它並未包含可安裝的檔案。"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:119
+msgid "Installation complete"
+msgstr "安裝程序完成"
+
+#: ../shell/plugins/Profiles/__init__.py:18
+msgid "_Profiles"
+msgstr "設定組合(_P)"
+
+#: ../shell/plugins/Profiles/__init__.py:20
+msgid "New profile..."
+msgstr "新增組合新定..."
+
+#: ../shell/plugins/Profiles/__init__.py:75
+msgid "New profile"
+msgstr "新設定組合"
+
+#: ../shell/plugins/Profiles/__init__.py:76
+msgid "Enter the name for a new profile"
+msgstr "請輸入新設定組合的名稱"
+
+#: ../shell/plugins/Shell/__init__.py:62
+msgid "_File"
+msgstr "檔案(_F)"
+
+#: ../shell/SearchBar.py:20
+msgid "Search"
+msgstr "尋找"
+
+#: ../utils/dialog.py:46
+#, python-format
+msgid "_Details (%d lines)"
+msgstr "詳情(_D) (%d 行)"
+
+#: ../utils/dialog.py:194
+msgid "_Ignore errors from this desklet"
+msgstr "忽略此桌面小程式的錯誤(_I)"
+
+#: ../utils/DOM.py:32
+msgid "An invalid graphics code was loaded into a canvas."
+msgstr "有一個無效的圖形程式碼載入到畫布中。"
+
+#: ../utils/DOM.py:153
+#, python-format
+msgid "No such element: %s"
+msgstr "沒有此種元件：%s"
+
+#: ../utils/DOM.py:154
+#, python-format
+msgid "The element with ID <b>%s</b> does not exist in the SVG image."
+msgstr "ID 為 <b>%s</b> 的元件沒有存在 SVG 影像中。"
+
+#: ../utils/DOM.py:182
+#: ../utils/Element.py:91
+#, python-format
+msgid "No such property: %s"
+msgstr "沒有此種屬性：%s"
+
+#: ../utils/DOM.py:183
+#, python-format
+msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
+msgstr "SVG 元件 <b>%s</b> 沒有 <b>%s</b> 屬性。"
+
+#: ../utils/Element.py:92
+#, python-format
+msgid "The element <b>%s</b> does not have the <b>%s</b> property."
+msgstr "<b>%s</b> 元件沒有 <b>%s</b> 屬性。"
+
+#: ../utils/Element.py:96
+#: ../utils/Element.py:126
+msgid "Permission Error"
+msgstr "權限錯誤"
+
+#: ../utils/Element.py:97
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
+msgstr "屬性 <b>%s</b>於元件 <b>%s</b> 是不可寫入的。"
+
+#: ../utils/Element.py:105
+msgid "Type Error"
+msgstr "類型錯誤"
+
+#: ../utils/Element.py:106
+#, python-format
+msgid ""
+"The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
+"Expected <b>%s</b>, but got <b>%s</b>."
+msgstr ""
+"屬性 <b>%s</b>於元件 <b>%s</b> 取得錯誤類型的數值。\n"
+"預期為 <b>%s</b>，卻得到 <b>%s</b>。"
+
+#: ../utils/Element.py:127
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
+msgstr "屬性 <b>%s</b>於元件 <b>%s</b> 是不可讀取的。"
+
+#: ../utils/error.py:158
+msgid "Runtime Error"
+msgstr "執行階段錯誤"
+
+#: ../utils/error.py:160
+msgid "An error occurred while executing a desklet."
+msgstr "當執行桌面小程式時發生的錯誤。"
+
+#~ msgid "Error while configuring desklet"
+#~ msgstr "當設定桌面小程式時產生錯誤"
+#~ msgid ""
+#~ "A desklet could not be configured properly. It will most likely be broken "
+#~ "and you should consider removing it."
+#~ msgstr "無法正確設定桌面小程式。它很可能已經損毀，而您應該考慮將它移除。"
+#~ msgid "Error in sensor '%(name)s'"
+#~ msgstr "偵測器 '%(name)s' 發生錯誤"
+#~ msgid ""
+#~ "An error occurred while loading a sensor. This most likely means that your "
+#~ "system does not fulfill all its requirements."
+#~ msgstr ""
+#~ "當載入偵測器時發生錯誤。這很可能代表您的系統無法滿足偵測器所有的需求。"
+#~ msgid "Error in sensor %(name)s"
+#~ msgstr "偵測器 %(name)s 發生錯誤"
+#~ msgid "An error occurred while running a sensor."
+#~ msgstr "當執行偵測器時發生錯誤。"
+#~ msgid "Invalid desklet file \"%s\""
+#~ msgstr "無效的桌面小程式檔案“%s”"
+#~ msgid "The desklet file contains invalid data and could not be loaded."
+#~ msgstr "該桌面小程式檔案包含了無效的資料而且無法被載入。"
+#~ msgid "Error in script"
+#~ msgstr "命令稿發生錯誤"
+#~ msgid "SVG parse error"
+#~ msgstr "SVG 解析錯誤"
+

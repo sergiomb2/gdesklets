@@ -1,0 +1,31 @@
+installdir = ${coredir}/config
+install_DATA = \
+	__init__.py       \
+	Backend.py        \
+	ConfigBoolean.py  \
+	ConfigButton.py   \
+	ConfigColor.py    \
+	ConfigDPI.py      \
+	ConfigEnum.py     \
+	ConfigFloat.py    \
+	ConfigFont.py     \
+	ConfigInteger.py  \
+	ConfigKeyBinding.py \
+	ConfigString.py   \
+	ConfigTitle.py    \
+	ConfigUnit.py     \
+	ConfigURI.py      \
+	ConfigDialog.py   \
+	ConfigWidget.py   \
+	ConfigManager.py  \
+	ConfigWidget.py   \
+	DaemonConfigger.py  \
+	DisplayConfigger.py \
+	StateSaver.py     \
+	settings.py
+
+install_PYTHON = $(install_DATA)
+
+EXTRA_DIST = $(install_DATA)
+
+CLEANFILES = *.pyc

@@ -1,0 +1,654 @@
+# translation of pa.po to Punjabi
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Amanpreet Singh Alam <aalam@redhat.com>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pa\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-11-04 15:42+0530\n"
+"PO-Revision-Date: 2004-11-04 16:16+0530\n"
+"Last-Translator: Amanpreet Singh Alam <aalam@redhat.com>\n"
+"Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3.1\n"
+"Plural-Forms: Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+
+#: config/ConfigDialog.py:34 display/DisplayConfigurator.py:15
+msgid "Configuration"
+msgstr "ਸੰਰਚਨਾ"
+
+#: config/ConfigDialog.py:101
+#, python-format
+msgid "No such item: %s"
+msgstr "ਕੋਈ ਇਕਾਈ ਨਹੀਂ: %s"
+
+#: Controls/Calendar/__init__.py:10
+msgid "Monday"
+msgstr "ਸੋਮਵਾਰ"
+
+#: Controls/Calendar/__init__.py:10
+msgid "Tuesday"
+msgstr "ਮੰਗਲਵਾਰ"
+
+#: Controls/Calendar/__init__.py:10
+msgid "Wednesday"
+msgstr "ਬੁੱਧਵਾਰ"
+
+#: Controls/Calendar/__init__.py:10
+msgid "Thursday"
+msgstr "ਵੀਰਵਾਰ"
+
+#: Controls/Calendar/__init__.py:11
+msgid "Friday"
+msgstr "ਸ਼ੁੱਕਰਵਾਰ"
+
+#: Controls/Calendar/__init__.py:11
+msgid "Saturday"
+msgstr "ਸ਼ਨੀਚਰਵਾਰ"
+
+#: Controls/Calendar/__init__.py:11
+msgid "Sunday"
+msgstr "ਐਤਵਾਰ"
+
+#: Controls/Calendar/__init__.py:13
+msgid "January"
+msgstr "ਜਨਵਰੀ"
+
+#: Controls/Calendar/__init__.py:13
+msgid "February"
+msgstr "ਫਰਵਰੀ"
+
+#: Controls/Calendar/__init__.py:13
+msgid "March"
+msgstr "ਮਾਰਚ"
+
+#: Controls/Calendar/__init__.py:13
+msgid "April"
+msgstr "ਅਪ੍ਰੈਲ"
+
+#: Controls/Calendar/__init__.py:14
+msgid "May"
+msgstr "ਮਈ"
+
+#: Controls/Calendar/__init__.py:14
+msgid "June"
+msgstr "ਜੂਨ"
+
+#: Controls/Calendar/__init__.py:14
+msgid "July"
+msgstr "ਜੁਲਾਈ"
+
+#: Controls/Calendar/__init__.py:14
+msgid "August"
+msgstr "ਅਗਸਤ"
+
+#: Controls/Calendar/__init__.py:14
+msgid "September"
+msgstr "ਸਤੰਬਰ"
+
+#: Controls/Calendar/__init__.py:15
+msgid "October"
+msgstr "ਅਕਤੂਬਰ"
+
+#: Controls/Calendar/__init__.py:15
+msgid "November"
+msgstr "ਨਵੰਬਰ"
+
+#: Controls/Calendar/__init__.py:15
+msgid "December"
+msgstr "ਦਸੰਬਰ"
+
+#: data/gdesklets.desktop.in.h:1
+msgid "A desktop applet system for GNOME"
+msgstr "ਗਨੋਮ ਲਈ ਇੱਕ ਵਿਹੜਾ ਐਪਲਿਟ ਸਿਸਟਮ"
+
+#: data/gdesklets.xml.in.h:1
+msgid "gDesklets display"
+msgstr "gDesklets ਦਰਿਸ਼"
+
+#: display/ContainerTarget.py:126
+#, python-format
+msgid "The %(name)s container accepts only one child."
+msgstr ""
+
+#: display/DataTarget.py:171
+#, python-format
+msgid "No such property: %s"
+msgstr "ਕੋਈ ਵਿਸ਼ੇਸਤਾ ਨਹੀਂ: %s"
+
+#: display/DataTarget.py:172
+#, python-format
+msgid "The element <b>%(name)s</b> does not have the <b>%(key)s</b> property."
+msgstr ""
+
+#: display/DisplayConfigurator.py:40
+msgid "This display is not configurable."
+msgstr "ਇਹ ਦਰਿਸ਼ ਸੰਰਚਨਾਯੋਗ ਨਹੀਂ ਹੈ।"
+
+#: display/Display.py:33
+msgid "_Configure display"
+msgstr "ਦਰਿਸ਼ ਸੰਰਚਨਾ(_C)"
+
+#: display/Display.py:34
+msgid "_Move display"
+msgstr "ਦਰਿਸ਼ ਏਧਰ-ਓਧਰ(_M)"
+
+#: display/Display.py:36
+msgid "Re_start display"
+msgstr "ਦਰਿਸ਼ ਮੁੜ ਚਾਲੂ(_s)"
+
+#: display/Display.py:37
+msgid "_Remove display"
+msgstr "ਦਰਸ਼ਿ ਹਟਾਉ(_R)"
+
+#: display/Display.py:737
+msgid "Do you really want to remove this display ?"
+msgstr "ਕੀ ਤੁਸੀਂ ਇਸ ਦਰਿਸ਼ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+
+#: display/Display.py:738
+msgid ""
+"This display will no longer be displayed and its configuration will be "
+"purged."
+msgstr ""
+"ਇਹ ਦਰਿਸ਼ ਹੁਣ ਵੇਖਣ ਲਈ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ ਅਤੇ ਇਸ ਦੀ ਸੰਰਚਨਾ ਵੀ ਹਟਾ ਦਿੱਤੀ "
+"ਜਾਵੇਗੀ।"
+
+#: factory/DisplayFactory.py:103
+msgid "Error while configuring display"
+msgstr "ਦਰਿਸ਼ ਸੰਰਚਨਾ ਦੌਰਾਨ ਗਲਤੀ"
+
+#: factory/DisplayFactory.py:104
+msgid ""
+"A display could not be configured properly. It will most likely be broken "
+"and you should consider removing it."
+msgstr ""
+
+#: factory/DisplayFactory.py:229
+msgid "Could not load sensor"
+msgstr "ਸੰਕੇਤਕ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ"
+
+#: factory/SensorFactory.py:68
+#, python-format
+msgid "Error in sensor '%(name)s'"
+msgstr ""
+
+#: factory/SensorFactory.py:69
+msgid ""
+"An error occurred while loading a sensor. This most likely means that your "
+"system does not fulfill all its requirements."
+msgstr ""
+
+#: factory/SensorFactory.py:85
+#, python-format
+msgid "Error in sensor %(name)s"
+msgstr ""
+
+#: factory/SensorFactory.py:86
+msgid "An error occurred while running a sensor."
+msgstr "ਸੰਕੇਤਕ ਚਲਾਉਣ ਦੌਰਾਨ ਗਲਤੀ ਹੈ।"
+
+#: factory/SensorFactory.py:93
+#, python-format
+msgid "Could not find sensor '%(name)s'"
+msgstr ""
+
+#: factory/SensorFactory.py:94
+msgid ""
+"A sensor could not be found. This usually means that it has not been "
+"installed."
+msgstr ""
+
+#: gdesklets:19
+msgid ""
+"Usage: gdesklets [option] <command> [arguments...]\n"
+"\n"
+"<command>: open <files>\t(Opens the given display files)\n"
+"\tstart\t(Runs the gDesklets daemon)\n"
+"\tstop\t(Stops the gDesklets daemon)\n"
+"\tlist\t(Lists open displays)\n"
+"\trestart\t(Restarts the gDesklets daemon)\n"
+"\tprofile <profile> (Switches to the given profile)\n"
+"\tprofile\t(Shows the current and the available profiles)\n"
+"\tshell\t(Opens the graphical shell)\n"
+"\tslay\t(Kills the daemon -- use in emergency)\n"
+"\tabout\t(Prints information about gDesklets)\n"
+"\tversion\t(Prints gDesklets version)\n"
+"\thelp\t(Displays this text)\n"
+"\n"
+"[option]: --translucent (Enables translucency on the xorg 6.8.0 server)\n"
+msgstr ""
+
+#: gdesklets:124
+msgid "Starting gdesklets-daemon..."
+msgstr "gdesklets-daemon ਚਾਲੂ ਹੋ ਰਿਹਾ ਹੈ..."
+
+#: gdesklets:130
+msgid "Shutting down gdesklets-daemon..."
+msgstr "gdesklets-daemon ਬੰਦ ਹੋ ਰਿਹਾ ਹੈ..."
+
+#: gdesklets:144
+msgid "Restarting gdesklets-daemon..."
+msgstr "gdesklets-daemon ਮੁੜ ਚਾਲੂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
+
+#: gdesklets:151
+#, c-format
+msgid "Current profile: %s"
+msgstr "ਮੌਜੂਦਾ ਪ੍ਰੋਫਾਇਲ: %s"
+
+#: gdesklets:162
+#, c-format
+msgid "New profile: %s"
+msgstr "ਨਵਾਂ ਪ੍ਰੋਫਾਇਲ਼: %s"
+
+#: gdesklets:165
+#, c-format
+msgid "Available profiles: %s"
+msgstr "ਉਪਲੱਬਧ ਪ੍ਰੋਫਾਇਲ: %s"
+
+#: gdesklets:170
+#, c-format
+msgid "This is %s, version %s."
+msgstr "ਇਹ %s ਹੈ, ਵਰਜਨ %s ਹੈ।"
+
+#: gdesklets:193
+msgid "Invalid command. Please try one of the following commands!"
+msgstr "ਗਲਤ ਕਮਾਂਡ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਹੇਠ ਦਿੱਤੀਆਂ ਕਮਾਂਡਾਂ ਇਸਤੇਮਾਲ ਕਰੋ!"
+
+#: gdesklets-daemon:92
+msgid "You need a recent version of PyGTK to run this program."
+msgstr ""
+
+#: gdesklets-daemon:105
+msgid "Could not find X display."
+msgstr "X ਦਰਿਸ਼ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋ ਸਕਿਆ ਹੈ।"
+
+#: gdesklets-daemon:112
+msgid "You must NOT run gDesklets as super user (root)."
+msgstr ""
+
+#: gdesklets-daemon:134
+msgid "Could not fork daemon."
+msgstr ""
+
+#: libdesklets/convert.py:18
+#, python-format
+msgid "%.2f TB"
+msgstr "%.2f TB"
+
+#: libdesklets/convert.py:20
+#, python-format
+msgid "%.2f GB"
+msgstr "%.2f ਗੈਬਾ"
+
+#: libdesklets/convert.py:22
+#, python-format
+msgid "%.2f MB"
+msgstr "%.2f ਮੈਬਾ"
+
+#: libdesklets/convert.py:24
+#, python-format
+msgid "%.2f kB"
+msgstr "%.2f ਕਿਬਾ"
+
+#: libdesklets/convert.py:26
+#, python-format
+msgid "%d B"
+msgstr "%d ਬ"
+
+#: main/AboutDialog.py:7
+#, python-format
+msgid "Version %s"
+msgstr "ਵਰਜਨ %s"
+
+#: main/AboutDialog.py:10
+msgid "Core Programming:"
+msgstr "ਮੂਲ ਪ੍ਰੋਗਰਾਮਿੰਗ:"
+
+#: main/AboutDialog.py:14
+msgid "Architecture Design:"
+msgstr "ਢਾਂਚਾ ਨਿਰਮਾਣ:"
+
+#: main/AboutDialog.py:17
+msgid "GNOME Integration:"
+msgstr "ਗਨੋਮ ਜੋੜ:"
+
+#: main/AboutDialog.py:21
+msgid "Artwork:"
+msgstr "ਕਲਾਕਾਰੀ:"
+
+#: main/AboutDialog.py:24
+msgid "Website:"
+msgstr "ਵੈੱਬਸਾਇਟ:"
+
+#: main/AboutDialog.py:43
+msgid "About gDesklets"
+msgstr "gDesklets ਬਾਰੇ"
+
+#: main/client.py:193
+msgid "This software is licensed under the terms of the GNU GPL."
+msgstr "ਇਹ ਸਾਫਟਵੇਅਰ GNU GPL ਅਧੀਨ ਜਾਰੀ ਕੀਤਾ ਗਿਆ ਹੈ।"
+
+#: main/client.py:231
+#, python-format
+msgid "Connecting to daemon [%s]"
+msgstr ""
+
+#: main/client.py:245
+msgid "Cannot establish connection to daemon: timeout!"
+msgstr ""
+
+#: main/client.py:251
+#, python-format
+msgid "Connected to daemon in %d microseconds."
+msgstr ""
+
+#: main/client.py:254
+#, python-format
+msgid "Connected to daemon in %d milliseconds."
+msgstr ""
+
+#: main/LogViewer.py:34
+msgid "Log Messages"
+msgstr "ਲਾੱਗ ਸੁਨੇਹੇ"
+
+#: main/Starter.py:91
+msgid "_Manage desklets"
+msgstr "ਡਿਸਕਲਿਟ ਪ੍ਰਬੰਧਨ(_M)"
+
+#: main/Starter.py:93
+msgid "_View log"
+msgstr "ਲਾੱਗ ਵੇਖੋ(_V)"
+
+#: main/Starter.py:94 shell/plugins/Help/__init__.py:45
+msgid "_About..."
+msgstr "ਇਸ ਬਾਰੇ(_A)..."
+
+#: main/Starter.py:96
+msgid "_Stop daemon"
+msgstr ""
+
+#: main/Starter.py:175
+msgid "File does not exist."
+msgstr "ਫਾਇਲ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
+
+#: main/Starter.py:183
+#, python-format
+msgid "Could not open display file '%(path)s'"
+msgstr ""
+
+#: main/Starter.py:184
+msgid "The display file could not be opened because the file was not readable."
+msgstr ""
+
+#: main/Starter.py:195
+#, python-format
+msgid "Invalid display file '%(path)s'"
+msgstr ""
+
+#: main/Starter.py:196
+msgid "The display file contains invalid data and could not be loaded."
+msgstr ""
+
+#: main/Starter.py:440
+msgid ""
+"Could not connect to gnome-session. GNOME session management will not be "
+"available for this application."
+msgstr ""
+
+#: scripting/Script.py:116 scripting/Script.py:242 scripting/Script.py:256
+msgid "Error in script"
+msgstr "ਸਕ੍ਰਿਪਟ ਵਿੱਚ ਗਲਤੀ"
+
+#: scripting/Script.py:117 scripting/Script.py:257
+msgid "An error occurred while executing a script."
+msgstr "ਸਕ੍ਰਿਪਟ ਚਲਾਉਣ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ।"
+
+#: scripting/Script.py:243
+msgid "An error occurred while loading a script."
+msgstr "ਸਕ੍ਰਿਪਟ ਲੋਡ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ।"
+
+#: sensor/Sensor.py:430
+msgid "translator_credits"
+msgstr ""
+"ਅਮਨਪ੍ਰੀਤ ਸਿੰਘ ਆਲਮਵਾਲਾ <aalam@redhat.com>\n"
+"ਜਸਵਿੰਦਰ ਸਿੰਘ ਫੂਲੇਵਾਲਾ <jaswinderphulewala@yahoo.com>"
+
+#: Sensors/FontSelector/__init__.py:86
+msgid "Fonts"
+msgstr "ਫੋਂਟ"
+
+#: Sensors/FontSelector/__init__.py:87
+msgid "Fonts settings"
+msgstr "ਫੋਂਟ ਵਿਵਸਥਾ"
+
+#: Sensors/FontSelector/__init__.py:90
+#, python-format
+msgid "Font #%i:"
+msgstr "ਫੋਂਟ #%i:"
+
+#: Sensors/FontSelector/__init__.py:92
+#, python-format
+msgid "Font #%i used in the labels"
+msgstr ""
+
+#: Sensors/FontSelector/__init__.py:93
+#, python-format
+msgid "Font color #%i:"
+msgstr "ਫੋਂਟ ਰੰਗ #%i:"
+
+#: Sensors/FontSelector/__init__.py:95
+#, python-format
+msgid "Font color #%i used in the labels"
+msgstr ""
+
+#: shell/plugins/ControlBrowser/ControlInspector.py:20
+#, python-format
+msgid "%s Control"
+msgstr "%s ਕੰਟਰੋਲ"
+
+#: shell/plugins/ControlBrowser/__init__.py:31
+msgid "by interface"
+msgstr "ਇੰਟਰਫੇਸ"
+
+#: shell/plugins/ControlBrowser/__init__.py:32
+#: shell/plugins/DisplayBrowser/__init__.py:82
+msgid "alphabetically"
+msgstr "ਵਰਣਮਾਲਾ"
+
+#: shell/plugins/ControlBrowser/__init__.py:76
+#, python-format
+msgid "Found %d controls."
+msgstr "%d ਕੰਟਰੋਲ ਲੱਭੇ ਹਨ।"
+
+#: shell/plugins/ControlBrowser/__init__.py:79
+#: shell/plugins/DisplayBrowser/__init__.py:135
+msgid "Invalid search expression."
+msgstr "ਗਲਤ ਖੋਜ ਸਮੀਕਰਨ ਹੈ।"
+
+#: shell/plugins/DisplayBrowser/__init__.py:44
+msgid "R_emove selected display"
+msgstr ""
+
+#: shell/plugins/DisplayBrowser/__init__.py:46
+msgid "_Run selected display"
+msgstr ""
+
+#: shell/plugins/DisplayBrowser/__init__.py:80
+msgid "by category"
+msgstr "ਵਰਗ ਅਨੁਸਾਰ"
+
+#: shell/plugins/DisplayBrowser/__init__.py:81
+msgid "by author"
+msgstr "ਲੇਖਕ"
+
+#: shell/plugins/DisplayBrowser/__init__.py:101
+msgid "Could not remove"
+msgstr "ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
+
+#: shell/plugins/DisplayBrowser/__init__.py:102
+msgid ""
+"The display file could not be removed. This most likely means that you do "
+"not have write permission on it."
+msgstr ""
+
+#: shell/plugins/DisplayBrowser/__init__.py:117
+msgid "Do you really want to remove this display?"
+msgstr "ਕੀ ਤੁਸੀਂ ਇਸ ਦਰਿਸ਼ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+
+#: shell/plugins/DisplayBrowser/__init__.py:118
+msgid "The display will be removed from your system and no longer be available."
+msgstr ""
+
+#: shell/plugins/DisplayBrowser/__init__.py:132
+#, python-format
+msgid "Found %d displays."
+msgstr "%d ਦਰਿਸ਼ ਲੱਭੇ ਹਨ।"
+
+#: shell/plugins/DisplayBrowser/__init__.py:154
+msgid "No description available"
+msgstr "ਕੋਈ ਵੇਰਵਾ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ"
+
+#: shell/plugins/Help/__init__.py:37
+msgid "_Help"
+msgstr "ਸਹਾਇਤਾ(_H)"
+
+#. menu.set_item("Help/Contents", gtk.STOCK_HELP, _("_Contents"), None)
+#. menu.set_item("Help/Intro", None, _("_Getting Started"), None)
+#. menu.set_item("Help/Devel", None, _("_Developer's Manual"), None)
+#. menu.set_separator("Help/Separator")
+#: shell/plugins/Help/__init__.py:42
+msgid "_Tip of the Day"
+msgstr "ਅੱਜ ਦਾ ਇਸ਼ਾਰਾ(_T)"
+
+#: shell/plugins/Help/TipOfTheDay.py:24
+msgid "Tip of the Day"
+msgstr "ਅੱਜ ਦਾ ਇਸ਼ਾਰਾ"
+
+#: shell/plugins/Help/TipOfTheDay.py:32
+msgid "Show tips at startup"
+msgstr "ਸ਼ੁਰੂਆਤ ਤੇ ਇਸ਼ਾਰਾ ਵੇਖਾਉ"
+
+#: shell/plugins/Help/tips.py:2
+msgid ""
+"You can find lots of desktop applets for use\n"
+"with gDesklets at\n"
+"\n"
+"http://gdesklets.gnomedesktop.org"
+msgstr ""
+
+#: shell/plugins/Help/tips.py:7
+msgid ""
+"You can install new desktop applets easily by\n"
+"dragging the download link for the package\n"
+"from your web browser into the gDesklets Shell."
+msgstr ""
+
+#: shell/plugins/Help/tips.py:11
+msgid ""
+"Click the right mouse button on a desktop\n"
+"applet or press F10 to open the popup menu."
+msgstr ""
+
+#: shell/plugins/Help/tips.py:14
+msgid ""
+"You can move the applets around the screen\n"
+"by holding down the middle mouse button.\n"
+"\n"
+"If your mouse has only two buttons,\n"
+"hold down both of them simultaneously\n"
+"in order to simulate the middle button."
+msgstr ""
+
+#: shell/plugins/Help/tips.py:21
+msgid ""
+"You can have different profiles of\n"
+"desktop applets and switch between them.\n"
+"\n"
+"Select \"Profiles->New profile...\" from\n"
+"the menu bar to create new profiles.\n"
+"\n"
+"Empty profiles get discarded automatically."
+msgstr ""
+
+#: shell/plugins/Help/tips.py:29
+msgid ""
+"The search bar accepts complex search\n"
+"expressions for finding your applets."
+msgstr ""
+
+#: shell/plugins/Help/tips.py:32
+msgid ""
+"Search expressions may contain wildcards:\n"
+"\n"
+" ? matches any one character\n"
+" * matches zero or more characters"
+msgstr ""
+
+#: shell/plugins/PackageInstaller/Downloader.py:30
+msgid "Retrieving:"
+msgstr "ਪ੍ਰਾਪਤ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ:"
+
+#: shell/plugins/PackageInstaller/__init__.py:27
+msgid "_Install package..."
+msgstr "ਪੈਕੇਜ ਇੰਸਟਾਲ(_I)..."
+
+#: shell/plugins/PackageInstaller/__init__.py:66
+msgid "Invalid package"
+msgstr "ਗਲਤ ਪੈਕੇਜ"
+
+#: shell/plugins/PackageInstaller/__init__.py:67
+msgid ""
+"The supplied file could not be opened as a package. It is either corrupted "
+"or not of the correct file type."
+msgstr ""
+
+#: shell/plugins/PackageInstaller/__init__.py:85
+msgid "Installation failed"
+msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਅਸਫਲ"
+
+#: shell/plugins/PackageInstaller/__init__.py:86
+msgid "The package could not be installed because it contained no installable files."
+msgstr ""
+
+#: shell/plugins/PackageInstaller/__init__.py:89
+msgid "Installation complete"
+msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਮੁਕੰਮਲ"
+
+#: shell/plugins/Profiles/__init__.py:23
+msgid "_Profiles"
+msgstr "ਪ੍ਰੋਫਾਇਲ(_P)"
+
+#: shell/plugins/Profiles/__init__.py:25
+msgid "New profile..."
+msgstr "ਨਵਾਂ ਪ੍ਰੋਫਾਇਲ..."
+
+#: shell/plugins/Profiles/__init__.py:79
+msgid "New profile"
+msgstr "ਨਵਾਂ ਪ੍ਰੋਫਾਇਲ"
+
+#: shell/plugins/Profiles/__init__.py:95
+msgid "Enter the name for a new profile:"
+msgstr "ਨਵੇਂ ਪ੍ਰੋਫਾਇਲ਼ ਦਾ ਨਾਂ ਦਿਓ:"
+
+#: shell/plugins/Shell/__init__.py:69
+msgid "_File"
+msgstr "ਫਾਇਲ(_F)"
+
+#: shell/SearchBar.py:20
+msgid "Search"
+msgstr "ਖੋਜ"
+
+#: utils/dialog.py:83
+#, python-format
+msgid "Details (%d lines)"
+msgstr "ਵੇਰਵਾ (%d ਸਤਰਾਂ)"
+
+#: utils/vfs.py:38
+#, python-format
+msgid "Could not open file %s."
+msgstr "ਫਾਇਲ %s ਨੂੰ ਖੋਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ।"
+

@@ -1,0 +1,1128 @@
+# Gdesklets translation to Catalan.
+# Copyright 2003, 2005, 2006 Free Software Foundation, Inc.
+#
+# Raül Cambeiro <rulet@menta.net>, 2003.
+# Jordi Mallach <jordi@sindominio.net>, 2003
+# Aleix Badia i Bosch <a.badia@callusdigital.org>, 2005.
+# Xavier Conde Rueda <xavi.conde@gmail.com>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gdesklets\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-08-09 23:52+0200\n"
+"PO-Revision-Date: 2006-08-09 23:40+0200\n"
+"Last-Translator: Xavier Conde Rueda <xavi.conde@gmail.com>\n"
+"Language-Team: Catalan <tradgnome@softcatala.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../config/ConfigDialog.py:103
+msgid "Invalid Function Call"
+msgstr "La crida a la funció no és vàlida"
+
+#: ../config/ConfigDialog.py:104
+#, python-format
+msgid ""
+"There is no function called <b>%s</b>.\n"
+"This means that there's an error in the desklet's code. You should inform "
+"the author of the desklet about this problem."
+msgstr ""
+"No hi ha cap funció anomenada <b>%s</b>.\n"
+"Això significa que hi ha un error al codi del desklet. Hauríeu d'informar "
+"l'autor sobre aquest problema."
+
+#: ../config/ConfigDialog.py:217 ../display/DisplayConfigurator.py:32
+msgid "This desklet is not configurable."
+msgstr "El desklet no es pot configurar."
+
+#: ../config/ConfigUnit.py:57
+msgid "pixel"
+msgstr "píxel"
+
+#: ../config/ConfigUnit.py:58
+msgid "point"
+msgstr "punt"
+
+#: ../config/ConfigUnit.py:59
+msgid "cm"
+msgstr "cm"
+
+#: ../config/ConfigUnit.py:60
+msgid "inch"
+msgstr "polzada"
+
+#: ../config/DaemonConfigger.py:17
+msgid "Editor to view/edit the desklet source code"
+msgstr "Editor per a visualitzar/editar el codi font del desklet"
+
+#: ../config/DaemonConfigger.py:18
+msgid "Your favorite editor"
+msgstr "El vostre editor favorit"
+
+#: ../config/DaemonConfigger.py:20
+msgid "XComposite support (requires composition manager)"
+msgstr "Suport per a XComposite (necessita un gestor de composició)"
+
+#: ../config/DaemonConfigger.py:21
+msgid ""
+"\n"
+"     <small><i>"
+msgstr ""
+"\n"
+"     <small><i>"
+
+#: ../config/DaemonConfigger.py:22
+msgid "this does not work with GTK 2.8 or higher for technical reasons"
+msgstr "no funciona amb GTK 2.8 o superior per motius tècnics"
+
+#: ../config/DaemonConfigger.py:23
+msgid "</i></small>"
+msgstr "</i></small>"
+
+#: ../config/DaemonConfigger.py:24
+msgid "Translucency (takes effect after restarting a display)"
+msgstr "Transparència (pren efecte després de reiniciar la visualització)"
+
+#: ../config/DaemonConfigger.py:26
+msgid "Screen Resolution (DPI)"
+msgstr "Resolució de pantalla (DPI)"
+
+#: ../config/DaemonConfigger.py:28
+msgid ""
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
+"\"</b> wide"
+msgstr ""
+"Ajusteu el valor perquè l'amplada de la barra sigui exactament <b>5 cm</b> o "
+"<b>1.97\"</b>"
+
+#: ../config/DaemonConfigger.py:32
+msgid "Behavior"
+msgstr "Comportament"
+
+#: ../config/DaemonConfigger.py:33
+msgid "Show _tray icon (takes effect after restart)"
+msgstr "Mos_tra icones de safata (pren efecte després de reiniciar)"
+
+#: ../config/DaemonConfigger.py:35
+msgid "Show _notification while loading a desklet"
+msgstr "Mostra una _notificació mentre es carrega un desklet"
+
+#: ../config/DaemonConfigger.py:37
+msgid "Key for toggling Float mode:"
+msgstr "Tecla per a commutar al mode flotant:"
+
+#: ../config/DaemonConfigger.py:49 ../config/DisplayConfigger.py:27
+#: ../display/DisplayConfigurator.py:16
+msgid "Configuration"
+msgstr "Configuració"
+
+#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:74
+msgid "A desktop applet system for GNOME"
+msgstr "Un sistema de miniaplicacions de l'escriptori per al GNOME"
+
+#: ../data/gdesklets.xml.in.h:1
+msgid "gDesklets display"
+msgstr "Visualització del gDesklets"
+
+#: ../display/Display.py:84
+msgid "_Configure desklet"
+msgstr "_Configura el desklet"
+
+#: ../display/Display.py:86
+msgid "_Move desklet"
+msgstr "_Mou el desklet"
+
+#: ../display/Display.py:89
+msgid "_View Source"
+msgstr "_Visualitza el codi font"
+
+#: ../display/Display.py:92
+msgid "Re_start desklet"
+msgstr "Reinicia el de_sklet"
+
+#: ../display/Display.py:94
+msgid "_Remove desklet"
+msgstr "Sup_rimeix el desklet"
+
+#: ../display/Display.py:982 ../shell/plugins/DisplayBrowser/__init__.py:142
+msgid "Do you really want to remove this desklet ?"
+msgstr "Esteu segur de voler suprimir el desklet?"
+
+#: ../display/Display.py:983
+msgid ""
+"This desklet will no longer be displayed and its configuration will be "
+"purged."
+msgstr ""
+"El desklet no es tornarà a visualitzar i se suprimirà la seva configuració."
+
+#: ../display/DisplayTarget.py:417
+#, python-format
+msgid "Element \"%s\" does not exist"
+msgstr "L'element «%s» no existeix"
+
+#: ../display/DisplayTarget.py:418
+msgid ""
+"The <tt>relative-to</tt> property requires a reference to an existing "
+"display element within the same parent container."
+msgstr ""
+"La propietat <tt>relative-to</tt> necessita una referència a un element de "
+"visualització existent dintre del mateix contenidor pare."
+
+#: ../display/targetregistry.py:52
+#, python-format
+msgid "Unknown element <b>&lt;%s&gt;</b>"
+msgstr "Element desconegut <b>&lt;%s&gt;</b>"
+
+#: ../display/targetregistry.py:53
+msgid ""
+"Either there is a typo in the .display file or you have an incompatible "
+"version of gDesklets."
+msgstr ""
+"El fitxer .display pot ser que estigui mal escrit, o potser teniu una versió "
+"incompatible del gDesklets."
+
+#: ../factory/DisplayFactory.py:89 ../utils/DOM.py:31
+msgid "XML parse error"
+msgstr "S'ha produït un error en l'anàlisi de l'XML"
+
+#: ../factory/DisplayFactory.py:90
+msgid "This .display file has invalid XML syntax."
+msgstr "La sintaxi del fitxer .display no és vàlida."
+
+#: ../factory/DisplayFactory.py:208
+msgid "File doesn't exist or couldn't be loaded"
+msgstr "El fitxer no existeix o no s'ha pogut carregar"
+
+#: ../factory/DisplayFactory.py:210
+msgid "A file which contains a script isn't available for further execution."
+msgstr "No es disposa d'un fitxer que contingui una seqüència a executar."
+
+#: ../factory/DisplayFactory.py:233
+msgid "Could not load sensor"
+msgstr "No s'ha pogut carregar el sensor"
+
+#: ../factory/DisplayFactory.py:249
+#, python-format
+msgid "&lt;%s&gt; needs a bind attribute"
+msgstr "&lt;%s&gt; necessita un atribut de vinculació"
+
+#: ../factory/DisplayFactory.py:251
+msgid "The &lt;prefs&gt; section of this desklet file is broken."
+msgstr "La secció &lt;prefs&gt; d'aquest desklet està malament."
+
+#: ../factory/SensorFactory.py:75
+#, python-format
+msgid "Could not find sensor '%(name)s'"
+msgstr "No s'ha pogut trobar el sensor '%(name)s'"
+
+#: ../factory/SensorFactory.py:76
+msgid ""
+"A sensor could not be found. This usually means that it has not been "
+"installed."
+msgstr ""
+"No s'ha pogut trobar cap sensor. La causa més habitual és que no està "
+"instal·lat."
+
+#: ../gdesklets:29
+msgid "You must NOT run gDesklets as super user (root)."
+msgstr "No heu d'executar el gDesklets com a superusuari (root)."
+
+#: ../gdesklets:43
+msgid "Checking requirements:"
+msgstr "S'estan comprovant els requisits:"
+
+#: ../gdesklets:47
+msgid "Python version => 2.3.0 is required."
+msgstr "Es necessita una versió de Python => 2.3.0."
+
+#: ../gdesklets:51
+msgid "libexpat version 1.95.7 is broken. Please upgrade!"
+msgstr "La versió 1.95.7 del libexpat conté errors. Actualitzeu-la!"
+
+#: ../gdesklets:54
+msgid "SAX parser is required, some SuSE versions ship without it."
+msgstr ""
+"Es necessita l'analitzador SAX, algunes versions de SuSE no l'incorporen."
+
+#: ../gdesklets:58
+msgid ""
+"GTK python bindings (pygtk2) version >= 2.4.0 and GTK+ version >= 2.4.0 are "
+"required."
+msgstr ""
+"Es necessiten les vinculacions Python per a GTK (pygtk2) versió >= 2.4.0 i "
+"GTK+ versió >= 2.4.0."
+
+#: ../gdesklets:62
+msgid "ORBit python bindings (pyorbit) version == 2.0.1 are required."
+msgstr ""
+"Es necessiten les vinculacions de python per a ORBit (pyorbit) versió == "
+"2.0.1."
+
+#: ../gdesklets:65
+msgid "bonobo python bindings are required."
+msgstr "Es necessiten les vinculacions de python per a bonobo."
+
+#: ../gdesklets:74
+msgid "found"
+msgstr "s'ha trobat"
+
+#: ../gdesklets:78
+msgid "missing"
+msgstr "no s'ha trobat"
+
+#: ../gdesklets:84
+msgid "Version check failed."
+msgstr "S'ha produït un error en la comprovació de la versió."
+
+#: ../gdesklets:85
+#, c-format
+msgid ""
+"\n"
+"%s\n"
+msgstr ""
+"\n"
+"%s\n"
+
+#: ../gdesklets:86
+msgid ""
+"Please make sure that the required software is installed.\n"
+"Also try to avoid having multiple versions of a library/binding on your "
+"system.\n"
+"gDesklets won't work if you don't have all necessary dependencies installed\n"
+"on your system.\n"
+"\n"
+"THE STARTUP WILL BE CANCELLED NOW!\n"
+msgstr ""
+"Assegureu-vos que el programari requerit estigui instal·lat.\n"
+"També mireu d'evitar tenir al sistema diverses versions de biblioteques o "
+"vinculacions.\n"
+"El gDesklets no funcionarà si no teniu les dependències necessàries "
+"instal·lades al sistema.\n"
+"\n"
+"No s'iniciarà.\n"
+
+#: ../gdesklets:102
+msgid ""
+"\n"
+"You're running gDesklets for the first time.\n"
+"gDesklets will start a requirements check now...\n"
+msgstr ""
+"\n"
+"Esteu executat el gDesklets per primera vegada.\n"
+"El gDesklets iniciarà una comprovació de requisits...\n"
+
+#: ../gdesklets:113
+msgid ""
+"Usage: gdesklets [option] <command> [arguments...]\n"
+"\n"
+"\t<command>\n"
+"\t\topen    <files>   (Opens the given desklet files)\n"
+"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
+"\t\tstop              (Stops the gDesklets daemon)\n"
+"\t\tlist              (Lists open desklets)\n"
+"\t\trestart           (Restarts the gDesklets daemon)\n"
+"\t\tprofile <profile> (Switches to the given profile)\n"
+"\t\tprofile           (Shows the current and the available profiles)\n"
+"\t\tshell             (Opens the graphical shell)\n"
+"\t\tslay              (Kills the daemon -- use in emergency)\n"
+"\t\tstatus            (Checks daemon status)\n"
+"\t\tabout             (Prints information about gDesklets)\n"
+"\t\tversion           (Prints gDesklets version)\n"
+"\t\tconfigure         (Opens the configuration dialog)\n"
+"\t\thelp              (Displays this text)\n"
+"\t\tcheck             (Checks requirements)\n"
+"\n"
+"\t[option]\n"
+"\t\t--no-tray-icon    (disables the systray icon)\n"
+"\t\t--translucent     (enables translucency on the xorg servers)\n"
+msgstr ""
+"Utilització: gdesklets [opció] <ordre> [arguments...]\n"
+"\n"
+"\\t<ordre>\n"
+"\\t\\topen    <fitxers>   (Obre els fitxer de desklets especificats)\n"
+"\\t\\tstart             (Executa el dimoni del gDesklets, és l'opció "
+"predeterminada)\n"
+"\\tt\\tstop              (Atura el dimoni del gDesklets)\n"
+"\\t\\tlist              (Llist els desklets)\n"
+"\\t\\trestart           (Reinicia el dimoni del gDesklets)\n"
+"\\t\\tprofile <perfil> (Commuta a un perfil especificat)\n"
+"\\t\\tprofile           (Mostra els perfils disponibles i l'actual)\n"
+"\\t\\tshell             (Obre la línies d'ordres gràfica)\n"
+"\\t\\tslay              (Atura el dimoni -- utilitzeu en cas d'emergència)\n"
+"\\t\\tstatus            (Comprova l'estat del dimoni)\n"
+"\\t\\tabout             (Mostra la informació quant a gDesklets)\n"
+"\\t\\tversion           (Mostra la versió del gDesklets)\n"
+"\\t\\tconfigure         (Obre la caixa de diàleg de configuració)\n"
+"\\t\\thelp              (Mostra aquest text)\n"
+"\\t\\tcheck             (Comprova els requisits)\n"
+"\n"
+"\\t[opció]\n"
+"\\t\\t--no-tray-icon    (inhabilita la icona de la safata de sistema)\n"
+"\\t\\t--translucent     (habilita la transparència en els servidors xorg)\n"
+
+#: ../gdesklets:186 ../gdesklets:260
+#, c-format
+msgid "Could not open desklet %s."
+msgstr "No s'ha pogut obrir el desklet %s."
+
+#: ../gdesklets:268
+msgid "Starting gdesklets-daemon..."
+msgstr "s'està iniciant el gdesklets-daemon..."
+
+#: ../gdesklets:274
+msgid "Shutting down gdesklets-daemon..."
+msgstr "S'està aturant el gdesklets-daemon..."
+
+#: ../gdesklets:286
+#, c-format
+msgid "Currently open displays in profile \"%s\":\n"
+msgstr "L'obert actualment es visualitza al perfil «%s»:\n"
+
+#: ../gdesklets:291
+#, c-format
+msgid "Currently there aren't any desklets in profile \"%s\""
+msgstr "Actualment el perfil «%s» no conté cap desklet"
+
+#: ../gdesklets:295
+msgid "Restarting gdesklets-daemon..."
+msgstr "S'està reiniciant el gdesklets-daemon..."
+
+#: ../gdesklets:308
+msgid "gdesklets-daemon is running"
+msgstr "s'està executant el gdesklets-daemon"
+
+#: ../gdesklets:310
+msgid "gdesklets-daemon is not running"
+msgstr "no s'està executant el gdesklets-daemon"
+
+#: ../gdesklets:314
+#, c-format
+msgid "Current profile: %s"
+msgstr "Perfil actual: %s"
+
+#: ../gdesklets:325
+#, c-format
+msgid "New profile: %s"
+msgstr "Perfil nou: %s"
+
+#: ../gdesklets:328
+#, c-format
+msgid "Available profiles: %s"
+msgstr "Perfils disponibles: %s"
+
+#: ../gdesklets:332
+#, c-format
+msgid "This is %s, version %s."
+msgstr "%s, versió %s."
+
+#: ../gdesklets:360
+msgid "Nothing to slay."
+msgstr "No hi ha res a matar."
+
+#: ../gdesklets:385
+msgid "Invalid command. Please try one of the following commands:"
+msgstr "L'ordre no és vàlida. Proveu-ne una de les següents:"
+
+#: ../gdesklets-daemon:20
+msgid "You need a recent version of PyGTK to run this program.\n"
+msgstr "Per executar el programa necessiteu una versió recent del PyGTK.\n"
+
+#: ../gdesklets-daemon:48
+msgid "Could not fork daemon.\n"
+msgstr "No s'ha pogut bifurcar el dimoni.\n"
+
+#: ../gdesklets-daemon:69 ../gdesklets-daemon:89
+#, c-format
+msgid "The following error occurred: %s\n"
+msgstr "S'ha produït aquest error: %s\n"
+
+#: ../libdesklets/convert.py:21
+#, python-format
+msgid "%.2f TB"
+msgstr "%.2f TB"
+
+#: ../libdesklets/convert.py:23
+#, python-format
+msgid "%.2f GB"
+msgstr "%.2f MB"
+
+#: ../libdesklets/convert.py:25
+#, python-format
+msgid "%.2f MB"
+msgstr "%.2f MB"
+
+#: ../libdesklets/convert.py:27
+#, python-format
+msgid "%.2f kB"
+msgstr "%.2f kB"
+
+#: ../libdesklets/convert.py:29
+#, python-format
+msgid "%d B"
+msgstr "%d B"
+
+#: ../main/AboutDialog.py:21
+msgid "About gDesklets"
+msgstr "Quan a gDesklets"
+
+#: ../main/client.py:283
+#, python-format
+msgid "Connecting to daemon [%s]"
+msgstr "S'està connectant al dimoni [%s]"
+
+#: ../main/client.py:300
+msgid ""
+"Cannot establish connection to daemon: timeout!\n"
+"The log file might help you solving the problem."
+msgstr ""
+"No s'ha pogut establir una connexió amb el dimoni: temps excedit!\n"
+"El fitxer de registre us pot ajudar a solucionar el problema."
+
+#: ../main/client.py:306
+#, python-format
+msgid "Connected to daemon in %d microseconds."
+msgstr "s'ha connectat al dimoni en %d microsegons."
+
+#: ../main/client.py:309
+#, python-format
+msgid "Connected to daemon in %d milliseconds."
+msgstr "S'ha connectat al dimoni en %d mi·lisegons."
+
+#: ../main/__init__.py:84
+#, python-format
+msgid "Version %s"
+msgstr "Versió %s"
+
+#: ../main/__init__.py:87
+msgid "Core Programming:"
+msgstr "Programació del nucli:"
+
+#: ../main/__init__.py:91
+msgid "Architecture Design:"
+msgstr "Disseny de l'arquitectura:"
+
+#: ../main/__init__.py:94
+msgid "GNOME Integration:"
+msgstr "Integració a GNOME:"
+
+#: ../main/__init__.py:98
+msgid "Artwork:"
+msgstr "Art:"
+
+#: ../main/__init__.py:101
+msgid "Website:"
+msgstr "Web:"
+
+#: ../main/__init__.py:104
+msgid "Thank you:"
+msgstr "Gràcies a:"
+
+#: ../main/Starter.py:103
+msgid "_Manage desklets"
+msgstr "Gestio_na els desklets"
+
+#: ../main/Starter.py:106
+msgid "_Configuration"
+msgstr "_Configuració"
+
+#: ../main/Starter.py:108
+msgid "_View log"
+msgstr "_Visualitza el registre"
+
+#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:41
+msgid "_About..."
+msgstr "Qu_ant a..."
+
+#: ../main/Starter.py:114
+msgid "_Stop daemon"
+msgstr "A_tura el dimoni"
+
+#: ../main/Starter.py:230
+#, python-format
+msgid "Could not open desklet file \"%s\""
+msgstr "No s'ha pogut obrir el fitxer «%s» del desklet"
+
+#: ../main/Starter.py:231
+msgid "The desklet file could not be opened because the file was not readable."
+msgstr "No s'ha pogut obrir el fitxer del desklet perquè no és de lectura."
+
+#. CVS warning :)
+#: ../main/transition.py:42
+msgid ""
+"This is a CVS version of gDesklets. CVS versions represent the current state "
+"of development and might be unstable or cause problems from time to time.\n"
+"\n"
+"If you're new to gDesklets, it is thus highly recommended to <b>not</b> use "
+"a CVS version, but a stable release!\n"
+"\n"
+"If you still want to run the CVS version instead of a stable release "
+"version, we'd highly appreciate it if you report any weird behavior to the "
+"developers.\n"
+"\n"
+"Experienced users are encouraged to try a CVS version, though!"
+msgstr ""
+"Això és una versió del CVS del gDesklets. Les versions del CVS representen "
+"l'estat actual de desenvolupament i poden ser inestables, o de vegades "
+"causar problemes.\n"
+"\n"
+"Si és la primera vegada que feu servir el gDesklets, és recomanable que "
+"<b>no</b> feu servir una versió del CVS, sinó una d'estable.\n"
+"\n"
+"Si tot i així voleu fer servir la versió del CVS en comptes d'una d'estable, "
+"apreciarem molt que informeu dels comportaments estranys als "
+"desenvolupadors.\n"
+"\n"
+"Els usuaris experimentats estan convidats a provar la versió del CVS, és "
+"clar!"
+
+#: ../main/transition.py:54
+msgid ""
+"This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
+"Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
+"This version might break your configuration or it won't restore it from an "
+"earlier release. In most cases this is intentional, since gDesklets is still "
+"in its early stages of development.\n"
+"\n"
+"Thanks for testing this release candidate!"
+msgstr ""
+"Aquesta és una <b>versió candidata</b> d'una futura versió del gDesklets.\n"
+"Proveu-la i informeu dels errors a <i>http://bugzilla.gnome.org</i>.\n"
+"Aquesta versió pot trencar la vostra configuració o no la restaurarà des "
+"d'una versió anterior. En molts casos això és intencional, ja que el "
+"gDesklets encara es troba en estat de desenvolupament.\n"
+"\n"
+"Gràcies per provar aquesta versió preliminar!"
+
+#. our informative transition message which we can change with
+#. every release
+#: ../main/transition.py:65
+msgid ""
+"This version of gDesklets features the Float mode: press a key and all your "
+"desklets will come to front, floating above your applications, until you "
+"press that key again!\n"
+"The default keybinding is &lt;Shift&gt; &lt;F12&gt;, but you can easily "
+"change that in the configuration dialog.\n"
+"\n"
+"Please note that due to limitations of older X servers, you might see blocks "
+"around desklets in Float mode. This cannot be solved in a satisfying way "
+"except for switching the X server to real translucency (Xorg 6.8 and above)."
+msgstr ""
+"Aquesta versió del gDesklets presenta el mode flotant: en prémer una tecla, "
+"tots els vostres desklets es posaran al davant, flotant entre les vostres "
+"aplicacions, fins que premeu la tecla de nou.\n"
+"La combinació de tecles predeterminada és &lt;Maj&gt; &lt;F12&gt;, però "
+"podeu canviar-la fàcilment en el diàleg de configuració.\n"
+"\n"
+"Tingueu en compte que degut a les limitacions dels servidors d'X més antics, "
+"potser veureu blocs al voltant dels desklets en el mode flotant. Això només "
+"es pot resoldre canviant el servidor X a transparències reals (Xorg 6.8 i "
+"superior)."
+
+#: ../main/transition.py:80
+msgid "Please note (this message will appear only once):"
+msgstr "Tingueu en compte (aquest missatge només apareixerà una vegada):"
+
+#: ../plugin/Interface.py:200 ../plugin/Interface.py:227
+msgid "no description"
+msgstr "sense descripció"
+
+#: ../scripting/Script.py:154
+msgid "Error in add_timer function"
+msgstr "S'ha produït un error en la funció add_timer"
+
+#: ../scripting/Script.py:155
+#, python-format
+msgid "\"%s\" isn't a valid integer value!"
+msgstr "«%s» no és un valor d'enter vàlid!"
+
+#: ../scripting/Script.py:199
+#, python-format
+msgid "No Control could be found for interface %s"
+msgstr "No s'ha pogut trobar un control per a la interfície %s"
+
+#: ../scripting/Script.py:201
+msgid "This means that a functionality won't be available during execution!"
+msgstr "Implicarà que durant l'execució una funcionalitat no serà accessible!"
+
+#: ../scripting/Script.py:234
+msgid "Security Risk"
+msgstr "Risc de seguretat"
+
+#: ../scripting/Script.py:235
+#, python-format
+msgid ""
+"The desklet %s wants to execute a system command:\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"To protect your system from malicious programs, you can deny the execution "
+"of this command.\n"
+"\n"
+"If you are sure that the command is harmless, you may permanently allow this "
+"desklet instance to run it."
+msgstr ""
+"El desklet %s vol executar l'ordre del sistema:\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"Per protegir el sistema de programes maliciosos podeu inhabilitar-ne "
+"l'execució.\n"
+"\n"
+"Si esteu segur de que no és maliciós podeu permetre'n l'execució de forma "
+"permanent."
+
+#: ../scripting/Script.py:248
+msgid "Deny!"
+msgstr "Denega!"
+
+#: ../scripting/Script.py:249
+msgid "Allow once"
+msgstr "Permet una vegada"
+
+#: ../scripting/Script.py:250
+msgid "Allow for this desklet"
+msgstr "Permet per aquest desklet"
+
+#: ../Sensors/FontSelector/__init__.py:86
+msgid "Fonts"
+msgstr "Tipus de lletra"
+
+#: ../Sensors/FontSelector/__init__.py:87
+msgid "Fonts settings"
+msgstr "Paràmetres del tipus de lletra"
+
+#: ../Sensors/FontSelector/__init__.py:90
+#, python-format
+msgid "Font #%i:"
+msgstr "Tipus de lletra #%i:"
+
+#: ../Sensors/FontSelector/__init__.py:92
+#, python-format
+msgid "Font #%i used in the labels"
+msgstr "Tipus de lletra #%i utilitzat a les etiquetes"
+
+#: ../Sensors/FontSelector/__init__.py:93
+#, python-format
+msgid "Font color #%i:"
+msgstr "Color del tipus de lletra #%i:"
+
+#: ../Sensors/FontSelector/__init__.py:95
+#, python-format
+msgid "Font color #%i used in the labels"
+msgstr "Color del tipus de lletra #%i utilitzats a les etiquetes"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:16
+#, python-format
+msgid "%s Control"
+msgstr "%s Control"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:55
+msgid "Interface Name"
+msgstr "Nom de la interfície"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:58
+msgid "Property Name"
+msgstr "Nom de la propietat"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:61
+msgid "Property Access"
+msgstr "Accés a la propietat"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:64
+msgid "Property Description"
+msgstr "Descripció de la propietat"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:27
+msgid "by interface"
+msgstr "per la interfície"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:28
+#: ../shell/plugins/DisplayBrowser/__init__.py:80
+msgid "alphabetically"
+msgstr "alfabètic"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:72
+#, python-format
+msgid "Found %d controls."
+msgstr "S'han trobat %d controls."
+
+#: ../shell/plugins/ControlBrowser/__init__.py:75
+#: ../shell/plugins/DisplayBrowser/__init__.py:158
+msgid "Invalid search expression."
+msgstr "L'expressió de cerca no és vàlida."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:40
+msgid "R_emove selected desklet"
+msgstr "Suprim_eix el desklet seleccionat"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
+msgid "_Run (remote) desklet..."
+msgstr "E_xecuta el desklet (remot)..."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:45
+msgid "R_un selected desklet"
+msgstr "Exec_uta el desklet seleccionat"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:78
+msgid "by category"
+msgstr "per la categoria"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:79
+msgid "by author"
+msgstr "per l'autor"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:130
+msgid "Could not remove"
+msgstr "No s'ha pogut suprimir"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:131
+msgid ""
+"The desklet file could not be removed. This most likely means that you do "
+"not have write permission on it."
+msgstr ""
+"No s'ha pogut suprimir el fitxer del desklet. Probablement no teniu permís "
+"per escriure-hi."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:143
+msgid ""
+"The desklet will be removed from your system and no longer be available."
+msgstr "Se suprimirà permanentment el desklet del sistema."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#, python-format
+msgid "Found %d desklets"
+msgstr "S'han trobat %d desklets."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:177
+msgid "No description available"
+msgstr "No hi ha cap descripció disponible"
+
+#: ../shell/plugins/Help/__init__.py:37
+msgid "_Help"
+msgstr "A_juda"
+
+#: ../shell/plugins/Help/__init__.py:38
+msgid "_Tip of the Day"
+msgstr "_Consell del dia"
+
+#: ../shell/plugins/Help/TipOfTheDay.py:24
+msgid "Tip of the Day"
+msgstr "Consell del dia"
+
+#: ../shell/plugins/Help/TipOfTheDay.py:32
+msgid "Show tips at startup"
+msgstr "Mostra els consells a l'arrencada"
+
+#: ../shell/plugins/Help/tips.py:2
+msgid ""
+"You can find lots of desktop applets for use\n"
+"with gDesklets at\n"
+"\n"
+"http://www.gdesklets.org\n"
+"and\n"
+"http://gdesklets.gnomedesktop.org"
+msgstr ""
+"Podeu trobar miniaplicacions per a l'escriptori per\n"
+"utilitzar amb el gDesklets a\n"
+"\n"
+"http://www.gdesklets.org\n"
+"i\n"
+"\n"
+"http://gdesklets.gnomedesktop.org"
+
+#: ../shell/plugins/Help/tips.py:9
+msgid ""
+"You can install new desktop applets easily by\n"
+"dragging the download link for the package\n"
+"from your web browser into the gDesklets Shell."
+msgstr ""
+"Podeu instal·lar fàcilment més miniaplicacions\n"
+"d'escriptori arrossegant l'enllaç de descàrrega\n"
+"del paquet, des del navegador a l'intèrpret\n"
+"del gDesklets."
+
+#: ../shell/plugins/Help/tips.py:13
+msgid ""
+"Click the right mouse button on a desktop\n"
+"applet or press F10 to open the popup menu."
+msgstr ""
+"Per obrir el menú emergent premeu el botó dret\n"
+"del ratolí o premeu F10."
+
+#: ../shell/plugins/Help/tips.py:16
+msgid ""
+"You can move the applets around the screen\n"
+"by holding down the middle mouse button.\n"
+"\n"
+"If your mouse has only two buttons,\n"
+"hold down both of them simultaneously\n"
+"in order to simulate the middle button."
+msgstr ""
+"Podeu moure les miniaplicacions per la pantalla\n"
+"prement el botó central del ratolí.\n"
+"\n"
+"Si el vostre ratolí només té dos botons,\n"
+"per simular el central premeu-los \n"
+"simultàniament."
+
+#: ../shell/plugins/Help/tips.py:23
+msgid ""
+"You can have different profiles of\n"
+"desktop applets and switch between them.\n"
+"\n"
+"Select \"Profiles->New profile...\" from\n"
+"the menu bar to create new profiles.\n"
+"\n"
+"Empty profiles get discarded automatically."
+msgstr ""
+"Podeu tenir diferents perfils\n"
+"de miniaplicacions de l'escriptori i commutar entre ells.\n"
+"\n"
+"Per crear nous perfils seleccioneu la barra de menú\n"
+"«Perfils->Perfil nou...»\n"
+"\n"
+"Els perfils buits es descarten automàticament."
+
+#: ../shell/plugins/Help/tips.py:31
+msgid ""
+"The search bar accepts complex search\n"
+"expressions for finding your applets."
+msgstr ""
+"Per trobar les miniaplicacions, la barra de\n"
+"cerca accepta expressions de cerca complexes."
+
+#: ../shell/plugins/Help/tips.py:34
+msgid ""
+"Search expressions may contain wildcards:\n"
+"\n"
+" ? matches any one character\n"
+" * matches zero or more characters"
+msgstr ""
+"Les expressions de cerca poden contenir comodins:\n"
+"\n"
+" ? coincideix amb qualsevol caràcter\n"
+" * coincideix amb zero o més caràcters"
+
+#: ../shell/plugins/Help/tips.py:39
+msgid ""
+"Have a good idea for a desklet?\n"
+"Write your own!  See the Developer's\n"
+"book for more details."
+msgstr ""
+"Teniu una bona idea per a un desklet?\n"
+"Escriviu-lo vós mateix! Vegeu\n"
+"el «Llibre dels desenvolupadors» per a més detalls."
+
+#: ../shell/plugins/PackageInstaller/Downloader.py:29
+msgid "Retrieving:"
+msgstr "S'està recuperant:"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:26
+msgid "I_nstall remote package..."
+msgstr "I_nstal·la un paquet remot..."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:27
+msgid "_Install package..."
+msgstr "_Instal·la un paquet..."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:97
+msgid "Invalid package"
+msgstr "El paquet no és vàlid"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:98
+msgid ""
+"The supplied file could not be opened as a package. It is either corrupted "
+"or not of the correct file type."
+msgstr ""
+"El fitxer proporcionat no es pot obrir com a paquet. És corrupte o no és "
+"d'un tipus correcte."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:115
+msgid "Installation failed"
+msgstr "S'ha produït un error en la instal·lació"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:116
+msgid ""
+"The package could not be installed because it contained no installable files."
+msgstr ""
+"No s'ha pogut instal·lar el paquet perquè no conté fitxers instal·lables."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:119
+msgid "Installation complete"
+msgstr "Ha finalitzat la instal·lació"
+
+#: ../shell/plugins/Profiles/__init__.py:18
+msgid "_Profiles"
+msgstr "_Perfils"
+
+#: ../shell/plugins/Profiles/__init__.py:20
+msgid "New profile..."
+msgstr "Perfil nou..."
+
+#: ../shell/plugins/Profiles/__init__.py:75
+msgid "New profile"
+msgstr "Perfil nou"
+
+#: ../shell/plugins/Profiles/__init__.py:76
+msgid "Enter the name for a new profile"
+msgstr "Introduïu el nom del perfil nou"
+
+#: ../shell/plugins/Shell/__init__.py:62
+msgid "_File"
+msgstr "_Fitxer"
+
+#: ../shell/SearchBar.py:20
+msgid "Search"
+msgstr "Cerca"
+
+#: ../utils/dialog.py:46
+#, python-format
+msgid "_Details (%d lines)"
+msgstr "_Detalls (%d línies)"
+
+#: ../utils/dialog.py:194
+msgid "_Ignore errors from this desklet"
+msgstr "_Ignora els errors d'aquest desklet"
+
+#: ../utils/DOM.py:32
+msgid "An invalid graphics code was loaded into a canvas."
+msgstr "S'ha carregat un codi de gràfics invàlid al llenç."
+
+#: ../utils/DOM.py:153
+#, python-format
+msgid "No such element: %s"
+msgstr "L'element no existeix: %s"
+
+#: ../utils/DOM.py:154
+#, python-format
+msgid "The element with ID <b>%s</b> does not exist in the SVG image."
+msgstr "L'element amb l'identificador <b>%s</b> no existeix a la imatge SVG."
+
+#: ../utils/DOM.py:182 ../utils/Element.py:91
+#, python-format
+msgid "No such property: %s"
+msgstr "La propietat no existeix: %s"
+
+#: ../utils/DOM.py:183
+#, python-format
+msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
+msgstr "L'element SVG <b>%s</b> no té la propietat <b>%s</b>."
+
+#: ../utils/Element.py:92
+#, python-format
+msgid "The element <b>%s</b> does not have the <b>%s</b> property."
+msgstr "L'element <b>%s</b> no té la propietat <b>%s</b>."
+
+#: ../utils/Element.py:96 ../utils/Element.py:126
+msgid "Permission Error"
+msgstr "S'ha produït un error de permisos"
+
+#: ../utils/Element.py:97
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
+msgstr "No es pot escriure a la propietat <b>%s</b> de l'element <b>%s</b>."
+
+#: ../utils/Element.py:105
+msgid "Type Error"
+msgstr "Error de tipus"
+
+#: ../utils/Element.py:106
+#, python-format
+msgid ""
+"The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
+"Expected <b>%s</b>, but got <b>%s</b>."
+msgstr ""
+"La propietat <b>%s</b> de l'element <b>%s</b> té un valor de tipus erroni.\n"
+"S'esperava <b>%s</b>, però s'ha obtingut <b>%s</b>."
+
+#: ../utils/Element.py:127
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
+msgstr "No es pot llegir la propietat <b>%s</b> de l'element <b>%s</b>."
+
+#: ../utils/error.py:158
+msgid "Runtime Error"
+msgstr "Error d'execució"
+
+#: ../utils/error.py:160
+msgid "An error occurred while executing a desklet."
+msgstr "S'ha produït un error durant l'execució del desklet."
+
+#~ msgid "Error while configuring desklet"
+#~ msgstr "S'ha produït un error en configurar el desklet"
+
+#~ msgid ""
+#~ "A desklet could not be configured properly. It will most likely be broken "
+#~ "and you should consider removing it."
+#~ msgstr ""
+#~ "No s'ha pogut configurar correctament el desklet. Probablement contingui "
+#~ "un error i s'hauria de suprimir."
+
+#~ msgid "Error in sensor '%(name)s'"
+#~ msgstr "S'ha produït un error en '%(name)s'"
+
+#~ msgid ""
+#~ "An error occurred while loading a sensor. This most likely means that your "
+#~ "system does not fulfill all its requirements."
+#~ msgstr ""
+#~ "S'ha produït un error en carregar un sensor. Probablement indiqui que el "
+#~ "sistema no compleix tots els requisits."
+
+#~ msgid "Error in sensor %(name)s"
+#~ msgstr "S'ha produït un error en el sensor %(name)s"
+
+#~ msgid "An error occurred while running a sensor."
+#~ msgstr "S'ha produït un error en executar un sensor."
+
+#~ msgid "GNOME python bindings (gnome-python2) version >= 2.6.0 are required."
+#~ msgstr ""
+#~ "Es necessiten les vinculacions de python per a GNOME (gnome-python2) "
+#~ "versió >= 2.6.0."
+
+#~ msgid "GConf python bindings are required."
+#~ msgstr "Es necessiten les vinculacions de python per a GConf."
+
+#~ msgid "gtkhtml2 python bindings are required."
+#~ msgstr "Es necessiten les vinculacions de python per a gtkhtml2."
+
+#~ msgid "Invalid desklet file \"%s\""
+#~ msgstr "El fitxer \"%s\" del desklet no és vàlid"
+
+#~ msgid "The desklet file contains invalid data and could not be loaded."
+#~ msgstr ""
+#~ "El fitxer del desklet no conté dades vàlid i no s'ha pogut carregar."
+
+#~ msgid "Error in script"
+#~ msgstr "S'ha produït un error en la seqüència"
+
+#~ msgid "SVG parse error"
+#~ msgstr "S'ha produït un error d'anàlisi del SVG"
+
+#~ msgid "Welcome to %(name)s<i>!</i>"
+#~ msgstr "Benvingut a %(name)s<i>!</i>"
+
+#~ msgid ""
+#~ "It looks like you are running %(name)s for the first time.\n"
+#~ "\n"
+#~ "You can add new displays by launching them in your file manager.\n"
+#~ "\n"
+#~ "<b>Have fun,</b>\n"
+#~ "  <i>the %(name)s developers</i>"
+#~ msgstr ""
+#~ "Sembla que és la primera vegada que executeu %(name)s.\n"
+#~ "\n"
+#~ "Podeu afegir noves visualitzacions executant-les al gestor de fitxers.\n"
+#~ "\n"
+#~ "<b>Divertiu-vos,</b>\n"
+#~ "  <i>els desenvolupadors de %(name)s</i>"
+
+#~ msgid "_Quit"
+#~ msgstr "_Surt"
+
+#~ msgid "translator_credits"
+#~ msgstr ""
+#~ "Aleix Badia i Bosch <abadia@ica.es>\n"
+#~ "Raül Cambeiro <rulet@menta.net>\n"
+#~ "Jordi Mallach <jordi@sindominio.net>"

@@ -1,0 +1,10 @@
+Makefile
+Makefile.in
+glibtop.i
+glibtop.py
+glibtop_wrap.c
+libgtop_const
+*.l*
+*.pyc
+*.o
+*.so

@@ -1,0 +1,15 @@
+2003-08-27  Martin Grimme  <martin@pycage.de>
+
+	* __init__.py (External.__init__): Bug fixes for the thread. Thanks
+	to Psi for his suggestions.
+
+2003-08-23  Martin Grimme  <martin@pycage.de>
+
+	* __init__.py (External.__init__): The first tick occurs immediately
+	now.
+	(External.__on_tick): The sensor is now static for interval=0.
+
+2003-08-19  Martin Grimme  <martin@pycage.de>
+
+	* __init__.py (External.__init__): Fixed bug where you could not give
+	an interval argument to the sensor.

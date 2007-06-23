@@ -1,0 +1,309 @@
+<section id="tutor-controls"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Using Controls</title>
+
+<para>by Martin Grimme</para>
+
+
+<section><title>Introduction</title>
+
+  <para>Controls let your inline scripts access any kind of data. They are
+    easy-to-use sharable modules which provide you with more power. In this
+    tutorial we are going to make a digital clock with timezone support
+    which uses a time control for telling the time.</para>
+     
+</section>
+
+
+
+<section><title>Browsing Controls</title>
+
+  <para>Before you can use a control (unless you write it yourself), you have to
+    find it. The <application>gdesklets-shell</application> lets you browse all
+    the controls which are installed on your system.</para>
+
+  <para>Select the <literal>Controls</literal> view to enter the controls
+    browser. There you can, for example, choose the alphabetical list for
+    searching for a certain control.</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/controls-browse" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>For this tutorial, we're interested in a control for reading the
+    current time. So we look under "<literal>T</literal>" for "Time".</para>
+
+</section>
+
+
+
+<section><title>Inspecting Controls</title>
+
+  <para>Now that you have found the control, you can learn more about it by
+    inspecting its properties. To open the controls inspector, just double
+    click on the control in the list on the right side of the window.</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/controls-inspect" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>The controls inspector lists all available properties of the control
+    together with their access permissions and a short description. Each control
+    has a set of properties with which it can be configured and from which you
+    can read information.</para>
+
+  <para>Our time control, for example, provides a <property>time</property>
+    property for reading the current time. There are other properties available
+    as well, but for now, we're just interested in that
+    <property>time</property> property.</para>
+
+  <para>The "<literal>r</literal>" permission shown for the
+    <property>time</property> property means that this property can only be
+    read. It cannot be written. This makes sense, because you can only read
+    the time, but not change it.</para>
+
+</section>
+
+
+
+<section><title>Loading Controls</title>
+
+  <para>Before you can use a control, you have to load it first. If you took
+    a closer look at the control browser, you could see that every control
+    implements one or more interfaces, which define the set of available
+    properties. So two different controls implementing the same interfaces
+    would be perfectly interchangable.</para>
+
+  <para>Every interface has a unique identifier by which you can load controls.
+    The identifier is displayed by the controls inspector and can be copied and
+    pasted from there into your text editor.</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/controls-id" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>To load a control in your <filename>.display</filename> you specify
+    this ID in the <command>&lt;control&gt;</command> tag. This tag has a
+    property <property>interface</property> for the interface ID.
+    A compatible control is then looked up by searching for that interface.
+    The other property <property>id</property> specifies the identifier by
+    which you can access that control in the scripts.</para>
+
+  <programlisting><![CDATA[
+<display window-flags="sticky, below">
+
+  <control id="mytime" interface="ITime:9y703dqtfnv4w373caserz68r"/>
+
+</display>
+  ]]></programlisting>
+
+  <para>To avoid any mistakes, just copy and paste the interface ID from the
+    controls inspector.</para>
+
+  <para>Of course, there is no limitation in the number of controls used in
+    a <filename>.display</filename> file. You can have as many
+    <command>&lt;control&gt;</command> tags as you like.</para>
+
+</section>
+
+
+
+<section><title>Accessing the Control</title>
+
+  <para>The loaded control is an object with properties, which you can access
+    in the scripts.</para>
+
+  <programlisting><![CDATA[
+<script>
+
+  print "The current time is:"
+  print mytime.time
+
+</script>
+  ]]></programlisting>
+
+  <para>The <property>time</property> property of our time control returns the
+    current time as a triple of integers for hours, minutes, and seconds.</para>
+
+  <programlisting><![CDATA[
+<script>
+
+  h, m, s = mytime.time
+  print "The current time is:"
+  print "%2d:%2d.%2d" % (h, m, s)
+
+</script>
+  ]]></programlisting>
+
+  <para>Instead of printing out the values, we can also write them into a
+    label.</para>
+
+  <programlisting><![CDATA[
+<display window-flags="sticky, below">
+
+  <control id="mytime" interface="ITime:9y703dqtfnv4w373caserz68r"/>
+
+  <label id="mylabel" font="Mono 1cm" color="red"/>
+
+  <script><![CDATA[
+
+    h, m, s = mytime.time
+    Dsp.mylabel.value = "%2d:%2d.%2d" % (h, m, s)
+
+  ]]>]]&gt;<![CDATA[</script>
+
+</display>
+  ]]></programlisting>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/controls-time" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>Congratulations to your first controls-based applet!</para>
+
+</section>
+
+
+
+<section><title>Making the Clock Run</title>
+
+  <para>We have a clock applet so far, but still, the clock doesn't update its
+    time. Such a clock would show the correct time once a day, but we can make
+    it better.</para>
+
+  <para>The <property>time</property> property always contains the current time,
+    so we could continually poll the time from there by setting up a timer.
+    </para>
+
+  <programlisting>
+def timer():
+
+    h, m, s = mytime.time
+    Dsp.mylabel.value = "%2d:%2d.%2d" % (h, m, s)
+    return True
+
+# call the timer every 1000ms = 1s
+add_timer(1000, timer)
+  </programlisting>
+
+  <para>While this would work, it's not really good programming. Instead of
+    continually reading the property, we can watch it and receive notifications
+    only when it actually changes.</para>
+
+  <para>A property can be watched by binding a watching handler to it. Not all
+    properties support this, however, because it doesn't make sense always.
+    Our <property>time</property> property supports watching, so that we can
+    bind a handler to the property via the
+    <function>bind(name, handler)</function> method of the control.</para>
+
+  <programlisting>
+def myhandler(new_value):
+
+    h, m, s = new_value
+    Dsp.mylabel.value = "%2d:%2d.%2d" % (h, m, s)
+
+mytime.bind("time", myhandler)
+  </programlisting>
+
+  <para>In the example above, we are binding the function
+    <function>myhandler</function> to the <property>time</property> of the
+    control. Whenever the <property>time</property> property changes its value
+    (once a second, of course), our handler will be invoked with the new
+    value as its argument.</para>
+
+  <programlisting><![CDATA[
+<display window-flags="sticky, below">
+
+  <control id="mytime" interface="ITime:9y703dqtfnv4w373caserz68r"/>
+
+  <label id="mylabel" font="Mono 1cm" color="red"/>
+
+  <script><![CDATA[
+
+    def myhandler(new_value):
+    
+        h, m, s = new_value
+        Dsp.mylabel.value = "%2d:%2d.%2d" % (h, m, s)
+
+    mytime.bind("time", myhandler)
+
+  ]]>]]&gt;<![CDATA[</script>
+
+</display>
+  ]]></programlisting>
+
+  <para>Run this example and you will see that the clock now updates its time
+    correctly.</para>
+
+  <para>The <function>bind</function> method is available for every control.
+    Properties which don't support watching won't call the watching handler,
+    though.</para>
+
+</section>
+
+
+
+<section><title>Saving Configuration across Sessions</title>
+
+  <para>Controls can be configured by setting their property values. Our time
+    control, for example, can be set to a different time zone by setting its
+    <property>timezone</property> property.</para>
+
+  <programlisting><![CDATA[
+mytime.timezone = "Asia/Tokyo"
+  ]]></programlisting>
+
+  <para>By using the preferences system, you can make this property
+    user-configurable and save its value across sessions.
+    The <property>timezone</property> property contains a string. Thus we can
+    bind it to a <command>&lt;string&gt;</command> setting in the preferences
+    dialog.</para>
+
+  <programlisting><![CDATA[
+<display window-flags="sticky, below">
+
+  <control id="mytime" interface="ITime:9y703dqtfnv4w373caserz68r"/>
+
+  <label id="mylabel" font="Mono 1cm" color="red"/>
+
+
+  <prefs>
+
+    <string label="Timezone:" bind="mytime.timezone"/>
+
+  </prefs>
+
+
+  <script><![CDATA[
+
+    def myhandler(new_value):
+    
+        h, m, s = new_value
+        Dsp.mylabel.value = "%2d:%2d.%2d" % (h, m, s)
+
+    mytime.bind("time", myhandler)
+
+  ]]>]]&gt;<![CDATA[</script>
+
+</display>
+  ]]></programlisting>
+ 
+</section>
+
+
+</section>

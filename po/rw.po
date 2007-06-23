@@ -1,0 +1,1029 @@
+# translation of gdesklets to Kinyarwanda.
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gdesklets package.
+# Steve Murphy <murf@e-tools.com>, 2005
+# Steve performed initial rough translation from compendium built from translations provided by the following translators:
+# Philibert Ndandali  <ndandali@yahoo.fr>, 2005.
+# Viateur MUGENZI <muvia1@yahoo.fr>, 2005.
+# Noëlla Mupole <s24211045@tuks.co.za>, 2005.
+# Carole Karema <karemacarole@hotmail.com>, 2005.
+# JEAN BAPTISTE NGENDAHAYO <ngenda_denis@yahoo.co.uk>, 2005.
+# Augustin KIBERWA  <akiberwa@yahoo.co.uk>, 2005.
+# Donatien NSENGIYUMVA <ndonatienuk@yahoo.co.uk>, 2005..
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gdesklets HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-04-01 11:55-0700\n"
+"PO-Revision-Date: 2005-03-31 20:55-0700\n"
+"Last-Translator: Steve Murphy <murf@e-tools.com>\n"
+"Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"ULL NAME <EMAIL@ADDRESS>\n"
+
+#: config/ConfigDialog.py:94
+msgid "Invalid Function Call"
+msgstr ""
+
+#: config/ConfigDialog.py:95
+#, fuzzy, python-format
+msgid ""
+"There is no function called <b>%s</b>.\n"
+"This means that there's an error in the desklet's code. You should inform "
+"the author of the desklet about this problem."
+msgstr ""
+"ni Oya Umumaro B B Ikosa in i ITEGEKONGENGA i Umwanditsi Bya i Ibyerekeye iyi"
+
+#: config/ConfigDialog.py:207 display/DisplayConfigurator.py:32
+#, fuzzy
+msgid "This desklet is not configurable."
+msgstr "ni OYA"
+
+#: config/ConfigUnit.py:57
+msgid "pixel"
+msgstr ""
+
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Calc.xcs:....Layout.Other.MeasureUnit.Metric..6.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Calc.xcs:....Layout.Other.MeasureUnit.NonMetric..6.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Impress.xcs:....Layout.Other.MeasureUnit.Metric..6.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Impress.xcs:....Layout.Other.MeasureUnit.NonMetric..6.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Draw.xcs:....Layout.Other.MeasureUnit.Metric..6.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Draw.xcs:....Layout.Other.MeasureUnit.NonMetric..6.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\WriterWeb.xcs:....Layout.Window.HorizontalRulerUnit..6.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\WriterWeb.xcs:....Layout.Window.VerticalRulerUnit..6.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\WriterWeb.xcs:....Layout.Other.MeasureUnit..6.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Layout.Window.HorizontalRulerUnit..6.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Layout.Window.VerticalRulerUnit..6.text
+# #-#-#-#-#  officecfg.pot (PACKAGE VERSION)  #-#-#-#-#
+# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Layout.Other.MeasureUnit..6.text
+#: config/ConfigUnit.py:58
+#, fuzzy
+msgid "point"
+msgstr "Akadomo"
+
+# vcl/source\src\units.src:SV_FUNIT_STRINGS.2.text
+#: config/ConfigUnit.py:59
+msgid "cm"
+msgstr "cm"
+
+# vcl/source\src\units.src:SV_FUNIT_STRINGS.11.text
+#: config/ConfigUnit.py:60
+msgid "inch"
+msgstr "inshi"
+
+#: config/DaemonConfigger.py:23
+#, fuzzy
+msgid ""
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
+"\"</b> wide"
+msgstr "i Agaciro hejuru i B 5 cm B Cyangwa B 1. B"
+
+# #-#-#-#-#  sfx2.pot (PACKAGE VERSION)  #-#-#-#-#
+# sfx2/source\appl\app.src:STR_KEY_CONFIG_DIR.text
+# #-#-#-#-#  sfx2.pot (PACKAGE VERSION)  #-#-#-#-#
+# sfx2/source\config\config.src:STR_FILTERNAME_CFG.text
+# #-#-#-#-#  sfx2.pot (PACKAGE VERSION)  #-#-#-#-#
+# sfx2/source\dialog\cfg.src:DLG_CONFIG.text
+# #-#-#-#-#  sfx2.pot (PACKAGE VERSION)  #-#-#-#-#
+# sfx2/source\doc\doc.src:STR_CONFIG.text
+#: config/DaemonConfigger.py:36 config/DisplayConfigger.py:27
+#: display/DisplayConfigurator.py:16
+msgid "Configuration"
+msgstr "Iboneza"
+
+#: data/gdesklets.desktop.in.h:1 main/__init__.py:84
+#, fuzzy
+msgid "A desktop applet system for GNOME"
+msgstr "A Ibiro Apuleti... Sisitemu kugirango"
+
+#: data/gdesklets.xml.in.h:1
+#, fuzzy
+msgid "gDesklets display"
+msgstr "Kugaragaza"
+
+#: display/Display.py:69
+msgid "_Configure desklet"
+msgstr ""
+
+#: display/Display.py:70
+msgid "_Move desklet"
+msgstr ""
+
+#: display/Display.py:72
+msgid "_View Source"
+msgstr ""
+
+#: display/Display.py:74
+msgid "Re_start desklet"
+msgstr ""
+
+#: display/Display.py:75
+msgid "_Remove desklet"
+msgstr ""
+
+#: display/Display.py:885 shell/plugins/DisplayBrowser/__init__.py:142
+#, fuzzy
+msgid "Do you really want to remove this desklet ?"
+msgstr "Kuri Gukuraho... iyi"
+
+#: display/Display.py:886
+#, fuzzy
+msgid ""
+"This desklet will no longer be displayed and its configuration will be "
+"purged."
+msgstr "Oya Na Iboneza"
+
+#: factory/DisplayFactory.py:92
+#, fuzzy
+msgid "XML parse error"
+msgstr "Ikosa"
+
+#: factory/DisplayFactory.py:93
+#, fuzzy
+msgid "This .display file has invalid XML syntax."
+msgstr "Kugaragaza IDOSIYE Sibyo"
+
+#: factory/DisplayFactory.py:117
+msgid "Error while configuring desklet"
+msgstr ""
+
+#: factory/DisplayFactory.py:118
+#, fuzzy
+msgid ""
+"A desklet could not be configured properly. It will most likely be broken "
+"and you should consider removing it."
+msgstr "A OYA Na"
+
+#: factory/DisplayFactory.py:231
+#, fuzzy
+msgid "File doesn't exist or couldn't be loaded"
+msgstr "Idosiye Cyangwa"
+
+#: factory/DisplayFactory.py:233
+#, fuzzy
+msgid "A file which contains a script isn't available for further execution."
+msgstr "A IDOSIYE Kirimo a IYANDIKA si Bihari kugirango"
+
+#: factory/DisplayFactory.py:256
+#, fuzzy
+msgid "Could not load sensor"
+msgstr "OYA Ibirimo"
+
+#: factory/DisplayFactory.py:271
+#, fuzzy, python-format
+msgid "&lt;%s&gt; needs a bind attribute"
+msgstr "a Ikiranga"
+
+#: factory/DisplayFactory.py:273
+#, fuzzy
+msgid "The &lt;prefs&gt; section of this desklet file is broken."
+msgstr "Icyiciro Bya iyi IDOSIYE ni"
+
+#: factory/SensorFactory.py:68
+#, fuzzy, python-format
+msgid "Error in sensor '%(name)s'"
+msgstr "in Izina:"
+
+#: factory/SensorFactory.py:69
+#, fuzzy
+msgid ""
+"An error occurred while loading a sensor. This most likely means that your "
+"system does not fulfill all its requirements."
+msgstr "Ikosa Itangira... a Sisitemu OYA Byose"
+
+#: factory/SensorFactory.py:87
+#, fuzzy, python-format
+msgid "Error in sensor %(name)s"
+msgstr "in Izina: S"
+
+#: factory/SensorFactory.py:88
+#, fuzzy
+msgid "An error occurred while running a sensor."
+msgstr "Ikosa a"
+
+#: factory/SensorFactory.py:98
+#, fuzzy, python-format
+msgid "Could not find sensor '%(name)s'"
+msgstr "OYA Gushaka Izina:"
+
+#: factory/SensorFactory.py:99
+#, fuzzy
+msgid ""
+"A sensor could not be found. This usually means that it has not been "
+"installed."
+msgstr "A OYA Byabonetse OYA"
+
+#: gdesklets:26
+#, fuzzy
+msgid "You must NOT run gDesklets as super user (root)."
+msgstr "Gukoresha Nka hejuru Ukoresha: Imizi"
+
+#: gdesklets:35
+msgid "Checking requirements:"
+msgstr ""
+
+#: gdesklets:39
+#, fuzzy
+msgid "Python version => 2.3.0 is required."
+msgstr "3.."
+
+#: gdesklets:43
+#, fuzzy
+msgid "libexpat version 1.95.7 is broken. Please upgrade!"
+msgstr "Verisiyo 1. 7 ni"
+
+#: gdesklets:46
+#, fuzzy
+msgid "SAX parser is required, some SuSE versions ship without it."
+msgstr "ni Bya ngombwa Uburyo"
+
+#: gdesklets:50
+#, fuzzy
+msgid ""
+"GTK python bindings (pygtk2) version >= 2.4.0 and GTK+ version >= 2.4.0 are "
+"required."
+msgstr "4.. 4.."
+
+#: gdesklets:54
+#, fuzzy
+msgid "ORBit python bindings (pyorbit) version == 2.0.1 are required."
+msgstr "0."
+
+#: gdesklets:57
+#, fuzzy
+msgid "bonobo python bindings are required."
+msgstr "Ibyafataranyijwe Bya ngombwa"
+
+# sw/source\ui\uiview\view.src:MSG_INDEX_OVERFLOW.text
+#: gdesklets:66
+#, fuzzy
+msgid "found"
+msgstr "Byabonetse"
+
+#: gdesklets:70
+#, fuzzy
+msgid "missing"
+msgstr "Ibuze"
+
+#: gdesklets:76
+#, fuzzy
+msgid "Version check failed."
+msgstr "Kugenzura... Byanze"
+
+# basctl/source\basicide\basidesh.src:RID_IMGBTN_REMOVEWATCH.text
+#: gdesklets:77
+#, fuzzy, c-format
+msgid ""
+"\n"
+"%s\n"
+msgstr "%s"
+
+#: gdesklets:78
+#, fuzzy
+msgid ""
+"Please make sure that the required software is installed.\n"
+"Also try to avoid having multiple versions of a library/binding on your "
+"system.\n"
+"gDesklets won't work if you don't have all necessary dependencies installed\n"
+"on your system.\n"
+"\n"
+"THE STARTUP WILL BE CANCELLED NOW!\n"
+msgstr ""
+"Ubwoko i Bya ngombwa ni Kuri Igikubo Uburyo Bya a Isomero Bifatanya ku "
+"Sisitemu Akazi NIBA Byose Sisitemu"
+
+#: gdesklets:94
+#, fuzzy
+msgid ""
+"\n"
+"You're running gDesklets for the first time.\n"
+"gDesklets will start a requirements check now...\n"
+msgstr "kugirango i Itangira Igihe Gutangira a Kugenzura... NONEAHA"
+
+#: gdesklets:105
+#, fuzzy
+msgid ""
+"Usage: gdesklets [option] <command> [arguments...]\n"
+"\n"
+"\t<command>\n"
+"\t\topen    <files>   (Opens the given desklet files)\n"
+"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
+"\t\tstop              (Stops the gDesklets daemon)\n"
+"\t\tlist              (Lists open desklets)\n"
+"\t\trestart           (Restarts the gDesklets daemon)\n"
+"\t\tprofile <profile> (Switches to the given profile)\n"
+"\t\tprofile           (Shows the current and the available profiles)\n"
+"\t\tshell             (Opens the graphical shell)\n"
+"\t\tslay              (Kills the daemon -- use in emergency)\n"
+"\t\tstatus            (Checks daemon status)\n"
+"\t\tabout             (Prints information about gDesklets)\n"
+"\t\tversion           (Prints gDesklets version)\n"
+"\t\tconfigure         (Opens the configuration dialog)\n"
+"\t\thelp              (Displays this text)\n"
+"\t\tcheck             (Checks requirements)\n"
+"\n"
+"\t[option]\n"
+"\t\t--no-tray-icon    (disables the systray icon)\n"
+"\t\t--translucent     (enables translucency on the xorg servers)\n"
+msgstr ""
+"Ihitamo Komandi: ingingo Komandi: Gufungura Idosiye i Idosiye Gutangira i "
+"iyi ni Mburabuzi Guhagarara i Urutonde Gufungura Ongera utangire i Ibijyana "
+"Ibijyana Kuri i Ibijyana Ibijyana i KIGEZWEHO Na i Bihari Igikonoshwa i "
+"Igikonoshwa i Gukoresha in Imimerere Imimerere Ibyerekeye Ibisobanuro "
+"Ibyerekeye Verisiyo Verisiyo Kugena Imiterere i Iboneza Ikiganiro "
+"Ifashayobora iyi Umwandiko Kugenzura... Ihitamo Oya Agashushondanga i "
+"Agashushondanga ku i"
+
+#: gdesklets:178 gdesklets:252
+#, fuzzy, c-format
+msgid "Could not open desklet %s."
+msgstr "OYA Gufungura"
+
+#: gdesklets:260
+msgid "Starting gdesklets-daemon..."
+msgstr ""
+
+#: gdesklets:266
+#, fuzzy
+msgid "Shutting down gdesklets-daemon..."
+msgstr "Hasi"
+
+#: gdesklets:278
+#, fuzzy, c-format
+msgid "Currently open displays in profile \"%s\":\n"
+msgstr "Gufungura in Ibijyana"
+
+#: gdesklets:283
+#, fuzzy, c-format
+msgid "Currently there aren't any desklets in profile \"%s\""
+msgstr "in Ibijyana"
+
+#: gdesklets:287
+msgid "Restarting gdesklets-daemon..."
+msgstr ""
+
+#: gdesklets:300
+#, fuzzy
+msgid "gdesklets-daemon is running"
+msgstr "ni"
+
+#: gdesklets:302
+#, fuzzy
+msgid "gdesklets-daemon is not running"
+msgstr "ni OYA"
+
+#: gdesklets:306
+#, fuzzy, c-format
+msgid "Current profile: %s"
+msgstr "Ibijyana"
+
+#: gdesklets:317
+#, fuzzy, c-format
+msgid "New profile: %s"
+msgstr "Ibijyana"
+
+#: gdesklets:320
+#, fuzzy, c-format
+msgid "Available profiles: %s"
+msgstr "Ibiranga bihari"
+
+#: gdesklets:324
+#, fuzzy, c-format
+msgid "This is %s, version %s."
+msgstr "ni Verisiyo"
+
+#: gdesklets:352
+#, fuzzy
+msgid "Nothing to slay."
+msgstr "Kuri"
+
+#: gdesklets:377
+#, fuzzy
+msgid "Invalid command. Please try one of the following commands:"
+msgstr "Komandi: Bya i Amabwiriza"
+
+#: gdesklets-daemon:20
+#, fuzzy
+msgid "You need a recent version of PyGTK to run this program.\n"
+msgstr "a Verisiyo Bya Kuri Gukoresha iyi Porogaramu"
+
+#: gdesklets-daemon:48
+#, fuzzy
+msgid "Could not fork daemon.\n"
+msgstr "OYA"
+
+#: gdesklets-daemon:69 gdesklets-daemon:89
+#, fuzzy, c-format
+msgid "The following error occurred: %s\n"
+msgstr "Ikosa"
+
+#: libdesklets/convert.py:21
+#, fuzzy, python-format
+msgid "%.2f TB"
+msgstr ""
+"%.Project- Id- Version: basctl\n"
+"POT- Creation- Date: 2003- 12- 07 17: 13+ 02\n"
+"PO- Revision- Date: 2004- 11- 04 10: 13- 0700\n"
+"Last- Translator: Language- Team:< en@ li. org> MIME- Version: 1. 0\n"
+"Content- Type: text/ plain; charset= UTF- 8\n"
+"Content- Transfer- Encoding: 8bit\n"
+"X- Generator: KBabel 1. 0\n"
+"."
+
+#: libdesklets/convert.py:23
+#, fuzzy, python-format
+msgid "%.2f GB"
+msgstr ""
+"%.Project- Id- Version: basctl\n"
+"POT- Creation- Date: 2003- 12- 07 17: 13+ 02\n"
+"PO- Revision- Date: 2004- 11- 04 10: 13- 0700\n"
+"Last- Translator: Language- Team:< en@ li. org> MIME- Version: 1. 0\n"
+"Content- Type: text/ plain; charset= UTF- 8\n"
+"Content- Transfer- Encoding: 8bit\n"
+"X- Generator: KBabel 1. 0\n"
+"."
+
+#: libdesklets/convert.py:25
+#, fuzzy, python-format
+msgid "%.2f MB"
+msgstr ""
+"%.Project- Id- Version: basctl\n"
+"POT- Creation- Date: 2003- 12- 07 17: 13+ 02\n"
+"PO- Revision- Date: 2004- 11- 04 10: 13- 0700\n"
+"Last- Translator: Language- Team:< en@ li. org> MIME- Version: 1. 0\n"
+"Content- Type: text/ plain; charset= UTF- 8\n"
+"Content- Transfer- Encoding: 8bit\n"
+"X- Generator: KBabel 1. 0\n"
+"."
+
+#: libdesklets/convert.py:27
+#, fuzzy, python-format
+msgid "%.2f kB"
+msgstr ""
+"%.Project- Id- Version: basctl\n"
+"POT- Creation- Date: 2003- 12- 07 17: 13+ 02\n"
+"PO- Revision- Date: 2004- 11- 04 10: 13- 0700\n"
+"Last- Translator: Language- Team:< en@ li. org> MIME- Version: 1. 0\n"
+"Content- Type: text/ plain; charset= UTF- 8\n"
+"Content- Transfer- Encoding: 8bit\n"
+"X- Generator: KBabel 1. 0\n"
+"."
+
+#: libdesklets/convert.py:29
+#, python-format
+msgid "%d B"
+msgstr ""
+
+#: main/AboutDialog.py:21
+msgid "About gDesklets"
+msgstr ""
+
+#: main/client.py:283
+#, fuzzy, python-format
+msgid "Connecting to daemon [%s]"
+msgstr "Kuri"
+
+#: main/client.py:300
+#, fuzzy
+msgid ""
+"Cannot establish connection to daemon: timeout!\n"
+"The log file might help you solving the problem."
+msgstr "Ukwihuza Kuri Igihe cyarenze: LOG IDOSIYE Ifashayobora i"
+
+#: main/client.py:306
+#, fuzzy, python-format
+msgid "Connected to daemon in %d microseconds."
+msgstr "Kuri in"
+
+#: main/client.py:309
+#, fuzzy, python-format
+msgid "Connected to daemon in %d milliseconds."
+msgstr "Kuri in"
+
+# sfx2/source\dialog\filedlghelper.src:STR_LB_VERSION.text
+#: main/__init__.py:94
+#, fuzzy, python-format
+msgid "Version %s"
+msgstr "Uburyo:"
+
+#: main/__init__.py:97
+msgid "Core Programming:"
+msgstr ""
+
+#: main/__init__.py:101
+msgid "Architecture Design:"
+msgstr ""
+
+# scp/source\gnome\module_gnome.lng:STR_NAME_MODULE_OPTIONAL_GNOME.text
+#: main/__init__.py:104
+#, fuzzy
+msgid "GNOME Integration:"
+msgstr "Ihurizahamwe GNOME"
+
+#: main/__init__.py:108
+msgid "Artwork:"
+msgstr ""
+
+#: main/__init__.py:111
+#, fuzzy
+msgid "Website:"
+msgstr "Webu"
+
+#: main/__init__.py:114
+msgid "Thank you:"
+msgstr ""
+
+#: main/Starter.py:86
+msgid "_Manage desklets"
+msgstr ""
+
+# #-#-#-#-#  sfx2.pot (PACKAGE VERSION)  #-#-#-#-#
+# sfx2/source\appl\app.src:STR_KEY_CONFIG_DIR.text
+# #-#-#-#-#  sfx2.pot (PACKAGE VERSION)  #-#-#-#-#
+# sfx2/source\config\config.src:STR_FILTERNAME_CFG.text
+# #-#-#-#-#  sfx2.pot (PACKAGE VERSION)  #-#-#-#-#
+# sfx2/source\dialog\cfg.src:DLG_CONFIG.text
+# #-#-#-#-#  sfx2.pot (PACKAGE VERSION)  #-#-#-#-#
+# sfx2/source\doc\doc.src:STR_CONFIG.text
+#: main/Starter.py:89
+#, fuzzy
+msgid "_Configuration"
+msgstr "Iboneza"
+
+#: main/Starter.py:91
+#, fuzzy
+msgid "_View log"
+msgstr "LOG"
+
+# offmgr/source\offapp\intro\intro.hrc:TEXT_DEFAULTABOUT.text
+#: main/Starter.py:94 shell/plugins/Help/__init__.py:41
+#, fuzzy
+msgid "_About..."
+msgstr "Ibyerekeye"
+
+#: main/Starter.py:97
+msgid "_Stop daemon"
+msgstr ""
+
+#: main/Starter.py:175
+#, fuzzy, python-format
+msgid "Could not open desklet file \"%s\""
+msgstr "OYA Gufungura IDOSIYE"
+
+#: main/Starter.py:176
+#, fuzzy
+msgid "The desklet file could not be opened because the file was not readable."
+msgstr "IDOSIYE OYA i IDOSIYE OYA"
+
+#: main/Starter.py:184
+#, fuzzy, python-format
+msgid "Invalid desklet file \"%s\""
+msgstr "IDOSIYE"
+
+#: main/Starter.py:185
+#, fuzzy
+msgid "The desklet file contains invalid data and could not be loaded."
+msgstr "IDOSIYE Kirimo Sibyo Ibyatanzwe Na OYA"
+
+#: plugin/Interface.py:200 plugin/Interface.py:227
+#, fuzzy
+msgid "no description"
+msgstr "Oya Isobanuramiterere"
+
+#: scripting/Script.py:164
+#, fuzzy
+msgid "Error in script"
+msgstr "in IYANDIKA"
+
+#: scripting/Script.py:165
+#, fuzzy
+msgid "An error occurred while executing a script."
+msgstr "Ikosa Gukora:%s a IYANDIKA"
+
+#: scripting/Script.py:191
+#, fuzzy
+msgid "Error in add_timer function"
+msgstr "in Umumaro"
+
+#: scripting/Script.py:192
+#, fuzzy, python-format
+msgid "\"%s\" isn't a valid integer value!"
+msgstr "\"%s\"si a Byemewe Umubare wuzuye Agaciro"
+
+#: scripting/Script.py:233
+#, fuzzy, python-format
+msgid "No Control could be found for interface %s"
+msgstr "Byabonetse kugirango"
+
+#: scripting/Script.py:235
+#, fuzzy
+msgid "This means that a functionality won't be available during execution!"
+msgstr "a Bihari"
+
+#: scripting/Script.py:264
+msgid "Security Risk"
+msgstr ""
+
+#: scripting/Script.py:265
+#, fuzzy, python-format
+msgid ""
+"The desklet %s wants to execute a system command:\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"To protect your system from malicious programs, you can deny the execution "
+"of this command.\n"
+"\n"
+"If you are sure that the command is harmless, you may permanently allow this "
+"desklet instance to run it."
+msgstr ""
+"Kuri Gukora a Sisitemu Komandi: B B Kurinda Sisitemu Bivuye Porogaramu Anga "
+"i Bya iyi Komandi: i Komandi: ni Gicurasi Kwemerera iyi Urugero Kuri "
+"Gukoresha"
+
+#: scripting/Script.py:278
+#, fuzzy
+msgid "Deny!"
+msgstr "Anga"
+
+#: scripting/Script.py:279
+#, fuzzy
+msgid "Allow once"
+msgstr "Rimwe"
+
+#: scripting/Script.py:280
+#, fuzzy
+msgid "Allow for this desklet"
+msgstr "kugirango iyi"
+
+# #-#-#-#-#  offmgr.pot (PACKAGE VERSION)  #-#-#-#-#
+# offmgr/source\offapp\dialog\fontsubs.src:RID_SVX_FONT_SUBSTITUTION.FT_FONTNAME.text
+# #-#-#-#-#  offmgr.pot (PACKAGE VERSION)  #-#-#-#-#
+# offmgr/source\offapp\dialog\treeopt.src:RID_OFADLG_OPTIONS_TREE_PAGES.SID_GENERAL_OPTIONS.10.text
+#: Sensors/FontSelector/__init__.py:86
+msgid "Fonts"
+msgstr "Imyandikire"
+
+#: Sensors/FontSelector/__init__.py:87
+#, fuzzy
+msgid "Fonts settings"
+msgstr "Amagenamiterere"
+
+#: Sensors/FontSelector/__init__.py:90
+#, fuzzy, python-format
+msgid "Font #%i:"
+msgstr "Intego- nyuguti"
+
+#: Sensors/FontSelector/__init__.py:92
+#, fuzzy, python-format
+msgid "Font #%i used in the labels"
+msgstr "in i Uturango..."
+
+# svx/sdi\svxslots.src:SID_ATTR_CHAR_COLOR.text
+#: Sensors/FontSelector/__init__.py:93
+#, fuzzy, python-format
+msgid "Font color #%i:"
+msgstr "Ibara ry'Umukono"
+
+#: Sensors/FontSelector/__init__.py:95
+#, fuzzy, python-format
+msgid "Font color #%i used in the labels"
+msgstr "Ibara in i Uturango..."
+
+#: shell/plugins/ControlBrowser/ControlInspector.py:16
+#, python-format
+msgid "%s Control"
+msgstr ""
+
+#: shell/plugins/ControlBrowser/ControlInspector.py:55
+msgid "Interface Name"
+msgstr ""
+
+#: shell/plugins/ControlBrowser/ControlInspector.py:58
+msgid "Property Name"
+msgstr ""
+
+#: shell/plugins/ControlBrowser/ControlInspector.py:61
+msgid "Property Access"
+msgstr ""
+
+#: shell/plugins/ControlBrowser/ControlInspector.py:64
+msgid "Property Description"
+msgstr ""
+
+#: shell/plugins/ControlBrowser/__init__.py:27
+#, fuzzy
+msgid "by interface"
+msgstr "ku"
+
+#: shell/plugins/ControlBrowser/__init__.py:28
+#: shell/plugins/DisplayBrowser/__init__.py:80
+msgid "alphabetically"
+msgstr ""
+
+#: shell/plugins/ControlBrowser/__init__.py:72
+#, fuzzy, python-format
+msgid "Found %d controls."
+msgstr "Amagenzura"
+
+#: shell/plugins/ControlBrowser/__init__.py:75
+#: shell/plugins/DisplayBrowser/__init__.py:158
+#, fuzzy
+msgid "Invalid search expression."
+msgstr "Gushaka imvugo"
+
+#: shell/plugins/DisplayBrowser/__init__.py:40
+#, fuzzy
+msgid "R_emove selected desklet"
+msgstr "Byahiswemo"
+
+#: shell/plugins/DisplayBrowser/__init__.py:43
+msgid "_Run (remote) desklet..."
+msgstr ""
+
+#: shell/plugins/DisplayBrowser/__init__.py:45
+#, fuzzy
+msgid "R_un selected desklet"
+msgstr "Byahiswemo"
+
+#: shell/plugins/DisplayBrowser/__init__.py:78
+#, fuzzy
+msgid "by category"
+msgstr "ku Icyiciro"
+
+# sc/source\ui\src\opredlin.src:RID_SCPAGE_OPREDLINE.STR_AUTHOR.text
+#: shell/plugins/DisplayBrowser/__init__.py:79
+#, fuzzy
+msgid "by author"
+msgstr "N'umwanditsi"
+
+#: shell/plugins/DisplayBrowser/__init__.py:130
+#, fuzzy
+msgid "Could not remove"
+msgstr "OYA Gukuraho..."
+
+#: shell/plugins/DisplayBrowser/__init__.py:131
+#, fuzzy
+msgid ""
+"The desklet file could not be removed. This most likely means that you do "
+"not have write permission on it."
+msgstr "IDOSIYE OYA Cyavanyweho OYA Kwandika ku"
+
+#: shell/plugins/DisplayBrowser/__init__.py:143
+#, fuzzy
+msgid ""
+"The desklet will be removed from your system and no longer be available."
+msgstr "Cyavanyweho Bivuye Sisitemu Na Oya Bihari"
+
+#: shell/plugins/DisplayBrowser/__init__.py:155
+#, python-format
+msgid "Found %d desklets"
+msgstr ""
+
+#: shell/plugins/DisplayBrowser/__init__.py:177
+#, fuzzy
+msgid "No description available"
+msgstr "Isobanuramiterere Bihari"
+
+#: shell/plugins/Help/__init__.py:37
+#, fuzzy
+msgid "_Help"
+msgstr "Ifashayobora"
+
+#: shell/plugins/Help/__init__.py:38
+#, fuzzy
+msgid "_Tip of the Day"
+msgstr "Bya i"
+
+#: shell/plugins/Help/TipOfTheDay.py:24
+#, fuzzy
+msgid "Tip of the Day"
+msgstr "Bya i"
+
+#: shell/plugins/Help/TipOfTheDay.py:32
+#, fuzzy
+msgid "Show tips at startup"
+msgstr "Inyobora ku"
+
+#: shell/plugins/Help/tips.py:2
+#, fuzzy
+msgid ""
+"You can find lots of desktop applets for use\n"
+"with gDesklets at\n"
+"\n"
+"http://gdesklets.gnomedesktop.org"
+msgstr "Gushaka Bya Ibiro Apuleti kugirango org"
+
+#: shell/plugins/Help/tips.py:7
+#, fuzzy
+msgid ""
+"You can install new desktop applets easily by\n"
+"dragging the download link for the package\n"
+"from your web browser into the gDesklets Shell."
+msgstr ""
+"Kwinjiza porogaramu Gishya Ibiro Apuleti i Gufungura Ihuza kugirango i "
+"Urubuga Mucukumbuzi i"
+
+#: shell/plugins/Help/tips.py:11
+#, fuzzy
+msgid ""
+"Click the right mouse button on a desktop\n"
+"applet or press F10 to open the popup menu."
+msgstr ""
+"i Iburyo: Imbeba Akabuto ku a Cyangwa Kanda Kuri Gufungura i Ibikubiyemo"
+
+#: shell/plugins/Help/tips.py:14
+#, fuzzy
+msgid ""
+"You can move the applets around the screen\n"
+"by holding down the middle mouse button.\n"
+"\n"
+"If your mouse has only two buttons,\n"
+"hold down both of them simultaneously\n"
+"in order to simulate the middle button."
+msgstr ""
+"Kwimura i Apuleti i Hasi i Hagati Imbeba Akabuto Imbeba Utubuto Hasi Byombi "
+"Bya Itondekanya Kuri i Hagati Akabuto"
+
+#: shell/plugins/Help/tips.py:21
+#, fuzzy
+msgid ""
+"You can have different profiles of\n"
+"desktop applets and switch between them.\n"
+"\n"
+"Select \"Profiles->New profile...\" from\n"
+"the menu bar to create new profiles.\n"
+"\n"
+"Empty profiles get discarded automatically."
+msgstr ""
+"Apuleti Na Hindura hagati Ibijyana Ibikubiyemo Kuri Kurema Gishya Kubona ku "
+"buryo bwikora"
+
+#: shell/plugins/Help/tips.py:29
+#, fuzzy
+msgid ""
+"The search bar accepts complex search\n"
+"expressions for finding your applets."
+msgstr "Gushaka ITSINDA RY'IMIBARE C kugirango Apuleti"
+
+#: shell/plugins/Help/tips.py:32
+#, fuzzy
+msgid ""
+"Search expressions may contain wildcards:\n"
+"\n"
+" ? matches any one character\n"
+" * matches zero or more characters"
+msgstr "Gicurasi Zeru Cyangwa Birenzeho Inyuguti"
+
+#: shell/plugins/PackageInstaller/Downloader.py:29
+msgid "Retrieving:"
+msgstr ""
+
+#: shell/plugins/PackageInstaller/__init__.py:26
+msgid "I_nstall remote package..."
+msgstr ""
+
+#: shell/plugins/PackageInstaller/__init__.py:27
+msgid "_Install package..."
+msgstr ""
+
+#: shell/plugins/PackageInstaller/__init__.py:97
+msgid "Invalid package"
+msgstr ""
+
+#: shell/plugins/PackageInstaller/__init__.py:98
+#, fuzzy
+msgid ""
+"The supplied file could not be opened as a package. It is either corrupted "
+"or not of the correct file type."
+msgstr "IDOSIYE OYA Nka a ni Cyangwa OYA Bya i IDOSIYE Ubwoko"
+
+#: shell/plugins/PackageInstaller/__init__.py:115
+#, fuzzy
+msgid "Installation failed"
+msgstr "Byanze"
+
+#: shell/plugins/PackageInstaller/__init__.py:116
+#, fuzzy
+msgid ""
+"The package could not be installed because it contained no installable files."
+msgstr "OYA Oya Idosiye"
+
+# setup2/source\ui\pages\vefun.src:RESID_PAGE_PAGEHAVEFUN.STR_TITLE.text
+#: shell/plugins/PackageInstaller/__init__.py:119
+#, fuzzy
+msgid "Installation complete"
+msgstr "Iyinjizaporogaramu ryarangiye"
+
+#: shell/plugins/Profiles/__init__.py:18
+msgid "_Profiles"
+msgstr ""
+
+#: shell/plugins/Profiles/__init__.py:20
+#, fuzzy
+msgid "New profile..."
+msgstr "Ibijyana"
+
+#: shell/plugins/Profiles/__init__.py:75
+#, fuzzy
+msgid "New profile"
+msgstr "Ibijyana"
+
+#: shell/plugins/Profiles/__init__.py:76
+#, fuzzy
+msgid "Enter the name for a new profile"
+msgstr "i Izina: kugirango a Gishya Ibijyana"
+
+# sc/source\ui\src\globstr.src:RID_GLOBSTR.STR_HFCMD_FILE.text
+#: shell/plugins/Shell/__init__.py:62
+#, fuzzy
+msgid "_File"
+msgstr "IDOSIYE"
+
+# #-#-#-#-#  offmgr.pot (PACKAGE VERSION)  #-#-#-#-#
+# offmgr/source\offapp\dialog\inetdlg.src:RID_OFADLG_INTERNET.1.RID_SVXPAGE_INET_SEARCH.text
+# #-#-#-#-#  offmgr.pot (PACKAGE VERSION)  #-#-#-#-#
+# offmgr/source\offapp\dialog\treeopt.src:RID_OFADLG_OPTIONS_TREE_PAGES.SID_INET_DLG.3.text
+#: shell/SearchBar.py:20
+msgid "Search"
+msgstr "Gushaka"
+
+#: utils/dialog.py:42
+#, fuzzy, python-format
+msgid "_Details (%d lines)"
+msgstr "Imirongo"
+
+#: utils/DOM.py:36
+#, fuzzy
+msgid "SVG parse error"
+msgstr "Ikosa"
+
+#: utils/DOM.py:37
+#, fuzzy
+msgid "An invalid graphics code was loaded into a canvas."
+msgstr "Sibyo Ibishushanyo ITEGEKONGENGA a"
+
+#: utils/DOM.py:161
+#, fuzzy, python-format
+msgid "No such element: %s"
+msgstr "Ikigize:"
+
+#: utils/DOM.py:162
+#, fuzzy, python-format
+msgid "The element with ID <b>%s</b> does not exist in the SVG image."
+msgstr "Ikigize: Na: B B OYA in i Ishusho"
+
+#: utils/DOM.py:191 utils/Element.py:92
+#, fuzzy, python-format
+msgid "No such property: %s"
+msgstr "indangakintu"
+
+#: utils/DOM.py:192
+#, fuzzy, python-format
+msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
+msgstr "Ikigize: B B OYA i B B indangakintu"
+
+#: utils/Element.py:93
+#, fuzzy, python-format
+msgid "The element <b>%s</b> does not have the <b>%s</b> property."
+msgstr "Ikigize: B B OYA i B B indangakintu"
+
+#: utils/Element.py:98 utils/Element.py:130
+msgid "Permission Error"
+msgstr ""
+
+#: utils/Element.py:99
+#, fuzzy, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
+msgstr "indangakintu B B Bya Ikigize: B B ni OYA"
+
+#: utils/Element.py:108
+msgid "Type Error"
+msgstr ""
+
+#: utils/Element.py:109
+#, fuzzy, python-format
+msgid ""
+"The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
+"Expected <b>%s</b>, but got <b>%s</b>."
+msgstr ""
+"indangakintu B B Bya Ikigize: B B a Agaciro Bya Ubwoko Itegerejwe B B B B"
+
+#: utils/Element.py:131
+#, fuzzy, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
+msgstr "indangakintu B B Bya Ikigize: B B ni OYA"

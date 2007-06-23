@@ -1,0 +1,130 @@
+#! /usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+import __builtin__
+import main
+import os
+import sys
+
+
+# set up i18n
+from utils import i18n
+__builtin__._ = i18n.Translator("gdesklets")
+
+
+# setup GTK
+try:
+    import pygtk
+    pygtk.require("2.0")
+except StandardError:
+    print _("You need a recent version of PyGTK to run this program.\n")
+    sys.exit(1983)
+
+
+def _detach_as_daemon():
+
+    """
+    Performs the UNIX double fork to detach as a daemon process as described at
+    http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/278731 and
+    http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/66012
+    """
+
+    try:
+        pid = os.fork()
+        if (pid > 0):
+            os._exit(0)
+
+        os.chdir("/")
+        os.setsid()
+
+        pid = os.fork()
+        if (pid > 0):
+            os._exit(0)
+
+    except StandardError:
+        print _("Could not fork daemon.\n")
+        sys.exit(1)
+
+
+def _write_pid():
+
+    import main
+    import utils
+    import os
+    import atexit
+
+    try:
+        utils.makedirs(main.USERHOME)
+    except OSError, exc:
+        print
+        print exc
+        sys.exit(1)
+    try:
+        f = file(main.PID_PATH, 'w')
+        print >>f, os.getpid()
+    except IOError, exc:
+        print _("The following error occurred: %s\n" % `exc`)
+        sys.exit(1)
+    else:
+        f.close() # ensure it's written NOW
+
+    atexit.register(os.remove, main.PID_PATH)
+
+
+def _redirect_to_logfile():
+
+    """
+    Redirects stdout and stderr to the given logfile and stdin to /dev/null.
+    """
+
+    from main import LOGFILE
+    from utils.logger import SyncWriter
+
+    try:
+        out_log = file(LOGFILE, "w", 0)
+    except IOError, exc:
+        print _("The following error occurred: %s\n" % `exc`)
+        sys.exit(1)
+    else:
+        sys.stderr = sys.stdout = SyncWriter(out_log)
+
+    sys.stdin = file("/dev/null", "r")
+
+    # dummy write
+    print "Log messages of %s" % (LOGFILE,)
+    sys.stdout.flush()
+
+
+def _gdesklets_main():
+
+    """ gdesklets main function to start """
+
+    # prepare gdesklets (locale, signals, program_init)
+    from main import init
+    init()
+
+    # tell the user who just switched version some important stuff
+    from main import transition
+
+    # build our sockets, trayicon and start them
+    from main.Starter import Starter
+    Starter()
+
+    # enter gtk's mainloop
+    import gtk
+    try:
+        gtk.gdk.threads_enter()
+    except AttributeError:
+        gtk.threads_enter()
+    gtk.main()
+    try:
+        gtk.gdk.threads_leave()
+    except AttributeError:
+        gtk.threads_leave()
+
+
+_detach_as_daemon()
+_write_pid()
+_redirect_to_logfile()
+_gdesklets_main()
+

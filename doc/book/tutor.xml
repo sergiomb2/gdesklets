@@ -1,0 +1,24 @@
+<chapter id="tutor"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Tutorials</title>
+
+  <para>Tutorials help to get you started. This chapter contains several
+    mini tutorials to guide your first steps in developing on the
+    <application>gDesklets</application> platform.</para>
+
+  <note>
+    <para>We want <emphasize>your tutorial!</emphasize></para>
+    <para>If you have written a tutorial for some area of
+      <application>gDesklets</application>, please contact the gDesklets
+      Team. Share your tutorial with other users, by having it put in here.
+      </para>
+    <para>We're looking forward to your contribution.</para>
+  </note>
+
+  <xi:include href="tutor-xml.xml"/>
+  <xi:include href="tutor-hello.xml"/>
+  <xi:include href="tutor-canvas.xml"/>
+  <xi:include href="tutor-controls.xml"/>
+
+  <xi:include href="tutor-tutor.xml"/>
+
+</chapter>

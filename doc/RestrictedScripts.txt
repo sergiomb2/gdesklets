@@ -1,0 +1,70 @@
+You can execute .display files directly from the net. This introduces several
+security holes:
+
+ - Shell scripts using the External sensor may can be instructed to spy out
+   local data or transmit or damage files.
+
+ - Sensors can do this as well, but since every sensor is installed locally
+   by the user, this is equivalent to the trojan horse issue with executable
+   files.
+
+ - Inline scripts may be instructed to spy out local data or transmit or damage
+   files.
+
+
+It is clear that we have to restrict the possibilities of the External sensor
+and of inline scripts, in order to guarantee that the user's data cannot be
+harmed without her acknowledge.
+
+
+
+Restricting the External Sensor
+-------------------------------
+
+The External sensor may only be available for local .display files or, even
+better, may be disabled altogether. Inline scripting will render the External
+sensor unnecessary, anyway.
+
+
+
+Restricting Inline Scripts
+--------------------------
+
+Restricted execution of Python scripts is no longer available in Python 2.3.
+Therefore, gDesklets has to look for other ways to restrict Python scripts.
+
+We have to distinguish between safe and unsafe scripts. Unsafe scripts may only
+be executed if the file containing the script is located on the local system
+and it has explicitly been started with the "unsafe" option.
+
+Unsafe scripts may do everything.
+
+Safe scripts can be restricted by disabling Python's built-in functions, e.g.
+by calling the interpreter with a custom globals dictionary:
+
+  environ = {"chr": chr}  # enable only chr()
+  exec code in environ
+
+That way, it's possible to build a sandbox for executing safe Python code.
+You can also provide wrappers for functions which may allow execution of the
+function depending on the current context:
+
+  OK = [0]
+
+  def _range(*args):
+
+      if (OK[0]): return range(*args)
+      else: raise RuntimeError("Not allowed.")
+
+  environ["range"] = _range
+
+
+
+What has to be Restricted?
+--------------------------
+
+ - open
+ - file
+ - __import__ (allow only modules on a whitelist)
+ - reload
+ - execfile

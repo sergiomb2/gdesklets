@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=gDesklets
+_Comment=A desktop applet system for GNOME
+Exec=gdesklets shell
+Icon=gdesklets.png
+Terminal=false
+Type=Application
+MimeType=application/x-gdesklets-display
+Categories=Application;Utility;
+StartupNotify=true
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gDesklets
+X-GNOME-Bugzilla-Component=core

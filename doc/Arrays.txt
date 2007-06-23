@@ -1,0 +1,16 @@
+Arrays only have one child which may be reduplicated arbitrarily. Each
+reduplication will have an index number. If there are nested arrays, you will
+have a path (a list) of index numbers.
+
+The implementation is as follows:
+
+Each target has an index path. Targets which are not in an array will have an
+empty list as the index path.
+The method DataTarget.get_index_path() returns the index path of a target.
+ContainerTargets implement the method ContainerTarget.get_next_child_index()
+which returns the index number which the next child will get. If there is no
+index number, it returns -1.
+When a target gets created, it already knows its parent and can thus ask for
+the parent's index path and the new index value. The new index path can then
+be created by appending the new index value (if != -1) to the parent's index
+path.

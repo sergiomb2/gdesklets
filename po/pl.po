@@ -1,0 +1,407 @@
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Aktualną wersję tego pliku możesz odnaleźć w repozytorium cvs.gnome.pl
+# (:pserver:anonymous@cvs.gnome.pl:/gnomepl, puste hasło)
+# Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
+# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas na adres:
+# translators@gnome.pl
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Krzysztof Luks <kluks@iq.pl>, 2003
+msgid ""
+msgstr ""
+"Project-Id-Version: gDesklets\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-01-06 08:08+0100\n"
+"PO-Revision-Date: 2003-08-20 22:40+0100\n"
+"Last-Translator: GNOME PL Team <translators@gnome.pl>\n"
+"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#.
+#. FontSelector sensor by Psi (psiz _at_ free _dot_ fr)
+#. Adopted and modified by Martin Grimme.
+#.
+#. the number of fonts
+#. the font settings
+#. the color settings
+#. setup configuration entries
+#. end for
+#.
+#. Font init
+#.
+#. end if
+#: Sensors/FontSelector/__init__.py:86
+msgid "Fonts"
+msgstr "Czcionki"
+
+#: Sensors/FontSelector/__init__.py:87
+msgid "Fonts settings"
+msgstr "Ustawienia czcionek"
+
+#: Sensors/FontSelector/__init__.py:90
+#, python-format
+msgid "Font #%i:"
+msgstr "Czcionka #%i:"
+
+#: Sensors/FontSelector/__init__.py:92
+#, python-format
+msgid "Font #%i used in the labels"
+msgstr "Czcionka #%i używana w etykietach"
+
+#: Sensors/FontSelector/__init__.py:93
+#, python-format
+msgid "Font color #%i:"
+msgstr "Kolor czcionki #%i:"
+
+#: Sensors/FontSelector/__init__.py:95
+#, python-format
+msgid "Font color #%i used in the labels"
+msgstr "Kolor czcionki #%i używanej w etykietach"
+
+#. end for
+#.
+#. Class for the browser's main window. This class simply acts as a mediator for
+#. its widgets.
+#.
+#. what we accept for drag & drop
+#: browser/MainWindow.py:66 browser/TipOfTheDay.py:20
+msgid "Tip of the Day"
+msgstr "Podpowiedź dnia"
+
+#: browser/TipOfTheDay.py:23
+msgid "Show tips at startup"
+msgstr "Wyświetlanie podwpowiedzi przy uruchamianiu"
+
+#. make the close button the default button
+#: data/gdesklets.desktop.in.h:1
+msgid "A desktop applet system for GNOME"
+msgstr "System apletów pulpitu dla GNOME"
+
+#: data/gdesklets.keys.in.h:1
+msgid "gDesklets display file"
+msgstr "Plik wyświetlania gDesklets"
+
+#.
+#. Class for the display configurator. It displays the configurators of the
+#. sensors of a display.
+#.
+#: display/DisplayConfigurator.py:15
+msgid "Configuration"
+msgstr "Konfiguracja"
+
+#. close button
+#. close functions
+#. end for
+#. use a special page when there are no config options
+#: display/DisplayConfigurator.py:40
+msgid "This display is not configurable."
+msgstr "Ten ekran nie jest konfigurowalny."
+
+#. only use the notebook when there are more than one pages
+#. end if
+#.
+#. Reacts on closing the window.
+#.
+#. process any callbacks before destroying yourself
+#.
+#. Registry for DataTargets. To add a new target just add an appropriate entry
+#. to _REGISTRY.
+#.
+#.
+#. Registry for DataTargets. Each target requires an entry in this list.
+#. The entry format is a tuple consisting of:
+#.
+#. * name         The name of the target to be used in .display files
+#. * classname    The name of the class (the module has to be of the same name)
+#.
+#.
+#. Returns the class for the given target name.
+#.
+#.
+#. Returns the names of the targets without their own ID.
+#.
+#. initialize the registry
+#. ignore errors
+#. ignore errors
+#.
+#. Class for creating Displays from XML data.
+#.
+#.
+#. Parses the given XML data and returns a new Display object.
+#.
+#. parse display data
+#. abort if an parse error occurred
+#. add the sensors
+#. add the DefaultSensor
+#. we don't wanna override watch settings from the .display
+#. add the children and configure
+#. a stack trace could be useful for debugging
+#. make the corrupt display visible so that the user can
+#. remove it
+#. self.__display.show()
+#. self.__display.set_decorated(1)
+#. self.__display.set_title("Broken display in %s" %broken_display )
+#. self.__display.set_transparency_mode(0, 500, 100)
+#: factory/DisplayFactory.py:97
+msgid "Error while configuring display"
+msgstr "Błąd podczas konfiguracji widoku"
+
+#: factory/DisplayFactory.py:98
+msgid ""
+"A display could not be configured properly. It will most likely be broken "
+"and you should consider removing it."
+msgstr ""
+"Widok nie mógł być poprawnie skonfigurowany. Najprawdopodobniej jest on "
+"uszkodzony i należy rozważyć jego usunięcie."
+
+#.
+#. Creates a TargetSettings object from the given Attributes object.
+#.
+#. ignore the <meta> tag for now
+#. if there is no ID given, guess a unique one
+#. remember everything for later
+#. nesting errors in XML are detected by the SAX parser; if we get
+#. here, it means our parser is buggy, not the XML input
+#.
+#. Factory class for dynamically loaded Sensors.
+#.
+#. a set to remember the modules loaded so far
+#. get instance of the configuration manager
+#.
+#. Creates and returns a Sensor of the given type or None if the Sensor
+#. could not be created.
+#.
+#. reload old modules to force using the latest version; this
+#. means we can edit modules while running gDesklets
+#. a stack trace could be useful for debugging sensors
+#. a stack trace could be useful for debugging sensors
+#. end for
+#: factory/SensorFactory.py:81
+#, python-format
+msgid "Could not load sensor '%(name)s'"
+msgstr "Nie można załadować czujnika o nazwie \"%(name)s\" "
+
+#: factory/SensorFactory.py:82
+msgid ""
+"An error occurred while loading a sensor. This most likely means that the "
+"sensor is broken or simply not installed."
+msgstr ""
+"Wystąpił błąd w czasie ładowania czujnika. To najprawdopodobniej oznacza, że "
+"czujnik jest uszkodzony lub po prostu nie jest zainstalowany."
+
+#.
+#. Class for parsing command line arguments.
+#.
+#.
+#. Parses the given list of command line arguments. This is usually
+#. sys.argv[1:].
+#.
+#. end for
+#. load displays
+#. if (not vfs.exists(display)):
+#. print vfs.getcwd()
+#. display = os.path.abspath(display)
+#: main/CmdLineParser.py:56
+msgid "Could not add display"
+msgstr "Nie można dodać ekranu"
+
+#: main/CmdLineParser.py:57
+msgid "The display could not be added because the file does not exist."
+msgstr "Nie można dodać ekranu ponieważ plik nie istnieje."
+
+#. end for
+#. end if
+#. This class starts, restarts and kills Displays
+#. the set of open displays as a hashtable "id -> display"
+#.
+#. Reacts on observer messages from the display.
+#.
+#. end if
+#.
+#. Reacts on changing the user profile.
+#.
+#. shut down displays
+#. load displays
+#.
+#. Reacts on changes in the list of displays.
+#.
+#. check whether displays have been added
+#. end for
+#. check whether displays have been removed
+#. end for
+#.
+#. Adds the given display.
+#.
+#. end if
+#.
+#. Creates and returns a new display from the given data, or None in case
+#. of an error.
+#.
+#: main/Starter.py:125
+#, python-format
+msgid "Could not open display file '%(path)s'"
+msgstr "Nie można otworzyć pliku ekranu '%(path)s'"
+
+#: main/Starter.py:127
+msgid "The display file could not be opened because the file was not readable."
+msgstr "Plik ekranu nie mógł zostać otwarty ponieważ nie można go odczytać."
+
+#: main/Starter.py:139
+#, python-format
+msgid "Invalid display file '%(path)s'"
+msgstr "Niepoprawny plik ekranu '%(path)s'"
+
+#: main/Starter.py:140
+msgid "The display file contains invalid data and could not be loaded."
+msgstr "Plik ekranu zawiera niepoprawne dane i nie może zostać wczytany."
+
+#.
+#. Removes the given display.
+#.
+#.
+#. Purges unused config entries.
+#.
+#. TODO: implement it in a more efficient way
+#.
+#. end for
+#. get paths to purge
+#. relative paths are relative to USERHOME
+#. make sure that only paths below USERHOME can be purged
+#. end for
+#. end for
+#.
+#. Starts up all displays.
+#.
+#. watches main/displays in the configuration base and calls on_watch if
+#. something's changed
+#.
+#. Abstract class for all Sensors. Every Sensor has to inherit from this class.
+#.
+#. the identity of the main thread
+#. the path of this sensor
+#. configuration manager for sensor properties
+#. the user profile to be used
+#. the ID of this sensor
+#. the configuration watcher callback
+#. flag for stopping the sensor
+#. converter for data types
+#.
+#. Reacts on changes in the configuration and delegates the call to the
+#. user's callback.
+#.
+#.
+#. Sets the user profile for this sensor.
+#.
+#.
+#. Sets the ID of this sensor.
+#.
+#.
+#. Returns the ID of this sensor. The ID is not yet valid in the
+#. constructor.
+#.
+#.
+#. Returns the path of this sensor.
+#.
+#.
+#. Returns a new empty TargetSettings object.
+#.
+#.
+#. Sends the given TargetSettings object to the Display.
+#.
+#: sensor/Sensor.py:122
+#, python-format
+msgid ""
+"The sensor %(path)s\n"
+"has attempted to access the core from within\n"
+"a thread. In order to prevent a disaster, the\n"
+"thread will be terminated."
+msgstr ""
+"Czujnik %(path)s\n"
+"próbował dostępu do rdzenia z wnętrza wątku.\n"
+"Aby zapobiec nieszczęściu, wątek zostanie zakończony."
+
+#: sensor/Sensor.py:126
+msgid "Illegal operation"
+msgstr "Niedozwolona operacja"
+
+#.
+#. Adds a timeout function with the given interval in ms.
+#. The callback function must return TRUE in order to be called again.
+#.
+#.
+#. Adds and runs a new thread.
+#.
+#. the thread should not start before setup is complete, therefore
+#. we are using the GTK idle handler
+#.
+#. Sends an action to this sensor.
+#.
+#.
+#. Method for handling action calls from the display. Sensors have to
+#. override this method.
+#.
+#.
+#. Stops this sensor and cleans up.
+#.
+#. shut down sensor
+#.
+#. Returns whether this sensor is stopped. Use this method to check if your
+#. threads have to terminate.
+#.
+#.
+#. Executes tasks for sensor shutdown. Sensors may override this method.
+#.
+#.
+#. Sets the configuration id for this sensor. If the user has set a callback
+#. function for watching the config, the config will be watched.
+#.
+#.
+#. Returns the unique config ID of this sensor.
+#.
+#.
+#. Registers a watcher for config changes.
+#.
+#.
+#. Sets the data types to be used for the configuration values.
+#.
+#.
+#. Sets the paths to remove when the config gets purged.
+#.
+#.
+#. Creates and returns an empty new sensor configurator.
+#.
+#.
+#. Returns the configurator of this sensor.
+#.
+#.
+#. Method for duplicating the display using this sensor
+#.
+#.
+#. Opens the given menu.
+#.
+#: sensor/Sensor.py:318
+msgid "_Configure display"
+msgstr "_Skonfiguruj widok"
+
+#: sensor/Sensor.py:319
+msgid "Re_start display"
+msgstr "_Uruchom ponownie widok"
+
+#: sensor/Sensor.py:320
+msgid "_Remove display"
+msgstr "_Usuń widok"
+
+#: sensor/Sensor.py:322
+msgid "_About"
+msgstr "_O programie"
+
+#: sensor/Sensor.py:324
+msgid "_Quit"
+msgstr "Za_kończ"
+
+#: sensor/Sensor.py:356
+msgid "translator_credits"
+msgstr ""
+"Krzysztof Luks <kluks@iq.pl>\n"
+"GNOME PL Team <translators@gnome.pl>"

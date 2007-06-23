@@ -1,0 +1,70 @@
+<section id="dsp-tag-script" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;script&gt;</title>
+
+  <para>The <command>&lt;script&gt;</command> tag encloses an inline script
+    or loads one from a file. If you have several
+    <command>&lt;script&gt;</command> tags in a display file, their contents
+    get concatenated together before execution.</para>
+
+
+  <tip>
+    <para>Some characters are reserved for XML and thus have to be escaped
+      inside inline scripts. You can, however, put the script into a
+      <emphasize>CDATA</emphasize> section to make the XML parser ignore the
+      reserved characters.</para>
+  </tip>
+
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">uri</entry>
+        <entry valign="top">URI</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">If this property is set, the script will be loaded
+          from the given file. Otherwise the character data between the
+          opening and closing tags is used.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+
+  <section><title>Examples</title>
+
+    <programlisting><![CDATA[
+<display>
+
+  ...
+
+  <script uri="additional.script"/>
+
+  <script><![CDATA[
+
+    def foo(): print "foo"
+
+  ]]>]]&gt;<![CDATA[</script>
+
+</display>
+    ]]></programlisting>
+
+  </section>
+
+</section>

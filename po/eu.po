@@ -1,0 +1,1033 @@
+# translation of gdesklets.HEAD.po to Basque
+# Basque translation of gdesklets.
+# Copyright (C) 2003 THE gdesklets'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gdesklets package.
+# Mikel Olasagasti <hey_neken@mundurat.net>, 2003.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2003, 2004, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-08-08 17:22+0000\n"
+"PO-Revision-Date: 2006-08-08 18:53+0000\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
+"Language-Team: Basque <itzulpena@euskalgnu.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../config/ConfigDialog.py:103
+msgid "Invalid Function Call"
+msgstr "Funtzioaren baliogabeko deia"
+
+#: ../config/ConfigDialog.py:104
+#, python-format
+msgid ""
+"There is no function called <b>%s</b>.\n"
+"This means that there's an error in the desklet's code. You should inform "
+"the author of the desklet about this problem."
+msgstr ""
+"Ez dago <b>%s</b> izeneko funtziorik.\n"
+"Desklet-aren kodearen errorea dela adierazten du. Eskertuko genizuke Desklet-"
+"aren egileari erroreari buruz jakinaraziko bazenu."
+
+#: ../config/ConfigDialog.py:217 ../display/DisplayConfigurator.py:32
+msgid "This desklet is not configurable."
+msgstr "Desklet hau ez da konfiguragarria."
+
+#: ../config/ConfigUnit.py:57
+msgid "pixel"
+msgstr "pixel"
+
+#: ../config/ConfigUnit.py:58
+msgid "point"
+msgstr "puntu"
+
+#: ../config/ConfigUnit.py:59
+msgid "cm"
+msgstr "zm"
+
+#: ../config/ConfigUnit.py:60
+msgid "inch"
+msgstr "hazbete"
+
+#: ../config/DaemonConfigger.py:17
+msgid "Editor to view/edit the desklet source code"
+msgstr "Editorea desklet-aren iturburua ikusi edo editatzeko"
+
+#: ../config/DaemonConfigger.py:18
+msgid "Your favorite editor"
+msgstr "Editore gogokoena"
+
+#: ../config/DaemonConfigger.py:20
+msgid "XComposite support (requires composition manager)"
+msgstr "XComposite euskarria (konposaketa-kudeatzailea behar du)"
+
+#: ../config/DaemonConfigger.py:21
+msgid ""
+"\n"
+"     <small><i>"
+msgstr ""
+"\n"
+"     <small><i>"
+
+#: ../config/DaemonConfigger.py:22
+msgid "this does not work with GTK 2.8 or higher for technical reasons"
+msgstr ""
+"arrazoi teknikoak direla medio, honek ez du gtk 2.8 edo garatuagoa den "
+"bertsioarekin funtzionatzen"
+
+#: ../config/DaemonConfigger.py:23
+msgid "</i></small>"
+msgstr "</i></small>"
+
+#: ../config/DaemonConfigger.py:24
+msgid "Translucency (takes effect after restarting a display)"
+msgstr "Gardentasuna (pantaila berrabiarazi ostean edukiko du eragina)"
+
+#: ../config/DaemonConfigger.py:26
+msgid "Screen Resolution (DPI)"
+msgstr "Pantailaren bereizmena (dpi)"
+
+#: ../config/DaemonConfigger.py:28
+msgid ""
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
+"\"</b> wide"
+msgstr ""
+"Egokitu gaineko balioa barraren zabalera <b>5 zm</b> edo <b>1.97\"</b> "
+"izateko"
+
+#: ../config/DaemonConfigger.py:32
+msgid "Behavior"
+msgstr "Portaera"
+
+#: ../config/DaemonConfigger.py:33
+msgid "Show _tray icon (takes effect after restart)"
+msgstr "Erakutsi _erretiluaren ikonoa (berrabiarazi ostean izango du eragina)"
+
+#: ../config/DaemonConfigger.py:35
+msgid "Show _notification while loading a desklet"
+msgstr "Erakutsi _jakinarazpena desklet-a kargatzen den heinean"
+
+#: ../config/DaemonConfigger.py:37
+msgid "Key for toggling Float mode:"
+msgstr "Gakoa mugikor modura txandakatzeko:"
+
+#: ../config/DaemonConfigger.py:49 ../config/DisplayConfigger.py:27
+#: ../display/DisplayConfigurator.py:16
+msgid "Configuration"
+msgstr "Konfigurazioa"
+
+#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:74
+msgid "A desktop applet system for GNOME"
+msgstr "Mahaigaineko applet sistema bat GNOMErako"
+
+#: ../data/gdesklets.xml.in.h:1
+msgid "gDesklets display"
+msgstr "gDesklets bistaratzailea"
+
+#: ../display/Display.py:84
+msgid "_Configure desklet"
+msgstr "_Konfiguratu desklet-a"
+
+#: ../display/Display.py:86
+msgid "_Move desklet"
+msgstr "_Aldatu desklet-a lekuz"
+
+#: ../display/Display.py:89
+msgid "_View Source"
+msgstr "Ikusi i_turburua"
+
+#: ../display/Display.py:92
+msgid "Re_start desklet"
+msgstr "_Berrabiarazi desklet-a"
+
+#: ../display/Display.py:94
+msgid "_Remove desklet"
+msgstr "_Kendu desklet-a"
+
+#: ../display/Display.py:982 ../shell/plugins/DisplayBrowser/__init__.py:142
+msgid "Do you really want to remove this desklet ?"
+msgstr "Ziur zaude desklet hau kentzea nahi duzula?"
+
+#: ../display/Display.py:983
+msgid ""
+"This desklet will no longer be displayed and its configuration will be "
+"purged."
+msgstr "Desklet hau ez da gehiago bistaratuko eta bere konfigurazioa galduko da."
+
+#: ../display/DisplayTarget.py:417
+#, python-format
+msgid "Element \"%s\" does not exist"
+msgstr "\"%s\" elementua ez da existitzen."
+
+#: ../display/DisplayTarget.py:418
+msgid ""
+"The <tt>relative-to</tt> property requires a reference to an existing "
+"display element within the same parent container."
+msgstr ""
+"<tt>erlatiboa-honekiko</tt> propietateak existitzen den guraso edukitzaile berdineko "
+"pantailako elementu bati errererentzia eskatzen du."
+
+#: ../display/targetregistry.py:52
+#, python-format
+msgid "Unknown element <b>&lt;%s&gt;</b>"
+msgstr "<b>&lt;%s&gt;</b> elementu ezezaguna"
+
+#: ../display/targetregistry.py:53
+msgid ""
+"Either there is a typo in the .display file or you have an incompatible "
+"version of gDesklets."
+msgstr ""
+"Baliteke .desktop fitxategiak akats ortografikoa egotea, edo gDesklets "
+"bertsioa baterakaitza izatea."
+
+#: ../factory/DisplayFactory.py:89 ../utils/DOM.py:31
+msgid "XML parse error"
+msgstr "Errorea XML analizatzean"
+
+#: ../factory/DisplayFactory.py:90
+msgid "This .display file has invalid XML syntax."
+msgstr "'.display' fitxategi honek baliogabeko XML sintaxia du."
+
+#: ../factory/DisplayFactory.py:208
+msgid "File doesn't exist or couldn't be loaded"
+msgstr "Fitxategia ez da existitzen edo ezin izan da kargatu"
+
+#: ../factory/DisplayFactory.py:210
+msgid "A file which contains a script isn't available for further execution."
+msgstr "Script-a duen fitxategia ez dago gehiago exekutatzeko erabilgarri."
+
+#: ../factory/DisplayFactory.py:233
+msgid "Could not load sensor"
+msgstr "Ezin izan da sentsorea kargatu"
+
+#: ../factory/DisplayFactory.py:249
+#, python-format
+msgid "&lt;%s&gt; needs a bind attribute"
+msgstr "&lt;%s&gt; loturako atributua behar du"
+
+#: ../factory/DisplayFactory.py:251
+msgid "The &lt;prefs&gt; section of this desklet file is broken."
+msgstr "Desklet fitxategi honen &lt;prefs&gt; atala hondatuta dago."
+
+#: ../factory/SensorFactory.py:75
+#, python-format
+msgid "Could not find sensor '%(name)s'"
+msgstr "Ezin izan da '%(name)s' sentsorea aurkitu"
+
+#: ../factory/SensorFactory.py:76
+msgid ""
+"A sensor could not be found. This usually means that it has not been "
+"installed."
+msgstr ""
+"Ezin izan da sentsorea aurkitu. Sentsoera instalatu gabe dagoela adierazi "
+"izan ohi du."
+
+#: ../gdesklets:29
+msgid "You must NOT run gDesklets as super user (root)."
+msgstr "EZIN duzu gDesklets supererabiltzaile (root) gisa exekutatu"
+
+#: ../gdesklets:43
+msgid "Checking requirements:"
+msgstr "Betebeharrekoak egiaztatzen:"
+
+#: ../gdesklets:47
+msgid "Python version => 2.3.0 is required."
+msgstr "Python bertsioa => 2.3.0 behar da."
+
+#: ../gdesklets:51
+msgid "libexpat version 1.95.7 is broken. Please upgrade!"
+msgstr "libexpat 1.95.7 bertsioa hondatuta dago. Eguneratu!"
+
+#: ../gdesklets:54
+msgid "SAX parser is required, some SuSE versions ship without it."
+msgstr "SAX analizatzailea behar da, SuSE bertsio batzuk ez dakarte."
+
+#: ../gdesklets:58
+msgid ""
+"GTK python bindings (pygtk2) version >= 2.4.0 and GTK+ version >= 2.4.0 are "
+"required."
+msgstr "GTK python loturen (pygtk2) bertsioa >= 2.4.0 eta GTK+ bertsioa >= 2.4.0 behar dira."
+
+#: ../gdesklets:62
+msgid "ORBit python bindings (pyorbit) version == 2.0.1 are required."
+msgstr "ORBit python loturen (pyorbit) bertsioa == 2.0.1 behar da."
+
+#: ../gdesklets:65
+msgid "bonobo python bindings are required."
+msgstr "bonobo python loturak behar dira."
+
+#: ../gdesklets:74
+msgid "found"
+msgstr "bilatuta"
+
+#: ../gdesklets:78
+msgid "missing"
+msgstr "falta da"
+
+#: ../gdesklets:84
+msgid "Version check failed."
+msgstr "Bertsioak huts egin du"
+
+#: ../gdesklets:85
+#, c-format
+msgid ""
+"\n"
+"%s\n"
+msgstr ""
+"\n"
+"%s\n"
+
+#: ../gdesklets:86
+msgid ""
+"Please make sure that the required software is installed.\n"
+"Also try to avoid having multiple versions of a library/binding on your "
+"system.\n"
+"gDesklets won't work if you don't have all necessary dependencies installed\n"
+"on your system.\n"
+"\n"
+"THE STARTUP WILL BE CANCELLED NOW!\n"
+msgstr ""
+"Ziurtatu beharrezko softwarea instalatuta dagoela.\n"
+"Saiatu baita ere liburutegien/loturen hainbat bertsio ezberdin ez edukitzen "
+"zure sisteman.\n"
+"gDesklets-ek ez du funtzionatuko beharrezko mendekotasun guztiak sisteman instalatuta "
+"ez badaude.\n"
+"ABIOA ORAINTXE BERTAN BEHERA BOTAKO DA.\n"
+
+#: ../gdesklets:102
+msgid ""
+"\n"
+"You're running gDesklets for the first time.\n"
+"gDesklets will start a requirements check now...\n"
+msgstr ""
+"\n"
+"gDesklets aurreneko aldiz exekutatzen ari zara.\n"
+"gDesklets-en betebeharrezkoak egiaztatuko dira orain...\n"
+
+#: ../gdesklets:113
+msgid ""
+"Usage: gdesklets [option] <command> [arguments...]\n"
+"\n"
+"\t<command>\n"
+"\t\topen    <files>   (Opens the given desklet files)\n"
+"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
+"\t\tstop              (Stops the gDesklets daemon)\n"
+"\t\tlist              (Lists open desklets)\n"
+"\t\trestart           (Restarts the gDesklets daemon)\n"
+"\t\tprofile <profile> (Switches to the given profile)\n"
+"\t\tprofile           (Shows the current and the available profiles)\n"
+"\t\tshell             (Opens the graphical shell)\n"
+"\t\tslay              (Kills the daemon -- use in emergency)\n"
+"\t\tstatus            (Checks daemon status)\n"
+"\t\tabout             (Prints information about gDesklets)\n"
+"\t\tversion           (Prints gDesklets version)\n"
+"\t\tconfigure         (Opens the configuration dialog)\n"
+"\t\thelp              (Displays this text)\n"
+"\t\tcheck             (Checks requirements)\n"
+"\n"
+"\t[option]\n"
+"\t\t--no-tray-icon    (disables the systray icon)\n"
+"\t\t--translucent     (enables translucency on the xorg servers)\n"
+msgstr ""
+"Erabilera: gdesklets [auekra] <komandoa> [argumentuak...]\n"
+"\n"
+"\t<komandoa>\n"
+"\t\topen    <fitxategia>   (Ireki desklet fitxategia)\n"
+"\t\tstart             (Abiarazi  gDesklets daemon-a, lehenetsia da)\n"
+"\t\tstop              (Gelditu gDesklets daemon-a)\n"
+"\t\tlist              (Zerrendatu irekitako desklet-ak)\n"
+"\t\trestart           (Berrabiarazi gDesklets daemon-a)\n"
+"\t\tprofile <profila> (Aldatu emandako profilera)\n"
+"\t\tprofile           (Erakutsi uneko profila eta erabilgarriak)\n"
+"\t\tshell             (Ireki shell grafikoa)\n"
+"\t\tslay              (Hil daemon-a -- larrialdietan erabili)\n"
+"\t\tstatus            (Egiaztatu daemon-aren egoera)\n"
+"\t\tabout             (Bistaratu gDesklets-i buruzko informazioa)\n"
+"\t\tversion           (Bistaratu gDesklets bertsioa)\n"
+"\t\tconfigure         (Ireki konfigurazioaren leihoa)\n"
+"\t\thelp              (Bistaratu testu hau)\n"
+"\t\tcheck             (Egiaztatu betebeharrak)\n"
+"\n"
+"\t[aukera]\n"
+"\t\t--no-tray-icon    (desgaitu systray ikonoa)\n"
+"\t\t--translucent     (gaitu gardentasuna xorg zerbitzarietan)\n"
+
+#: ../gdesklets:186 ../gdesklets:260
+#, c-format
+msgid "Could not open desklet %s."
+msgstr "Ezin izan da %s desklet-a ireki."
+
+#: ../gdesklets:268
+msgid "Starting gdesklets-daemon..."
+msgstr "Gdesklets daemon-a abiarazten..."
+
+#: ../gdesklets:274
+msgid "Shutting down gdesklets-daemon..."
+msgstr "Gdesklet daemon-a itzaltzen..."
+
+#: ../gdesklets:286
+#, c-format
+msgid "Currently open displays in profile \"%s\":\n"
+msgstr "Unean \"%s\" profilan irekitako ikustaileak:\n"
+
+#: ../gdesklets:291
+#, c-format
+msgid "Currently there aren't any desklets in profile \"%s\""
+msgstr "Unean ez dago desklet-ik \"%s\" profilan"
+
+#: ../gdesklets:295
+msgid "Restarting gdesklets-daemon..."
+msgstr "Gdesklets daemon-a berrabiarazten..."
+
+#: ../gdesklets:308
+msgid "gdesklets-daemon is running"
+msgstr "Gdesklets daemon-a exekutatzen ari da"
+
+#: ../gdesklets:310
+msgid "gdesklets-daemon is not running"
+msgstr "Gdesklets daemon-a ez dago exekutatzen"
+
+#: ../gdesklets:314
+#, c-format
+msgid "Current profile: %s"
+msgstr "Uneko profila: %s"
+
+#: ../gdesklets:325
+#, c-format
+msgid "New profile: %s"
+msgstr "Profila berria: %s"
+
+#: ../gdesklets:328
+#, c-format
+msgid "Available profiles: %s"
+msgstr "Profila eskuragarriak: %s"
+
+#: ../gdesklets:332
+#, c-format
+msgid "This is %s, version %s."
+msgstr "Hau %s da, %s bertsioa."
+
+#: ../gdesklets:360
+msgid "Nothing to slay."
+msgstr "Ezer ez akatzeko."
+
+#: ../gdesklets:385
+msgid "Invalid command. Please try one of the following commands:"
+msgstr "Komando baliogabea. Saiatu honako komandoetariko batekin:"
+
+#: ../gdesklets-daemon:20
+msgid "You need a recent version of PyGTK to run this program.\n"
+msgstr "PyGTK-ren azken bertsioa behar duzu programa hau exekutatzeko.\n"
+
+#: ../gdesklets-daemon:48
+msgid "Could not fork daemon.\n"
+msgstr "Ezin izan da daemon-a sardetu.\n"
+
+#: ../gdesklets-daemon:69 ../gdesklets-daemon:89
+#, c-format
+msgid "The following error occurred: %s\n"
+msgstr "Honako errorea gertatu da: %s\n"
+
+#: ../libdesklets/convert.py:21
+#, python-format
+msgid "%.2f TB"
+msgstr "%.2f TB"
+
+#: ../libdesklets/convert.py:23
+#, python-format
+msgid "%.2f GB"
+msgstr "%.2f GB"
+
+#: ../libdesklets/convert.py:25
+#, python-format
+msgid "%.2f MB"
+msgstr "%.2f MB"
+
+#: ../libdesklets/convert.py:27
+#, python-format
+msgid "%.2f kB"
+msgstr "%.2f kB"
+
+#: ../libdesklets/convert.py:29
+#, python-format
+msgid "%d B"
+msgstr "%d B"
+
+#: ../main/AboutDialog.py:21
+msgid "About gDesklets"
+msgstr "gDesklet-ei buruz"
+
+#: ../main/client.py:283
+#, python-format
+msgid "Connecting to daemon [%s]"
+msgstr "Daemon-arekin konektatzen [%s]"
+
+#: ../main/client.py:300
+msgid ""
+"Cannot establish connection to daemon: timeout!\n"
+"The log file might help you solving the problem."
+msgstr ""
+"Ezin da daemon-arekin konektatu: denbora-muga gainditu da.\n"
+"Egunkariak lagunduko dizu arazoa konpontzen."
+
+#: ../main/client.py:306
+#, python-format
+msgid "Connected to daemon in %d microseconds."
+msgstr "Daemona-rekin %d mikrosegundotan konektatuta."
+
+#: ../main/client.py:309
+#, python-format
+msgid "Connected to daemon in %d milliseconds."
+msgstr "Daemona-rekin %d milisegundotan konektatuta."
+
+#: ../main/__init__.py:84
+#, python-format
+msgid "Version %s"
+msgstr "%s bertsioa"
+
+#: ../main/__init__.py:87
+msgid "Core Programming:"
+msgstr "Programaketa nagusia:"
+
+#: ../main/__init__.py:91
+msgid "Architecture Design:"
+msgstr "Arkitekturaren diseinua:"
+
+#: ../main/__init__.py:94
+msgid "GNOME Integration:"
+msgstr "GNOMErekin baterakotasuna:"
+
+#: ../main/__init__.py:98
+msgid "Artwork:"
+msgstr "Arte lanak:"
+
+#: ../main/__init__.py:101
+msgid "Website:"
+msgstr "Web gunea:"
+
+#: ../main/__init__.py:104
+msgid "Thank you:"
+msgstr "Esker mila:"
+
+#: ../main/Starter.py:103
+msgid "_Manage desklets"
+msgstr "_Kudeatu desklet-ak"
+
+#: ../main/Starter.py:106
+msgid "_Configuration"
+msgstr "_Konfigurazioa"
+
+#: ../main/Starter.py:108
+msgid "_View log"
+msgstr "_Ikusi egunkaria"
+
+#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:41
+msgid "_About..."
+msgstr "Honi _buruz..."
+
+#: ../main/Starter.py:114
+msgid "_Stop daemon"
+msgstr "_Gelditu daemon-a"
+
+#: ../main/Starter.py:230
+#, python-format
+msgid "Could not open desklet file \"%s\""
+msgstr "Ezin izan da \"%s\" desklet fitxategia ireki"
+
+#: ../main/Starter.py:231
+msgid "The desklet file could not be opened because the file was not readable."
+msgstr "Ezin izan da desklet fitxategia ireki, ez baitago irakurtzeko moduan."
+
+#. CVS warning :)
+#: ../main/transition.py:42
+msgid ""
+"This is a CVS version of gDesklets. CVS versions represent the current state "
+"of development and might be unstable or cause problems from time to time.\n"
+"\n"
+"If you're new to gDesklets, it is thus highly recommended to <b>not</b> use "
+"a CVS version, but a stable release!\n"
+"\n"
+"If you still want to run the CVS version instead of a stable release "
+"version, we'd highly appreciate it if you report any weird behavior to the "
+"developers.\n"
+"\n"
+"Experienced users are encouraged to try a CVS version, though!"
+msgstr ""
+"Hau gDesklets-en CVS bertsioa da. CVS bertsioak uneko garapeneko egoera "
+"adierazten du eta desegonkorra izan daiteke, edo noizean behin arazoak "
+"eman ditzake.\n"
+"\n"
+"gDesklets-ekin hasiberria bazara, biziki gomendatzen dizugu CVS bertsioa <b>EZ</b> erabiltzeko, erabili bertsio egonkorra!\n"
+"\n"
+"CVS bertsioa erabiltzea nahi baduzu, eskertuko genizuke gDesklets-en edozein portaera "
+"bitxi edo akatsei buruz garatzaileei jakinaraziko bazenie.\n"
+"\n"
+"Adituak diren erabiltzaileei CVS bertsioa probatzeko aholkatzen diegu."
+
+#: ../main/transition.py:54
+msgid ""
+"This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
+"Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
+"This version might break your configuration or it won't restore it from an "
+"earlier release. In most cases this is intentional, since gDesklets is still "
+"in its early stages of development.\n"
+"\n"
+"Thanks for testing this release candidate!"
+msgstr ""
+"Hurrengo gDesklets argitaratuko den bertsioaren <b>kaleratzeko hautagaia</b> da hau.\n"
+"Mesedez, probatu ezazu eta bidali erroreei buruzko berriak hona: <i>http://bugzilla.gnome.org</i>\n"
+"Bertsio honek zure konfigurazioa honda dezake edo bertsio berriago batetik "
+"ezin izango da leheneratu. Kasu gehienetan horrela prestatuta dago, gDesklets "
+"oraindik garapeneko hastapenetan baitago.\n"
+"\n"
+"Mila esker kaleratzeko hautagaia probatzeagatik."
+
+#. our informative transition message which we can change with
+#. every release
+#: ../main/transition.py:65
+msgid ""
+"This version of gDesklets features the Float mode: press a key and all your "
+"desklets will come to front, floating above your applications, until you "
+"press that key again!\n"
+"The default keybinding is &lt;Shift&gt; &lt;F12&gt;, but you can easily "
+"change that in the configuration dialog.\n"
+"\n"
+"Please note that due to limitations of older X servers, you might see blocks "
+"around desklets in Float mode. This cannot be solved in a satisfying way "
+"except for switching the X server to real translucency (Xorg 6.8 and above)."
+msgstr ""
+"gDesklets-en bertsio honek Mugikor moduaren funtzionalitatea du, sakatu tekla bat eta desklet guztiak aurreko planora hurbilduko dira, zure aplikazioen inguruan mugituz, berriro tekla hura sakatu arte.\n"
+"Laster-tekla lehenetsia &lt;Shift&gt; &lt;F12&gt; izan arren, konfigurazioko leihoan erraz "
+"alda dezakezu.\n"
+"\n"
+"Jakin ezazu  X zerbitzari zaharren mugak direla eta, desklet-en inguruan blokeak ikus ditzakezu Mugikor moduan. Hau konpontzeko era bakarra egiazko gardentasuna onartzen duen zerbitzaria erabiltzea da (Xorg 6.8 edo garatuagoa)."
+
+#: ../main/transition.py:80
+msgid "Please note (this message will appear only once):"
+msgstr "Oharra (mezu hau behin bakarrik agertuko da):"
+
+#: ../plugin/Interface.py:200 ../plugin/Interface.py:227
+msgid "no description"
+msgstr "azalpenik ez"
+
+#: ../scripting/Script.py:154
+msgid "Error in add_timer function"
+msgstr "Errorea add_timer funtzioan"
+
+#: ../scripting/Script.py:155
+#, python-format
+msgid "\"%s\" isn't a valid integer value!"
+msgstr "\"%s\" ez da baliozko osoko balioa."
+
+#: ../scripting/Script.py:199
+#, python-format
+msgid "No Control could be found for interface %s"
+msgstr "Ezin da %s ionterfaezrako kontrolik aurkitu"
+
+#: ../scripting/Script.py:201
+msgid "This means that a functionality won't be available during execution!"
+msgstr "Honek adierazten du funtzionalitate hori ez dela erabilgarri egongo exekuzioan zehar."
+
+#: ../scripting/Script.py:234
+msgid "Security Risk"
+msgstr "Segurtasun arriskua"
+
+#: ../scripting/Script.py:235
+#, python-format
+msgid ""
+"The desklet %s wants to execute a system command:\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"To protect your system from malicious programs, you can deny the execution "
+"of this command.\n"
+"\n"
+"If you are sure that the command is harmless, you may permanently allow this "
+"desklet instance to run it."
+msgstr ""
+"%s desklet-ak sistemako komandoa exekutatzea nahi du:\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"Sistema programa maltzurretatik babesteko, komandoaren exekuzioa "
+"ukatu beharko zenuke.\n"
+"\n"
+"Ziur bazaude komandoak minik ez duela egingo, desklet-aren instantzia hau betirako baimen dezakezu."
+
+#: ../scripting/Script.py:248
+msgid "Deny!"
+msgstr "Ukatu!"
+
+#: ../scripting/Script.py:249
+msgid "Allow once"
+msgstr "Baimendu behin"
+
+#: ../scripting/Script.py:250
+msgid "Allow for this desklet"
+msgstr "Baimendu desklet honentzako"
+
+#: ../Sensors/FontSelector/__init__.py:86
+msgid "Fonts"
+msgstr "Letra-tipoak"
+
+#: ../Sensors/FontSelector/__init__.py:87
+msgid "Fonts settings"
+msgstr "Letra-tipoen ezarpenak"
+
+#: ../Sensors/FontSelector/__init__.py:90
+#, python-format
+msgid "Font #%i:"
+msgstr "Letra-tipoa, #%i:"
+
+#: ../Sensors/FontSelector/__init__.py:92
+#, python-format
+msgid "Font #%i used in the labels"
+msgstr "#%i letra-tipoa etiketetan erabiltzen da"
+
+#: ../Sensors/FontSelector/__init__.py:93
+#, python-format
+msgid "Font color #%i:"
+msgstr "Letra-kolorea, #%i:"
+
+#: ../Sensors/FontSelector/__init__.py:95
+#, python-format
+msgid "Font color #%i used in the labels"
+msgstr "#%i letra-kolorea etiketetan erabiltzen da"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:16
+#, python-format
+msgid "%s Control"
+msgstr "%s kontrola"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:55
+msgid "Interface Name"
+msgstr "Interfaze-izena"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:58
+msgid "Property Name"
+msgstr "Propietatearen izena"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:61
+msgid "Property Access"
+msgstr "Propietarearen sarbidea"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:64
+msgid "Property Description"
+msgstr "Propietatearen azalpena"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:27
+msgid "by interface"
+msgstr "interfazearekiko"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:28
+#: ../shell/plugins/DisplayBrowser/__init__.py:80
+msgid "alphabetically"
+msgstr "alfabetikoki"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:72
+#, python-format
+msgid "Found %d controls."
+msgstr "%d kontrol aurkituta"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:75
+#: ../shell/plugins/DisplayBrowser/__init__.py:158
+msgid "Invalid search expression."
+msgstr "Bilaketako adierazpen baliogabea."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:40
+msgid "R_emove selected desklet"
+msgstr "_Kendu hautatutako desklet-a"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
+msgid "_Run (remote) desklet..."
+msgstr "_Exekutatu (urruneko) desklet-a..."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:45
+msgid "R_un selected desklet"
+msgstr "E_xekutatu hautatutako desklet-a"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:78
+msgid "by category"
+msgstr "kategoriarekiko"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:79
+msgid "by author"
+msgstr "egilearekiko"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:130
+msgid "Could not remove"
+msgstr "Ezin izan da kendu"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:131
+msgid ""
+"The desklet file could not be removed. This most likely means that you do "
+"not have write permission on it."
+msgstr ""
+"Ezin izan da desklet fitxategia kendu. Litekeena da horretarako nahikoa baimen "
+"ez izatea."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:143
+msgid "The desklet will be removed from your system and no longer be available."
+msgstr "Desklet-a sistematik kendu egingo da eta ez da gehiago erabilgarri egongo."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#, python-format
+msgid "Found %d desklets"
+msgstr "%d desklet aurkituta"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:177
+msgid "No description available"
+msgstr "Ez dago azalpenik eskuragarri"
+
+#: ../shell/plugins/Help/__init__.py:37
+msgid "_Help"
+msgstr "_Laguntza"
+
+#: ../shell/plugins/Help/__init__.py:38
+msgid "_Tip of the Day"
+msgstr "_Eguneko aholkua"
+
+#: ../shell/plugins/Help/TipOfTheDay.py:24
+msgid "Tip of the Day"
+msgstr "Eguneko aholkua"
+
+#: ../shell/plugins/Help/TipOfTheDay.py:32
+msgid "Show tips at startup"
+msgstr "Erakutsi aholkua hau abiaraztean"
+
+#: ../shell/plugins/Help/tips.py:2
+msgid ""
+"You can find lots of desktop applets for use\n"
+"with gDesklets at\n"
+"\n"
+"http://www.gdesklets.org\n"
+"and\n"
+"http://gdesklets.gnomedesktop.org"
+msgstr ""
+"gDesklets-ekin erabil ditzakezun\n"
+"mahaigaineko hainbat applet aurki ditzakezu:\n"
+"\n"
+"http://www.gdesklets.org\n"
+"eta\n"
+"ttp://gdesklets.gnomedesktop.org"
+
+#: ../shell/plugins/Help/tips.py:9
+msgid ""
+"You can install new desktop applets easily by\n"
+"dragging the download link for the package\n"
+"from your web browser into the gDesklets Shell."
+msgstr ""
+"Mahaigaineko appletak oso erraz instala ditzakezu\n"
+"zure web arakatzailetik gDesklets-aren shell-era\n"
+"paketeak deskargatzeko estekak arrastatuz."
+
+#: ../shell/plugins/Help/tips.py:13
+msgid ""
+"Click the right mouse button on a desktop\n"
+"applet or press F10 to open the popup menu."
+msgstr ""
+"Egin klik saguaren eskuineko botoiarekin mahaigaineko\n"
+"applet-ean edo sakatu F10 laster-leihoa irekitzeko."
+
+#: ../shell/plugins/Help/tips.py:16
+msgid ""
+"You can move the applets around the screen\n"
+"by holding down the middle mouse button.\n"
+"\n"
+"If your mouse has only two buttons,\n"
+"hold down both of them simultaneously\n"
+"in order to simulate the middle button."
+msgstr ""
+"Applet-ak pantailan zehar mugi ditzakezu\n"
+"saguaren erdiko botoiarekin helduz.\n"
+"\n"
+"Bi botoiko sagua bada, \n"
+"eduki bi botoiak aldi berean sakatuta\n"
+"erdiko botoia simulatzeko."
+
+#: ../shell/plugins/Help/tips.py:23
+msgid ""
+"You can have different profiles of\n"
+"desktop applets and switch between them.\n"
+"\n"
+"Select \"Profiles->New profile...\" from\n"
+"the menu bar to create new profiles.\n"
+"\n"
+"Empty profiles get discarded automatically."
+msgstr ""
+"Mahaigaineko applet-en profila ezberdinak\n"
+"dituzu eta hauen artean alda zaitezket.\n"
+"\n"
+"Hautatu \"Profilak->Profila berria...\" \n"
+"menu-barratik profila berriak sortzeko.\n"
+"\n"
+"Profila hutsak automatikoki baztertu egingo dira."
+
+#: ../shell/plugins/Help/tips.py:31
+msgid ""
+"The search bar accepts complex search\n"
+"expressions for finding your applets."
+msgstr ""
+"Bilaketako barrak bilaketa konplexuen adierazpenak\n"
+"onartzen ditu zure appletak bilatzeko."
+
+#: ../shell/plugins/Help/tips.py:34
+msgid ""
+"Search expressions may contain wildcards:\n"
+"\n"
+" ? matches any one character\n"
+" * matches zero or more characters"
+msgstr ""
+"Bilaketako adierazpenek komodinak eduki ditzakete:\n"
+"\n"
+" ? karaktere bakarreko edozein ordezten du\n"
+" * zero edo karaktere gehiago ordezten ditu"
+
+#: ../shell/plugins/Help/tips.py:39
+msgid ""
+"Have a good idea for a desklet?\n"
+"Write your own!  See the Developer's\n"
+"book for more details."
+msgstr ""
+"Desklet batentzako burutazio ederrik bai?\n"
+"Idatzi zeurea! Ikus garatzaileen \n"
+"liburua xehetasun gehiagorako."
+
+#: ../shell/plugins/PackageInstaller/Downloader.py:29
+msgid "Retrieving:"
+msgstr "Eskuratzen:"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:26
+msgid "I_nstall remote package..."
+msgstr "_Instalatu urruneko paketea..."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:27
+msgid "_Install package..."
+msgstr "_Instalatu paketea..."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:97
+msgid "Invalid package"
+msgstr "Pakete baliogabea"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:98
+msgid ""
+"The supplied file could not be opened as a package. It is either corrupted "
+"or not of the correct file type."
+msgstr ""
+"Emandako fitxategia ezin da pakete gisa ireki. "
+"Hondatuta dago edo ez da fitxategi mota egokia."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:115
+msgid "Installation failed"
+msgstr "Instalazioak huts egin du"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:116
+msgid "The package could not be installed because it contained no installable files."
+msgstr "Pakete hau ezin da instalatu ez duelako fitxategi instalagarririk."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:119
+msgid "Installation complete"
+msgstr "Instalazioa burututa"
+
+#: ../shell/plugins/Profiles/__init__.py:18
+msgid "_Profiles"
+msgstr "_Profilak"
+
+#: ../shell/plugins/Profiles/__init__.py:20
+msgid "New profile..."
+msgstr "Profila berria..."
+
+#: ../shell/plugins/Profiles/__init__.py:75
+msgid "New profile"
+msgstr "Profila berria"
+
+#: ../shell/plugins/Profiles/__init__.py:76
+msgid "Enter the name for a new profile"
+msgstr "Sartu profila berriaren izena"
+
+#: ../shell/plugins/Shell/__init__.py:62
+msgid "_File"
+msgstr "_Fitxategia"
+
+#: ../shell/SearchBar.py:20
+msgid "Search"
+msgstr "Bilatu"
+
+#: ../utils/dialog.py:46
+#, python-format
+msgid "_Details (%d lines)"
+msgstr "_Xehetasunak (%d lerro)"
+
+#: ../utils/dialog.py:194
+msgid "_Ignore errors from this desklet"
+msgstr "_Ez ikusi egin desklet honen erroreei"
+
+#: ../utils/DOM.py:32
+msgid "An invalid graphics code was loaded into a canvas."
+msgstr "Grafikoaren baliogabeko kodea kargatu da oihalean."
+
+#: ../utils/DOM.py:153
+#, python-format
+msgid "No such element: %s"
+msgstr "Ez dago halako elementurik: %s"
+
+#: ../utils/DOM.py:154
+#, python-format
+msgid "The element with ID <b>%s</b> does not exist in the SVG image."
+msgstr "<b>%s</b> IDa duen elementuak ez da SVG irudian existitzen."
+
+#: ../utils/DOM.py:182 ../utils/Element.py:91
+#, python-format
+msgid "No such property: %s"
+msgstr "Ez dago honelako propietaterik: %s"
+
+#: ../utils/DOM.py:183
+#, python-format
+msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
+msgstr "<b>%s</b> SVG elementuak ez du <b>%s</b> propietaterik."
+
+#: ../utils/Element.py:92
+#, python-format
+msgid "The element <b>%s</b> does not have the <b>%s</b> property."
+msgstr "<b>%s</b> elementuak ez du <b>%s</b> propietaterik."
+
+#: ../utils/Element.py:96 ../utils/Element.py:126
+msgid "Permission Error"
+msgstr "Baimenaren errorea"
+
+#: ../utils/Element.py:97
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
+msgstr "<b>%s</b> propietatea (<b>%s</b> elementukoa) ez da idazkorra."
+
+#: ../utils/Element.py:105
+msgid "Type Error"
+msgstr "Motaren errorea"
+
+#: ../utils/Element.py:106
+#, python-format
+msgid ""
+"The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
+"Expected <b>%s</b>, but got <b>%s</b>."
+msgstr ""
+"<b>%s</b> propietateak (<b>%s</b> elementukoa) mota okerreko balioa du.\n"
+"<b>%s</b> espero zen baina <b>%s</b> lortu da."
+
+#: ../utils/Element.py:127
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
+msgstr "<b>%s</b> propietatea (<b>%s</b> elementukoa) ezin da irakurri."
+
+#: ../utils/error.py:158
+msgid "Runtime Error"
+msgstr "Exekuzio-denborako errorea"
+
+#: ../utils/error.py:160
+msgid "An error occurred while executing a desklet."
+msgstr "Errorea gertatu da desklet bat exekutatzean."
+

@@ -1,0 +1,12 @@
+2005-01-12  Christian Meyer  <chrisime@gnome.org>
+
+	* controlproducer.py: Added.
+
+2004-06-22  Benoît Dejean  <tazforever@dlfp.org>
+
+	* HACKING: Moved.
+
+	* utmp.c: (users), (dump_info), (main): Utility to dump utmp
+	information. Usefull to implement fast
+	libdesklets.system.Arch.users().
+

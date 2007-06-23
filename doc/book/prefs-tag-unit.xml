@@ -1,0 +1,136 @@
+<section id="prefs-tag-unit" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;unit&gt; <emph>[new in 0.34]</emph></title>
+
+  <para>A configuration item for setting geometry values. The user can enter
+    a value and select from the supported measurement units.
+    </para>
+
+  <!--
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/prefs-float" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+  -->
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">as_cm()</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The value of the unit in centimeters.</entry>
+      </row>
+      <row>
+        <entry valign="top">as_in()</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The value of the unit in inches.</entry>
+      </row>
+      <row>
+        <entry valign="top">as_percent()</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The value of the unit as a percentage of it's 
+          parent container's size.</entry>
+      </row>
+      <row>
+        <entry valign="top">as_pt()</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The value of the unit in DTP points (1 pt = 1/72 inch).</entry>
+      </row>
+      <row>
+        <entry valign="top">as_px()</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The value of the unit in pixels.</entry>
+      </row>
+      <row>
+        <entry valign="top">bind</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The name of the variable or property to which the
+          configuration element is bound.</entry>
+      </row>
+      <row>
+        <entry valign="top">digits</entry>
+        <entry valign="top">integer</entry>
+        <entry valign="top">2</entry>
+        <entry valign="top">The number of decimal digits.</entry>
+      </row>
+      <row>
+        <entry valign="top">callback</entry>
+        <entry valign="top">function</entry>
+        <entry valign="top"></entry>
+        <entry valign="top"> A callback function which is called every time
+          the value changes. The callback takes the name of the bound
+          property and the new value as arguments.</entry>
+      </row>
+      <row>
+        <entry valign="top">enabled</entry>
+        <entry valign="top">boolean</entry>
+        <entry valign="top">true</entry>
+        <entry valign="top">Whether the config item is enabled.
+          Disabled items appear greyed out.</entry>
+      </row>
+      <row>
+        <entry valign="top">help</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The tooltip text for the element in the
+          configuration dialog.</entry>
+      </row>
+      <row>
+        <entry valign="top">label</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The label text for the element in the
+          configuration dialog.</entry>
+      </row>
+      <row>
+        <entry valign="top">min</entry>
+        <entry valign="top">float</entry>
+        <entry valign="top">0.0</entry>
+        <entry valign="top">The minimal value allowed.</entry>
+      </row>
+      <row>
+        <entry valign="top">max</entry>
+        <entry valign="top">float</entry>
+        <entry valign="top">9999.0</entry>
+        <entry valign="top">The maximal value allowed.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+
+  <section><title>Examples</title>
+
+    <programlisting><![CDATA[
+<unit label="Width:" bind="Dsp.win.width" min="0.5" max="50.0"
+      help="The width of the display."/>
+    ]]></programlisting>
+
+  </section>
+
+</section>

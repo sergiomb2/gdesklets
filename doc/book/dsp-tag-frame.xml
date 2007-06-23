@@ -1,0 +1,91 @@
+<section id="dsp-tag-frame" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;frame&gt;</title>
+
+  <para>This container puts a frame around its child element. The frame can
+    either consist of a single color or of image elements.</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/dsp-frame" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">border-uris</entry>
+        <entry valign="top">string list</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">URIs of the eight graphic images building the frame
+          (west, north, east, south, north-west, north-east, south-east,
+          south-west).</entry>
+      </row>
+      <row>
+        <entry valign="top">border-width</entry>
+        <entry valign="top"><link linkend="layout-units">unit list</link></entry>
+        <entry valign="top">2, 2, 2, 2</entry>
+        <entry valign="top">Width of each frame side
+          (left, top, right, bottom).</entry>
+      </row>
+      <row>
+        <entry valign="top">color</entry>
+        <entry valign="top">color</entry>
+        <entry valign="top">black</entry>
+        <entry valign="top">Color of the frame.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+
+  <section><title>Examples</title>
+
+    <programlisting><![CDATA[
+<display>
+
+  <frame id="outer_frame" color="red">
+    <frame border-width="5, 5, 5, 5" color="green">
+      <frame border-width="5, 5, 5, 5" color="blue">
+        <frame color="yellow">
+
+          <label value="framed text" font="Sans 3cm"/>
+
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+
+...
+
+Dsp.outer_frame.border_width = [ Unit(1, IN), Unit(2, IN), 
+                                 Unit(3, IN), Unit(4, IN) ]
+
+# Likewise with the border_uris property except 
+# it would then be a list of 8 strings.
+
+</display>
+    ]]></programlisting>
+
+  </section>
+
+</section>
