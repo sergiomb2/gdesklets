@@ -1,3 +1,8 @@
+2007-06-23  Christian Meyer  <chrisime@gnome.org>
+
+	* utils/x11.c: Applied patch provided by Chris Wang.
+	* libdesklets/system: Likewise.
+
 2007-04-25  Christophe Merlet  <redfox@redfoxcenter.org>
 
 	* configure.in: Added "oc" (Occitan) to ALL_LINGUAS.
