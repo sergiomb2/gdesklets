@@ -157,15 +157,17 @@ grab_ungrab_key (PyObject *self, PyObject *args) {
 
   guint x_modifiers;
   gboolean is_grab;
+  int keycode_int;
   KeyCode keycode;
   GdkModifierType modifiers;
   GdkWindow *window, *rootwindow;
 
   if (!PyArg_ParseTuple (args, "O&iii",
                          parse_gdk_window, &window,
-                         &keycode, &modifiers, &is_grab))
+                         &keycode_int, &modifiers, &is_grab))
     return NULL;
 
+  keycode = (KeyCode) keycode_int;
 
   rootwindow = gdk_get_default_root_window ();
 

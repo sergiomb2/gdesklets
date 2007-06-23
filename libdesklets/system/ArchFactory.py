@@ -46,6 +46,17 @@ def __detect_arch():
 
         return NetBSD.Generic()
 
+    elif (uname[0] == 'SunOS'):
+
+        import Solaris
+        r = os.popen('/usr/bin/uname -p').read()
+        if (r[:-1] in ('i386')):
+            return Solaris.X86()
+
+        if (r[:-1] in ('sparc')):
+            return Solaris.Sparc()
+
+        return Solaris.Generic()
 
     log("OS/Architecture not found!")
 

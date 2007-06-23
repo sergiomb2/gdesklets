@@ -44,8 +44,8 @@ install-data-hook:
 	    chmod 0755 $(DESTDIR)$(fakepixmapdir);      \
 	fi
 
-	$(LN_S) -f $(pixmapdir)/gdesklets.png \
-	$(DESTDIR)$(fakepixmapdir)/gdesklets.png;
+	cd $(DESTDIR)/$(fakepixmapdir); \
+	$(LN_S) -f ../../../share/pixmaps/gdesklets.png gdesklets.png;
 
 	if test -n "$(UPDATE_MIME_DATABASE)"; then \
 	    $(UPDATE_MIME_DATABASE) "$(DESTDIR)${sharedmimedir}"; \
