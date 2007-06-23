@@ -1,3 +1,7 @@
+2007-06-23  Christian Meyer  <chrisime@gnome.org
+
+	* system/Windows: Removed.
+
 2005-10-16  Martin Grimme  <martin@pycage.de>
 
 	* system/Arch.py: Removed NullObject.
