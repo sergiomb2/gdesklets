@@ -1,6 +1,5 @@
 ## Process this file with automake to produce Makefile.in
 
-# dist-bzip2 support has landed in automake 1.6
 AUTOMAKE_OPTIONS = 1.7 dist-bzip2
 
 SUBDIRS = \
@@ -11,7 +10,7 @@ SUBDIRS = \
 	doc		\
 	display		\
 	factory		\
-	layout          \
+	layout		\
 	main		\
 	plugin		\
 	po		\
@@ -22,32 +21,30 @@ SUBDIRS = \
 	libdesklets
 
 EXTRA_DIST = \
-	AUTHORS			 \
-	COPYING			 \
-	README			 \
-	TODO			 \
-	NEWS			 \
-	autogen.sh		 \
-	intltool-extract.in	 \
-	intltool-merge.in	 \
-	intltool-update.in	 \
-	ctrlinfo		 \
-	gdesklets		 \
-	gdesklets-daemon	 \
-	gdesklets-logview	 \
-	gdesklets-migration-tool \
-	gdesklets-shell	     	 \
+	AUTHORS			\
+	COPYING			\
+	README			\
+	TODO			\
+	NEWS			\
+	autogen.sh		\
+	intltool-extract.in	\
+	intltool-merge.in	\
+	intltool-update.in	\
+	ctrlinfo		\
+	gdesklets		\
+	gdesklets-daemon	\
+	gdesklets-logview	\
+	gdesklets-migration-tool\
+	gdesklets-shell		\
 	test-control.py
 
 CLEANFILES = \
-	intltool-extract	 \
-	intltool-merge		 \
+	intltool-extract	\
+	intltool-merge		\
 	intltool-update
 
 installdir = ${coredir}
-install_SCRIPTS = ctrlinfo gdesklets gdesklets-daemon gdesklets-logview gdesklets-migration-tool gdesklets-shell test-control.py
-
-
+install_SCRIPTS = ctrlinfo gdesklets gdesklets-daemon gdesklets-logview gdesklets-migration-tool gdesklets-shell
 
 install-data-hook:
 	if test '!' -d $(DESTDIR)$(bindir); then \
@@ -56,4 +53,6 @@ install-data-hook:
 	fi
 
 	$(INSTALL_SCRIPT) gdesklets $(DESTDIR)${coredir}/gdesklets; \
-	$(LN_S) -f ${coredir}/gdesklets $(DESTDIR)$(bindir)/gdesklets;
+	cd $(DESTDIR)$(bindir); \
+	$(LN_S) -f ../../lib/gdesklets gdesklets;
+

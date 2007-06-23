@@ -60,7 +60,27 @@ class Downloader(gtk.Dialog):
         self.__is_cancelled = False
 
         dest_fd = open(dest, "w")
+
+        import gconf
+        client = gconf.client_get_default()
+        use_proxy = client.get_bool('/system/http_proxy/use_http_proxy')
+        if (use_proxy != 0):
+           host = client.get_string('/system/http_proxy/host')
+           port = client.get_int('/system/http_proxy/port')
+           if (host != ""):
+               http_proxy = "http://" + host + ':' + str(port)
+           else:
+               http_proxy = None
+        else:
+            http_proxy = None
+
         import urllib2
+
+        if (http_proxy is not None):
+            proxy_support = urllib2.ProxyHandler({"http" : http_proxy})
+            opener = urllib2.build_opener(proxy_support)
+            urllib2.install_opener(opener)
+
         src_fd = urllib2.urlopen(url)
         total_size = src_fd.info().get("Content-Length", 0)
         so_far = 0

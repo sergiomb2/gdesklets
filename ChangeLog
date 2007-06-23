@@ -1,5 +1,12 @@
 2007-06-23  Christian Meyer  <chrisime@gnome.org>
 
+	* shell/plugins/PackageInstaller/Downloader.py: Fixed #426825.
+	* shell/plugins/PackageInstaller/Package.py: Fixed #408484.
+	* Makefile.am: Fixed #405100.
+	* libdesklets/system/gtop.c: Fixed #406957.
+
+2007-06-23  Christian Meyer  <chrisime@gnome.org>
+
 	* utils/x11.c: Applied patch provided by Chris Wang.
 	* libdesklets/system: Likewise.
 

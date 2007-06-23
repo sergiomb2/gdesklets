@@ -21,16 +21,16 @@ class Package:
         # determine archive type
         head = open(file, "r").read(3)
         if (head.startswith("BZh")):
-            cmd = "cd \"%s\" && tar -xjf \"%s\"" % (self.__dir, file)
+            cmd = "cd \"%s\" && bzip2 -dc \"%s\" | tar -xf -" % (self.__dir, file)
         elif (head.startswith("\x1f\x8b")):
-            cmd = "cd \"%s\" && tar -xzf \"%s\"" % (self.__dir, file)
+            cmd = "cd \"%s\" && gzip -dc \"%s\" | tar -xf -" % (self.__dir, file)
         else:
             raise IOError("Unknown file type.")
 
         fail, out = commands.getstatusoutput(cmd)
         if (fail): raise IOError(out)
 
-        
+
 
     def close(self):
 
@@ -70,7 +70,7 @@ class Package:
             elif (os.path.isdir(os.path.join(path, f))):
                 values += self.__find(os.path.join(path, f), predicate)
         #end for
-        
+
         return values
 
 
