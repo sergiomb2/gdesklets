@@ -231,7 +231,7 @@ class GlassWindow(gtk.Window):
 
         name = ""
         win = _WM_NAME_WIN
-        if (win != None):
+        if (win != None and win != ""):
             try:
                 name = win.property_get("_NET_WM_NAME")[2]
             except TypeError, exc:
