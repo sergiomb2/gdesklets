@@ -1,3 +1,20 @@
+2007-07-04  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* config/ConfigDate.py:
+	* config/ConfigRadio.py: new config elements
+	* config/ConfigButton.py:
+	* config/ConfigColor.py:
+	* config/ConfigDialog.py:
+	* config/ConfigEnum.py:
+	* config/ConfigFloat.py:
+	* config/ConfigFont.py:
+	* config/ConfigKeyBinding.py:
+	* config/ConfigString.py:
+	* config/ConfigURI.py:
+	* config/ConfigUnit.py: changes due to the new layout needed by the new config elements
+	* factory/DisplayFactory.py: integrating the new config elements
+	* data/calendar.png: icon needed by ConfigDate.py
+
 2007-06-23  Christian Meyer  <chrisime@gnome.org>
 
 	* shell/plugins/PackageInstaller/Downloader.py: Fixed #426825.

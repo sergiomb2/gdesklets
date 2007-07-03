@@ -1,10 +1,12 @@
 from ConfigBoolean import ConfigBoolean
 from ConfigButton import ConfigButton
 from ConfigColor import ConfigColor
+from ConfigDate import ConfigDate
 from ConfigEnum import ConfigEnum
 from ConfigFloat import ConfigFloat
 from ConfigFont import ConfigFont
 from ConfigInteger import ConfigInteger
+from ConfigRadio import ConfigRadio
 from ConfigString import ConfigString
 from ConfigTitle import ConfigTitle
 from ConfigUnit import ConfigUnit
@@ -30,10 +32,12 @@ class ConfigDialog(HIGDialog):
     __ITEM_TABLE = {"boolean": ConfigBoolean,
                     "button": ConfigButton,
                     "color": ConfigColor,
+                    "date": ConfigDate,
                     "enum": ConfigEnum,
                     "float": ConfigFloat,
                     "font": ConfigFont,
                     "integer": ConfigInteger,
+                    "radio": ConfigRadio,
                     "string": ConfigString,
                     "title": ConfigTitle,
                     "unit": ConfigUnit,
@@ -189,11 +193,12 @@ class ConfigDialog(HIGDialog):
         ebox.show()
 
         if (len(widgets) == 2):
+
             page.attach(widgets[0], 0, 1, page_lines - 1, page_lines,
-                        gtk.FILL, 0, indent, 3)
+                        gtk.FILL, gtk.FILL, indent, 3)
             ebox.add(widgets[1])
             page.attach(ebox, 1, 2, page_lines - 1, page_lines,
-                        gtk.EXPAND | gtk.FILL, 0, 0, 3)
+                        gtk.EXPAND | gtk.FILL, 0, indent, 3)
 
         else:
             ebox.add(widgets[0])
@@ -259,10 +264,13 @@ class ConfigDialog(HIGDialog):
                 configitem = self.__create_config_item(itype, settings)
                 if (not configitem): continue
 
-                widgets = configitem.get_widgets()
+                if (itype == "radio"): widgets = configitem.get_widgets(item_list)
+                else: widgets = configitem.get_widgets()
+
                 if (itype not in ("title", "button")):
                     configitem.set_prop_from_string("bind", settings["bind"])
                 if (itype == "enum"): configitem.set_prop("items", item_list)
+                if (itype == "radio"): configitem.set_prop("items", item_list)
                 for k, v in settings.items():
                     configitem.set_prop_from_string(k, v)
 

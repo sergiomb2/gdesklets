@@ -243,8 +243,8 @@ class _DisplayFactory(sax.handler.ContentHandler):
             if (name == "prefs"):
                 pass
             else:
-                if (name in ("boolean", "color", "enum", "float", "font",
-                             "integer", "string", "uri")
+                if (name in ("boolean", "color", "date", "enum", "float", "font",
+                             "integer", "radio", "string", "uri")
                     and not attrs.has_key("bind")):
                     dialog.warning(_("&lt;%s&gt; needs a bind attribute") % \
                                                                       (name,),

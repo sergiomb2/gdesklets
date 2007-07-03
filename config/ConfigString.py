@@ -25,7 +25,7 @@ class ConfigString(ConfigWidget):
         self.__entry = gtk.Entry()
         self.__entry.set_width_chars(15)
         self.__entry.show()
-        align = gtk.Alignment(0.0, 0.0, 0.0, 0.0)
+        align = gtk.Alignment(0.0, 0.5, 0.0, 0.0)
         align.show()
         align.add(self.__label)
 

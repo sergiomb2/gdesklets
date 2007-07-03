@@ -54,7 +54,7 @@ class ConfigURI(ConfigWidget):
 
         self.__label = gtk.Label("")
         self.__label.show()
-        align = gtk.Alignment(0.0, 0.0, 0.0, 0.0)
+        align = gtk.Alignment(0.0, 0.5, 0.0, 0.0)
         align.show()
         align.add(self.__label)
 

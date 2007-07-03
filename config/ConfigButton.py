@@ -18,7 +18,7 @@ class ConfigButton(ConfigWidget):
 
     def get_widgets(self):
 
-        align = gtk.Alignment(0.0, 0.0, 0.0, 0.0)
+        align = gtk.Alignment(0.0, 0.5, 0.0, 0.0)
         align.show()
         self.__button = gtk.Button("")
         self.__button.show()
