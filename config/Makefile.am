@@ -5,12 +5,14 @@ install_DATA = \
 	ConfigBoolean.py  \
 	ConfigButton.py   \
 	ConfigColor.py    \
+	ConfigDate.py      \
 	ConfigDPI.py      \
 	ConfigEnum.py     \
 	ConfigFloat.py    \
 	ConfigFont.py     \
 	ConfigInteger.py  \
 	ConfigKeyBinding.py \
+	ConfigRadio.py      \
 	ConfigString.py   \
 	ConfigTitle.py    \
 	ConfigUnit.py     \

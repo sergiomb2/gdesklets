@@ -19,7 +19,8 @@ from utils.HIGDialog import HIGDialog
 
 import gtk
 import gobject
-
+import os
+import os.path
 
 
 class ConfigDialog(HIGDialog):
@@ -242,7 +243,34 @@ class ConfigDialog(HIGDialog):
                     self.vbox.pack_start(align, False, False, 0)
 
                 label = settings.get("label", "")
-                tab = gtk.Label(label)
+                tab = gtk.HBox(False, 0)
+                tab.set_border_width(2)
+
+                labelbox = gtk.Label(label)
+
+                tab.pack_end(labelbox, True, True, 3)
+
+                image = gtk.Image()
+                icon = settings.get("icon", "")
+
+#                print os.getcwd()
+
+                # scale down images that are higher than the label
+                if os.path.exists(icon):
+                    (labelx, labely) = labelbox.size_request()
+                    pixbuf = gtk.gdk.pixbuf_new_from_file(os.path.realpath(icon))
+                    icon_width = pixbuf.get_width()
+                    icon_height = pixbuf.get_height()
+                    if (icon_height > labely):
+                        icon_aspectratio = float(icon_width) / icon_height
+                        icon_height = labely
+                        icon_width = int(icon_aspectratio * icon_height)
+                    scaled_buf = pixbuf.scale_simple(icon_width,icon_height,gtk.gdk.INTERP_BILINEAR)
+                    image.set_from_pixbuf(scaled_buf)
+                    tab.pack_start(image, False, False, 3)
+                    image.show()
+
+                labelbox.show() 
                 tab.show()
                 box = gtk.VBox()
                 box.set_property("border-width", 12)

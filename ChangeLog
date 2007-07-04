@@ -1,3 +1,9 @@
+2007-07-054  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* config/ConfigDialog.py: added "Icons in the prefs tabs", still waiting for #434858 to be fixed. 
+	* config/makefile.am:
+	* date/makefile.am: added missing new files 
+
 2007-07-04  Christian Meyer  <chrisime@gnome.org>
 
 	* display/GlassWindow.py: Fixed #44129.

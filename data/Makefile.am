@@ -23,11 +23,13 @@ CLEANFILES = \
 
 installdir = ${coredir}/data
 install_DATA = \
-	about.png \
+	about.png    \
+	calendar.png \
 	gdesklets.png
 
 EXTRA_DIST = \
 	about.png                               \
+	calendar.png                            \
 	gdesklets.desktop                       \
 	gdesklets.desktop.in                    \
 	gdesklets.png                           \
