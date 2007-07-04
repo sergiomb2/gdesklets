@@ -1,3 +1,7 @@
+2007-07-04  Christian Meyer  <chrisime@gnome.org>
+
+	* display/GlassWindow.py: Fixed #44129.
+
 2007-07-04  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* config/ConfigDate.py:
