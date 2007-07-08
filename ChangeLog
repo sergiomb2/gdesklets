@@ -1,4 +1,11 @@
-2007-07-054  Bjoern Koch  <H.Humpel@gmx.de>
+2007-07-04  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* config/ConfigList.py:
+	* config/makefile.am:
+	* factory/DisplayFactory.py: new config element (ConfigList)
+	* utils/datatypes.py: Changed "TYPE_FLOAT" to (lambda r: float(r)) as "float(v)" raised errors (typo?)
+
+2007-07-04  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* config/ConfigDialog.py: added "Icons in the prefs tabs", still waiting for #434858 to be fixed. 
 	* config/makefile.am:

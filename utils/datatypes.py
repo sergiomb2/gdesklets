@@ -54,7 +54,7 @@ TYPE_LIST = (
     "list",
     lambda v: type(v) in (type([]), type(())),
     lambda v: repr(v),
-    lambda r: list(v)
+    lambda r: list(r)
     )
 
 TYPE_BOOL = (

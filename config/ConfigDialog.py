@@ -6,6 +6,7 @@ from ConfigEnum import ConfigEnum
 from ConfigFloat import ConfigFloat
 from ConfigFont import ConfigFont
 from ConfigInteger import ConfigInteger
+from ConfigList import ConfigList
 from ConfigRadio import ConfigRadio
 from ConfigString import ConfigString
 from ConfigTitle import ConfigTitle
@@ -38,6 +39,7 @@ class ConfigDialog(HIGDialog):
                     "float": ConfigFloat,
                     "font": ConfigFont,
                     "integer": ConfigInteger,
+                    "list": ConfigList,
                     "radio": ConfigRadio,
                     "string": ConfigString,
                     "title": ConfigTitle,
@@ -298,6 +300,7 @@ class ConfigDialog(HIGDialog):
                 if (itype not in ("title", "button")):
                     configitem.set_prop_from_string("bind", settings["bind"])
                 if (itype == "enum"): configitem.set_prop("items", item_list)
+                if (itype == "list"): configitem.set_prop("items", item_list)
                 if (itype == "radio"): configitem.set_prop("items", item_list)
                 for k, v in settings.items():
                     configitem.set_prop_from_string(k, v)

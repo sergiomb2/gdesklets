@@ -12,6 +12,7 @@ install_DATA = \
 	ConfigFont.py     \
 	ConfigInteger.py  \
 	ConfigKeyBinding.py \
+	ConfigList.py     \
 	ConfigRadio.py      \
 	ConfigString.py   \
 	ConfigTitle.py    \
