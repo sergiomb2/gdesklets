@@ -1,5 +1,3 @@
-# TODO : add epydoc
-
 from main import _
 
 import struct
@@ -13,20 +11,23 @@ _KILO = 2**10
 
 def human_readable_bytes(bytes):
 
-    # TODO: replace with gnome_vfs_file_size_format_for_display when available
-    
-    global _TERA, _GIGA, _MEGA, _KILO
+    try:
+         import gnomevfs
+         return gnomevfs.format_file_size_for_display(bytes)
+    except ImportError:
 
-    if bytes >= _TERA:
-        return _("%.2f TB") % (float(bytes) / _TERA)
-    elif bytes >= _GIGA:
-        return _("%.2f GB") % (float(bytes) / _GIGA)
-    elif bytes >= _MEGA:
-        return _("%.2f MB") % (float(bytes) / _MEGA)
-    elif bytes >= _KILO:
-        return _("%.2f kB") % (float(bytes) / _KILO)
-    else:
-        return _("%d B") % bytes
+        global _TERA, _GIGA, _MEGA, _KILO
+
+        if bytes >= _TERA:
+            return _("%.2f TB") % (float(bytes) / _TERA)
+        elif bytes >= _GIGA:
+            return _("%.2f GB") % (float(bytes) / _GIGA)
+        elif bytes >= _MEGA:
+            return _("%.2f MB") % (float(bytes) / _MEGA)
+        elif bytes >= _KILO:
+            return _("%.2f kB") % (float(bytes) / _KILO)
+        else:
+            return _("%d B") % bytes
 
 
 
@@ -97,9 +98,6 @@ def kelvin_to_centigrade(k):
 
 
 
-# TODO: check for correctness
-
-
 def ipv4_to_dotted_quad(ip):
 
     """Converts ipv4 (32bits unsigned integer) to
@@ -123,3 +121,10 @@ def dotted_quad_to_ipv4(ip):
         -> 1291888832
     """
     return struct.unpack('=L', socket.inet_aton(ip))[0]
+
+
+
+if __name__ == "__main__":
+    print human_readable_bytes(100000000)
+    print human_readable_bytes(1232348749)
+
