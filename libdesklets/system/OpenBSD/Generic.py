@@ -63,13 +63,7 @@ class Generic(Arch):
         @rtype  : int
         """
 
-        # man utmp
-        # don't know if
-        # sizeof(struct utmp) == 300
-        # offsetof(struct utmp, ut_name) == 8
-        # on every OpenBSD arch
         # sparc64 : ok
-
         count = 0
         data = open('/var/run/utmp', 'rb').read()
 

@@ -50,13 +50,7 @@ class Generic(Arch):
         @rtype  : int
         """
 
-        # man utmp
-        # don't know if
-        # sizeof(struct utmp) == 36
-        # offsetof(struct utmp, ut_name) == 8
-        # on every NetBSD arch
         # mips3000 : ok
-
         count = 0
         data = open('/var/run/utmp', 'rb').read()
 

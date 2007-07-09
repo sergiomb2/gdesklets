@@ -73,20 +73,14 @@ class X86(Generic):
 
     def users(self):
 
-        # man utmp
-        # don't know if
-        # sizeof(struct utmp) == 384
-        # sizeof(short) == 2
-        # on every Linux arch
-        # http://gnomesupport.org/forums/viewtopic.php?p=33686
-        # X86, X86_64 : ok
-
         count = 0
         data = open('/var/adm/utmpx', 'rb').read()
 
         for i in range(0, len(data), 384):
             ut_type = struct.unpack('h', data[i:i+2])[0]
-            if (ut_type == 7): count += 1
+
+            if (ut_type == 7):
+                count += 1
 
         return count
 
