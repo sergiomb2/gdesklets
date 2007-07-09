@@ -22,12 +22,6 @@ class Struct(dict):
         return self[name]
 
 
-#     def __getattribute__(self, name):
-
-#         try:
-#             return self[name]
-#         except KeyError:
-#             return dict.__getattribute__(self, name)
 
     def __repr__(self):
 
@@ -51,5 +45,4 @@ class Struct(dict):
     def __hash__(self):
 
         return hash(repr(self))
-    
 
