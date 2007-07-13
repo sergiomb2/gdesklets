@@ -2,7 +2,8 @@
   <title>&lt;item&gt;</title>
 
   <para>An enumeration item for use in the
-    <link linkend="prefs-tag-enum">&lt;enum&gt;</link> tag.</para>
+    <link linkend="prefs-tag-enum">&lt;enum&gt;</link> and
+    <link linkend="prefs-tag-radio">&lt;radio&gt;</link> tag.</para>
 
 
 

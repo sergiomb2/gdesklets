@@ -1,3 +1,18 @@
+2007-07-14  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* config/ConfigInfo.py:
+	* config/ConfigDialog.py:
+	* config/Makefile.am: new config element (ConfigInfo)
+	* doc/book/gfx/prefs-date.png:
+	* doc/book/gfx/prefs-info.png:
+	* doc/book/gfx/prefs-radio.png:
+	* doc/book/prefs-tag-date.xml:
+	* doc/book/prefs-tag-info.xml:
+	* doc/book/prefs-tag-radio.xml:
+	* doc/book/prefs-tag-item.xml:
+	* doc/book/prefs-tag-unit.xml:
+	* doc/book/prefs.xml: added docs for the new config elements (Date, Info and Radio)
+
 2007-07-04  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* config/ConfigList.py:
@@ -9,7 +24,7 @@
 
 	* config/ConfigDialog.py: added "Icons in the prefs tabs", still waiting for #434858 to be fixed. 
 	* config/makefile.am:
-	* date/makefile.am: added missing new files 
+	* data/makefile.am: added missing new files 
 
 2007-07-04  Christian Meyer  <chrisime@gnome.org>
 

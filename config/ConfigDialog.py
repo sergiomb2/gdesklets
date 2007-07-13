@@ -5,6 +5,7 @@ from ConfigDate import ConfigDate
 from ConfigEnum import ConfigEnum
 from ConfigFloat import ConfigFloat
 from ConfigFont import ConfigFont
+from ConfigInfo import ConfigInfo
 from ConfigInteger import ConfigInteger
 from ConfigList import ConfigList
 from ConfigRadio import ConfigRadio
@@ -38,6 +39,7 @@ class ConfigDialog(HIGDialog):
                     "enum": ConfigEnum,
                     "float": ConfigFloat,
                     "font": ConfigFont,
+                    "info": ConfigInfo,
                     "integer": ConfigInteger,
                     "list": ConfigList,
                     "radio": ConfigRadio,

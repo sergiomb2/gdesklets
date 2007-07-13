@@ -10,11 +10,14 @@
   <xi:include href="prefs-tag-title.xml"/>
   <xi:include href="prefs-tag-boolean.xml"/>
   <xi:include href="prefs-tag-color.xml"/>
+  <xi:include href="prefs-tag-date.xml"/>
   <xi:include href="prefs-tag-enum.xml"/>
   <xi:include href="prefs-tag-float.xml"/>
   <xi:include href="prefs-tag-font.xml"/>
+  <xi:include href="prefs-tag-info.xml"/>
   <xi:include href="prefs-tag-integer.xml"/>
   <xi:include href="prefs-tag-item.xml"/>
+  <xi:include href="prefs-tag-radio.xml"/>
   <xi:include href="prefs-tag-string.xml"/>
   <xi:include href="prefs-tag-unit.xml"/>
   <xi:include href="prefs-tag-uri.xml"/>

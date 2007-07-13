@@ -1,5 +1,5 @@
 <section id="prefs-tag-unit" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>&lt;unit&gt; <emph>[new in 0.34]</emph></title>
+  <title>&lt;unit&gt;</title>
 
   <para>A configuration item for setting geometry values. The user can enter
     a value and select from the supported measurement units.

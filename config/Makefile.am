@@ -10,6 +10,7 @@ install_DATA = \
 	ConfigEnum.py     \
 	ConfigFloat.py    \
 	ConfigFont.py     \
+	ConfigInfo.py  \
 	ConfigInteger.py  \
 	ConfigKeyBinding.py \
 	ConfigList.py     \
