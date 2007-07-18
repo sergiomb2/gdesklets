@@ -1,0 +1,60 @@
+Fast overview
+¯¯¯¯¯¯¯¯¯¯¯¯¯
+See cmdesklet.py for a very simple example on how to use the 
+Assembly. 
+
+!! 
+NOTE THAT _DESKLET_ DEVELOPERS don't need to know this. 
+Knowing how it works is only important to developers of this
+control or people who want to build other frontends than desklets
+!!
+
+Basic Functionality
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+The Desklet control (referred as 'DC') downloads a list of available
+desklets and controls(both are 'widgets') from a list of given sources 
+and forms a list of available widgets. 
+
+The other function of DC is to find the local controls and desklets and 
+then fullfill the original list of widgets to reflect this.
+
+There are four different basic types or states of desklets:
+ 1. Installed desklets
+ 2. Activated desklets (running and installed)
+ 3. Upgradeable desklets (installed ones that have 
+                          a new version available)
+ 4. Remote desklets (desklets that are not installed)
+
+Controls are simpler and have only three states:
+ 1. Installed
+ 2. Upgradeable
+ 3. Remote
+
+
+Explanation on the Architecture
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Assembly (Assembly.py) calls for the functions in the local and 
+remote packages (local/ and remote/) and then creates a list 
+of Desklet and Control objects (both of which are inherited from 
+Widget).
+
+These objects are used directly to change widget states (install, remove
+query, etc.). So the basic way of installing desklet named X would be
+to do:
+
+x_object = assembly.get_desklet('X')
+x_object.install()
+
+
+Settings (Settings.py) manages global settings that are used by the
+other classes.
+
+
+Alternative Approaches
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+The most simple approach would have been to create a dictionary of
+widget variables and then just use plain functions and those variables
+to do actions on those widgets. That also could have been more memory
+efficient. However the complexity of the code could have been greater 
+and the current approach makes better use of class inheritance and 
+encapsulation (also it's a lot easier to understand :) )
