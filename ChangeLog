@@ -1,3 +1,8 @@
+2007-07-23  Christian Meyer  <chrisime@gnome.org>
+
+	* shell/plugins/Shell/__init__.py: Don't use deprecated threads_init()
+	call of gtk. It's been moved to gtk.gdk.
+
 2007-07-14  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* config/ConfigInfo.py:
