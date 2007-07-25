@@ -1,14 +1,12 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.53)
 AC_INIT(configure.in)
-AM_INIT_AUTOMAKE(gDesklets, 0.35.5, http://bugzilla.gnome.org/enter_bug.cgi?product=gDesklets)
+AM_INIT_AUTOMAKE(gDesklets, 0.35.99, http://bugzilla.gnome.org/enter_bug.cgi?product=gDesklets)
 AM_CONFIG_HEADER(config.h)
 AM_MAINTAINER_MODE
 
 dnl Required programs
 AC_PROG_CC
-dnl fool the system...
-AC_PROG_CXX(gcc cc)
 AC_HEADER_STDC
 AC_DISABLE_STATIC
 AC_PROG_INTLTOOL
@@ -48,39 +46,32 @@ AM_PATH_PYTHON([2.3])
 PYTHON_PREFIX=`python -c "import sys; print sys.prefix"`
 PYTHON_CFLAGS="-I$PYTHON_PREFIX/include/python$PYTHON_VERSION"
 AC_CHECK_HEADER([$PYTHON_PREFIX/include/python$PYTHON_VERSION/Python.h],,
-    AC_ERROR([Can't find Python.h! You will need the python development package to successfully compile gDesklets.]))
+    AC_ERROR([Can't find Python.h! You will need python's development package to compile gDesklets.]))
 AC_SUBST(PYTHON_CFLAGS)
 
-PKG_CHECK_MODULES(GDESKLETS, pygtk-2.0 >= 2.4.0 pyorbit-2 >= 2.0.1 gnome-python-2.0 >= 2.6.0)
+PKG_CHECK_MODULES(GDESKLETS, pygtk-2.0 >= 2.10.0 pyorbit-2 >= 2.0.1 gnome-python-2.0 >= 2.12.0)
 AC_SUBST(GDESKLETS_CFLAGS)
 AC_SUBST(GDESKLETS_LIBS)
 
-PKG_CHECK_MODULES(UTILS, glib-2.0 >= 2.4.0 gtk+-2.0 >= 2.4.0 gdk-pixbuf-2.0 >=
-2.4.0 pygtk-2.0 >= 2.4.0)
+PKG_CHECK_MODULES(UTILS, glib-2.0 >= 2.10.0 gtk+-2.0 >= 2.10.0 gdk-pixbuf-2.0 >=
+2.10.0 pygtk-2.0 >= 2.10.0)
 AC_SUBST(UTILS_CFLAGS)
 AC_SUBST(UTILS_LIBS)
 
-PKG_CHECK_MODULES(GLIBTOP, pygtk-2.0 >= 2.4.0 libgtop-2.0 >= 2.8.2)
+PKG_CHECK_MODULES(GLIBTOP, pygtk-2.0 >= 2.10.0 libgtop-2.0 >= 2.10.0)
 AC_SUBST(GLIBTOP_CFLAGS)
 AC_SUBST(GLIBTOP_LIBS)
 
-PKG_CHECK_MODULES(SVG, pygtk-2.0 >= 2.4.0 gtk+-2.0 >= 2.4.0 librsvg-2.0 >= 2.8.0)
+PKG_CHECK_MODULES(SVG, pygtk-2.0 >= 2.10.0 gtk+-2.0 >= 2.10.0 librsvg-2.0 >= 2.8.0)
 AC_SUBST(SVG_CFLAGS)
 AC_SUBST(SVG_LIBS)
 
-PKG_CHECK_MODULES(SYSTRAY, pygtk-2.0 >= 2.4.0 libgnomeui-2.0 >= 2.2.0)
-AC_SUBST(SYSTRAY_CFLAGS)
-AC_SUBST(SYSTRAY_LIBS)
-
-PKG_CHECK_MODULES(TILING, pygtk-2.0 >= 2.4.0 gtk+-2.0 >= 2.4.0 gdk-pixbuf-2.0 >= 2.4.0)
+PKG_CHECK_MODULES(TILING, pygtk-2.0 >= 2.10.0 gtk+-2.0 >= 2.10.0 gdk-pixbuf-2.0
+>= 2.10.0)
 AC_SUBST(TILING_CFLAGS)
 AC_SUBST(TILING_LIBS)
 
-PKG_CHECK_MODULES(TILINGIMAGE, gtk+-2.0 >= 2.4.0)
-AC_SUBST(TILINGIMAGE_CFLAGS)
-AC_SUBST(TILINGIMAGE_LIBS)
-
-PKG_CHECK_MODULES(X11, pygtk-2.0 >= 2.4.0 gtk+-2.0 >= 2.4.0 gdk-2.0 >= 2.4.0)
+PKG_CHECK_MODULES(X11, pygtk-2.0 >= 2.10.0 gtk+-2.0 >= 2.10.0 gdk-2.0 >= 2.10.0)
 AC_SUBST(X11_CFLAGS)
 AC_SUBST(X11_LIBS)
 
