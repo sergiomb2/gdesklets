@@ -30,21 +30,18 @@ def _check_version():
     except Exception:
         pass
 
-
     return (VERSION == version)
 
 
 
-
 if (not _check_version()):
-    if (VERSION.endswith("CVS")):
-        # CVS warning :)
-        msg = _("This is a CVS version of gDesklets. CVS versions represent " \
-                "the current state of development and might be unstable or " \
-                "cause problems from time to time.\n\n" \
+    if (VERSION.endswith("beta")):
+        msg = _("This is a unstable version of gDesklets. Unstable versions " \
+                "represent the current state of development and might be " \
+                "unstable or cause problems from time to time.\n\n" \
                 "If you're new to gDesklets, it is thus highly recommended to "
-                "<b>not</b> use a CVS version, but a stable release!\n\n"
-                "If you still want to run the CVS version instead of a "
+                "<b>not</b> use this version, but a stable release!\n\n"
+                "If you still want to run the unstable version instead of a "
                 "stable release version, we'd highly appreciate it if you "
                 "report any weird behavior to the developers.\n\n"
                 "Experienced users are encouraged to try a CVS version, "
@@ -79,3 +76,4 @@ if (not _check_version()):
     dialog.info(
         _("Please note (this message will appear only once):"),
         msg)
+
