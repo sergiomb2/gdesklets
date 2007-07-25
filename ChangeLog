@@ -1,3 +1,9 @@
+2007-07-25  Christian Meyer  <chrisime@gnome.org>
+
+	* configure.in: Bumped library versions.
+	* utils/: Removed eggcode. We now depend on gtk2.10.
+	* main/TrayIcon.py: Use GtkStatusIcon. Needs to be fixed.
+
 2007-07-23  Christian Meyer  <chrisime@gnome.org>
 
 	* shell/plugins/Shell/__init__.py: Don't use deprecated threads_init()
