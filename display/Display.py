@@ -1,6 +1,7 @@
 from layout.LayoutObject import LayoutObject
 from config.DisplayConfigger import DisplayConfigger
 from config.StateSaver import DefaultStateSaver
+from DisplayConfigurator import DisplayConfigurator
 from DisplayTarget import DisplayTarget
 from TargetGroup import TargetGroup
 from MenuItem import MenuItem
@@ -12,8 +13,9 @@ from utils.Struct import Struct
 from utils.Observable import Observable
 from layout import Unit
 from utils import vfs
-import utils
 
+import targetregistry
+import utils
 import utils.dialog
 
 import gobject
@@ -24,11 +26,9 @@ import sys
 import os
 import re
 
-#utils.cimport("utils.tiling", "Tiling")
 try:
     from utils.tiling import Tiling
 except ImportError:
-    import sys
     log("Could not import tiling module!")
     sys.exit(1)
 
@@ -144,7 +144,6 @@ class Display(gtk.HBox, Observable):
 
         # whether the display reacts on events
         self.__is_sensitive = True
-
 
         gtk.HBox.__init__(self)
 
@@ -291,19 +290,15 @@ class Display(gtk.HBox, Observable):
 
         if (etype == self.EVENT_MOTION):
             x, y = args
-
             utils.request_idle_call(self.__queue_motion, x, y, w, h, False)
             return
-
 
         elif (etype == self.EVENT_LEAVE):
             utils.request_idle_call(self.__queue_motion, 0, 0, w, h, True)
             return
 
-
         elif (etype == self.EVENT_PRESS):
             button, x, y, counter = args
-
             self.__pointer_pos = (x, y)
             if (counter == 1):
                 action = DisplayTarget.ACTION_PRESS
@@ -313,10 +308,8 @@ class Display(gtk.HBox, Observable):
             event = Struct(button = button, _args = [button])
             actions.append((action, event))
 
-
         elif (etype == self.EVENT_RELEASE):
             button, x, y = args
-
             if (button == 1):
                 if (abs(lx - x) < 10 and abs(ly - y) < 10):
                     action = DisplayTarget.ACTION_CLICK
@@ -334,10 +327,8 @@ class Display(gtk.HBox, Observable):
             event = Struct(button = button, _args = [button])
             actions.append((action, event))
 
-
         elif (etype == self.EVENT_SCROLL):
             direction, x, y = args
-
             if (direction == gtk.gdk.SCROLL_UP):
                 direction = 0
             elif (direction == gtk.gdk.SCROLL_DOWN):
@@ -348,13 +339,11 @@ class Display(gtk.HBox, Observable):
             event = Struct(direction = direction, _args = [direction])
             actions.append((action, event))
 
-
         elif (etype == self.EVENT_KEY_PRESS):
             key, x, y = args
             action = DisplayTarget.ACTION_KEY_PRESS
             event = Struct(key = key)
             actions.append((action, event))
-
 
         elif (etype == self.EVENT_KEY_RELEASE):
             key, x, y = args
@@ -362,10 +351,9 @@ class Display(gtk.HBox, Observable):
             event = Struct(key = key)
             actions.append((action, event))
 
-
         else:
             # what kind of event did we get there?
-            assert (False)  # never reached
+            import traceback; traceback.print_exc()
 
         for action, event in actions:
             self.__group.get_layout_object().send_action(
@@ -407,7 +395,9 @@ class Display(gtk.HBox, Observable):
     #
     # Returns the display.
     #
-    def _get_display(self): return self
+    def _get_display(self):
+
+        return self
 
 
 
@@ -423,7 +413,6 @@ class Display(gtk.HBox, Observable):
 
     def new_child(self, childtype, settings, children):
 
-        import targetregistry
         # we don't catch the KeyError here, but in the DisplayFactory
         try:
             self.__group = targetregistry.create(childtype, self)
@@ -452,7 +441,6 @@ class Display(gtk.HBox, Observable):
 
         if (configurators):
             # support old deprecated sensor stuff
-            from DisplayConfigurator import DisplayConfigurator
             dconf = DisplayConfigurator(configurators)
 
         else:
@@ -541,7 +529,6 @@ class Display(gtk.HBox, Observable):
                 self.call_sensor(legacy_call, path, *legacy_args)
 
             else:
-                #src.notify_handle_action(True)
                 src._setp("event", event)
                 self.execute_callback_script(call, src)
 
@@ -566,14 +553,9 @@ class Display(gtk.HBox, Observable):
                                                          self.__action_stamp,
                                                    DisplayTarget.ACTION_MOTION,
                                                          Struct())
-            #self.__group.handle_action(DisplayTarget.ACTION_MOTION,
-            #                           ux, uy, Struct())
-            #self.__group.notify_handle_action(True)
             self.__group.detect_leave(self.__action_stamp)
-            #self.__action_stamp += 1
         else:
             self.__group.detect_leave(self.__action_stamp)
-            #self.__group.notify_handle_action(False)
 
 
 
@@ -583,7 +565,6 @@ class Display(gtk.HBox, Observable):
     def child_observer(self, src, cmd):
 
         if (cmd == src.OBS_GEOMETRY):
-            #src.get_layout_object().dump()
             x, y, w, h = self.__group.get_geometry()
             ux, uy = self.__group.get_user_geometry()[:2]
 
@@ -615,9 +596,8 @@ class Display(gtk.HBox, Observable):
                 new_x = x.as_px() + dx.as_px()
                 new_y = y.as_px() + dy.as_px()
 
-                #sx, sy = self.__layout_object.get_scaling()
-                self.__group.set_xml_prop("x", str(new_x))# / sx))
-                self.__group.set_xml_prop("y", str(new_y))# / sy))
+                self.__group.set_xml_prop("x", str(new_x))
+                self.__group.set_xml_prop("y", str(new_y))
 
 
 
@@ -712,6 +692,7 @@ class Display(gtk.HBox, Observable):
                 try:
                     data = vfs.read_entire_file(filename)
                 except:
+                    log("Couldn't read file %s", (filename,))
                     return
                 try:
                     loader.write(data, len(data))
@@ -783,10 +764,8 @@ class Display(gtk.HBox, Observable):
                     m.append(MenuItem("/item%d" % cnt, entry[0], None,
                                       callback, args))
                 cnt += 1
-            #end for
 
             utils.request_call(self.open_menu, m)
-
 
         self.__sensor_controls[ident] = sensor
         sensor.bind("output", self.__set_settings, ident)
@@ -903,7 +882,6 @@ class Display(gtk.HBox, Observable):
                     item.set_image(img)
                 except:
                     import traceback; traceback.print_exc()
-                    pass
 
             else:
                 item = gtk.MenuItem(entry.label)
@@ -931,7 +909,6 @@ class Display(gtk.HBox, Observable):
 
             m.append(item)
             tree["/".join(entry.path.split("/"))] = item
-        #end for
 
         mainmenu.popup(None, None, None, 0, 0)
 
@@ -973,7 +950,6 @@ class Display(gtk.HBox, Observable):
         def remove_display(*args):
             self.update_observer(self.OBS_CLOSE, self.__id)
 
-
         utils.dialog.question(None,
                               _("Do you really want to remove this desklet ?"),
                               _("This desklet will no longer be displayed "
@@ -991,3 +967,4 @@ class Display(gtk.HBox, Observable):
         return "id%d%d" % (int(time.time() * 100), random.randrange(0xffff))
 
     make_id = staticmethod(make_id)
+
