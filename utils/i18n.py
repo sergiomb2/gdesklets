@@ -3,7 +3,7 @@ import gettext
 import sys
 
 
-def find_locale_dir():
+def _find_locale_dir():
 
     fullpath = os.path.abspath(sys.argv[0])
     d, f = os.path.split(fullpath)
@@ -19,7 +19,7 @@ def find_locale_dir():
 
 def Translator(domain):
     try:
-        localedir = find_locale_dir()
+        localedir = _find_locale_dir()
         return gettext.translation(domain, localedir).gettext
     except IOError:
         return lambda s: s
