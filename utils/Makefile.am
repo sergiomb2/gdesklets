@@ -43,7 +43,7 @@ svg_la_SOURCES = svg.c utils.c utils.h
 svg_la_LIBADD = $(SVG_LIBS)
 svg_la_LDFLAGS = -module -avoid-version -as-needed
 
-tiling_la_SOURCES = tiling.c filter.c filter.h render.c render.h utils.c utils.h
+tiling_la_SOURCES = tiling.c render.c render.h utils.c utils.h
 tiling_la_LIBADD = $(TILING_LIBS)
 tiling_la_LDFLAGS = -module -avoid-version -as-needed
 

@@ -1,5 +1,4 @@
 #include "render.h"
-#include "filter.h"
 
 #include <gdk/gdkx.h>
 #include <string.h>
@@ -43,6 +42,23 @@ make_row (const GdkPixbuf *src, GdkPixbuf *dest, const gint offset)
 }
 
 
+static void
+filter_opacity (const GdkPixbuf *pbuf, gfloat opacity)
+{
+  guchar *data;
+  gint x, y, rowstride, height;
+
+  data  = gdk_pixbuf_get_pixels (pbuf);
+
+  rowstride = gdk_pixbuf_get_rowstride (pbuf);
+  height = gdk_pixbuf_get_height (pbuf);
+  for (x = 3; x < rowstride; x += 4) {
+    for (y = 0; y < height; y++) {
+      data[y * rowstride + x] *= opacity;
+    }
+  }
+}
+
 void
 render_to_image (GtkImage *image, GdkPixbuf *pbuf, gint width, gint height,
                  gfloat opacity, gfloat saturation)
@@ -62,7 +78,7 @@ render_to_image (GtkImage *image, GdkPixbuf *pbuf, gint width, gint height,
   filter_opacity (scaled, opacity);
 
   /* set saturation */
-  filter_saturation (scaled, saturation);
+  filter_saturation (scaled, scaled, saturation, FALSE);
 
   /* set image */
   gtk_image_set_from_pixbuf (image, scaled);
