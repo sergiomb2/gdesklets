@@ -6,4 +6,5 @@ install_DATA = \
 
 EXTRA_DIST = $(install_DATA)
 install_PYTHON = $(install_DATA)
+
 CLEANFILES = *.pyc

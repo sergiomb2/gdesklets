@@ -4,5 +4,6 @@ install_DATA = \
         IEventPipe.py
 
 EXTRA_DIST = $(install_DATA)
+install_PYTHON = $(install_DATA)
 
 CLEANFILES = *.pyc
