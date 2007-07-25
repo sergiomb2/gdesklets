@@ -9,9 +9,9 @@ import utils
 
 import os
 import sys
+
 import __builtin__
 __builtin__._ = i18n.Translator("gdesklets")
-
 
 _DISPLAYLIST = os.path.join(USERHOME, "displays")
 _DSPLIST = DisplayList(_DISPLAYLIST)
@@ -56,8 +56,8 @@ def check_system():
         ( ("xml.sax",), lambda m: m,
           _("SAX parser is required, some SuSE versions ship without it.")
         ),
-        ( ("gtk",), lambda m : m.pygtk_version >= (2, 4, 0) and \
-                              m.gtk_version >= (2, 4, 0),
+        ( ("gtk",), lambda m : m.pygtk_version >= (2, 10, 0) and \
+                              m.gtk_version >= (2, 10, 0),
           _("GTK python bindings (pygtk2) version >= 2.4.0 and "
             "GTK+ version >= 2.4.0 are required.")
         ),
