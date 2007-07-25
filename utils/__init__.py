@@ -1,5 +1,6 @@
 import __builtin__
 import errno
+import gtk
 import os
 import sys
 import string
@@ -51,20 +52,6 @@ _warnings_so_far = {}
 __builtin__.log = _log
 
 
-def cimport(module, c_library):
-
-    """
-    imports a C library
-    """
-
-    try:
-        from module import c_library
-    except:
-        import sys
-        #log("could not import %s!") % c_library
-        sys.exit(1)
-
-
 def parse_color(color):
 
     if (color[0] == "#" and len(color) == 9):
@@ -73,7 +60,6 @@ def parse_color(color):
     else:
         alpha = 255
 
-    import gtk
     c = gtk.gdk.color_parse(color)
     return (c.red >> 8, c.green >> 8, c.blue >> 8, alpha)
 
@@ -246,7 +232,6 @@ def run_nonblocking(function, *args):
                          args = [function, event, retval] + list(args))
     t.start()
 
-    import gtk
     while (not event.isSet()):
         gtk.threads_enter()
         gtk.mainiteration()
