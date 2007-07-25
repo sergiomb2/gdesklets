@@ -2,19 +2,26 @@
 # -*- coding: UTF-8 -*-
 
 import __builtin__
-import main
-import os
-import sys
-
-
-# set up i18n
 from utils import i18n
 __builtin__._ = i18n.Translator("gdesklets")
+
+from utils.logger import SyncWriter
+from main import init, transition, LOGFILE
+from main.Starter import Starter
+
+import atexit
+import main
+import gtk
+import os
+import pygtk
+import sys
+import utils
+
+
 
 
 # setup GTK
 try:
-    import pygtk
     pygtk.require("2.0")
 except StandardError:
     print _("You need a recent version of PyGTK to run this program.\n")
@@ -48,16 +55,11 @@ def _detach_as_daemon():
 
 def _write_pid():
 
-    import main
-    import utils
-    import os
-    import atexit
-
     try:
         utils.makedirs(main.USERHOME)
     except OSError, exc:
         print
-        print exc
+        print (`exc`)
         sys.exit(1)
     try:
         f = file(main.PID_PATH, 'w')
@@ -76,9 +78,6 @@ def _redirect_to_logfile():
     """
     Redirects stdout and stderr to the given logfile and stdin to /dev/null.
     """
-
-    from main import LOGFILE
-    from utils.logger import SyncWriter
 
     try:
         out_log = file(LOGFILE, "w", 0)
@@ -100,27 +99,15 @@ def _gdesklets_main():
     """ gdesklets main function to start """
 
     # prepare gdesklets (locale, signals, program_init)
-    from main import init
     init()
 
-    # tell the user who just switched version some important stuff
-    from main import transition
-
     # build our sockets, trayicon and start them
-    from main.Starter import Starter
     Starter()
 
     # enter gtk's mainloop
-    import gtk
-    try:
-        gtk.gdk.threads_enter()
-    except AttributeError:
-        gtk.threads_enter()
+    gtk.gdk.threads_enter()
     gtk.main()
-    try:
-        gtk.gdk.threads_leave()
-    except AttributeError:
-        gtk.threads_leave()
+    gtk.gdk.threads_leave()
 
 
 _detach_as_daemon()
