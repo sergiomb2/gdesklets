@@ -8,12 +8,10 @@
 #define PyGObject_HEAD PyObject_HEAD \
                        GObject *obj; \
                        PyObject *inst_dict; \
-                       PyObject *weakreflist; \
-                       GSList *closures;
+                       PyObject *weakreflist;
 
 /* type of base class */
-static PyTypeObject *_PyGtkImage_Type;
-#define PyGtkImage_Type (*_PyGtkImage_Type)
+static PyTypeObject *PyGtkImage_Type;
 
 /* type of TImage */
 typedef struct {
@@ -21,19 +19,18 @@ typedef struct {
   guint width;
   guint height;
   gboolean invalidated;
-
   GdkPixbuf *pbuf;
 } TImage;
 #define TIMAGE(object) ((TImage *) object)
 
 /* Declare entry point for python */
-PyMODINIT_FUNC inittiling(void);
+PyMODINIT_FUNC inittiling (void);
 
 
 static int
 tiling_init (PyObject *self, PyObject *args, PyObject *kwargs)
 {
-  if (!PyArg_ParseTuple(args, ""))
+  if (!PyArg_ParseTuple (args, ""))
     return -1;
 
   TIMAGE (self)->obj = g_object_new (GTK_TYPE_IMAGE, NULL);
@@ -79,12 +76,8 @@ tiling_dealloc (TImage *self)
 static PyObject *
 get_size (PyObject *self)
 {
-  guint width, height;
-
-  width = gdk_pixbuf_get_width (TIMAGE (self)->pbuf);
-  height = gdk_pixbuf_get_height (TIMAGE (self)->pbuf);
-
-  return Py_BuildValue ("(ii)", width, height);
+  return Py_BuildValue ("(ii)", gdk_pixbuf_get_width (TIMAGE (self)->pbuf),
+                                gdk_pixbuf_get_height (TIMAGE (self)->pbuf));
 }
 
 
@@ -134,12 +127,12 @@ set_from_data (PyObject *self, PyObject *args)
   /* make new pixbuf */
   loader = g_object_new (GDK_TYPE_PIXBUF_LOADER, NULL);
   if (!gdk_pixbuf_loader_write (loader, data, length, &error)) {
-    PyErr_SetString(PyExc_RuntimeError, "Invalid image format");
+    PyErr_SetString (PyExc_RuntimeError, error->message);
     g_error_free (error);
     return NULL;
   }
   if (!gdk_pixbuf_loader_close (loader, &error)) {
-    PyErr_SetString(PyExc_RuntimeError, "Couldn't read image");
+    PyErr_SetString (PyExc_RuntimeError, error->message);
     g_error_free (error);
     return NULL;
   }
@@ -173,8 +166,10 @@ set_from_file (PyObject *self, PyObject *args)
     g_object_unref (TIMAGE (self)->pbuf);
 
   /* make new pixbuf */
-  if (!(TIMAGE (self)->pbuf = gdk_pixbuf_new_from_file (filename, &error))) {
-    PyErr_SetString(PyExc_RuntimeError, "Invalid image format");
+  if (!G_UNLIKELY (TIMAGE (self)->pbuf = gdk_pixbuf_new_from_file (filename,
+                                                                   &error)))
+  {
+    PyErr_SetString(PyExc_RuntimeError, error->message);
     g_error_free (error);
     return NULL;
   }
@@ -256,8 +251,8 @@ set_from_drawable (PyObject *self, PyObject *args)
 static PyObject *
 render (PyObject *self, PyObject *args)
 {
-  guint width, height;
-  gfloat opacity, saturation;
+  const guint width, height;
+  const gfloat opacity, saturation;
 
   if (!PyArg_ParseTuple (args, "iiff", &width, &height, &opacity, &saturation))
     return NULL;
@@ -273,13 +268,13 @@ render (PyObject *self, PyObject *args)
 static PyObject *
 tile (PyObject *self, PyObject *args)
 {
-  guint width, height;
+  const guint width, height;
   GdkPixbuf *background;
 
   if (!PyArg_ParseTuple (args, "ii", &width, &height))
     return NULL;
 
-  if (width == 0 || height == 0) {
+  if (G_UNLIKELY (width == 0 || height == 0)) {
     Py_INCREF (Py_None);
     return Py_None;
   }
@@ -308,13 +303,13 @@ tile (PyObject *self, PyObject *args)
 static PyObject *
 set_from_background (PyObject *self, PyObject *args)
 {
-  guint x, y, width, height;
-  glong wallpaper_id;
+  const guint x, y, width, height;
+  const glong wallpaper_id;
 
   if (!PyArg_ParseTuple (args, "liiii", &wallpaper_id, &x, &y, &width, &height))
     return NULL;
 
-  if (width == 0 || height == 0) {
+  if (G_UNLIKELY (width == 0 || height == 0)) {
     Py_INCREF (Py_None);
     return Py_None;
   }
@@ -401,24 +396,24 @@ static PyTypeObject t_tiling = {
 static void
 tiling_register_classes (PyObject *obj)
 {
-  PyObject *module;
+  PyObject *module = PyImport_ImportModule ("gtk");
 
-  if ((module = PyImport_ImportModule ("gtk")) != NULL) {
+  if (G_LIKELY (module != NULL)) {
     PyObject *moddict = PyModule_GetDict (module);
 
-    _PyGtkImage_Type = (PyTypeObject *) PyDict_GetItemString (moddict, "Image");
-    if (_PyGtkImage_Type == NULL) {
-      PyErr_SetString (PyExc_ImportError, "cannot import name Image from gtk");
+    PyGtkImage_Type = (PyTypeObject *) PyDict_GetItemString (moddict, "Image");
+    if (G_UNLIKELY (!PyGtkImage_Type)) {
+      PyErr_SetString (PyExc_ImportError, "Can't import name Image from gtk.");
       return;
     }
 
   } else {
-    PyErr_SetString(PyExc_ImportError, "could not import gtk");
+    PyErr_SetString (PyExc_ImportError, "Can't import gtk.");
     return;
   }
 
   pygobject_register_class (obj, "Tiling", GTK_TYPE_IMAGE, &t_tiling,
-                            Py_BuildValue ("(O)", &PyGtkImage_Type));
+                            Py_BuildValue ("(O)", PyGtkImage_Type));
 }
 
 
@@ -435,6 +430,6 @@ inittiling (void)
   tiling_register_classes (dict);
 
   if (PyErr_Occurred ())
-    Py_FatalError ("can't initialise module tiling");
+    Py_FatalError ("Can't initialise module tiling.");
 }
 
