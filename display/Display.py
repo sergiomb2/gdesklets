@@ -417,7 +417,7 @@ class Display(gtk.HBox, Observable):
         try:
             self.__group = targetregistry.create(childtype, self)
         except KeyError, exc:
-            log(`exc`)
+            log("Error: %s\n" % `exc`)
         self.__group.get_widget().show()
         cid = settings["id"]
         self.add_target_to_script(cid, self.__group)

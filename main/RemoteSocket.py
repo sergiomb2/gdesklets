@@ -124,7 +124,7 @@ class RemoteSocket:
 
             # the data seems to be of size zero here
             except xdr.XDRError, exc:
-                log(`exc`)
+                log("Error: %s\n" % `exc`)
 
             # something really unexpected has happened
             except Exception:
@@ -193,7 +193,7 @@ class RemoteSocket:
 
         # the data seems to be of size zero here
         except xdr.XDRError, exc:
-            log(`exc`)
+            log("Error: %s\n" % `exc`)
 
         # something really unexpected has happened
         except Exception:

@@ -179,9 +179,9 @@ class TargetCanvas(DisplayTarget):
             self.__image_size = \
               int(float(self.__dom["width"])), int(float(self.__dom["height"]))
         except KeyError:
-            pass
-        except UserError, exc:
-            log(`exc`)
+            log("Error: width and/or height not given\n")
+        except UserError:
+            log("Error: Desklet contains errors. Please contact the author!")
         except ValueError:
             try:
                 self.__image_size = \
@@ -252,7 +252,9 @@ class TargetCanvas(DisplayTarget):
         try:
             data = vfs.read_entire_file(uri)
         except:
+            log("Couldn't read file %s.\n" % uri)
             return
 
         self.__render(data)
         self._setp(key, value)
+

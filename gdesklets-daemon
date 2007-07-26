@@ -58,8 +58,7 @@ def _write_pid():
     try:
         utils.makedirs(main.USERHOME)
     except OSError, exc:
-        print
-        print (`exc`)
+        print _("The following error occurred: %s\n" % `exc`)
         sys.exit(1)
     try:
         f = file(main.PID_PATH, 'w')

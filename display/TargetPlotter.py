@@ -91,7 +91,7 @@ class TargetPlotter(TargetCanvas):
             scale = 100.0 / (max_value - min_value)
 
             history_size = min(len(self.__history), size)
-            
+
             x, y = x, self.__history[-history_size]
             body += "<path d=\"M%f %f " % (x, 100 - (y - min_value) * scale)
             x += delta_x

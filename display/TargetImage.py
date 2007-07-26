@@ -97,14 +97,17 @@ class TargetImage(DisplayTarget):
         try:
             data = vfs.read_entire_file(uri)
         except:
+            log("Couldn't read file %s.\n" % uri)
             return
 
         try:
             self.__widget.set_from_data(data)
-            self.__original_size = self.__widget.get_size()
-
-        except ValueError, exc:
+        except RuntimeError, exc:
             log(`exc`)
+        try:
+            self.__original_size = self.__widget.get_size()
+        except:
+            log("Couldn't get width and/or height of the image.")
             return
 
 

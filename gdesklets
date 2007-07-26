@@ -95,7 +95,7 @@ def check_system():
             return False
 
 
-    print "Requirements checking done. Your system looks ok!"
+    print _("Requirements checking done. Your system looks ok!")
     return True
 
 
@@ -158,10 +158,10 @@ class Command(object):
             ndaemon = client.get_daemon()
 
         except StandardError, exc:
-            print ("Error while starting gdesklets-daemon\n"
+            print _("Error while starting gdesklets-daemon\n"
                    "More information about this crash is available in \"%s\"."
                    % LOGFILE)
-            print exc
+            print _("Exception was: %s\n" % `exc`)
             return
 
         ndaemon.set_remove_command(os.path.abspath(sys.argv[0]) + " _remove")
