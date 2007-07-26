@@ -8,7 +8,7 @@ static inline void
 copy_n_rows (const GdkPixbuf *dest, const gint n,
              const gint row_size, const gint offset)
 {
-  guchar * const pixels = gdk_pixbuf_get_pixels (dest);
+  guchar *pixels = gdk_pixbuf_get_pixels (dest);
   memcpy (pixels + offset, pixels, n * row_size);
 }
 
@@ -43,7 +43,7 @@ make_row (const GdkPixbuf *src, GdkPixbuf *dest, const gint offset)
 
 
 static void
-filter_opacity (const GdkPixbuf *pbuf, gfloat opacity)
+filter_opacity (const GdkPixbuf *pbuf, const gfloat opacity)
 {
   guchar *data;
   gint x, y, rowstride, height;
@@ -60,8 +60,9 @@ filter_opacity (const GdkPixbuf *pbuf, gfloat opacity)
 }
 
 void
-render_to_image (GtkImage *image, GdkPixbuf *pbuf, gint width, gint height,
-                 gfloat opacity, gfloat saturation)
+render_to_image (GtkImage *image, GdkPixbuf *pbuf,
+                 const gint width, const gint height,
+                 const gfloat opacity, const gfloat saturation)
 {
   GdkPixbuf *scaled;
 
@@ -78,7 +79,7 @@ render_to_image (GtkImage *image, GdkPixbuf *pbuf, gint width, gint height,
   filter_opacity (scaled, opacity);
 
   /* set saturation */
-  filter_saturation (scaled, scaled, saturation, FALSE);
+  gdk_pixbuf_saturate_and_pixelate (scaled, scaled, saturation, FALSE);
 
   /* set image */
   gtk_image_set_from_pixbuf (image, scaled);
@@ -120,20 +121,19 @@ render_tile (const GdkPixbuf *source, GdkPixbuf *destination)
 
 void
 render_background_fallback (GdkPixbuf *destination,
-                            gint x, gint y, gint width, gint height)
+                            const gint x, const gint y,
+                            const gint width, const gint height)
 {
-  gint screen;
   Display *dpy;
-  XEvent ev;
-  Window src;
-  XSetWindowAttributes attrs = { ParentRelative, 0L, 0, 0L, 0, 0, Always, 0L,
-                                 0L, False, ExposureMask, 0L, True, 0, 0 };
   GdkWindow *gdkwin;
+  XEvent ev;
+  XSetWindowAttributes attrs = { ParentRelative, 0L, 0, 0L, 0, 0, Always,
+                                 0L, 0L, False, ExposureMask, 0L, True, 0, 0 };
 
   /* create overrideredirect window with CopyFromParent at the desired place */
-  dpy = gdk_x11_get_default_xdisplay ();
-  screen = DefaultScreen (dpy);
-  src = XCreateWindow (dpy, RootWindow (dpy, screen), x, y,
+  dpy                = gdk_x11_get_default_xdisplay ();
+  const gint screen  = DefaultScreen (dpy);
+  const Window src   = XCreateWindow (dpy, RootWindow (dpy, screen), x, y,
                        width, height, 0, CopyFromParent, CopyFromParent,
                        CopyFromParent, CWBackPixmap | CWBackingStore |
                        CWOverrideRedirect | CWEventMask,
@@ -164,29 +164,30 @@ render_background (GdkPixbuf *destination,
                    glong wallpaper_id, gint x, gint y, gint width, gint height)
 {
 
-  gint         pwidth, pheight, sx, sy;
+  gint         pwidth, pheight;
   GdkColormap *cmap;
   GdkPixmap   *pmap;
-  GdkWindow   *rootwin;
 
+  /* get root window */
+  const GdkWindow *rootwin = gdk_get_default_root_window ();
+  /* get colormap of root window */
+  cmap = gdk_drawable_get_colormap (GDK_DRAWABLE (rootwin));
   /* get pixmap from X server */
   pmap = gdk_pixmap_foreign_new ((GdkNativeWindow) wallpaper_id);
+  /* get dimensions */
   gdk_drawable_get_size (GDK_DRAWABLE (pmap), &pwidth, &pheight);
 
-  rootwin = gdk_get_default_root_window ();
-  cmap = gdk_drawable_get_colormap (GDK_DRAWABLE (rootwin));
-
   /* tile wallpaper over pixbuf */
-  sx = - (x % pwidth);
-  sy = - (y % pheight);
+  const gint sx = - (x % pwidth);
+  const gint sy = - (y % pheight);
   for (x = sx; x < width; x += pwidth) {
     for (y = sy; y < height; y += pheight) {
-      gint dstx = MAX (0, x);
-      gint dsty = MAX (0, y);
-      gint srcx = dstx - x;
-      gint srcy = dsty - y;
-      gint w = MIN (pwidth - srcx, width - dstx);
-      gint h = MIN (pheight - srcy, height - dsty);
+      const gint dstx = MAX (0, x);
+      const gint dsty = MAX (0, y);
+      const gint srcx = dstx - x;
+      const gint srcy = dsty - y;
+      const gint w = MIN (pwidth - srcx, width - dstx);
+      const gint h = MIN (pheight - srcy, height - dsty);
       gdk_pixbuf_get_from_drawable (destination, pmap, cmap, srcx, srcy,
                                     dstx, dsty, w, h);
     }
