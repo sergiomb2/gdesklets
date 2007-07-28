@@ -164,7 +164,7 @@ class System(Control, ISystem):
     memory           = property(FakeSelf(system.mem), doc = "Memory information")
     mountlist        = property(FakeSelf(system.mountlist),
                                 doc = "(All) mountpoints")
-    net_devices      = property(FakeSelf(system.net_devices),
+    net_devices       = property(FakeSelf(system.netlist),
                                 doc = "Available network devs")
     net_load         = property(__get_net_load, doc = "Netload of given device")
     net_speed        = property(__get_net_speed,
