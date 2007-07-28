@@ -22,9 +22,9 @@
 #include <gtk/gtk.h>
 #include <librsvg/rsvg.h>
 
-PyMODINIT_FUNC initsvg(void);
+PyMODINIT_FUNC initsvg (void);
 
-static PyObject* render(PyObject *self, PyObject *args)
+static PyObject* render (PyObject *self, PyObject *args)
 {
   GtkImage *image;
   GdkPixbuf *pbuf;
@@ -36,30 +36,32 @@ static PyObject* render(PyObject *self, PyObject *args)
   int length;
   int width, height;
 
-  if(!PyArg_ParseTuple(args, "O&IIS", parse_gtk_image,
-                       &image, &width, &height, &string))
+  if (!PyArg_ParseTuple (args, "O&IIS", parse_gtk_image,
+                         &image, &width, &height, &string))
     return NULL;
 
-  if(PyString_AsStringAndSize(string, &buffer, &length) == -1)
+  if (PyString_AsStringAndSize(string, &buffer, &length) == -1)
     return NULL;
 
   if (!(handle = rsvg_handle_new ())) {
-    g_error("Couldn't create handle!");
+    PyErr_SetString (PyExc_RuntimeError, "Couldn't create handle!");
     return NULL;
   }
-  if (!rsvg_handle_write (handle, (const guchar *)buffer, length, &error)) {
-    g_error("Error writing buffer to handle: %s\n", error->message);
+  if (!rsvg_handle_write (handle, (const guchar *) buffer, length, &error)) {
+    PyErr_SetString (PyExc_RuntimeError, error->message);
+    return NULL;
   }
   if (!rsvg_handle_close (handle, &error)) {
-    g_error("Error closing handle: %s\n", error->message);
+    PyErr_SetString (PyExc_RuntimeError, error->message);
+    return NULL;
   }
   if (!(pbuf = rsvg_handle_get_pixbuf (handle))) {
-    g_error("Error creating pixbuf from handle.");
+    PyErr_SetString (PyExc_RuntimeError, "Error creating pixbuf from handle.");
+    return NULL;
   }
-  else {
-    gtk_image_set_from_pixbuf (image, pbuf);
-    g_object_unref (G_OBJECT (pbuf));
-  }
+
+  gtk_image_set_from_pixbuf (image, pbuf);
+  g_object_unref (G_OBJECT (pbuf));
   rsvg_handle_free (handle);
 
   Py_INCREF(Py_None);
@@ -69,16 +71,18 @@ static PyObject* render(PyObject *self, PyObject *args)
 
 
 PyMODINIT_FUNC
-initsvg(void)
+initsvg( void)
 {
-  static const PyMethodDef methods[] =
-    {
+  static const PyMethodDef methods[] = {
       {"render", render, METH_VARARGS, NULL},
       {NULL, NULL, 0, NULL}
-    };
+  };
 
-  if(!gdesklets_get_pygobject_type())
+  if (!gdesklets_get_pygobject_type ())
     return;
 
-  Py_InitModule("svg", (PyMethodDef*) methods);
+  Py_InitModule("svg", (PyMethodDef *) methods);
+
+  if (PyErr_Occurred ())
+    Py_FatalError ("Can't initialise module svg");
 }
