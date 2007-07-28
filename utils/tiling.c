@@ -142,8 +142,8 @@ set_from_data (PyObject *self, PyObject *args)
   /* we require an alpha channel */
   alphaified = gdk_pixbuf_add_alpha (TIMAGE (self)->pbuf, FALSE, 0, 0, 0);
   g_object_unref (TIMAGE (self)->pbuf);
-  TIMAGE (self)->pbuf = alphaified;
 
+  TIMAGE (self)->pbuf = alphaified;
   TIMAGE (self)->invalidated = TRUE;
 
   Py_INCREF (Py_None);
@@ -177,8 +177,8 @@ set_from_file (PyObject *self, PyObject *args)
   /* we require an alpha channel */
   alphaified = gdk_pixbuf_add_alpha (TIMAGE (self)->pbuf, FALSE, 0, 0, 0);
   g_object_unref (TIMAGE (self)->pbuf);
-  TIMAGE (self)->pbuf = alphaified;
 
+  TIMAGE (self)->pbuf = alphaified;
   TIMAGE (self)->invalidated = TRUE;
 
   Py_INCREF (Py_None);
