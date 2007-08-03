@@ -99,14 +99,15 @@ class _DisplayFactory(sax.handler.ContentHandler):
         dsp.set_content(childtype, settings, children)
 
         # set some meta data if available
-        preview = self.__metadata.get("preview", "")
-        name = self.__metadata.get("name", "")
-        version = self.__metadata.get("version", "")
-        author = self.__metadata.get("author", "")
-        dsp.set_metadata(preview = preview,
-                         name = name,
-                         version = version,
-                         author = author)
+#        preview = self.__metadata.get("preview", "")
+#        name = self.__metadata.get("name", "")
+#        version = self.__metadata.get("version", "")
+#        author = self.__metadata.get("author", "")
+#        dsp.set_metadata(preview = preview,
+#                         name = name,
+#                         version = version,
+#                         author = author)
+        dsp.set_metadata(self.__metadata)
         dsp.build_configurator(self.__config_items)
 
         # add scriptlets

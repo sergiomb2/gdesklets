@@ -1,3 +1,9 @@
+2007-08-03  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* display/Display.py:
+	* factory/DisplayFactory.py: added first beta of the About Window
+	* utils/tiling.c: included "#include GSList *closures;" again: fixes crashes on (my) amd64 gentoo
+
 2007-07-25  Christian Meyer  <chrisime@gnome.org>
 
 	* configure.in: Bumped library versions.

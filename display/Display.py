@@ -92,7 +92,10 @@ class Display(gtk.HBox, Observable):
             MenuItem("/__restart", _("Re_start desklet"),
                      callback = self.__handle_restart),
             MenuItem("/__remove", _("_Remove desklet"),
-                     callback = self.__handle_remove)
+                     callback = self.__handle_remove),
+            MenuItem("/__sep3"),
+            MenuItem("/__about", _("About"),
+                     callback = self.__handle_about)
             ]
 
         # the layout object
@@ -122,6 +125,9 @@ class Display(gtk.HBox, Observable):
         # the configurator object
         self.__configurator = DisplayConfigger(ident)
         self.__configurator.set_scripting_environment(self.__script)
+
+        # the about window
+        self.__about = gtk.AboutDialog()
 
         # the path of the .display file
         self.__path = os.path.dirname(rep)
@@ -209,14 +215,62 @@ class Display(gtk.HBox, Observable):
     #
     # Sets metadata.
     #
-    def set_metadata(self, author = "", version = "", name= "", preview = ""):
+#    def set_metadata(self, author = "", version = "", name= "", preview = ""):
+    def set_metadata(self, metadata):
+
+        pbuf = None
+        fbuf = None
+
+        preview = metadata.get("preview", "")
+        name = metadata.get("name", "")
+        version = metadata.get("version", "")
+        copyright = metadata.get("copyright", "")
+        comments = metadata.get("comments", "")
+        license = metadata.get("license", "")
+        website = metadata.get("website", "")
+        author = metadata.get("author", "")
+        category = metadata.get("category", "")
+        dependency = metadata.get("dependency", "")
+        description = metadata.get("description", "")+"\n"
 
         # a banner without the display's name would look crappy
         if (name):
-            if (preview): preview = self.get_full_path(preview)
+            if (preview):
+                preview = self.get_full_path(preview)
+                data = vfs.read_entire_file(preview)
+                loader = gtk.gdk.PixbufLoader()
+                loader.write(data, len(data))
+                loader.close()
+                pbuf = loader.get_pixbuf()
             self.__configurator.set_banner(preview,
                                   "<big>%s</big> %s\n"
                                   "<small>%s</small>" % (name, version, author))
+
+            # feed the About Window with the Metadata
+            if (comments): description = description+"\n"+comments+"\n"
+#            if (category): description = description+"\nCategory: "+category+"\n"
+#            if (dependency): description = description+"\nDependency: "+dependency+"\n"
+
+            if (os.path.exists(self.__display_file[:-7]+'COPYING')):
+               fbuf=open(self.__display_file[:-7]+'COPYING', 'r')
+            elif (os.path.exists(self.__display_file[:-7]+'LICENSE')):
+               fbuf=open(self.__display_file[:-7]+'LICENSE', 'r')
+            elif (os.path.exists(self.get_full_path('COPYING'))):
+               fbuf=open(self.get_full_path('COPYING'), 'r')
+            elif (os.path.exists(self.get_full_path('LICENSE'))):
+               fbuf=open(self.get_full_path('LICENSE'), 'r')
+
+            if (fbuf): license = fbuf.read()
+
+            self.__about.set_name(name)
+            self.__about.set_version(version)
+            self.__about.set_copyright(copyright)
+            self.__about.set_comments(description)
+            self.__about.set_license(license)
+            self.__about.set_website(website)
+
+            self.__about.set_authors([author])
+            self.__about.set_logo(pbuf)
 
 
 
@@ -445,6 +499,16 @@ class Display(gtk.HBox, Observable):
 
         else:
             self.__configurator.show()
+
+
+
+    #
+    # Opens the about dialog for this display.
+    #
+    def __open_about(self):
+        assert (self.__about)
+
+        self.__about.show()
 
 
 
@@ -942,6 +1006,12 @@ class Display(gtk.HBox, Observable):
     def __handle_remove(self, *args):
 
         self.close()
+
+
+
+    def __handle_about(self, *args):
+
+        self.__open_about()
 
 
 

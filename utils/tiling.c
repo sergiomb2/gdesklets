@@ -8,7 +8,8 @@
 #define PyGObject_HEAD PyObject_HEAD \
                        GObject *obj; \
                        PyObject *inst_dict; \
-                       PyObject *weakreflist;
+                       PyObject *weakreflist; \
+                       GSList *closures;
 
 /* type of base class */
 static PyTypeObject *PyGtkImage_Type;
