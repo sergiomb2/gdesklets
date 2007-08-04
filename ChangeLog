@@ -1,3 +1,7 @@
+2007-08-04  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* display/Display.py: destroy the About Window when removing the display
+
 2007-08-03  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* display/Display.py:

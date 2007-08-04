@@ -533,6 +533,7 @@ class Display(gtk.HBox, Observable):
         self.__save_position()
 
         self.__configurator.destroy()
+        self.__about.destroy()
         self.update_observer(self.OBS_CLOSED, self.__id)
         self.drop_observers()
 
