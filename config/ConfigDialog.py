@@ -53,7 +53,7 @@ class ConfigDialog(HIGDialog):
                     }
 
 
-    def __init__(self):
+    def __init__(self, path):
 
         # the instantiated items
         self.__children = []
@@ -69,6 +69,7 @@ class ConfigDialog(HIGDialog):
         # a banner
         self.__banner = None
 
+        self.__path = path
 
         HIGDialog.__init__(self, buttons=(gtk.STOCK_CLOSE, gtk.RESPONSE_CLOSE),
                            self_destroy = False)
@@ -256,8 +257,8 @@ class ConfigDialog(HIGDialog):
 
                 image = gtk.Image()
                 icon = settings.get("icon", "")
-
-#                print os.getcwd()
+                if (icon):
+                    icon = os.path.join(self.__path, icon)
 
                 # scale down images that are higher than the label
                 if os.path.exists(icon):

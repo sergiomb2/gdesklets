@@ -1,3 +1,10 @@
+2007-08-05  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* config/ConfigDialog.py:
+	* config/DaemonConfigger.py:
+	* config/DisplayConfigger.py:
+	* display/Display.py: Fixed #124464 (#434858 on bugs.gnome.org)
+
 2007-08-04  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* display/Display.py: destroy the About Window when removing the display

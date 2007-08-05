@@ -122,16 +122,16 @@ class Display(gtk.HBox, Observable):
         # the scripting environment
         self.__script = Script(ident, rep)
 
+        # the path of the .display file
+        self.__path = os.path.dirname(rep)
+        self.__display_file = rep
+
         # the configurator object
-        self.__configurator = DisplayConfigger(ident)
+        self.__configurator = DisplayConfigger(ident, self.__path)
         self.__configurator.set_scripting_environment(self.__script)
 
         # the about window
         self.__about = gtk.AboutDialog()
-
-        # the path of the .display file
-        self.__path = os.path.dirname(rep)
-        self.__display_file = rep
 
         # the unique ID of this display
         self.__id = ident

@@ -9,7 +9,7 @@ class DisplayConfigger(ConfigDialog):
       the configuration.
     """
 
-    def __init__(self, ident):
+    def __init__(self, ident, path):
 
         # init the StateSaver
         self.__backend = StateSaver(ident + "CONFIG")
@@ -23,7 +23,7 @@ class DisplayConfigger(ConfigDialog):
         # the scripting environment with which the config interacts
         self.__scripting_environment = None
 
-        ConfigDialog.__init__(self)
+        ConfigDialog.__init__(self, path)
         self.set_property("title", _("Configuration"))
 
 

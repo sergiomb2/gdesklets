@@ -40,11 +40,11 @@ class DaemonConfigger(ConfigDialog):
       )
 
 
-    def __init__(self):
+    def __init__(self, path=""):
 
         self.__backend = DefaultStateSaver()
 
-        ConfigDialog.__init__(self)
+        ConfigDialog.__init__(self, path)
 
         self.set_property("title", _("Configuration"))
         self.set_banner(ICON, "<big>gDesklets Configuration</big>\n"
