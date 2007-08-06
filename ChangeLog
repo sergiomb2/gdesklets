@@ -1,3 +1,7 @@
+2007-08-07  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* display/Display.py: enhancements and bugfixes in the About Window
+
 2007-08-05  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* config/ConfigDialog.py:

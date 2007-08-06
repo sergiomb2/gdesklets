@@ -37,6 +37,8 @@ except ImportError:
 
 _ROOT = "Dsp"
 
+# some responses
+RESPONSE_SHOW_README = 1
 
 #
 # Class for display windows.
@@ -132,6 +134,30 @@ class Display(gtk.HBox, Observable):
 
         # the about window
         self.__about = gtk.AboutDialog()
+        self.__about.connect("response", self.about_response_callback)
+        self.__about.connect("close", self.about_close_callback)
+        self.__about.connect("delete_event", self.about_delete_callback)
+
+        # the readme window
+        self.__readme = gtk.Dialog(rep+" - Read Me",
+                     self.__about,
+                     gtk.DIALOG_DESTROY_WITH_PARENT,
+                     (gtk.STOCK_CLOSE, gtk.RESPONSE_CLOSE))
+        sw = gtk.ScrolledWindow()
+        sw.set_policy(gtk.POLICY_NEVER, gtk.POLICY_AUTOMATIC)
+        textview = gtk.TextView()
+        textview.set_editable(False)
+        textview.set_overwrite(False)
+        textview.set_wrap_mode(gtk.WRAP_WORD)
+        textview.set_size_request(500, 300)
+        self.__readme_buffer = textview.get_buffer()
+        sw.add(textview)
+        sw.show()
+        textview.show()
+        self.__readme.vbox.add(sw)
+        self.__readme.connect("response", self.readme_response_callback)
+        self.__readme.connect("close", self.readme_close_callback)
+        self.__readme.connect("delete_event", self.readme_delete_callback)
 
         # the unique ID of this display
         self.__id = ident
@@ -211,6 +237,34 @@ class Display(gtk.HBox, Observable):
         self.__content = (childtype, settings, children)
 
 
+    #
+    # Sets the callbacks for the responses (about and readme dialogs).
+    #
+    def about_response_callback(self, about, response_id):
+        if response_id < 0:
+            self.__about.hide()
+            self.__about.emit_stop_by_name( 'response' )
+        elif response_id == RESPONSE_SHOW_README: self.__open_readme()
+        elif response_id == gtk.RESPONSE_CLOSE: self.__about.hide()
+
+    def about_close_callback(self, about, event=None):
+        self.__about.hide()
+        return gtk.TRUE
+
+    def about_delete_callback(self, about, event=None):
+        self.__about.hide()
+        return gtk.TRUE
+
+    def readme_response_callback(self, readme, response_id):
+        if response_id == gtk.RESPONSE_CLOSE: self.__readme.hide()
+
+    def readme_close_callback(self, readme, event=None):
+        self.__readme.hide()
+        return gtk.TRUE
+
+    def readme_delete_callback(self, readme, event=None):
+        self.__readme.hide()
+        return gtk.TRUE
 
     #
     # Sets metadata.
@@ -220,6 +274,7 @@ class Display(gtk.HBox, Observable):
 
         pbuf = None
         fbuf = None
+        rbuf = None        
 
         preview = metadata.get("preview", "")
         name = metadata.get("name", "")
@@ -246,11 +301,7 @@ class Display(gtk.HBox, Observable):
                                   "<big>%s</big> %s\n"
                                   "<small>%s</small>" % (name, version, author))
 
-            # feed the About Window with the Metadata
-            if (comments): description = description+"\n"+comments+"\n"
-#            if (category): description = description+"\nCategory: "+category+"\n"
-#            if (dependency): description = description+"\nDependency: "+dependency+"\n"
-
+            # include the LICENSE file if available
             if (os.path.exists(self.__display_file[:-7]+'COPYING')):
                fbuf=open(self.__display_file[:-7]+'COPYING', 'r')
             elif (os.path.exists(self.__display_file[:-7]+'LICENSE')):
@@ -260,18 +311,36 @@ class Display(gtk.HBox, Observable):
             elif (os.path.exists(self.get_full_path('LICENSE'))):
                fbuf=open(self.get_full_path('LICENSE'), 'r')
 
-            if (fbuf): license = fbuf.read()
+            if (fbuf):
+               license = fbuf.read()
 
+            # include the README file if available
+            if (os.path.exists(self.__display_file[:-7]+'README')):
+               rbuf=open(self.__display_file[:-7]+'README', 'r')
+            elif (os.path.exists(self.get_full_path('README'))):
+               rbuf=open(self.get_full_path('README'), 'r')
+
+            if (rbuf):
+                self.__readme_button = self.__about.add_button("Read Me", RESPONSE_SHOW_README)
+                self.__about.action_area.reorder_child(self.__readme_button, gtk.PACK_START)
+                readme = rbuf.read()
+                self.__readme_buffer.set_text(readme)
+            # add comments to the description
+            if (comments): description = description+"\n"+comments+"\n"
+#            if (category): description = description+"\nCategory: "+category+"\n"
+#            if (dependency): description = description+"\nDependency: "+dependency+"\n"
+
+            # feed the About Window with the Metadata
             self.__about.set_name(name)
             self.__about.set_version(version)
             self.__about.set_copyright(copyright)
             self.__about.set_comments(description)
-            self.__about.set_license(license)
+            if (license):
+                self.__about.set_license(license)
             self.__about.set_website(website)
 
             self.__about.set_authors([author])
             self.__about.set_logo(pbuf)
-
 
 
     #
@@ -511,6 +580,15 @@ class Display(gtk.HBox, Observable):
         self.__about.show()
 
 
+    #
+    # Opens the readme dialog for this display.
+    #
+    def __open_readme(self):
+        assert (self.__readme)
+
+        self.__readme.show()
+
+
 
     #
     # Saves this display's position.
@@ -534,6 +612,7 @@ class Display(gtk.HBox, Observable):
 
         self.__configurator.destroy()
         self.__about.destroy()
+        self.__readme.destroy()
         self.update_observer(self.OBS_CLOSED, self.__id)
         self.drop_observers()
 
