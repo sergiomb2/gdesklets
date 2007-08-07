@@ -148,6 +148,8 @@ class Display(gtk.HBox, Observable):
         textview = gtk.TextView()
         textview.set_editable(False)
         textview.set_overwrite(False)
+        textview.set_left_margin(8)
+        textview.set_right_margin(8)
         textview.set_wrap_mode(gtk.WRAP_WORD)
         textview.set_size_request(500, 300)
         self.__readme_buffer = textview.get_buffer()
@@ -323,7 +325,7 @@ class Display(gtk.HBox, Observable):
                license = fbuf.read()
 
             # include the README file if available
-            if (vfs.exists("%s README" % self.__display_file[:-7])):
+            if (vfs.exists("%sREADME" % self.__display_file[:-7])):
                rbuf = open(self.__display_file[:-7] + 'README', 'r')
             elif (vfs.exists(self.get_full_path('README'))):
                rbuf = open(self.get_full_path('README'), 'r')
