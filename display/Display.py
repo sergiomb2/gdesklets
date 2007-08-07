@@ -312,34 +312,32 @@ class Display(gtk.HBox, Observable):
                                 "<small>%s</small>" % (name, version, author))
 
             # include the LICENSE file if available
-            if (vfs.exists(self.__display_file[:-7] + 'COPYING')):
-               fbuf = open(self.__display_file[:-7] + 'COPYING', 'r')
-            elif (vfs.exists(self.__display_file[:-7] + 'LICENSE')):
-               fbuf = open(self.__display_file[:-7] + 'LICENSE', 'r')
-            elif (vfs.exists(self.get_full_path('COPYING'))):
-               fbuf = open(self.get_full_path('COPYING'), 'r')
-            elif (vfs.exists(self.get_full_path('LICENSE'))):
-               fbuf = open(self.get_full_path('LICENSE'), 'r')
+            for elem in ("COPYING", "LICENSE"):
+                try:
+                    fbuf = open(self.get_full_path(elem), "r")
+                except:
+                    pass
 
             if (fbuf):
-               license = fbuf.read()
+                license = fbuf.read()
+            else:
+                log("Warning: COPYING or LICENSE not included in desklet \"%s %s\".\nPlease contact the author!" % (name, version))
 
             # include the README file if available
-            if (vfs.exists("%sREADME" % self.__display_file[:-7])):
-               rbuf = open(self.__display_file[:-7] + 'README', 'r')
-            elif (vfs.exists(self.get_full_path('README'))):
-               rbuf = open(self.get_full_path('README'), 'r')
+            try:
+                rbuf = open(self.get_full_path("README"), "r")
+            except:
+                log("README file not included in desklet!")
 
             if (rbuf):
                 self.__readme_button = \
                     self.__about.add_button(_("_Readme"), 2003)
                 self.__about.action_area.reorder_child(self.__readme_button,
                                                        gtk.PACK_START)
-                readme = rbuf.read()
-                self.__readme_buffer.set_text(readme)
+                self.__readme_buffer.set_text(rbuf.read())
+
             # add comments to the description
-            if (comments):
-                description = "%s\n%s\n" % (description, comments)
+            if (comments): description = "%s\n%s\n" % (description, comments)
 
             # feed the About Window with the Metadata
             self.__about.set_name(name)
