@@ -55,6 +55,8 @@ class WidgetList(gtk.VBox):
         # self.tree_view.append_column(install_column)
         # self.tree_view.get_selection().connect('cursor', self.selected_event)
         self.tree_view.connect('cursor-changed', self.selected_event)
+        self.__scrolled_window.add(self.tree_view)
+        
         
         self.populate_treeview()
         
@@ -64,6 +66,7 @@ class WidgetList(gtk.VBox):
         max_size = 75
         desklets = self.__assembly.get_desklets()
         category_paths = {}
+        self.__tree_model.clear()
         
         # add desklets one by one to the tree model
         for d_key, d_object in desklets.items():            
@@ -122,8 +125,12 @@ class WidgetList(gtk.VBox):
                 self.__tree_model.append(category_paths[cat], (d_key, pixbuf, d_object.name) )
             
         self.populate_controls()
-        self.__scrolled_window.add(self.tree_view)
         
+    
+    
+    def refresh(self):
+        self.populate_treeview()
+    
     
     
     def populate_controls(self):

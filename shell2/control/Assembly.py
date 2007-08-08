@@ -29,22 +29,26 @@ class Assembly:
         self.__find_local_desklets()
         self.notify_observers("FETCH", "Found local widgets")
         
-        if website_integration:
-            self.notify_observers("FETCH", "Looking for remote widgets")
-            self.__find_remote_controls()
-            self.__find_remote_desklets()
-            self.__find_news()
-            self.notify_observers("FETCH", "Found remote widgets")
+        if website_integration: self.fetch_remote_widgets()
         
         self.notify_observers("FETCH", "All done")
     
        
+    
+    def fetch_remote_widgets(self):
+        self.notify_observers("FETCH", "Looking for remote widgets")
+        self.__find_remote_controls()
+        self.__find_remote_desklets()
+        self.__find_news()
+        self.notify_observers("FETCH", "Found remote widgets")
         
-    def refresh(self):
+        
+        
+    def refresh(self, website_integration):
         ''' Reload all the local and remote widgets. '''
         self.__desklets = {}
         self.__controls = {}
-        self.start()
+        self.start(website_integration)
         
         
 
@@ -166,6 +170,7 @@ class Assembly:
             func(event, param)
     
     
+    
     def update(self, event, widget):
         ''' Called by widgets to notify of a change. Mostly just propagates the event up. '''
         logging.info("Assembly.py: update called with %s " % event)
@@ -177,10 +182,10 @@ class Assembly:
         ''' Add one desklet to the internal array.'''
         name = desklet.name
         if self.__desklets.has_key(name):
-            logging.info("found previous desklet", name, " in array")
+            logging.info("found previous desklet " + name + " in array")
             self.__desklets[ name ].update(desklet)
         else:
-            logging.info("added new desklet with key", name)
+            logging.info("added new desklet with key " + name)
             self.__desklets[ name ] = desklet
         
         
@@ -189,10 +194,10 @@ class Assembly:
         ''' Add one control to the internal array.'''
         name = control.get_name()
         if self.__controls.has_key(name):
-            logging.info("updating previous control", name, " in array")
+            logging.info("updating previous control " + name + " in array")
             self.__controls[ name ].update(control)
         else:
-            logging.info("new control with key", name)
+            logging.info("new control with key " + name)
             self.__controls[ name ] = control
     
     
@@ -200,12 +205,13 @@ class Assembly:
     def get_desklets(self): return self.__desklets
     
     
+    
     def get_desklet(self, name):
         try:
             d = self.__desklets[name]
             return d
         except KeyError:
-            logging.info("failed to find desklet", name)
+            logging.info("failed to find desklet" + name)
 
     
     
@@ -264,6 +270,9 @@ class Assembly:
 
     def get_news(self): return self.__news
         
+
+
+
 
 # Unit testing...
 if __name__ == '__main__':

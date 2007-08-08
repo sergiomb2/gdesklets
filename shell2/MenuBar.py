@@ -1,5 +1,10 @@
 import gtk
 
+# TODO: the *_menu.append() calls here cause a GTK assertion failure
+# in the form of "GtkWarning: gtk_accel_label_set_accel_closure: assertion 
+# `gtk_accel_group_from_accel_closure (accel_closure) != NULL' failed"
+# the exact reason is the create_menu_item-call, but I can't figure why
+
 class MenuBar(gtk.MenuBar):
     
     def __init__(self, main):

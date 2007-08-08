@@ -8,6 +8,8 @@ import StatusBar
 import PrefsDialog
 import logging
 
+logging.basicConfig(level=logging.DEBUG)
+
 
 class SlickShell(object):
 
@@ -15,6 +17,7 @@ class SlickShell(object):
         
         self.__selected_desklet = None
         self.__assembly = assembly
+        self.__website_integration = False
         self.__assembly.add_observer(self.assembly_event)
         self.__construct_action_groups()
         self.__prefs_dialog = None
@@ -61,7 +64,7 @@ class SlickShell(object):
         self.__action_groups['global'].add_actions([
                     ('update', gtk.STOCK_REFRESH, 'Update', None, 
                         'Update the widget list', self.update_event ),
-                    ('quit', gtk.STOCK_QUIT, 'Quit', None, 'Quit the program', 
+                    ('quit', gtk.STOCK_QUIT, None , None, 'Quit the program', 
                         self.close_window_event),
                     ('about', gtk.STOCK_ABOUT, 'About', None, 'About gDesklets', 
                         self.show_about),
@@ -84,7 +87,7 @@ class SlickShell(object):
         self.__action_groups['widget'].get_action("activate").set_sensitive(False)
         
         
-        
+    
     def refresh_view(self, event):
         ''' Refresh the view after installation, etc. '''
         desklet_object = self.__selected_desklet
@@ -133,7 +136,7 @@ class SlickShell(object):
         if type == 'INSTALLED' or type == 'REMOVED': 
             self.refresh_view(param)
         elif type == 'FETCH':
-            print "fetch event", param
+            # print "fetch event", param
             # self.__statusbar.pop(0)
             # All is done: construct the view
             if param == 'All done':
@@ -181,7 +184,14 @@ class SlickShell(object):
     
         
     def update_event(self, event):
-        logging.info( "updating..." )
+        logging.info( "Shell: updating..." )
+        self.__assembly.refresh(self.__website_integration)
+        self.__desklet_list.refresh()
+        self.__sidemenu.reset()
+        
+    
+    
+    def set_website_integration(self, val): self.__website_integration = val
         
     def show_about(self, event):
         logging.info("showing the about window")

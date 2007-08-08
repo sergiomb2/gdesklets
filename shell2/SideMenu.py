@@ -72,6 +72,13 @@ class SideMenu(gtk.EventBox):
         # a separator
         # self.pack_start( gtk.HSeparator() )
         
+        
+    def reset(self):
+        ''' reset view to the basic one '''
+        pass
+    
+    
+    
     def show_desklet(self, desklet):
         print "showing desklet", desklet
         self.__info_name.set_markup(desklet.name)
