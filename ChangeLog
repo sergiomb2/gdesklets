@@ -1,3 +1,11 @@
+2007-08-10  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* config/ConfigInfo.py: Fixed #126188
+	* doc/book/gfx/prefs-info.png:
+	* doc/book/gfx/prefs-page.png:
+	* doc/book/prefs-tag-info.xml:
+	* doc/book/prefs-tag-page.xml: updated documentation
+
 2007-08-07  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* display/Display.py: enhancements and bugfixes in the About Window

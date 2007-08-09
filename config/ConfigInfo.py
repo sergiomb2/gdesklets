@@ -2,6 +2,7 @@ from ConfigWidget import ConfigWidget
 from utils.datatypes import *
 
 import gtk
+import pango
 
 class ConfigInfo(ConfigWidget):
 
@@ -42,6 +43,7 @@ class ConfigInfo(ConfigWidget):
 
     def _setp_value(self, key, value):
 
+        value = pango.parse_markup(value)[1]
         self.__info.set_markup(value)
         self._set_config(value)
         self._setp(key, value)

@@ -1,7 +1,7 @@
 <section id="prefs-tag-info" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>&lt;info&gt; <emph>[new in 0.36]</emph></title>
 
-  <para>An information text in the dialog.</para>
+  <para>An information text in the dialog with pango markup support.</para>
 
   <screenshot>
     <mediaobject>
@@ -45,7 +45,8 @@
         <entry valign="top">label</entry>
         <entry valign="top">string</entry>
         <entry valign="top"></entry>
-        <entry valign="top">The label text for the element in the configuration dialog.</entry>
+        <entry valign="top">The label text for the element in the configuration
+          dialog. Supports pango markup.</entry>
       </row>
       <row>
         <entry valign="top">wrap</entry>
@@ -65,7 +66,20 @@
   <section><title>Examples</title>
 
     <programlisting><![CDATA[
-<info id="info" label="Information:" value="Whatever you think is useful." bind="info" wrap="True" />
+<info id="info"
+      label="Information:"
+      value="Whatever you think is useful."
+      bind="info" />
+
+<info id="info1"
+      label="&lt;i&gt;What about&lt;/i&gt; &lt;b&gt;Pango support&lt;/b&gt;?"
+      value="&lt;span foreground='#FF0000' background='blue' size='10000'&gt;Pango&lt;/span&gt; is &lt;u&gt;fully&lt;/u&gt; supported on &lt;big&gt;both&lt;/big&gt; &lt;sup&gt;label&lt;/sup&gt; and &lt;sub&gt;value&lt;/sub&gt;!"
+      bind="info1" />
+
+<info id="info2"
+      label="But remember:"
+      value="You are in XML and so you will have to substitute some characters!"
+      bind="info2" />
     ]]></programlisting>
 
   </section>

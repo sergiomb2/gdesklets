@@ -29,6 +29,13 @@
 
     <tbody>
       <row>
+        <entry valign="top">icon</entry>
+        <entry valign="top">URI</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">URI where to load the icon from.</entry>
+      </row>
+
+      <row>
         <entry valign="top">label</entry>
         <entry valign="top">string</entry>
         <entry valign="top"></entry>
@@ -47,15 +54,13 @@
 
     <programlisting><![CDATA[
 <prefs>
-
-  <page label="First Page">
+  <page label="gDesklets" icon="gdesklets.png">
     <boolean label="Foo:" bind="foo"/>
   </page>
 
-  <page label="Second Page">
+  <page label="No Icon">
     <boolean label="Bar:" bind="bar"/>
   </page>
-
 </prefs>
     ]]></programlisting>
 
