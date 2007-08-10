@@ -21,8 +21,6 @@ class DaemonConfigger(ConfigDialog):
                             "\n     <small><i>" +
                             _("this does not work with GTK 2.8 or higher for "
                               "technical reasons") + "</i></small>")}),
-      ("boolean", {"label": _("Translucency (takes effect after restarting a display)"),
-                   "bind": "translucency"}),
       ("title", {"label": _("Screen Resolution (DPI)")}),
       ("dpi",   {"label": "<small>" +
                           _("Adjust the value above so that the bar will be "
@@ -72,9 +70,6 @@ class DaemonConfigger(ConfigDialog):
         elif (key == "float_key"):
             settings.float_key = value
 
-        elif (key == "translucency"):
-            settings.translucent = value
-
         elif (key == "loadsplash"):
             settings.show_load_splash = value
 
@@ -95,9 +90,6 @@ class DaemonConfigger(ConfigDialog):
         elif (key == "float_key"):
             return settings.float_key
 
-        elif (key == "translucency"):
-            return settings.translucent
-
         elif (key == "loadsplash"):
             return settings.show_load_splash
 
@@ -117,8 +109,6 @@ class DaemonConfigger(ConfigDialog):
         settings.dpi = self.__backend.get_key("dpi", settings.dpi)
         settings.float_key = self.__backend.get_key("float_key",
                                                     settings.float_key)
-        settings.translucent = self.__backend.get_key("translucency",
-                                                      settings.translucent)
         settings.show_load_splash = self.__backend.get_key("loadsplash",
                                                      settings.show_load_splash)
         settings.show_tray_icon = self.__backend.get_key("trayicon",
@@ -127,7 +117,7 @@ class DaemonConfigger(ConfigDialog):
     def __read_cmd_line(self):
 
         OPTIONS = ("sm-client-id=", "sm-config-prefix=", "sm-disable",
-                   "no-tray-icon", "translucent")
+                   "no-tray-icon")
 
         #
         # Parses the given list of command line arguments. This is usually
@@ -140,11 +130,9 @@ class DaemonConfigger(ConfigDialog):
             return
 
         for o, a in opts:
-            if (o == "--translucent"):
-                settings.translucent = True
-            elif (o == "--no-tray-icon"):
+            if (o == "--no-tray-icon"):
                 settings.show_tray_icon = False
             elif (o in ("--sm-client-id", "--sm-config-prefix",
                         "--sm-disable")):
                 pass
-        #end for
+

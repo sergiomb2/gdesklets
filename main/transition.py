@@ -44,7 +44,7 @@ if (not _check_version()):
                 "If you still want to run the unstable version instead of a "
                 "stable release version, we'd highly appreciate it if you "
                 "report any weird behavior to the developers.\n\n"
-                "Experienced users are encouraged to try a CVS version, "
+                "Experienced users are encouraged to try a bzr version, "
                 "though!")
 
     elif ("rc" in VERSION):
@@ -68,12 +68,9 @@ if (not _check_version()):
                 "dialog.\n\n"
                 "Please note that due to limitations of older X servers, "
                 "you might see blocks around desklets in Float mode. "
-                "This cannot be solved in a satisfying way except for "
-                "switching the X server to real translucency "
-                "(Xorg 6.8 and above).")
+                "This cannot be solved in a satisfying way.")
 
     # show the dialog
     dialog.info(
-        _("Please note (this message will appear only once):"),
-        msg)
+        _("Please note (this message will appear only once):"), msg)
 
