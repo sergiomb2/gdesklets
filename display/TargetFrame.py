@@ -32,8 +32,8 @@ class TargetFrame(ContainerTarget):
         self.__table.show()
 
         r, g, b, a = utils.parse_color("black")
-        for x, y in [(0, 1), (1, 0), (2, 1), (1, 2),
-                     (0, 0), (2, 0), (2, 2), (0, 2)]:
+        for x, y in ((0, 1), (1, 0), (2, 1), (1, 2),
+                     (0, 0), (2, 0), (2, 2), (0, 2)):
             img = Tiling()
             img.set_from_color(r, g, b, a)
             img.show()
@@ -140,7 +140,7 @@ class TargetFrame(ContainerTarget):
 
     def __set_border_color(self, color):
 
-        r, b, g, a = utils.parse_color(color)
+        r, g, b, a = utils.parse_color(color)
         for cnt in range(8):
             self.__images[cnt].set_from_color(r, g, b, a)
 
