@@ -1,4 +1,3 @@
-from config import settings
 from utils import wallpaper
 from utils.BGWatcher import BGWatcher
 from utils.tiling import Tiling
@@ -12,19 +11,6 @@ except ImportError:
     import sys
     log("Could not import x11 module!")
     sys.exit(1)
-
-
-_BGWATCHER = BGWatcher()
-
-_MOOSE_DELAY = 100
-
-
-# this gives us support for real transparency when using a composition manager
-_TRANSLUCENT_CMAP = None
-# get the ARGB visual for an alpha channel
-visual = gtk.gdk.visual_get_best_with_depth(32)
-if (visual):
-    _TRANSLUCENT_CMAP = gtk.gdk.Colormap(visual, True)
 
 
 #
@@ -44,32 +30,23 @@ class GlassWindow(gtk.Window):
         self.__position = (0, 0)
         self.__size = (0, 0)
 
-        # push the tranlucent colormap for creating the window and pop it
-        # afterwards to not mess up other windows
-        if (settings.translucent and _TRANSLUCENT_CMAP):
-            gtk.widget_push_colormap(_TRANSLUCENT_CMAP)
+        # window manager
+        self.__wm = self.__get_window_manager()
+
         gtk.Window.__init__(self, wintype)
-        if (settings.translucent and _TRANSLUCENT_CMAP):
-            gtk.widget_pop_colormap()
 
         self.__layout = gtk.Fixed()
         self.__layout.show()
         gtk.Window.add(self, self.__layout)
 
-        # welcome to the future!
-        if (not settings.translucent):
-            # mommy, my xserver doesn't have translucency... :(
-            self.__background = Tiling()
-            self.__background.show()
-            self.__layout.put(self.__background, 0, 0)
+        self.__background = Tiling()
+        self.__background.show()
+        self.__layout.put(self.__background, 0, 0)
 
-            self.connect("configure-event", self.__on_configure)
+        self.connect("configure-event", self.__on_configure)
 
-            _BGWATCHER.add_observer(self.__bg_observer)
-
-        else:
-            # real men don't need wimpy pseudo-transparency... 8)
-            self.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("#000000"))
+        self.__bg_watcher = BGWatcher()
+        self.__bg_watcher.add_observer(self.__bg_observer)
 
 
 
@@ -109,8 +86,7 @@ class GlassWindow(gtk.Window):
 
         if (self.__update_handler):
             gobject.source_remove(self.__update_handler)
-            self.__update_handler = gobject.timeout_add(_MOOSE_DELAY,
-                                                        self.__updater)
+            self.__update_handler = gobject.timeout_add(100, self.__updater)
         else: self.__updater()
 
 
@@ -155,8 +131,9 @@ class GlassWindow(gtk.Window):
     #
     def _set_flag_below(self, value, tries = 0):
 
-        if (not self.__get_window_manager() in ["Enlightenment"] and
-            not self.get_property("visible") and tries < 10):
+        if (not self.__wm == "Enlightenment" and
+            not self.get_property("visible") and
+            not tries >= 10):
             gobject.timeout_add(500, self._set_flag_below, value, tries + 1)
 
         if (self.window):
@@ -170,9 +147,10 @@ class GlassWindow(gtk.Window):
     #
     def _set_flag_above(self, value, tries = 0):
 
-        if (not self.__get_window_manager() in ["Enlightenment"] and
-            not self.__get_window_manager().startswith("Xfwm4") and
-            not self.get_property("visible") and tries < 10):
+        if (not self.__wm == "Enlightenment" and
+            not self.__wm.startswith("Xfwm4") and
+            not self.get_property("visible") and
+            not tries >= 11):
             gobject.timeout_add(500, self._set_flag_above, value, tries + 1)
 
         if (self.window):
@@ -209,8 +187,9 @@ class GlassWindow(gtk.Window):
         else:
             self.set_property("skip-taskbar-hint", 1)
             self.set_property("skip-pager-hint", 1)
-            wm = self.__get_window_manager()
-            if (wm == "Metacity"): self._set_type_hint_dock(self.window, True)
+
+            if (self.__wm == "Metacity"):
+                self._set_type_hint_dock(self.window, True)
 
 
 
@@ -230,7 +209,16 @@ class GlassWindow(gtk.Window):
     def __get_window_manager(self):
 
         name = ""
-        win = _WM_NAME_WIN
+        win = ""
+        # get the window where the EMWH compliant window manager tells its name
+        root = gtk.gdk.get_default_root_window()
+        try:
+            ident = root.property_get("_NET_SUPPORTING_WM_CHECK", "WINDOW")[2]
+            win = gtk.gdk.window_foreign_new(long(ident[0]))
+        except TypeError, exc:
+            log("Your window manager doesn't support "
+                "_NET_SUPPORTING_WM_CHECK! Switch to a compliant WM!"
+                "The following error occurred:\n%s" % (exc,))
         if (win != None and win != ""):
             try:
                 name = win.property_get("_NET_WM_NAME")[2]
@@ -241,16 +229,4 @@ class GlassWindow(gtk.Window):
                 return name
 
         return name
-
-
-# get the window where the EMWH compliant window manager tells its name
-root = gtk.gdk.get_default_root_window()
-try:
-    ident = root.property_get("_NET_SUPPORTING_WM_CHECK", "WINDOW")[2]
-    _WM_NAME_WIN = gtk.gdk.window_foreign_new(long(ident[0]))
-except TypeError, exc:
-    _WM_NAME_WIN = ""
-    log("Your window manager doesn't support "
-        "_NET_SUPPORTING_WM_CHECK! Switch to a compliant WM!"
-        "The following error occurred:\n%s" % (exc,))
 
