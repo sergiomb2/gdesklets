@@ -247,7 +247,7 @@ class Display(gtk.HBox, Observable):
     #
     def __about_response_callback(self, about, response_id):
         if (response_id < 0):
-            self.__about.hide()
+            self.__about.destroy()
             self.__about.emit_stop_by_name("response")
         elif (response_id == 2003):
             self.__open_readme()
@@ -259,7 +259,7 @@ class Display(gtk.HBox, Observable):
     def __about_close_and_delete_callback(self, about, event=None):
 
         self.__about.hide()
-        return gtk.TRUE
+        return True
 
 
 
@@ -273,7 +273,7 @@ class Display(gtk.HBox, Observable):
     def __readme_close_and_delete_callback(self, readme, event=None):
 
         self.__readme.hide()
-        return gtk.TRUE
+        return True
 
 
 
