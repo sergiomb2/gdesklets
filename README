@@ -14,14 +14,13 @@ gDesklets - GNOME Desktop Applets
 
 2. Requirements (the package names are the debian ones!)
 ---------------
-  * Python 2.3 or higher (some distributions ship broken Python 2.4 packages),
-    if you want to compile gdesklets you'll have to install the development
-    package, too!
+  * Python 2.3 or higher, if you want to compile gdesklets you'll have to
+    install the development package, too!
 
   * SuSE users will need the additional python-xml package, gDesklets won't
     work without it!
 
-  * python-gtk2 2.4 or higher (*)
+  * python-gtk2 2.10 or higher (*)
 
   * python-gtk2-dev if you want to compile gDesklets
 
@@ -167,11 +166,7 @@ instructions.
 
     [option]
                --no-tray-icon    (disables the systray icon)
-               --translucent     (enables translucency on the xorg servers)
 
-  The '--translucent' option relies on the XComposite extension of your XServer.
-  Although this extension usually works, it might still be slow or unstable on
-  some systems.
   If you don't pass a command, the script will fall back to "gdesklets start"
   which is the default.
 
@@ -229,8 +224,7 @@ instructions.
   The keybinding can be freely changed in the configuration dialog.
 
   Note: Due to limitations of older X servers, you might see blocks around
-        desklets in Float mode. This cannot be solved in a satisfying way except
-        for switching the X server to real translucency (Xorg 6.8 and above).
+        desklets in Float mode. This cannot be solved in a satisfying.
 
 
 4.5 Logfile
@@ -280,11 +274,6 @@ instructions.
   * some versions of sawfish show applets with the 'below' flag set above
     other windows; please read section 5. "Supported Window Managers" for a
     patch for a bug in sawfish
-    (sawfish appears to be a dead project, so it's very unlikely that it'll ever
-    get fixed upstream)
-
-  * transparency might be broken on Xinerama displays; we do not have Xinerama
-    and thus cannot test it. If you want to help testing, please drop us a mail
 
 
 
@@ -296,27 +285,24 @@ instructions.
   have to wait until an issue in bugzilla is fixed.
   gDesklets itself shouldn't leak. We've checked the relevant C code to make
   sure of that.
-  At startup the program claims 16 MB of RAM. In the future we're going to
-  decrease that number. Some people in the GNOME and GTK+ community are also
-  addressing these problems at a lower level (gtk+ and gnome libraries).
-  gDesklets will automatically benefit from these efforts.
+  At startup the program claims approximately 16 MB of RAM. In the future we're
+  going to decrease that number. Some people in the GNOME and GTK+ community
+  are also addressing these problems at a lower level (gtk+ and gnome
+  libraries). gDesklets will automatically benefit from these efforts.
 
 
 
 8. Community
 ------------
-  The site 'http://gdesklets.gnomedesktop.org' is the place where you can
+  The site 'http://www.gdesklets.de' is the place where you can
   get new desklets or upload your own creations for sharing them with other
   users.
 
-  There you can also find a link 'Discussion Forum' leading you to the official
-  'gDesklets' discussion forum.
-
   Discussion and Help
-  http://www.gdesklets.org/?mod=forum/forum
+  http://mail.gnome.org/mailman/listinfo/gdesklets-list
 
   gDesklets Developer's Book  (for developing on the gDesklets platform)
-  http://www.pycage.de/develbook/
+  http://develbook.gdesklets.de
 
   A printed reference in German language is available from
   'Software & Support Verlag GmbH'. The book 'Exploring Python' covers desklet
@@ -375,9 +361,9 @@ instructions.
 
 
 -------------------------------------------------------------------------------
-'gDesklets' is copyright (c) 2003 - 2006 by
+'gDesklets' is copyright (c) 2003 - 2007 by
                              Martin Grimme   <martin@pycage.de>,
-                             Christian Meyer <chrisime@gnome-de.org>,
+                             Christian Meyer <chrisime@gnome.org>,
                              Jesse Andrews   <jdandr2@cs.uky.edu>
                              Benoît Dejean   <tazforever@dlfp.org>
 
@@ -385,6 +371,6 @@ instructions.
             is copyright (c) 2003 - 2005 by Benoît Dejean <tazforever@dlfp.org>
             (see http://dejean.benoit.free.fr/software/glibtop/glibtop.html)
 
-The latest version of 'gDesklets' can be found at http://www.gdesklets.org/
-The 'gDesklets' CVS repository can be found in GNOME CVS ('gdesklets' and
-'gdesklets-extras').
+The latest version of 'gDesklets' can be found at http://www.gdesklets.de/
+The 'gDesklets' bzr repository can be found at
+https://code.launchpad.net/gdesklets/
