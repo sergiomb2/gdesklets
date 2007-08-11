@@ -98,7 +98,7 @@ def _gdesklets_main():
     """ gdesklets main function to start """
 
     # prepare gdesklets (locale, signals, program_init)
-    init()
+    gtk.gdk.threads_init()
 
     # build our sockets, trayicon and start them
     Starter()
