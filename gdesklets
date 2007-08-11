@@ -207,11 +207,6 @@ class Command(object):
         try:
 
             try:
-                self.__args.remove("--translucent")
-            except Exception:
-                pass
-
-            try:
                 self.__args.remove("--no-tray-icon")
             except Exception:
                 pass

@@ -17,10 +17,6 @@ class DaemonConfigger(ConfigDialog):
       ("title", {"label": _("Editor to view/edit the desklet source code")}),
       ("uri",   {"label": _("Your favorite editor"),
                  "bind": "editor"}),
-      ("title", {"label": _("XComposite support (requires composition manager)" +
-                            "\n     <small><i>" +
-                            _("this does not work with GTK 2.8 or higher for "
-                              "technical reasons") + "</i></small>")}),
       ("title", {"label": _("Screen Resolution (DPI)")}),
       ("dpi",   {"label": "<small>" +
                           _("Adjust the value above so that the bar will be "
