@@ -88,26 +88,9 @@ CREDITS = (
 
            (_("Thank you:"),
            ("VidaLinux for sponsoring",
-            "the http://www.gdesklets.org domain!",))
+            "the http://www.gdesklets.org domain!",
+            "LinuxProfessionals for sponsoring",
+            "webspace and the http://www.gdesklets.de domain!",)
+           )
           )
-
-
-def init():
-
-    """ gDesklets init process """
-    import signal
-    import gtk
-
-    # prepare GTK for threads
-    try:
-        gtk.gdk.threads_init()
-    except AttributeError:
-        gtk.threads_init()
-    except Exception:
-        print "No threading support available in python."
-        print "Compile python with --enable-threads. Exiting!"
-        sys.exit(1)
-
-    # install signal handler to quit on Ctrl-C
-    signal.signal(signal.SIGINT, gtk.main_quit)
 
