@@ -2,7 +2,7 @@
 .\" First parameter, NAME, should be all caps
 .\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
 .\" other parameters are allowed: see man(7), man(1)
-.TH gdesklets "1" "August 14, 2004"
+.TH gdesklets "1" "August 16, 2007"
 .\" Please adjust this date whenever revising the manpage.
 .\"
 .\" Some roff macros, for reference:
@@ -16,11 +16,12 @@
 .\" .sp <n>    insert n+1 empty lines
 .\" for manpage-specific macros, see man(7)
 .SH NAME
-\fBgDesklets\fR \- provides an advanced architecture for desktop applets 
+\fBgDesklets\fR \- provides an advanced architecture for desktop applets
+
 
 .SH SYNOPSIS
-.B gdesklets 
-[ display ]
+.B gdesklets open [ display ]
+
 
 .SH DESCRIPTION
 .B gDesklets
@@ -31,20 +32,13 @@ Populate your desktop with status meters, icon bars, weather sensors,
 news tickers... whatever you can imagine! Virtually anything is possible 
 and maybe even available some day. 
 
-.SH MIGRATING FROM AN OLDER VERSION
-\fBgDesklets 0.30\fR uses a slightly different way of storing configuration.
-If you want to keep your old configuration, you have to run the
-\fBmigration-tool\fR:
-
-.B $ migration-tool
-
-Many thanks to Dave Masterson for writing this handy wizard!
 
 .SH FIRST START
 You can find an entry in the GNOME menu after a successful installation. 
 This will start the gDesklets Shell where you can install and run desktop
 applets. When you log out or quit 'gDesklets', the settings will be remembered 
 for the next session.
+
 
 .SH COMMAND LINE TOOL
 The command line tool \fBgdesklets\fR lets you perform all administration tasks
@@ -78,12 +72,14 @@ Usage of the command line frontend:
              about             (Prints information about gDesklets)
              version           (Prints gDesklets version)
              help              (Displays this text)
+             check             (Dependency check for python bindings)
 
-    [option]: --translucent (Enables translucency on the
-                             freedesktop.org XServer)
 
-  The \fB--translucent\fR option is still in an experimental state, though.
-  It may or may not work as expected.
+    [option]: --no-tray-icon   (disables the systray icon)
+
+  If you don't pass a command, the script will fall back to
+  \fBgdesklets start\fR which is the default.
+
 
 .SH GDESKLETS-SHELL
 The shell is a graphical frontend for managing your desklets. You can start
@@ -103,6 +99,7 @@ your screen when you first run them. You can move displays around by pressing
 and holding down the middle mouse button. 'gDesklets' will remember the new 
 position of the display for the future.
 
+
 .SH USAGE
 If you press the right mouse button over a display, a popup menu will open. 
 It depends on the display what you will see there, but the following items are 
@@ -113,7 +110,7 @@ always available:
 .IP
 Opens the configuration dialog for this display. It depends on the display what 
 you can configure.
-.HP                                   
+.HP
 \fBRestart display\fR
 .IP
 Restarts this display. This menu item is mainly for sensor debugging.
@@ -122,28 +119,87 @@ Restarts this display. This menu item is mainly for sensor debugging.
 .IP
 Removes this display from your desktop.
 
-.SH COMMUNITY
+.SH LOGFILE
+The gdesklets-daemon writes a log file. That file can be found in
+\fB~/.gdesklets/logs/gdesklets<display>.log\fR where \fB<display> is the name
+of the X-Display.
+.PP
+You can select the item \fBView log\fR in the popup menu of the tray icon to
+view the log messages.
 
-The site 'http://gdesklets.gnomedesktop.org' is the place where you can
-get new desklets or upload your own creations for sharing them with other
-users.
+
+.SH SUPPORTED WINDOW MANAGERS
+In order to run on as many desktops as possible, gDesklets relies on the EWMH
+specification from freedesktop.org. This specification is respected among many
+window managers. We currently know of the following EWMH compliant window
+managers:
 .PP
-The site 'http://gnomesupport.org/forums/viewforum.php?f=23' is the 
-official \fBgDesklets\fR' 'Discussion Forum' where you can get help.
+.HP
+\fB* metacity\fR
+.HP
+\fB* xfwm4\fR
+.HP
+\fB* openbox\fR
+.HP
+\fB* enlightenment\fR (>= 0.16.6)
+.HP
+\fB* fvwm\fR (2.5.x, see http://www.fvwm.org/features.php)
+.HP
+\fB* sawfish\fR
+.HP
+\fB* kwin\fR
+.HP
+\fB* evilwm\fR
+.HP
+\fB* fluxbox\fR (recent versions)
+.HP
+\fB* waimea\fR
+.HP
+* ...and certainly some others which we forgot here.
+
+.SH MEMORY CONSUMPTION
+This is taken seriously. In every release we're addressing these issues.
+Unfortunately, gDesklets is relying on libraries which contain their own bugs
+or leaks. In some places it's possible to create a work-around. Sometimes, we
 .PP
-You can meet the \fBgDesklets\fR developers and other fans on the IRC channel
+have to wait until an issue in bugzilla is fixed.
+gDesklets itself shouldn't leak. We've checked the relevant C code to make
+sure of that.
+.PP
+At startup the program claims approximately 16 MB of RAM. In the future we're
+going to decrease that number. Some people in the GNOME and GTK+ community
+are also addressing these problems at a lower level (gtk+ and gnome libraries). gDesklets will automatically benefit from these efforts.
+
+
+.SH COMMUNITY
+The site 'http://www.gdesklets.de' is the place where you can get new desklets
+or upload your own creations for sharing them with other users.
+.PP
+Discussion and Help
+http://mail.gnome.org/mailman/listinfo/gdesklets-list
+.PP
+gDesklets Developer's Book  (for developing on the gDesklets platform)
+http://develbook.gdesklets.de
+.PP
+A printed reference in German language is available from
+'Software & Support Verlag GmbH'. The book 'Exploring Python' covers desklet
+development on 34 pages.
+.PP
+You can meet the 'gDesklets' developers and other fans on the IRC channel
 #gdesklets on GIMPnet (irc.gimp.org).
+
 
 .SH AUTHOR
 .B gDesklets
-was written by 
+was written by
 .PP
   * Martin Grimme <martin@pycage.de>.
 .PP
-  * Christian Meyer <chrisime@gnome-de.org>.
+  * Christian Meyer <chrisime@gnome.org>.
 .PP
   * Jesse Andrews <jdandr2@cs.uky.edu>.
 .PP
+
 
 .SH THANKS
 I'd like to thank all people who supported (and are still supporting) me so 
@@ -164,21 +220,19 @@ well with 'gDesklets'. Please complain if I forgot you... ;)
   * James Henstridge -- excellent GTK bindings for Python
 
 .SH BUGS
+If you encounter bugs which are not listed here, please post a bug report at
+bugzilla.gnome.org for \fBgDesklets\fR. Please don't report useless bug
+reports, like "gDesklets crashes" without checking the log file first, because
+that doesn't tell us much. Also make sure, that you have all the necessary
+dependencies installed.
+.PP
+If the log says: "ImportError: No module named X" then you clearly don't have
+the python module "X" installed on your system.
+We are going to close useless bug reports immediately(!), so please save your
+time and ours and be smart!
 
-If you encounter bugs which are not listed here, please post a bug report at 
-bugzilla.gnome.org for \fBgDesklets\fR.
-.PP
-  * some versions of sawfish show displays with the 'below' flag set above
-    other windows; this is a bug in sawfish; go complain there :)
-.PP
-  * some buggy versions of 'nautilus' can cause 'gDesklets' to crash when the
-    desktop background is being changed
-.PP
-  * transparency might be broken on Xinerama displays; we do not have Xinerama
-    and thus cannot test it. If you want to help testing, please drop us a mail
 
 .SH LICENCE AND DISCLAIMER
-
 .PP
 This software is distributed in the hope that it will be useful, but WITHOUT
 ANY WARRANTY; without even the implied warranty of MERCHANTIBILITY or FITNESS
@@ -192,3 +246,24 @@ MA  02111-1307  USA
 .PP
 This software is provided "as is" and the author is not and cannot be made
 responsible for any damage resulting from the use of this software.
+
+.SH COPYRIGHT
+.PP
+\fBgdesklets\fR is copyright (c) 2003 - 2007 by
+.HP
+* Martin Grimme  <martin@pycage.de>,
+.HP
+* Christian Meyer  <chrisime@gnome.org>,
+.HP
+* Jesse Andrews  <jdandr2@cs.uky.edu>
+.HP
+* Benoît Dejean  <tazforever@dlfp.org>
+.PP
+\fBglibtop Python wrapper\fR in libdesklets is copyright (c) 2003 - 2005 by
+.HP
+* Benoît Dejean  <tazforever@dlfp.org>
+.PP
+The latest version of \fBgDesklets\fR can be found at http://www.gdesklets.de/
+The \fBDesklets\fR bzr repository can be found at
+https://code.launchpad.net/gdesklets/
+
