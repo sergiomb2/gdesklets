@@ -6,7 +6,7 @@ from utils import i18n
 __builtin__._ = i18n.Translator("gdesklets")
 
 from utils.logger import SyncWriter
-from main import init, transition, LOGFILE
+from main import transition, LOGFILE
 from main.Starter import Starter
 
 import atexit

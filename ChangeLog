@@ -1,3 +1,9 @@
+2007-08-23  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* display/Display.py: fixed and improved About Window
+	* gdesklets-daemon: stop importing init from main (not needed anymore)
+
+
 2007-08-10  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* config/ConfigInfo.py: Fixed #126188

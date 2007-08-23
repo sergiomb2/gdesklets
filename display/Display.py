@@ -133,6 +133,7 @@ class Display(gtk.HBox, Observable):
 
         # the about window
         self.__about = gtk.AboutDialog()
+        self.__about.set_wrap_license(True)
         self.__about.connect("response", self.__about_response_callback)
         self.__about.connect("close", self.__about_close_and_delete_callback)
         self.__about.connect("delete_event",
@@ -140,17 +141,19 @@ class Display(gtk.HBox, Observable):
 
         # the readme window
         self.__readme = HIGDialog(buttons = (gtk.STOCK_CLOSE,
-                                             gtk.RESPONSE_CLOSE))
+                                             gtk.RESPONSE_CLOSE), self_destroy = False)
         self.__readme.set_title("%s - README" % os.path.basename(rep))
 
         sw = gtk.ScrolledWindow()
         sw.set_policy(gtk.POLICY_NEVER, gtk.POLICY_AUTOMATIC)
+        sw.set_shadow_type(gtk.SHADOW_IN)
         textview = gtk.TextView()
         textview.set_editable(False)
         textview.set_overwrite(False)
         textview.set_left_margin(8)
         textview.set_right_margin(8)
         textview.set_wrap_mode(gtk.WRAP_WORD)
+        textview.set_cursor_visible(False)
         textview.set_size_request(500, 300)
         self.__readme_buffer = textview.get_buffer()
         sw.add(textview)
@@ -247,7 +250,7 @@ class Display(gtk.HBox, Observable):
     #
     def __about_response_callback(self, about, response_id):
         if (response_id < 0):
-            self.__about.destroy()
+            self.__about.hide()
             self.__about.emit_stop_by_name("response")
         elif (response_id == 2003):
             self.__open_readme()
