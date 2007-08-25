@@ -140,9 +140,6 @@ class Starter:
 
         elif (cmd == src.OBS_RESTART):
             ident = args[0]
-            xcoord, ycoord = src.get_geometry()[0:2]
-            xcoord = xcoord.as_px()
-            ycoord = ycoord.as_px()
             path = self.__display_paths[ident]
             self.__remove_display(ident)
             def f(*args): pass
@@ -349,7 +346,6 @@ class Starter:
             # what kind of exception are we expecting here?
             except Exception:
                log("Could not remove desklet \"%s\"!" % (display,))
-        # FIXME circumvent: 'gtk.ImageMenuItem' object is not callable
         try:
             callback()
         except Exception:
