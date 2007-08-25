@@ -1,4 +1,4 @@
-import gtk
+import gobject, gtk, pango
 
 from plugin.Interface import Interface
 from utils.HIGDialog import HIGDialog
@@ -13,12 +13,14 @@ class ControlInspector(HIGDialog):
 
         HIGDialog.__init__(self, buttons=(gtk.STOCK_CLOSE, gtk.RESPONSE_CLOSE))
         name = ctrlclass.__name__
-        self.set_property("title", _("%s Control") % (name))
+        self.set_property("title", _("%s Control") % name)
 
         align = gtk.Alignment(0.0, 0.0, 0.0, 0.0)
         align.set_property("border-width", 6)
+        frame = gtk.Frame()
         self.__scrollw = gtk.ScrolledWindow()
-        align.add(self.__scrollw)
+        frame.add(self.__scrollw)
+        align.add(frame)
 
         self.__label = gtk.Label()
         self.__label.set_property("selectable", True)
@@ -42,14 +44,11 @@ class ControlInspector(HIGDialog):
 
         self.__label.set_property("label", texts[0][0])
 
-        import gobject, pango
-
         treemodel = gtk.TreeStore(gobject.TYPE_STRING, gobject.TYPE_STRING,
                                   gobject.TYPE_STRING, gobject.TYPE_STRING)
         treeview = gtk.TreeView(treemodel)
 
         textrenderer0 = gtk.CellRendererText()
-        textrenderer0.set_property("weight", pango.WEIGHT_BOLD)
         textrenderer1 = gtk.CellRendererText()
 
         column0 = gtk.TreeViewColumn(_("Interface Name"), textrenderer0)
@@ -65,17 +64,25 @@ class ControlInspector(HIGDialog):
         column3.add_attribute(textrenderer1, "text", 3)
         treeview.append_column(column3)
 
+        textrenderer0.set_property("weight", pango.WEIGHT_BOLD)
+        textrenderer0.set_property("wrap-width", 250)
+        textrenderer0.set_property("wrap-mode", gtk.WRAP_WORD)
+        textrenderer1.set_property("style", pango.STYLE_ITALIC)
+        textrenderer1.set_property("wrap-width", 500)
+        textrenderer1.set_property("wrap-mode", gtk.WRAP_WORD)
+
         for (iface, items) in texts:
 
             myiter = treemodel.insert_before(None, None,
                                              (iface.split(":")[0], None, None,
                                               None))
 
-            for name, access, description in items:
+            for (name, access, description) in items:
                 treemodel.insert_before(myiter, None,
                                         (None, name, access, description))
 
         treeview.expand_all()
+        treeview.columns_autosize()
         w, h = treeview.size_request()
         self.__scrollw.set_policy(gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC)
         self.__scrollw.set_size_request(max(w + 20, 600), min(h, 400))
