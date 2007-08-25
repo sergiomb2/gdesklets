@@ -203,6 +203,10 @@ class TargetCanvas(DisplayTarget):
 
         w, h = self.__widget.size_request()
         imgw, imgh = self.__image_size
+        if (imgw == 0 or imgh == 0):
+            log ("Warning: The desklet is broken. Image height or width is 0",
+                 "Please contact the author to fix the problem.")
+            return
 
         # crappy SVG needs the size to be given; just set it here so that it
         # dynamically takes the correct size
