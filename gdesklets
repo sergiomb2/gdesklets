@@ -58,8 +58,8 @@ def check_system():
         ),
         ( ("gtk",), lambda m : m.pygtk_version >= (2, 10, 0) and \
                               m.gtk_version >= (2, 10, 0),
-          _("GTK python bindings (pygtk2) version >= 2.4.0 and "
-            "GTK+ version >= 2.4.0 are required.")
+          _("GTK python bindings (pygtk2) version >= 2.10.0 and "
+            "GTK+ version >= 2.10.0 are required.")
         ),
         ( ("ORBit",), lambda m : m.__version__ >= (2, 0, 1),
           _("ORBit python bindings (pyorbit) version >= 2.0.1 are required.")
@@ -386,10 +386,9 @@ class Command(object):
 
 
 command = Command(sys.argv[1:])
-if (len(sys.argv) > 1 and sys.argv[1] != "check"):
-    check_first_run()
 
 check_user()
+check_first_run()
 command.parse_args()
 command.parse_command()
 
