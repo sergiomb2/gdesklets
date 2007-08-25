@@ -20,7 +20,6 @@ install_DATA = \
 	TargetFrame.py         \
 	TargetGauge.py         \
 	TargetGroup.py         \
-	TargetGroup2.py        \
 	TargetImage.py         \
 	TargetLabel.py         \
 	TargetPlotter.py       \
