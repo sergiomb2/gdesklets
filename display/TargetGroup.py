@@ -27,7 +27,7 @@ class TargetGroup(ContainerTarget):
         self.__max_size = (0, 0)
 
         ContainerTarget.__init__(self, name, parent)
-        self.__layout = gtk.Layout()
+        self.__layout = gtk.Fixed()
         self.__layout.show()
 
         self.__image = Tiling()
