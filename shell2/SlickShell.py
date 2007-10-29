@@ -41,7 +41,7 @@ class SlickShell(object):
         self.__sidemenu = SideMenu.SideMenu(self)
         self.__hpaned.add2(self.__sidemenu)
         self.__top_box.pack_start(self.__hpaned)
-        
+        self.__desklet_list = None
         
         # self.__hpaned.add1(self.__side_menu)
         self.__active_widget = None # the widget that occupies the main view
@@ -52,8 +52,7 @@ class SlickShell(object):
         self.__window.show_all()
         
         # start the assembly
-        self.__assembly.start()
-        
+        self.__assembly.start(self.__website_integration)
         
         
     def __construct_action_groups(self):
@@ -91,7 +90,7 @@ class SlickShell(object):
     def refresh_view(self, event):
         ''' Refresh the view after installation, etc. '''
         desklet_object = self.__selected_desklet
-        # print "refreshing because of ", desklet_object.name
+        print "refreshing in slickshell refresh_view because of ", desklet_object.name
         if desklet_object.local_path is not None:
             self.__action_group.get_action("remove").set_sensitive(True)
             self.__action_group.get_action("install").set_sensitive(False)
@@ -140,10 +139,13 @@ class SlickShell(object):
             # self.__statusbar.pop(0)
             # All is done: construct the view
             if param == 'All done':
-                self.__desklet_list = WidgetList.WidgetList(self)
-                # self.__news_view = NewsView.NewsView(self)
-                self.__hpaned.add1(self.__desklet_list)
-                self.__hpaned.show_all()
+                if self.__desklet_list == None:
+                    self.__desklet_list = WidgetList.WidgetList(self)
+                    # self.__news_view = NewsView.NewsView(self)
+                    self.__hpaned.add1(self.__desklet_list)
+                    self.__window.show_all()
+                else: 
+                    self.__desklet_list.populate_treemodel()
                 
     
         

@@ -10,8 +10,6 @@ class WidgetList(gtk.VBox):
         ''' Creates the treeview for the right side (the actual view of the desklets). '''
         super(WidgetList, self).__init__(False, 6)
         
-        # self.pack_start( TitleText( "Desklets", main.get_title_font_color()), False )
-
         self.__scrolled_window = gtk.ScrolledWindow()
         self.__scrolled_window.set_border_width(6)
         self.__scrolled_window.set_size_request(400, -1)
@@ -26,14 +24,9 @@ class WidgetList(gtk.VBox):
         self.__main = main
         self.__assembly = main.get_assembly()
         
-        # make it store the picture, name and description on the first level
-        self.__tree_model = gtk.TreeStore(str, gtk.gdk.Pixbuf , str)
-        
-        self.tree_view = gtk.TreeView(self.__tree_model)
         self.__text_renderer = gtk.CellRendererText()
         self.__text_renderer.set_property("wrap-width", 400)
         pic_renderer = gtk.CellRendererPixbuf()
-        installed_renderer = gtk.CellRendererToggle()
         
         pixbuf_column = gtk.TreeViewColumn('Icon')
         pixbuf_column.pack_start(pic_renderer, False)
@@ -43,30 +36,24 @@ class WidgetList(gtk.VBox):
         text_column.pack_start(self.__text_renderer, False)
         text_column.add_attribute(self.__text_renderer, 'markup', 2)
         text_column.set_sort_column_id(2)
-        # text_column.set_resizable(True)
+        text_column.set_resizable(True)
         
-        # install_column = gtk.TreeViewColumn('Installed')
-        # install_column.pack_start(installed_renderer, False)
-        # install_column.add_attribute(installed_renderer, 'active', 3)
-        # install_column.set_sort_column_id(3)
+        # make it store the picture, name and description on the first level
+        self.__tree_model = gtk.TreeStore(str, gtk.gdk.Pixbuf, str)
+        self.populate_treemodel()
         
+        self.tree_view = gtk.TreeView(self.__tree_model)
         self.tree_view.append_column(pixbuf_column)
         self.tree_view.append_column(text_column)
-        # self.tree_view.append_column(install_column)
         # self.tree_view.get_selection().connect('cursor', self.selected_event)
         self.tree_view.connect('cursor-changed', self.selected_event)
         self.__scrolled_window.add(self.tree_view)
         
         
-        self.populate_treeview()
         
-        
-        
-    def populate_treeview(self):
-        max_size = 75
+    def populate_treemodel(self):
         desklets = self.__assembly.get_desklets()
         category_paths = {}
-        self.__tree_model.clear()
         
         # add desklets one by one to the tree model
         for d_key, d_object in desklets.items():            
@@ -82,54 +69,35 @@ class WidgetList(gtk.VBox):
             cur_width = pixbuf.get_width()
             cur_height = pixbuf.get_height()
             if cur_width > cur_height:
-                asp = float(max_size) / cur_width
+                asp = 75.0 / cur_width
                 target_height = asp * cur_height
-                pixbuf = pixbuf.scale_simple(int(max_size), 
+                pixbuf = pixbuf.scale_simple(75, 
                                              int(target_height),
                                              gtk.gdk.INTERP_BILINEAR )
             else:
-                asp = float(max_size) / cur_height
+                asp = 75.0 / cur_height
                 target_width = asp * cur_width
                 pixbuf = pixbuf.scale_simple(int(target_width),
-                                             int(max_size),
+                                             75,
                                              gtk.gdk.INTERP_BILINEAR )
         
             
-            name = d_object.name
-            
-            # we have to rip out all tags from the description or we get very "funny" bugs
-            # with descriptions switching places on the fly, etc. (just comment the re.sub to see)
-            d_object.description = re.sub('<([^!>]([^>]|\n)*)>', '', d_object.description)
-            
             d_object.pixbuf = pixbuf
-            
-            # deps = "<span weight=\"600\">Control Dependencies:</span> "
-            # if len(d_object.dependencies) > 0:
-            #     for dep in d_object.dependencies:
-            #         deps += dep + ","
-            #     deps = deps[0:-1] # strip last , 
-            # else: 
-            #     deps = ''
-            # text =  "<big>"+name+"</big>"
-            
-            # install_state = False
-            # if d_object.local_path is not None:
-            #    install_state = True
             
             # check if the category row has been created
             cat = gobject.markup_escape_text(d_object.category)
-            if category_paths.has_key(cat):
-                self.__tree_model.append(category_paths[cat], (d_key, pixbuf, d_object.name) )
-            else:
-                category_paths[cat] = self.__tree_model.append(None, (None, None, cat))
-                self.__tree_model.append(category_paths[cat], (d_key, pixbuf, d_object.name) )
+            if not category_paths.has_key(cat):
+               category_paths[cat] = self.__tree_model.append(None, (None, None, cat))
+           
+            iter = self.__tree_model.append( category_paths[cat], (d_key, pixbuf, d_object.name) )
             
-        self.populate_controls()
         
     
-    
     def refresh(self):
-        self.populate_treeview()
+        logging.debug('WidgetList: refresh called')
+        self.tree_view.queue_draw()
+        
+        # self.populate_treemodel()
     
     
     
@@ -168,9 +136,11 @@ class WidgetList(gtk.VBox):
             
             path  = treestore.get_path(treeiter)
             if len(path) == 1: # were talking about a category
-                if self.tree_view.row_expanded(path): 
-                    self.tree_view.collapse_row(path)
-                else: self.tree_view.expand_row(path, False) 
+            # this code enables opening categories on a single click.. 
+            # albeit fast, it's a bit confusing for the users so let's turn it off
+            #    if self.tree_view.row_expanded(path): 
+            #        self.tree_view.collapse_row(path)
+            #    else: self.tree_view.expand_row(path, False) 
                 return
                 
             desklet_key = treestore.get(treeiter, 0 )[0]

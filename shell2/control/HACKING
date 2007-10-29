@@ -12,10 +12,10 @@ control or people who want to build other frontends than desklets
 Basic Functionality
 ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 The Desklet control (referred as 'DC') downloads a list of available
-desklets and controls(both are 'widgets') from a list of given sources 
-and forms a list of available widgets. 
+desklets and controls (both will be referred as 'widgets') from a list 
+of given sources and forms a list of available widgets. 
 
-The other function of DC is to find the local controls and desklets and 
+The other function of DC is to find the local widgets and 
 then fullfill the original list of widgets to reflect this.
 
 There are four different basic types or states of desklets:

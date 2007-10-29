@@ -2,9 +2,34 @@ import urllib2
 import urllib # need the old one for quote()
 import sys
 import os
-# from download import download
 
 
+def download(url, dest):
+    ''' Download a package from url to the directory dest. '''
+    
+    # simple escape.. needs a better one perhaps
+    escaped_url = url.replace(" ", "%20")
+    
+    print "downloading from ", escaped_url
+    
+    url_opener = urllib2.build_opener()
+    
+    request = urllib2.Request(escaped_url)
+    request.add_header('User-Agent', 'Desklets Control/0.5 +http://www.gdesklets.org')
+    
+    stream = url_opener.open(request)
+    file_basename = os.path.basename(url)
+    final_destination = os.path.join(dest, file_basename)
+    
+    fd = open(final_destination, 'w')
+    
+    # the actual transfer
+    fd.write(stream.read())
+    
+    stream.close()
+    fd.close()
+    
+    print "downloaded to ", dest, " total path is ", final_destination
 
 
 def get_news(url, cache_dir):
@@ -83,7 +108,8 @@ def get_desklets(base_url, list_uri, cache_dir):
 
 def _fetch_remote_file(remote_file_url, local_copy_path, local_modification_date ):
         ''' Checks for the available file. If a newer version is found
-            it will fetch it, but otherwise it'll use the local cache.  '''
+            it will fetch it, but otherwise it'll use the local cache. 
+            This is used for the pyon-files, not for downloading desklet packages. '''
         # look for a local copy
         local_copy_available = False
         content = ""
@@ -107,6 +133,7 @@ def _fetch_remote_file(remote_file_url, local_copy_path, local_modification_date
         
         # This try will only succeed if the local file is not up to date or does not exist
         try:
+            raise ValueError("FOOOOOO!")
             request = urllib2.Request(remote_file_url)
             request.add_header('User-Agent', 'Desklets Control/0.5 +http://www.gdesklets.de')
             request.add_header('If-Modified-Since', modification_time)
@@ -149,9 +176,13 @@ def _fetch_remote_file(remote_file_url, local_copy_path, local_modification_date
             type, info, tb = sys.exc_info()
             error_string = str(info)
             print "! DeskletControl: available desklets \
-                    from the repository could not be fetched:", error_string
-            return None
-        
+                    from the repository could not be fetched (using local cached file if available):", error_string
+            # default to old file
+            try:
+                local_f = open(local_copy_path)
+                content = local_f.read()
+            except: return None
+
         return content
 
 

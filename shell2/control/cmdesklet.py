@@ -4,7 +4,8 @@ from Assembly import Assembly
 import sys
 
 class CmdClient(object):
-    ''' A simple command line interface to the Desklet control '''
+    ''' A simple command line interface to the Desklet control. Mostly 
+        for testing purposes '''
     
     def __init__(self, parameters):
         if parameters == []:
@@ -37,6 +38,8 @@ class CmdClient(object):
             
         elif cmd == 'install':
             self.__install(parameters[1])
+        elif cmd == 'install-http':
+            self.__install_http(parameters[1])
         elif cmd == 'install-control':
             self.__install_control(parameters[1]) 
         
@@ -86,6 +89,7 @@ class CmdClient(object):
 
     def __print_remote_desklets(self):
         print "Remote desklets"
+        self.__assembly.start(True)
         desklets = self.__assembly.get_remote_desklets()
         for d in desklets:
             do = desklets[d]
@@ -112,6 +116,7 @@ class CmdClient(object):
 
     def __print_remote_controls(self):
         print "Remote controls"
+        self.__assembly.start(True)
         controls = self.__assembly.get_remote_controls()
         for d in controls:
             do = controls[d]
@@ -137,10 +142,15 @@ class CmdClient(object):
     		print "No desklet with the name ", name
 
 	
-	
-	def __install_control(self, name):
-		print "Install ", name
-    	d = self.__assembly.get_control(name)
+    def __install_http(self, url):
+        print "Install from", url
+        d = self.__assembly.install_http(url)
+        print "Install http done"
+    
+    
+    def __install_control(self, name):
+        print "Install ", name
+        d = self.__assembly.get_control(name)
     	if d is not None:
     		d.install_newest_version()
     	else:

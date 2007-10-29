@@ -1,4 +1,4 @@
-import os, logging
+import os, logging, tempfile
 
 import Settings
 import remote
@@ -20,7 +20,26 @@ class Assembly:
         local.core_interface.initialize( Settings.get_setting('gdesklets_home'))
         
 
-
+    def install_http(self, url):
+        ''' install a widget directly from a http address '''
+        dest_temp_dir = tempfile.mkdtemp()
+        remote.download(url, dest_temp_dir)
+        package_file = os.path.join(dest_temp_dir, os.path.basename(url))
+        # FIXME a weak check on whether we're dealing with a control
+        if "files/controls" in url: install_dir = Settings.get_setting('control_install_dir')
+        else: install_dir = Settings.get_setting('display_install_dir')
+        
+        # FIXME another reliance to the naming scheme on gd.de
+        widget_name = os.path.basename(url).rsplit('-')[0]
+        final_destination = local.unpack(package_file, install_dir, widget_name)
+        
+        # self.local_path = final_destination
+        # self.notify_observers("INSTALLED")
+        self.__find_local_desklets()
+        return True
+    
+        
+    
     def start(self, website_integration=False):
         # fetch controls first so that dependencies
         # may be marked correctly
@@ -80,7 +99,7 @@ class Assembly:
                 #for ver in d_data['versions']:
                  #   d.add_version(ver)
                 self.add_desklet(d)
-                del(d)
+                # del(d)
     
 
     
@@ -103,7 +122,7 @@ class Assembly:
                 #for ver in d_data['versions']:
                  #   d.add_version(ver)
                 self.add_control(d)
-                del(d)            
+                # del(d)            
 
 
 
@@ -129,7 +148,7 @@ class Assembly:
                 d.add_version(d_data['version'], version)
                 d.add_displays( d_data['displays'] )
                 self.add_desklet(d)
-                del(d)
+                # del(d)
 
 
 
@@ -146,7 +165,7 @@ class Assembly:
             #for ver in d_data['versions']:
              #   d.add_version(ver)
             self.add_control(d)
-            del(d)
+            # del(d)
 
 
 

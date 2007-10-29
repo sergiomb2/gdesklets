@@ -1,5 +1,9 @@
 from utils import log
-
+import tempfile
+import remote
+import local
+import os
+        
 class Widget(object):
     ''' A superclass for desklets and controls. Should not be used directly '''
     
@@ -38,11 +42,6 @@ class Widget(object):
         if self._install_parent_dir is None:
             raise "Widget.py: Attempt of installing a widget class. Should be done via subclasses." 
         
-        import tempfile
-        import remote
-        import local
-        import os
-        
         ver = self.get_version(version_number)
         file_url = os.path.join(self.__remote_domain, ver['file_url'])
         #print "installing version", version_number, " from", file_url
@@ -54,8 +53,6 @@ class Widget(object):
         
         self.local_path = final_destination
         self.notify_observers("INSTALLED")
-        
-        
         
         return True
     
