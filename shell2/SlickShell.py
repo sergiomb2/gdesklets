@@ -1,6 +1,7 @@
 import gtk
 import gobject
 
+import Config
 import WidgetList
 import SideMenu
 import MenuBar
@@ -15,9 +16,10 @@ class SlickShell(object):
 
     def __init__(self, assembly):
         
-        self.__selected_desklet = None
+        self.__config = Config.Config()
+        self.__selected_widget = None
         self.__assembly = assembly
-        self.__website_integration = False
+        self.__website_integration = self.__config.get('website_integration')
         self.__assembly.add_observer(self.assembly_event)
         self.__construct_action_groups()
         self.__prefs_dialog = None
@@ -25,7 +27,9 @@ class SlickShell(object):
         self.__window = gtk.Window(gtk.WINDOW_TOPLEVEL)
         self.__window.set_title("Slick Shell")
         self.__window.connect("delete_event", self.close_window_event)
-        self.__window.set_default_size(400, 400)
+        w = self.__config.get('width') or 400
+        h = self.__config.get('height') or 400
+        self.__window.set_default_size(int(w),int(h))
         
         # one vertical box to hold toolbars, and other boxes (not homogenous, 2px spacing)
         self.__top_box = gtk.VBox(False, 2)
@@ -49,6 +53,7 @@ class SlickShell(object):
         # self.__statusbar = StatusBar.StatusBar(self)
         # self.__top_box.pack_start(self.__statusbar, False, False, 0)
         
+        self.__window.connect('check-resize', self.__size_changed_cb)
         self.__window.show_all()
         
         # start the assembly
@@ -89,29 +94,29 @@ class SlickShell(object):
     
     def refresh_view(self, event):
         ''' Refresh the view after installation, etc. '''
-        desklet_object = self.__selected_desklet
+        desklet_object = self.__selected_widget
         print "refreshing in slickshell refresh_view because of ", desklet_object.name
         if desklet_object.local_path is not None:
-            self.__action_group.get_action("remove").set_sensitive(True)
-            self.__action_group.get_action("install").set_sensitive(False)
-            self.__tree_model.set_value(self.__selected_desklet_iter, 3, True)
+            self.__action_groups.get_action("remove").set_sensitive(True)
+            self.__action_groups.get_action("install").set_sensitive(False)
+            self.__tree_model.set_value(self.__selected_widget_iter, 3, True)
             # see if this is a desklet or a control and show the activate button
             try: 
                 preview = desklet_object.preview
-                self.__action_group.get_action("activate").set_sensitive(True)
+                self.__action_groups.get_action("activate").set_sensitive(True)
             except:
-                self.__action_group.get_action("activate").set_sensitive(False)
+                self.__action_groups.get_action("activate").set_sensitive(False)
                 
         else:
-            self.__action_group.get_action("remove").set_sensitive(False)
-            self.__action_group.get_action("install").set_sensitive(False)
-            self.__action_group.get_action("activate").set_sensitive(False)
-            self.__tree_model.set_value(self.__selected_desklet_iter, 3, False)
+            self.__action_groups.get_action("remove").set_sensitive(False)
+            self.__action_groups.get_action("install").set_sensitive(False)
+            self.__action_groups.get_action("activate").set_sensitive(False)
+            self.__tree_model.set_value(self.__selected_widget_iter, 3, False)
             
         if desklet_object.remote_domain is not None:
-            self.__action_group.get_action("install").set_sensitive(True)
+            self.__action_groups.get_action("install").set_sensitive(True)
         else:
-            self.__action_group.get_action("install").set_sensitive(False)
+            self.__action_groups.get_action("install").set_sensitive(False)
     
     
     def get_assembly(self): return self.__assembly
@@ -150,26 +155,26 @@ class SlickShell(object):
     
         
     def install_event(self, event):
-        logging.info("install" + self.__selected_desklet.name)
-        self.__selected_desklet.install_newest_version()
+        logging.info("install" + self.__selected_widget.name)
+        self.__selected_widget.install_newest_version()
     
     
     
     def remove_event(self, event):
-        logging.info("remove" + self.__selected_desklet.name)
-        self.__selected_desklet.remove()
+        logging.info("remove" + self.__selected_widget.name)
+        self.__selected_widget.remove()
         
         
     
     def activate_event(self, event):
-        logging.info("activate event " + self.__selected_desklet.name)
-        self.__selected_desklet.activate_all()
+        logging.info("activate event " + self.__selected_widget.name)
+        self.__selected_widget.activate_all()
      
         
         
     def deactivate_event(self, event):
-        logging.info("deactivate" + self.__selected_desklet.name)
-        self.__selected_desklet.deactivate()
+        logging.info("deactivate" + self.__selected_widget.name)
+        self.__selected_widget.deactivate()
     
     
     def desklet_selected_event(self, desklet):
@@ -182,6 +187,7 @@ class SlickShell(object):
             self.__action_groups['widget'].get_action('install').set_sensitive(False)
             self.__action_groups['widget'].get_action('remove').set_sensitive(False)
         
+        self.__selected_widget = desklet
         self.__sidemenu.show_desklet(desklet)
     
         
@@ -192,8 +198,10 @@ class SlickShell(object):
         self.__sidemenu.reset()
         
     
-    
-    def set_website_integration(self, val): self.__website_integration = val
+    def set_website_integration(self, val): 
+        self.__website_integration = val
+        self.__config.set('website_integration', int(val))
+        
         
     def show_about(self, event):
         logging.info("showing the about window")
@@ -203,4 +211,10 @@ class SlickShell(object):
     def show_prefs(self, event):
         logging.info("showing the preferences window")
         self.__prefs_dialog = PrefsDialog.PrefsDialog(self)
+        
+    
+    def __size_changed_cb(self, container):
+        w, h = self.__window.get_size()
+        self.__config.set('width', w)
+        self.__config.set('height', h)
         

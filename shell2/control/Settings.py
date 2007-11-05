@@ -3,7 +3,9 @@ import os
     
 class Settings:
     ''' A singleton class that handles global variables and settings 
-        that can be used through the rest of the control '''
+        that can be used through the rest of the control.
+        
+        Don't call this class directly. Just use module's get_setting('setting_name') '''
 
     __userhome = os.path.expanduser('~')
     __gdesklets_homedir = os.path.join(__userhome, ".gdesklets")

@@ -146,13 +146,13 @@ class WidgetList(gtk.VBox):
             desklet_key = treestore.get(treeiter, 0 )[0]
             #print "description:", treestore.get(treeiter, 2 )[0]
             desklet_object = self.__assembly.get_desklet(desklet_key)
-            self.__selected_desklet = desklet_object
-            self.__selected_desklet_iter = treeiter
+            self.__selected_widget = desklet_object
+            self.__selected_widget_iter = treeiter
             
         else:
             desklet_key = None
-            self.__selected_desklet = None
+            self.__selected_widget = None
         
-        # self.refresh_view(self.__selected_desklet)    
-        self.__main.desklet_selected_event(self.__selected_desklet)
+        # self.refresh_view(self.__selected_widget)    
+        self.__main.desklet_selected_event(self.__selected_widget)
         

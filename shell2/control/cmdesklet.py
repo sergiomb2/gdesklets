@@ -103,10 +103,9 @@ class CmdClient(object):
         for d in desklets:
             do = desklets[d]
             print do
-            
-            
-	def __print_local_controls(self):
-		print "Local controls"
+    
+    def __print_local_controls(self):
+        print "Local controls"
         controls = self.__assembly.get_local_controls()
         for d in controls:
             do = controls[d]
