@@ -4,6 +4,8 @@ from utils.tiling import Tiling
 
 import gobject
 import gtk
+import cairo
+import sys
 
 try:
     from utils import x11
@@ -40,13 +42,20 @@ class GlassWindow(gtk.Window):
         gtk.Window.add(self, self.__layout)
 
         self.__background = Tiling()
-        self.__background.show()
         self.__layout.put(self.__background, 0, 0)
+        
+        self.__on_screen_changed (self, None)
+        self.set_app_paintable (True)
+        
+        self.__bg_watcher = BGWatcher()
 
         self.connect("configure-event", self.__on_configure)
-
-        self.__bg_watcher = BGWatcher()
-        self.__bg_watcher.add_observer(self.__bg_observer)
+        self.connect("screen-changed", self.__on_screen_changed)
+        self.connect("expose-event", self.__on_expose_event)
+        self.connect("composited-changed", self.__on_composited_changed)
+        
+        self.__is_composited = True
+        self.__on_composited_changed (self)
 
 
 
@@ -110,6 +119,50 @@ class GlassWindow(gtk.Window):
         wallpaper.get_wallpaper(self.__background, x, y, width, height)
         self.queue_draw()
 
+    #
+    # Reacts on expose event
+    #
+    def __on_expose_event (self, widget, event = None, user_data = None):
+
+        cr = widget.window.cairo_create ()
+        cr.set_source_rgba (1.0, 1.0, 1.0, 0.0)
+        cr.set_operator (cairo.OPERATOR_SOURCE)
+        cr.paint ()
+
+    #
+    # Reacts on composited changed
+    #
+    def __on_composited_changed (self, widget):
+        
+        screen = self.get_screen ()
+        is_composited = gtk.ver[1] >= 10 and screen.is_composited ()
+        
+        if self.__is_composited == is_composited:
+            return
+        
+        if is_composited:
+            self.__is_composited = True
+            self.__background.hide ()
+            try:
+                self.__bg_watcher.remove_observer(self.__bg_observer)
+            except: pass
+        else:
+            self.__is_composited = False
+            self.__bg_watcher.add_observer(self.__bg_observer)
+            self.__background.show ()
+
+    #
+    # Reacts on screen changed
+    #
+    def __on_screen_changed (self, src, old_screen):
+        
+        screen = self.get_screen ()
+        colormap = screen.get_rgba_colormap ()
+        
+        if colormap == None:
+            colormap = screen.get_rgb_colormap ()
+
+        self.set_colormap (colormap)
 
 
     #
@@ -122,8 +175,8 @@ class GlassWindow(gtk.Window):
         if (pos != self.__position or size != self.__size):
             self.__position = pos
             self.__size = size
-            self.__update_bg()
-
+            if not self.__is_composited: 
+                self.__update_bg()
 
 
     #
