@@ -1,0 +1,16 @@
+Some issues that should perhaps be addressed
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+» currently availability of metadata between the local
+  and remote widgets differs quite greatly. For example 
+  there is no description or authors available to the 
+  local controls (no <meta> element, or something similar)
+  
+    » partial fix for desklets: the descriptions, authors and
+      version will be extracted from a supplied display file
+      when the user submits a desklet. This makes the local
+      and remote metadata match.
+      
+    » long term fix: create a local file database that can
+      store the values from the remote site. This would store
+      the control descriptions and other things and would make 
+      it unnecessary to parse display files for metadata, etc.

@@ -1,0 +1,4 @@
+Things that need doing
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+- find out the dir where gdesklets was installed to fetch local controls that
+  are outside ~/.gdesklets (Settings.py)
