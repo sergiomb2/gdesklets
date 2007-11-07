@@ -93,7 +93,7 @@ class Assembly:
                         dep_object = version_object['dependencies'][dep]
                         control_object = self.get_control( dep_object['name'] )
                         d_data['versions'][version_number]['dependencies'][dep]['object'] = control_object
-                        logging.info( "added to %s dependency %s" % (d_key, control_object) )
+                        logging.info( "added to %s dependency %s" % (d.name, control_object.name) )
                     d.add_version(version_number, d_data['versions'][version_number])
                     
                 #for ver in d_data['versions']:

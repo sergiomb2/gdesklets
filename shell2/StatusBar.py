@@ -1,4 +1,6 @@
 import gtk
+import gobject
+import threading, time
 
 
 class StatusBar(gtk.Statusbar):
@@ -7,19 +9,43 @@ class StatusBar(gtk.Statusbar):
         super(StatusBar, self).__init__()
         self.set_has_resize_grip(True)
         self.push(0, 'All ready')
-        # self.__construct_statusbar()
+        self.__progressmeter = gtk.ProgressBar()
+        self.pack_start(self.__progressmeter, False, False, 6)
+        self.__keep_on_pulsing = False
 
 
     def set_msg(self, msg):
         self.pop(0)
         self.push(0, msg)
     
-    def __construct_statusbar(self):
-        # create a stack of basic startup messages which can be easily popped while loading
-        self.push(0, 'All ready')
-        self.push(0, 'Building')
-        self.push(0, 'Looking for news')
-        self.push(0, 'Looking for local controls')
-        self.push(0, 'Looking for local desklets')
-        self.push(0, 'Looking for remote controls')
-        self.push(0, 'Looking for remote desklets')
+    
+    def pulse(self):
+        self.__progressmeter.show()
+        self.__keep_on_pulsing = True
+        self.pulsator = ProgressMeterPulsar(self.__progressmeter)
+        self.pulsator.start()
+    
+    
+    def stop_pulse(self):
+        self.__keep_on_pulsing = False
+        self.pulsator.stop()
+        self.__progressmeter.hide()
+        
+        
+        
+class ProgressMeterPulsar(threading.Thread):
+    
+    def __init__(self, pbar):
+        threading.Thread.__init__(self)
+        self.__pbar = pbar
+        self.stop_now = threading.Event()
+        
+    def run(self):
+        while not self.stop_now.isSet():
+            gtk.gdk.threads_enter()
+            self.__pbar.pulse()
+            gtk.gdk.threads_leave()
+            time.sleep(0.1)
+        
+    def stop(self):
+        self.stop_now.set()

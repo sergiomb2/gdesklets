@@ -89,10 +89,10 @@ class Widget(object):
     
     def add_version(self, version_number, version_data):
         if not self.__versions.has_key(version_number):
-            log("Widget.py: adding version for %s" % self.__name)
+            # log("Widget.py: adding version for %s" % self.__name)
             self.__versions[version_number] = version_data
         else:
-            log("Widget.py: %s already has version %s" % (self.__name, version_number))
+            # log("Widget.py: %s already has version %s" % (self.__name, version_number))
             self.__versions[version_number].update(version_data)
     
     
@@ -141,7 +141,6 @@ class Widget(object):
     def notify_observers(self, event):
         ''' Notifies the observers of this widget by sending the event as a string coupled with
             itself. '''
-        print self.name, "notifying about", event
         for o in self.__observers:
             o(event, self)
     

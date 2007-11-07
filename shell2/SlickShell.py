@@ -1,5 +1,8 @@
 import gtk
 import gobject
+import sys
+
+gtk.threads_init()
 
 import Config
 import WidgetList
@@ -39,6 +42,8 @@ class SlickShell(object):
         self.__menubar = MenuBar.MenuBar(self)
         self.__top_box.pack_start(self.__menubar, False, False, 0)
         
+        self.__status_bar.pulse()
+        
         # the pane for the WidgetList and the newsview. will be filled
         # once the assembly has finished loading
         self.__hpaned = gtk.HPaned()
@@ -58,6 +63,8 @@ class SlickShell(object):
         
         # start the assembly
         self.__assembly.start(self.__website_integration)
+        
+        gtk.main()
         
         
     def __construct_action_groups(self):
@@ -128,8 +135,11 @@ class SlickShell(object):
 
 
     def close_window_event(self, event, data=None):
+        self.__status_bar.stop_pulse()
+        print "calling gtk main quit"
         gtk.main_quit()
-
+        sys.exit()
+        
 
     
     def assembly_event(self, type, param):
@@ -151,7 +161,7 @@ class SlickShell(object):
                     self.__window.show_all()
                 else: 
                     self.__desklet_list.populate_treemodel()
-                
+                self.__status_bar.stop_pulse()
     
         
     def install_event(self, event):
@@ -181,12 +191,14 @@ class SlickShell(object):
         # print desklet.remote_domain, "---", desklet.local_path
         if desklet.remote_domain is not None:
             self.__action_groups['widget'].get_action('install').set_sensitive(True)
-        elif desklet.local_path is not None:
+        if desklet.local_path is not None:
+            self.__action_groups['widget'].get_action('activate').set_sensitive(True)
             self.__action_groups['widget'].get_action('remove').set_sensitive(True)
         else:
             self.__action_groups['widget'].get_action('install').set_sensitive(False)
             self.__action_groups['widget'].get_action('remove').set_sensitive(False)
-        
+            self.__action_groups['widget'].get_action('activate').set_sensitive(False)
+            
         self.__selected_widget = desklet
         self.__sidemenu.show_desklet(desklet)
     

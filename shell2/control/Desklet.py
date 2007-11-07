@@ -2,6 +2,7 @@ from Widget import Widget
 import Settings
 from utils import log
 import local
+import os
 
 class Desklet(Widget):
     
@@ -14,14 +15,16 @@ class Desklet(Widget):
         self.__displays = {}
         
         # use 0.35 
-        from local import core_interface_035
-        self.__core_interface = core_interface_035
+        # from local import core_interface_035
+        # self.__core_interface = core_interface_035
         
     
     
     def activate(self, path):
-        print "activating", self.name, "from ", path
-        self.__core_interface.activate(path)
+        cmd = 'gdesklets open '+path
+        print "command to run", cmd
+        os.system(cmd)
+        # self.__core_interface.activate(path)
     
     
     
@@ -32,10 +35,9 @@ class Desklet(Widget):
             self.activate(disp_path)
     
     
-    
+    # no deactivate.. would be too hard.. and unnecessary to implement
     def deactivate(self):
-        print "deactivating", self.__name, "from ", self.local_path
-    
+        pass
 
 
     def update(self, new):
