@@ -2,7 +2,7 @@ import gtk
 import gobject
 import sys
 
-gtk.threads_init()
+gtk.gdk.threads_init()
 
 import Config
 import WidgetList
@@ -14,6 +14,14 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG)
 
+import __builtin__
+
+try:
+    __builtin__._()
+except:
+    logging.debug('No locale function defined. Using a dummy lambda.')    
+    __builtin__._ = lambda s:s
+
 
 class SlickShell(object):
 
@@ -23,12 +31,13 @@ class SlickShell(object):
         self.__selected_widget = None
         self.__assembly = assembly
         self.__website_integration = self.__config.get('website_integration')
+        self.__expand_tabs = self.__config.get('expand_tabs_by_default')
         self.__assembly.add_observer(self.assembly_event)
         self.__construct_action_groups()
         self.__prefs_dialog = None
         
         self.__window = gtk.Window(gtk.WINDOW_TOPLEVEL)
-        self.__window.set_title("Slick Shell")
+        self.__window.set_title( _("Slick Shell") )
         self.__window.connect("delete_event", self.close_window_event)
         w = self.__config.get('width') or 400
         h = self.__config.get('height') or 400
@@ -42,6 +51,7 @@ class SlickShell(object):
         self.__menubar = MenuBar.MenuBar(self)
         self.__top_box.pack_start(self.__menubar, False, False, 0)
         
+        self.__status_bar.set_msg(_('Loading'))
         self.__status_bar.pulse()
         
         # the pane for the WidgetList and the newsview. will be filled
@@ -73,24 +83,24 @@ class SlickShell(object):
         self.__action_groups = {}
         self.__action_groups['global'] = gtk.ActionGroup("global")
         self.__action_groups['global'].add_actions([
-                    ('update', gtk.STOCK_REFRESH, 'Update', None, 
-                        'Update the widget list', self.update_event ),
-                    ('quit', gtk.STOCK_QUIT, None , None, 'Quit the program', 
+                    ('update', gtk.STOCK_REFRESH, _('Update'), None, 
+                        _('Update the widget list'), self.update_event ),
+                    ('quit', gtk.STOCK_QUIT, None , None, _('Quit the program'), 
                         self.close_window_event),
-                    ('about', gtk.STOCK_ABOUT, 'About', None, 'About gDesklets', 
+                    ('about', gtk.STOCK_ABOUT, _('About'), None, _('About gDesklets'), 
                         self.show_about),
-                    ('prefs', gtk.STOCK_PREFERENCES, 'Preferences', None, 'Set application preferences', 
+                    ('prefs', gtk.STOCK_PREFERENCES, _('Preferences'), None, _('Set application preferences'), 
                         self.show_prefs),
                     ])
         
         self.__action_groups['widget'] = gtk.ActionGroup("widget")
         self.__action_groups['widget'].add_actions([
                     ('install', gtk.STOCK_ADD, 'Install', None, 
-                        'Install the selected widget', self.install_event), 
-                    ('remove', gtk.STOCK_DELETE, 'Remove', None, 
-                        'Remove the selected widget', self.remove_event ),
-                    ('activate', gtk.STOCK_MEDIA_PLAY, 'Activate', None, 
-                        'Activate the selected widget', self.activate_event), 
+                        _('Install the selected widget'), self.install_event), 
+                    ('remove', gtk.STOCK_DELETE, _('Remove'), None, 
+                        _('Remove the selected widget'), self.remove_event ),
+                    ('activate', gtk.STOCK_MEDIA_PLAY, _('Activate'), None, 
+                        _('Activate the selected widget'), self.activate_event), 
                     ])
                     
         self.__action_groups['widget'].get_action("install").set_sensitive(False)
@@ -102,7 +112,6 @@ class SlickShell(object):
     def refresh_view(self, event):
         ''' Refresh the view after installation, etc. '''
         desklet_object = self.__selected_widget
-        print "refreshing in slickshell refresh_view because of ", desklet_object.name
         if desklet_object.local_path is not None:
             self.__action_groups.get_action("remove").set_sensitive(True)
             self.__action_groups.get_action("install").set_sensitive(False)
@@ -156,6 +165,8 @@ class SlickShell(object):
             if param == 'All done':
                 if self.__desklet_list == None:
                     self.__desklet_list = WidgetList.WidgetList(self)
+                    if self.__expand_tabs is True: 
+                        self.__desklet_list.expand_all()
                     # self.__news_view = NewsView.NewsView(self)
                     self.__hpaned.add1(self.__desklet_list)
                     self.__window.show_all()
@@ -214,15 +225,23 @@ class SlickShell(object):
         self.__website_integration = val
         self.__config.set('website_integration', int(val))
         
+    
+    def set_expand_tabs(self, val): 
+        self.__expand_tabs = val
+        self.__config.set('expand_tabs_by_default', int(val))
+        if val: self.__desklet_list.expand_all()
+        else: self.__desklet_list.collapse_all()
+    
         
     def show_about(self, event):
         logging.info("showing the about window")
         ab = gtk.AboutDialog()
         ab.show_all()
   
+  
     def show_prefs(self, event):
         logging.info("showing the preferences window")
-        self.__prefs_dialog = PrefsDialog.PrefsDialog(self)
+        self.__prefs_dialog = PrefsDialog.PrefsDialog(self, self.__config)
         
     
     def __size_changed_cb(self, container):

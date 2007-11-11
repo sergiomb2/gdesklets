@@ -96,9 +96,14 @@ class WidgetList(gtk.VBox):
     def refresh(self):
         logging.debug('WidgetList: refresh called')
         self.tree_view.queue_draw()
-        
-        # self.populate_treemodel()
     
+    
+    def expand_all(self):
+        self.tree_view.expand_all()
+    
+    
+    def collapse_all(self):
+        self.tree_view.collapse_all()
     
     
     def populate_controls(self):
