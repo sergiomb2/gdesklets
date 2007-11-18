@@ -33,10 +33,10 @@ class SlickShell(object):
         self.__website_integration = self.__config.get('website_integration')
         self.__expand_tabs = self.__config.get('expand_tabs_by_default')
         self.__assembly.add_observer(self.assembly_event)
-        self.__construct_action_groups()
         self.__prefs_dialog = None
         
         self.__window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+        self.__construct_action_groups()
         self.__window.set_title( _("Slick Shell") )
         self.__window.connect("delete_event", self.close_window_event)
         w = self.__config.get('width') or 400
@@ -80,13 +80,20 @@ class SlickShell(object):
     def __construct_action_groups(self):
         ''' Actions are constructed here so that they are easily accessible by the
             other components '''
+        accel_group = gtk.AccelGroup()
+        self.__window.add_accel_group(accel_group)
         self.__action_groups = {}
         self.__action_groups['global'] = gtk.ActionGroup("global")
+        
+        aquit = gtk.Action('quit', None, None, gtk.STOCK_QUIT)
+        aquit.connect('activate', self.close_window_event)
+        self.__action_groups['global'].add_action_with_accel(aquit, None)
+        aquit.set_accel_group(accel_group)
+        aquit.connect_accelerator()
+        
         self.__action_groups['global'].add_actions([
                     ('update', gtk.STOCK_REFRESH, _('Update'), None, 
                         _('Update the widget list'), self.update_event ),
-                    ('quit', gtk.STOCK_QUIT, None , None, _('Quit the program'), 
-                        self.close_window_event),
                     ('about', gtk.STOCK_ABOUT, _('About'), None, _('About gDesklets'), 
                         self.show_about),
                     ('prefs', gtk.STOCK_PREFERENCES, _('Preferences'), None, _('Set application preferences'), 
@@ -102,7 +109,7 @@ class SlickShell(object):
                     ('activate', gtk.STOCK_MEDIA_PLAY, _('Activate'), None, 
                         _('Activate the selected widget'), self.activate_event), 
                     ])
-                    
+    
         self.__action_groups['widget'].get_action("install").set_sensitive(False)
         self.__action_groups['widget'].get_action("remove").set_sensitive(False)
         self.__action_groups['widget'].get_action("activate").set_sensitive(False)
@@ -243,6 +250,12 @@ class SlickShell(object):
         logging.info("showing the preferences window")
         self.__prefs_dialog = PrefsDialog.PrefsDialog(self, self.__config)
         
+    
+    def install_from_http(self, url):
+        self.__status_bar.set_msg(_('Installing desklet'))
+        self.__status_bar.pulse()
+        self.__assembly.install_http(url)
+    
     
     def __size_changed_cb(self, container):
         w, h = self.__window.get_size()

@@ -47,6 +47,14 @@ class WidgetList(gtk.VBox):
         self.tree_view.append_column(text_column)
         # self.tree_view.get_selection().connect('cursor', self.selected_event)
         self.tree_view.connect('cursor-changed', self.selected_event)
+        # self.drag_dest_set(gtk.DEST_DEFAULT_DROP [('http', 0, 1)])
+        # self.connect('drag-data-received', self.dnd_event)
+        
+        # self.drag_dest_set(0, [], 0)
+        # self.connect('drag-drop', self.drop_cb)
+        self.tree_view.enable_model_drag_dest([('text/plain', 0, 0)],
+                  gtk.gdk.ACTION_DEFAULT | gtk.gdk.ACTION_MOVE)
+        self.tree_view.connect('drag-data-received', self.dnd_event)
         self.__scrolled_window.add(self.tree_view)
         
         
@@ -161,3 +169,14 @@ class WidgetList(gtk.VBox):
         # self.refresh_view(self.__selected_widget)    
         self.__main.desklet_selected_event(self.__selected_widget)
         
+        
+    def dnd_event(self, widget, drag_context, x, y, sel_data, info, timestamp):
+        print "DND EVENT HAPPENED -> ", sel_data.get_text()
+        url = sel_data.get_text()
+        self.__main.install_from_http(url) 
+        
+        
+    def drop_cb(wid, context, x, y, time):
+        print "DND DROP", wid, context
+        context.finish(True, False, time)
+        return True

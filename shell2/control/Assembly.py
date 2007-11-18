@@ -1,4 +1,4 @@
-import os, logging, tempfile
+import os, logging, tempfile, threading
 
 import Settings
 import remote
@@ -6,7 +6,7 @@ import local
 from Desklet import Desklet
 from Control import Control
 
-class Assembly:
+class Assembly(threading.Thread):
     ''' Fetches the local and remote widgets and creates the
         list of all widgets. This is the main interface through
         which desklets and controls should be manipulated. 
@@ -34,13 +34,16 @@ class Assembly:
         final_destination = local.unpack(package_file, install_dir, widget_name)
         
         # self.local_path = final_destination
-        # self.notify_observers("INSTALLED")
+        self.notify_observers("INSTALLED", uri)
         self.__find_local_desklets()
         return True
     
         
+    def run(self):
+        self.__start()
     
-    def start(self, website_integration=False):
+    
+    def __start(self, website_integration=False):
         # fetch controls first so that dependencies
         # may be marked correctly
         self.notify_observers("FETCH", "Looking for local widgets")
@@ -67,7 +70,7 @@ class Assembly:
         ''' Reload all the local and remote widgets. '''
         self.__desklets = {}
         self.__controls = {}
-        self.start(website_integration)
+        self.__start(website_integration)
         
         
 

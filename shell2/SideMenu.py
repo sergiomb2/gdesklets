@@ -23,14 +23,20 @@ class SideMenu(gtk.EventBox):
         self.__info_name.set_line_wrap(True)
         self.__info_name.modify_fg(gtk.STATE_NORMAL, 
                          gtk.gdk.color_parse("white"))
-        self.__box.pack_start(self.__info_name, expand=False)
         
         self.__info_desc = gtk.Label()
         self.__info_desc.set_markup("<i>Desktop Eyecandy</i>")
         self.__info_desc.modify_fg(gtk.STATE_NORMAL, 
                          gtk.gdk.color_parse("white"))
         self.__info_desc.set_line_wrap(True)
-        self.__box.pack_start(self.__info_desc, expand=True, padding=6)
+        
+        box = gtk.VBox()
+        box.pack_start(self.__info_name)
+        box.pack_start(self.__info_desc)
+        align = gtk.Alignment(0.5, 0.5, 1.0, 1.0)
+        align.set_padding(6,6,6,6)
+        align.add(box)
+        self.__box.pack_start(align, expand=False)
         
         ac_group = self.__main.get_action_group('widget')
         tb = gtk.Toolbar()
@@ -82,7 +88,10 @@ class SideMenu(gtk.EventBox):
     def show_desklet(self, desklet):
         print "showing desklet", desklet
         self.__info_name.set_markup(desklet.name)
-        self.__info_desc.set_markup(desklet.description)
+        try: 
+            self.__info_desc.set_markup(desklet.description)
+        except: 
+            self.__info_desc.set_markup("No description")
         self.__image.set_from_pixbuf(desklet.pixbuf)
         self.show_all()
         
