@@ -24,42 +24,51 @@ class WidgetList(gtk.VBox):
         self.__main = main
         self.__assembly = main.get_assembly()
         
-        self.__text_renderer = gtk.CellRendererText()
-        self.__text_renderer.set_property("wrap-width", 400)
+        txt_renderer = gtk.CellRendererText()
+        button_renderer = gtk.CellRendererToggle()
         pic_renderer = gtk.CellRendererPixbuf()
+        txt_renderer.set_property("wrap-width", 400)
         
-        pixbuf_column = gtk.TreeViewColumn('Icon')
+        pixbuf_column = gtk.TreeViewColumn(_('Icon'))
         pixbuf_column.pack_start(pic_renderer, False)
         pixbuf_column.add_attribute(pic_renderer, 'pixbuf', 1)
         
-        text_column = gtk.TreeViewColumn('Name')
-        text_column.pack_start(self.__text_renderer, False)
-        text_column.add_attribute(self.__text_renderer, 'markup', 2)
+        text_column = gtk.TreeViewColumn(_('Name'))
+        text_column.pack_start(txt_renderer, False)
+        text_column.add_attribute(txt_renderer, 'markup', 2)
         text_column.set_sort_column_id(2)
         text_column.set_resizable(True)
         
+        installed_column = gtk.TreeViewColumn(_('Installed'))
+        installed_column.set_alignment(0.0)
+        button_renderer.xalign = 1.0
+        installed_column.pack_start(button_renderer, False)
+        installed_column.add_attribute(button_renderer, 'active', 3)
+        
         # make it store the picture, name and description on the first level
-        self.__tree_model = gtk.TreeStore(str, gtk.gdk.Pixbuf, str)
+        self.__tree_model = gtk.TreeStore(str, gtk.gdk.Pixbuf, str, bool)
         self.populate_treemodel()
         
         self.tree_view = gtk.TreeView(self.__tree_model)
         self.tree_view.append_column(pixbuf_column)
         self.tree_view.append_column(text_column)
-        # self.tree_view.get_selection().connect('cursor', self.selected_event)
-        self.tree_view.connect('cursor-changed', self.selected_event)
-        # self.drag_dest_set(gtk.DEST_DEFAULT_DROP [('http', 0, 1)])
-        # self.connect('drag-data-received', self.dnd_event)
+        self.tree_view.append_column(installed_column)
         
-        # self.drag_dest_set(0, [], 0)
-        # self.connect('drag-drop', self.drop_cb)
+        self.tree_view.connect('cursor-changed', self.selected_event)
+        self.tree_view.connect('row-activated', self.double_clicked_event)
+        
         self.tree_view.enable_model_drag_dest([('text/plain', 0, 0)],
                   gtk.gdk.ACTION_DEFAULT | gtk.gdk.ACTION_MOVE)
         self.tree_view.connect('drag-data-received', self.dnd_event)
         self.__scrolled_window.add(self.tree_view)
         
+        # create the news section to the bottom
+        # b = gtk.Button(_('News'))
+        # self.pack_end(b, True, False, 6)
         
         
     def populate_treemodel(self):
+        self.__tree_model.clear()
         desklets = self.__assembly.get_desklets()
         category_paths = {}
         
@@ -89,15 +98,17 @@ class WidgetList(gtk.VBox):
                                              75,
                                              gtk.gdk.INTERP_BILINEAR )
         
-            
             d_object.pixbuf = pixbuf
-            
-            # check if the category row has been created
+            # we have to rip out all tags from the description or we get very "funny" bugs
+            # with descriptions switching places on the fly, etc. (just comment the re.sub to see)
+            d_object.description = re.sub('<([^!>]([^>]|\n)*)>', '', d_object.description)
+            is_installed = d_object.local_path != None
+                
             cat = gobject.markup_escape_text(d_object.category)
             if not category_paths.has_key(cat):
-               category_paths[cat] = self.__tree_model.append(None, (None, None, cat))
+               category_paths[cat] = self.__tree_model.append(None, (None, None, cat, None))
            
-            iter = self.__tree_model.append( category_paths[cat], (d_key, pixbuf, d_object.name) )
+            iter = self.__tree_model.append( category_paths[cat], (d_key, pixbuf, d_object.name, is_installed) )
             
         
     
@@ -138,7 +149,30 @@ class WidgetList(gtk.VBox):
     def __reset_textrenderer_width(self, w=None):
         if w is None:
             w = self.__treeview_scrollwin.size_request()[0] - 3000
-        # self.__text_renderer.set_property("wrap-width", w)
+        # txt_renderer.set_property("wrap-width", w)
+        
+        
+    
+    def double_clicked_event(self, treeview, path, view_column):
+        # selected = event.get_selection()
+        # treestore, treeiter = selected.get_selected()
+        # path  = treestore.get_path(treeiter)
+        
+        if len(path) == 1: # were talking about a category
+            if treeview.row_expanded(path): 
+                treeview.collapse_row(path)
+            else: 
+                treeview.expand_row(path, False) 
+            return
+        
+        treeiter = self.__tree_model.get_iter(path)
+        desklet_key = self.__tree_model.get(treeiter, 0 )[0]
+        desklet_object = self.__assembly.get_desklet(desklet_key)
+        desklet_object.activate_all()
+        self.__selected_widget = desklet_object
+        self.__selected_widget_iter = treeiter
+        
+        self.__main.desklet_selected_event(self.__selected_widget)    
         
         
     
@@ -166,7 +200,6 @@ class WidgetList(gtk.VBox):
             desklet_key = None
             self.__selected_widget = None
         
-        # self.refresh_view(self.__selected_widget)    
         self.__main.desklet_selected_event(self.__selected_widget)
         
         

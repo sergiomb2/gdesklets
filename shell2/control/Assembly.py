@@ -6,19 +6,24 @@ import local
 from Desklet import Desklet
 from Control import Control
 
-class Assembly(threading.Thread):
+class Assembly():
     ''' Fetches the local and remote widgets and creates the
-        list of all widgets. This is the main interface through
-        which desklets and controls should be manipulated. 
+        list of all widgets. This is the main interface to the 
+        library through which desklets and controls should be 
+        manipulated. 
         
-        Just hook up all observers and call "start" '''
+        Just hook up all observers and call "start". Then use get_*
+        methods to get the widget(s) needed (returned as Desklet or Control
+        objects) '''
     
     def __init__(self):
         self.__desklets = {}
         self.__controls = {}
         self.__observers = []
+        self.__website_integration = False
         local.core_interface.initialize( Settings.get_setting('gdesklets_home'))
         
+
 
     def install_http(self, url):
         ''' install a widget directly from a http address '''
@@ -38,39 +43,46 @@ class Assembly(threading.Thread):
         self.__find_local_desklets()
         return True
     
+    
+    
+    def set_website_integration(self, val):
+        val = bool(val)
+        if val != self.__website_integration:    
+            self.__website_integration = val
+            self.refresh()
         
-    def run(self):
-        self.__start()
+        
+        
+    def start(self):
+        thread = threading.Thread(target=self.__fetch_widgets)
+        thread.start()
     
+        
     
-    def __start(self, website_integration=False):
+    def __fetch_widgets(self):
+        self.notify_observers("FETCH", "Looking for local widgets")
         # fetch controls first so that dependencies
         # may be marked correctly
-        self.notify_observers("FETCH", "Looking for local widgets")
         self.__find_local_controls()
         self.__find_local_desklets()
         self.notify_observers("FETCH", "Found local widgets")
         
-        if website_integration: self.fetch_remote_widgets()
+        if self.__website_integration: 
+            self.notify_observers("FETCH", "Looking for remote widgets")
+            self.__find_remote_controls()
+            self.__find_remote_desklets()
+            self.__find_news()
+            self.notify_observers("FETCH", "Found remote widgets")
         
         self.notify_observers("FETCH", "All done")
     
-       
-    
-    def fetch_remote_widgets(self):
-        self.notify_observers("FETCH", "Looking for remote widgets")
-        self.__find_remote_controls()
-        self.__find_remote_desklets()
-        self.__find_news()
-        self.notify_observers("FETCH", "Found remote widgets")
         
         
-        
-    def refresh(self, website_integration):
+    def refresh(self):
         ''' Reload all the local and remote widgets. '''
         self.__desklets = {}
         self.__controls = {}
-        self.__start(website_integration)
+        self.start()
         
         
 
@@ -96,7 +108,7 @@ class Assembly(threading.Thread):
                         dep_object = version_object['dependencies'][dep]
                         control_object = self.get_control( dep_object['name'] )
                         d_data['versions'][version_number]['dependencies'][dep]['object'] = control_object
-                        logging.info( "added to %s dependency %s" % (d.name, control_object.name) )
+                        # logging.info( "added to %s dependency %s" % (d.name, control_object.name) )
                     d.add_version(version_number, d_data['versions'][version_number])
                     
                 #for ver in d_data['versions']:
@@ -194,8 +206,8 @@ class Assembly(threading.Thread):
     
     
     def update(self, event, widget):
-        ''' Called by widgets to notify of a change. Mostly just propagates the event up. '''
-        logging.info("Assembly.py: update called with %s " % event)
+        ''' Called by widgets to notify of a change. Just propagates the event up. '''
+        # logging.info("Assembly.py: update called with %s " % event)
         self.notify_observers(event, widget)
         
         
@@ -204,10 +216,10 @@ class Assembly(threading.Thread):
         ''' Add one desklet to the internal array.'''
         name = desklet.name
         if self.__desklets.has_key(name):
-            logging.info("found previous desklet " + name + " in array")
+            # logging.info("found previous desklet " + name + " in array")
             self.__desklets[ name ].update(desklet)
         else:
-            logging.info("added new desklet with key " + name)
+            # logging.info("added new desklet with key " + name)
             self.__desklets[ name ] = desklet
         
         
@@ -216,10 +228,10 @@ class Assembly(threading.Thread):
         ''' Add one control to the internal array.'''
         name = control.get_name()
         if self.__controls.has_key(name):
-            logging.info("updating previous control " + name + " in array")
+            # logging.info("updating previous control " + name + " in array")
             self.__controls[ name ].update(control)
         else:
-            logging.info("new control with key " + name)
+            # logging.info("new control with key " + name)
             self.__controls[ name ] = control
     
     
@@ -233,7 +245,7 @@ class Assembly(threading.Thread):
             d = self.__desklets[name]
             return d
         except KeyError:
-            logging.info("failed to find desklet" + name)
+            logging.error("failed to find desklet" + name)
 
     
     
@@ -246,7 +258,7 @@ class Assembly(threading.Thread):
             d = self.__controls[name]
             return d
         except KeyError:
-            logging.info("failed to find control", name)
+            logging.error("failed to find control", name)
 
                 
     

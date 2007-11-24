@@ -1,6 +1,8 @@
 import gtk
 import gobject
 import sys
+import logging
+logging.basicConfig(level=logging.DEBUG)
 
 gtk.gdk.threads_init()
 
@@ -10,34 +12,33 @@ import SideMenu
 import MenuBar
 import StatusBar
 import PrefsDialog
-import logging
-
-logging.basicConfig(level=logging.DEBUG)
+import control
 
 import __builtin__
 
 try:
     __builtin__._()
 except:
-    logging.debug('No locale function defined. Using a dummy lambda.')    
+    logging.info('No locale function defined. Using a dummy lambda.')    
     __builtin__._ = lambda s:s
 
 
 class SlickShell(object):
 
-    def __init__(self, assembly):
-        
+    def __init__(self):
         self.__config = Config.Config()
-        self.__selected_widget = None
-        self.__assembly = assembly
-        self.__website_integration = self.__config.get('website_integration')
-        self.__expand_tabs = self.__config.get('expand_tabs_by_default')
+        self.__assembly = control.Assembly.Assembly()
         self.__assembly.add_observer(self.assembly_event)
+        
+        self.__website_integration = self.__config.get('website_integration')
+        self.__assembly.set_website_integration(self.__website_integration)
+        self.__expand_tabs = self.__config.get('expand_tabs_by_default')
         self.__prefs_dialog = None
+        self.__selected_widget = None
         
         self.__window = gtk.Window(gtk.WINDOW_TOPLEVEL)
         self.__construct_action_groups()
-        self.__window.set_title( _("Slick Shell") )
+        self.__window.set_title( _("gDesklets Shell NG") )
         self.__window.connect("delete_event", self.close_window_event)
         w = self.__config.get('width') or 400
         h = self.__config.get('height') or 400
@@ -62,18 +63,13 @@ class SlickShell(object):
         self.__top_box.pack_start(self.__hpaned)
         self.__desklet_list = None
         
-        # self.__hpaned.add1(self.__side_menu)
-        self.__active_widget = None # the widget that occupies the main view
-
-        # self.__statusbar = StatusBar.StatusBar(self)
-        # self.__top_box.pack_start(self.__statusbar, False, False, 0)
+        self.__hpaned.add2(gtk.Label('Loading'))
         
         self.__window.connect('check-resize', self.__size_changed_cb)
         self.__window.show_all()
         
         # start the assembly
-        self.__assembly.start(self.__website_integration)
-        
+        self.__assembly.start()
         gtk.main()
         
         
@@ -154,17 +150,18 @@ class SlickShell(object):
         self.__status_bar.stop_pulse()
         print "calling gtk main quit"
         gtk.main_quit()
-        sys.exit()
+        # sys.exit()
         
 
     
     def assembly_event(self, type, param):
         ''' Called by the assembly when something funky happens like the fetching is 
             complete, something is installed or removed, etc.. '''
-        logging.info("assembly event has happened: %s - %s" % (type, param))
+        logging.info("Assembly event has occured: %s - %s" % (type, param))
         
         if type == 'INSTALLED' or type == 'REMOVED': 
             self.refresh_view(param)
+            
         elif type == 'FETCH':
             # print "fetch event", param
             # self.__statusbar.pop(0)
@@ -172,15 +169,17 @@ class SlickShell(object):
             if param == 'All done':
                 if self.__desklet_list == None:
                     self.__desklet_list = WidgetList.WidgetList(self)
-                    if self.__expand_tabs is True: 
-                        self.__desklet_list.expand_all()
                     # self.__news_view = NewsView.NewsView(self)
                     self.__hpaned.add1(self.__desklet_list)
                     self.__window.show_all()
                 else: 
                     self.__desklet_list.populate_treemodel()
+                
+                if self.__expand_tabs: 
+                        self.__desklet_list.expand_all()
+                        
                 self.__status_bar.stop_pulse()
-    
+                self.__status_bar.set_msg(_('Ready'))
         
     def install_event(self, event):
         logging.info("install" + self.__selected_widget.name)
@@ -230,11 +229,12 @@ class SlickShell(object):
     
     def set_website_integration(self, val): 
         self.__website_integration = val
+        self.__assembly.set_website_integration(val)
         self.__config.set('website_integration', int(val))
         
     
     def set_expand_tabs(self, val): 
-        self.__expand_tabs = val
+        self.__expand_tabs = int(val)
         self.__config.set('expand_tabs_by_default', int(val))
         if val: self.__desklet_list.expand_all()
         else: self.__desklet_list.collapse_all()

@@ -10,7 +10,6 @@ class Control(Widget):
         
     
     def update(self, new):
-        print "update called!!"
         super(Control, self).update(new)
         
         

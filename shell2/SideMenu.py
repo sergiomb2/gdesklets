@@ -36,18 +36,20 @@ class SideMenu(gtk.EventBox):
         align = gtk.Alignment(0.5, 0.5, 1.0, 1.0)
         align.set_padding(6,6,6,6)
         align.add(box)
-        self.__box.pack_start(align, expand=False)
+        self.__box.pack_start(align, expand=True)
         
         ac_group = self.__main.get_action_group('widget')
-        tb = gtk.Toolbar()
         install_btn = ac_group.get_action('install').create_tool_item()
         remove_btn = ac_group.get_action('remove').create_tool_item()
         activate_btn = ac_group.get_action('activate').create_tool_item()
-        tb.insert(install_btn, 0)
-        tb.insert(remove_btn, 1)
-        tb.insert(activate_btn, 2)
+        activate_btn.set_expand(True)
+        
+        tb = gtk.Toolbar()
+        tb.insert(activate_btn, 0)
+        tb.insert(install_btn, 1)
+        tb.insert(remove_btn, 2)
         # tb.set_orientation(gtk.ORIENTATION_VERTICAL)
-        self.__box.pack_end(tb, expand=True)
+        self.__box.pack_end(tb, True, True)
         
         # news, desklets, controls buttons
         #news_icon = gtk.Image()
@@ -78,15 +80,8 @@ class SideMenu(gtk.EventBox):
         # a separator
         # self.pack_start( gtk.HSeparator() )
         
-        
-    def reset(self):
-        ''' reset view to the basic one '''
-        pass
-    
-    
     
     def show_desklet(self, desklet):
-        print "showing desklet", desklet
         self.__info_name.set_markup(desklet.name)
         try: 
             self.__info_desc.set_markup(desklet.description)

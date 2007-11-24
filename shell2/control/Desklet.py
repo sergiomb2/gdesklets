@@ -41,14 +41,12 @@ class Desklet(Widget):
 
 
     def update(self, new):
-        print "Desklet: update called!!"
         super(Desklet, self).update(new)
         self.preview = new.preview
         
         
         
     def update_from_dict(self, dict):
-        print "Desklet: update dict called!!"
         super(Desklet, self).update_from_dict(dict)
         self.set_displays(dict['displays'])
         
@@ -66,7 +64,6 @@ class Desklet(Widget):
         
         # update local information
         dict = local.get_desklet_information( self._install_parent_dir, self.name )
-        print "!!!!!!!!!!!!!!!", dict
         self.update_from_dict(dict[self.name])
     
     
