@@ -1,6 +1,9 @@
 import gtk
-
-from TargetGroup import TargetGroup
+if (gtk.gtk_version >= (2, 8, 0)):
+    from TargetGroup2 import TargetGroup
+else:
+    from TargetGroup import TargetGroup
+    
 from utils.datatypes import *
 from layout import Unit
 
