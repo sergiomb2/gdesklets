@@ -3,7 +3,9 @@
 AUTOMAKE_OPTIONS = 1.7 dist-bzip2
 
 SUBDIRS = \
+	Additions	\
 	Controls	\
+	Displays	\
 	Sensors		\
 	config		\
 	data		\
@@ -53,6 +55,4 @@ install-data-hook:
 	fi
 
 	$(INSTALL_SCRIPT) gdesklets $(DESTDIR)${coredir}/gdesklets; \
-	cd $(DESTDIR)$(bindir); \
-	$(LN_S) -f ../../lib/gdesklets gdesklets;
-
+	$(LN_S) -f ${coredir}/gdesklets $(DESTDIR)$(bindir)/gdesklets;
