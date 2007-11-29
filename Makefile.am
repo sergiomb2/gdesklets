@@ -3,9 +3,7 @@
 AUTOMAKE_OPTIONS = 1.7 dist-bzip2
 
 SUBDIRS = \
-	Additions	\
 	Controls	\
-	Displays	\
 	Sensors		\
 	config		\
 	data		\
