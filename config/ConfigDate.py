@@ -76,6 +76,10 @@ class ConfigDate(ConfigWidget):
         self._set_config(value)
         self._setp(key, value)
         self.__btn_label.set_label(value)
+        self.old_date.set_label(value)
+        self.new_date.set_label(value)
+#        self.calendar_goto_date(self.__string_to_date(value))
+        self.calendar_reset_date(self.__string_to_date(value))
 
 
 ### A simple Calendar, (based on the MyCalendar from pygtk.org)
@@ -122,6 +126,11 @@ class ConfigDate(ConfigWidget):
     def calendar_update_date(self, widget):
         self.__value = self.__date_to_string(self.calendar_get_fulldate())        
         self._setp_value("value", self.__value)
+        self.newwindow.hide()
+
+    def calendar_canceled(self, widget):
+        self.new_date.set_label(self.old_date.get_label())
+        self.calendar_reset_date(self)
         self.newwindow.hide()
 
     def calendar_set_time(self, date):
@@ -292,7 +301,7 @@ class ConfigDate(ConfigWidget):
         ok_bbox.set_layout(gtk.BUTTONBOX_END)
 
         button = gtk.Button("Cancel")
-        button.connect("clicked", self.newwindow_hide)
+        button.connect("clicked", self.calendar_canceled)
         ok_bbox.add(button)
         button.set_flags(gtk.CAN_DEFAULT)
         button.grab_default()
