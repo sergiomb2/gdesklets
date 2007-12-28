@@ -1,3 +1,7 @@
+2007-12-28  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* display/TargetLabel.py: First try to add alignment and justify attributes to the label element (Bug #134488 ?)
+
 2007-12-08  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* config/ConfigDate.py: Fixed #163671 and other little errors

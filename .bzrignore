@@ -32,3 +32,8 @@ gDesklets.spec
 *.pyc
 py-compile
 INSTALL
+*.lo
+*.la
+*.gmo
+.bzrignore
+

@@ -87,6 +87,8 @@ class TargetLabel(DisplayTarget):
         self.__old_value = ""
         self.__font_description = None
         self.__wrap_at = -1
+        self.__alignment = pango.ALIGN_LEFT
+        self.__justify = True
 
         self.__size = (0, 0)
 
@@ -110,11 +112,17 @@ class TargetLabel(DisplayTarget):
                                 self._setp_font, self._getp)
         self._register_property("wrap-at", TYPE_UNIT,
                                 self._setp_wrap_at, self._getp)
+        self._register_property("alignment", TYPE_STRING,
+                                self._setp_alignment, self._getp)
+        self._register_property("justify", TYPE_BOOL,
+                                self._setp_justify, self._getp)
 
         self._setp("value", "")
         self._setp("color", "black")
         self.set_prop("font", "Sans 8")
         self.set_prop("wrap-at", Unit.Unit(0, Unit.UNIT_PX))
+        self.set_prop("alignment", "left")
+        self.set_prop("justify", True)
 
         # watch the widget for geometry changes; we need this for percentual
         # font sizes
@@ -129,6 +137,8 @@ class TargetLabel(DisplayTarget):
         x, y, w, h = src.get_geometry()
         if (cmd == src.OBS_GEOMETRY):
             self.__size = (w.as_px(), h.as_px())
+            self.__set_justify(self.get_prop("justify"))
+            self.__set_alignment(self.get_prop("alignment"))
             self.__set_wrap(self.get_prop("wrap-at"))
             self.__set_font(self.get_prop("font"))
             self.__set_value(self.get_prop("value"))
@@ -156,8 +166,17 @@ class TargetLabel(DisplayTarget):
                     ("0" + hex(b)[2:])[-2:]
         gc.set_foreground(
             gtk.gdk.get_default_root_window().get_colormap().alloc_color(col))
-        pmap.draw_layout(gc, 0, 0, layout)
-        pmap.draw_layout(gc, 0, height, layout)
+        if (self.__alignment == pango.ALIGN_RIGHT):
+            pmap.draw_layout(gc, width, 0, layout)
+            pmap.draw_layout(gc, width, height, layout)
+        elif (self.__alignment == pango.ALIGN_CENTER):
+            pmap.draw_layout(gc, int(width / 2.0), 0, layout)
+            pmap.draw_layout(gc, int(width / 2.0), height, layout)
+        else:
+            pmap.draw_layout(gc, 0, 0, layout)
+            pmap.draw_layout(gc, 0, height, layout)
+#        pmap.draw_layout(gc, 0, 0, layout)
+#        pmap.draw_layout(gc, 0, height, layout)
 
         #  then copy to image
         self.__widget.set_from_drawable(pmap, True)
@@ -172,6 +191,8 @@ class TargetLabel(DisplayTarget):
 
         self.__pango_layout.set_markup(value)
         self.__pango_layout.set_font_description(self.__font_description)
+        self.__pango_layout.set_alignment(self.__alignment)
+        self.__pango_layout.set_justify(self.__justify)
         self.__pango_layout.set_width(self.__wrap_at * pango.SCALE)
         width, height = self.__pango_layout.get_pixel_size()
 
@@ -234,6 +255,18 @@ class TargetLabel(DisplayTarget):
             self.__wrap_at = size
 
 
+    def __set_alignment(self, value):
+
+        if (value == "right"): self.__alignment = pango.ALIGN_RIGHT
+        elif (value == "center"): self.__alignment = pango.ALIGN_CENTER
+        else: self.__alignment = pango.ALIGN_LEFT
+
+
+    def __set_justify(self, value):
+
+        self.__justify = value
+
+
     #
     # "value" property.
     #
@@ -242,6 +275,7 @@ class TargetLabel(DisplayTarget):
         if (value != self.__old_value):
             self.__set_value(value)
             self._setp(key, value)
+            self.__make_label()
 
 
     #
@@ -272,5 +306,25 @@ class TargetLabel(DisplayTarget):
     def _setp_wrap_at(self, key, value):
 
         self.__set_wrap(value)
+        self._setp(key, value)
+        self.__make_label()
+
+
+    #
+    # "alignment" property.
+    #
+    def _setp_alignment(self, key, value):
+
+        self.__set_alignment(value)
+        self._setp(key, value)
+        self.__make_label()
+
+
+    #
+    # "justify" property.
+    #
+    def _setp_justify(self, key, value):
+
+        self.__set_justify(value)
         self._setp(key, value)
         self.__make_label()
