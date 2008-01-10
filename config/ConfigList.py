@@ -16,17 +16,10 @@ class ConfigList(ConfigWidget):
                                 self._getp, [],
                                 doc = "List of (label, value) items")
 
-#        self._register_property("selection", TYPE_LIST, self._setp_selection,
-#                                self._getp, [],
-#                                doc = "Current selection index")
-
         self._register_property("value", TYPE_LIST, self._setp_value,
                                 self._getp, [],
                                 doc = "Current selection")
 
-        self._register_property("multiselect", TYPE_BOOL, self._setp_multiselect,
-                                self._getp, False,
-                                doc = "Is this list a multi-select list?")
 
 
     def get_widgets(self):
@@ -55,6 +48,7 @@ class ConfigList(ConfigWidget):
         selection.set_mode(gtk.SELECTION_MULTIPLE)
         selection.connect("changed", self.__on_change)
 
+
         self.tvcolumn = gtk.TreeViewColumn()
         self.__listview.append_column(self.tvcolumn)
         self.togglecell = gtk.CellRendererToggle()
@@ -62,6 +56,7 @@ class ConfigList(ConfigWidget):
         self.tvcolumn.add_attribute(self.togglecell, "active", 0)
         self.togglecell.connect("toggled", self.__on_toggled, self.__liststore)
         self.togglecell.set_property("activatable", True)
+        self.togglecell.set_property("visible", True)
         self.itemcell = gtk.CellRendererText()
         self.tvcolumn.pack_start(self.itemcell, True)
         self.tvcolumn.add_attribute(self.itemcell, "text", 1)
@@ -73,6 +68,7 @@ class ConfigList(ConfigWidget):
         self.selectbox = gtk.EventBox()
         self.selectlabel = gtk.Label("Unknown selection...")
         self.selectbox.add(self.selectlabel)
+        self.selectbox.set_property("visible", True)
         self.selectlabel.show()
         self.selectbox.show()
         self.selectbox.add_events(gtk.gdk.BUTTON_PRESS_MASK)
@@ -114,21 +110,14 @@ class ConfigList(ConfigWidget):
         selection = []
         model, paths = src.get_selected_rows()
         if paths:
-          if self.get_prop("multiselect"):
-            item = self.__liststore.get_iter_first()
-            if (self.__items_values):
-                while item:
-                    path = self.__liststore.get_path(item)
-                    if self.__liststore[path][0]:
-                        selection.append(self.__liststore[path][2])
-      	            item = self.__liststore.iter_next(item)
-                self._setp("value", selection)
-          else:
-            selected_row = paths[0][0]
-            if (self.__items_values):
-                selection.append(self.__items_values[selected_row])
-#                self._setp("value", self.__listview.get_cursor())
-#                self._setp("value", selected_row)
+          item = self.__liststore.get_iter_first()
+          if (self.__items_values):
+              while item:
+                  path = self.__liststore.get_path(item)
+                  if self.__liststore[path][0]:
+                      selection.append(self.__liststore[path][2])
+                  item = self.__liststore.iter_next(item)
+              self._setp("value", selection)
 
         self._set_config(selection)
         self.update_selection_label()
@@ -172,7 +161,7 @@ class ConfigList(ConfigWidget):
 
 
     def menu_popup(self, widget, event):
-        if self.multiselect and event.button == 3:
+        if event.button == 3:
             self.menu.popup(None, None, None, 0, 0)
 
 # end menu functions
@@ -192,6 +181,7 @@ class ConfigList(ConfigWidget):
 
 
     def update_selection_label(self):
+
         selected, available = self.__get_selection_num()
         self.selectlabel.set_text("Selected "+str(selected)+" of "+str(available)+" items")
 
@@ -214,55 +204,31 @@ class ConfigList(ConfigWidget):
         else: newheight = h
         self.__scrolledwindow.set_size_request(-1, newheight)
         self.__scrolledwindow.resize_children()
-        self._setp_selection('value', self._getp('value'))
+        self._set_selection('value', self._getp('value'))
 
 
-    def _setp_selection(self, key, value):
+    def _set_selection(self, key, value):
 
         item = self.__liststore.get_iter_first()
-        if self.get_prop("multiselect"):
-          while item:
-            path = self.__liststore.get_path(item)
-            for v in value:
-              if str(v) == str(self.__liststore[path][2]):
-                self.__liststore[path][0] = True
-            item = self.__liststore.iter_next(item)
-        else:
-          if item:
-            path = self.__liststore.get_path(item)
-            self.__listview.set_cursor(path)
-            self.__listview.scroll_to_cell(path)
-#        self._setp(key, value)
-
-
-    def _setp_multiselect(self, key, value):
-
-        selection = self.__listview.get_selection()
-        self.togglecell.set_property("visible", value)
-        self.selectbox.set_property("visible", value)
-        self.multiselect = value
-        if value:
-            selection.set_mode(gtk.SELECTION_MULTIPLE)
-        else:
-            selection.set_mode(gtk.SELECTION_SINGLE)
-
-        self.__scrolledwindow.resize_children()
-        self._setp(key, value)
-        self._setp_selection('value', self._getp('value'))
+        while item:
+          path = self.__liststore.get_path(item)
+          for v in value:
+            if str(v) == str(self.__liststore[path][2]):
+              self.__liststore[path][0] = True
+          item = self.__liststore.iter_next(item)
              
 
     def _setp_value(self, key, value):
 
+        print "key: "+str(key)
+        print "Value: "+str(value)
+        
         try:
             index = self.__items_values.index(value)
         except:
             index = 0
 
-        if self.get_prop("multiselect"):
-            self.__listview.set_cursor(index)
-            self.__listview.scroll_to_cell(index)
-        else:
-#            self.__listview.set_cursor(index)
-#            self.__listview.scroll_to_cell(index)
-            self.__listview.set_cursor(-1)  # make sure to get a change event
+        self.__listview.set_cursor(index)
+        self.__listview.scroll_to_cell(index)
+        self._set_config(value)
         self._setp(key, value)

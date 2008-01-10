@@ -101,10 +101,16 @@ class Time(Control, ITime):
         return (year, month, day)
 
 
+    def __get_ticks(self):
+
+        return time.time()
+
+
 
     timezone = property(__get_timezone, __set_timezone, doc = "the timezone")
     time     = property(__get_time, doc = "the current time (h, m, s)")
     date     = property(__get_date, doc = "the current date (y, m, d)")
+    ticks    = property(__get_ticks, doc = "the current ticks in floating point numbers")
 
 
 
