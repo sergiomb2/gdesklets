@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets.HEAD.hu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-11-17 02:19+0100\n"
+"POT-Creation-Date: 2008-03-02 21:49+0100\n"
 "PO-Revision-Date: 2006-11-17 14:08+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../config/ConfigDialog.py:103
+#: ../config/ConfigDialog.py:113
 msgid "Invalid Function Call"
 msgstr "Érvénytelen függvényhívás"
 
-#: ../config/ConfigDialog.py:104
+#: ../config/ConfigDialog.py:114
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -33,7 +33,7 @@ msgstr ""
 "Ez azt jelenti, hogy a kijelző kódja hibás. Értesítse a kijelző szerzőjét a "
 "problémáról."
 
-#: ../config/ConfigDialog.py:217 ../display/DisplayConfigurator.py:32
+#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
 msgstr "Ennek a kijelzőnek nincsenek beállításai."
 
@@ -64,34 +64,10 @@ msgid "Your favorite editor"
 msgstr "Az Ön kedvenc fájlszerkesztője"
 
 #: ../config/DaemonConfigger.py:20
-msgid "XComposite support (requires composition manager)"
-msgstr "XComposite támogatás (a kompozíciókezelő szükséges)"
-
-#: ../config/DaemonConfigger.py:21
-msgid ""
-"\n"
-"     <small><i>"
-msgstr ""
-"\n"
-"     <small><i>"
-
-#: ../config/DaemonConfigger.py:22
-msgid "this does not work with GTK 2.8 or higher for technical reasons"
-msgstr "ez technikai okokból nem működik a GTK 2.8 vagy újabb verzióival"
-
-#: ../config/DaemonConfigger.py:23
-msgid "</i></small>"
-msgstr "</i></small>"
-
-#: ../config/DaemonConfigger.py:24
-msgid "Translucency (takes effect after restarting a display)"
-msgstr "Áttetszőség (a kijelző újraindítása után lép életbe)"
-
-#: ../config/DaemonConfigger.py:26
 msgid "Screen Resolution (DPI)"
 msgstr "Képernyő felbontása (DPI)"
 
-#: ../config/DaemonConfigger.py:28
+#: ../config/DaemonConfigger.py:22
 msgid ""
 "Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
 "\"</b> wide"
@@ -99,23 +75,23 @@ msgstr ""
 "Módosítsa a fenti értéket úgy, hogy a sáv pontosan <b>5 cm</b> vagy <b>1.97 "
 "\"</b> széles legyen"
 
-#: ../config/DaemonConfigger.py:32
+#: ../config/DaemonConfigger.py:26
 msgid "Behavior"
 msgstr "Viselkedés"
 
-#: ../config/DaemonConfigger.py:33
+#: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
 msgstr "_Tálcaikon megjelenítése (újraindítás után lép hatályba)"
 
-#: ../config/DaemonConfigger.py:35
+#: ../config/DaemonConfigger.py:29
 msgid "Show _notification while loading a desklet"
 msgstr "_Figyelmeztetés megjelenítése asztali kisalkalmazás betöltése közben"
 
-#: ../config/DaemonConfigger.py:37
+#: ../config/DaemonConfigger.py:31
 msgid "Key for toggling Float mode:"
 msgstr "A Lebegő mód átváltásának billentyűje:"
 
-#: ../config/DaemonConfigger.py:49 ../config/DisplayConfigger.py:27
+#: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
 #: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
 msgstr "Beállítás"
@@ -128,31 +104,40 @@ msgstr "Egy munkaasztali kisalkalmazás-rendszer a GNOME-hoz"
 msgid "gDesklets display"
 msgstr "gDesklets kijelző"
 
-#: ../display/Display.py:84
+#: ../display/Display.py:85
 msgid "_Configure desklet"
 msgstr "Kijelző _beállítása"
 
-#: ../display/Display.py:86
+#: ../display/Display.py:87
 msgid "_Move desklet"
 msgstr "_Kijelző mozgatása"
 
-#: ../display/Display.py:89
+#: ../display/Display.py:90
 msgid "_View Source"
 msgstr "_Forrás megtekintése"
 
-#: ../display/Display.py:92
+#: ../display/Display.py:93
 msgid "Re_start desklet"
 msgstr "Kijelző újraindítá_sa"
 
-#: ../display/Display.py:94
+#: ../display/Display.py:95
 msgid "_Remove desklet"
 msgstr "Kijelző _eltávolítása"
 
-#: ../display/Display.py:978 ../shell/plugins/DisplayBrowser/__init__.py:142
+#: ../display/Display.py:98
+#, fuzzy
+msgid "_About"
+msgstr "_Névjegy..."
+
+#: ../display/Display.py:337
+msgid "_Readme"
+msgstr ""
+
+#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
 msgid "Do you really want to remove this desklet ?"
 msgstr "Valóban el szeretné távolítani ezt a kijelzőt?"
 
-#: ../display/Display.py:979
+#: ../display/Display.py:1116
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
@@ -194,24 +179,24 @@ msgstr "XML feldolgozási hiba"
 msgid "This .display file has invalid XML syntax."
 msgstr "Ezen kijelzőfájl XML szintaxisa érvénytelen."
 
-#: ../factory/DisplayFactory.py:208
+#: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
 msgstr "A fájl nem létezik vagy nem tölthető be"
 
-#: ../factory/DisplayFactory.py:210
+#: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
 msgstr "A parancsfájlt tartalmazó fájl nem áll rendelkezésre a végrehajtáshoz."
 
-#: ../factory/DisplayFactory.py:233
+#: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
 msgstr "Nem lehet betölteni az érzékelőt"
 
-#: ../factory/DisplayFactory.py:249
+#: ../factory/DisplayFactory.py:243
 #, python-format
 msgid "&lt;%s&gt; needs a bind attribute"
 msgstr "&lt;%s&gt; kötési attribútumot igényel"
 
-#: ../factory/DisplayFactory.py:251
+#: ../factory/DisplayFactory.py:245
 msgid "The &lt;prefs&gt; section of this desklet file is broken."
 msgstr "Ezen kijelzőfájl &lt;prefs&gt; szakasza hibás."
 
@@ -249,9 +234,10 @@ msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr "SAX feldolgozó szükséges, néhány SuSE verzió nem tartalmazza."
 
 #: ../gdesklets:61
+#, fuzzy
 msgid ""
-"GTK python bindings (pygtk2) version >= 2.4.0 and GTK+ version >= 2.4.0 are "
-"required."
+"GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
+"are required."
 msgstr ""
 "GTK Python kötések (pygtk2) >= 2.4.0 verzió és GTK+ >= 2.4.0 verzió "
 "szükségesek."
@@ -301,6 +287,10 @@ msgstr ""
 "a rendszerén.\n"
 "\n"
 "AZ INDÍTÁS MOST FÉLBESZAKAD!\n"
+
+#: ../gdesklets:98
+msgid "Requirements checking done. Your system looks ok!"
+msgstr ""
 
 #: ../gdesklets:105
 msgid ""
@@ -360,103 +350,116 @@ msgstr ""
 "\t\t--no-tray-icon    (Kikapcsolja a rendszertálca-ikont)\n"
 "\t\t--translucent (engedélyezi az átlátszóságot az xorg kiszolgálókon)\n"
 
-#: ../gdesklets:189 ../gdesklets:263
+#: ../gdesklets:161
+#, c-format
+msgid ""
+"Error while starting gdesklets-daemon\n"
+"More information about this crash is available in \"%s\"."
+msgstr ""
+
+#: ../gdesklets:164
+#, c-format
+msgid "Exception was: %s\n"
+msgstr ""
+
+#: ../gdesklets:189 ../gdesklets:258
 #, c-format
 msgid "Could not open desklet %s."
 msgstr "Nem lehet megnyitni a(z) \"%s\" kijelzőfájlt."
 
-#: ../gdesklets:271
+#: ../gdesklets:266
 msgid "Starting gdesklets-daemon..."
 msgstr "A gdesklets-daemon indítása..."
 
-#: ../gdesklets:277
+#: ../gdesklets:272
 msgid "Shutting down gdesklets-daemon..."
 msgstr "A gdesklets-daemon leállítása..."
 
-#: ../gdesklets:289
+#: ../gdesklets:284
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr "Jelenleg nyitott kijelzők a(z) \"%s\" profilban:\n"
 
-#: ../gdesklets:294
+#: ../gdesklets:289
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr "Jelenleg nincsenek kijelzők a(z) \"%s\" profilban"
 
-#: ../gdesklets:298
+#: ../gdesklets:293
 msgid "Restarting gdesklets-daemon..."
 msgstr "A gdesklets-daemon újraindítása..."
 
-#: ../gdesklets:311
+#: ../gdesklets:306
 msgid "gdesklets-daemon is running"
 msgstr "a gdesklets-daemon fut"
 
-#: ../gdesklets:313
+#: ../gdesklets:308
 msgid "gdesklets-daemon is not running"
 msgstr "a gdesklets-daemon nem fut"
 
-#: ../gdesklets:317
+#: ../gdesklets:312
 #, c-format
 msgid "Current profile: %s"
 msgstr "Jelenlegi profil: %s"
 
-#: ../gdesklets:328
+#: ../gdesklets:323
 #, c-format
 msgid "New profile: %s"
 msgstr "Új profil: %s"
 
-#: ../gdesklets:331
+#: ../gdesklets:326
 #, c-format
 msgid "Available profiles: %s"
 msgstr "Elérhető profilok: %s"
 
-#: ../gdesklets:335
+#: ../gdesklets:330
 #, c-format
 msgid "This is %s, version %s."
 msgstr "Ez a(z) %s, verziója: %s."
 
-#: ../gdesklets:363
+#: ../gdesklets:358
 msgid "Nothing to slay."
 msgstr "Nincs mit kilőni."
 
-#: ../gdesklets:387
+#: ../gdesklets:382
 msgid "Invalid command. Please try one of the following commands:"
-msgstr "Érvénytelen parancs. Kérem próbálja meg a következő parancsok valamelyikét:"
+msgstr ""
+"Érvénytelen parancs. Kérem próbálja meg a következő parancsok valamelyikét:"
 
-#: ../gdesklets-daemon:20
+#: ../gdesklets-daemon:27
 msgid "You need a recent version of PyGTK to run this program.\n"
 msgstr "Ezen program futtatásához a PyGTK egy újabb verziója szükséges.\n"
 
-#: ../gdesklets-daemon:45
+#: ../gdesklets-daemon:52
 msgid "Could not fork daemon.\n"
 msgstr "Nem lehet elindítani a démont.\n"
 
-#: ../gdesklets-daemon:66 ../gdesklets-daemon:86
+#: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
 #, c-format
 msgid "The following error occurred: %s\n"
 msgstr "A következő hiba lépett fel: %s\n"
 
-#: ../libdesklets/convert.py:21
+#: ../libdesklets/convert.py:22
 #, python-format
 msgid "%.2f TB"
 msgstr "%.2f TB"
 
-#: ../libdesklets/convert.py:23
+#: ../libdesklets/convert.py:24
 #, python-format
 msgid "%.2f GB"
 msgstr "%.2f GB"
 
-#: ../libdesklets/convert.py:25
+#: ../libdesklets/convert.py:26
 #, python-format
 msgid "%.2f MB"
 msgstr "%.2f MB"
 
-#: ../libdesklets/convert.py:27
+#: ../libdesklets/convert.py:28
 #, python-format
 msgid "%.2f kB"
 msgstr "%.2f kB"
 
-#: ../libdesklets/convert.py:29
+#: ../libdesklets/convert.py:30
 #, python-format
 msgid "%d B"
 msgstr "%d B"
@@ -488,32 +491,41 @@ msgstr "Kapcsolat a démonnal létrejött %d ezredmásodperc alatt."
 msgid "Connected to daemon in %d milliseconds."
 msgstr "Kapcsolat a démonnal létrejött %d ezredmásodperc alatt."
 
-#: ../main/__init__.py:69
+#: ../main/__init__.py:71
 #, python-format
 msgid "Version %s"
 msgstr "%s verzió"
 
-#: ../main/__init__.py:72
+#: ../main/__init__.py:74
 msgid "Core Programming:"
 msgstr "Fő fejlesztők:"
 
-#: ../main/__init__.py:76
+#: ../main/__init__.py:77
 msgid "Architecture Design:"
 msgstr "Architektúra tervezés:"
 
-#: ../main/__init__.py:79
+#: ../main/__init__.py:80
 msgid "GNOME Integration:"
 msgstr "GNOME integráció:"
 
 #: ../main/__init__.py:83
+#, fuzzy
+msgid "Additional Programming:"
+msgstr "Fő fejlesztők:"
+
+#: ../main/__init__.py:86
+msgid "Documentation:"
+msgstr ""
+
+#: ../main/__init__.py:89
 msgid "Artwork:"
 msgstr "Grafika:"
 
-#: ../main/__init__.py:86
+#: ../main/__init__.py:92
 msgid "Website:"
 msgstr "Weblap:"
 
-#: ../main/__init__.py:89
+#: ../main/__init__.py:95
 msgid "Thank you:"
 msgstr "Köszönjük:"
 
@@ -537,29 +549,30 @@ msgstr "_Névjegy..."
 msgid "_Stop daemon"
 msgstr "Démon _leállítása"
 
-#: ../main/Starter.py:227
+#: ../main/Starter.py:224
 #, python-format
 msgid "Could not open desklet file \"%s\""
 msgstr "Nem lehet megnyitni a(z) \"%s\" kijelzőfájlt"
 
-#: ../main/Starter.py:228
+#: ../main/Starter.py:225
 msgid "The desklet file could not be opened because the file was not readable."
 msgstr "A kijelzőfájlt nem lehet megnyitni, mert a fájl nem olvasható."
 
-#. CVS warning :)
-#: ../main/transition.py:42
+#: ../main/transition.py:39
+#, fuzzy
 msgid ""
-"This is a CVS version of gDesklets. CVS versions represent the current state "
-"of development and might be unstable or cause problems from time to time.\n"
+"This is a unstable version of gDesklets. Unstable versions represent the "
+"current state of development and might be unstable or cause problems from "
+"time to time.\n"
 "\n"
 "If you're new to gDesklets, it is thus highly recommended to <b>not</b> use "
-"a CVS version, but a stable release!\n"
+"this version, but a stable release!\n"
 "\n"
-"If you still want to run the CVS version instead of a stable release "
+"If you still want to run the unstable version instead of a stable release "
 "version, we'd highly appreciate it if you report any weird behavior to the "
 "developers.\n"
 "\n"
-"Experienced users are encouraged to try a CVS version, though!"
+"Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
 "Ez a gDesklets CVS verziója. A CVS verziók a fejlesztés jelenlegi állapotát "
 "képviselik és instabilak lehetnek vagy problémákat okozhatnak időről időre.\n"
@@ -572,7 +585,7 @@ msgstr ""
 "\n"
 "A tapasztalt felhasználókat viszont a CVS verzió használatára bátorítjuk!"
 
-#: ../main/transition.py:54
+#: ../main/transition.py:51
 msgid ""
 "This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
 "Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
@@ -593,7 +606,8 @@ msgstr ""
 
 #. our informative transition message which we can change with
 #. every release
-#: ../main/transition.py:65
+#: ../main/transition.py:62
+#, fuzzy
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -602,8 +616,7 @@ msgid ""
 "change that in the configuration dialog.\n"
 "\n"
 "Please note that due to limitations of older X servers, you might see blocks "
-"around desklets in Float mode. This cannot be solved in a satisfying way "
-"except for switching the X server to real translucency (Xorg 6.8 and above)."
+"around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
 "A gDesklets ezen verziója bevezeti a lebegő módot: nyomjon le egy billentyűt "
 "és az összes asztali kisalkalmazás az előtérbe jön, az alkalmazásai fölött "
@@ -616,7 +629,7 @@ msgstr ""
 "módon csak a valódi átlátszóságot támogató X kiszolgálóra (Xorg 6.8 és "
 "újabb) frissítés oldja meg."
 
-#: ../main/transition.py:80
+#: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
 msgstr "Kérem ne feledje (ez az üzenet csak egyetlen egyszer jelenik meg):"
 
@@ -714,19 +727,19 @@ msgstr "Címkékben használt #%i betűszín"
 msgid "%s Control"
 msgstr "%s vezérlése"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:55
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:54
 msgid "Interface Name"
 msgstr "Felületnév"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:58
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:57
 msgid "Property Name"
 msgstr "Tulajdonságnév"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:61
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:60
 msgid "Property Access"
 msgstr "Tulajdonság-hozzáférhetőség"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:64
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:63
 msgid "Property Description"
 msgstr "Tulajdonság leírása"
 
@@ -782,8 +795,10 @@ msgstr ""
 "nincs hozzá írási joga."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:143
-msgid "The desklet will be removed from your system and no longer be available."
-msgstr "Ez a kijelző el lesz távolítva a rendszeréről és többé nem lesz elérhető."
+msgid ""
+"The desklet will be removed from your system and no longer be available."
+msgstr ""
+"Ez a kijelző el lesz távolítva a rendszeréről és többé nem lesz elérhető."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:155
 #, python-format
@@ -939,8 +954,10 @@ msgid "Installation failed"
 msgstr "A telepítés sikertelen"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:116
-msgid "The package could not be installed because it contained no installable files."
-msgstr "A csomagot nem lehet telepíteni, mert nem tartalmaz telepíthető fájlokat."
+msgid ""
+"The package could not be installed because it contained no installable files."
+msgstr ""
+"A csomagot nem lehet telepíteni, mert nem tartalmaz telepíthető fájlokat."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:119
 msgid "Installation complete"
@@ -1043,3 +1060,21 @@ msgstr "Futásidejű hiba"
 msgid "An error occurred while executing a desklet."
 msgstr "Hiba történt az asztali kisalkalmazás végrehajtása közben."
 
+#~ msgid "XComposite support (requires composition manager)"
+#~ msgstr "XComposite támogatás (a kompozíciókezelő szükséges)"
+
+#~ msgid ""
+#~ "\n"
+#~ "     <small><i>"
+#~ msgstr ""
+#~ "\n"
+#~ "     <small><i>"
+
+#~ msgid "this does not work with GTK 2.8 or higher for technical reasons"
+#~ msgstr "ez technikai okokból nem működik a GTK 2.8 vagy újabb verzióival"
+
+#~ msgid "</i></small>"
+#~ msgstr "</i></small>"
+
+#~ msgid "Translucency (takes effect after restarting a display)"
+#~ msgstr "Áttetszőség (a kijelző újraindítása után lép életbe)"

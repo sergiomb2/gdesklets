@@ -1,12 +1,12 @@
 # Vietnamese translation for GDesklets.
 # Copyright © 2005-2006 Gnome i18n Project for Vietnamese.
 # Clytie Siddall <clytie@riverland.net.au>, 2005-2006.
-# 
+#
 msgid ""
-""
-msgstr "Project-Id-Version: gdesklets Gnome HEAD\n"
+msgstr ""
+"Project-Id-Version: gdesklets Gnome HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-01-22 02:26+0100\n"
+"POT-Creation-Date: 2008-03-02 21:49+0100\n"
 "PO-Revision-Date: 2006-01-22 16:30+1030\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
@@ -16,267 +16,264 @@ msgstr "Project-Id-Version: gdesklets Gnome HEAD\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 "X-Generator: LocFactoryEditor 1.6b31\n"
 
-#:../config/ConfigDialog.py:103
+#: ../config/ConfigDialog.py:113
 msgid "Invalid Function Call"
 msgstr "Cuộc gọi hàm không hợp lệ"
 
-#:../config/ConfigDialog.py:104
-#,python-format
+#: ../config/ConfigDialog.py:114
+#, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
 "This means that there's an error in the desklet's code. You should inform "
 "the author of the desklet about this problem."
-msgstr "Không có hàm được gọi là <b>%s</b>.\n"
+msgstr ""
+"Không có hàm được gọi là <b>%s</b>.\n"
 "Có nghĩa là gặp lỗi trong mã nguồn của bàn bé này. Bạn nên thông báo tác giả "
 "của bàn bé này biết vấn đề này."
 
-#:../config/ConfigDialog.py:217 ../display/DisplayConfigurator.py:32
+#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
 msgstr "Không thể cấu hình bàn bé này."
 
-#:../config/ConfigUnit.py:57
+#: ../config/ConfigUnit.py:57
 msgid "pixel"
 msgstr "điểm ảnh"
 
-#:../config/ConfigUnit.py:58
+#: ../config/ConfigUnit.py:58
 msgid "point"
 msgstr "điểm"
 
-#:../config/ConfigUnit.py:59
+#: ../config/ConfigUnit.py:59
 msgid "cm"
 msgstr "cm"
 
-#:../config/ConfigUnit.py:60
+#: ../config/ConfigUnit.py:60
 msgid "inch"
 msgstr "insơ"
 
-#:../config/DaemonConfigger.py:17
+#: ../config/DaemonConfigger.py:17
 msgid "Editor to view/edit the desklet source code"
 msgstr "Bộ hiệu chỉnh để xem mã nguồn của bàn bé."
 
-#:../config/DaemonConfigger.py:18
+#: ../config/DaemonConfigger.py:18
 msgid "Your favorite editor"
 msgstr "Bộ hiệu chỉnh ưa thích của bạn"
 
-#:../config/DaemonConfigger.py:20
-msgid "XComposite support (requires composition manager)"
-msgstr "Hỗ trợ XComposite (cần thiết bộ quản lý cấu thành)"
-
-#:../config/DaemonConfigger.py:21
-msgid ""
-"\n"
-"     <small><i>"
-msgstr "\n"
-"     <nhỏ><i>"
-
-#:../config/DaemonConfigger.py:22
-msgid "this does not work with GTK 2.8 or higher for technical reasons"
-msgstr "điều này không hoạt động với GTK 2.8 hay cao hơn, vì lý do kỹ thuật"
-
-#:../config/DaemonConfigger.py:23
-msgid "</i></small>"
-msgstr "</i></nhỏ>"
-
-#:../config/DaemonConfigger.py:24
-msgid "Translucency (takes effect after restarting a display)"
-msgstr "Trong mờ (có tác động sau khi khởi động lại bộ trình bày)"
-
-#:../config/DaemonConfigger.py:26
+#: ../config/DaemonConfigger.py:20
 msgid "Screen Resolution (DPI)"
 msgstr "Độ phân giải màn hình (điểm/insơ)"
 
-#:../config/DaemonConfigger.py:28
+#: ../config/DaemonConfigger.py:22
 msgid ""
 "Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
 "\"</b> wide"
-msgstr "Điều chỉnh giá trị trên, để thanh có độ rộng chính xác <b>5 cm</b> hay "
+msgstr ""
+"Điều chỉnh giá trị trên, để thanh có độ rộng chính xác <b>5 cm</b> hay "
 "<b>1.97\"</b>."
 
-#:../config/DaemonConfigger.py:32
+#: ../config/DaemonConfigger.py:26
 msgid "Behavior"
 msgstr "Ứng xử"
 
-#:../config/DaemonConfigger.py:33
+#: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
 msgstr "HIện biểu tượng _khay (có tác động sau khi khởi động lại)"
 
-#:../config/DaemonConfigger.py:35
+#: ../config/DaemonConfigger.py:29
 msgid "Show _notification while loading a desklet"
 msgstr "Hiện _thông báo trong khi tải bàn bé"
 
-#:../config/DaemonConfigger.py:37
+#: ../config/DaemonConfigger.py:31
 msgid "Key for toggling Float mode:"
 msgstr "Phím bật tắt chế độ trêi nổi :"
 
-#:../config/DaemonConfigger.py:49 ../config/DisplayConfigger.py:27
-#:../display/DisplayConfigurator.py:16
+#: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
+#: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
 msgstr "Cấu hình"
 
-#:../data/gdesklets.desktop.in.h:1 ../main/__init__.py:74
+#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
 msgid "A desktop applet system for GNOME"
 msgstr "Hệ thống tiểu dụng mặt bàn cho GNOME"
 
-#:../data/gdesklets.xml.in.h:1
+#: ../data/gdesklets.xml.in.h:1
 msgid "gDesklets display"
 msgstr "Cách hiển thị gDesklets"
 
-#:../display/Display.py:84
+#: ../display/Display.py:85
 msgid "_Configure desklet"
 msgstr "_Cấu hình bàn bé"
 
-#:../display/Display.py:86
+#: ../display/Display.py:87
 msgid "_Move desklet"
 msgstr "_Di chuyển bàn bé"
 
-#:../display/Display.py:89
+#: ../display/Display.py:90
 msgid "_View Source"
 msgstr "_Xem mã nguồn"
 
-#:../display/Display.py:92
+#: ../display/Display.py:93
 msgid "Re_start desklet"
 msgstr "Chạy _lại bàn bé"
 
-#:../display/Display.py:94
+#: ../display/Display.py:95
 msgid "_Remove desklet"
 msgstr "Gỡ _bỏ bàn bé"
 
-#:../display/Display.py:982 ../shell/plugins/DisplayBrowser/__init__.py:142
+#: ../display/Display.py:98
+#, fuzzy
+msgid "_About"
+msgstr "_Giới thiệu..."
+
+#: ../display/Display.py:337
+msgid "_Readme"
+msgstr ""
+
+#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
 msgid "Do you really want to remove this desklet ?"
 msgstr "Bạn thật sự muốn xóa bỏ bàn bé này không?"
 
-#:../display/Display.py:983
+#: ../display/Display.py:1116
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
-msgstr "Như thế thì bàn bé này sẽ không còn được hiển thị lại, và cấu hình nó sẽ bị "
+msgstr ""
+"Như thế thì bàn bé này sẽ không còn được hiển thị lại, và cấu hình nó sẽ bị "
 "tẩy."
 
-#:../display/DisplayTarget.py:417
-#,python-format
+#: ../display/DisplayTarget.py:417
+#, python-format
 msgid "Element \"%s\" does not exist"
 msgstr "Không có phần tử « %s »."
 
-#:../display/DisplayTarget.py:418
+#: ../display/DisplayTarget.py:418
 msgid ""
 "The <tt>relative-to</tt> property requires a reference to an existing "
 "display element within the same parent container."
-msgstr "Thuộc tính <tt>relative-to</tt> (tương đối so với) cần thiết tham chiếu đến "
+msgstr ""
+"Thuộc tính <tt>relative-to</tt> (tương đối so với) cần thiết tham chiếu đến "
 "phần tử hiển thị đã có, ở trong cùng một bộ bao bọc mẹ."
 
-#:../display/targetregistry.py:52
-#,python-format
+#: ../display/targetregistry.py:45
+#, python-format
 msgid "Unknown element <b>&lt;%s&gt;</b>"
 msgstr "Không biết phần tử <b>&lt;%s&gt;</b>."
 
-#:../display/targetregistry.py:53
+#: ../display/targetregistry.py:46
 msgid ""
 "Either there is a typo in the .display file or you have an incompatible "
 "version of gDesklets."
-msgstr "Hoặc gặp lỗi gõ trong tập tin « .display » (hiển thị) hoặc bạn có phiên bản "
+msgstr ""
+"Hoặc gặp lỗi gõ trong tập tin « .display » (hiển thị) hoặc bạn có phiên bản "
 "gDesklets không tương thích."
 
-#:../factory/DisplayFactory.py:89 ../utils/DOM.py:31
+#: ../factory/DisplayFactory.py:89 ../utils/DOM.py:31
 msgid "XML parse error"
 msgstr "Lỗi phân tách XML"
 
-#:../factory/DisplayFactory.py:90
+#: ../factory/DisplayFactory.py:90
 msgid "This .display file has invalid XML syntax."
 msgstr "Tập tin « .display » (hiển thị) này có cú pháp XML không hợp lệ. "
 
-#:../factory/DisplayFactory.py:208
+#: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
 msgstr "Không có tập tin này, hoặc không thể tải nó."
 
-#:../factory/DisplayFactory.py:210
+#: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
 msgstr "Tập tin chứa tập lệnh kkhông còn sẵn sàng để thực hiện."
 
-#:../factory/DisplayFactory.py:233
+#: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
 msgstr "Không tải được bộ nhạy"
 
-#:../factory/DisplayFactory.py:249
-#,python-format
+#: ../factory/DisplayFactory.py:243
+#, python-format
 msgid "&lt;%s&gt; needs a bind attribute"
 msgstr "&lt;%s&gt; cần thiết thuộc tính tổ hợp"
 
-#:../factory/DisplayFactory.py:251
+#: ../factory/DisplayFactory.py:245
 msgid "The &lt;prefs&gt; section of this desklet file is broken."
 msgstr "Phần &lt;prefs&gt; (tùy thích) của tập tin bàn bé này bị hỏng."
 
 # Don't translate the word in the variable. / Đừng dịch tên ở trong biến.
-#:../factory/SensorFactory.py:75
-#,python-format
+#: ../factory/SensorFactory.py:75
+#, python-format
 msgid "Could not find sensor '%(name)s'"
 msgstr "Không tìm thấy được bộ nhạy « %(name)s »."
 
-#:../factory/SensorFactory.py:76
+#: ../factory/SensorFactory.py:76
 msgid ""
 "A sensor could not be found. This usually means that it has not been "
 "installed."
 msgstr "Không tìm thấy bộ nhạy. Thường vì chưa cài đặt nó."
 
-#:../gdesklets:29
+#: ../gdesklets:26
 msgid "You must NOT run gDesklets as super user (root)."
 msgstr "•• ĐỪNG chạy trình gDesklets với tư cách siêu người dùng (root). ••"
 
-#:../gdesklets:43
+#: ../gdesklets:46
 msgid "Checking requirements:"
 msgstr "Đang kiểm tra các điều cần thiết:"
 
-#:../gdesklets:47
-msgid "Python version => 2.3.0 is required."
+#: ../gdesklets:50
+#, fuzzy
+msgid "Python version >= 2.3.0 is required."
 msgstr "Cần thiết phần mềm Python phiên làm ≥ 2.3.0."
 
-#:../gdesklets:51
+#: ../gdesklets:54
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
-msgstr "Thư viên « libexpat » phiên bản 1.95.7 bị hỏng nên bạn hãy nâng cấp phần mềm "
+msgstr ""
+"Thư viên « libexpat » phiên bản 1.95.7 bị hỏng nên bạn hãy nâng cấp phần mềm "
 "thư viên này."
 
-#:../gdesklets:54
+#: ../gdesklets:57
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr "Cần thiết bộ phân tách SAX; một số phiên bản SuSE không có nó có sẵn."
 
-#:../gdesklets:58
+#: ../gdesklets:61
+#, fuzzy
 msgid ""
-"GTK python bindings (pygtk2) version >= 2.4.0 and GTK+ version >= 2.4.0 are "
-"required."
-msgstr "Cần thiết tổ hợp Python GTK (pygtk2) phiên bản ≥ 2.4.0 và GTK+ phiên bản ≥ "
+"GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
+"are required."
+msgstr ""
+"Cần thiết tổ hợp Python GTK (pygtk2) phiên bản ≥ 2.4.0 và GTK+ phiên bản ≥ "
 "2.4.0."
 
-#:../gdesklets:62
-msgid "ORBit python bindings (pyorbit) version == 2.0.1 are required."
+#: ../gdesklets:65
+#, fuzzy
+msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
 msgstr "Cần thiết tổ hợp Python ORBit (pyorbit) phiên bản == 2.0.1."
 
-#:../gdesklets:65
+#: ../gdesklets:68
 msgid "bonobo python bindings are required."
 msgstr "Cần thiết tổ hợp Python Bonobo."
 
 # 48x48/emblems/emblem-sound.icon.in.h:1
 # 48x48/emblems/emblem-sound.icon.in.h:1
-#:../gdesklets:74
+#: ../gdesklets:77
 msgid "found"
 msgstr "tìm"
 
-#:../gdesklets:78
+#: ../gdesklets:81
 msgid "missing"
 msgstr "thiếu"
 
-#:../gdesklets:84
+#: ../gdesklets:87
 msgid "Version check failed."
 msgstr "Việc kiểm tra phiên bản đã thất bại."
 
 # Variable: do not translate/ biến: đừng dịch
-#:../gdesklets:85
-#,c-format
+#: ../gdesklets:88
+#, c-format
 msgid ""
 "\n"
 "%s\n"
-msgstr "\n"
+msgstr ""
+"\n"
 "%s\n"
 
-#:../gdesklets:86
+#: ../gdesklets:89
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -285,22 +282,28 @@ msgid ""
 "on your system.\n"
 "\n"
 "THE STARTUP WILL BE CANCELLED NOW!\n"
-msgstr "Bạn hãy đảm bảo đã cài đặt các phần mềm cần thiết.\n"
+msgstr ""
+"Bạn hãy đảm bảo đã cài đặt các phần mềm cần thiết.\n"
 "Cũng hãy cố tránh có nhiều phiên bản cùng một thư viên trong hệ thống.\n"
 "Phần mềm gDesklets sẽ không hoạt động nếu bạn chưa cài đặt vào hệ thống\n"
 "các phần mềm vào đó nó phụ thuộc.\n"
 
-#:../gdesklets:102
+#: ../gdesklets:98
+msgid "Requirements checking done. Your system looks ok!"
+msgstr ""
+
+#: ../gdesklets:105
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
 "gDesklets will start a requirements check now...\n"
-msgstr "\n"
+msgstr ""
+"\n"
 "Lúc này là lần đầu tiên bạn chạy phần mềm gDesklets.\n"
 "Vậy nó sẽ khởi chạy ngay bây giờ việc kiểm tra có các phần mềm cần thiết để "
 "chạy gDesklets cho đúng...\n"
 
-#:../gdesklets:113
+#: ../gdesklets:116
 msgid ""
 "Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
@@ -324,7 +327,8 @@ msgid ""
 "\t[option]\n"
 "\t\t--no-tray-icon    (disables the systray icon)\n"
 "\t\t--translucent     (enables translucency on the xorg servers)\n"
-msgstr "Cách sử dụng: gdesklets [tùy_chọn] <lệnh> [đối_số...]\n"
+msgstr ""
+"Cách sử dụng: gdesklets [tùy_chọn] <lệnh> [đối_số...]\n"
 "\n"
 "\t<lệnh>\n"
 "\t\topen <tập_tin>\t_Mở_ các tập tin bàn bé đã cho\n"
@@ -348,206 +352,230 @@ msgstr "Cách sử dụng: gdesklets [tùy_chọn] <lệnh> [đối_số...]\n"
 "\t\t--no-tray-icon    \ttắt (_không_ có) _biểu tượng của khay_ hệ thống\n"
 "\t\t--translucent     \tbật độ trong mờ trong trình phục vụ XOrg.\n"
 
-#:../gdesklets:186 ../gdesklets:260
-#,c-format
+#: ../gdesklets:161
+#, c-format
+msgid ""
+"Error while starting gdesklets-daemon\n"
+"More information about this crash is available in \"%s\"."
+msgstr ""
+
+#: ../gdesklets:164
+#, c-format
+msgid "Exception was: %s\n"
+msgstr ""
+
+#: ../gdesklets:189 ../gdesklets:258
+#, c-format
 msgid "Could not open desklet %s."
 msgstr "Không thể mở bàn bé %s."
 
-#:../gdesklets:268
+#: ../gdesklets:266
 msgid "Starting gdesklets-daemon..."
 msgstr "Đang khởi chạy trình nền gdesklets..."
 
-#:../gdesklets:274
+#: ../gdesklets:272
 msgid "Shutting down gdesklets-daemon..."
 msgstr "Đang tắt trình nền gdesklets..."
 
-#:../gdesklets:286
-#,c-format
+#: ../gdesklets:284
+#, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr "Các bộ trình bày hiện thời mở trong xác lập « %s »:\n"
 
-#:../gdesklets:291
-#,c-format
+#: ../gdesklets:289
+#, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr "Hiện thời không có bàn bé nào trong xác lập « %s »."
 
-#:../gdesklets:295
+#: ../gdesklets:293
 msgid "Restarting gdesklets-daemon..."
 msgstr "Đang khởi chạy lại trình nền gdesklets..."
 
-#:../gdesklets:308
+#: ../gdesklets:306
 msgid "gdesklets-daemon is running"
 msgstr "Trình nền gdesklets đang chạy"
 
-#:../gdesklets:310
+#: ../gdesklets:308
 msgid "gdesklets-daemon is not running"
 msgstr "Trình nền gdesklets không đang chạy"
 
-#:../gdesklets:314
-#,c-format
+#: ../gdesklets:312
+#, c-format
 msgid "Current profile: %s"
 msgstr "Xác lập hiện thời : %s"
 
-#:../gdesklets:325
-#,c-format
+#: ../gdesklets:323
+#, c-format
 msgid "New profile: %s"
 msgstr "Xác lập mới: %s"
 
-#:../gdesklets:328
-#,c-format
+#: ../gdesklets:326
+#, c-format
 msgid "Available profiles: %s"
 msgstr "Xác lập hiện có : %s"
 
-#:../gdesklets:332
-#,c-format
+#: ../gdesklets:330
+#, c-format
 msgid "This is %s, version %s."
 msgstr "Đây là %s, phiên bản %s."
 
-#:../gdesklets:360
+#: ../gdesklets:358
 msgid "Nothing to slay."
 msgstr "Không có gì có thể buộc kết thúc."
 
-#:../gdesklets:385
+#: ../gdesklets:382
 msgid "Invalid command. Please try one of the following commands:"
 msgstr "Lệnh không hợp lệ: hãy gõ một của những lệnh theo đây:"
 
-#:../gdesklets-daemon:20
+#: ../gdesklets-daemon:27
 msgid "You need a recent version of PyGTK to run this program.\n"
 msgstr "Bạn cần phiên bản PyGTK gần đây để chạy chương trình này.\n"
 
-#:../gdesklets-daemon:48
+#: ../gdesklets-daemon:52
 msgid "Could not fork daemon.\n"
 msgstr "Không tạo được trình nền con.\n"
 
-#:../gdesklets-daemon:69 ../gdesklets-daemon:89
-#,c-format
+#: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
+#, c-format
 msgid "The following error occurred: %s\n"
 msgstr "Gặp lỗi sau: %s\n"
 
-#:../libdesklets/convert.py:21
-#,python-format
+#: ../libdesklets/convert.py:22
+#, python-format
 msgid "%.2f TB"
 msgstr "%.2f TB"
 
-#:../libdesklets/convert.py:23
-#,python-format
+#: ../libdesklets/convert.py:24
+#, python-format
 msgid "%.2f GB"
 msgstr "%.2f GB"
 
-#:../libdesklets/convert.py:25
-#,python-format
+#: ../libdesklets/convert.py:26
+#, python-format
 msgid "%.2f MB"
 msgstr "%.2f MB"
 
-#:../libdesklets/convert.py:27
-#,python-format
+#: ../libdesklets/convert.py:28
+#, python-format
 msgid "%.2f kB"
 msgstr "%.2f kB"
 
-#:../libdesklets/convert.py:29
-#,python-format
+#: ../libdesklets/convert.py:30
+#, python-format
 msgid "%d B"
 msgstr "%d B"
 
-#:../main/AboutDialog.py:21
+#: ../main/AboutDialog.py:21
 msgid "About gDesklets"
 msgstr "Giới thiệu gDesklets"
 
-#:../main/client.py:283
-#,python-format
+#: ../main/client.py:276
+#, python-format
 msgid "Connecting to daemon [%s]"
 msgstr "Đang kết nối đến trình nền [%s]"
 
-#:../main/client.py:300
+#: ../main/client.py:293
 msgid ""
 "Cannot establish connection to daemon: timeout!\n"
 "The log file might help you solving the problem."
-msgstr "Không thể kết nối đến trình nền: quá thời.\n"
+msgstr ""
+"Không thể kết nối đến trình nền: quá thời.\n"
 "Trong bản ghi, có lẽ bạn sẽ tìm thông tin giúp đỡ quyết định vấn đề này."
 
-#:../main/client.py:306
-#,python-format
+#: ../main/client.py:299
+#, python-format
 msgid "Connected to daemon in %d microseconds."
 msgstr "Mới kết nối đến trình nền trong vòng %d vi giây."
 
-#:../main/client.py:309
-#,python-format
+#: ../main/client.py:302
+#, python-format
 msgid "Connected to daemon in %d milliseconds."
 msgstr "Mới kết nối đến trình nền trong vòng %d mili giây."
 
-#:../main/__init__.py:84
-#,python-format
+#: ../main/__init__.py:71
+#, python-format
 msgid "Version %s"
 msgstr "Phiên bản %s"
 
-#:../main/__init__.py:87
+#: ../main/__init__.py:74
 msgid "Core Programming:"
 msgstr "Lập trình lõi :"
 
-#:../main/__init__.py:91
+#: ../main/__init__.py:77
 msgid "Architecture Design:"
 msgstr "Thiết kế kiến trúc:"
 
-#:../main/__init__.py:94
+#: ../main/__init__.py:80
 msgid "GNOME Integration:"
 msgstr "Hợp nhất với Gnome:"
 
-#:../main/__init__.py:98
+#: ../main/__init__.py:83
+#, fuzzy
+msgid "Additional Programming:"
+msgstr "Lập trình lõi :"
+
+#: ../main/__init__.py:86
+msgid "Documentation:"
+msgstr ""
+
+#: ../main/__init__.py:89
 msgid "Artwork:"
 msgstr "Ảnh:"
 
-#:../main/__init__.py:101
+#: ../main/__init__.py:92
 msgid "Website:"
 msgstr "Nơi Mạng:"
 
-#:../main/__init__.py:104
+#: ../main/__init__.py:95
 msgid "Thank you:"
 msgstr "Cám ơn:"
 
-#:../main/Starter.py:103
+#: ../main/Starter.py:102
 msgid "_Manage desklets"
 msgstr "_Quản lý bàn bé"
 
-#:../main/Starter.py:106
+#: ../main/Starter.py:105
 msgid "_Configuration"
 msgstr "_Cấu hình"
 
-#:../main/Starter.py:108
+#: ../main/Starter.py:107
 msgid "_View log"
 msgstr "_Xem bản ghi"
 
-#:../main/Starter.py:111 ../shell/plugins/Help/__init__.py:41
+#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
 msgid "_About..."
 msgstr "_Giới thiệu..."
 
-#:../main/Starter.py:114
+#: ../main/Starter.py:113
 msgid "_Stop daemon"
 msgstr "_Dừng trình nền"
 
-#:../main/Starter.py:230
-#,python-format
+#: ../main/Starter.py:224
+#, python-format
 msgid "Could not open desklet file \"%s\""
 msgstr "Không thể mở tập tin bàn bé « %s »."
 
-#:../main/Starter.py:231
+#: ../main/Starter.py:225
 msgid "The desklet file could not be opened because the file was not readable."
 msgstr "Không thể mở tập tin bàn bé vì nó không có khả năng đọc."
 
-#.CVS warning :)
-#:../main/transition.py:42
+#: ../main/transition.py:39
+#, fuzzy
 msgid ""
-"This is a CVS version of gDesklets. CVS versions represent the current state "
-"of development and might be unstable or cause problems from time to time.\n"
+"This is a unstable version of gDesklets. Unstable versions represent the "
+"current state of development and might be unstable or cause problems from "
+"time to time.\n"
 "\n"
 "If you're new to gDesklets, it is thus highly recommended to <b>not</b> use "
-"a CVS version, but a stable release!\n"
+"this version, but a stable release!\n"
 "\n"
-"If you still want to run the CVS version instead of a stable release "
+"If you still want to run the unstable version instead of a stable release "
 "version, we'd highly appreciate it if you report any weird behavior to the "
 "developers.\n"
 "\n"
-"Experienced users are encouraged to try a CVS version, though!"
-msgstr "Đây là phiên bản gDesklets CVS. Phiên bản CVS là tính trạng phát triển hiện "
+"Experienced users are encouraged to try a bzr version, though!"
+msgstr ""
+"Đây là phiên bản gDesklets CVS. Phiên bản CVS là tính trạng phát triển hiện "
 "thời thì có lẽ bất định hoặc gặp lỗi thỉng thỏang.\n"
 "\n"
 "• Nếu bạn đang bắt đầu sử dụng gDesklets thì khuyến khích nặng bạn <b>không</"
@@ -558,7 +586,7 @@ msgstr "Đây là phiên bản gDesklets CVS. Phiên bản CVS là tính trạng
 "Vậy chúng tôi đệ nghị người dùng có kinh nghiệm dùng gDesklets thì thử ra "
 "phiên bản CVS."
 
-#:../main/transition.py:54
+#: ../main/transition.py:51
 msgid ""
 "This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
 "Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
@@ -567,7 +595,8 @@ msgid ""
 "in its early stages of development.\n"
 "\n"
 "Thanks for testing this release candidate!"
-msgstr "Đây là phiên bản <b>ứng cử phát hành</b> của bản gDesklets sắp phát hành.\n"
+msgstr ""
+"Đây là phiên bản <b>ứng cử phát hành</b> của bản gDesklets sắp phát hành.\n"
 "Vui lòng thử ra nó, và thông báo lỗi tại <<i>http://bugzilla.gnome.org</i>>\n"
 "Phiên bản này có lẽ sẽ làm cho cấu hình bạn bị hỏng, hoặc nó sẽ không phục "
 "hồi cấu hình từ bản phát hành trước. Trong phần lớn trường hợp, chúng tôi "
@@ -575,9 +604,10 @@ msgstr "Đây là phiên bản <b>ứng cử phát hành</b> của bản gDeskle
 "\n"
 "Cám ơn bạn thử ra bản ứng cử phát hành này."
 
-#.our informative transition message which we can change with
-#.every release
-#:../main/transition.py:65
+#. our informative transition message which we can change with
+#. every release
+#: ../main/transition.py:62
+#, fuzzy
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -586,9 +616,9 @@ msgid ""
 "change that in the configuration dialog.\n"
 "\n"
 "Please note that due to limitations of older X servers, you might see blocks "
-"around desklets in Float mode. This cannot be solved in a satisfying way "
-"except for switching the X server to real translucency (Xorg 6.8 and above)."
-msgstr "Phiên bản gDesklets này hỗ trợ chế độ Trôi nổi : hãy bấm phím, và các bàn bé "
+"around desklets in Float mode. This cannot be solved in a satisfying way."
+msgstr ""
+"Phiên bản gDesklets này hỗ trợ chế độ Trôi nổi : hãy bấm phím, và các bàn bé "
 "sẽ lên trước, trôi nổi trên các ứng dụng, cho đến khi bấm lại phím đó.\n"
 "Tổ hợp phím mặc định là &lt;Shift&gt; &lt;F12&gt;, nhưng bạn có thể thay đổi "
 "nó một cách dễ dàng trong hộp thoại cấu hình.\n"
@@ -598,38 +628,38 @@ msgstr "Phiên bản gDesklets này hỗ trợ chế độ Trôi nổi : hãy b�
 "cách đáp ứng, nếu không chuyển đổi trình phục vụ X sang độ trong mờ thật "
 "(XOrg 6.8 và sau)."
 
-#:../main/transition.py:80
+#: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
 msgstr "Hãy ghi chú (thông điệp này sẽ xuất hiện chỉ một lần):"
 
-#:../plugin/Interface.py:200 ../plugin/Interface.py:227
+#: ../plugin/Interface.py:200 ../plugin/Interface.py:227
 msgid "no description"
 msgstr "không mô tả"
 
-#:../scripting/Script.py:154
+#: ../scripting/Script.py:154
 msgid "Error in add_timer function"
 msgstr "Gặp lỗi trong hàm « add_timer » (thêm bộ đếm thời gian)"
 
-#:../scripting/Script.py:155
-#,python-format
+#: ../scripting/Script.py:155
+#, python-format
 msgid "\"%s\" isn't a valid integer value!"
 msgstr "« %s » không phải là giá trị số nguyên hợp lệ."
 
-#:../scripting/Script.py:199
-#,python-format
+#: ../scripting/Script.py:199
+#, python-format
 msgid "No Control could be found for interface %s"
 msgstr "Không tìm thấy điều khiển cho giao diện %s."
 
-#:../scripting/Script.py:201
+#: ../scripting/Script.py:201
 msgid "This means that a functionality won't be available during execution!"
 msgstr "Có nghĩa là trong khi thực hiện, sẽ không có một chức năng."
 
-#:../scripting/Script.py:234
+#: ../scripting/Script.py:241
 msgid "Security Risk"
 msgstr "Rủi ro Bảo mật"
 
-#:../scripting/Script.py:235
-#,python-format
+#: ../scripting/Script.py:242
+#, python-format
 msgid ""
 "The desklet %s wants to execute a system command:\n"
 "\n"
@@ -640,7 +670,8 @@ msgid ""
 "\n"
 "If you are sure that the command is harmless, you may permanently allow this "
 "desklet instance to run it."
-msgstr "Bàn bé %s muốn thực hiện lệnh hệ thống:\n"
+msgstr ""
+"Bàn bé %s muốn thực hiện lệnh hệ thống:\n"
 "\n"
 "     <tt><b>%s</b></tt>\n"
 "\n"
@@ -650,179 +681,185 @@ msgstr "Bàn bé %s muốn thực hiện lệnh hệ thống:\n"
 "Nếu bạn chắc là lệnh này vô hại, thì bạn có thể cho phép vĩnh viễn thể hiện "
 "bàn bé này chạy lệnh đó."
 
-#:../scripting/Script.py:248
+#: ../scripting/Script.py:255
 msgid "Deny!"
 msgstr "Từ chối"
 
-#:../scripting/Script.py:249
+#: ../scripting/Script.py:256
 msgid "Allow once"
 msgstr "Cho phép một lần"
 
-#:../scripting/Script.py:250
+#: ../scripting/Script.py:257
 msgid "Allow for this desklet"
 msgstr "Cho phép cho bàn bé này"
 
-#:../Sensors/FontSelector/__init__.py:86
+#: ../Sensors/FontSelector/__init__.py:86
 msgid "Fonts"
 msgstr "Phông chữ"
 
-#:../Sensors/FontSelector/__init__.py:87
+#: ../Sensors/FontSelector/__init__.py:87
 msgid "Fonts settings"
 msgstr "Thiết lập phông chữ"
 
-#:../Sensors/FontSelector/__init__.py:90
-#,python-format
+#: ../Sensors/FontSelector/__init__.py:90
+#, python-format
 msgid "Font #%i:"
 msgstr "Phông chữ #%i:"
 
-#:../Sensors/FontSelector/__init__.py:92
-#,python-format
+#: ../Sensors/FontSelector/__init__.py:92
+#, python-format
 msgid "Font #%i used in the labels"
 msgstr "Phông chữ #%i được dùng trong nhãn"
 
-#:../Sensors/FontSelector/__init__.py:93
-#,python-format
+#: ../Sensors/FontSelector/__init__.py:93
+#, python-format
 msgid "Font color #%i:"
 msgstr "Màu phông chữ #%i:"
 
-#:../Sensors/FontSelector/__init__.py:95
-#,python-format
+#: ../Sensors/FontSelector/__init__.py:95
+#, python-format
 msgid "Font color #%i used in the labels"
 msgstr "Màu phông chữ #%i được dùng trong nhãn"
 
-#:../shell/plugins/ControlBrowser/ControlInspector.py:16
-#,python-format
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:16
+#, python-format
 msgid "%s Control"
 msgstr "Điều khiển %s"
 
-#:../shell/plugins/ControlBrowser/ControlInspector.py:55
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:54
 msgid "Interface Name"
 msgstr "Tên giao diện"
 
-#:../shell/plugins/ControlBrowser/ControlInspector.py:58
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:57
 msgid "Property Name"
 msgstr "Tên đặc tính"
 
-#:../shell/plugins/ControlBrowser/ControlInspector.py:61
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:60
 msgid "Property Access"
 msgstr "Truy cập đặc tính"
 
-#:../shell/plugins/ControlBrowser/ControlInspector.py:64
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:63
 msgid "Property Description"
 msgstr "Mô tả đặc tính"
 
-#:../shell/plugins/ControlBrowser/__init__.py:27
+#: ../shell/plugins/ControlBrowser/__init__.py:27
 msgid "by interface"
 msgstr "theo giao diện"
 
-#:../shell/plugins/ControlBrowser/__init__.py:28
-#:../shell/plugins/DisplayBrowser/__init__.py:80
+#: ../shell/plugins/ControlBrowser/__init__.py:28
+#: ../shell/plugins/DisplayBrowser/__init__.py:80
 msgid "alphabetically"
 msgstr "theo thứ tự abc"
 
-#:../shell/plugins/ControlBrowser/__init__.py:72
-#,python-format
+#: ../shell/plugins/ControlBrowser/__init__.py:72
+#, python-format
 msgid "Found %d controls."
 msgstr "Tìm thấy %d điều khiển."
 
-#:../shell/plugins/ControlBrowser/__init__.py:75
-#:../shell/plugins/DisplayBrowser/__init__.py:158
+#: ../shell/plugins/ControlBrowser/__init__.py:75
+#: ../shell/plugins/DisplayBrowser/__init__.py:158
 msgid "Invalid search expression."
 msgstr "Biểu thức tìm kiếm không hợp lệ."
 
-#:../shell/plugins/DisplayBrowser/__init__.py:40
+#: ../shell/plugins/DisplayBrowser/__init__.py:40
 msgid "R_emove selected desklet"
 msgstr "Gỡ _bỏ bàn bé đã chọn"
 
-#:../shell/plugins/DisplayBrowser/__init__.py:43
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
 msgid "_Run (remote) desklet..."
 msgstr "_Chạy bàn bé (ở xa)..."
 
-#:../shell/plugins/DisplayBrowser/__init__.py:45
+#: ../shell/plugins/DisplayBrowser/__init__.py:45
 msgid "R_un selected desklet"
 msgstr "Chạ_y bàn bé được chọn"
 
-#:../shell/plugins/DisplayBrowser/__init__.py:78
+#: ../shell/plugins/DisplayBrowser/__init__.py:78
 msgid "by category"
 msgstr "theo phân loại"
 
-#:../shell/plugins/DisplayBrowser/__init__.py:79
+#: ../shell/plugins/DisplayBrowser/__init__.py:79
 msgid "by author"
 msgstr "theo tác giả"
 
-#:../shell/plugins/DisplayBrowser/__init__.py:130
+#: ../shell/plugins/DisplayBrowser/__init__.py:130
 msgid "Could not remove"
 msgstr "Không thể gỡ bỏ"
 
-#:../shell/plugins/DisplayBrowser/__init__.py:131
+#: ../shell/plugins/DisplayBrowser/__init__.py:131
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
-msgstr "Không thể gỡ bỏ tập tin bàn bé. Thường vì bạn không có quyền ghi vào nó."
+msgstr ""
+"Không thể gỡ bỏ tập tin bàn bé. Thường vì bạn không có quyền ghi vào nó."
 
-#:../shell/plugins/DisplayBrowser/__init__.py:143
+#: ../shell/plugins/DisplayBrowser/__init__.py:143
 msgid ""
 "The desklet will be removed from your system and no longer be available."
-msgstr "Vậy bàn bé này sẽ bị gỡ bỏ ra hệ thống bạn, nó sẽ không còn sẵn sàng lại."
+msgstr ""
+"Vậy bàn bé này sẽ bị gỡ bỏ ra hệ thống bạn, nó sẽ không còn sẵn sàng lại."
 
-#:../shell/plugins/DisplayBrowser/__init__.py:155
-#,python-format
+#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#, python-format
 msgid "Found %d desklets"
 msgstr "Tìm thấy %d bàn bé"
 
-#:../shell/plugins/DisplayBrowser/__init__.py:177
+#: ../shell/plugins/DisplayBrowser/__init__.py:177
 msgid "No description available"
 msgstr "Không có mô tả."
 
-#:../shell/plugins/Help/__init__.py:37
+#: ../shell/plugins/Help/__init__.py:37
 msgid "_Help"
 msgstr "Trợ _giúp"
 
-#:../shell/plugins/Help/__init__.py:38
+#: ../shell/plugins/Help/__init__.py:38
 msgid "_Tip of the Day"
 msgstr "_Mẹo của hôm nay"
 
-#:../shell/plugins/Help/TipOfTheDay.py:24
+#: ../shell/plugins/Help/TipOfTheDay.py:24
 msgid "Tip of the Day"
 msgstr "Mẹo của hôm nay"
 
-#:../shell/plugins/Help/TipOfTheDay.py:32
+#: ../shell/plugins/Help/TipOfTheDay.py:32
 msgid "Show tips at startup"
 msgstr "Hiển thị mẹo khi khởi động"
 
-#:../shell/plugins/Help/tips.py:2
+#: ../shell/plugins/Help/tips.py:2
+#, fuzzy
 msgid ""
 "You can find lots of desktop applets for use\n"
 "with gDesklets at\n"
 "\n"
 "http://www.gdesklets.org\n"
 "and\n"
-"http://gdesklets.gnomedesktop.org"
-msgstr "Bạn có thể tìm nhiều tiểu dụng mặt bàn\n"
+"http://gdesklets.zencomputer.ca/"
+msgstr ""
+"Bạn có thể tìm nhiều tiểu dụng mặt bàn\n"
 "để sử dụng với gDesklets tại\n"
 "\n"
 "<http://gdesklets.gnomedesktop.org>\n"
 "và\n"
 "<http://gdesklets.gnomedesktop.org>"
 
-#:../shell/plugins/Help/tips.py:9
+#: ../shell/plugins/Help/tips.py:9
 msgid ""
 "You can install new desktop applets easily by\n"
 "dragging the download link for the package\n"
 "from your web browser into the gDesklets Shell."
-msgstr "Bạn lúc bây giờ có thể cài đật dễ dàng\n"
+msgstr ""
+"Bạn lúc bây giờ có thể cài đật dễ dàng\n"
 "tiểu dụng mặt bàn mới,\n"
 "bằng cách kéo liên kết tải xuống cho gói đó\n"
 "từ trình duyệt Mạng vào hệ vò gDesklets."
 
-#:../shell/plugins/Help/tips.py:13
+#: ../shell/plugins/Help/tips.py:13
 msgid ""
 "Click the right mouse button on a desktop\n"
 "applet or press F10 to open the popup menu."
-msgstr "Hãy nhắp nút chuột vào tiểu dụng mặt bàn,\n"
+msgstr ""
+"Hãy nhắp nút chuột vào tiểu dụng mặt bàn,\n"
 "hoặc bấm phím F10 để mở trình đơn bật lên."
 
-#:../shell/plugins/Help/tips.py:16
+#: ../shell/plugins/Help/tips.py:16
 msgid ""
 "You can move the applets around the screen\n"
 "by holding down the middle mouse button.\n"
@@ -830,14 +867,15 @@ msgid ""
 "If your mouse has only two buttons,\n"
 "hold down both of them simultaneously\n"
 "in order to simulate the middle button."
-msgstr "Bạn có thể di chuyển tiểu dụng\n"
+msgstr ""
+"Bạn có thể di chuyển tiểu dụng\n"
 "chung quanh màn hình\n"
 "bằng cách bấm giữ nút giữa trên chuột.\n"
 "Nếu con chuột bạn chỉ có hai nút,\n"
 "bạn hãy bấm giữ cả hai nút cùng lúc,\n"
 "để mô phỏng cái nút giữa."
 
-#:../shell/plugins/Help/tips.py:23
+#: ../shell/plugins/Help/tips.py:23
 msgid ""
 "You can have different profiles of\n"
 "desktop applets and switch between them.\n"
@@ -846,7 +884,8 @@ msgid ""
 "the menu bar to create new profiles.\n"
 "\n"
 "Empty profiles get discarded automatically."
-msgstr "Bạn có thể có nhiều xác lập khác\n"
+msgstr ""
+"Bạn có thể có nhiều xác lập khác\n"
 "cho tiểu dụng mặt bàn\n"
 "(chọn bao nhiều tiểu dụng và\n"
 "tiểu dụng kiểu nào cho mỗi xác lập),\n"
@@ -857,162 +896,187 @@ msgstr "Bạn có thể có nhiều xác lập khác\n"
 "\n"
 "Xác lập rỗng bị bỏ tự động."
 
-#:../shell/plugins/Help/tips.py:31
+#: ../shell/plugins/Help/tips.py:31
 msgid ""
 "The search bar accepts complex search\n"
 "expressions for finding your applets."
-msgstr "Thanh tìm kiếm chấp nhận biểu thức\n"
+msgstr ""
+"Thanh tìm kiếm chấp nhận biểu thức\n"
 "tìm kiếm phức tạp để tìm tiểu dụng."
 
-#:../shell/plugins/Help/tips.py:34
+#: ../shell/plugins/Help/tips.py:34
 msgid ""
 "Search expressions may contain wildcards:\n"
 "\n"
 " ? matches any one character\n"
 " * matches zero or more characters"
-msgstr "Biểu thức tìm kiếm có thể chứa ký tự đại diện:\n"
+msgstr ""
+"Biểu thức tìm kiếm có thể chứa ký tự đại diện:\n"
 "\n"
 " ?\t\tkhớp bất cứ ký tự đơn nào\n"
 " *\t\tkhớp số không hoặc nhiều ký tự"
 
-#:../shell/plugins/Help/tips.py:39
+#: ../shell/plugins/Help/tips.py:39
 msgid ""
 "Have a good idea for a desklet?\n"
 "Write your own!  See the Developer's\n"
 "book for more details."
-msgstr "Bạn có ý kiến tốt cho bàn bé không?\n"
+msgstr ""
+"Bạn có ý kiến tốt cho bàn bé không?\n"
 "Tạo đi nhé! Hãy xem sổ Lập trình viên\n"
 "để tìm chi tiết."
 
-#:../shell/plugins/PackageInstaller/Downloader.py:29
+#: ../shell/plugins/PackageInstaller/Downloader.py:29
 msgid "Retrieving:"
 msgstr "Đang gọi nhận:"
 
-#:../shell/plugins/PackageInstaller/__init__.py:26
+#: ../shell/plugins/PackageInstaller/__init__.py:26
 msgid "I_nstall remote package..."
 msgstr "Cài đặt gói ở _xa..."
 
-#:../shell/plugins/PackageInstaller/__init__.py:27
+#: ../shell/plugins/PackageInstaller/__init__.py:27
 msgid "_Install package..."
 msgstr "_Cài đặt gói..."
 
-#:../shell/plugins/PackageInstaller/__init__.py:97
+#: ../shell/plugins/PackageInstaller/__init__.py:97
 msgid "Invalid package"
 msgstr "Gói không hợp lệ"
 
-#:../shell/plugins/PackageInstaller/__init__.py:98
+#: ../shell/plugins/PackageInstaller/__init__.py:98
 msgid ""
 "The supplied file could not be opened as a package. It is either corrupted "
 "or not of the correct file type."
-msgstr "Không thể mở tập tin đã cung cập như là gói. Nó hoặc bị hỏng, hoặc không "
+msgstr ""
+"Không thể mở tập tin đã cung cập như là gói. Nó hoặc bị hỏng, hoặc không "
 "phải là kiểu tập tin đúng."
 
-#:../shell/plugins/PackageInstaller/__init__.py:115
+#: ../shell/plugins/PackageInstaller/__init__.py:115
 msgid "Installation failed"
 msgstr "Không cài đặt được"
 
-#:../shell/plugins/PackageInstaller/__init__.py:116
+#: ../shell/plugins/PackageInstaller/__init__.py:116
 msgid ""
 "The package could not be installed because it contained no installable files."
-msgstr "Không thể cài đặt gói này vì nó không chứa tập tin nào có khả năng cài đặt."
+msgstr ""
+"Không thể cài đặt gói này vì nó không chứa tập tin nào có khả năng cài đặt."
 
-#:../shell/plugins/PackageInstaller/__init__.py:119
+#: ../shell/plugins/PackageInstaller/__init__.py:119
 msgid "Installation complete"
 msgstr "Cài đặt xong rồi."
 
-#:../shell/plugins/Profiles/__init__.py:18
+#: ../shell/plugins/Profiles/__init__.py:18
 msgid "_Profiles"
 msgstr "_Xác lập"
 
-#:../shell/plugins/Profiles/__init__.py:20
+#: ../shell/plugins/Profiles/__init__.py:20
 msgid "New profile..."
 msgstr "Xác lập mới..."
 
-#:../shell/plugins/Profiles/__init__.py:75
+#: ../shell/plugins/Profiles/__init__.py:75
 msgid "New profile"
 msgstr "Xác lập mới"
 
-#:../shell/plugins/Profiles/__init__.py:76
+#: ../shell/plugins/Profiles/__init__.py:76
 msgid "Enter the name for a new profile"
 msgstr "Hãy nhập tên cho xác lập mới"
 
-#:../shell/plugins/Shell/__init__.py:62
+#: ../shell/plugins/Shell/__init__.py:62
 msgid "_File"
 msgstr "_Tập tin"
 
-#:../shell/SearchBar.py:20
+#: ../shell/SearchBar.py:20
 msgid "Search"
 msgstr "Tìm kiếm"
 
-#:../utils/dialog.py:46
-#,python-format
+#: ../utils/dialog.py:46
+#, python-format
 msgid "_Details (%d lines)"
 msgstr "_Chi tiết (%d dòng)"
 
-#:../utils/dialog.py:194
+#: ../utils/dialog.py:194
 msgid "_Ignore errors from this desklet"
 msgstr "_Bỏ qua lỗi từ vài bé này"
 
-#:../utils/DOM.py:32
+#: ../utils/DOM.py:32
 msgid "An invalid graphics code was loaded into a canvas."
 msgstr "Mã đồ họa không hợp lệ đã được tải vào khung vẽ."
 
-#:../utils/DOM.py:153
-#,python-format
+#: ../utils/DOM.py:153
+#, python-format
 msgid "No such element: %s"
 msgstr "Không có phần tử như vậy: %s"
 
-#:../utils/DOM.py:154
-#,python-format
+#: ../utils/DOM.py:154
+#, python-format
 msgid "The element with ID <b>%s</b> does not exist in the SVG image."
 msgstr "Không có phần tử ID <b>%s</b> trong ảnh SVG."
 
-#:../utils/DOM.py:182 ../utils/Element.py:91
-#,python-format
+#: ../utils/DOM.py:182 ../utils/Element.py:91
+#, python-format
 msgid "No such property: %s"
 msgstr "Không có đặc tính như vậy: %s"
 
-#:../utils/DOM.py:183
-#,python-format
+#: ../utils/DOM.py:183
+#, python-format
 msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
 msgstr "Phần tử SVG <b>%s</b> không có đặc tính <b>%s</b>."
 
-#:../utils/Element.py:92
-#,python-format
+#: ../utils/Element.py:92
+#, python-format
 msgid "The element <b>%s</b> does not have the <b>%s</b> property."
 msgstr "Phần tử <b>%s</b> không có đặc tính <b>%s</b>."
 
-#:../utils/Element.py:96 ../utils/Element.py:126
+#: ../utils/Element.py:96 ../utils/Element.py:126
 msgid "Permission Error"
 msgstr "Lỗi quyền hạn."
 
-#:../utils/Element.py:97
-#,python-format
+#: ../utils/Element.py:97
+#, python-format
 msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
 msgstr "Không thể ghi vào đặt tính <b>%s</b> của phần tử <b>%s</b>."
 
-#:../utils/Element.py:105
+#: ../utils/Element.py:105
 msgid "Type Error"
 msgstr "Lỗi kiểu"
 
-#:../utils/Element.py:106
-#,python-format
+#: ../utils/Element.py:106
+#, python-format
 msgid ""
 "The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
 "Expected <b>%s</b>, but got <b>%s</b>."
-msgstr "Đặc tính <b>%s</b> của phần tử <b>%s</b> đã được giá trị có kiểu không "
+msgstr ""
+"Đặc tính <b>%s</b> của phần tử <b>%s</b> đã được giá trị có kiểu không "
 "đúng.\n"
 "Ngờ <b>%s</b>, mà được <b>%s</b>."
 
-#:../utils/Element.py:127
-#,python-format
+#: ../utils/Element.py:127
+#, python-format
 msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
 msgstr "Không thể đọc đặc tính <b>%s</b> của phần tử <b>%s</b>."
 
-#:../utils/error.py:158
+#: ../utils/error.py:158
 msgid "Runtime Error"
 msgstr "Lỗi thời chạy"
 
-#:../utils/error.py:160
+#: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
 msgstr "Gặp lỗi khi thực hiện bàn bé."
+
+#~ msgid "XComposite support (requires composition manager)"
+#~ msgstr "Hỗ trợ XComposite (cần thiết bộ quản lý cấu thành)"
+
+#~ msgid ""
+#~ "\n"
+#~ "     <small><i>"
+#~ msgstr ""
+#~ "\n"
+#~ "     <nhỏ><i>"
+
+#~ msgid "this does not work with GTK 2.8 or higher for technical reasons"
+#~ msgstr "điều này không hoạt động với GTK 2.8 hay cao hơn, vì lý do kỹ thuật"
+
+#~ msgid "</i></small>"
+#~ msgstr "</i></nhỏ>"
+
+#~ msgid "Translucency (takes effect after restarting a display)"
+#~ msgstr "Trong mờ (có tác động sau khi khởi động lại bộ trình bày)"

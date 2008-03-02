@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets.HEAD.ne\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-05-15 10:30+0200\n"
+"POT-Creation-Date: 2008-03-02 21:49+0100\n"
 "PO-Revision-Date: 2006-06-05 16:18+0545\n"
 "Last-Translator: Mahesh subedi <submanesh@hotmail.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -21,11 +21,11 @@ msgstr ""
 "X-Generator: KBabel 1.10.2\n"
 "Plural-Forms: nplurals=2;plural=(n!=1)\n"
 
-#: ../config/ConfigDialog.py:103
+#: ../config/ConfigDialog.py:113
 msgid "Invalid Function Call"
 msgstr "अवैध प्रकार्य कल"
 
-#: ../config/ConfigDialog.py:104
+#: ../config/ConfigDialog.py:114
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -36,7 +36,7 @@ msgstr ""
 "यसर्थ त्यहाँ डेस्कलेट सङ्केतमा कुनै त्रुटि हुनुपर्दछ। तपाईँँले डेस्कलेटको लेखकालाई यो समस्याको "
 "बारेमा जानकारी दिनु पर्दछ।"
 
-#: ../config/ConfigDialog.py:217 ../display/DisplayConfigurator.py:32
+#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
 msgstr "यो डेस्कलेट कन्फिगर गर्ने किसिमको छैन।"
 
@@ -65,61 +65,38 @@ msgid "Your favorite editor"
 msgstr "तपाईँँको मनपर्ने सम्पादक"
 
 #: ../config/DaemonConfigger.py:20
-msgid "XComposite support (requires composition manager)"
-msgstr "Xसंयुक्त समर्थन (संयोजन प्रबन्धक आवश्यक पर्दछ)"
-
-#: ../config/DaemonConfigger.py:21
-msgid ""
-"\n"
-"     <small><i>"
-msgstr ""
-"\n"
-"     <small><i>"
-
-#: ../config/DaemonConfigger.py:22
-msgid "this does not work with GTK 2.8 or higher for technical reasons"
-msgstr "यसले GTK 2.8 सँग काम गर्दैन वा प्राविधिक कारणहरूले गर्दा उच्च"
-
-#: ../config/DaemonConfigger.py:23
-msgid "</i></small>"
-msgstr "</i></small>"
-
-#: ../config/DaemonConfigger.py:24
-msgid "Translucency (takes effect after restarting a display)"
-msgstr "ट्यान्सुलेन्सी (प्रदर्शन फेरी सुरु गरे पछि प्रभाव लिन्छ)"
-
-#: ../config/DaemonConfigger.py:26
 msgid "Screen Resolution (DPI)"
 msgstr "पर्दा रिजोल्युसन (DPI)"
 
-#: ../config/DaemonConfigger.py:28
+#: ../config/DaemonConfigger.py:22
 msgid ""
 "Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
 "\"</b> wide"
-msgstr "माथिको मानलाई मिलाउनुहोस् ताकी पट्टी ठीक <b>5 cm</b> वा <b>1.97\"</b> चौडा हुन्छ"
+msgstr ""
+"माथिको मानलाई मिलाउनुहोस् ताकी पट्टी ठीक <b>5 cm</b> वा <b>1.97\"</b> चौडा हुन्छ"
 
-#: ../config/DaemonConfigger.py:32
+#: ../config/DaemonConfigger.py:26
 msgid "Behavior"
 msgstr "व्यवहार"
 
-#: ../config/DaemonConfigger.py:33
+#: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
 msgstr "ट्रे प्रतिमा देखाउनुहोस् (फेरि सुरु गरेपछि प्रभाव लिन्छ)"
 
-#: ../config/DaemonConfigger.py:35
+#: ../config/DaemonConfigger.py:29
 msgid "Show _notification while loading a desklet"
 msgstr "डेस्कलेट लोड गर्दाको बेलामा सूचना देखाउनुहोस्"
 
-#: ../config/DaemonConfigger.py:37
+#: ../config/DaemonConfigger.py:31
 msgid "Key for toggling Float mode:"
 msgstr "फ्लोट मोड टगल गर्नका लागि कुञ्जी:"
 
-#: ../config/DaemonConfigger.py:49 ../config/DisplayConfigger.py:27
+#: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
 #: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
 msgstr "कन्फिगरेशन"
 
-#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:74
+#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
 msgid "A desktop applet system for GNOME"
 msgstr "जिनोमका लागि डेस्कटप एप्लेट प्रणाली"
 
@@ -127,31 +104,40 @@ msgstr "जिनोमका लागि डेस्कटप एप्ले
 msgid "gDesklets display"
 msgstr "जीडेस्कलेट प्रदर्शन"
 
-#: ../display/Display.py:84
+#: ../display/Display.py:85
 msgid "_Configure desklet"
 msgstr "डेस्कलेट कन्फिगर गर्नुहोस्"
 
-#: ../display/Display.py:86
+#: ../display/Display.py:87
 msgid "_Move desklet"
 msgstr "डेस्कलेट सार्नुहोस्"
 
-#: ../display/Display.py:89
+#: ../display/Display.py:90
 msgid "_View Source"
 msgstr "स्रोत हेर्नुहोस्"
 
-#: ../display/Display.py:92
+#: ../display/Display.py:93
 msgid "Re_start desklet"
 msgstr "डेस्कलेट पुन: सुरु गर्नुहोस्"
 
-#: ../display/Display.py:94
+#: ../display/Display.py:95
 msgid "_Remove desklet"
 msgstr "डेस्कलेट हटाउनुहोस्"
 
-#: ../display/Display.py:982 ../shell/plugins/DisplayBrowser/__init__.py:142
+#: ../display/Display.py:98
+#, fuzzy
+msgid "_About"
+msgstr "बारेमा..."
+
+#: ../display/Display.py:337
+msgid "_Readme"
+msgstr ""
+
+#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
 msgid "Do you really want to remove this desklet ?"
 msgstr "के तपाईँ साच्चिकै यो डेस्कलेट हटाउन चाहनुहुन्छ ?"
 
-#: ../display/Display.py:983
+#: ../display/Display.py:1116
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
@@ -166,14 +152,16 @@ msgstr "तत्व \"%s\" अवस्थित छैन"
 msgid ""
 "The <tt>relative-to</tt> property requires a reference to an existing "
 "display element within the same parent container."
-msgstr "यो<tt>सँग सम्बन्धित</tt> गुणलाई उस्तै प्रमूल कन्टेनरमा एउटा अवस्थित प्रदर्शन तत्वलाई एउटा सन्दर्भ आवश्यक पर्दछ।"
+msgstr ""
+"यो<tt>सँग सम्बन्धित</tt> गुणलाई उस्तै प्रमूल कन्टेनरमा एउटा अवस्थित प्रदर्शन तत्वलाई एउटा "
+"सन्दर्भ आवश्यक पर्दछ।"
 
-#: ../display/targetregistry.py:52
+#: ../display/targetregistry.py:45
 #, python-format
 msgid "Unknown element <b>&lt;%s&gt;</b>"
 msgstr "अज्ञात तत्व <b>&lt;%s&gt;</b>"
 
-#: ../display/targetregistry.py:53
+#: ../display/targetregistry.py:46
 msgid ""
 "Either there is a typo in the .display file or you have an incompatible "
 "version of gDesklets."
@@ -187,24 +175,24 @@ msgstr "एक्स एम एल पद वर्णन त्रुटि"
 msgid "This .display file has invalid XML syntax."
 msgstr "यो दृश्य कार्डमा अवैध एक्सएमएल वाक्य संरचना छ।"
 
-#: ../factory/DisplayFactory.py:208
+#: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
 msgstr "फाइल रहन सकेन वा लोड हुन सकेन"
 
-#: ../factory/DisplayFactory.py:210
+#: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
 msgstr "अरु कार्यान्वयनका लागि चाहिने स्क्रिप्ट भएको एउटा फाइल उपलब्ध छैन।"
 
-#: ../factory/DisplayFactory.py:233
+#: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
 msgstr "सेन्सर लोड हुन सकेन"
 
-#: ../factory/DisplayFactory.py:249
+#: ../factory/DisplayFactory.py:243
 #, python-format
 msgid "&lt;%s&gt; needs a bind attribute"
 msgstr "&lt;%s&gt; लाई वाध्ने विशेषता आवश्यक छ"
 
-#: ../factory/DisplayFactory.py:251
+#: ../factory/DisplayFactory.py:245
 msgid "The &lt;prefs&gt; section of this desklet file is broken."
 msgstr "यो फाइलको &lt;छनोट&gt; भाग बिग्रियो।"
 
@@ -219,53 +207,57 @@ msgid ""
 "installed."
 msgstr "सेन्सर फेला पार्न सकेन। यो सामान्यतया स्थापना नगरिएको भन्ने वुझिन्छ।"
 
-#: ../gdesklets:29
+#: ../gdesklets:26
 msgid "You must NOT run gDesklets as super user (root)."
 msgstr "तपाईँले जीडेस्कलेटलाई उच्च प्रयोगकर्ताको (मूल) रूपमा चलाउन हुन्न।"
 
-#: ../gdesklets:43
+#: ../gdesklets:46
 msgid "Checking requirements:"
 msgstr "आवश्यकताहरू हुँदैनगरिँदै:"
 
-#: ../gdesklets:47
-msgid "Python version => 2.3.0 is required."
+#: ../gdesklets:50
+#, fuzzy
+msgid "Python version >= 2.3.0 is required."
 msgstr "पाइथोन संस्करण => २.३.० आवश्यक।"
 
-#: ../gdesklets:51
+#: ../gdesklets:54
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr "लिवएक्सपाट संस्करण १.९५.७ बिग्रियो। कृपया परिमार्जन गर्नुहोस् !"
 
-#: ../gdesklets:54
+#: ../gdesklets:57
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr "साक्स पार्सर चाहियो, केही सुसे संस्करण यो विना सिप गर्दछन।"
 
-#: ../gdesklets:58
+#: ../gdesklets:61
+#, fuzzy
 msgid ""
-"GTK python bindings (pygtk2) version >= 2.4.0 and GTK+ version >= 2.4.0 are "
-"required."
-msgstr "जिटिके पाईथओन घुम्तिहरू (पिवाईजिटिके२) संस्करण>२.४.० र जि टि के+संस्करंण>=२.४.० चाहिन्छ।"
-
-#: ../gdesklets:62
-msgid "ORBit python bindings (pyorbit) version == 2.0.1 are required."
-msgstr "अर्विट पाइथोन घुम्तिहरू (पिवाईओर्विट) संस्करण== २.०.१ चाहिन्छ।"
+"GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
+"are required."
+msgstr ""
+"जिटिके पाईथओन घुम्तिहरू (पिवाईजिटिके२) संस्करण>२.४.० र जि टि के+संस्करंण>=२.४.० चाहिन्छ।"
 
 #: ../gdesklets:65
+#, fuzzy
+msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
+msgstr "अर्विट पाइथोन घुम्तिहरू (पिवाईओर्विट) संस्करण== २.०.१ चाहिन्छ।"
+
+#: ../gdesklets:68
 msgid "bonobo python bindings are required."
 msgstr "वोनोवो पाइथोन घुम्तिहरू चाहिन्छ।"
 
-#: ../gdesklets:74
+#: ../gdesklets:77
 msgid "found"
 msgstr "फेला पर्यो"
 
-#: ../gdesklets:78
+#: ../gdesklets:81
 msgid "missing"
 msgstr "हराइरहेको"
 
-#: ../gdesklets:84
+#: ../gdesklets:87
 msgid "Version check failed."
 msgstr "संस्करण हुँदैनअसफल भयो।"
 
-#: ../gdesklets:85
+#: ../gdesklets:88
 #, c-format
 msgid ""
 "\n"
@@ -274,7 +266,7 @@ msgstr ""
 "\n"
 "%s\n"
 
-#: ../gdesklets:86
+#: ../gdesklets:89
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -290,7 +282,11 @@ msgstr ""
 "जीडेस्कलेट्सले काम गर्दैन। \n"
 "सुरुआत अहिले रद्द हुँनेछ !\n"
 
-#: ../gdesklets:102
+#: ../gdesklets:98
+msgid "Requirements checking done. Your system looks ok!"
+msgstr ""
+
+#: ../gdesklets:105
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
@@ -300,7 +296,7 @@ msgstr ""
 "तपाईँ पहिलो पटक जीडेस्कलेट चलाउँदै हुनुहुन्छ।\n"
 "जीडेस्कलेटले आवश्यकता परीक्षण अहिले सुरु गर्नेछ...\n"
 
-#: ../gdesklets:113
+#: ../gdesklets:116
 msgid ""
 "Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
@@ -348,103 +344,115 @@ msgstr ""
 "\t\t--ट्रे-प्रतिमा-होइन   (प्रणाली प्रतिमालाई अक्षम पार्दछ)\n"
 "\t\t--स्वच्छता     (एक्स ओआरजि सर्भरहरूमा स्वच्छता प्रदान गराउछ)\n"
 
-#: ../gdesklets:186 ../gdesklets:260
+#: ../gdesklets:161
+#, c-format
+msgid ""
+"Error while starting gdesklets-daemon\n"
+"More information about this crash is available in \"%s\"."
+msgstr ""
+
+#: ../gdesklets:164
+#, c-format
+msgid "Exception was: %s\n"
+msgstr ""
+
+#: ../gdesklets:189 ../gdesklets:258
 #, c-format
 msgid "Could not open desklet %s."
 msgstr "%s डेस्कलेट खोल्न सकेन।"
 
-#: ../gdesklets:268
+#: ../gdesklets:266
 msgid "Starting gdesklets-daemon..."
 msgstr "जीडेस्कलेट्स डेमन सुरु गर्दैछ..."
 
-#: ../gdesklets:274
+#: ../gdesklets:272
 msgid "Shutting down gdesklets-daemon..."
 msgstr "जीडेस्कलेट्स-डेमन बन्द हुँदैछ..."
 
-#: ../gdesklets:286
+#: ../gdesklets:284
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr "\"%s\" प्रोफाइलमा अहिले दृश्यहरूलाई खोल्नुहोस्:\n"
 
-#: ../gdesklets:291
+#: ../gdesklets:289
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr "\"%s\" प्रोफाइलमा अहिले कुनै डेस्कलेटहरू छैनन्"
 
-#: ../gdesklets:295
+#: ../gdesklets:293
 msgid "Restarting gdesklets-daemon..."
 msgstr "जीडेस्कलेट्स-डेमन पुन: सुरु गर्दैछ..."
 
-#: ../gdesklets:308
+#: ../gdesklets:306
 msgid "gdesklets-daemon is running"
 msgstr "जीडेस्कलेट्स-डेमन चलिरहेको छ"
 
-#: ../gdesklets:310
+#: ../gdesklets:308
 msgid "gdesklets-daemon is not running"
 msgstr "जीडेस्कलेट्स-डेमन चालु अवस्थामा छैन"
 
-#: ../gdesklets:314
+#: ../gdesklets:312
 #, c-format
 msgid "Current profile: %s"
 msgstr "हालको प्रोफाइल: %s"
 
-#: ../gdesklets:325
+#: ../gdesklets:323
 #, c-format
 msgid "New profile: %s"
 msgstr "नयाँ प्रोफाइल: %s"
 
-#: ../gdesklets:328
+#: ../gdesklets:326
 #, c-format
 msgid "Available profiles: %s"
 msgstr "उपलब्ध प्रोफाइलहरु: %s"
 
-#: ../gdesklets:332
+#: ../gdesklets:330
 #, c-format
 msgid "This is %s, version %s."
 msgstr "यो %s, संस्करण  %s"
 
-#: ../gdesklets:360
+#: ../gdesklets:358
 msgid "Nothing to slay."
 msgstr "घात गर्नुपर्ने केही छैन।"
 
-#: ../gdesklets:385
+#: ../gdesklets:382
 msgid "Invalid command. Please try one of the following commands:"
 msgstr "अवैध आज्ञा। कृपया निम्न आज्ञाहरू मध्ये एकलाई प्रयास गर्नुहोस्:"
 
-#: ../gdesklets-daemon:20
+#: ../gdesklets-daemon:27
 msgid "You need a recent version of PyGTK to run this program.\n"
 msgstr "तपाईँलाई यो चलाउनका लागि नयाँ संस्करणको PyGTK को आवश्यकता छ।\n"
 
-#: ../gdesklets-daemon:48
+#: ../gdesklets-daemon:52
 msgid "Could not fork daemon.\n"
 msgstr "डेमनलाई फ्रोक गर्न सकेन।\n"
 
-#: ../gdesklets-daemon:69 ../gdesklets-daemon:89
+#: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
 #, c-format
 msgid "The following error occurred: %s\n"
 msgstr "निम्न त्रुटि रहन गयो:%s\n"
 
-#: ../libdesklets/convert.py:21
+#: ../libdesklets/convert.py:22
 #, python-format
 msgid "%.2f TB"
 msgstr "%.2f टि बि"
 
-#: ../libdesklets/convert.py:23
+#: ../libdesklets/convert.py:24
 #, python-format
 msgid "%.2f GB"
 msgstr "%.2f जि वि"
 
-#: ../libdesklets/convert.py:25
+#: ../libdesklets/convert.py:26
 #, python-format
 msgid "%.2f MB"
 msgstr "%.2f एम वि"
 
-#: ../libdesklets/convert.py:27
+#: ../libdesklets/convert.py:28
 #, python-format
 msgid "%.2f kB"
 msgstr "%.2f के बि"
 
-#: ../libdesklets/convert.py:29
+#: ../libdesklets/convert.py:30
 #, python-format
 msgid "%d B"
 msgstr "%d बि"
@@ -453,12 +461,12 @@ msgstr "%d बि"
 msgid "About gDesklets"
 msgstr "डेस्कलेटहरूका बारेमा"
 
-#: ../main/client.py:283
+#: ../main/client.py:276
 #, python-format
 msgid "Connecting to daemon [%s]"
 msgstr "डेमनमा जोडिदै [%s]"
 
-#: ../main/client.py:300
+#: ../main/client.py:293
 msgid ""
 "Cannot establish connection to daemon: timeout!\n"
 "The log file might help you solving the problem."
@@ -466,98 +474,112 @@ msgstr ""
 "डेमनमा संपर्क जडान गर्न सक्दैन: समयसमाप्त !\n"
 "लग फाइलले तपाईँलाई सहयोग गर्न सक्छ।"
 
-#: ../main/client.py:306
+#: ../main/client.py:299
 #, python-format
 msgid "Connected to daemon in %d microseconds."
 msgstr "%d माईक्रोसेकेण्डमा डेमन मा सम्पर्क स्थापना भयो।"
 
-#: ../main/client.py:309
+#: ../main/client.py:302
 #, python-format
 msgid "Connected to daemon in %d milliseconds."
 msgstr "%d मिलिसेकेण्डमा डेमन मा सम्पर्क स्थापना भयो।"
 
-#: ../main/__init__.py:84
+#: ../main/__init__.py:71
 #, python-format
 msgid "Version %s"
 msgstr "संस्करण %s"
 
-#: ../main/__init__.py:87
+#: ../main/__init__.py:74
 msgid "Core Programming:"
 msgstr "कोर कार्यक्रम:"
 
-#: ../main/__init__.py:91
+#: ../main/__init__.py:77
 msgid "Architecture Design:"
 msgstr "बनावट डिजाईन:"
 
-#: ../main/__init__.py:94
+#: ../main/__init__.py:80
 msgid "GNOME Integration:"
 msgstr "जिनोम अनुकूलन:"
 
-#: ../main/__init__.py:98
+#: ../main/__init__.py:83
+#, fuzzy
+msgid "Additional Programming:"
+msgstr "कोर कार्यक्रम:"
+
+#: ../main/__init__.py:86
+msgid "Documentation:"
+msgstr ""
+
+#: ../main/__init__.py:89
 msgid "Artwork:"
 msgstr "चित्रकार्य:"
 
-#: ../main/__init__.py:101
+#: ../main/__init__.py:92
 msgid "Website:"
 msgstr "वेबसाइट:"
 
-#: ../main/__init__.py:104
+#: ../main/__init__.py:95
 msgid "Thank you:"
 msgstr "तपाईँलाई धन्यवाद:"
 
-#: ../main/Starter.py:103
+#: ../main/Starter.py:102
 msgid "_Manage desklets"
 msgstr "डेस्कलेट्सलाई व्यावस्थापन गर्नुहोस्"
 
-#: ../main/Starter.py:106
+#: ../main/Starter.py:105
 msgid "_Configuration"
 msgstr "कन्फिगरेसन"
 
-#: ../main/Starter.py:108
+#: ../main/Starter.py:107
 msgid "_View log"
 msgstr "लग हेर्नुहोस्"
 
-#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:41
+#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
 msgid "_About..."
 msgstr "बारेमा..."
 
-#: ../main/Starter.py:114
+#: ../main/Starter.py:113
 msgid "_Stop daemon"
 msgstr "डेमन रोक्नुहोस्"
 
-#: ../main/Starter.py:230
+#: ../main/Starter.py:224
 #, python-format
 msgid "Could not open desklet file \"%s\""
 msgstr "डेस्कलेट फाइल \"%s\" खोल्न सकेन"
 
-#: ../main/Starter.py:231
+#: ../main/Starter.py:225
 msgid "The desklet file could not be opened because the file was not readable."
 msgstr "फाइल पढ्नसकिने नभएकोले डेस्कलेट फाइल खुल्न सकेन।"
 
-#. CVS warning :)
-#: ../main/transition.py:42
+#: ../main/transition.py:39
+#, fuzzy
 msgid ""
-"This is a CVS version of gDesklets. CVS versions represent the current state "
-"of development and might be unstable or cause problems from time to time.\n"
+"This is a unstable version of gDesklets. Unstable versions represent the "
+"current state of development and might be unstable or cause problems from "
+"time to time.\n"
 "\n"
 "If you're new to gDesklets, it is thus highly recommended to <b>not</b> use "
-"a CVS version, but a stable release!\n"
+"this version, but a stable release!\n"
 "\n"
-"If you still want to run the CVS version instead of a stable release "
+"If you still want to run the unstable version instead of a stable release "
 "version, we'd highly appreciate it if you report any weird behavior to the "
 "developers.\n"
 "\n"
-"Experienced users are encouraged to try a CVS version, though!"
+"Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
-"यो जीडेस्कलेटको सी भी एस संस्करण हो। सी भी एस संस्करणले समय समयको समस्याहरूको कारण वा अस्थिर हुन सक्ने र हालको विकासको वस्तुस्थितिको प्रतिनिधित्व गर्दछ।\n"
+"यो जीडेस्कलेटको सी भी एस संस्करण हो। सी भी एस संस्करणले समय समयको समस्याहरूको कारण वा "
+"अस्थिर हुन सक्ने र हालको विकासको वस्तुस्थितिको प्रतिनिधित्व गर्दछ।\n"
 "\n"
-"यदि तपाईँ जीडेस्कलेटका लागि नयाँ हुनुहुन्छ भने सी भी एसको <b>संस्करण</b> प्रयोग नगर्न सुझाव गरिन्छ , तर एउटा स्थिर निष्काशन !\n"
+"यदि तपाईँ जीडेस्कलेटका लागि नयाँ हुनुहुन्छ भने सी भी एसको <b>संस्करण</b> प्रयोग नगर्न सुझाव "
+"गरिन्छ , तर एउटा स्थिर निष्काशन !\n"
 "\n"
-"यदि तपाईँले अझै पनि स्थिर निष्काशित संस्करणको सट्टामा सि भी एस संस्करण चलाउन चाहुनुहुन्छ भने, यदि तपाईँले विकासकर्ताहरूलाई केही राम्रो व्यवहार प्रतिवेदन गर्नुभयो भने हामिले यसलाई उच्च मूल्याङ्कन गर्नेछौ।\n"
+"यदि तपाईँले अझै पनि स्थिर निष्काशित संस्करणको सट्टामा सि भी एस संस्करण चलाउन चाहुनुहुन्छ "
+"भने, यदि तपाईँले विकासकर्ताहरूलाई केही राम्रो व्यवहार प्रतिवेदन गर्नुभयो भने हामिले यसलाई "
+"उच्च मूल्याङ्कन गर्नेछौ।\n"
 "\n"
 "यद्यपी, पुरानो प्रयोगकर्ताहरूलाई सी भी एस संस्करण प्रयास गर्न प्रोत्साहन गरिनेछ !"
 
-#: ../main/transition.py:54
+#: ../main/transition.py:51
 msgid ""
 "This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
 "Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
@@ -568,14 +590,18 @@ msgid ""
 "Thanks for testing this release candidate!"
 msgstr ""
 "यो एउटा आउदै गरेको जीडेस्कलेट निष्काशनको <b>निष्काशन उम्मेद्धार</b>हो।\n"
-"कृपया यसलाई परीक्षण गर्नुहोस् र <i>http://bugzilla.gnome.org</i>मा बग प्रतिवेदन गर्नुहोस्\n"
-"संम्भवत सो संस्करणले तपाईँको कन्फिगरेसन बिग्रार्ने छ वा एउटा पहिले निष्काशित बाट पूर्वावस्थामा ल्याउने छैन। जि डिस्कलेट अझ सम्म पनि यसको विकासको पहिलो चरणमा भए देखि धेरै जसो यो अन्तराष्ट्रिय हुन्छ, \n"
+"कृपया यसलाई परीक्षण गर्नुहोस् र <i>http://bugzilla.gnome.org</i>मा बग प्रतिवेदन "
+"गर्नुहोस्\n"
+"संम्भवत सो संस्करणले तपाईँको कन्फिगरेसन बिग्रार्ने छ वा एउटा पहिले निष्काशित बाट "
+"पूर्वावस्थामा ल्याउने छैन। जि डिस्कलेट अझ सम्म पनि यसको विकासको पहिलो चरणमा भए देखि धेरै "
+"जसो यो अन्तराष्ट्रिय हुन्छ, \n"
 "\n"
 "यो निष्काशन उम्मेद्धारको परीक्षणका लागि धन्यवाद !"
 
 #. our informative transition message which we can change with
 #. every release
-#: ../main/transition.py:65
+#: ../main/transition.py:62
+#, fuzzy
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -584,15 +610,19 @@ msgid ""
 "change that in the configuration dialog.\n"
 "\n"
 "Please note that due to limitations of older X servers, you might see blocks "
-"around desklets in Float mode. This cannot be solved in a satisfying way "
-"except for switching the X server to real translucency (Xorg 6.8 and above)."
+"around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
-"जीडेस्कलेटको संस्करणले फ्लोट मोडको विशेषता दिन्छ: एउटा कुञ्जी थिच्नुहोस् र तपाईँको सबै डेस्कलेटहरू अगाडिमा आउने छन्, तपाईँको अनुप्रयोगको माथि फ्लोट गर्दैछ, तपाईँ फेरी सो कुञ्जी न थिचे सम्म !\n"
-"पूर्वनिर्धारित कुञ्जी बाइन्डिङ्गहरू &lt;Shift&gt; &lt;F12&gt; हुन्, तर तपाईँले त्यो कन्फिगरेसन संवादमा सजिलै परिवर्तन गर्न सक्नुहुन्छ।\n"
+"जीडेस्कलेटको संस्करणले फ्लोट मोडको विशेषता दिन्छ: एउटा कुञ्जी थिच्नुहोस् र तपाईँको सबै "
+"डेस्कलेटहरू अगाडिमा आउने छन्, तपाईँको अनुप्रयोगको माथि फ्लोट गर्दैछ, तपाईँ फेरी सो कुञ्जी न "
+"थिचे सम्म !\n"
+"पूर्वनिर्धारित कुञ्जी बाइन्डिङ्गहरू &lt;Shift&gt; &lt;F12&gt; हुन्, तर तपाईँले त्यो "
+"कन्फिगरेसन संवादमा सजिलै परिवर्तन गर्न सक्नुहुन्छ।\n"
 "\n"
-"कृपया याद राख्नुहोस् कि पुरानो एक्स सर्भरहरूको सिमितताले, तपाईँले फ्लोट मोडमा डेस्कलेटहरूको वरिपरि खण्डहरू हेर्न सक्नुहुन्छ। वास्तविक ट्यानलुन्सी (Xorg 6.8 र माथि)लाई एक्स सर्भर स्विच गर्नका लागि बाहेक यसले सन्तुष्ट पारामा हल गर्न सक्दैन।"
+"कृपया याद राख्नुहोस् कि पुरानो एक्स सर्भरहरूको सिमितताले, तपाईँले फ्लोट मोडमा डेस्कलेटहरूको "
+"वरिपरि खण्डहरू हेर्न सक्नुहुन्छ। वास्तविक ट्यानलुन्सी (Xorg 6.8 र माथि)लाई एक्स सर्भर स्विच "
+"गर्नका लागि बाहेक यसले सन्तुष्ट पारामा हल गर्न सक्दैन।"
 
-#: ../main/transition.py:80
+#: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
 msgstr "कृपया याद राख्नुहोस् (यो सन्देश एक पटक मात्र देखिन्छ):"
 
@@ -618,11 +648,11 @@ msgstr "%s इन्टरफेसका लागि नियन्त्र�
 msgid "This means that a functionality won't be available during execution!"
 msgstr "यसको मतलव कार्यगतता कार्यान्वयनको बेलामा उपलब्ध हुन सक्दैन !"
 
-#: ../scripting/Script.py:234
+#: ../scripting/Script.py:241
 msgid "Security Risk"
 msgstr "सुरक्षा जोखिम"
 
-#: ../scripting/Script.py:235
+#: ../scripting/Script.py:242
 #, python-format
 msgid ""
 "The desklet %s wants to execute a system command:\n"
@@ -645,15 +675,15 @@ msgstr ""
 "यदि तपाईँ आदेश हानिकारक छैन भन्ने कुरामा यकिन हुनुहुन्छ भने, तपाईँ स्थायि रूपमा यो डेस्कलेट "
 "दृष्टान्तलाई यसमा चल्न दिन सक्नुहुन्छ।"
 
-#: ../scripting/Script.py:248
+#: ../scripting/Script.py:255
 msgid "Deny!"
 msgstr "अस्विकार !"
 
-#: ../scripting/Script.py:249
+#: ../scripting/Script.py:256
 msgid "Allow once"
 msgstr "एक पटक आज्ञा दिनुहोस्"
 
-#: ../scripting/Script.py:250
+#: ../scripting/Script.py:257
 msgid "Allow for this desklet"
 msgstr "यो डेस्कलेटका लागि आज्ञा दिनुहोस्"
 
@@ -690,19 +720,19 @@ msgstr "तहमा प्रयोग भएको फन्टको रङ #
 msgid "%s Control"
 msgstr "%s नियन्त्रण"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:55
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:54
 msgid "Interface Name"
 msgstr "इन्टरफेसको नाम"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:58
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:57
 msgid "Property Name"
 msgstr "गुण नाम"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:61
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:60
 msgid "Property Access"
 msgstr "गुण पहुँच"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:64
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:63
 msgid "Property Description"
 msgstr "गुण विवरण"
 
@@ -753,10 +783,12 @@ msgstr "हटाउन सकेन"
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
-msgstr "डेस्कलेट फाइल हटाउन सकेन। यसको समान्यतया यो अर्थ लाग्छ कि तपाईँले यसमा लेख्न सक्नुहुन्न।"
+msgstr ""
+"डेस्कलेट फाइल हटाउन सकेन। यसको समान्यतया यो अर्थ लाग्छ कि तपाईँले यसमा लेख्न सक्नुहुन्न।"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:143
-msgid "The desklet will be removed from your system and no longer be available."
+msgid ""
+"The desklet will be removed from your system and no longer be available."
 msgstr "डेस्कलेट तपाईँको प्रणाली बाट हट्ने छ र धेरै समय उपलब्ध हुने छैन।"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:155
@@ -785,13 +817,14 @@ msgid "Show tips at startup"
 msgstr "सुरुआतमा टिप्स देखाउनुहोस्"
 
 #: ../shell/plugins/Help/tips.py:2
+#, fuzzy
 msgid ""
 "You can find lots of desktop applets for use\n"
 "with gDesklets at\n"
 "\n"
 "http://www.gdesklets.org\n"
 "and\n"
-"http://gdesklets.gnomedesktop.org"
+"http://gdesklets.zencomputer.ca/"
 msgstr ""
 "जिडेस्कलेटसँग प्रयोगका लागि डेस्कटप एप्लेटको\n"
 "लटहरू फेला पार्न सक्नुहुन्छ\n"
@@ -911,7 +944,8 @@ msgid "Installation failed"
 msgstr "स्थापना असफल"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:116
-msgid "The package could not be installed because it contained no installable files."
+msgid ""
+"The package could not be installed because it contained no installable files."
 msgstr "प्याकेज स्थापना हुन सकेन किनकि यसमा स्थापनायोग्य फाइल छैनन्।"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:119
@@ -1012,6 +1046,25 @@ msgid "Runtime Error"
 msgstr "रनटाइम त्रुटि"
 
 #: ../utils/error.py:160
-msgid "An error occured while executing a desklet."
+#, fuzzy
+msgid "An error occurred while executing a desklet."
 msgstr "डेस्कलेट कार्यान्वयन गर्ने बेलामा एउटा त्रुटि रहन गयो "
 
+#~ msgid "XComposite support (requires composition manager)"
+#~ msgstr "Xसंयुक्त समर्थन (संयोजन प्रबन्धक आवश्यक पर्दछ)"
+
+#~ msgid ""
+#~ "\n"
+#~ "     <small><i>"
+#~ msgstr ""
+#~ "\n"
+#~ "     <small><i>"
+
+#~ msgid "this does not work with GTK 2.8 or higher for technical reasons"
+#~ msgstr "यसले GTK 2.8 सँग काम गर्दैन वा प्राविधिक कारणहरूले गर्दा उच्च"
+
+#~ msgid "</i></small>"
+#~ msgstr "</i></small>"
+
+#~ msgid "Translucency (takes effect after restarting a display)"
+#~ msgstr "ट्यान्सुलेन्सी (प्रदर्शन फेरी सुरु गरे पछि प्रभाव लिन्छ)"

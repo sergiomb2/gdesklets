@@ -1,3 +1,12 @@
+2008-03-02  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* config/ConfigURI.py: first version of new attribute (action)
+	* doc/book/book.xml
+	* doc/book/ctrl.xml
+	* doc/book/ctrl-included.xml: updated information, new chapter: included Controls 
+	* main/__init__.py
+	* configure.in: updated information and new version (0.36.1beta)
+
 2008-01-11  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* Controls/Time/ITime.py

@@ -4,7 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets\n"
-"POT-Creation-Date: 2003-10-27 04:56+0800\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-03-02 21:49+0100\n"
 "PO-Revision-Date: 2003-10-27 04:59+0800\n"
 "Last-Translator: Hasbullah Bin Pit <sebol@ikhlas.com>\n"
 "Language-Team: Projek Gabai <gabai-penyumbang@lists.sourceforge.net>\n"
@@ -12,342 +13,966 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/gdesklets.desktop.in.h:1
-msgid "A desktop applet system for GNOME"
-msgstr "Sistem aplet desktop bagi GNOME"
+#: ../config/ConfigDialog.py:113
+msgid "Invalid Function Call"
+msgstr ""
 
-#: data/gdesklets.keys.in.h:1
-msgid "gDesklets display file"
-msgstr "fail paparan gDesklets"
+#: ../config/ConfigDialog.py:114
+#, python-format
+msgid ""
+"There is no function called <b>%s</b>.\n"
+"This means that there's an error in the desklet's code. You should inform "
+"the author of the desklet about this problem."
+msgstr ""
 
-#.
-#. Class for the display configurator. It displays the configurators of the
-#. sensors of a display.
-#.
-#: display/DisplayConfigurator.py:15
+#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
+#, fuzzy
+msgid "This desklet is not configurable."
+msgstr "Paparan ini tak boleh dikonfigurasi."
+
+#: ../config/ConfigUnit.py:57
+msgid "pixel"
+msgstr ""
+
+#: ../config/ConfigUnit.py:58
+#, fuzzy
+msgid "point"
+msgstr "Font"
+
+#: ../config/ConfigUnit.py:59
+msgid "cm"
+msgstr ""
+
+#: ../config/ConfigUnit.py:60
+msgid "inch"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:17
+msgid "Editor to view/edit the desklet source code"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:18
+msgid "Your favorite editor"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:20
+msgid "Screen Resolution (DPI)"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:22
+msgid ""
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
+"\"</b> wide"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:26
+msgid "Behavior"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:27
+msgid "Show _tray icon (takes effect after restart)"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:29
+msgid "Show _notification while loading a desklet"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:31
+msgid "Key for toggling Float mode:"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
+#: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
 msgstr "Kongfigurasi"
 
-#. close button
-#. close functions
-#. end for
-#. use a special page when there are no config options
-#: display/DisplayConfigurator.py:40
-msgid "This display is not configurable."
-msgstr "Paparan ini tak boleh dikonfigurasi."
+#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
+msgid "A desktop applet system for GNOME"
+msgstr "Sistem aplet desktop bagi GNOME"
 
-#. only use the notebook when there are more than one pages
-#. end if
-#.
-#. Reacts on closing the window.
-#.
-#. process any callbacks before destroying yourself
-#.
-#. Factory class for dynamically loaded Sensors.
-#.
-#. a set to remember the modules loaded so far
-#. get instance of the configuration manager
-#.
-#. Creates and returns a Sensor of the given type or None if the Sensor
-#. could not be created.
-#.
-#. reload old modules to force using the latest version; this
-#. means we can edit modules while running gDesklets
-#. a stack trace could be useful for debugging sensors
-#. a stack trace could be useful for debugging sensors
-#. end for
-#: factory/SensorFactory.py:79
-#, python-format
-msgid "Could not load sensor '%(name)s'"
-msgstr "Tak dapat memuatkan penderia  '%(name)s'"
+#: ../data/gdesklets.xml.in.h:1
+#, fuzzy
+msgid "gDesklets display"
+msgstr "fail paparan gDesklets"
 
-#: factory/SensorFactory.py:80
-msgid "An error occurred while loading a sensor. This most likely means that the sensor is broken or simply not installed."
-msgstr "Ralat berlaku semasa memuat penderia. Mungkin bermaksud penderia rosak atau tak dipasang."
-
-#.
-#. Class for creating Displays from XML data.
-#.
-#.
-#. Parses the given XML data and returns a new Display object.
-#.
-#. parse display data
-#. abort if an parse error occurred
-#. add the sensors
-#. add the DefaultSensor
-#. we don't wanna override watch settings from the .display
-#. add the children and configure
-#. a stack trace could be useful for debugging
-#. make the corrupt display visible so that the user can
-#. remove it
-#: factory/DisplayFactory.py:93
-msgid "Error while configuring display"
-msgstr "Ralat bila mengkonfigurasikan paparan"
-
-#: factory/DisplayFactory.py:94
-msgid "A display could not be configured properly. It will most likely be broken and you should consider removing it."
-msgstr "Paparan tak dapat dikonfigurasikan dengan betul. Ianya mungkin telah rosak dan anda patut mempertimbangkan untuk membuangnya."
-
-#.
-#. Creates a TargetSettings object from the given Attributes object.
-#.
-#. ignore the <meta> tag for now
-#. if there is no ID given, guess a unique one
-#. remember everything for later
-#. nesting errors in XML are detected by the SAX parser; if we get
-#. here, it means our parser is buggy, not the XML input
-#.
-#. Class for parsing command line arguments.
-#.
-#.
-#. Parses the given list of command line arguments. This is usually
-#. sys.argv[1:].
-#.
-#. end for
-#. load displays
-#: main/CmdLineParser.py:51
-msgid "Could not add display"
-msgstr "Tak dapat menambah paparan"
-
-#: main/CmdLineParser.py:52
-msgid "The display could not be added because the file does not exist."
-msgstr "Paparan tak dapat ditambah kerana fail itu tidak wujud."
-
-#. end for
-#. end if
-#. This class starts, restarts and kills Displays
-#. the set of open displays as a hashtable "id -> display"
-#. watches main/displays in the configuration base and calls on_watch if
-#. something's changed
-#. gets current displays from the configuration base
-#. check whether there are already some displays; if there aren't any
-#. welcome new users
-#.
-#. Welcomes new users and sets up the configuration base.
-#.
-#: main/Starter.py:46
-#, python-format
-msgid "Welcome to %(name)s<i>!</i>"
-msgstr "Selamat Datang ke %(name)s<i>!</i>"
-
-#: main/Starter.py:47
-#, python-format
-msgid ""
-"It looks like you are running %(name)s for the first time.\n"
-"\n"
-"You can add new displays by launching them in your file manager.\n"
-"\n"
-"<b>Have fun,</b>\n"
-"  <i>the %(name)s developers</i>"
-msgstr ""
-"Nampaknya anda melaksanakan %(name)s buat pertama kali.\n"
-"\n"
-"Anda boleh menambah paparan dengan melancarkannya pada pengurus fail nanda.\n"
-"\n"
-"<b>Selamat berbahagia,</b>\n"
-"  <i>Pembangun %(name)s </i>"
-
-#.
-#. Reacts on observer messages from the display.
-#.
-#. end if
-#.
-#. Reacts on changes in the list of displays.
-#.
-#. check whether displays have been added
-#. end for
-#. check whether displays have been removed
-#. end for
-#.
-#. Adds the given display.
-#.
-#. end if
-#.
-#. Creates and returns a new display from the given data, or None in case
-#. of an error.
-#.
-#: main/Starter.py:128
-#, python-format
-msgid "Could not open display file '%(path)s'"
-msgstr "Tak dapat membuka fail paparan '%(path)s'"
-
-#: main/Starter.py:130
-msgid "The display file could not be opened because the file was not readable."
-msgstr "Fail paparan tak dapat dibuka kerana fail tidak boleh dibaca."
-
-#: main/Starter.py:145
-#, python-format
-msgid "Invalid display file '%(path)s'"
-msgstr "Fail paparan '%(path)s' tidak sah"
-
-#: main/Starter.py:146
-msgid "The display file contains invalid data and could not be loaded."
-msgstr "Fail paparan mengandungi data tidak sah dan tak dapat dimuatkan."
-
-#.
-#. Removes the given display.
-#.
-#.
-#. Purges unused config entries.
-#.
-#. TODO: implement it in a more efficient way
-#.
-#. end for
-#. get paths to purge
-#. relative paths are relative to USERHOME
-#. make sure that only paths below USERHOME can be purged
-#. end for
-#. end for
-#.
-#. Starts up all displays.
-#.
-#.
-#. Abstract class for all Sensors. Every Sensor has to inherit from this class.
-#.
-#. the path of this sensor
-#. configuration manager for sensor properties
-#. the ID of this sensor
-#. the configuration watcher callback
-#. flag for stopping the sensor
-#. converter for data types
-#.
-#. Reacts on changes in the configuration and delegates the call to the
-#. user's callback.
-#.
-#.
-#. Sets the ID of this sensor.
-#.
-#.
-#. Returns the ID of this sensor. The ID is not yet valid in the
-#. constructor.
-#.
-#.
-#. Returns the path of this sensor.
-#.
-#.
-#. Returns a new empty TargetSettings object.
-#.
-#.
-#. Sends the given TargetSettings object to the Display.
-#.
-#.
-#. Adds a timeout function with the given interval in ms.
-#. The callback function must return TRUE in order to be called again.
-#.
-#.
-#. Adds and runs a new thread.
-#.
-#. the thread should not start before setup is complete, therefore
-#. we are using the GTK idle handler
-#.
-#. Sends an action to this sensor.
-#.
-#.
-#. Method for handling action calls from the display. Sensors have to
-#. override this method.
-#.
-#.
-#. Stops this sensor and cleans up.
-#.
-#. shut down sensor
-#.
-#. Returns whether this sensor is stopped. Use this method to check if your
-#. threads have to terminate.
-#.
-#.
-#. Executes tasks for sensor shutdown. Sensors may override this method.
-#.
-#.
-#. Sets the configuration id for this sensor. If the user has set a callback
-#. function for watching the config, the config will be watched.
-#.
-#.
-#. Returns the unique config ID of this sensor.
-#.
-#.
-#. Registers a watcher for config changes.
-#.
-#.
-#. Sets the data types to be used for the configuration values.
-#.
-#.
-#. Sets the paths to remove when the config gets purged.
-#.
-#.
-#. Creates and returns an empty new sensor configurator.
-#.
-#.
-#. Returns the configurator of this sensor.
-#.
-#.
-#. Method for duplicating the display using this sensor
-#.
-#.
-#. Opens the given menu.
-#.
-#: sensor/Sensor.py:295
-msgid "_Configure display"
+#: ../display/Display.py:85
+#, fuzzy
+msgid "_Configure desklet"
 msgstr "_Konfigurasi paparan"
 
-#: sensor/Sensor.py:296
-msgid "Re_start display"
+#: ../display/Display.py:87
+msgid "_Move desklet"
+msgstr ""
+
+#: ../display/Display.py:90
+msgid "_View Source"
+msgstr ""
+
+#: ../display/Display.py:93
+#, fuzzy
+msgid "Re_start desklet"
 msgstr "Ulang_hidup paparan"
 
-#: sensor/Sensor.py:297
-msgid "_Remove display"
+#: ../display/Display.py:95
+#, fuzzy
+msgid "_Remove desklet"
 msgstr "_Buang paparan"
 
-#: sensor/Sensor.py:299
+#: ../display/Display.py:98
 msgid "_About"
 msgstr "_Perihal"
 
-#: sensor/Sensor.py:301
-msgid "_Quit"
-msgstr "_Keluar"
+#: ../display/Display.py:337
+msgid "_Readme"
+msgstr ""
 
-#: sensor/Sensor.py:333
-msgid "translator_credits"
-msgstr "Hasbullah Bin Pit <sebol@ikhlas.com>"
+#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
+msgid "Do you really want to remove this desklet ?"
+msgstr ""
 
-#. set the icon
-#.
-#. FontSelector sensor by Psi (psiz _at_ free _dot_ fr)
-#. Adopted and modified by Martin Grimme.
-#.
-#. the number of fonts
-#. the font settings
-#. the color settings
-#. setup configuration entries
-#. end for
-#.
-#. Font init
-#.
-#. end if
-#: Sensors/FontSelector/__init__.py:86
+#: ../display/Display.py:1116
+msgid ""
+"This desklet will no longer be displayed and its configuration will be "
+"purged."
+msgstr ""
+
+#: ../display/DisplayTarget.py:417
+#, python-format
+msgid "Element \"%s\" does not exist"
+msgstr ""
+
+#: ../display/DisplayTarget.py:418
+msgid ""
+"The <tt>relative-to</tt> property requires a reference to an existing "
+"display element within the same parent container."
+msgstr ""
+
+#: ../display/targetregistry.py:45
+#, python-format
+msgid "Unknown element <b>&lt;%s&gt;</b>"
+msgstr ""
+
+#: ../display/targetregistry.py:46
+msgid ""
+"Either there is a typo in the .display file or you have an incompatible "
+"version of gDesklets."
+msgstr ""
+
+#: ../factory/DisplayFactory.py:89 ../utils/DOM.py:31
+msgid "XML parse error"
+msgstr ""
+
+#: ../factory/DisplayFactory.py:90
+#, fuzzy
+msgid "This .display file has invalid XML syntax."
+msgstr "Fail paparan mengandungi data tidak sah dan tak dapat dimuatkan."
+
+#: ../factory/DisplayFactory.py:202
+msgid "File doesn't exist or couldn't be loaded"
+msgstr ""
+
+#: ../factory/DisplayFactory.py:204
+msgid "A file which contains a script isn't available for further execution."
+msgstr ""
+
+#: ../factory/DisplayFactory.py:227
+#, fuzzy
+msgid "Could not load sensor"
+msgstr "Tak dapat memuatkan penderia  '%(name)s'"
+
+#: ../factory/DisplayFactory.py:243
+#, python-format
+msgid "&lt;%s&gt; needs a bind attribute"
+msgstr ""
+
+#: ../factory/DisplayFactory.py:245
+msgid "The &lt;prefs&gt; section of this desklet file is broken."
+msgstr ""
+
+#: ../factory/SensorFactory.py:75
+#, fuzzy, python-format
+msgid "Could not find sensor '%(name)s'"
+msgstr "Tak dapat memuatkan penderia  '%(name)s'"
+
+#: ../factory/SensorFactory.py:76
+msgid ""
+"A sensor could not be found. This usually means that it has not been "
+"installed."
+msgstr ""
+
+#: ../gdesklets:26
+msgid "You must NOT run gDesklets as super user (root)."
+msgstr ""
+
+#: ../gdesklets:46
+msgid "Checking requirements:"
+msgstr ""
+
+#: ../gdesklets:50
+msgid "Python version >= 2.3.0 is required."
+msgstr ""
+
+#: ../gdesklets:54
+msgid "libexpat version 1.95.7 is broken. Please upgrade!"
+msgstr ""
+
+#: ../gdesklets:57
+msgid "SAX parser is required, some SuSE versions ship without it."
+msgstr ""
+
+#: ../gdesklets:61
+msgid ""
+"GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
+"are required."
+msgstr ""
+
+#: ../gdesklets:65
+msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
+msgstr ""
+
+#: ../gdesklets:68
+msgid "bonobo python bindings are required."
+msgstr ""
+
+#: ../gdesklets:77
+msgid "found"
+msgstr ""
+
+#: ../gdesklets:81
+msgid "missing"
+msgstr ""
+
+#: ../gdesklets:87
+msgid "Version check failed."
+msgstr ""
+
+#: ../gdesklets:88
+#, c-format
+msgid ""
+"\n"
+"%s\n"
+msgstr ""
+
+#: ../gdesklets:89
+msgid ""
+"Please make sure that the required software is installed.\n"
+"Also try to avoid having multiple versions of a library/binding on your "
+"system.\n"
+"gDesklets won't work if you don't have all necessary dependencies installed\n"
+"on your system.\n"
+"\n"
+"THE STARTUP WILL BE CANCELLED NOW!\n"
+msgstr ""
+
+#: ../gdesklets:98
+msgid "Requirements checking done. Your system looks ok!"
+msgstr ""
+
+#: ../gdesklets:105
+msgid ""
+"\n"
+"You're running gDesklets for the first time.\n"
+"gDesklets will start a requirements check now...\n"
+msgstr ""
+
+#: ../gdesklets:116
+msgid ""
+"Usage: gdesklets [option] <command> [arguments...]\n"
+"\n"
+"\t<command>\n"
+"\t\topen    <files>   (Opens the given desklet files)\n"
+"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
+"\t\tstop              (Stops the gDesklets daemon)\n"
+"\t\tlist              (Lists open desklets)\n"
+"\t\trestart           (Restarts the gDesklets daemon)\n"
+"\t\tprofile <profile> (Switches to the given profile)\n"
+"\t\tprofile           (Shows the current and the available profiles)\n"
+"\t\tshell             (Opens the graphical shell)\n"
+"\t\tslay              (Kills the daemon -- use in emergency)\n"
+"\t\tstatus            (Checks daemon status)\n"
+"\t\tabout             (Prints information about gDesklets)\n"
+"\t\tversion           (Prints gDesklets version)\n"
+"\t\tconfigure         (Opens the configuration dialog)\n"
+"\t\thelp              (Displays this text)\n"
+"\t\tcheck             (Checks requirements)\n"
+"\n"
+"\t[option]\n"
+"\t\t--no-tray-icon    (disables the systray icon)\n"
+"\t\t--translucent     (enables translucency on the xorg servers)\n"
+msgstr ""
+
+#: ../gdesklets:161
+#, c-format
+msgid ""
+"Error while starting gdesklets-daemon\n"
+"More information about this crash is available in \"%s\"."
+msgstr ""
+
+#: ../gdesklets:164
+#, c-format
+msgid "Exception was: %s\n"
+msgstr ""
+
+#: ../gdesklets:189 ../gdesklets:258
+#, fuzzy, c-format
+msgid "Could not open desklet %s."
+msgstr "Tak dapat membuka fail paparan '%(path)s'"
+
+#: ../gdesklets:266
+msgid "Starting gdesklets-daemon..."
+msgstr ""
+
+#: ../gdesklets:272
+msgid "Shutting down gdesklets-daemon..."
+msgstr ""
+
+#: ../gdesklets:284
+#, fuzzy, c-format
+msgid "Currently open displays in profile \"%s\":\n"
+msgstr "Tak dapat membuka fail paparan '%(path)s'"
+
+#: ../gdesklets:289
+#, c-format
+msgid "Currently there aren't any desklets in profile \"%s\""
+msgstr ""
+
+#: ../gdesklets:293
+msgid "Restarting gdesklets-daemon..."
+msgstr ""
+
+#: ../gdesklets:306
+msgid "gdesklets-daemon is running"
+msgstr ""
+
+#: ../gdesklets:308
+msgid "gdesklets-daemon is not running"
+msgstr ""
+
+#: ../gdesklets:312
+#, c-format
+msgid "Current profile: %s"
+msgstr ""
+
+#: ../gdesklets:323
+#, c-format
+msgid "New profile: %s"
+msgstr ""
+
+#: ../gdesklets:326
+#, c-format
+msgid "Available profiles: %s"
+msgstr ""
+
+#: ../gdesklets:330
+#, c-format
+msgid "This is %s, version %s."
+msgstr ""
+
+#: ../gdesklets:358
+msgid "Nothing to slay."
+msgstr ""
+
+#: ../gdesklets:382
+msgid "Invalid command. Please try one of the following commands:"
+msgstr ""
+
+#: ../gdesklets-daemon:27
+msgid "You need a recent version of PyGTK to run this program.\n"
+msgstr ""
+
+#: ../gdesklets-daemon:52
+msgid "Could not fork daemon.\n"
+msgstr ""
+
+#: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
+#, c-format
+msgid "The following error occurred: %s\n"
+msgstr ""
+
+#: ../libdesklets/convert.py:22
+#, python-format
+msgid "%.2f TB"
+msgstr ""
+
+#: ../libdesklets/convert.py:24
+#, python-format
+msgid "%.2f GB"
+msgstr ""
+
+#: ../libdesklets/convert.py:26
+#, python-format
+msgid "%.2f MB"
+msgstr ""
+
+#: ../libdesklets/convert.py:28
+#, python-format
+msgid "%.2f kB"
+msgstr ""
+
+#: ../libdesklets/convert.py:30
+#, python-format
+msgid "%d B"
+msgstr ""
+
+#: ../main/AboutDialog.py:21
+msgid "About gDesklets"
+msgstr ""
+
+#: ../main/client.py:276
+#, python-format
+msgid "Connecting to daemon [%s]"
+msgstr ""
+
+#: ../main/client.py:293
+msgid ""
+"Cannot establish connection to daemon: timeout!\n"
+"The log file might help you solving the problem."
+msgstr ""
+
+#: ../main/client.py:299
+#, python-format
+msgid "Connected to daemon in %d microseconds."
+msgstr ""
+
+#: ../main/client.py:302
+#, python-format
+msgid "Connected to daemon in %d milliseconds."
+msgstr ""
+
+#: ../main/__init__.py:71
+#, python-format
+msgid "Version %s"
+msgstr ""
+
+#: ../main/__init__.py:74
+msgid "Core Programming:"
+msgstr ""
+
+#: ../main/__init__.py:77
+msgid "Architecture Design:"
+msgstr ""
+
+#: ../main/__init__.py:80
+msgid "GNOME Integration:"
+msgstr ""
+
+#: ../main/__init__.py:83
+msgid "Additional Programming:"
+msgstr ""
+
+#: ../main/__init__.py:86
+msgid "Documentation:"
+msgstr ""
+
+#: ../main/__init__.py:89
+msgid "Artwork:"
+msgstr ""
+
+#: ../main/__init__.py:92
+msgid "Website:"
+msgstr ""
+
+#: ../main/__init__.py:95
+msgid "Thank you:"
+msgstr ""
+
+#: ../main/Starter.py:102
+msgid "_Manage desklets"
+msgstr ""
+
+#: ../main/Starter.py:105
+#, fuzzy
+msgid "_Configuration"
+msgstr "Kongfigurasi"
+
+#: ../main/Starter.py:107
+msgid "_View log"
+msgstr ""
+
+#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
+#, fuzzy
+msgid "_About..."
+msgstr "_Perihal"
+
+#: ../main/Starter.py:113
+msgid "_Stop daemon"
+msgstr ""
+
+#: ../main/Starter.py:224
+#, fuzzy, python-format
+msgid "Could not open desklet file \"%s\""
+msgstr "Tak dapat membuka fail paparan '%(path)s'"
+
+#: ../main/Starter.py:225
+#, fuzzy
+msgid "The desklet file could not be opened because the file was not readable."
+msgstr "Fail paparan tak dapat dibuka kerana fail tidak boleh dibaca."
+
+#: ../main/transition.py:39
+msgid ""
+"This is a unstable version of gDesklets. Unstable versions represent the "
+"current state of development and might be unstable or cause problems from "
+"time to time.\n"
+"\n"
+"If you're new to gDesklets, it is thus highly recommended to <b>not</b> use "
+"this version, but a stable release!\n"
+"\n"
+"If you still want to run the unstable version instead of a stable release "
+"version, we'd highly appreciate it if you report any weird behavior to the "
+"developers.\n"
+"\n"
+"Experienced users are encouraged to try a bzr version, though!"
+msgstr ""
+
+#: ../main/transition.py:51
+msgid ""
+"This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
+"Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
+"This version might break your configuration or it won't restore it from an "
+"earlier release. In most cases this is intentional, since gDesklets is still "
+"in its early stages of development.\n"
+"\n"
+"Thanks for testing this release candidate!"
+msgstr ""
+
+#. our informative transition message which we can change with
+#. every release
+#: ../main/transition.py:62
+msgid ""
+"This version of gDesklets features the Float mode: press a key and all your "
+"desklets will come to front, floating above your applications, until you "
+"press that key again!\n"
+"The default keybinding is &lt;Shift&gt; &lt;F12&gt;, but you can easily "
+"change that in the configuration dialog.\n"
+"\n"
+"Please note that due to limitations of older X servers, you might see blocks "
+"around desklets in Float mode. This cannot be solved in a satisfying way."
+msgstr ""
+
+#: ../main/transition.py:75
+msgid "Please note (this message will appear only once):"
+msgstr ""
+
+#: ../plugin/Interface.py:200 ../plugin/Interface.py:227
+msgid "no description"
+msgstr ""
+
+#: ../scripting/Script.py:154
+msgid "Error in add_timer function"
+msgstr ""
+
+#: ../scripting/Script.py:155
+#, python-format
+msgid "\"%s\" isn't a valid integer value!"
+msgstr ""
+
+#: ../scripting/Script.py:199
+#, python-format
+msgid "No Control could be found for interface %s"
+msgstr ""
+
+#: ../scripting/Script.py:201
+msgid "This means that a functionality won't be available during execution!"
+msgstr ""
+
+#: ../scripting/Script.py:241
+msgid "Security Risk"
+msgstr ""
+
+#: ../scripting/Script.py:242
+#, python-format
+msgid ""
+"The desklet %s wants to execute a system command:\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"To protect your system from malicious programs, you can deny the execution "
+"of this command.\n"
+"\n"
+"If you are sure that the command is harmless, you may permanently allow this "
+"desklet instance to run it."
+msgstr ""
+
+#: ../scripting/Script.py:255
+msgid "Deny!"
+msgstr ""
+
+#: ../scripting/Script.py:256
+msgid "Allow once"
+msgstr ""
+
+#: ../scripting/Script.py:257
+msgid "Allow for this desklet"
+msgstr ""
+
+#: ../Sensors/FontSelector/__init__.py:86
 msgid "Fonts"
 msgstr "Font"
 
-#: Sensors/FontSelector/__init__.py:87
+#: ../Sensors/FontSelector/__init__.py:87
 msgid "Fonts settings"
 msgstr "Tetapan Font"
 
-#: Sensors/FontSelector/__init__.py:90
+#: ../Sensors/FontSelector/__init__.py:90
 #, python-format
 msgid "Font #%i:"
 msgstr "Font #%i:"
 
-#: Sensors/FontSelector/__init__.py:92
+#: ../Sensors/FontSelector/__init__.py:92
 #, python-format
 msgid "Font #%i used in the labels"
 msgstr "Font #%i digunakan pada label"
 
-#: Sensors/FontSelector/__init__.py:93
+#: ../Sensors/FontSelector/__init__.py:93
 #, python-format
 msgid "Font color #%i:"
 msgstr "Warna font #%i:"
 
-#: Sensors/FontSelector/__init__.py:95
+#: ../Sensors/FontSelector/__init__.py:95
 #, python-format
 msgid "Font color #%i used in the labels"
 msgstr "Warna font #%i digunakan pada label"
 
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:16
+#, python-format
+msgid "%s Control"
+msgstr ""
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:54
+msgid "Interface Name"
+msgstr ""
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:57
+msgid "Property Name"
+msgstr ""
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:60
+msgid "Property Access"
+msgstr ""
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:63
+msgid "Property Description"
+msgstr ""
+
+#: ../shell/plugins/ControlBrowser/__init__.py:27
+msgid "by interface"
+msgstr ""
+
+#: ../shell/plugins/ControlBrowser/__init__.py:28
+#: ../shell/plugins/DisplayBrowser/__init__.py:80
+msgid "alphabetically"
+msgstr ""
+
+#: ../shell/plugins/ControlBrowser/__init__.py:72
+#, python-format
+msgid "Found %d controls."
+msgstr ""
+
+#: ../shell/plugins/ControlBrowser/__init__.py:75
+#: ../shell/plugins/DisplayBrowser/__init__.py:158
+msgid "Invalid search expression."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:40
+msgid "R_emove selected desklet"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
+msgid "_Run (remote) desklet..."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:45
+msgid "R_un selected desklet"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:78
+msgid "by category"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:79
+msgid "by author"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:130
+msgid "Could not remove"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:131
+msgid ""
+"The desklet file could not be removed. This most likely means that you do "
+"not have write permission on it."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:143
+msgid ""
+"The desklet will be removed from your system and no longer be available."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#, python-format
+msgid "Found %d desklets"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:177
+msgid "No description available"
+msgstr ""
+
+#: ../shell/plugins/Help/__init__.py:37
+msgid "_Help"
+msgstr ""
+
+#: ../shell/plugins/Help/__init__.py:38
+msgid "_Tip of the Day"
+msgstr ""
+
+#: ../shell/plugins/Help/TipOfTheDay.py:24
+msgid "Tip of the Day"
+msgstr ""
+
+#: ../shell/plugins/Help/TipOfTheDay.py:32
+msgid "Show tips at startup"
+msgstr ""
+
+#: ../shell/plugins/Help/tips.py:2
+msgid ""
+"You can find lots of desktop applets for use\n"
+"with gDesklets at\n"
+"\n"
+"http://www.gdesklets.org\n"
+"and\n"
+"http://gdesklets.zencomputer.ca/"
+msgstr ""
+
+#: ../shell/plugins/Help/tips.py:9
+msgid ""
+"You can install new desktop applets easily by\n"
+"dragging the download link for the package\n"
+"from your web browser into the gDesklets Shell."
+msgstr ""
+
+#: ../shell/plugins/Help/tips.py:13
+msgid ""
+"Click the right mouse button on a desktop\n"
+"applet or press F10 to open the popup menu."
+msgstr ""
+
+#: ../shell/plugins/Help/tips.py:16
+msgid ""
+"You can move the applets around the screen\n"
+"by holding down the middle mouse button.\n"
+"\n"
+"If your mouse has only two buttons,\n"
+"hold down both of them simultaneously\n"
+"in order to simulate the middle button."
+msgstr ""
+
+#: ../shell/plugins/Help/tips.py:23
+msgid ""
+"You can have different profiles of\n"
+"desktop applets and switch between them.\n"
+"\n"
+"Select \"Profiles->New profile...\" from\n"
+"the menu bar to create new profiles.\n"
+"\n"
+"Empty profiles get discarded automatically."
+msgstr ""
+
+#: ../shell/plugins/Help/tips.py:31
+msgid ""
+"The search bar accepts complex search\n"
+"expressions for finding your applets."
+msgstr ""
+
+#: ../shell/plugins/Help/tips.py:34
+msgid ""
+"Search expressions may contain wildcards:\n"
+"\n"
+" ? matches any one character\n"
+" * matches zero or more characters"
+msgstr ""
+
+#: ../shell/plugins/Help/tips.py:39
+msgid ""
+"Have a good idea for a desklet?\n"
+"Write your own!  See the Developer's\n"
+"book for more details."
+msgstr ""
+
+#: ../shell/plugins/PackageInstaller/Downloader.py:29
+msgid "Retrieving:"
+msgstr ""
+
+#: ../shell/plugins/PackageInstaller/__init__.py:26
+msgid "I_nstall remote package..."
+msgstr ""
+
+#: ../shell/plugins/PackageInstaller/__init__.py:27
+msgid "_Install package..."
+msgstr ""
+
+#: ../shell/plugins/PackageInstaller/__init__.py:97
+msgid "Invalid package"
+msgstr ""
+
+#: ../shell/plugins/PackageInstaller/__init__.py:98
+msgid ""
+"The supplied file could not be opened as a package. It is either corrupted "
+"or not of the correct file type."
+msgstr ""
+
+#: ../shell/plugins/PackageInstaller/__init__.py:115
+msgid "Installation failed"
+msgstr ""
+
+#: ../shell/plugins/PackageInstaller/__init__.py:116
+#, fuzzy
+msgid ""
+"The package could not be installed because it contained no installable files."
+msgstr "Paparan tak dapat ditambah kerana fail itu tidak wujud."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:119
+msgid "Installation complete"
+msgstr ""
+
+#: ../shell/plugins/Profiles/__init__.py:18
+msgid "_Profiles"
+msgstr ""
+
+#: ../shell/plugins/Profiles/__init__.py:20
+msgid "New profile..."
+msgstr ""
+
+#: ../shell/plugins/Profiles/__init__.py:75
+msgid "New profile"
+msgstr ""
+
+#: ../shell/plugins/Profiles/__init__.py:76
+msgid "Enter the name for a new profile"
+msgstr ""
+
+#: ../shell/plugins/Shell/__init__.py:62
+msgid "_File"
+msgstr ""
+
+#: ../shell/SearchBar.py:20
+msgid "Search"
+msgstr ""
+
+#: ../utils/dialog.py:46
+#, python-format
+msgid "_Details (%d lines)"
+msgstr ""
+
+#: ../utils/dialog.py:194
+msgid "_Ignore errors from this desklet"
+msgstr ""
+
+#: ../utils/DOM.py:32
+msgid "An invalid graphics code was loaded into a canvas."
+msgstr ""
+
+#: ../utils/DOM.py:153
+#, python-format
+msgid "No such element: %s"
+msgstr ""
+
+#: ../utils/DOM.py:154
+#, python-format
+msgid "The element with ID <b>%s</b> does not exist in the SVG image."
+msgstr ""
+
+#: ../utils/DOM.py:182 ../utils/Element.py:91
+#, python-format
+msgid "No such property: %s"
+msgstr ""
+
+#: ../utils/DOM.py:183
+#, python-format
+msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
+msgstr ""
+
+#: ../utils/Element.py:92
+#, python-format
+msgid "The element <b>%s</b> does not have the <b>%s</b> property."
+msgstr ""
+
+#: ../utils/Element.py:96 ../utils/Element.py:126
+msgid "Permission Error"
+msgstr ""
+
+#: ../utils/Element.py:97
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
+msgstr ""
+
+#: ../utils/Element.py:105
+msgid "Type Error"
+msgstr ""
+
+#: ../utils/Element.py:106
+#, python-format
+msgid ""
+"The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
+"Expected <b>%s</b>, but got <b>%s</b>."
+msgstr ""
+
+#: ../utils/Element.py:127
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
+msgstr ""
+
+#: ../utils/error.py:158
+msgid "Runtime Error"
+msgstr ""
+
+#: ../utils/error.py:160
+msgid "An error occurred while executing a desklet."
+msgstr ""
+
+#~ msgid ""
+#~ "An error occurred while loading a sensor. This most likely means that the "
+#~ "sensor is broken or simply not installed."
+#~ msgstr ""
+#~ "Ralat berlaku semasa memuat penderia. Mungkin bermaksud penderia rosak "
+#~ "atau tak dipasang."
+
+#~ msgid "Error while configuring display"
+#~ msgstr "Ralat bila mengkonfigurasikan paparan"
+
+#~ msgid ""
+#~ "A display could not be configured properly. It will most likely be broken "
+#~ "and you should consider removing it."
+#~ msgstr ""
+#~ "Paparan tak dapat dikonfigurasikan dengan betul. Ianya mungkin telah "
+#~ "rosak dan anda patut mempertimbangkan untuk membuangnya."
+
+#~ msgid "Could not add display"
+#~ msgstr "Tak dapat menambah paparan"
+
+#~ msgid "Welcome to %(name)s<i>!</i>"
+#~ msgstr "Selamat Datang ke %(name)s<i>!</i>"
+
+#~ msgid ""
+#~ "It looks like you are running %(name)s for the first time.\n"
+#~ "\n"
+#~ "You can add new displays by launching them in your file manager.\n"
+#~ "\n"
+#~ "<b>Have fun,</b>\n"
+#~ "  <i>the %(name)s developers</i>"
+#~ msgstr ""
+#~ "Nampaknya anda melaksanakan %(name)s buat pertama kali.\n"
+#~ "\n"
+#~ "Anda boleh menambah paparan dengan melancarkannya pada pengurus fail "
+#~ "nanda.\n"
+#~ "\n"
+#~ "<b>Selamat berbahagia,</b>\n"
+#~ "  <i>Pembangun %(name)s </i>"
+
+#~ msgid "Invalid display file '%(path)s'"
+#~ msgstr "Fail paparan '%(path)s' tidak sah"
+
+#~ msgid "_Quit"
+#~ msgstr "_Keluar"
+
+#~ msgid "translator_credits"
+#~ msgstr "Hasbullah Bin Pit <sebol@ikhlas.com>"

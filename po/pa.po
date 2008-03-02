@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-11-04 15:42+0530\n"
+"POT-Creation-Date: 2008-03-02 21:49+0100\n"
 "PO-Revision-Date: 2004-11-04 16:16+0530\n"
 "Last-Translator: Amanpreet Singh Alam <aalam@redhat.com>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
@@ -15,545 +15,759 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms: Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+"Plural-Forms: Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
 
-#: config/ConfigDialog.py:34 display/DisplayConfigurator.py:15
+#: ../config/ConfigDialog.py:113
+msgid "Invalid Function Call"
+msgstr ""
+
+#: ../config/ConfigDialog.py:114
+#, python-format
+msgid ""
+"There is no function called <b>%s</b>.\n"
+"This means that there's an error in the desklet's code. You should inform "
+"the author of the desklet about this problem."
+msgstr ""
+
+#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
+#, fuzzy
+msgid "This desklet is not configurable."
+msgstr "ਇਹ ਦਰਿਸ਼ ਸੰਰਚਨਾਯੋਗ ਨਹੀਂ ਹੈ।"
+
+#: ../config/ConfigUnit.py:57
+#, fuzzy
+msgid "pixel"
+msgstr "ਅਪ੍ਰੈਲ"
+
+#: ../config/ConfigUnit.py:58
+#, fuzzy
+msgid "point"
+msgstr "ਫੋਂਟ"
+
+#: ../config/ConfigUnit.py:59
+msgid "cm"
+msgstr ""
+
+#: ../config/ConfigUnit.py:60
+msgid "inch"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:17
+msgid "Editor to view/edit the desklet source code"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:18
+msgid "Your favorite editor"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:20
+msgid "Screen Resolution (DPI)"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:22
+msgid ""
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
+"\"</b> wide"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:26
+msgid "Behavior"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:27
+msgid "Show _tray icon (takes effect after restart)"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:29
+msgid "Show _notification while loading a desklet"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:31
+msgid "Key for toggling Float mode:"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
+#: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
 msgstr "ਸੰਰਚਨਾ"
 
-#: config/ConfigDialog.py:101
-#, python-format
-msgid "No such item: %s"
-msgstr "ਕੋਈ ਇਕਾਈ ਨਹੀਂ: %s"
-
-#: Controls/Calendar/__init__.py:10
-msgid "Monday"
-msgstr "ਸੋਮਵਾਰ"
-
-#: Controls/Calendar/__init__.py:10
-msgid "Tuesday"
-msgstr "ਮੰਗਲਵਾਰ"
-
-#: Controls/Calendar/__init__.py:10
-msgid "Wednesday"
-msgstr "ਬੁੱਧਵਾਰ"
-
-#: Controls/Calendar/__init__.py:10
-msgid "Thursday"
-msgstr "ਵੀਰਵਾਰ"
-
-#: Controls/Calendar/__init__.py:11
-msgid "Friday"
-msgstr "ਸ਼ੁੱਕਰਵਾਰ"
-
-#: Controls/Calendar/__init__.py:11
-msgid "Saturday"
-msgstr "ਸ਼ਨੀਚਰਵਾਰ"
-
-#: Controls/Calendar/__init__.py:11
-msgid "Sunday"
-msgstr "ਐਤਵਾਰ"
-
-#: Controls/Calendar/__init__.py:13
-msgid "January"
-msgstr "ਜਨਵਰੀ"
-
-#: Controls/Calendar/__init__.py:13
-msgid "February"
-msgstr "ਫਰਵਰੀ"
-
-#: Controls/Calendar/__init__.py:13
-msgid "March"
-msgstr "ਮਾਰਚ"
-
-#: Controls/Calendar/__init__.py:13
-msgid "April"
-msgstr "ਅਪ੍ਰੈਲ"
-
-#: Controls/Calendar/__init__.py:14
-msgid "May"
-msgstr "ਮਈ"
-
-#: Controls/Calendar/__init__.py:14
-msgid "June"
-msgstr "ਜੂਨ"
-
-#: Controls/Calendar/__init__.py:14
-msgid "July"
-msgstr "ਜੁਲਾਈ"
-
-#: Controls/Calendar/__init__.py:14
-msgid "August"
-msgstr "ਅਗਸਤ"
-
-#: Controls/Calendar/__init__.py:14
-msgid "September"
-msgstr "ਸਤੰਬਰ"
-
-#: Controls/Calendar/__init__.py:15
-msgid "October"
-msgstr "ਅਕਤੂਬਰ"
-
-#: Controls/Calendar/__init__.py:15
-msgid "November"
-msgstr "ਨਵੰਬਰ"
-
-#: Controls/Calendar/__init__.py:15
-msgid "December"
-msgstr "ਦਸੰਬਰ"
-
-#: data/gdesklets.desktop.in.h:1
+#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
 msgid "A desktop applet system for GNOME"
 msgstr "ਗਨੋਮ ਲਈ ਇੱਕ ਵਿਹੜਾ ਐਪਲਿਟ ਸਿਸਟਮ"
 
-#: data/gdesklets.xml.in.h:1
+#: ../data/gdesklets.xml.in.h:1
 msgid "gDesklets display"
 msgstr "gDesklets ਦਰਿਸ਼"
 
-#: display/ContainerTarget.py:126
-#, python-format
-msgid "The %(name)s container accepts only one child."
-msgstr ""
-
-#: display/DataTarget.py:171
-#, python-format
-msgid "No such property: %s"
-msgstr "ਕੋਈ ਵਿਸ਼ੇਸਤਾ ਨਹੀਂ: %s"
-
-#: display/DataTarget.py:172
-#, python-format
-msgid "The element <b>%(name)s</b> does not have the <b>%(key)s</b> property."
-msgstr ""
-
-#: display/DisplayConfigurator.py:40
-msgid "This display is not configurable."
-msgstr "ਇਹ ਦਰਿਸ਼ ਸੰਰਚਨਾਯੋਗ ਨਹੀਂ ਹੈ।"
-
-#: display/Display.py:33
-msgid "_Configure display"
+#: ../display/Display.py:85
+#, fuzzy
+msgid "_Configure desklet"
 msgstr "ਦਰਿਸ਼ ਸੰਰਚਨਾ(_C)"
 
-#: display/Display.py:34
-msgid "_Move display"
-msgstr "ਦਰਿਸ਼ ਏਧਰ-ਓਧਰ(_M)"
+#: ../display/Display.py:87
+#, fuzzy
+msgid "_Move desklet"
+msgstr "ਡਿਸਕਲਿਟ ਪ੍ਰਬੰਧਨ(_M)"
 
-#: display/Display.py:36
-msgid "Re_start display"
+#: ../display/Display.py:90
+#, fuzzy
+msgid "_View Source"
+msgstr "ਲਾੱਗ ਵੇਖੋ(_V)"
+
+#: ../display/Display.py:93
+#, fuzzy
+msgid "Re_start desklet"
 msgstr "ਦਰਿਸ਼ ਮੁੜ ਚਾਲੂ(_s)"
 
-#: display/Display.py:37
-msgid "_Remove display"
+#: ../display/Display.py:95
+#, fuzzy
+msgid "_Remove desklet"
 msgstr "ਦਰਸ਼ਿ ਹਟਾਉ(_R)"
 
-#: display/Display.py:737
-msgid "Do you really want to remove this display ?"
+#: ../display/Display.py:98
+#, fuzzy
+msgid "_About"
+msgstr "ਇਸ ਬਾਰੇ(_A)..."
+
+#: ../display/Display.py:337
+msgid "_Readme"
+msgstr ""
+
+#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
+#, fuzzy
+msgid "Do you really want to remove this desklet ?"
 msgstr "ਕੀ ਤੁਸੀਂ ਇਸ ਦਰਿਸ਼ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: display/Display.py:738
+#: ../display/Display.py:1116
+#, fuzzy
 msgid ""
-"This display will no longer be displayed and its configuration will be "
+"This desklet will no longer be displayed and its configuration will be "
 "purged."
-msgstr ""
-"ਇਹ ਦਰਿਸ਼ ਹੁਣ ਵੇਖਣ ਲਈ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ ਅਤੇ ਇਸ ਦੀ ਸੰਰਚਨਾ ਵੀ ਹਟਾ ਦਿੱਤੀ "
-"ਜਾਵੇਗੀ।"
+msgstr "ਇਹ ਦਰਿਸ਼ ਹੁਣ ਵੇਖਣ ਲਈ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ ਅਤੇ ਇਸ ਦੀ ਸੰਰਚਨਾ ਵੀ ਹਟਾ ਦਿੱਤੀ ਜਾਵੇਗੀ।"
 
-#: factory/DisplayFactory.py:103
-msgid "Error while configuring display"
-msgstr "ਦਰਿਸ਼ ਸੰਰਚਨਾ ਦੌਰਾਨ ਗਲਤੀ"
+#: ../display/DisplayTarget.py:417
+#, fuzzy, python-format
+msgid "Element \"%s\" does not exist"
+msgstr "ਫਾਇਲ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
 
-#: factory/DisplayFactory.py:104
+#: ../display/DisplayTarget.py:418
 msgid ""
-"A display could not be configured properly. It will most likely be broken "
-"and you should consider removing it."
+"The <tt>relative-to</tt> property requires a reference to an existing "
+"display element within the same parent container."
 msgstr ""
 
-#: factory/DisplayFactory.py:229
+#: ../display/targetregistry.py:45
+#, python-format
+msgid "Unknown element <b>&lt;%s&gt;</b>"
+msgstr ""
+
+#: ../display/targetregistry.py:46
+msgid ""
+"Either there is a typo in the .display file or you have an incompatible "
+"version of gDesklets."
+msgstr ""
+
+#: ../factory/DisplayFactory.py:89 ../utils/DOM.py:31
+msgid "XML parse error"
+msgstr ""
+
+#: ../factory/DisplayFactory.py:90
+msgid "This .display file has invalid XML syntax."
+msgstr ""
+
+#: ../factory/DisplayFactory.py:202
+msgid "File doesn't exist or couldn't be loaded"
+msgstr ""
+
+#: ../factory/DisplayFactory.py:204
+msgid "A file which contains a script isn't available for further execution."
+msgstr ""
+
+#: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
 msgstr "ਸੰਕੇਤਕ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ"
 
-#: factory/SensorFactory.py:68
+#: ../factory/DisplayFactory.py:243
 #, python-format
-msgid "Error in sensor '%(name)s'"
+msgid "&lt;%s&gt; needs a bind attribute"
 msgstr ""
 
-#: factory/SensorFactory.py:69
-msgid ""
-"An error occurred while loading a sensor. This most likely means that your "
-"system does not fulfill all its requirements."
+#: ../factory/DisplayFactory.py:245
+msgid "The &lt;prefs&gt; section of this desklet file is broken."
 msgstr ""
 
-#: factory/SensorFactory.py:85
-#, python-format
-msgid "Error in sensor %(name)s"
-msgstr ""
-
-#: factory/SensorFactory.py:86
-msgid "An error occurred while running a sensor."
-msgstr "ਸੰਕੇਤਕ ਚਲਾਉਣ ਦੌਰਾਨ ਗਲਤੀ ਹੈ।"
-
-#: factory/SensorFactory.py:93
+#: ../factory/SensorFactory.py:75
 #, python-format
 msgid "Could not find sensor '%(name)s'"
 msgstr ""
 
-#: factory/SensorFactory.py:94
+#: ../factory/SensorFactory.py:76
 msgid ""
 "A sensor could not be found. This usually means that it has not been "
 "installed."
 msgstr ""
 
-#: gdesklets:19
+#: ../gdesklets:26
+msgid "You must NOT run gDesklets as super user (root)."
+msgstr ""
+
+#: ../gdesklets:46
+msgid "Checking requirements:"
+msgstr ""
+
+#: ../gdesklets:50
+msgid "Python version >= 2.3.0 is required."
+msgstr ""
+
+#: ../gdesklets:54
+msgid "libexpat version 1.95.7 is broken. Please upgrade!"
+msgstr ""
+
+#: ../gdesklets:57
+msgid "SAX parser is required, some SuSE versions ship without it."
+msgstr ""
+
+#: ../gdesklets:61
+msgid ""
+"GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
+"are required."
+msgstr ""
+
+#: ../gdesklets:65
+msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
+msgstr ""
+
+#: ../gdesklets:68
+msgid "bonobo python bindings are required."
+msgstr ""
+
+#: ../gdesklets:77
+msgid "found"
+msgstr ""
+
+#: ../gdesklets:81
+msgid "missing"
+msgstr ""
+
+#: ../gdesklets:87
+msgid "Version check failed."
+msgstr ""
+
+#: ../gdesklets:88
+#, c-format
+msgid ""
+"\n"
+"%s\n"
+msgstr ""
+
+#: ../gdesklets:89
+msgid ""
+"Please make sure that the required software is installed.\n"
+"Also try to avoid having multiple versions of a library/binding on your "
+"system.\n"
+"gDesklets won't work if you don't have all necessary dependencies installed\n"
+"on your system.\n"
+"\n"
+"THE STARTUP WILL BE CANCELLED NOW!\n"
+msgstr ""
+
+#: ../gdesklets:98
+msgid "Requirements checking done. Your system looks ok!"
+msgstr ""
+
+#: ../gdesklets:105
+msgid ""
+"\n"
+"You're running gDesklets for the first time.\n"
+"gDesklets will start a requirements check now...\n"
+msgstr ""
+
+#: ../gdesklets:116
 msgid ""
 "Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
-"<command>: open <files>\t(Opens the given display files)\n"
-"\tstart\t(Runs the gDesklets daemon)\n"
-"\tstop\t(Stops the gDesklets daemon)\n"
-"\tlist\t(Lists open displays)\n"
-"\trestart\t(Restarts the gDesklets daemon)\n"
-"\tprofile <profile> (Switches to the given profile)\n"
-"\tprofile\t(Shows the current and the available profiles)\n"
-"\tshell\t(Opens the graphical shell)\n"
-"\tslay\t(Kills the daemon -- use in emergency)\n"
-"\tabout\t(Prints information about gDesklets)\n"
-"\tversion\t(Prints gDesklets version)\n"
-"\thelp\t(Displays this text)\n"
+"\t<command>\n"
+"\t\topen    <files>   (Opens the given desklet files)\n"
+"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
+"\t\tstop              (Stops the gDesklets daemon)\n"
+"\t\tlist              (Lists open desklets)\n"
+"\t\trestart           (Restarts the gDesklets daemon)\n"
+"\t\tprofile <profile> (Switches to the given profile)\n"
+"\t\tprofile           (Shows the current and the available profiles)\n"
+"\t\tshell             (Opens the graphical shell)\n"
+"\t\tslay              (Kills the daemon -- use in emergency)\n"
+"\t\tstatus            (Checks daemon status)\n"
+"\t\tabout             (Prints information about gDesklets)\n"
+"\t\tversion           (Prints gDesklets version)\n"
+"\t\tconfigure         (Opens the configuration dialog)\n"
+"\t\thelp              (Displays this text)\n"
+"\t\tcheck             (Checks requirements)\n"
 "\n"
-"[option]: --translucent (Enables translucency on the xorg 6.8.0 server)\n"
+"\t[option]\n"
+"\t\t--no-tray-icon    (disables the systray icon)\n"
+"\t\t--translucent     (enables translucency on the xorg servers)\n"
 msgstr ""
 
-#: gdesklets:124
+#: ../gdesklets:161
+#, c-format
+msgid ""
+"Error while starting gdesklets-daemon\n"
+"More information about this crash is available in \"%s\"."
+msgstr ""
+
+#: ../gdesklets:164
+#, c-format
+msgid "Exception was: %s\n"
+msgstr ""
+
+#: ../gdesklets:189 ../gdesklets:258
+#, fuzzy, c-format
+msgid "Could not open desklet %s."
+msgstr "ਫਾਇਲ %s ਨੂੰ ਖੋਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ।"
+
+#: ../gdesklets:266
 msgid "Starting gdesklets-daemon..."
 msgstr "gdesklets-daemon ਚਾਲੂ ਹੋ ਰਿਹਾ ਹੈ..."
 
-#: gdesklets:130
+#: ../gdesklets:272
 msgid "Shutting down gdesklets-daemon..."
 msgstr "gdesklets-daemon ਬੰਦ ਹੋ ਰਿਹਾ ਹੈ..."
 
-#: gdesklets:144
+#: ../gdesklets:284
+#, fuzzy, c-format
+msgid "Currently open displays in profile \"%s\":\n"
+msgstr "ਮੌਜੂਦਾ ਪ੍ਰੋਫਾਇਲ: %s"
+
+#: ../gdesklets:289
+#, c-format
+msgid "Currently there aren't any desklets in profile \"%s\""
+msgstr ""
+
+#: ../gdesklets:293
 msgid "Restarting gdesklets-daemon..."
 msgstr "gdesklets-daemon ਮੁੜ ਚਾਲੂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
 
-#: gdesklets:151
+#: ../gdesklets:306
+msgid "gdesklets-daemon is running"
+msgstr ""
+
+#: ../gdesklets:308
+msgid "gdesklets-daemon is not running"
+msgstr ""
+
+#: ../gdesklets:312
 #, c-format
 msgid "Current profile: %s"
 msgstr "ਮੌਜੂਦਾ ਪ੍ਰੋਫਾਇਲ: %s"
 
-#: gdesklets:162
+#: ../gdesklets:323
 #, c-format
 msgid "New profile: %s"
 msgstr "ਨਵਾਂ ਪ੍ਰੋਫਾਇਲ਼: %s"
 
-#: gdesklets:165
+#: ../gdesklets:326
 #, c-format
 msgid "Available profiles: %s"
 msgstr "ਉਪਲੱਬਧ ਪ੍ਰੋਫਾਇਲ: %s"
 
-#: gdesklets:170
+#: ../gdesklets:330
 #, c-format
 msgid "This is %s, version %s."
 msgstr "ਇਹ %s ਹੈ, ਵਰਜਨ %s ਹੈ।"
 
-#: gdesklets:193
-msgid "Invalid command. Please try one of the following commands!"
+#: ../gdesklets:358
+msgid "Nothing to slay."
+msgstr ""
+
+#: ../gdesklets:382
+#, fuzzy
+msgid "Invalid command. Please try one of the following commands:"
 msgstr "ਗਲਤ ਕਮਾਂਡ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਹੇਠ ਦਿੱਤੀਆਂ ਕਮਾਂਡਾਂ ਇਸਤੇਮਾਲ ਕਰੋ!"
 
-#: gdesklets-daemon:92
-msgid "You need a recent version of PyGTK to run this program."
+#: ../gdesklets-daemon:27
+msgid "You need a recent version of PyGTK to run this program.\n"
 msgstr ""
 
-#: gdesklets-daemon:105
-msgid "Could not find X display."
-msgstr "X ਦਰਿਸ਼ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋ ਸਕਿਆ ਹੈ।"
+#: ../gdesklets-daemon:52
+#, fuzzy
+msgid "Could not fork daemon.\n"
+msgstr "ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
 
-#: gdesklets-daemon:112
-msgid "You must NOT run gDesklets as super user (root)."
+#: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
+#, c-format
+msgid "The following error occurred: %s\n"
 msgstr ""
 
-#: gdesklets-daemon:134
-msgid "Could not fork daemon."
-msgstr ""
-
-#: libdesklets/convert.py:18
+#: ../libdesklets/convert.py:22
 #, python-format
 msgid "%.2f TB"
 msgstr "%.2f TB"
 
-#: libdesklets/convert.py:20
+#: ../libdesklets/convert.py:24
 #, python-format
 msgid "%.2f GB"
 msgstr "%.2f ਗੈਬਾ"
 
-#: libdesklets/convert.py:22
+#: ../libdesklets/convert.py:26
 #, python-format
 msgid "%.2f MB"
 msgstr "%.2f ਮੈਬਾ"
 
-#: libdesklets/convert.py:24
+#: ../libdesklets/convert.py:28
 #, python-format
 msgid "%.2f kB"
 msgstr "%.2f ਕਿਬਾ"
 
-#: libdesklets/convert.py:26
+#: ../libdesklets/convert.py:30
 #, python-format
 msgid "%d B"
 msgstr "%d ਬ"
 
-#: main/AboutDialog.py:7
-#, python-format
-msgid "Version %s"
-msgstr "ਵਰਜਨ %s"
-
-#: main/AboutDialog.py:10
-msgid "Core Programming:"
-msgstr "ਮੂਲ ਪ੍ਰੋਗਰਾਮਿੰਗ:"
-
-#: main/AboutDialog.py:14
-msgid "Architecture Design:"
-msgstr "ਢਾਂਚਾ ਨਿਰਮਾਣ:"
-
-#: main/AboutDialog.py:17
-msgid "GNOME Integration:"
-msgstr "ਗਨੋਮ ਜੋੜ:"
-
-#: main/AboutDialog.py:21
-msgid "Artwork:"
-msgstr "ਕਲਾਕਾਰੀ:"
-
-#: main/AboutDialog.py:24
-msgid "Website:"
-msgstr "ਵੈੱਬਸਾਇਟ:"
-
-#: main/AboutDialog.py:43
+#: ../main/AboutDialog.py:21
 msgid "About gDesklets"
 msgstr "gDesklets ਬਾਰੇ"
 
-#: main/client.py:193
-msgid "This software is licensed under the terms of the GNU GPL."
-msgstr "ਇਹ ਸਾਫਟਵੇਅਰ GNU GPL ਅਧੀਨ ਜਾਰੀ ਕੀਤਾ ਗਿਆ ਹੈ।"
-
-#: main/client.py:231
+#: ../main/client.py:276
 #, python-format
 msgid "Connecting to daemon [%s]"
 msgstr ""
 
-#: main/client.py:245
-msgid "Cannot establish connection to daemon: timeout!"
+#: ../main/client.py:293
+msgid ""
+"Cannot establish connection to daemon: timeout!\n"
+"The log file might help you solving the problem."
 msgstr ""
 
-#: main/client.py:251
+#: ../main/client.py:299
 #, python-format
 msgid "Connected to daemon in %d microseconds."
 msgstr ""
 
-#: main/client.py:254
+#: ../main/client.py:302
 #, python-format
 msgid "Connected to daemon in %d milliseconds."
 msgstr ""
 
-#: main/LogViewer.py:34
-msgid "Log Messages"
-msgstr "ਲਾੱਗ ਸੁਨੇਹੇ"
+#: ../main/__init__.py:71
+#, python-format
+msgid "Version %s"
+msgstr "ਵਰਜਨ %s"
 
-#: main/Starter.py:91
+#: ../main/__init__.py:74
+msgid "Core Programming:"
+msgstr "ਮੂਲ ਪ੍ਰੋਗਰਾਮਿੰਗ:"
+
+#: ../main/__init__.py:77
+msgid "Architecture Design:"
+msgstr "ਢਾਂਚਾ ਨਿਰਮਾਣ:"
+
+#: ../main/__init__.py:80
+msgid "GNOME Integration:"
+msgstr "ਗਨੋਮ ਜੋੜ:"
+
+#: ../main/__init__.py:83
+#, fuzzy
+msgid "Additional Programming:"
+msgstr "ਮੂਲ ਪ੍ਰੋਗਰਾਮਿੰਗ:"
+
+#: ../main/__init__.py:86
+msgid "Documentation:"
+msgstr ""
+
+#: ../main/__init__.py:89
+msgid "Artwork:"
+msgstr "ਕਲਾਕਾਰੀ:"
+
+#: ../main/__init__.py:92
+msgid "Website:"
+msgstr "ਵੈੱਬਸਾਇਟ:"
+
+#: ../main/__init__.py:95
+msgid "Thank you:"
+msgstr ""
+
+#: ../main/Starter.py:102
 msgid "_Manage desklets"
 msgstr "ਡਿਸਕਲਿਟ ਪ੍ਰਬੰਧਨ(_M)"
 
-#: main/Starter.py:93
+#: ../main/Starter.py:105
+#, fuzzy
+msgid "_Configuration"
+msgstr "ਸੰਰਚਨਾ"
+
+#: ../main/Starter.py:107
 msgid "_View log"
 msgstr "ਲਾੱਗ ਵੇਖੋ(_V)"
 
-#: main/Starter.py:94 shell/plugins/Help/__init__.py:45
+#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
 msgid "_About..."
 msgstr "ਇਸ ਬਾਰੇ(_A)..."
 
-#: main/Starter.py:96
+#: ../main/Starter.py:113
 msgid "_Stop daemon"
 msgstr ""
 
-#: main/Starter.py:175
-msgid "File does not exist."
-msgstr "ਫਾਇਲ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
+#: ../main/Starter.py:224
+#, fuzzy, python-format
+msgid "Could not open desklet file \"%s\""
+msgstr "ਫਾਇਲ %s ਨੂੰ ਖੋਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ।"
 
-#: main/Starter.py:183
-#, python-format
-msgid "Could not open display file '%(path)s'"
+#: ../main/Starter.py:225
+msgid "The desklet file could not be opened because the file was not readable."
 msgstr ""
 
-#: main/Starter.py:184
-msgid "The display file could not be opened because the file was not readable."
-msgstr ""
-
-#: main/Starter.py:195
-#, python-format
-msgid "Invalid display file '%(path)s'"
-msgstr ""
-
-#: main/Starter.py:196
-msgid "The display file contains invalid data and could not be loaded."
-msgstr ""
-
-#: main/Starter.py:440
+#: ../main/transition.py:39
 msgid ""
-"Could not connect to gnome-session. GNOME session management will not be "
-"available for this application."
+"This is a unstable version of gDesklets. Unstable versions represent the "
+"current state of development and might be unstable or cause problems from "
+"time to time.\n"
+"\n"
+"If you're new to gDesklets, it is thus highly recommended to <b>not</b> use "
+"this version, but a stable release!\n"
+"\n"
+"If you still want to run the unstable version instead of a stable release "
+"version, we'd highly appreciate it if you report any weird behavior to the "
+"developers.\n"
+"\n"
+"Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
 
-#: scripting/Script.py:116 scripting/Script.py:242 scripting/Script.py:256
-msgid "Error in script"
-msgstr "ਸਕ੍ਰਿਪਟ ਵਿੱਚ ਗਲਤੀ"
-
-#: scripting/Script.py:117 scripting/Script.py:257
-msgid "An error occurred while executing a script."
-msgstr "ਸਕ੍ਰਿਪਟ ਚਲਾਉਣ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ।"
-
-#: scripting/Script.py:243
-msgid "An error occurred while loading a script."
-msgstr "ਸਕ੍ਰਿਪਟ ਲੋਡ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ।"
-
-#: sensor/Sensor.py:430
-msgid "translator_credits"
+#: ../main/transition.py:51
+msgid ""
+"This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
+"Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
+"This version might break your configuration or it won't restore it from an "
+"earlier release. In most cases this is intentional, since gDesklets is still "
+"in its early stages of development.\n"
+"\n"
+"Thanks for testing this release candidate!"
 msgstr ""
-"ਅਮਨਪ੍ਰੀਤ ਸਿੰਘ ਆਲਮਵਾਲਾ <aalam@redhat.com>\n"
-"ਜਸਵਿੰਦਰ ਸਿੰਘ ਫੂਲੇਵਾਲਾ <jaswinderphulewala@yahoo.com>"
 
-#: Sensors/FontSelector/__init__.py:86
+#. our informative transition message which we can change with
+#. every release
+#: ../main/transition.py:62
+msgid ""
+"This version of gDesklets features the Float mode: press a key and all your "
+"desklets will come to front, floating above your applications, until you "
+"press that key again!\n"
+"The default keybinding is &lt;Shift&gt; &lt;F12&gt;, but you can easily "
+"change that in the configuration dialog.\n"
+"\n"
+"Please note that due to limitations of older X servers, you might see blocks "
+"around desklets in Float mode. This cannot be solved in a satisfying way."
+msgstr ""
+
+#: ../main/transition.py:75
+msgid "Please note (this message will appear only once):"
+msgstr ""
+
+#: ../plugin/Interface.py:200 ../plugin/Interface.py:227
+#, fuzzy
+msgid "no description"
+msgstr "ਕੋਈ ਵੇਰਵਾ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ"
+
+#: ../scripting/Script.py:154
+msgid "Error in add_timer function"
+msgstr ""
+
+#: ../scripting/Script.py:155
+#, python-format
+msgid "\"%s\" isn't a valid integer value!"
+msgstr ""
+
+#: ../scripting/Script.py:199
+#, python-format
+msgid "No Control could be found for interface %s"
+msgstr ""
+
+#: ../scripting/Script.py:201
+msgid "This means that a functionality won't be available during execution!"
+msgstr ""
+
+#: ../scripting/Script.py:241
+msgid "Security Risk"
+msgstr ""
+
+#: ../scripting/Script.py:242
+#, python-format
+msgid ""
+"The desklet %s wants to execute a system command:\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"To protect your system from malicious programs, you can deny the execution "
+"of this command.\n"
+"\n"
+"If you are sure that the command is harmless, you may permanently allow this "
+"desklet instance to run it."
+msgstr ""
+
+#: ../scripting/Script.py:255
+msgid "Deny!"
+msgstr ""
+
+#: ../scripting/Script.py:256
+msgid "Allow once"
+msgstr ""
+
+#: ../scripting/Script.py:257
+msgid "Allow for this desklet"
+msgstr ""
+
+#: ../Sensors/FontSelector/__init__.py:86
 msgid "Fonts"
 msgstr "ਫੋਂਟ"
 
-#: Sensors/FontSelector/__init__.py:87
+#: ../Sensors/FontSelector/__init__.py:87
 msgid "Fonts settings"
 msgstr "ਫੋਂਟ ਵਿਵਸਥਾ"
 
-#: Sensors/FontSelector/__init__.py:90
+#: ../Sensors/FontSelector/__init__.py:90
 #, python-format
 msgid "Font #%i:"
 msgstr "ਫੋਂਟ #%i:"
 
-#: Sensors/FontSelector/__init__.py:92
+#: ../Sensors/FontSelector/__init__.py:92
 #, python-format
 msgid "Font #%i used in the labels"
 msgstr ""
 
-#: Sensors/FontSelector/__init__.py:93
+#: ../Sensors/FontSelector/__init__.py:93
 #, python-format
 msgid "Font color #%i:"
 msgstr "ਫੋਂਟ ਰੰਗ #%i:"
 
-#: Sensors/FontSelector/__init__.py:95
+#: ../Sensors/FontSelector/__init__.py:95
 #, python-format
 msgid "Font color #%i used in the labels"
 msgstr ""
 
-#: shell/plugins/ControlBrowser/ControlInspector.py:20
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:16
 #, python-format
 msgid "%s Control"
 msgstr "%s ਕੰਟਰੋਲ"
 
-#: shell/plugins/ControlBrowser/__init__.py:31
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:54
+#, fuzzy
+msgid "Interface Name"
+msgstr "ਇੰਟਰਫੇਸ"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:57
+msgid "Property Name"
+msgstr ""
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:60
+msgid "Property Access"
+msgstr ""
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:63
+msgid "Property Description"
+msgstr ""
+
+#: ../shell/plugins/ControlBrowser/__init__.py:27
 msgid "by interface"
 msgstr "ਇੰਟਰਫੇਸ"
 
-#: shell/plugins/ControlBrowser/__init__.py:32
-#: shell/plugins/DisplayBrowser/__init__.py:82
+#: ../shell/plugins/ControlBrowser/__init__.py:28
+#: ../shell/plugins/DisplayBrowser/__init__.py:80
 msgid "alphabetically"
 msgstr "ਵਰਣਮਾਲਾ"
 
-#: shell/plugins/ControlBrowser/__init__.py:76
+#: ../shell/plugins/ControlBrowser/__init__.py:72
 #, python-format
 msgid "Found %d controls."
 msgstr "%d ਕੰਟਰੋਲ ਲੱਭੇ ਹਨ।"
 
-#: shell/plugins/ControlBrowser/__init__.py:79
-#: shell/plugins/DisplayBrowser/__init__.py:135
+#: ../shell/plugins/ControlBrowser/__init__.py:75
+#: ../shell/plugins/DisplayBrowser/__init__.py:158
 msgid "Invalid search expression."
 msgstr "ਗਲਤ ਖੋਜ ਸਮੀਕਰਨ ਹੈ।"
 
-#: shell/plugins/DisplayBrowser/__init__.py:44
-msgid "R_emove selected display"
+#: ../shell/plugins/DisplayBrowser/__init__.py:40
+msgid "R_emove selected desklet"
 msgstr ""
 
-#: shell/plugins/DisplayBrowser/__init__.py:46
-msgid "_Run selected display"
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
+msgid "_Run (remote) desklet..."
 msgstr ""
 
-#: shell/plugins/DisplayBrowser/__init__.py:80
+#: ../shell/plugins/DisplayBrowser/__init__.py:45
+msgid "R_un selected desklet"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:78
 msgid "by category"
 msgstr "ਵਰਗ ਅਨੁਸਾਰ"
 
-#: shell/plugins/DisplayBrowser/__init__.py:81
+#: ../shell/plugins/DisplayBrowser/__init__.py:79
 msgid "by author"
 msgstr "ਲੇਖਕ"
 
-#: shell/plugins/DisplayBrowser/__init__.py:101
+#: ../shell/plugins/DisplayBrowser/__init__.py:130
 msgid "Could not remove"
 msgstr "ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
 
-#: shell/plugins/DisplayBrowser/__init__.py:102
+#: ../shell/plugins/DisplayBrowser/__init__.py:131
 msgid ""
-"The display file could not be removed. This most likely means that you do "
+"The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
 msgstr ""
 
-#: shell/plugins/DisplayBrowser/__init__.py:117
-msgid "Do you really want to remove this display?"
-msgstr "ਕੀ ਤੁਸੀਂ ਇਸ ਦਰਿਸ਼ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
-
-#: shell/plugins/DisplayBrowser/__init__.py:118
-msgid "The display will be removed from your system and no longer be available."
+#: ../shell/plugins/DisplayBrowser/__init__.py:143
+msgid ""
+"The desklet will be removed from your system and no longer be available."
 msgstr ""
 
-#: shell/plugins/DisplayBrowser/__init__.py:132
-#, python-format
-msgid "Found %d displays."
+#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#, fuzzy, python-format
+msgid "Found %d desklets"
 msgstr "%d ਦਰਿਸ਼ ਲੱਭੇ ਹਨ।"
 
-#: shell/plugins/DisplayBrowser/__init__.py:154
+#: ../shell/plugins/DisplayBrowser/__init__.py:177
 msgid "No description available"
 msgstr "ਕੋਈ ਵੇਰਵਾ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ"
 
-#: shell/plugins/Help/__init__.py:37
+#: ../shell/plugins/Help/__init__.py:37
 msgid "_Help"
 msgstr "ਸਹਾਇਤਾ(_H)"
 
-#. menu.set_item("Help/Contents", gtk.STOCK_HELP, _("_Contents"), None)
-#. menu.set_item("Help/Intro", None, _("_Getting Started"), None)
-#. menu.set_item("Help/Devel", None, _("_Developer's Manual"), None)
-#. menu.set_separator("Help/Separator")
-#: shell/plugins/Help/__init__.py:42
+#: ../shell/plugins/Help/__init__.py:38
 msgid "_Tip of the Day"
 msgstr "ਅੱਜ ਦਾ ਇਸ਼ਾਰਾ(_T)"
 
-#: shell/plugins/Help/TipOfTheDay.py:24
+#: ../shell/plugins/Help/TipOfTheDay.py:24
 msgid "Tip of the Day"
 msgstr "ਅੱਜ ਦਾ ਇਸ਼ਾਰਾ"
 
-#: shell/plugins/Help/TipOfTheDay.py:32
+#: ../shell/plugins/Help/TipOfTheDay.py:32
 msgid "Show tips at startup"
 msgstr "ਸ਼ੁਰੂਆਤ ਤੇ ਇਸ਼ਾਰਾ ਵੇਖਾਉ"
 
-#: shell/plugins/Help/tips.py:2
+#: ../shell/plugins/Help/tips.py:2
 msgid ""
 "You can find lots of desktop applets for use\n"
 "with gDesklets at\n"
 "\n"
-"http://gdesklets.gnomedesktop.org"
+"http://www.gdesklets.org\n"
+"and\n"
+"http://gdesklets.zencomputer.ca/"
 msgstr ""
 
-#: shell/plugins/Help/tips.py:7
+#: ../shell/plugins/Help/tips.py:9
 msgid ""
 "You can install new desktop applets easily by\n"
 "dragging the download link for the package\n"
 "from your web browser into the gDesklets Shell."
 msgstr ""
 
-#: shell/plugins/Help/tips.py:11
+#: ../shell/plugins/Help/tips.py:13
 msgid ""
 "Click the right mouse button on a desktop\n"
 "applet or press F10 to open the popup menu."
 msgstr ""
 
-#: shell/plugins/Help/tips.py:14
+#: ../shell/plugins/Help/tips.py:16
 msgid ""
 "You can move the applets around the screen\n"
 "by holding down the middle mouse button.\n"
@@ -563,7 +777,7 @@ msgid ""
 "in order to simulate the middle button."
 msgstr ""
 
-#: shell/plugins/Help/tips.py:21
+#: ../shell/plugins/Help/tips.py:23
 msgid ""
 "You can have different profiles of\n"
 "desktop applets and switch between them.\n"
@@ -574,13 +788,13 @@ msgid ""
 "Empty profiles get discarded automatically."
 msgstr ""
 
-#: shell/plugins/Help/tips.py:29
+#: ../shell/plugins/Help/tips.py:31
 msgid ""
 "The search bar accepts complex search\n"
 "expressions for finding your applets."
 msgstr ""
 
-#: shell/plugins/Help/tips.py:32
+#: ../shell/plugins/Help/tips.py:34
 msgid ""
 "Search expressions may contain wildcards:\n"
 "\n"
@@ -588,67 +802,228 @@ msgid ""
 " * matches zero or more characters"
 msgstr ""
 
-#: shell/plugins/PackageInstaller/Downloader.py:30
+#: ../shell/plugins/Help/tips.py:39
+msgid ""
+"Have a good idea for a desklet?\n"
+"Write your own!  See the Developer's\n"
+"book for more details."
+msgstr ""
+
+#: ../shell/plugins/PackageInstaller/Downloader.py:29
 msgid "Retrieving:"
 msgstr "ਪ੍ਰਾਪਤ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ:"
 
-#: shell/plugins/PackageInstaller/__init__.py:27
+#: ../shell/plugins/PackageInstaller/__init__.py:26
+#, fuzzy
+msgid "I_nstall remote package..."
+msgstr "ਪੈਕੇਜ ਇੰਸਟਾਲ(_I)..."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:27
 msgid "_Install package..."
 msgstr "ਪੈਕੇਜ ਇੰਸਟਾਲ(_I)..."
 
-#: shell/plugins/PackageInstaller/__init__.py:66
+#: ../shell/plugins/PackageInstaller/__init__.py:97
 msgid "Invalid package"
 msgstr "ਗਲਤ ਪੈਕੇਜ"
 
-#: shell/plugins/PackageInstaller/__init__.py:67
+#: ../shell/plugins/PackageInstaller/__init__.py:98
 msgid ""
 "The supplied file could not be opened as a package. It is either corrupted "
 "or not of the correct file type."
 msgstr ""
 
-#: shell/plugins/PackageInstaller/__init__.py:85
+#: ../shell/plugins/PackageInstaller/__init__.py:115
 msgid "Installation failed"
 msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਅਸਫਲ"
 
-#: shell/plugins/PackageInstaller/__init__.py:86
-msgid "The package could not be installed because it contained no installable files."
+#: ../shell/plugins/PackageInstaller/__init__.py:116
+msgid ""
+"The package could not be installed because it contained no installable files."
 msgstr ""
 
-#: shell/plugins/PackageInstaller/__init__.py:89
+#: ../shell/plugins/PackageInstaller/__init__.py:119
 msgid "Installation complete"
 msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਮੁਕੰਮਲ"
 
-#: shell/plugins/Profiles/__init__.py:23
+#: ../shell/plugins/Profiles/__init__.py:18
 msgid "_Profiles"
 msgstr "ਪ੍ਰੋਫਾਇਲ(_P)"
 
-#: shell/plugins/Profiles/__init__.py:25
+#: ../shell/plugins/Profiles/__init__.py:20
 msgid "New profile..."
 msgstr "ਨਵਾਂ ਪ੍ਰੋਫਾਇਲ..."
 
-#: shell/plugins/Profiles/__init__.py:79
+#: ../shell/plugins/Profiles/__init__.py:75
 msgid "New profile"
 msgstr "ਨਵਾਂ ਪ੍ਰੋਫਾਇਲ"
 
-#: shell/plugins/Profiles/__init__.py:95
-msgid "Enter the name for a new profile:"
+#: ../shell/plugins/Profiles/__init__.py:76
+#, fuzzy
+msgid "Enter the name for a new profile"
 msgstr "ਨਵੇਂ ਪ੍ਰੋਫਾਇਲ਼ ਦਾ ਨਾਂ ਦਿਓ:"
 
-#: shell/plugins/Shell/__init__.py:69
+#: ../shell/plugins/Shell/__init__.py:62
 msgid "_File"
 msgstr "ਫਾਇਲ(_F)"
 
-#: shell/SearchBar.py:20
+#: ../shell/SearchBar.py:20
 msgid "Search"
 msgstr "ਖੋਜ"
 
-#: utils/dialog.py:83
-#, python-format
-msgid "Details (%d lines)"
+#: ../utils/dialog.py:46
+#, fuzzy, python-format
+msgid "_Details (%d lines)"
 msgstr "ਵੇਰਵਾ (%d ਸਤਰਾਂ)"
 
-#: utils/vfs.py:38
-#, python-format
-msgid "Could not open file %s."
-msgstr "ਫਾਇਲ %s ਨੂੰ ਖੋਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ।"
+#: ../utils/dialog.py:194
+msgid "_Ignore errors from this desklet"
+msgstr ""
 
+#: ../utils/DOM.py:32
+msgid "An invalid graphics code was loaded into a canvas."
+msgstr ""
+
+#: ../utils/DOM.py:153
+#, fuzzy, python-format
+msgid "No such element: %s"
+msgstr "ਕੋਈ ਇਕਾਈ ਨਹੀਂ: %s"
+
+#: ../utils/DOM.py:154
+#, python-format
+msgid "The element with ID <b>%s</b> does not exist in the SVG image."
+msgstr ""
+
+#: ../utils/DOM.py:182 ../utils/Element.py:91
+#, python-format
+msgid "No such property: %s"
+msgstr "ਕੋਈ ਵਿਸ਼ੇਸਤਾ ਨਹੀਂ: %s"
+
+#: ../utils/DOM.py:183
+#, python-format
+msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
+msgstr ""
+
+#: ../utils/Element.py:92
+#, python-format
+msgid "The element <b>%s</b> does not have the <b>%s</b> property."
+msgstr ""
+
+#: ../utils/Element.py:96 ../utils/Element.py:126
+msgid "Permission Error"
+msgstr ""
+
+#: ../utils/Element.py:97
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
+msgstr ""
+
+#: ../utils/Element.py:105
+msgid "Type Error"
+msgstr ""
+
+#: ../utils/Element.py:106
+#, python-format
+msgid ""
+"The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
+"Expected <b>%s</b>, but got <b>%s</b>."
+msgstr ""
+
+#: ../utils/Element.py:127
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
+msgstr ""
+
+#: ../utils/error.py:158
+msgid "Runtime Error"
+msgstr ""
+
+#: ../utils/error.py:160
+#, fuzzy
+msgid "An error occurred while executing a desklet."
+msgstr "ਸਕ੍ਰਿਪਟ ਚਲਾਉਣ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ।"
+
+#~ msgid "Monday"
+#~ msgstr "ਸੋਮਵਾਰ"
+
+#~ msgid "Tuesday"
+#~ msgstr "ਮੰਗਲਵਾਰ"
+
+#~ msgid "Wednesday"
+#~ msgstr "ਬੁੱਧਵਾਰ"
+
+#~ msgid "Thursday"
+#~ msgstr "ਵੀਰਵਾਰ"
+
+#~ msgid "Friday"
+#~ msgstr "ਸ਼ੁੱਕਰਵਾਰ"
+
+#~ msgid "Saturday"
+#~ msgstr "ਸ਼ਨੀਚਰਵਾਰ"
+
+#~ msgid "Sunday"
+#~ msgstr "ਐਤਵਾਰ"
+
+#~ msgid "January"
+#~ msgstr "ਜਨਵਰੀ"
+
+#~ msgid "February"
+#~ msgstr "ਫਰਵਰੀ"
+
+#~ msgid "March"
+#~ msgstr "ਮਾਰਚ"
+
+#~ msgid "May"
+#~ msgstr "ਮਈ"
+
+#~ msgid "June"
+#~ msgstr "ਜੂਨ"
+
+#~ msgid "July"
+#~ msgstr "ਜੁਲਾਈ"
+
+#~ msgid "August"
+#~ msgstr "ਅਗਸਤ"
+
+#~ msgid "September"
+#~ msgstr "ਸਤੰਬਰ"
+
+#~ msgid "October"
+#~ msgstr "ਅਕਤੂਬਰ"
+
+#~ msgid "November"
+#~ msgstr "ਨਵੰਬਰ"
+
+#~ msgid "December"
+#~ msgstr "ਦਸੰਬਰ"
+
+#~ msgid "_Move display"
+#~ msgstr "ਦਰਿਸ਼ ਏਧਰ-ਓਧਰ(_M)"
+
+#~ msgid "Error while configuring display"
+#~ msgstr "ਦਰਿਸ਼ ਸੰਰਚਨਾ ਦੌਰਾਨ ਗਲਤੀ"
+
+#~ msgid "An error occurred while running a sensor."
+#~ msgstr "ਸੰਕੇਤਕ ਚਲਾਉਣ ਦੌਰਾਨ ਗਲਤੀ ਹੈ।"
+
+#~ msgid "Could not find X display."
+#~ msgstr "X ਦਰਿਸ਼ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋ ਸਕਿਆ ਹੈ।"
+
+#~ msgid "This software is licensed under the terms of the GNU GPL."
+#~ msgstr "ਇਹ ਸਾਫਟਵੇਅਰ GNU GPL ਅਧੀਨ ਜਾਰੀ ਕੀਤਾ ਗਿਆ ਹੈ।"
+
+#~ msgid "Log Messages"
+#~ msgstr "ਲਾੱਗ ਸੁਨੇਹੇ"
+
+#~ msgid "Error in script"
+#~ msgstr "ਸਕ੍ਰਿਪਟ ਵਿੱਚ ਗਲਤੀ"
+
+#~ msgid "An error occurred while loading a script."
+#~ msgstr "ਸਕ੍ਰਿਪਟ ਲੋਡ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ।"
+
+#~ msgid "translator_credits"
+#~ msgstr ""
+#~ "ਅਮਨਪ੍ਰੀਤ ਸਿੰਘ ਆਲਮਵਾਲਾ <aalam@redhat.com>\n"
+#~ "ਜਸਵਿੰਦਰ ਸਿੰਘ ਫੂਲੇਵਾਲਾ <jaswinderphulewala@yahoo.com>"
+
+#~ msgid "Do you really want to remove this display?"
+#~ msgstr "ਕੀ ਤੁਸੀਂ ਇਸ ਦਰਿਸ਼ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"

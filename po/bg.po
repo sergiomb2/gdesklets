@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-30 20:43+0300\n"
+"POT-Creation-Date: 2008-03-02 21:49+0100\n"
 "PO-Revision-Date: 2006-09-30 20:42+0300\n"
 "Last-Translator: Alexander Shopov <ash@contact.bg>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../config/ConfigDialog.py:103
+#: ../config/ConfigDialog.py:113
 msgid "Invalid Function Call"
 msgstr "Невалидно извикване на функция"
 
-#: ../config/ConfigDialog.py:104
+#: ../config/ConfigDialog.py:114
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -33,7 +33,7 @@ msgstr ""
 "Това означава, че има грешка в програмния код на плотамата. Моля, "
 "информирайте авторът й за проблема."
 
-#: ../config/ConfigDialog.py:217 ../display/DisplayConfigurator.py:32
+#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
 msgstr "Тази плотама не се настройва."
 
@@ -62,35 +62,10 @@ msgid "Your favorite editor"
 msgstr "Любимият Ви редактор"
 
 #: ../config/DaemonConfigger.py:20
-msgid "XComposite support (requires composition manager)"
-msgstr "Поддръжка на XComposite (изисква композиращ мениджър)"
-
-#: ../config/DaemonConfigger.py:21
-msgid ""
-"\n"
-"     <small><i>"
-msgstr ""
-"\n"
-"     <small><i>"
-
-#: ../config/DaemonConfigger.py:22
-msgid "this does not work with GTK 2.8 or higher for technical reasons"
-msgstr ""
-"по технически причини това не работи с с версии 2.8 или по-високи на gtk"
-
-#: ../config/DaemonConfigger.py:23
-msgid "</i></small>"
-msgstr "</i></small>"
-
-#: ../config/DaemonConfigger.py:24
-msgid "Translucency (takes effect after restarting a display)"
-msgstr "Полупрозрачност (изисква рестартиране на дисплея)"
-
-#: ../config/DaemonConfigger.py:26
 msgid "Screen Resolution (DPI)"
 msgstr "Разделителна способност на екрана (DPI)"
 
-#: ../config/DaemonConfigger.py:28
+#: ../config/DaemonConfigger.py:22
 msgid ""
 "Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
 "\"</b> wide"
@@ -98,28 +73,28 @@ msgstr ""
 "Променете стойността докато лентата не стане дълга точно <b>5 cm</b> или "
 "<b>1.97\"</b>"
 
-#: ../config/DaemonConfigger.py:32
+#: ../config/DaemonConfigger.py:26
 msgid "Behavior"
 msgstr "Поведение"
 
-#: ../config/DaemonConfigger.py:33
+#: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
 msgstr "Показване на икона в _тавата (изисква рестартиране)"
 
-#: ../config/DaemonConfigger.py:35
+#: ../config/DaemonConfigger.py:29
 msgid "Show _notification while loading a desklet"
 msgstr "Уведомяване при стартирането на плотама"
 
-#: ../config/DaemonConfigger.py:37
+#: ../config/DaemonConfigger.py:31
 msgid "Key for toggling Float mode:"
 msgstr "Клавиш за превключването на режим на изплуване"
 
-#: ../config/DaemonConfigger.py:49 ../config/DisplayConfigger.py:27
+#: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
 #: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
 msgstr "Настройки"
 
-#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:59
+#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
 msgid "A desktop applet system for GNOME"
 msgstr "Система за плотами (програми за работния плот) на GNOME"
 
@@ -127,31 +102,40 @@ msgstr "Система за плотами (програми за работни
 msgid "gDesklets display"
 msgstr "Дисплей на gDesklets"
 
-#: ../display/Display.py:84
+#: ../display/Display.py:85
 msgid "_Configure desklet"
 msgstr "_Настройки на плотама"
 
-#: ../display/Display.py:86
+#: ../display/Display.py:87
 msgid "_Move desklet"
 msgstr "_Преместване на плотама"
 
-#: ../display/Display.py:89
+#: ../display/Display.py:90
 msgid "_View Source"
 msgstr "Показване на програмния _код"
 
-#: ../display/Display.py:92
+#: ../display/Display.py:93
 msgid "Re_start desklet"
 msgstr "Ре_стартиране на плотама"
 
-#: ../display/Display.py:94
+#: ../display/Display.py:95
 msgid "_Remove desklet"
 msgstr "П_ремахване на плотама"
 
-#: ../display/Display.py:978 ../shell/plugins/DisplayBrowser/__init__.py:142
+#: ../display/Display.py:98
+#, fuzzy
+msgid "_About"
+msgstr "_Относно..."
+
+#: ../display/Display.py:337
+msgid "_Readme"
+msgstr ""
+
+#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
 msgid "Do you really want to remove this desklet ?"
 msgstr "Наистина ли желаете да премахнете тази плотама?"
 
-#: ../display/Display.py:979
+#: ../display/Display.py:1116
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
@@ -192,25 +176,25 @@ msgstr "Грешка при анализиране на XML"
 msgid "This .display file has invalid XML syntax."
 msgstr "Файлът от вид .display съдържа невалиден XML."
 
-#: ../factory/DisplayFactory.py:208
+#: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
 msgstr "Файлът не съществува или не може да бъде зареден"
 
-#: ../factory/DisplayFactory.py:210
+#: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
 msgstr ""
 "Липсва файл със скрипт, който е необходим за продължаване на изпълнението."
 
-#: ../factory/DisplayFactory.py:233
+#: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
 msgstr "Датчикът не може да бъде зареден"
 
-#: ../factory/DisplayFactory.py:249
+#: ../factory/DisplayFactory.py:243
 #, python-format
 msgid "&lt;%s&gt; needs a bind attribute"
 msgstr "&lt;%s&gt; се нуждае от атрибут за прикрепяне"
 
-#: ../factory/DisplayFactory.py:251
+#: ../factory/DisplayFactory.py:245
 msgid "The &lt;prefs&gt; section of this desklet file is broken."
 msgstr "Разделът &lt;prefs&gt; във файла на плотамата е неправилен."
 
@@ -229,53 +213,54 @@ msgstr "Датчикът не може да бъде открит. Най-вер
 msgid "You must NOT run gDesklets as super user (root)."
 msgstr "НЕ ТРЯБВА да пускате gDesklets като администратор (root)."
 
-#: ../gdesklets:40
+#: ../gdesklets:46
 msgid "Checking requirements:"
 msgstr "Проверка на изискванията:"
 
-#: ../gdesklets:44
+#: ../gdesklets:50
 msgid "Python version >= 2.3.0 is required."
 msgstr "Необходим е Python, версия поне 2.3.0."
 
-#: ../gdesklets:48
+#: ../gdesklets:54
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr "Във версия 1.95.7 на libexpat има много грешки. Обновете библиотеката!"
 
-#: ../gdesklets:51
+#: ../gdesklets:57
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr ""
 "Необходим е анализатор със SAX. Някои версии на SuSE не разполагат с такъв."
 
-#: ../gdesklets:55
+#: ../gdesklets:61
+#, fuzzy
 msgid ""
-"GTK python bindings (pygtk2) version >= 2.4.0 and GTK+ version >= 2.4.0 are "
-"required."
+"GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
+"are required."
 msgstr ""
 "Необходими са поне версии 2.4.0 на графичните библиотеки GTK+ и 2.4.0 на "
 "връзките им към Python (pygtk2)"
 
-#: ../gdesklets:59
+#: ../gdesklets:65
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
 msgstr ""
 "Необходима е поне версия 2.0.1 на връзките на Python към ORBit (pyorbit)."
 
-#: ../gdesklets:62
+#: ../gdesklets:68
 msgid "bonobo python bindings are required."
 msgstr "необходими са връзки на Python към bonobo."
 
-#: ../gdesklets:71
+#: ../gdesklets:77
 msgid "found"
 msgstr "открити"
 
-#: ../gdesklets:75
+#: ../gdesklets:81
 msgid "missing"
 msgstr "липсват"
 
-#: ../gdesklets:81
+#: ../gdesklets:87
 msgid "Version check failed."
 msgstr "Проверката на версиите е неуспешна."
 
-#: ../gdesklets:82
+#: ../gdesklets:88
 #, c-format
 msgid ""
 "\n"
@@ -284,7 +269,7 @@ msgstr ""
 "\n"
 "%s\n"
 
-#: ../gdesklets:83
+#: ../gdesklets:89
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -301,7 +286,11 @@ msgstr ""
 "\n"
 "СТАРТИРАНЕТО ЩЕ БЪДЕ СПРЯНО СЕГА!\n"
 
-#: ../gdesklets:99
+#: ../gdesklets:98
+msgid "Requirements checking done. Your system looks ok!"
+msgstr ""
+
+#: ../gdesklets:105
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
@@ -311,7 +300,7 @@ msgstr ""
 "Стартирате gDesklets за първи път.\n"
 "Започва проверка на необходимите компоненти...\n"
 
-#: ../gdesklets:110
+#: ../gdesklets:116
 msgid ""
 "Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
@@ -360,104 +349,116 @@ msgstr ""
 "\t\t--no-tray-icon    (Изключва иконата в тавата)\n"
 "\t\t--translucent     (Включва полупрозрачност в X сървъра)\n"
 
-#: ../gdesklets:183 ../gdesklets:257
+#: ../gdesklets:161
+#, c-format
+msgid ""
+"Error while starting gdesklets-daemon\n"
+"More information about this crash is available in \"%s\"."
+msgstr ""
+
+#: ../gdesklets:164
+#, c-format
+msgid "Exception was: %s\n"
+msgstr ""
+
+#: ../gdesklets:189 ../gdesklets:258
 #, c-format
 msgid "Could not open desklet %s."
 msgstr "Не може да се отвори плотамата „%s“."
 
-#: ../gdesklets:265
+#: ../gdesklets:266
 msgid "Starting gdesklets-daemon..."
 msgstr "Стартиране на фоновата програма gdesklets-daemon..."
 
-#: ../gdesklets:271
+#: ../gdesklets:272
 msgid "Shutting down gdesklets-daemon..."
 msgstr "Спиране на фоновата програма gdesklets-daemon..."
 
-#: ../gdesklets:283
+#: ../gdesklets:284
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr "Текущо отворени дисплеи в профила „%s“:\n"
 
-#: ../gdesklets:288
+#: ../gdesklets:289
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr "В момента няма никакви плотами в профила „%s“"
 
-#: ../gdesklets:292
+#: ../gdesklets:293
 msgid "Restarting gdesklets-daemon..."
 msgstr "Рестартиране на фоновата програма gdesklets-daemon..."
 
-#: ../gdesklets:305
+#: ../gdesklets:306
 msgid "gdesklets-daemon is running"
 msgstr "Фоновата програма gdesklets-daemon е стартирана"
 
-#: ../gdesklets:307
+#: ../gdesklets:308
 msgid "gdesklets-daemon is not running"
 msgstr "фоновата програма gdesklets-daemon не е стартирана"
 
-#: ../gdesklets:311
+#: ../gdesklets:312
 #, c-format
 msgid "Current profile: %s"
 msgstr "Текущ профил: %s"
 
-#: ../gdesklets:322
+#: ../gdesklets:323
 #, c-format
 msgid "New profile: %s"
 msgstr "Нов профил: %s"
 
-#: ../gdesklets:325
+#: ../gdesklets:326
 #, c-format
 msgid "Available profiles: %s"
 msgstr "Налични профили: %s"
 
-#: ../gdesklets:329
+#: ../gdesklets:330
 #, c-format
 msgid "This is %s, version %s."
 msgstr "Това е %s, версия %s."
 
-#: ../gdesklets:357
+#: ../gdesklets:358
 msgid "Nothing to slay."
 msgstr "Няма процес за убиване."
 
-#: ../gdesklets:381
+#: ../gdesklets:382
 msgid "Invalid command. Please try one of the following commands:"
 msgstr "Невалидна команда. Опитайте една от следните команди:"
 
-#: ../gdesklets-daemon:20
+#: ../gdesklets-daemon:27
 msgid "You need a recent version of PyGTK to run this program.\n"
 msgstr ""
 "Нуждаете се от скорошна версия на PyGTK, за да използвате тази програма.\n"
 
-#: ../gdesklets-daemon:45
+#: ../gdesklets-daemon:52
 msgid "Could not fork daemon.\n"
 msgstr "Неуспех при пускане на фоновата програма gdesklets-daemon.\n"
 
-#: ../gdesklets-daemon:66 ../gdesklets-daemon:86
+#: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
 #, c-format
 msgid "The following error occurred: %s\n"
 msgstr "Възникна следната грешка: %s\n"
 
-#: ../libdesklets/convert.py:21
+#: ../libdesklets/convert.py:22
 #, python-format
 msgid "%.2f TB"
 msgstr "%.2f TB"
 
-#: ../libdesklets/convert.py:23
+#: ../libdesklets/convert.py:24
 #, python-format
 msgid "%.2f GB"
 msgstr "%.2f GB"
 
-#: ../libdesklets/convert.py:25
+#: ../libdesklets/convert.py:26
 #, python-format
 msgid "%.2f MB"
 msgstr "%.2f MB"
 
-#: ../libdesklets/convert.py:27
+#: ../libdesklets/convert.py:28
 #, python-format
 msgid "%.2f kB"
 msgstr "%.2f kB"
 
-#: ../libdesklets/convert.py:29
+#: ../libdesklets/convert.py:30
 #, python-format
 msgid "%d B"
 msgstr "%d B"
@@ -489,32 +490,41 @@ msgstr "Свързване към фоновата програма след %d 
 msgid "Connected to daemon in %d milliseconds."
 msgstr "Свързване към фоновата програма след %d милисекунди."
 
-#: ../main/__init__.py:69
+#: ../main/__init__.py:71
 #, python-format
 msgid "Version %s"
 msgstr "Версия %s"
 
-#: ../main/__init__.py:72
+#: ../main/__init__.py:74
 msgid "Core Programming:"
 msgstr "Програмиране на ядрото:"
 
-#: ../main/__init__.py:76
+#: ../main/__init__.py:77
 msgid "Architecture Design:"
 msgstr "Дизайн на архитектурата:"
 
-#: ../main/__init__.py:79
+#: ../main/__init__.py:80
 msgid "GNOME Integration:"
 msgstr "Интеграция с GNOME:"
 
 #: ../main/__init__.py:83
+#, fuzzy
+msgid "Additional Programming:"
+msgstr "Програмиране на ядрото:"
+
+#: ../main/__init__.py:86
+msgid "Documentation:"
+msgstr ""
+
+#: ../main/__init__.py:89
 msgid "Artwork:"
 msgstr "Графика:"
 
-#: ../main/__init__.py:86
+#: ../main/__init__.py:92
 msgid "Website:"
 msgstr "Уеб сайт:"
 
-#: ../main/__init__.py:89
+#: ../main/__init__.py:95
 msgid "Thank you:"
 msgstr "Благодарим на:"
 
@@ -538,30 +548,31 @@ msgstr "_Относно..."
 msgid "_Stop daemon"
 msgstr "Спиране на фоновата програма"
 
-#: ../main/Starter.py:227
+#: ../main/Starter.py:224
 #, python-format
 msgid "Could not open desklet file \"%s\""
 msgstr "Не може да се отвори файла за плотама „%s“."
 
-#: ../main/Starter.py:228
+#: ../main/Starter.py:225
 msgid "The desklet file could not be opened because the file was not readable."
 msgstr ""
 "Файлът за плотама не може да бъде отворен, защото липсват права за четене."
 
-#. CVS warning :)
-#: ../main/transition.py:42
+#: ../main/transition.py:39
+#, fuzzy
 msgid ""
-"This is a CVS version of gDesklets. CVS versions represent the current state "
-"of development and might be unstable or cause problems from time to time.\n"
+"This is a unstable version of gDesklets. Unstable versions represent the "
+"current state of development and might be unstable or cause problems from "
+"time to time.\n"
 "\n"
 "If you're new to gDesklets, it is thus highly recommended to <b>not</b> use "
-"a CVS version, but a stable release!\n"
+"this version, but a stable release!\n"
 "\n"
-"If you still want to run the CVS version instead of a stable release "
+"If you still want to run the unstable version instead of a stable release "
 "version, we'd highly appreciate it if you report any weird behavior to the "
 "developers.\n"
 "\n"
-"Experienced users are encouraged to try a CVS version, though!"
+"Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
 "Тази версия на gDesklets е взета от CVS. Тя представя текущо състояние на "
 "разработка и може да не е стабилна или да предизвиква проблеми понякога.\n"
@@ -574,7 +585,7 @@ msgstr ""
 "\n"
 "От друга страна - не е лошо опитните потребители да пробват версиите от CVS."
 
-#: ../main/transition.py:54
+#: ../main/transition.py:51
 msgid ""
 "This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
 "Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
@@ -594,7 +605,8 @@ msgstr ""
 
 #. our informative transition message which we can change with
 #. every release
-#: ../main/transition.py:65
+#: ../main/transition.py:62
+#, fuzzy
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -603,8 +615,7 @@ msgid ""
 "change that in the configuration dialog.\n"
 "\n"
 "Please note that due to limitations of older X servers, you might see blocks "
-"around desklets in Float mode. This cannot be solved in a satisfying way "
-"except for switching the X server to real translucency (Xorg 6.8 and above)."
+"around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
 "Тази версия на gDesklets разполага с режим „Изплуване“: натиснете клавиш и "
 "всичките Ви плотами ще изплуват най-отгоре - над другите програми, докато "
@@ -617,7 +628,7 @@ msgstr ""
 "приемлив начин, освен ако не смените X сървъра с нов, който да поддържа "
 "истинска прозрачност (Xorg 6.8 и по-нови)."
 
-#: ../main/transition.py:80
+#: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
 msgstr "Забележете следното (това съобщение няма да се появи повече!):"
 
@@ -643,11 +654,11 @@ msgstr "Не е открит контрол за интерфейса %s"
 msgid "This means that a functionality won't be available during execution!"
 msgstr "Това означава, че част от функционалността няма да е налична!"
 
-#: ../scripting/Script.py:234
+#: ../scripting/Script.py:241
 msgid "Security Risk"
 msgstr "Риск за сигурността"
 
-#: ../scripting/Script.py:235
+#: ../scripting/Script.py:242
 #, python-format
 msgid ""
 "The desklet %s wants to execute a system command:\n"
@@ -670,15 +681,15 @@ msgstr ""
 "Ако сте сигурни, че командата е безвредна, можете да позволите на плотамата "
 "винаги да я изпълнява."
 
-#: ../scripting/Script.py:248
+#: ../scripting/Script.py:255
 msgid "Deny!"
 msgstr "Отказ!"
 
-#: ../scripting/Script.py:249
+#: ../scripting/Script.py:256
 msgid "Allow once"
 msgstr "Еднократно позволение"
 
-#: ../scripting/Script.py:250
+#: ../scripting/Script.py:257
 msgid "Allow for this desklet"
 msgstr "Позволение за тази плотама"
 
@@ -715,19 +726,19 @@ msgstr "Цветът на шрифта #%i използван в етикети�
 msgid "%s Control"
 msgstr "Контрол на %s"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:55
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:54
 msgid "Interface Name"
 msgstr "Име на интерфейс"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:58
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:57
 msgid "Property Name"
 msgstr "Име на свойство"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:61
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:60
 msgid "Property Access"
 msgstr "Достъп до свойство"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:64
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:63
 msgid "Property Description"
 msgstr "Описание на свойство"
 
@@ -1044,3 +1055,23 @@ msgstr "Грешка при изпълнение"
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
 msgstr "Имаше грешка при изпълнение на плотама."
+
+#~ msgid "XComposite support (requires composition manager)"
+#~ msgstr "Поддръжка на XComposite (изисква композиращ мениджър)"
+
+#~ msgid ""
+#~ "\n"
+#~ "     <small><i>"
+#~ msgstr ""
+#~ "\n"
+#~ "     <small><i>"
+
+#~ msgid "this does not work with GTK 2.8 or higher for technical reasons"
+#~ msgstr ""
+#~ "по технически причини това не работи с с версии 2.8 или по-високи на gtk"
+
+#~ msgid "</i></small>"
+#~ msgstr "</i></small>"
+
+#~ msgid "Translucency (takes effect after restarting a display)"
+#~ msgstr "Полупрозрачност (изисква рестартиране на дисплея)"

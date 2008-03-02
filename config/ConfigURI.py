@@ -9,10 +9,15 @@ class ConfigURI(ConfigWidget):
 
     def __init__(self, name, getter, setter, caller):
 
+        self.__action_value = gtk.FILE_CHOOSER_ACTION_OPEN
+
         ConfigWidget.__init__(self, name, getter, setter, caller)
 
         self._register_property("value", TYPE_STRING, self._setp_value,
                                 self._getp, "", doc = "Value")
+
+        self._register_property("action", TYPE_STRING, self._setp_action,
+                                self._getp, "", doc = "The file selection action")
 
 
 
@@ -32,24 +37,25 @@ class ConfigURI(ConfigWidget):
             def preview_cb(src):
                 fname = src.get_preview_filename()
                 success = src.get_preview_widget().preview(fname)
-                d.set_preview_widget_active(success)
+                self.__dialog.set_preview_widget_active(success)
 
 
             preview = _FileChooserPreview()
             preview.show()
-            d = gtk.FileChooserDialog("", None,
+            self.__dialog = gtk.FileChooserDialog("", None,
                                       gtk.FILE_CHOOSER_ACTION_OPEN,
                                       (gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,
                                        gtk.STOCK_OPEN, gtk.RESPONSE_OK))
-            d.set_local_only(False)
+            self.__dialog.set_action(self.__action_value)
+            self.__dialog.set_local_only(False)
             path = os.path.join(self._get_path(), entry.get_text())
-            d.set_current_folder_uri(os.path.dirname(path))
-            d.set_preview_widget(preview)
-            d.set_preview_widget_active(False)
-            d.set_use_preview_label(False)
-            d.show()
-            d.connect("response", response_cb)
-            d.connect("selection-changed", preview_cb)
+            self.__dialog.set_current_folder_uri(os.path.dirname(path))
+            self.__dialog.set_preview_widget(preview)
+            self.__dialog.set_preview_widget_active(False)
+            self.__dialog.set_use_preview_label(False)
+            self.__dialog.show()
+            self.__dialog.connect("response", response_cb)
+            self.__dialog.connect("selection-changed", preview_cb)
 
 
         self.__label = gtk.Label("")
@@ -87,6 +93,16 @@ class ConfigURI(ConfigWidget):
 
     def _set_label(self, value): self.__label.set_text(value)
     def _set_enabled(self, value): self.__ebox.set_sensitive(value)
+
+
+    def _setp_action(self, key, value):
+
+        if (value == "save"): self.__action_value = gtk.FILE_CHOOSER_ACTION_SAVE 
+        elif (value == "select_folder"): self.__action_value = gtk.FILE_CHOOSER_ACTION_SELECT_FOLDER 
+        elif (value == "create_folder"): self.__action_value = gtk.FILE_CHOOSER_ACTION_CREATE_FOLDER 
+        else: self.__action_value = gtk.FILE_CHOOSER_ACTION_OPEN 
+
+        self._setp(key, value)
 
 
     def _setp_value(self, key, value):

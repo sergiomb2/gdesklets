@@ -18,16 +18,27 @@
         <surname>Sapp</surname>
         <address><email>nixphoeni@yahoo.com</email></address>
       </author>
+      <author>
+        <firstname>Bj&#x00F6;rn</firstname>
+        <surname>Koch</surname>
+        <address><email>H.Humpel@gmx.de</email></address>
+      </author>
+      <author>
+        <firstname>Robert</firstname>
+        <surname>Pastierovi&#x010d;</surname>
+        <address><email>pastierovic@gmail.com</email></address>
+      </author>
     </authorgroup>
     <copyright>
       <year>2004</year>
       <year>2005</year>
       <year>2006</year>
-      <year>2007</year> <holder>The gDesklets Team</holder>
+      <year>2007</year>
+      <year>2008</year> <holder>The gDesklets Team</holder>
     </copyright>
 
     <releaseinfo>
-      This book describes version 0.35.4 of the gDesklets platform.
+      This book describes version 0.36 of the gDesklets platform.
     </releaseinfo>
 
     <legalnotice>

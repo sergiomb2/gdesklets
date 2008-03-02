@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-10-26 20:41+0200\n"
+"POT-Creation-Date: 2008-03-02 21:49+0100\n"
 "PO-Revision-Date: 2006-10-26 20:42+0200\n"
 "Last-Translator: Ignacio Casal Quinteiro <nacho.resa@gmail.com>\n"
 "Language-Team: Galego <trasno@ceu.fi.udc.es>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../config/ConfigDialog.py:103
+#: ../config/ConfigDialog.py:113
 msgid "Invalid Function Call"
 msgstr "Chamada a función inválida"
 
-#: ../config/ConfigDialog.py:104
+#: ../config/ConfigDialog.py:114
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Isto significa que hai un erro no código do desklet. Debería informar ao "
 "autor do desklet deste problema."
 
-#: ../config/ConfigDialog.py:217 ../display/DisplayConfigurator.py:32
+#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
 msgstr "Este desklet non é configurable."
 
@@ -59,23 +59,11 @@ msgstr "O editor para ver/editar o código fonte do desklet"
 msgid "Your favorite editor"
 msgstr "O seu editor favorito"
 
-#: ../config/DaemonConfigger.py:22
-msgid "this does not work with GTK 2.8 or higher for technical reasons"
-msgstr "isto non funciona con GTK 2.8 ou superior por razóns técnicas"
-
 #: ../config/DaemonConfigger.py:20
-msgid "XComposite support (requires composition manager)"
-msgstr "Soporte para XComposite (require un xestor da composición)"
-
-#: ../config/DaemonConfigger.py:24
-msgid "Translucency (takes effect after restarting a display)"
-msgstr "Translucidez (fai efecto despois de reiniciar o visor)"
-
-#: ../config/DaemonConfigger.py:26
 msgid "Screen Resolution (DPI)"
 msgstr "Resolución de pantalla (DPI)"
 
-#: ../config/DaemonConfigger.py:28
+#: ../config/DaemonConfigger.py:22
 msgid ""
 "Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
 "\"</b> wide"
@@ -83,23 +71,24 @@ msgstr ""
 "Axuste o valor de enriba de maneira que a barra sexa exactamente de <b>5 cm</"
 "b> ou <b>1.97\"</b> de ancho"
 
-#: ../config/DaemonConfigger.py:32
+#: ../config/DaemonConfigger.py:26
 msgid "Behavior"
 msgstr "Comportamento"
 
-#: ../config/DaemonConfigger.py:33
+#: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
-msgstr "_Amosar a icona na área de notificación (ten efecto despois de reiniciar)"
+msgstr ""
+"_Amosar a icona na área de notificación (ten efecto despois de reiniciar)"
 
-#: ../config/DaemonConfigger.py:35
+#: ../config/DaemonConfigger.py:29
 msgid "Show _notification while loading a desklet"
 msgstr "Amosar unha _notificación cando se esté cargando un desklet"
 
-#: ../config/DaemonConfigger.py:37
+#: ../config/DaemonConfigger.py:31
 msgid "Key for toggling Float mode:"
 msgstr "Tecla para cambiar o modo flotante:"
 
-#: ../config/DaemonConfigger.py:49 ../config/DisplayConfigger.py:27
+#: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
 #: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
 msgstr "Configuración"
@@ -112,31 +101,40 @@ msgstr "Un sistema de applets de escritorio para Gnome"
 msgid "gDesklets display"
 msgstr "Visor de gDesklets"
 
-#: ../display/Display.py:84
+#: ../display/Display.py:85
 msgid "_Configure desklet"
 msgstr "_Configurar desklet"
 
-#: ../display/Display.py:86
+#: ../display/Display.py:87
 msgid "_Move desklet"
 msgstr "_Mover desklet"
 
-#: ../display/Display.py:89
+#: ../display/Display.py:90
 msgid "_View Source"
 msgstr "_Ver código fonte"
 
-#: ../display/Display.py:92
+#: ../display/Display.py:93
 msgid "Re_start desklet"
 msgstr "_Reiniciar desklet"
 
-#: ../display/Display.py:94
+#: ../display/Display.py:95
 msgid "_Remove desklet"
 msgstr "_Eliminar desklet"
 
-#: ../display/Display.py:978 ../shell/plugins/DisplayBrowser/__init__.py:142
+#: ../display/Display.py:98
+#, fuzzy
+msgid "_About"
+msgstr "A_cerca de..."
+
+#: ../display/Display.py:337
+msgid "_Readme"
+msgstr ""
+
+#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
 msgid "Do you really want to remove this desklet ?"
 msgstr "Está seguro de que quere eliminar este desklet?"
 
-#: ../display/Display.py:979
+#: ../display/Display.py:1116
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
@@ -176,24 +174,25 @@ msgstr "Erro ao analizar o XML"
 msgid "This .display file has invalid XML syntax."
 msgstr "O ficheiro .display contén unha sintase XML inválida."
 
-#: ../factory/DisplayFactory.py:208
+#: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
 msgstr "O ficheiro non existe ou non se puido cargar"
 
-#: ../factory/DisplayFactory.py:210
+#: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
-msgstr "Un ficheiro que contén un script non está dispoñible para a súa execución."
+msgstr ""
+"Un ficheiro que contén un script non está dispoñible para a súa execución."
 
-#: ../factory/DisplayFactory.py:233
+#: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
 msgstr "Non se puido cargar o sensor"
 
-#: ../factory/DisplayFactory.py:249
+#: ../factory/DisplayFactory.py:243
 #, python-format
 msgid "&lt;%s&gt; needs a bind attribute"
 msgstr "&lt;%s&gt; necesita un atributo bind"
 
-#: ../factory/DisplayFactory.py:251
+#: ../factory/DisplayFactory.py:245
 msgid "The &lt;prefs&gt; section of this desklet file is broken."
 msgstr "A sección &lt;prefs&gt; do ficheiro do desklet está rota."
 
@@ -233,9 +232,10 @@ msgstr ""
 "el."
 
 #: ../gdesklets:61
+#, fuzzy
 msgid ""
-"GTK python bindings (pygtk2) version >= 2.4.0 and GTK+ version >= 2.4.0 are "
-"required."
+"GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
+"are required."
 msgstr ""
 "Requírense os bindings de python GTK (pygtk2) versión >= 2.4.0 e GTK+ "
 "versión >= 2.4.0."
@@ -285,6 +285,10 @@ msgstr ""
 "instaladas no seu sistema.\n"
 "\n"
 "CANCELARASE O INICIO AGORA!\n"
+
+#: ../gdesklets:98
+msgid "Requirements checking done. Your system looks ok!"
+msgstr ""
 
 #: ../gdesklets:105
 msgid ""
@@ -345,103 +349,115 @@ msgstr ""
 "\t\t--no-tray-icon         (Desactiva a icona da bandexa do sistema)\n"
 "\t\t--translucent           (Activa a translucidez nos servidores xorg)\n"
 
-#: ../gdesklets:189 ../gdesklets:263
+#: ../gdesklets:161
+#, c-format
+msgid ""
+"Error while starting gdesklets-daemon\n"
+"More information about this crash is available in \"%s\"."
+msgstr ""
+
+#: ../gdesklets:164
+#, c-format
+msgid "Exception was: %s\n"
+msgstr ""
+
+#: ../gdesklets:189 ../gdesklets:258
 #, c-format
 msgid "Could not open desklet %s."
 msgstr "Non se puido abrir o desklet %s."
 
-#: ../gdesklets:271
+#: ../gdesklets:266
 msgid "Starting gdesklets-daemon..."
 msgstr "Iniciando o demonio gdesklets..."
 
-#: ../gdesklets:277
+#: ../gdesklets:272
 msgid "Shutting down gdesklets-daemon..."
 msgstr "Detendo o demonio gdesklets..."
 
-#: ../gdesklets:289
+#: ../gdesklets:284
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr "Visores abertos actualmente no perfil \"%s\":\n"
 
-#: ../gdesklets:294
+#: ../gdesklets:289
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr "Actualmente non hai ningún desklet no perfil \"%s\""
 
-#: ../gdesklets:298
+#: ../gdesklets:293
 msgid "Restarting gdesklets-daemon..."
 msgstr "Reiniciando o demonio gdesklets..."
 
-#: ../gdesklets:311
+#: ../gdesklets:306
 msgid "gdesklets-daemon is running"
 msgstr "o demonio gdesklets está funcionando"
 
-#: ../gdesklets:313
+#: ../gdesklets:308
 msgid "gdesklets-daemon is not running"
 msgstr "o demonio gdesklet non está funcionando"
 
-#: ../gdesklets:317
+#: ../gdesklets:312
 #, c-format
 msgid "Current profile: %s"
 msgstr "Perfil actual: %s"
 
-#: ../gdesklets:328
+#: ../gdesklets:323
 #, c-format
 msgid "New profile: %s"
 msgstr "Perfil novo: %s"
 
-#: ../gdesklets:331
+#: ../gdesklets:326
 #, c-format
 msgid "Available profiles: %s"
 msgstr "Perfiles dispoñibles: %s"
 
-#: ../gdesklets:335
+#: ../gdesklets:330
 #, c-format
 msgid "This is %s, version %s."
 msgstr "Isto é %s, versión %s."
 
-#: ../gdesklets:363
+#: ../gdesklets:358
 msgid "Nothing to slay."
 msgstr "Nada para matar."
 
-#: ../gdesklets:387
+#: ../gdesklets:382
 msgid "Invalid command. Please try one of the following commands:"
 msgstr "Comando inválido. Tente un dos comandos seguintes:"
 
-#: ../gdesklets-daemon:20
+#: ../gdesklets-daemon:27
 msgid "You need a recent version of PyGTK to run this program.\n"
 msgstr "Necesita unha versión recente de PyGTK para executar este programa.\n"
 
-#: ../gdesklets-daemon:45
+#: ../gdesklets-daemon:52
 msgid "Could not fork daemon.\n"
 msgstr "Non se pode bifurcar o demonio.\n"
 
-#: ../gdesklets-daemon:66 ../gdesklets-daemon:86
+#: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
 #, c-format
 msgid "The following error occurred: %s\n"
 msgstr "Ocorreu o seguinte erro: %s\n"
 
-#: ../libdesklets/convert.py:21
+#: ../libdesklets/convert.py:22
 #, python-format
 msgid "%.2f TB"
 msgstr "%.2f TiB"
 
-#: ../libdesklets/convert.py:23
+#: ../libdesklets/convert.py:24
 #, python-format
 msgid "%.2f GB"
 msgstr "%.2f GiB"
 
-#: ../libdesklets/convert.py:25
+#: ../libdesklets/convert.py:26
 #, python-format
 msgid "%.2f MB"
 msgstr "%.2f MiB"
 
-#: ../libdesklets/convert.py:27
+#: ../libdesklets/convert.py:28
 #, python-format
 msgid "%.2f kB"
 msgstr "%.2f kiB"
 
-#: ../libdesklets/convert.py:29
+#: ../libdesklets/convert.py:30
 #, python-format
 msgid "%d B"
 msgstr "%d B"
@@ -473,32 +489,41 @@ msgstr "Conectouse co demonio en %d microsegundos."
 msgid "Connected to daemon in %d milliseconds."
 msgstr "Conectouse co demonio en %d milisegundos."
 
-#: ../main/__init__.py:69
+#: ../main/__init__.py:71
 #, python-format
 msgid "Version %s"
 msgstr "Versión %s"
 
-#: ../main/__init__.py:72
+#: ../main/__init__.py:74
 msgid "Core Programming:"
 msgstr "Programación do núcleo:"
 
-#: ../main/__init__.py:76
+#: ../main/__init__.py:77
 msgid "Architecture Design:"
 msgstr "Deseño de arquitectura:"
 
-#: ../main/__init__.py:79
+#: ../main/__init__.py:80
 msgid "GNOME Integration:"
 msgstr "Integración con Gnome:"
 
 #: ../main/__init__.py:83
+#, fuzzy
+msgid "Additional Programming:"
+msgstr "Programación do núcleo:"
+
+#: ../main/__init__.py:86
+msgid "Documentation:"
+msgstr ""
+
+#: ../main/__init__.py:89
 msgid "Artwork:"
 msgstr "Ilustracións:"
 
-#: ../main/__init__.py:86
+#: ../main/__init__.py:92
 msgid "Website:"
 msgstr "Sitio web:"
 
-#: ../main/__init__.py:89
+#: ../main/__init__.py:95
 msgid "Thank you:"
 msgstr "Agradecementos:"
 
@@ -522,29 +547,30 @@ msgstr "A_cerca de..."
 msgid "_Stop daemon"
 msgstr "_Deter demonio"
 
-#: ../main/Starter.py:227
+#: ../main/Starter.py:224
 #, python-format
 msgid "Could not open desklet file \"%s\""
 msgstr "Non se puido abrir o ficheiro do desklet \"%s\""
 
-#: ../main/Starter.py:228
+#: ../main/Starter.py:225
 msgid "The desklet file could not be opened because the file was not readable."
 msgstr "O ficheiro do desklet non puido abrirse porque o ficheiro é ilexible."
 
-#. CVS warning :)
-#: ../main/transition.py:42
+#: ../main/transition.py:39
+#, fuzzy
 msgid ""
-"This is a CVS version of gDesklets. CVS versions represent the current state "
-"of development and might be unstable or cause problems from time to time.\n"
+"This is a unstable version of gDesklets. Unstable versions represent the "
+"current state of development and might be unstable or cause problems from "
+"time to time.\n"
 "\n"
 "If you're new to gDesklets, it is thus highly recommended to <b>not</b> use "
-"a CVS version, but a stable release!\n"
+"this version, but a stable release!\n"
 "\n"
-"If you still want to run the CVS version instead of a stable release "
+"If you still want to run the unstable version instead of a stable release "
 "version, we'd highly appreciate it if you report any weird behavior to the "
 "developers.\n"
 "\n"
-"Experienced users are encouraged to try a CVS version, though!"
+"Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
 "Esta é unha versión do CVS de gDesklets. As versións de CVS representan o "
 "estado actual do desenrolo; pode que sexa inestable e cause problemas de vez "
@@ -558,7 +584,7 @@ msgstr ""
 "anómalo. Por suposto, anímase aos usuarios experimentados a que proben unha "
 "versión do CVS."
 
-#: ../main/transition.py:54
+#: ../main/transition.py:51
 msgid ""
 "This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
 "Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
@@ -579,7 +605,8 @@ msgstr ""
 
 #. our informative transition message which we can change with
 #. every release
-#: ../main/transition.py:65
+#: ../main/transition.py:62
+#, fuzzy
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -588,8 +615,7 @@ msgid ""
 "change that in the configuration dialog.\n"
 "\n"
 "Please note that due to limitations of older X servers, you might see blocks "
-"around desklets in Float mode. This cannot be solved in a satisfying way "
-"except for switching the X server to real translucency (Xorg 6.8 and above)."
+"around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
 "Esta versión de gDesklets ofrece o modo flotante: prema unha tecla e todos "
 "os seus desklets virán ao frente, flotando sobre as súas aplicacións, ata "
@@ -602,7 +628,7 @@ msgstr ""
 "resolto de modo satisfactorio a non ser que cambie o servidor X a "
 "translucidez real (Xorg 6.8 ou superiores)."
 
-#: ../main/transition.py:80
+#: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
 msgstr "Por favor déase conta que (esta mensaxe aparecerá só unha vez):"
 
@@ -702,19 +728,19 @@ msgstr "Cor da fonte #%i usada nas etiquetas"
 msgid "%s Control"
 msgstr "Control %s"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:55
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:54
 msgid "Interface Name"
 msgstr "Nome da interface"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:58
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:57
 msgid "Property Name"
 msgstr "Nome da propiedade"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:61
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:60
 msgid "Property Access"
 msgstr "Acceso da propiedade"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:64
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:63
 msgid "Property Description"
 msgstr "Descrición da propiedade"
 
@@ -770,7 +796,8 @@ msgstr ""
 "permisos de escritura sobre el."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:143
-msgid "The desklet will be removed from your system and no longer be available."
+msgid ""
+"The desklet will be removed from your system and no longer be available."
 msgstr "O desklet eliminarase do seu sistema e non estará dispoñible máis."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:155
@@ -925,7 +952,8 @@ msgid "Installation failed"
 msgstr "A instalación fallou"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:116
-msgid "The package could not be installed because it contained no installable files."
+msgid ""
+"The package could not be installed because it contained no installable files."
 msgstr ""
 "O paquete non se puido instalar porque non contiña ningún ficheiro "
 "instalable."
@@ -1032,3 +1060,11 @@ msgstr "Erro en tempo de execución"
 msgid "An error occurred while executing a desklet."
 msgstr "Ocorreu un erro ao executar un desklet."
 
+#~ msgid "this does not work with GTK 2.8 or higher for technical reasons"
+#~ msgstr "isto non funciona con GTK 2.8 ou superior por razóns técnicas"
+
+#~ msgid "XComposite support (requires composition manager)"
+#~ msgstr "Soporte para XComposite (require un xestor da composición)"
+
+#~ msgid "Translucency (takes effect after restarting a display)"
+#~ msgstr "Translucidez (fai efecto despois de reiniciar o visor)"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-02 03:01+0200\n"
+"POT-Creation-Date: 2008-03-02 21:49+0100\n"
 "PO-Revision-Date: 2004-10-02 10:42+0200\n"
 "Last-Translator: Laurent Dhima <laurenti@alblinux.net>\n"
 "Language-Team: Albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
@@ -15,212 +15,193 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: Controls/Calendar/__init__.py:9
-msgid "Monday"
-msgstr "E hënë"
+#: ../config/ConfigDialog.py:113
+msgid "Invalid Function Call"
+msgstr ""
 
-#: Controls/Calendar/__init__.py:9
-msgid "Tuesday"
-msgstr "E martë"
+#: ../config/ConfigDialog.py:114
+#, python-format
+msgid ""
+"There is no function called <b>%s</b>.\n"
+"This means that there's an error in the desklet's code. You should inform "
+"the author of the desklet about this problem."
+msgstr ""
 
-#: Controls/Calendar/__init__.py:9
-msgid "Wednesday"
-msgstr "E mërkurë"
+#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
+#, fuzzy
+msgid "This desklet is not configurable."
+msgstr "Ky monitor nuk është i konfigurueshëm."
 
-#: Controls/Calendar/__init__.py:9
-msgid "Thursday"
-msgstr "E enjte"
-
-#: Controls/Calendar/__init__.py:10
-msgid "Friday"
-msgstr "E premte"
-
-#: Controls/Calendar/__init__.py:10
-msgid "Saturday"
-msgstr "E shtunë"
-
-#: Controls/Calendar/__init__.py:10
-msgid "Sunday"
-msgstr "E djelë"
-
-#: Controls/Calendar/__init__.py:12
-msgid "January"
-msgstr "Janar"
-
-#: Controls/Calendar/__init__.py:12
-msgid "February"
-msgstr "Shkurt"
-
-#: Controls/Calendar/__init__.py:12
-msgid "March"
-msgstr "Mars"
-
-#: Controls/Calendar/__init__.py:12
-msgid "April"
+#: ../config/ConfigUnit.py:57
+#, fuzzy
+msgid "pixel"
 msgstr "Prill"
 
-#: Controls/Calendar/__init__.py:13
-msgid "May"
-msgstr "Maj"
-
-#: Controls/Calendar/__init__.py:13
-msgid "June"
-msgstr "Qershor"
-
-#: Controls/Calendar/__init__.py:13
-msgid "July"
-msgstr "Korrik"
-
-#: Controls/Calendar/__init__.py:13
-msgid "August"
-msgstr "Gusht"
-
-#: Controls/Calendar/__init__.py:13
-msgid "September"
-msgstr "Shtator"
-
-#: Controls/Calendar/__init__.py:14
-msgid "October"
-msgstr "Tetor"
-
-#: Controls/Calendar/__init__.py:14
-msgid "November"
-msgstr "Nëntor"
-
-#: Controls/Calendar/__init__.py:14
-msgid "December"
-msgstr "Dhjetor"
-
-#: Sensors/FontSelector/__init__.py:86
-msgid "Fonts"
+#: ../config/ConfigUnit.py:58
+#, fuzzy
+msgid "point"
 msgstr "Gërmat"
 
-#: Sensors/FontSelector/__init__.py:87
-msgid "Fonts settings"
-msgstr "Rregullimet e gërmave"
+#: ../config/ConfigUnit.py:59
+msgid "cm"
+msgstr ""
 
-#: Sensors/FontSelector/__init__.py:90
-#, python-format
-msgid "Font #%i:"
-msgstr "Gërma #%i:"
+#: ../config/ConfigUnit.py:60
+msgid "inch"
+msgstr ""
 
-#: Sensors/FontSelector/__init__.py:92
-#, python-format
-msgid "Font #%i used in the labels"
-msgstr "Gërma #%i e përdorur tek etiketat"
+#: ../config/DaemonConfigger.py:17
+msgid "Editor to view/edit the desklet source code"
+msgstr ""
 
-#: Sensors/FontSelector/__init__.py:93
-#, python-format
-msgid "Font color #%i:"
-msgstr "Ngjyra e gërmave #%i:"
+#: ../config/DaemonConfigger.py:18
+msgid "Your favorite editor"
+msgstr ""
 
-#: Sensors/FontSelector/__init__.py:95
-#, python-format
-msgid "Font color #%i used in the labels"
-msgstr "Ngjyra e gërmave #%i të përdorura tek etiketat"
+#: ../config/DaemonConfigger.py:20
+msgid "Screen Resolution (DPI)"
+msgstr ""
 
-#: config/ConfigDialog.py:34 display/DisplayConfigurator.py:15
+#: ../config/DaemonConfigger.py:22
+msgid ""
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
+"\"</b> wide"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:26
+msgid "Behavior"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:27
+msgid "Show _tray icon (takes effect after restart)"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:29
+msgid "Show _notification while loading a desklet"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:31
+msgid "Key for toggling Float mode:"
+msgstr ""
+
+#: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
+#: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
 msgstr "Konfigurimi"
 
-#. end for
-#: data/gdesklets.desktop.in.h:1
+#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
 msgid "A desktop applet system for GNOME"
 msgstr "Një sistem programesh të vegjël desktopi për GNOME"
 
-#: data/gdesklets.xml.in.h:1
+#: ../data/gdesklets.xml.in.h:1
 msgid "gDesklets display"
 msgstr "monitor i gDesklets"
 
-#: display/ContainerTarget.py:126
-#, python-format
-msgid "The %(name)s container accepts only one child."
-msgstr "Përmbajtësi %(name)s pranon vetëm një bir."
-
-#: display/DataTarget.py:170
-#, python-format
-msgid "No such property: %s"
-msgstr "Asnjë pronësi: %s"
-
-#: display/DataTarget.py:171
-#, python-format
-msgid "The element <b>%(name)s</b> does not have the <b>%(key)s</b> property."
-msgstr "Elementi <b>%(name)s</b> nuk ka pronësinë<b>%(key)s</b>."
-
-#: display/Display.py:33
-msgid "_Configure display"
+#: ../display/Display.py:85
+#, fuzzy
+msgid "_Configure desklet"
 msgstr "_Konfiguro monitorin"
 
-#: display/Display.py:34
-msgid "_Move display"
-msgstr "_Lëvize monitorin"
+#: ../display/Display.py:87
+#, fuzzy
+msgid "_Move desklet"
+msgstr "_Organizo desklets"
 
-#: display/Display.py:36
-msgid "Re_start display"
+#: ../display/Display.py:90
+#, fuzzy
+msgid "_View Source"
+msgstr "_Shiko mesazhet"
+
+#: ../display/Display.py:93
+#, fuzzy
+msgid "Re_start desklet"
 msgstr "Ri_nis monitorin"
 
-#: display/Display.py:37
-msgid "_Remove display"
+#: ../display/Display.py:95
+#, fuzzy
+msgid "_Remove desklet"
 msgstr "_Elemino monitorin"
 
-#: display/Display.py:735
-msgid "Do you really want to remove this display ?"
+#: ../display/Display.py:98
+#, fuzzy
+msgid "_About"
+msgstr "_Informacione..."
+
+#: ../display/Display.py:337
+msgid "_Readme"
+msgstr ""
+
+#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
+#, fuzzy
+msgid "Do you really want to remove this desklet ?"
 msgstr "Dëshironi me të vërtetë të hiqni këtë monitor?"
 
-#: display/Display.py:736
+#: ../display/Display.py:1116
+#, fuzzy
 msgid ""
-"This display will no longer be displayed and its configuration will be "
+"This desklet will no longer be displayed and its configuration will be "
 "purged."
 msgstr "Ky monitor nuk do të shfaqet më dhe konfigurimi i tij do të fshihet."
 
-#: display/DisplayConfigurator.py:40
-msgid "This display is not configurable."
-msgstr "Ky monitor nuk është i konfigurueshëm."
+#: ../display/DisplayTarget.py:417
+#, fuzzy, python-format
+msgid "Element \"%s\" does not exist"
+msgstr "File nuk ekziston."
 
-#: factory/DisplayFactory.py:100
-msgid "Error while configuring display"
-msgstr "Gabim gjatë konfigurimit të monitorit"
-
-#: factory/DisplayFactory.py:101
+#: ../display/DisplayTarget.py:418
 msgid ""
-"A display could not be configured properly. It will most likely be broken "
-"and you should consider removing it."
+"The <tt>relative-to</tt> property requires a reference to an existing "
+"display element within the same parent container."
 msgstr ""
-"Një monitor nuk arrin të konfigurohet si duhet. Kjo do të thotë që nuk "
-"funksionon si duhet dhe bën mirë t'a heqësh fare."
 
-#: factory/DisplayFactory.py:216
+#: ../display/targetregistry.py:45
+#, python-format
+msgid "Unknown element <b>&lt;%s&gt;</b>"
+msgstr ""
+
+#: ../display/targetregistry.py:46
+msgid ""
+"Either there is a typo in the .display file or you have an incompatible "
+"version of gDesklets."
+msgstr ""
+
+#: ../factory/DisplayFactory.py:89 ../utils/DOM.py:31
+msgid "XML parse error"
+msgstr ""
+
+#: ../factory/DisplayFactory.py:90
+#, fuzzy
+msgid "This .display file has invalid XML syntax."
+msgstr ""
+"File i monitorit përmban të dhëna të pavlefshme ndaj nuk do të ngarkohet."
+
+#: ../factory/DisplayFactory.py:202
+msgid "File doesn't exist or couldn't be loaded"
+msgstr ""
+
+#: ../factory/DisplayFactory.py:204
+msgid "A file which contains a script isn't available for further execution."
+msgstr ""
+
+#: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
 msgstr "I pamundur ngarkimi i sensorit"
 
-#: factory/SensorFactory.py:68
+#: ../factory/DisplayFactory.py:243
 #, python-format
-msgid "Error in sensor '%(name)s'"
-msgstr "Gabim në '%(name)s'"
-
-#: factory/SensorFactory.py:69
-msgid ""
-"An error occurred while loading a sensor. This most likely means that your "
-"system does not fulfill all its requirements."
+msgid "&lt;%s&gt; needs a bind attribute"
 msgstr ""
-"Gabim gjatë ngarkimit të një sensori. Kjo do të thotë që sistemi juaj nuk "
-"kënaq plotësisht të gjitha kërkesat e tij."
 
-#: factory/SensorFactory.py:85
-#, python-format
-msgid "Error in sensor %(name)s"
-msgstr "Gabim në sensorin '%(name)s'"
+#: ../factory/DisplayFactory.py:245
+msgid "The &lt;prefs&gt; section of this desklet file is broken."
+msgstr ""
 
-#: factory/SensorFactory.py:86
-msgid "An error occurred while running a sensor."
-msgstr "Gabim gjatë nisjes së një sensori."
-
-#: factory/SensorFactory.py:93
+#: ../factory/SensorFactory.py:75
 #, python-format
 msgid "Could not find sensor '%(name)s'"
 msgstr "Nuk arrij të gjej sensorin '%(name)s'"
 
-#: factory/SensorFactory.py:94
+#: ../factory/SensorFactory.py:76
 msgid ""
 "A sensor could not be found. This usually means that it has not been "
 "installed."
@@ -228,375 +209,106 @@ msgstr ""
 "Një sensor nuk arrin të gjehet. Zakonisht do të thotë që ai nuk është "
 "instaluar."
 
-#: libdesklets/convert.py:18
-#, python-format
-msgid "%.2f TB"
-msgstr "%.2f TB"
+#: ../gdesklets:26
+msgid "You must NOT run gDesklets as super user (root)."
+msgstr "NUK duhet të ekzekutoni gDesklets si supër përdorues (root)."
 
-#: libdesklets/convert.py:20
-#, python-format
-msgid "%.2f GB"
-msgstr "%.2f GB"
-
-#: libdesklets/convert.py:22
-#, python-format
-msgid "%.2f MB"
-msgstr "%.2f MB"
-
-#: libdesklets/convert.py:24
-#, python-format
-msgid "%.2f kB"
-msgstr "%.2f kB"
-
-#: libdesklets/convert.py:26
-#, python-format
-msgid "%d B"
-msgstr "%d B"
-
-#: main/client.py:193
-msgid "This software is licensed under the terms of the GNU GPL."
-msgstr "Liçenca e këtij programi është sipas kushteve të GNU GPL."
-
-#: main/client.py:231
-#, python-format
-msgid "Connecting to daemon [%s]"
-msgstr "Duke u lidhur me daemon [%s]"
-
-#: main/client.py:245
-msgid "Cannot establish connection to daemon: timeout!"
-msgstr "E pamundur lidhja me daemon: kaloi koha limit!"
-
-#: main/client.py:251
-#, python-format
-msgid "Connected to daemon in %d microseconds."
-msgstr "Lidhja me daemon në %d mikrosekonda."
-
-#: main/client.py:254
-#, python-format
-msgid "Connected to daemon in %d milliseconds."
-msgstr "Lidhja me daemon në %d milisekonda."
-
-#: main/LogViewer.py:19
-msgid "Log Messages"
-msgstr "Mesazhet e Log"
-
-#: main/Starter.py:91
-msgid "_Manage desklets"
-msgstr "_Organizo desklets"
-
-#: main/Starter.py:93
-msgid "_View log"
-msgstr "_Shiko mesazhet"
-
-#: main/Starter.py:94 shell/plugins/Help/__init__.py:45
-msgid "_About..."
-msgstr "_Informacione..."
-
-#: main/Starter.py:96
-msgid "_Stop daemon"
-msgstr "_Ndalo daemon"
-
-#: main/Starter.py:175
-msgid "File does not exist."
-msgstr "File nuk ekziston."
-
-#: main/Starter.py:183
-#, python-format
-msgid "Could not open display file '%s'"
-msgstr "E pamundur hapja e file të monitorit '%s'"
-
-#: main/Starter.py:184
-msgid "The display file could not be opened because the file was not readable."
-msgstr "File i monitorit nuk mund të hapet pasi ai file nuk është i lexueshëm."
-
-#: main/Starter.py:195
-#, python-format
-msgid "Invalid display file '%(path)s'"
-msgstr "File i monitorit '%(path)s' është i pavlefshëm"
-
-#: main/Starter.py:196
-msgid "The display file contains invalid data and could not be loaded."
-msgstr "File i monitorit përmban të dhëna të pavlefshme ndaj nuk do të ngarkohet."
-
-#: main/Starter.py:210 gdesklets:69
-#, c-format, python-format
-msgid "Closing %s."
-msgstr "Duke mbyllur %s."
-
-#: main/Starter.py:255
-#, python-format
-msgid "Purging path %s."
-msgstr "Duke pastruar pozicionin %s."
-
-#. FIXME
-#. shutil.rmtree(p)
-#. hey this codes does nothing !
-#: main/Starter.py:260
-#, python-format
-msgid "Purging %s."
-msgstr "Duke pastruar %s."
-
-#: main/Starter.py:437
-msgid ""
-"Could not connect to gnome-session. GNOME session management will not be "
-"available for this application."
+#: ../gdesklets:46
+msgid "Checking requirements:"
 msgstr ""
-"E pamundur lidhja me gnome-session. Administrimi i seancës së GNOME nuk do "
-"të jetë i mundur për këtë aplikativ."
 
-#: scripting/Script.py:110 scripting/Script.py:238 scripting/Script.py:252
-msgid "Error in script"
-msgstr "Gabim në script"
-
-#: scripting/Script.py:111 scripting/Script.py:253
-msgid "An error occurred while executing a script."
-msgstr "Gabim gjatë ekzekutimit të një script-i."
-
-#: scripting/Script.py:140
-#, python-format
-msgid "Stopping %s"
-msgstr "Duke ndaluar %s."
-
-#: scripting/Script.py:239
-msgid "An error occurred while loading a script."
-msgstr "Gabim gjatë ngarkimit të një script-i."
-
-#: sensor/Sensor.py:430
-msgid "translator_credits"
-msgstr "Laurent Dhima <laurenti@alblinux.net>"
-
-#: shell/SearchBar.py:20
-msgid "Search"
-msgstr "Kërko"
-
-#: shell/plugins/ControlBrowser/ControlInspector.py:20
-#, python-format
-msgid "%s Control"
-msgstr "Kontrolli i %s"
-
-#: shell/plugins/ControlBrowser/__init__.py:31
-msgid "by interface"
-msgstr "sipas interfaqes"
-
-#: shell/plugins/ControlBrowser/__init__.py:32
-#: shell/plugins/DisplayBrowser/__init__.py:77
-msgid "alphabetically"
-msgstr "sipas alfabetit"
-
-#: shell/plugins/ControlBrowser/__init__.py:76
-#, python-format
-msgid "Found %d controls."
-msgstr "U gjetën %d kontrolle."
-
-#: shell/plugins/ControlBrowser/__init__.py:79
-#: shell/plugins/DisplayBrowser/__init__.py:98
-msgid "Invalid search expression."
-msgstr "Shprehje e pavlefshme kërkimi."
-
-#: shell/plugins/DisplayBrowser/__init__.py:42
-msgid "_Run selected display"
-msgstr "_Zbato monitorin e zgjedhur"
-
-#: shell/plugins/DisplayBrowser/__init__.py:75
-msgid "by category"
-msgstr "sipas kategorisë"
-
-#: shell/plugins/DisplayBrowser/__init__.py:76
-msgid "by author"
-msgstr "sipas autorit"
-
-#: shell/plugins/DisplayBrowser/__init__.py:95
-#, python-format
-msgid "Found %d displays."
-msgstr "U gjetën %d monitorë."
-
-#: shell/plugins/DisplayBrowser/__init__.py:115
-msgid "No description available"
-msgstr "Asnjë përshkrim në dispozicion"
-
-#: shell/plugins/Help/TipOfTheDay.py:23
-msgid "Tip of the Day"
-msgstr "Këshilla e Ditës"
-
-#: shell/plugins/Help/TipOfTheDay.py:26
-msgid "Show tips at startup"
-msgstr "Shfaq këshillat në nisje"
-
-#: shell/plugins/Help/__init__.py:37
-msgid "_Help"
-msgstr "_Ndihmë"
-
-#. menu.set_item("Help/Contents", gtk.STOCK_HELP, _("_Contents"), None)
-#. menu.set_item("Help/Intro", None, _("_Getting Started"), None)
-#. menu.set_item("Help/Devel", None, _("_Developer's Manual"), None)
-#. menu.set_separator("Help/Separator")
-#: shell/plugins/Help/__init__.py:42
-msgid "_Tip of the Day"
-msgstr "_Këshilla e Ditës"
-
-#: shell/plugins/Help/tips.py:2
-msgid ""
-"You can find lots of desktop applets for use\n"
-"with gDesklets at\n"
-"\n"
-"http://gdesklets.gnomedesktop.org"
+#: ../gdesklets:50
+msgid "Python version >= 2.3.0 is required."
 msgstr ""
-"Mund të gjeni shumë ndihmues desktopi për\n"
-"përdorim me gDesklets tek\n"
-"\n"
-"http://gdesklets.gnomedesktop.org"
 
-#: shell/plugins/Help/tips.py:7
-msgid ""
-"You can install new desktop applets easily by\n"
-"dragging the download link for the package\n"
-"from your web browser into the gDesklets Shell."
+#: ../gdesklets:54
+msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr ""
-"Mund të instalosh me lehtësi ndihmuesit e rinj për\n"
-"desktop duke tërhequr lidhjen për shkarkimin e\n"
-"paketës nga shfletuesi juaj web tek Shell i gDesklets."
 
-#: shell/plugins/Help/tips.py:11
-msgid ""
-"Click the right mouse button on a desktop\n"
-"applet or press F10 to open the popup menu."
+#: ../gdesklets:57
+msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr ""
-"Kliko me butonin e djathtë të miut tek një ndihmues\n"
-"për desktop ose shtyp F10 për të hapur menunë popup."
 
-#: shell/plugins/Help/tips.py:14
+#: ../gdesklets:61
 msgid ""
-"You can move the applets around the screen\n"
-"by holding down the middle mouse button.\n"
-"\n"
-"If your mouse has only two buttons,\n"
-"hold down both of them simultaneously\n"
-"in order to simulate the middle button."
+"GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
+"are required."
 msgstr ""
-"Mund të lëvizësh ndihmuesit nëpër ekran\n"
-"duke shtypur butonin qendror të miut.\n"
-"\n"
-"Nëse miu juaj ka vetëm dy butonë, shtypi\n"
-"njëkohësisht që të dy, në menyrë që të\n"
-"simuloni butonin qendror."
 
-#: shell/plugins/Help/tips.py:21
+#: ../gdesklets:65
+msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
+msgstr ""
+
+#: ../gdesklets:68
+msgid "bonobo python bindings are required."
+msgstr ""
+
+#: ../gdesklets:77
+msgid "found"
+msgstr ""
+
+#: ../gdesklets:81
+msgid "missing"
+msgstr ""
+
+#: ../gdesklets:87
+msgid "Version check failed."
+msgstr ""
+
+#: ../gdesklets:88
+#, c-format
 msgid ""
-"You can have different profiles of\n"
-"desktop applets and switch between them.\n"
 "\n"
-"Select \"Profiles->New profile...\" from\n"
-"the menu bar to create new profiles.\n"
-"\n"
-"Empty profiles get discarded automatically."
+"%s\n"
 msgstr ""
-"Mund të keni profile të ndryshëm të ndihmuesve\n"
-"për desktop dhe të kaloni nga njeri tek tjetri.\n"
-"\n"
-"Zgjidh \"Profilet->Profil i ri...\" nga\n"
-"shtylla e menusë për të krijuar profile të rinj.\n"
-"\n"
-"Profilet bosh shpërfillen automatikisht."
 
-#: shell/plugins/Help/tips.py:29
+#: ../gdesklets:89
 msgid ""
-"The search bar accepts complex search\n"
-"expressions for finding your applets."
-msgstr ""
-"Fusha e kërkimit pranon shprehje kërkimi\n"
-"komplekse për të gjetur ndihmuesit tuaj."
-
-#: shell/plugins/Help/tips.py:32
-msgid ""
-"Search expressions may contain wildcards:\n"
+"Please make sure that the required software is installed.\n"
+"Also try to avoid having multiple versions of a library/binding on your "
+"system.\n"
+"gDesklets won't work if you don't have all necessary dependencies installed\n"
+"on your system.\n"
 "\n"
-" ? matches any one character\n"
-" * matches zero or more characters"
+"THE STARTUP WILL BE CANCELLED NOW!\n"
 msgstr ""
-"Shprehjet e kërkimit mund të përmbajnë wildcards:\n"
-"\n"
-" ? korrispondon çdo gërmë\n"
-" * korrispondencë zero ose shumë gërma"
 
-#: shell/plugins/PackageInstaller/Downloader.py:30
-msgid "Retrieving:"
-msgstr "Duke tërhequr:"
+#: ../gdesklets:98
+msgid "Requirements checking done. Your system looks ok!"
+msgstr ""
 
-#: shell/plugins/PackageInstaller/__init__.py:27
-msgid "_Install package..."
-msgstr "_Instalo paketin..."
-
-#: shell/plugins/PackageInstaller/__init__.py:66
-msgid "Invalid package"
-msgstr "Paket i pavlefshëm"
-
-#: shell/plugins/PackageInstaller/__init__.py:67
+#: ../gdesklets:105
 msgid ""
-"The supplied file could not be opened as a package. It is either corrupted "
-"or not of the correct file type."
+"\n"
+"You're running gDesklets for the first time.\n"
+"gDesklets will start a requirements check now...\n"
 msgstr ""
-"File i dhënë nuk mund të hapet si një paketë. Mund të jetë i dëmtuar ose i "
-"llojit jo korrekt."
 
-#: shell/plugins/PackageInstaller/__init__.py:82
-msgid "Installation complete"
-msgstr "Instalimi u plotësua"
-
-#: shell/plugins/PackageInstaller/__init__.py:83
-msgid "The package has been installed successfully."
-msgstr "Paketi u instalua me sukses."
-
-#: shell/plugins/PackageInstaller/__init__.py:86
-msgid "Installation failed"
-msgstr "Instalimi dështoi"
-
-#: shell/plugins/PackageInstaller/__init__.py:87
-msgid "The package could not be installed because it contained no installable files."
-msgstr "Paketi nuk mund të instalohet mbasi nuk përmban files të instalueshëm."
-
-#: shell/plugins/Profiles/__init__.py:23
-msgid "_Profiles"
-msgstr "_Profilet"
-
-#: shell/plugins/Profiles/__init__.py:25
-msgid "New profile..."
-msgstr "Profil i ri..."
-
-#: shell/plugins/Profiles/__init__.py:79
-msgid "New profile"
-msgstr "Profil i ri"
-
-#: shell/plugins/Profiles/__init__.py:95
-msgid "Enter the name for a new profile:"
-msgstr "Shkruaj emrin për një profil të ri:"
-
-#: shell/plugins/Shell/__init__.py:69
-msgid "_File"
-msgstr "_File"
-
-#: utils/dialog.py:78
-#, python-format
-msgid "Details (%d lines)"
-msgstr "Hoolësitë (%d rreshta)"
-
-#: gdesklets:19
+#: ../gdesklets:116
+#, fuzzy
 msgid ""
 "Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
-"<command>: open <files>\t(Opens the given display files)\n"
-"\tstart\t(Runs the gDesklets daemon)\n"
-"\tstop\t(Stops the gDesklets daemon)\n"
-"\tlist\t(Lists open displays)\n"
-"\trestart\t(Restarts the gDesklets daemon)\n"
-"\tprofile <profile> (Switches to the given profile)\n"
-"\tprofile\t(Shows the current and the available profiles)\n"
-"\tshell\t(Opens the graphical shell)\n"
-"\tslay\t(Kills the daemon -- use in emergency)\n"
-"\tabout\t(Prints information about gDesklets)\n"
-"\tversion\t(Prints gDesklets version)\n"
-"\thelp\t(Displays this text)\n"
+"\t<command>\n"
+"\t\topen    <files>   (Opens the given desklet files)\n"
+"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
+"\t\tstop              (Stops the gDesklets daemon)\n"
+"\t\tlist              (Lists open desklets)\n"
+"\t\trestart           (Restarts the gDesklets daemon)\n"
+"\t\tprofile <profile> (Switches to the given profile)\n"
+"\t\tprofile           (Shows the current and the available profiles)\n"
+"\t\tshell             (Opens the graphical shell)\n"
+"\t\tslay              (Kills the daemon -- use in emergency)\n"
+"\t\tstatus            (Checks daemon status)\n"
+"\t\tabout             (Prints information about gDesklets)\n"
+"\t\tversion           (Prints gDesklets version)\n"
+"\t\tconfigure         (Opens the configuration dialog)\n"
+"\t\thelp              (Displays this text)\n"
+"\t\tcheck             (Checks requirements)\n"
 "\n"
-"[option]: --translucent (Enables translucency on the xorg 6.8.0 server)\n"
+"\t[option]\n"
+"\t\t--no-tray-icon    (disables the systray icon)\n"
+"\t\t--translucent     (enables translucency on the xorg servers)\n"
 msgstr ""
 "Përdorimi: gdesklets [opcioni] <command> [argumentet...]\n"
 "\n"
@@ -616,77 +328,811 @@ msgstr ""
 "[opcioni]: --translucent (Aktivon tejdukshmërinë e pjesëshme tek serveri "
 "xorg 6.8.0)\n"
 
-#: gdesklets:58
+#: ../gdesklets:161
 #, c-format
-msgid "Opening %s."
-msgstr "Duke hapur %s."
+msgid ""
+"Error while starting gdesklets-daemon\n"
+"More information about this crash is available in \"%s\"."
+msgstr ""
 
-#: gdesklets:97
+#: ../gdesklets:164
 #, c-format
-msgid "ID: %s"
-msgstr "ID: %s"
+msgid "Exception was: %s\n"
+msgstr ""
 
-#: gdesklets:100
+#: ../gdesklets:189 ../gdesklets:258
+#, fuzzy, c-format
+msgid "Could not open desklet %s."
+msgstr "E pamundur hapja e file të monitorit '%s'"
+
+#: ../gdesklets:266
 msgid "Starting gdesklets-daemon..."
 msgstr "Duke nisur gdesklets-daemon..."
 
-#: gdesklets:106
+#: ../gdesklets:272
 msgid "Shutting down gdesklets-daemon..."
 msgstr "Duke ndaluar gdesklets-daemon..."
 
-#: gdesklets:120
+#: ../gdesklets:284
+#, fuzzy, c-format
+msgid "Currently open displays in profile \"%s\":\n"
+msgstr "E pamundur hapja e file të monitorit '%s'"
+
+#: ../gdesklets:289
+#, c-format
+msgid "Currently there aren't any desklets in profile \"%s\""
+msgstr ""
+
+#: ../gdesklets:293
 msgid "Restarting gdesklets-daemon..."
 msgstr "Duke rinisur gdesklets-daemon..."
 
-#: gdesklets:127
+#: ../gdesklets:306
+msgid "gdesklets-daemon is running"
+msgstr ""
+
+#: ../gdesklets:308
+msgid "gdesklets-daemon is not running"
+msgstr ""
+
+#: ../gdesklets:312
 #, c-format
 msgid "Current profile: %s"
 msgstr "Profili aktual: %s"
 
-#: gdesklets:138
+#: ../gdesklets:323
 #, c-format
 msgid "New profile: %s"
 msgstr "Profili i ri: %s"
 
-#: gdesklets:141
+#: ../gdesklets:326
 #, c-format
 msgid "Available profiles: %s"
 msgstr "Profilët në dispozicion: %s"
 
-#: gdesklets:146
+#: ../gdesklets:330
 #, c-format
 msgid "This is %s, version %s."
 msgstr "Ky është %s, versioni %s."
 
-#: gdesklets:154
-#, c-format
-msgid "Removing %s."
-msgstr "Duke hequr %s."
+#: ../gdesklets:358
+msgid "Nothing to slay."
+msgstr ""
 
-#: gdesklets:159
-#, c-format
-msgid "Could not remove %s."
-msgstr "E pamundur heqja e %s."
-
-#: gdesklets:170
-msgid "Invalid command. Please try one of the following commands!"
+#: ../gdesklets:382
+#, fuzzy
+msgid "Invalid command. Please try one of the following commands:"
 msgstr "Komandë e pavlefshme. Të lutem provo një nga komandat në vazhdim!"
 
-#: gdesklets-daemon:99
-msgid "You need a recent version of PyGTK to run this program."
+#: ../gdesklets-daemon:27
+#, fuzzy
+msgid "You need a recent version of PyGTK to run this program.\n"
 msgstr ""
 "Për të ekzekutuar këtë program keni nevojë për një nga versionet e fundit të "
 "PyGTK."
 
-#: gdesklets-daemon:112
-msgid "Could not find X display."
-msgstr "E pamundur gjetja e monitorit X."
-
-#: gdesklets-daemon:119
-msgid "You must NOT run gDesklets as super user (root)."
-msgstr "NUK duhet të ekzekutoni gDesklets si supër përdorues (root)."
-
-#: gdesklets-daemon:141
-msgid "Could not fork daemon."
+#: ../gdesklets-daemon:52
+#, fuzzy
+msgid "Could not fork daemon.\n"
 msgstr "I pamundur fork-imi i daemon."
 
+#: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
+#, c-format
+msgid "The following error occurred: %s\n"
+msgstr ""
+
+#: ../libdesklets/convert.py:22
+#, python-format
+msgid "%.2f TB"
+msgstr "%.2f TB"
+
+#: ../libdesklets/convert.py:24
+#, python-format
+msgid "%.2f GB"
+msgstr "%.2f GB"
+
+#: ../libdesklets/convert.py:26
+#, python-format
+msgid "%.2f MB"
+msgstr "%.2f MB"
+
+#: ../libdesklets/convert.py:28
+#, python-format
+msgid "%.2f kB"
+msgstr "%.2f kB"
+
+#: ../libdesklets/convert.py:30
+#, python-format
+msgid "%d B"
+msgstr "%d B"
+
+#: ../main/AboutDialog.py:21
+msgid "About gDesklets"
+msgstr ""
+
+#: ../main/client.py:276
+#, python-format
+msgid "Connecting to daemon [%s]"
+msgstr "Duke u lidhur me daemon [%s]"
+
+#: ../main/client.py:293
+#, fuzzy
+msgid ""
+"Cannot establish connection to daemon: timeout!\n"
+"The log file might help you solving the problem."
+msgstr "E pamundur lidhja me daemon: kaloi koha limit!"
+
+#: ../main/client.py:299
+#, python-format
+msgid "Connected to daemon in %d microseconds."
+msgstr "Lidhja me daemon në %d mikrosekonda."
+
+#: ../main/client.py:302
+#, python-format
+msgid "Connected to daemon in %d milliseconds."
+msgstr "Lidhja me daemon në %d milisekonda."
+
+#: ../main/__init__.py:71
+#, python-format
+msgid "Version %s"
+msgstr ""
+
+#: ../main/__init__.py:74
+msgid "Core Programming:"
+msgstr ""
+
+#: ../main/__init__.py:77
+msgid "Architecture Design:"
+msgstr ""
+
+#: ../main/__init__.py:80
+msgid "GNOME Integration:"
+msgstr ""
+
+#: ../main/__init__.py:83
+msgid "Additional Programming:"
+msgstr ""
+
+#: ../main/__init__.py:86
+msgid "Documentation:"
+msgstr ""
+
+#: ../main/__init__.py:89
+msgid "Artwork:"
+msgstr ""
+
+#: ../main/__init__.py:92
+msgid "Website:"
+msgstr ""
+
+#: ../main/__init__.py:95
+msgid "Thank you:"
+msgstr ""
+
+#: ../main/Starter.py:102
+msgid "_Manage desklets"
+msgstr "_Organizo desklets"
+
+#: ../main/Starter.py:105
+#, fuzzy
+msgid "_Configuration"
+msgstr "Konfigurimi"
+
+#: ../main/Starter.py:107
+msgid "_View log"
+msgstr "_Shiko mesazhet"
+
+#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
+msgid "_About..."
+msgstr "_Informacione..."
+
+#: ../main/Starter.py:113
+msgid "_Stop daemon"
+msgstr "_Ndalo daemon"
+
+#: ../main/Starter.py:224
+#, fuzzy, python-format
+msgid "Could not open desklet file \"%s\""
+msgstr "E pamundur hapja e file të monitorit '%s'"
+
+#: ../main/Starter.py:225
+#, fuzzy
+msgid "The desklet file could not be opened because the file was not readable."
+msgstr "File i monitorit nuk mund të hapet pasi ai file nuk është i lexueshëm."
+
+#: ../main/transition.py:39
+msgid ""
+"This is a unstable version of gDesklets. Unstable versions represent the "
+"current state of development and might be unstable or cause problems from "
+"time to time.\n"
+"\n"
+"If you're new to gDesklets, it is thus highly recommended to <b>not</b> use "
+"this version, but a stable release!\n"
+"\n"
+"If you still want to run the unstable version instead of a stable release "
+"version, we'd highly appreciate it if you report any weird behavior to the "
+"developers.\n"
+"\n"
+"Experienced users are encouraged to try a bzr version, though!"
+msgstr ""
+
+#: ../main/transition.py:51
+msgid ""
+"This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
+"Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
+"This version might break your configuration or it won't restore it from an "
+"earlier release. In most cases this is intentional, since gDesklets is still "
+"in its early stages of development.\n"
+"\n"
+"Thanks for testing this release candidate!"
+msgstr ""
+
+#. our informative transition message which we can change with
+#. every release
+#: ../main/transition.py:62
+msgid ""
+"This version of gDesklets features the Float mode: press a key and all your "
+"desklets will come to front, floating above your applications, until you "
+"press that key again!\n"
+"The default keybinding is &lt;Shift&gt; &lt;F12&gt;, but you can easily "
+"change that in the configuration dialog.\n"
+"\n"
+"Please note that due to limitations of older X servers, you might see blocks "
+"around desklets in Float mode. This cannot be solved in a satisfying way."
+msgstr ""
+
+#: ../main/transition.py:75
+msgid "Please note (this message will appear only once):"
+msgstr ""
+
+#: ../plugin/Interface.py:200 ../plugin/Interface.py:227
+#, fuzzy
+msgid "no description"
+msgstr "Asnjë përshkrim në dispozicion"
+
+#: ../scripting/Script.py:154
+msgid "Error in add_timer function"
+msgstr ""
+
+#: ../scripting/Script.py:155
+#, python-format
+msgid "\"%s\" isn't a valid integer value!"
+msgstr ""
+
+#: ../scripting/Script.py:199
+#, python-format
+msgid "No Control could be found for interface %s"
+msgstr ""
+
+#: ../scripting/Script.py:201
+msgid "This means that a functionality won't be available during execution!"
+msgstr ""
+
+#: ../scripting/Script.py:241
+msgid "Security Risk"
+msgstr ""
+
+#: ../scripting/Script.py:242
+#, python-format
+msgid ""
+"The desklet %s wants to execute a system command:\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"To protect your system from malicious programs, you can deny the execution "
+"of this command.\n"
+"\n"
+"If you are sure that the command is harmless, you may permanently allow this "
+"desklet instance to run it."
+msgstr ""
+
+#: ../scripting/Script.py:255
+msgid "Deny!"
+msgstr ""
+
+#: ../scripting/Script.py:256
+msgid "Allow once"
+msgstr ""
+
+#: ../scripting/Script.py:257
+msgid "Allow for this desklet"
+msgstr ""
+
+#: ../Sensors/FontSelector/__init__.py:86
+msgid "Fonts"
+msgstr "Gërmat"
+
+#: ../Sensors/FontSelector/__init__.py:87
+msgid "Fonts settings"
+msgstr "Rregullimet e gërmave"
+
+#: ../Sensors/FontSelector/__init__.py:90
+#, python-format
+msgid "Font #%i:"
+msgstr "Gërma #%i:"
+
+#: ../Sensors/FontSelector/__init__.py:92
+#, python-format
+msgid "Font #%i used in the labels"
+msgstr "Gërma #%i e përdorur tek etiketat"
+
+#: ../Sensors/FontSelector/__init__.py:93
+#, python-format
+msgid "Font color #%i:"
+msgstr "Ngjyra e gërmave #%i:"
+
+#: ../Sensors/FontSelector/__init__.py:95
+#, python-format
+msgid "Font color #%i used in the labels"
+msgstr "Ngjyra e gërmave #%i të përdorura tek etiketat"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:16
+#, python-format
+msgid "%s Control"
+msgstr "Kontrolli i %s"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:54
+#, fuzzy
+msgid "Interface Name"
+msgstr "sipas interfaqes"
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:57
+msgid "Property Name"
+msgstr ""
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:60
+msgid "Property Access"
+msgstr ""
+
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:63
+msgid "Property Description"
+msgstr ""
+
+#: ../shell/plugins/ControlBrowser/__init__.py:27
+msgid "by interface"
+msgstr "sipas interfaqes"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:28
+#: ../shell/plugins/DisplayBrowser/__init__.py:80
+msgid "alphabetically"
+msgstr "sipas alfabetit"
+
+#: ../shell/plugins/ControlBrowser/__init__.py:72
+#, python-format
+msgid "Found %d controls."
+msgstr "U gjetën %d kontrolle."
+
+#: ../shell/plugins/ControlBrowser/__init__.py:75
+#: ../shell/plugins/DisplayBrowser/__init__.py:158
+msgid "Invalid search expression."
+msgstr "Shprehje e pavlefshme kërkimi."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:40
+#, fuzzy
+msgid "R_emove selected desklet"
+msgstr "_Zbato monitorin e zgjedhur"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
+msgid "_Run (remote) desklet..."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:45
+#, fuzzy
+msgid "R_un selected desklet"
+msgstr "_Zbato monitorin e zgjedhur"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:78
+msgid "by category"
+msgstr "sipas kategorisë"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:79
+msgid "by author"
+msgstr "sipas autorit"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:130
+#, fuzzy
+msgid "Could not remove"
+msgstr "E pamundur heqja e %s."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:131
+msgid ""
+"The desklet file could not be removed. This most likely means that you do "
+"not have write permission on it."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:143
+msgid ""
+"The desklet will be removed from your system and no longer be available."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#, fuzzy, python-format
+msgid "Found %d desklets"
+msgstr "U gjetën %d monitorë."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:177
+msgid "No description available"
+msgstr "Asnjë përshkrim në dispozicion"
+
+#: ../shell/plugins/Help/__init__.py:37
+msgid "_Help"
+msgstr "_Ndihmë"
+
+#: ../shell/plugins/Help/__init__.py:38
+msgid "_Tip of the Day"
+msgstr "_Këshilla e Ditës"
+
+#: ../shell/plugins/Help/TipOfTheDay.py:24
+msgid "Tip of the Day"
+msgstr "Këshilla e Ditës"
+
+#: ../shell/plugins/Help/TipOfTheDay.py:32
+msgid "Show tips at startup"
+msgstr "Shfaq këshillat në nisje"
+
+#: ../shell/plugins/Help/tips.py:2
+#, fuzzy
+msgid ""
+"You can find lots of desktop applets for use\n"
+"with gDesklets at\n"
+"\n"
+"http://www.gdesklets.org\n"
+"and\n"
+"http://gdesklets.zencomputer.ca/"
+msgstr ""
+"Mund të gjeni shumë ndihmues desktopi për\n"
+"përdorim me gDesklets tek\n"
+"\n"
+"http://gdesklets.gnomedesktop.org"
+
+#: ../shell/plugins/Help/tips.py:9
+msgid ""
+"You can install new desktop applets easily by\n"
+"dragging the download link for the package\n"
+"from your web browser into the gDesklets Shell."
+msgstr ""
+"Mund të instalosh me lehtësi ndihmuesit e rinj për\n"
+"desktop duke tërhequr lidhjen për shkarkimin e\n"
+"paketës nga shfletuesi juaj web tek Shell i gDesklets."
+
+#: ../shell/plugins/Help/tips.py:13
+msgid ""
+"Click the right mouse button on a desktop\n"
+"applet or press F10 to open the popup menu."
+msgstr ""
+"Kliko me butonin e djathtë të miut tek një ndihmues\n"
+"për desktop ose shtyp F10 për të hapur menunë popup."
+
+#: ../shell/plugins/Help/tips.py:16
+msgid ""
+"You can move the applets around the screen\n"
+"by holding down the middle mouse button.\n"
+"\n"
+"If your mouse has only two buttons,\n"
+"hold down both of them simultaneously\n"
+"in order to simulate the middle button."
+msgstr ""
+"Mund të lëvizësh ndihmuesit nëpër ekran\n"
+"duke shtypur butonin qendror të miut.\n"
+"\n"
+"Nëse miu juaj ka vetëm dy butonë, shtypi\n"
+"njëkohësisht që të dy, në menyrë që të\n"
+"simuloni butonin qendror."
+
+#: ../shell/plugins/Help/tips.py:23
+msgid ""
+"You can have different profiles of\n"
+"desktop applets and switch between them.\n"
+"\n"
+"Select \"Profiles->New profile...\" from\n"
+"the menu bar to create new profiles.\n"
+"\n"
+"Empty profiles get discarded automatically."
+msgstr ""
+"Mund të keni profile të ndryshëm të ndihmuesve\n"
+"për desktop dhe të kaloni nga njeri tek tjetri.\n"
+"\n"
+"Zgjidh \"Profilet->Profil i ri...\" nga\n"
+"shtylla e menusë për të krijuar profile të rinj.\n"
+"\n"
+"Profilet bosh shpërfillen automatikisht."
+
+#: ../shell/plugins/Help/tips.py:31
+msgid ""
+"The search bar accepts complex search\n"
+"expressions for finding your applets."
+msgstr ""
+"Fusha e kërkimit pranon shprehje kërkimi\n"
+"komplekse për të gjetur ndihmuesit tuaj."
+
+#: ../shell/plugins/Help/tips.py:34
+msgid ""
+"Search expressions may contain wildcards:\n"
+"\n"
+" ? matches any one character\n"
+" * matches zero or more characters"
+msgstr ""
+"Shprehjet e kërkimit mund të përmbajnë wildcards:\n"
+"\n"
+" ? korrispondon çdo gërmë\n"
+" * korrispondencë zero ose shumë gërma"
+
+#: ../shell/plugins/Help/tips.py:39
+msgid ""
+"Have a good idea for a desklet?\n"
+"Write your own!  See the Developer's\n"
+"book for more details."
+msgstr ""
+
+#: ../shell/plugins/PackageInstaller/Downloader.py:29
+msgid "Retrieving:"
+msgstr "Duke tërhequr:"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:26
+#, fuzzy
+msgid "I_nstall remote package..."
+msgstr "_Instalo paketin..."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:27
+msgid "_Install package..."
+msgstr "_Instalo paketin..."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:97
+msgid "Invalid package"
+msgstr "Paket i pavlefshëm"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:98
+msgid ""
+"The supplied file could not be opened as a package. It is either corrupted "
+"or not of the correct file type."
+msgstr ""
+"File i dhënë nuk mund të hapet si një paketë. Mund të jetë i dëmtuar ose i "
+"llojit jo korrekt."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:115
+msgid "Installation failed"
+msgstr "Instalimi dështoi"
+
+#: ../shell/plugins/PackageInstaller/__init__.py:116
+msgid ""
+"The package could not be installed because it contained no installable files."
+msgstr "Paketi nuk mund të instalohet mbasi nuk përmban files të instalueshëm."
+
+#: ../shell/plugins/PackageInstaller/__init__.py:119
+msgid "Installation complete"
+msgstr "Instalimi u plotësua"
+
+#: ../shell/plugins/Profiles/__init__.py:18
+msgid "_Profiles"
+msgstr "_Profilet"
+
+#: ../shell/plugins/Profiles/__init__.py:20
+msgid "New profile..."
+msgstr "Profil i ri..."
+
+#: ../shell/plugins/Profiles/__init__.py:75
+msgid "New profile"
+msgstr "Profil i ri"
+
+#: ../shell/plugins/Profiles/__init__.py:76
+#, fuzzy
+msgid "Enter the name for a new profile"
+msgstr "Shkruaj emrin për një profil të ri:"
+
+#: ../shell/plugins/Shell/__init__.py:62
+msgid "_File"
+msgstr "_File"
+
+#: ../shell/SearchBar.py:20
+msgid "Search"
+msgstr "Kërko"
+
+#: ../utils/dialog.py:46
+#, fuzzy, python-format
+msgid "_Details (%d lines)"
+msgstr "Hoolësitë (%d rreshta)"
+
+#: ../utils/dialog.py:194
+msgid "_Ignore errors from this desklet"
+msgstr ""
+
+#: ../utils/DOM.py:32
+msgid "An invalid graphics code was loaded into a canvas."
+msgstr ""
+
+#: ../utils/DOM.py:153
+#, fuzzy, python-format
+msgid "No such element: %s"
+msgstr "Asnjë pronësi: %s"
+
+#: ../utils/DOM.py:154
+#, fuzzy, python-format
+msgid "The element with ID <b>%s</b> does not exist in the SVG image."
+msgstr "Elementi <b>%(name)s</b> nuk ka pronësinë<b>%(key)s</b>."
+
+#: ../utils/DOM.py:182 ../utils/Element.py:91
+#, python-format
+msgid "No such property: %s"
+msgstr "Asnjë pronësi: %s"
+
+#: ../utils/DOM.py:183
+#, fuzzy, python-format
+msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
+msgstr "Elementi <b>%(name)s</b> nuk ka pronësinë<b>%(key)s</b>."
+
+#: ../utils/Element.py:92
+#, fuzzy, python-format
+msgid "The element <b>%s</b> does not have the <b>%s</b> property."
+msgstr "Elementi <b>%(name)s</b> nuk ka pronësinë<b>%(key)s</b>."
+
+#: ../utils/Element.py:96 ../utils/Element.py:126
+msgid "Permission Error"
+msgstr ""
+
+#: ../utils/Element.py:97
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
+msgstr ""
+
+#: ../utils/Element.py:105
+msgid "Type Error"
+msgstr ""
+
+#: ../utils/Element.py:106
+#, python-format
+msgid ""
+"The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
+"Expected <b>%s</b>, but got <b>%s</b>."
+msgstr ""
+
+#: ../utils/Element.py:127
+#, python-format
+msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
+msgstr ""
+
+#: ../utils/error.py:158
+msgid "Runtime Error"
+msgstr ""
+
+#: ../utils/error.py:160
+#, fuzzy
+msgid "An error occurred while executing a desklet."
+msgstr "Gabim gjatë ekzekutimit të një script-i."
+
+#~ msgid "Monday"
+#~ msgstr "E hënë"
+
+#~ msgid "Tuesday"
+#~ msgstr "E martë"
+
+#~ msgid "Wednesday"
+#~ msgstr "E mërkurë"
+
+#~ msgid "Thursday"
+#~ msgstr "E enjte"
+
+#~ msgid "Friday"
+#~ msgstr "E premte"
+
+#~ msgid "Saturday"
+#~ msgstr "E shtunë"
+
+#~ msgid "Sunday"
+#~ msgstr "E djelë"
+
+#~ msgid "January"
+#~ msgstr "Janar"
+
+#~ msgid "February"
+#~ msgstr "Shkurt"
+
+#~ msgid "March"
+#~ msgstr "Mars"
+
+#~ msgid "May"
+#~ msgstr "Maj"
+
+#~ msgid "June"
+#~ msgstr "Qershor"
+
+#~ msgid "July"
+#~ msgstr "Korrik"
+
+#~ msgid "August"
+#~ msgstr "Gusht"
+
+#~ msgid "September"
+#~ msgstr "Shtator"
+
+#~ msgid "October"
+#~ msgstr "Tetor"
+
+#~ msgid "November"
+#~ msgstr "Nëntor"
+
+#~ msgid "December"
+#~ msgstr "Dhjetor"
+
+#~ msgid "The %(name)s container accepts only one child."
+#~ msgstr "Përmbajtësi %(name)s pranon vetëm një bir."
+
+#~ msgid "_Move display"
+#~ msgstr "_Lëvize monitorin"
+
+#~ msgid "Error while configuring display"
+#~ msgstr "Gabim gjatë konfigurimit të monitorit"
+
+#~ msgid ""
+#~ "A display could not be configured properly. It will most likely be broken "
+#~ "and you should consider removing it."
+#~ msgstr ""
+#~ "Një monitor nuk arrin të konfigurohet si duhet. Kjo do të thotë që nuk "
+#~ "funksionon si duhet dhe bën mirë t'a heqësh fare."
+
+#~ msgid "Error in sensor '%(name)s'"
+#~ msgstr "Gabim në '%(name)s'"
+
+#~ msgid ""
+#~ "An error occurred while loading a sensor. This most likely means that "
+#~ "your system does not fulfill all its requirements."
+#~ msgstr ""
+#~ "Gabim gjatë ngarkimit të një sensori. Kjo do të thotë që sistemi juaj nuk "
+#~ "kënaq plotësisht të gjitha kërkesat e tij."
+
+#~ msgid "Error in sensor %(name)s"
+#~ msgstr "Gabim në sensorin '%(name)s'"
+
+#~ msgid "An error occurred while running a sensor."
+#~ msgstr "Gabim gjatë nisjes së një sensori."
+
+#~ msgid "This software is licensed under the terms of the GNU GPL."
+#~ msgstr "Liçenca e këtij programi është sipas kushteve të GNU GPL."
+
+#~ msgid "Log Messages"
+#~ msgstr "Mesazhet e Log"
+
+#~ msgid "Invalid display file '%(path)s'"
+#~ msgstr "File i monitorit '%(path)s' është i pavlefshëm"
+
+#~ msgid "Closing %s."
+#~ msgstr "Duke mbyllur %s."
+
+#~ msgid "Purging path %s."
+#~ msgstr "Duke pastruar pozicionin %s."
+
+#~ msgid "Purging %s."
+#~ msgstr "Duke pastruar %s."
+
+#~ msgid ""
+#~ "Could not connect to gnome-session. GNOME session management will not be "
+#~ "available for this application."
+#~ msgstr ""
+#~ "E pamundur lidhja me gnome-session. Administrimi i seancës së GNOME nuk "
+#~ "do të jetë i mundur për këtë aplikativ."
+
+#~ msgid "Error in script"
+#~ msgstr "Gabim në script"
+
+#~ msgid "Stopping %s"
+#~ msgstr "Duke ndaluar %s."
+
+#~ msgid "An error occurred while loading a script."
+#~ msgstr "Gabim gjatë ngarkimit të një script-i."
+
+#~ msgid "translator_credits"
+#~ msgstr "Laurent Dhima <laurenti@alblinux.net>"
+
+#~ msgid "The package has been installed successfully."
+#~ msgstr "Paketi u instalua me sukses."
+
+#~ msgid "Opening %s."
+#~ msgstr "Duke hapur %s."
+
+#~ msgid "ID: %s"
+#~ msgstr "ID: %s"
+
+#~ msgid "Removing %s."
+#~ msgstr "Duke hequr %s."
+
+#~ msgid "Could not find X display."
+#~ msgstr "E pamundur gjetja e monitorit X."

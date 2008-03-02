@@ -1,0 +1,171 @@
+<section id="ctrl-interface" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Included Controls</title>
+
+<section><title>Overview</title>
+
+  <para>gDesklets does provide a basic set of Controls which can be used
+    out-of-the-box. The following list shows all currently included Controls
+    and their interface identifiers followed by more detailed information on
+    each Control.    
+    </para>
+
+  <programlisting>
+IArrayBuffer:10i2docuzddulm08s5h8qho3o-2
+ICalendar:edslroj9o537asmjt8g2i7kse-2
+IEventPipe:1v11pn3wj3jk1tmnnvl312sg3-2
+IHDDTemp:6da6kg9xaciyyv0xvpexg8hyp-2
+ISensor:blbed9sqifj2dnabrwpbd7guz-2
+ISystem:4zcicmk4botcub7iypo46t2l7-2
+ITime:7qktelp6tw29ve5p8q3lxn6bs-2
+IURI:3mufry4gxx4vihs2dufszo21p-2
+  </programlisting>
+
+</section>
+
+<section><title>ArrayBuffer</title>
+
+  <programlisting>
+IArrayBuffer:10i2docuzddulm08s5h8qho3o-2
+
+  cursor                   rw  Get/Set cursor position 
+  delete                   w   Delete line from buffer 
+  fill                     w   Fill the buffer with an object 
+  filltype                 rw  Get/Set the empty space fill type 
+  read                     r   Return the viewable window array 
+  read_all                 r   Return the entire buffer array 
+  size                     rw  Get/Set buffer size 
+  window_pos               rw  Get/Set viewable window position 
+  window_size              rw  Get/Set viewable window size 
+  write                    w   Write line at position cursor 
+  </programlisting>
+
+</section>
+
+<section><title>ArrayBuffer</title>
+
+  <programlisting>
+ICalendar:edslroj9o537asmjt8g2i7kse-2
+
+  day                      r   no description 
+  days                     r   no description 
+  month                    r   no description 
+  months                   r   no description 
+  time                     w   no description 
+  </programlisting>
+
+</section>
+
+<section><title>ArrayBuffer</title>
+
+  <programlisting>
+IEventPipe:1v11pn3wj3jk1tmnnvl312sg3-2
+
+  event                    rw  no description 
+  subscriptions            rw  The subscribed channels 
+  </programlisting>
+
+</section>
+
+<section><title>ArrayBuffer</title>
+
+  <programlisting>
+IHDDTemp:6da6kg9xaciyyv0xvpexg8hyp-2
+
+  available_devices        r   no description 
+  device                   rw  no description 
+  poll                     r   no description 
+  poll_all                 r   no description 
+  </programlisting>
+
+</section>
+
+<section><title>ArrayBuffer</title>
+
+  <programlisting>
+ISensor:blbed9sqifj2dnabrwpbd7guz-2
+
+  action                   w   the action to perform 
+  config_id                w   the config ID 
+  configurator             r   the configurator of the sensor 
+  menu                     r   the menu data of the sensor 
+  output                   r   the output data of the sensor 
+  sensor                   w   the sensor 
+  stop                     w   stops the sensor 
+  </programlisting>
+
+</section>
+
+<section><title>ArrayBuffer</title>
+
+  <programlisting>
+ISystem:4zcicmk4botcub7iypo46t2l7-2
+
+  allfs                    rw  Getter/Setter for boolean allfs 
+  cpu                      r   General CPU info 
+  cpu_bogomips             r   CPU bogomips 
+  cpu_cache                r   CPU 2nd level cache 
+  cpu_clock                r   CPU clock 
+  cpu_load                 r   CPU load 
+  cpu_model                r   CPU model 
+  fsusage                  r   Information of given mounted filesystem 
+  hostname                 r   The machine's hostname 
+  iface                    rw  Getter/Setter for network interface 
+  kernel_version           r   Kernel version 
+  loadavg                  r   Average load info 
+  memory                   r   Memory information 
+  mountdir                 rw  Getter/Setter for mountdir 
+  mountlist                r   (All) mountpoints 
+  net_devices              r   Available network devs 
+  net_load                 r   Netload of given device 
+  net_speed                r   Incoming / Outgoing traffic speed of given device 
+  net_state                r   Device up or down 
+  operating_system         r   Type of operating system 
+  pid                      rw  Getter/Setter for pid 
+  ppp                      r   Point-to-Point information 
+  proc_args                r   Command line args of process ID 
+  proc_kernel              r   no description 
+  proc_list                r   no description 
+  proc_map                 r   no description 
+  proc_mem                 r   no description 
+  proc_segment             r   no description 
+  proc_signal              r   no description 
+  proc_state               r   no description 
+  proc_time                r   no description 
+  proc_uid                 r   no description 
+  swap                     r   Swap space information 
+  uptime                   r   Uptime information 
+  users                    r   Number of users 
+  which                    rw  Getter/Setter for which 
+  </programlisting>
+
+</section>
+
+<section><title>ArrayBuffer</title>
+
+  <programlisting>
+ITime:5oak91gpdt1dyiepbqmn48plp-2
+
+  date                     r   the current date (y, m, d) 
+  ticks                    r   the current ticks in floating point numbers 
+  time                     r   the current time (h, m, s) 
+  timezone                 rw  the timezone 
+  </programlisting>
+
+</section>
+
+<section><title>ArrayBuffer</title>
+
+  <programlisting>
+IURI:3mufry4gxx4vihs2dufszo21p-2
+
+  file                     rw  raw file content 
+  raw                      r   raw file content 
+  splitted                 r   splitted file content 
+  stripped                 r   stripped file content 
+  </programlisting>
+
+</section>
+
+
+
+</section>

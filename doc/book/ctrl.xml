@@ -9,5 +9,6 @@
   <xi:include href="ctrl-use.xml"/>
   <xi:include href="ctrl-write.xml"/>
   <xi:include href="ctrl-write-interface.xml"/>
+  <xi:include href="ctrl-included.xml"/>
 
 </chapter>

@@ -2,13 +2,13 @@
 # Copyright (C) 2003-2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gDesklets package.
 # Takeshi AIHANA <aihana@gnome.gr.jp>, 2003-2005.
-# 
-# 
+#
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-07-25 23:52+0900\n"
+"POT-Creation-Date: 2008-03-02 21:49+0100\n"
 "PO-Revision-Date: 2005-07-25 23:36+0900\n"
 "Last-Translator: Takeshi AIHANA <aihana@gnome.gr.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../config/ConfigDialog.py:103
+#: ../config/ConfigDialog.py:113
 msgid "Invalid Function Call"
 msgstr "不正な関数呼び出し"
 
-#: ../config/ConfigDialog.py:104
+#: ../config/ConfigDialog.py:114
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -31,7 +31,7 @@ msgstr ""
 "これはデスクレットのコードに問題があると思われます。そのデスクレットの作者に"
 "問題を報告して下さい。"
 
-#: ../config/ConfigDialog.py:217 ../display/DisplayConfigurator.py:32
+#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
 msgstr "このデスクレットは設定不可です。"
 
@@ -60,18 +60,10 @@ msgid "Your favorite editor"
 msgstr "お気に入りのエディタ"
 
 #: ../config/DaemonConfigger.py:20
-msgid "XComposite support (requires composition manager)"
-msgstr "XComposite のサポート (要 composition マネージャ)"
-
-#: ../config/DaemonConfigger.py:21
-msgid "Translucency (takes effect after restarting a display)"
-msgstr "半透明にする (再起動後に適用されます)"
-
-#: ../config/DaemonConfigger.py:23
 msgid "Screen Resolution (DPI)"
 msgstr "画面の解像度 (DPI)"
 
-#: ../config/DaemonConfigger.py:25
+#: ../config/DaemonConfigger.py:22
 msgid ""
 "Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
 "\"</b> wide"
@@ -79,28 +71,28 @@ msgstr ""
 "上の値を調整すると、バーの幅が実際の <b>5 センチ</b> または <b>1.97\"</b> に"
 "なります"
 
-#: ../config/DaemonConfigger.py:29
+#: ../config/DaemonConfigger.py:26
 msgid "Behavior"
 msgstr "動作"
 
-#: ../config/DaemonConfigger.py:30
+#: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
 msgstr "通知スペースにアイコンを表示する (再起動後に適用されます)(_T)"
 
-#: ../config/DaemonConfigger.py:32
+#: ../config/DaemonConfigger.py:29
 msgid "Show _notification while loading a desklet"
 msgstr "デスクレットを読み込んでいることをダイアログで通知する(_N)"
 
-#: ../config/DaemonConfigger.py:34
+#: ../config/DaemonConfigger.py:31
 msgid "Key for toggling Float mode:"
 msgstr "フロート・モードに切り替えるキー:"
 
-#: ../config/DaemonConfigger.py:46 ../config/DisplayConfigger.py:27
+#: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
 #: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
 msgstr "設定"
 
-#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:75
+#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
 msgid "A desktop applet system for GNOME"
 msgstr "GNOME 向けデスクトップ・アプレット・システムです"
 
@@ -108,42 +100,51 @@ msgstr "GNOME 向けデスクトップ・アプレット・システムです"
 msgid "gDesklets display"
 msgstr "gDesklets ディスプレイ"
 
-#: ../display/Display.py:77
+#: ../display/Display.py:85
 msgid "_Configure desklet"
 msgstr "デスクレットの設定(_C)"
 
-#: ../display/Display.py:79
+#: ../display/Display.py:87
 msgid "_Move desklet"
 msgstr "デスクレットの移動(_M)"
 
-#: ../display/Display.py:82
+#: ../display/Display.py:90
 msgid "_View Source"
 msgstr "ソースの表示(_V)"
 
-#: ../display/Display.py:85
+#: ../display/Display.py:93
 msgid "Re_start desklet"
 msgstr "デスクレットの再起動(_S)"
 
-#: ../display/Display.py:87
+#: ../display/Display.py:95
 msgid "_Remove desklet"
 msgstr "デスクレットの削除(_R)"
 
-#: ../display/Display.py:975 ../shell/plugins/DisplayBrowser/__init__.py:142
+#: ../display/Display.py:98
+#, fuzzy
+msgid "_About"
+msgstr "情報(_A)..."
+
+#: ../display/Display.py:337
+msgid "_Readme"
+msgstr ""
+
+#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
 msgid "Do you really want to remove this desklet ?"
 msgstr "このデスクレットを本当に削除してもよろしいですか？"
 
-#: ../display/Display.py:976
+#: ../display/Display.py:1116
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
 msgstr "このデスクレットは二度と表示されず、その設定も抹消されます。"
 
-#: ../display/DisplayTarget.py:412
+#: ../display/DisplayTarget.py:417
 #, python-format
 msgid "Element \"%s\" does not exist"
 msgstr "要素 \"%s\" がありません"
 
-#: ../display/DisplayTarget.py:413
+#: ../display/DisplayTarget.py:418
 msgid ""
 "The <tt>relative-to</tt> property requires a reference to an existing "
 "display element within the same parent container."
@@ -151,12 +152,12 @@ msgstr ""
 "<tt>relative-to</tt> というプロパティには、 (同じ親コンテナを含む) 既存のディ"
 "スプレイ要素への参照が必要です。"
 
-#: ../display/targetregistry.py:52
+#: ../display/targetregistry.py:45
 #, python-format
 msgid "Unknown element <b>&lt;%s&gt;</b>"
 msgstr "<b>&lt;%s&gt;</b> の要素を解析できません"
 
-#: ../display/targetregistry.py:53
+#: ../display/targetregistry.py:46
 msgid ""
 "Either there is a typo in the .display file or you have an incompatible "
 "version of gDesklets."
@@ -172,24 +173,24 @@ msgstr "XML の解析エラー"
 msgid "This .display file has invalid XML syntax."
 msgstr "このディスプレイの XML 文法が間違っています。"
 
-#: ../factory/DisplayFactory.py:208
+#: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
 msgstr "ファイルが存在しない、または読み込めません"
 
-#: ../factory/DisplayFactory.py:210
+#: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
 msgstr "スクリプトを含むファイルをこれ以上実行することができません。"
 
-#: ../factory/DisplayFactory.py:233
+#: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
 msgstr "センサをロードできませんでした"
 
-#: ../factory/DisplayFactory.py:249
+#: ../factory/DisplayFactory.py:243
 #, python-format
 msgid "&lt;%s&gt; needs a bind attribute"
 msgstr "&lt;%s&gt; には bind 属性が必要です"
 
-#: ../factory/DisplayFactory.py:251
+#: ../factory/DisplayFactory.py:245
 msgid "The &lt;prefs&gt; section of this desklet file is broken."
 msgstr "このデスクレットの &lt;prefs&gt; セクションが壊れています。"
 
@@ -206,57 +207,60 @@ msgstr ""
 "センサが見つかりませんでした。ほとんどの場合、そのセンサがインストールされて"
 "いないと思われます。"
 
-#: ../gdesklets:29
+#: ../gdesklets:26
 msgid "You must NOT run gDesklets as super user (root)."
 msgstr "スーパー・ユーザ (root) 権限で gDesklets を起動しないで下さい。"
 
-#: ../gdesklets:43
+#: ../gdesklets:46
 msgid "Checking requirements:"
 msgstr "依存関係のチェック中:"
 
-#: ../gdesklets:47
-msgid "Python version => 2.3.0 is required."
+#: ../gdesklets:50
+#, fuzzy
+msgid "Python version >= 2.3.0 is required."
 msgstr "Python バージョン => 2.3.0 が必要です。"
 
-#: ../gdesklets:51
+#: ../gdesklets:54
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr ""
 "libexpat バージョン 1.95.7 は利用しないで下さい。アップグレードして下さい！"
 
-#: ../gdesklets:54
+#: ../gdesklets:57
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr "SAX パーサが必要です (SuSE をお使いの場合インストールが必要です)。"
 
-#: ../gdesklets:58
+#: ../gdesklets:61
+#, fuzzy
 msgid ""
-"GTK python bindings (pygtk2) version >= 2.4.0 and GTK+ version >= 2.4.0 are "
-"required."
+"GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
+"are required."
 msgstr ""
 "GTK の Python バインディング (pygtk2) バージョンn >= 2.4.0 と GTK+ バージョ"
 "ン >= 2.4.0 が必要です。"
 
-#: ../gdesklets:62
-msgid "ORBit python bindings (pyorbit) version == 2.0.1 are required."
+#: ../gdesklets:65
+#, fuzzy
+msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
 msgstr ""
 "ORBit の Python バインディング (pyorbit) バージョン == 2.0.1 が必要です。"
 
-#: ../gdesklets:65
+#: ../gdesklets:68
 msgid "bonobo python bindings are required."
 msgstr "bonobo の Python バインディングが必要です。"
 
-#: ../gdesklets:74
+#: ../gdesklets:77
 msgid "found"
 msgstr "見つかりました"
 
-#: ../gdesklets:78
+#: ../gdesklets:81
 msgid "missing"
 msgstr "見つかりません"
 
-#: ../gdesklets:84
+#: ../gdesklets:87
 msgid "Version check failed."
 msgstr "バージョンのチェックに失敗しました。"
 
-#: ../gdesklets:85
+#: ../gdesklets:88
 #, c-format
 msgid ""
 "\n"
@@ -265,7 +269,7 @@ msgstr ""
 "\n"
 "%s\n"
 
-#: ../gdesklets:86
+#: ../gdesklets:89
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -283,7 +287,11 @@ msgstr ""
 "\n"
 "gDesklets の起動をキャンセルします！\n"
 
-#: ../gdesklets:102
+#: ../gdesklets:98
+msgid "Requirements checking done. Your system looks ok!"
+msgstr ""
+
+#: ../gdesklets:105
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
@@ -293,7 +301,7 @@ msgstr ""
 "gDesklets を初めて起動したようです。\n"
 "必要なソフトウェアの依存関係をチェックします...\n"
 
-#: ../gdesklets:113
+#: ../gdesklets:116
 msgid ""
 "Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
@@ -342,103 +350,115 @@ msgstr ""
 "\t\t--no-tray-icon         (通知パネルにアイコンを表示しない)\n"
 "\t\t--translucent          (xorg サーバ上で透明化を有効にする)\n"
 
-#: ../gdesklets:186 ../gdesklets:260
+#: ../gdesklets:161
+#, c-format
+msgid ""
+"Error while starting gdesklets-daemon\n"
+"More information about this crash is available in \"%s\"."
+msgstr ""
+
+#: ../gdesklets:164
+#, c-format
+msgid "Exception was: %s\n"
+msgstr ""
+
+#: ../gdesklets:189 ../gdesklets:258
 #, c-format
 msgid "Could not open desklet %s."
 msgstr "デスクレット %s を開けませんでした"
 
-#: ../gdesklets:268
+#: ../gdesklets:266
 msgid "Starting gdesklets-daemon..."
 msgstr "gdesklets-daemon の起動中..."
 
-#: ../gdesklets:274
+#: ../gdesklets:272
 msgid "Shutting down gdesklets-daemon..."
 msgstr "gdesklets-daemon の終了中..."
 
-#: ../gdesklets:286
+#: ../gdesklets:284
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr "プロファイル '%s' で現在開いているディスプレイの数:\n"
 
-#: ../gdesklets:291
+#: ../gdesklets:289
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr "現在、プロファイル '%s' でオープンしているデスクレットはありません"
 
-#: ../gdesklets:295
+#: ../gdesklets:293
 msgid "Restarting gdesklets-daemon..."
 msgstr "gdesklets-daemon の再起動中..."
 
-#: ../gdesklets:308
+#: ../gdesklets:306
 msgid "gdesklets-daemon is running"
 msgstr "gdesklets-daemon は起動中です"
 
-#: ../gdesklets:310
+#: ../gdesklets:308
 msgid "gdesklets-daemon is not running"
 msgstr "gdesklets-daemon は起動していません"
 
-#: ../gdesklets:314
+#: ../gdesklets:312
 #, c-format
 msgid "Current profile: %s"
 msgstr "現在のプロファイル: %s"
 
-#: ../gdesklets:325
+#: ../gdesklets:323
 #, c-format
 msgid "New profile: %s"
 msgstr "新しいプロファイル: %s"
 
-#: ../gdesklets:328
+#: ../gdesklets:326
 #, c-format
 msgid "Available profiles: %s"
 msgstr "利用可能なプロファイル: %s"
 
-#: ../gdesklets:332
+#: ../gdesklets:330
 #, c-format
 msgid "This is %s, version %s."
 msgstr "これは %s で、バージョンは %s です。"
 
-#: ../gdesklets:360
+#: ../gdesklets:358
 msgid "Nothing to slay."
 msgstr "強制終了するものがありません"
 
-#: ../gdesklets:385
+#: ../gdesklets:382
 msgid "Invalid command. Please try one of the following commands:"
 msgstr "コマンドが間違っています。次のコマンドのいずれかを試してみて下さい:"
 
-#: ../gdesklets-daemon:20
+#: ../gdesklets-daemon:27
 msgid "You need a recent version of PyGTK to run this program.\n"
 msgstr "このプログラムを起動するには PyGTK の最新版が必要です。\n"
 
-#: ../gdesklets-daemon:48
+#: ../gdesklets-daemon:52
 msgid "Could not fork daemon.\n"
 msgstr "デーモンを fork(2) できませんでした。\n"
 
-#: ../gdesklets-daemon:69 ../gdesklets-daemon:89
+#: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
 #, c-format
 msgid "The following error occurred: %s\n"
 msgstr "次のエラーが発生しました: %s\n"
 
-#: ../libdesklets/convert.py:21
+#: ../libdesklets/convert.py:22
 #, python-format
 msgid "%.2f TB"
 msgstr "%.2f Tバイト"
 
-#: ../libdesklets/convert.py:23
+#: ../libdesklets/convert.py:24
 #, python-format
 msgid "%.2f GB"
 msgstr "%.2f Gバイト"
 
-#: ../libdesklets/convert.py:25
+#: ../libdesklets/convert.py:26
 #, python-format
 msgid "%.2f MB"
 msgstr "%.2f Mバイト"
 
-#: ../libdesklets/convert.py:27
+#: ../libdesklets/convert.py:28
 #, python-format
 msgid "%.2f kB"
 msgstr "%.2f Kバイト"
 
-#: ../libdesklets/convert.py:29
+#: ../libdesklets/convert.py:30
 #, python-format
 msgid "%d B"
 msgstr "%d バイト"
@@ -447,12 +467,12 @@ msgstr "%d バイト"
 msgid "About gDesklets"
 msgstr "gDesklets について"
 
-#: ../main/client.py:283
+#: ../main/client.py:276
 #, python-format
 msgid "Connecting to daemon [%s]"
 msgstr "デーモンへ接続中 [%s]"
 
-#: ../main/client.py:300
+#: ../main/client.py:293
 msgid ""
 "Cannot establish connection to daemon: timeout!\n"
 "The log file might help you solving the problem."
@@ -460,88 +480,98 @@ msgstr ""
 "デーモンとの接続を確立できません: タイムアウトです！\n"
 "ログ・ファイルを参照して問題を解決して下さい。"
 
-#: ../main/client.py:306
+#: ../main/client.py:299
 #, python-format
 msgid "Connected to daemon in %d microseconds."
 msgstr "デーモンに接続しました (%d マイクロ秒)"
 
-#: ../main/client.py:309
+#: ../main/client.py:302
 #, python-format
 msgid "Connected to daemon in %d milliseconds."
 msgstr "デーモンに接続しました (%d ミリ秒)"
 
-#: ../main/__init__.py:85
+#: ../main/__init__.py:71
 #, python-format
 msgid "Version %s"
 msgstr "バージョン %s"
 
-#: ../main/__init__.py:88
+#: ../main/__init__.py:74
 msgid "Core Programming:"
 msgstr "コア・プログラマ:"
 
-#: ../main/__init__.py:92
+#: ../main/__init__.py:77
 msgid "Architecture Design:"
 msgstr "アーキテクチャ設計:"
 
-#: ../main/__init__.py:95
+#: ../main/__init__.py:80
 msgid "GNOME Integration:"
 msgstr "GNOME 統合作業:"
 
-#: ../main/__init__.py:99
+#: ../main/__init__.py:83
+#, fuzzy
+msgid "Additional Programming:"
+msgstr "コア・プログラマ:"
+
+#: ../main/__init__.py:86
+msgid "Documentation:"
+msgstr ""
+
+#: ../main/__init__.py:89
 msgid "Artwork:"
 msgstr "アートワーク:"
 
-#: ../main/__init__.py:102
+#: ../main/__init__.py:92
 msgid "Website:"
 msgstr "ウェブ・サイト:"
 
-#: ../main/__init__.py:105
+#: ../main/__init__.py:95
 msgid "Thank you:"
 msgstr "感謝します:"
 
-#: ../main/Starter.py:103
+#: ../main/Starter.py:102
 msgid "_Manage desklets"
 msgstr "デスクレットの管理(_M)"
 
-#: ../main/Starter.py:106
+#: ../main/Starter.py:105
 msgid "_Configuration"
 msgstr "設定(_C)"
 
-#: ../main/Starter.py:108
+#: ../main/Starter.py:107
 msgid "_View log"
 msgstr "ログの表示(_V)"
 
-#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:41
+#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
 msgid "_About..."
 msgstr "情報(_A)..."
 
-#: ../main/Starter.py:114
+#: ../main/Starter.py:113
 msgid "_Stop daemon"
 msgstr "デーモンの停止(_S)"
 
-#: ../main/Starter.py:230
+#: ../main/Starter.py:224
 #, python-format
 msgid "Could not open desklet file \"%s\""
 msgstr "デスクレット \"%s\" を開けませんでした"
 
-#: ../main/Starter.py:231
+#: ../main/Starter.py:225
 msgid "The desklet file could not be opened because the file was not readable."
 msgstr "ファイルを読み込めないのでデスクレットを開けませんでした。"
 
-#. CVS warning :)
-#: ../main/transition.py:42
+#: ../main/transition.py:39
+#, fuzzy
 msgid ""
-"This is a CVS version of gDesklets. CVS versions represent the current state "
-"of development and might be unstable or cause problems from time to time.\n"
+"This is a unstable version of gDesklets. Unstable versions represent the "
+"current state of development and might be unstable or cause problems from "
+"time to time.\n"
 "\n"
 "If you're new to gDesklets, it is thus highly recommended to <b>not</b> use "
-"a CVS version, but a stable release!\n"
+"this version, but a stable release!\n"
 "\n"
-"If you still want to run the CVS version instead of a stable release "
+"If you still want to run the unstable version instead of a stable release "
 "version, we'd highly appreciate it if you report any weird behavior to the "
 "developers.\n"
 "\n"
-"Experienced users are encouraged to try a CVS version, though!"
+"Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
 "これは CVS 版の gDesklets です。CVS 版は現在もなお開発中であり動作が不安定、"
 "またはたまに問題を引き起こす場合があります。\n"
@@ -554,7 +584,7 @@ msgstr ""
 "\n"
 "とはいえ、経験豊かなユーザであれば CVS 版を試してみて下さい！"
 
-#: ../main/transition.py:54
+#: ../main/transition.py:51
 msgid ""
 "This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
 "Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
@@ -575,7 +605,8 @@ msgstr ""
 
 #. our informative transition message which we can change with
 #. every release
-#: ../main/transition.py:65
+#: ../main/transition.py:62
+#, fuzzy
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -584,8 +615,7 @@ msgid ""
 "change that in the configuration dialog.\n"
 "\n"
 "Please note that due to limitations of older X servers, you might see blocks "
-"around desklets in Float mode. This cannot be solved in a satisfying way "
-"except for switching the X server to real translucency (Xorg 6.8 and above)."
+"around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
 "このバージョンの gDesklets には \"フロート・モード\" という機能が実装されてい"
 "ます: 指定したキーを押下すると、再びそのキーが押されるまで全てのデスクレット"
@@ -598,7 +628,7 @@ msgstr ""
 "領域が表示されるかもしれません。この現象は半透明の機能をサポートする X サーバ"
 "を利用しない限り解決できません (X.org 6.8 以上のサーバです)。"
 
-#: ../main/transition.py:80
+#: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
 msgstr "注意事項 (このメッセージは一回だけ表示されます):"
 
@@ -606,29 +636,29 @@ msgstr "注意事項 (このメッセージは一回だけ表示されます):"
 msgid "no description"
 msgstr "説明はありません"
 
-#: ../scripting/Script.py:156
+#: ../scripting/Script.py:154
 msgid "Error in add_timer function"
 msgstr "関数 add_timer() でエラー"
 
-#: ../scripting/Script.py:157
+#: ../scripting/Script.py:155
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
 msgstr "\"%s\" は妥当な整数値ではありません！"
 
-#: ../scripting/Script.py:201
+#: ../scripting/Script.py:199
 #, python-format
 msgid "No Control could be found for interface %s"
 msgstr "インタフェース %s に対するコントロールが見つかりませんでした"
 
-#: ../scripting/Script.py:203
+#: ../scripting/Script.py:201
 msgid "This means that a functionality won't be available during execution!"
 msgstr "これは実行中に利用できる機能が存在しないということです！"
 
-#: ../scripting/Script.py:236
+#: ../scripting/Script.py:241
 msgid "Security Risk"
 msgstr "セキュリティ上の問題"
 
-#: ../scripting/Script.py:237
+#: ../scripting/Script.py:242
 #, python-format
 msgid ""
 "The desklet %s wants to execute a system command:\n"
@@ -651,15 +681,15 @@ msgstr ""
 "このコマンドが無害であると確認がとれた場合、このディスクレットに実行許可を永"
 "久に与えることが可能です。"
 
-#: ../scripting/Script.py:250
+#: ../scripting/Script.py:255
 msgid "Deny!"
 msgstr "拒否する！"
 
-#: ../scripting/Script.py:251
+#: ../scripting/Script.py:256
 msgid "Allow once"
 msgstr "一度だけ許可する"
 
-#: ../scripting/Script.py:252
+#: ../scripting/Script.py:257
 msgid "Allow for this desklet"
 msgstr "このデスクレットに対して許可する"
 
@@ -696,19 +726,19 @@ msgstr "ラベルで使用するフォントの色 #%i"
 msgid "%s Control"
 msgstr "%s コントロール"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:55
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:54
 msgid "Interface Name"
 msgstr "インタフェース名"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:58
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:57
 msgid "Property Name"
 msgstr "プロパティの名前"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:61
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:60
 msgid "Property Access"
 msgstr "プロパティのアクセス権限"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:64
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:63
 msgid "Property Description"
 msgstr "プロパティの説明"
 
@@ -795,11 +825,14 @@ msgid "Show tips at startup"
 msgstr "起動時に \"今日の一言\" を表示する"
 
 #: ../shell/plugins/Help/tips.py:2
+#, fuzzy
 msgid ""
 "You can find lots of desktop applets for use\n"
 "with gDesklets at\n"
 "\n"
-"http://gdesklets.gnomedesktop.org"
+"http://www.gdesklets.org\n"
+"and\n"
+"http://gdesklets.zencomputer.ca/"
 msgstr ""
 "次のサイトには gDesklets で利用できる\n"
 "デスクトップ・アプレットが\n"
@@ -807,7 +840,7 @@ msgstr ""
 "\n"
 "http://gdesklets.gnomedesktop.org"
 
-#: ../shell/plugins/Help/tips.py:7
+#: ../shell/plugins/Help/tips.py:9
 msgid ""
 "You can install new desktop applets easily by\n"
 "dragging the download link for the package\n"
@@ -819,7 +852,7 @@ msgstr ""
 "新しいデスクトップ・アプレットを簡単に\n"
 "インストールできます。"
 
-#: ../shell/plugins/Help/tips.py:11
+#: ../shell/plugins/Help/tips.py:13
 msgid ""
 "Click the right mouse button on a desktop\n"
 "applet or press F10 to open the popup menu."
@@ -828,7 +861,7 @@ msgstr ""
 "右クリックするか、[F10] を押下すると\n"
 "ポップアップ・メニューが表示されます。"
 
-#: ../shell/plugins/Help/tips.py:14
+#: ../shell/plugins/Help/tips.py:16
 msgid ""
 "You can move the applets around the screen\n"
 "by holding down the middle mouse button.\n"
@@ -844,7 +877,7 @@ msgstr ""
 "左右の両ボタンを押下すると\n"
 "中ボタン押下の代わりになります。"
 
-#: ../shell/plugins/Help/tips.py:21
+#: ../shell/plugins/Help/tips.py:23
 msgid ""
 "You can have different profiles of\n"
 "desktop applets and switch between them.\n"
@@ -863,7 +896,7 @@ msgstr ""
 "\n"
 "空のプロファイルは自動的に破棄されます。"
 
-#: ../shell/plugins/Help/tips.py:29
+#: ../shell/plugins/Help/tips.py:31
 msgid ""
 "The search bar accepts complex search\n"
 "expressions for finding your applets."
@@ -871,7 +904,7 @@ msgstr ""
 "検索バーでは、アプレットを検索するための\n"
 "複雑な検索式も入力できます。"
 
-#: ../shell/plugins/Help/tips.py:32
+#: ../shell/plugins/Help/tips.py:34
 msgid ""
 "Search expressions may contain wildcards:\n"
 "\n"
@@ -882,6 +915,13 @@ msgstr ""
 "\n"
 " ? １文字にマッチします\n"
 " * ０個以上の文字にマッチします"
+
+#: ../shell/plugins/Help/tips.py:39
+msgid ""
+"Have a good idea for a desklet?\n"
+"Write your own!  See the Developer's\n"
+"book for more details."
+msgstr ""
 
 #: ../shell/plugins/PackageInstaller/Downloader.py:29
 msgid "Retrieving:"
@@ -1018,3 +1058,9 @@ msgstr "ランタイム・エラー"
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
 msgstr "デスクレットを実行する際にエラーが発生しました。"
+
+#~ msgid "XComposite support (requires composition manager)"
+#~ msgstr "XComposite のサポート (要 composition マネージャ)"
+
+#~ msgid "Translucency (takes effect after restarting a display)"
+#~ msgstr "半透明にする (再起動後に適用されます)"

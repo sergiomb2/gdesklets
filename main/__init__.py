@@ -53,8 +53,8 @@ _ = Translator("gdesklets")
 
 
 NAME = "gDesklets"
-VERSION = "0.36beta"
-COPYRIGHT = u"Copyright \xa9 2003 - 2007 The gDesklets Team"
+VERSION = "0.36.1beta"
+COPYRIGHT = u"Copyright \xa9 2003 - 2008 The gDesklets Team"
 DESCRIPTION = _("A desktop applet system for GNOME")
 AUTHORS = ( "Martin Grimme <martin@pycage.de>",
             "Christian Meyer <chrisime@gnome-de.org>",
@@ -63,34 +63,41 @@ AUTHORS = ( "Martin Grimme <martin@pycage.de>",
            u"Beno\xeet Dejean <tazforever@dlfp.org>"
           )
 DOCUMENTERS = ("Martin Grimme <martin@pycage.de>",
-               "Joe Sapp <nixphoeni@yahoo.com>")
+               "Joe Sapp <nixphoeni@yahoo.com>",
+               u"Bj\xf6rn Koch <H.Humpel@gmx.de>",
+               u"Robert Pastierovi\u010d <pastierovic@gmail.com>",)
 ICON = os.path.join(HOME, "data", "gdesklets.png")
 CREDITS = (
            (_("Version %s") % (VERSION,),
-           (u"Copyright \xa9 2003 - 2007", "The gDesklets Team")),
+           (u"Copyright \xa9 2003 - 2008", "The gDesklets Team")),
 
            (_("Core Programming:"),
-           ("Martin Grimme", "Christian Meyer", "Jesse Andrews",
-            u"Beno\xeet Dejean")),
+           ("Martin Grimme", "Christian Meyer", "Jesse Andrews", u"Beno\xeet Dejean",)),
 
            (_("Architecture Design:"),
-           ("Martin Grimme", "Christian Meyer")),
+           ("Martin Grimme", "Christian Meyer",)),
 
            (_("GNOME Integration:"),
-           ("Christian Neumair", "Martin Grimme", u"S\xe9bastien Bacher",
-            "Christian Kellner", "Christian Meyer")),
+           ("Christian Neumair", "Martin Grimme", u"S\xe9bastien Bacher", "Christian Kellner", "Christian Meyer")),
+
+           (_("Additional Programming:"),
+           ("Lauri Kainulainen", u"Bj\xf6rn Koch", u"Robert Pastierovi\u010d",)),
+
+           (_("Documentation:"), 	
+           ("Martin Grimme", "Joe Sapp", u"Bj\xf6rn Koch", u"Robert Pastierovi\u010d",)),
 
            (_("Artwork:"),
            ("Johannes Rebhan",)),
 
            (_("Website:"),
-           ("Marius M.M.", "Luke Stroven (previous site)",)),
+           ("Lauri Kainulainen", "Marius M.M. (previous site)", "Luke Stroven (previous site)",)),
 
            (_("Thank you:"),
            ("VidaLinux for sponsoring",
             "the http://www.gdesklets.org domain!",
             "LinuxProfessionals for sponsoring",
-            "webspace and the http://www.gdesklets.de domain!",)
+            "webspace and the",
+            "http://www.gdesklets.de domain!",)
            )
           )
 

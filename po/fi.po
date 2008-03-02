@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-10-03 10:02+0300\n"
+"POT-Creation-Date: 2008-03-02 21:49+0100\n"
 "PO-Revision-Date: 2006-10-03 10:03+0300\n"
 "Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../config/ConfigDialog.py:103
+#: ../config/ConfigDialog.py:113
 msgid "Invalid Function Call"
 msgstr "Virheellinen funktiokutsu"
 
-#: ../config/ConfigDialog.py:104
+#: ../config/ConfigDialog.py:114
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Tämä tarkoittaa että sovelman koodissa on virhe. Ole hyvä ja kerro tästä "
 "ongelmasta sovelman kehittäjälle."
 
-#: ../config/ConfigDialog.py:217 ../display/DisplayConfigurator.py:32
+#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
 msgstr "Tällä sovelmalla ei ole asetuksia."
 
@@ -60,34 +60,10 @@ msgid "Your favorite editor"
 msgstr "Suosimasi muokkain"
 
 #: ../config/DaemonConfigger.py:20
-msgid "XComposite support (requires composition manager)"
-msgstr "XComposite-tuki (vaatii yhdisteiden hallinnan)"
-
-#: ../config/DaemonConfigger.py:21
-msgid ""
-"\n"
-"     <small><i>"
-msgstr ""
-"\n"
-"     <small><i>"
-
-#: ../config/DaemonConfigger.py:22
-msgid "this does not work with GTK 2.8 or higher for technical reasons"
-msgstr "Tämä ei toimi teknisistä syistä GTK-version 2.8 tai uudempien kanssa"
-
-#: ../config/DaemonConfigger.py:23
-msgid "</i></small>"
-msgstr "</i></small>"
-
-#: ../config/DaemonConfigger.py:24
-msgid "Translucency (takes effect after restarting a display)"
-msgstr "Läpinäkyvyys (tulee voimaan, kun näyttö on uudistettu)"
-
-#: ../config/DaemonConfigger.py:26
 msgid "Screen Resolution (DPI)"
 msgstr "Näytön tarkkuus (DPI)"
 
-#: ../config/DaemonConfigger.py:28
+#: ../config/DaemonConfigger.py:22
 msgid ""
 "Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
 "\"</b> wide"
@@ -95,29 +71,29 @@ msgstr ""
 "Säädä ylläolevaa arvoa siten että palkki on tarkalleen <b>5cm</b> tai <b>1.97"
 "\"</b> leveä"
 
-#: ../config/DaemonConfigger.py:32
+#: ../config/DaemonConfigger.py:26
 msgid "Behavior"
 msgstr "Toiminta"
 
-#: ../config/DaemonConfigger.py:33
+#: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
 msgstr ""
 "Näytä _ilmoitusalueen kuvake (tulee voimaan käynnistettäessä uudestaan)"
 
-#: ../config/DaemonConfigger.py:35
+#: ../config/DaemonConfigger.py:29
 msgid "Show _notification while loading a desklet"
 msgstr "Näytä _huomautus ladattaessa työpöytäsovelmaa"
 
-#: ../config/DaemonConfigger.py:37
+#: ../config/DaemonConfigger.py:31
 msgid "Key for toggling Float mode:"
 msgstr "Kelluntatilaa vaihtava näppäin:"
 
-#: ../config/DaemonConfigger.py:49 ../config/DisplayConfigger.py:27
+#: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
 #: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
 msgstr "Asetukset"
 
-#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:59
+#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
 msgid "A desktop applet system for GNOME"
 msgstr "Työpöytäsovelat Gnomelle"
 
@@ -125,31 +101,40 @@ msgstr "Työpöytäsovelat Gnomelle"
 msgid "gDesklets display"
 msgstr "gDesklets-näyttö"
 
-#: ../display/Display.py:84
+#: ../display/Display.py:85
 msgid "_Configure desklet"
 msgstr "Sovelman _asetukset"
 
-#: ../display/Display.py:86
+#: ../display/Display.py:87
 msgid "_Move desklet"
 msgstr "_Siirrä sovelmaa"
 
-#: ../display/Display.py:89
+#: ../display/Display.py:90
 msgid "_View Source"
 msgstr "_Näytä lähde"
 
-#: ../display/Display.py:92
+#: ../display/Display.py:93
 msgid "Re_start desklet"
 msgstr "Käynnistä sovelma _uudestaan"
 
-#: ../display/Display.py:94
+#: ../display/Display.py:95
 msgid "_Remove desklet"
 msgstr "_Poista sovelma"
 
-#: ../display/Display.py:978 ../shell/plugins/DisplayBrowser/__init__.py:142
+#: ../display/Display.py:98
+#, fuzzy
+msgid "_About"
+msgstr "_Tietoja..."
+
+#: ../display/Display.py:337
+msgid "_Readme"
+msgstr ""
+
+#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
 msgid "Do you really want to remove this desklet ?"
 msgstr "Haluatko varmasti poistaa tämän sovelman?"
 
-#: ../display/Display.py:979
+#: ../display/Display.py:1116
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
@@ -189,24 +174,24 @@ msgstr "Virhe XML-tulkinnassa"
 msgid "This .display file has invalid XML syntax."
 msgstr "Tässä .display-tiedostossa on virheellinen XML-syntaksi."
 
-#: ../factory/DisplayFactory.py:208
+#: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
 msgstr "Tiedostoa ei ole tai sitä ei voi ladata"
 
-#: ../factory/DisplayFactory.py:210
+#: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
 msgstr "Tiedosto, jossa skripti on, ei ole saatavilla suoritusta varten."
 
-#: ../factory/DisplayFactory.py:233
+#: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
 msgstr "Ilmaisinta ei voi ladata"
 
-#: ../factory/DisplayFactory.py:249
+#: ../factory/DisplayFactory.py:243
 #, python-format
 msgid "&lt;%s&gt; needs a bind attribute"
 msgstr "&lt;%s&gt; vaatii attribuutin bind"
 
-#: ../factory/DisplayFactory.py:251
+#: ../factory/DisplayFactory.py:245
 msgid "The &lt;prefs&gt; section of this desklet file is broken."
 msgstr "Sovelmatiedoston osio &lt;prefs&gt; on rikki."
 
@@ -226,51 +211,52 @@ msgstr ""
 msgid "You must NOT run gDesklets as super user (root)."
 msgstr "gDeskletsiä EI tule ajaa ylläpitäjänä (root-käyttäjä)."
 
-#: ../gdesklets:40
+#: ../gdesklets:46
 msgid "Checking requirements:"
 msgstr "Tarkistetaan riippuvuuksia:"
 
-#: ../gdesklets:44
+#: ../gdesklets:50
 msgid "Python version >= 2.3.0 is required."
 msgstr "Vaaditaan python-versio 2.3.0 tai uudempi."
 
-#: ../gdesklets:48
+#: ../gdesklets:54
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr "Versio 1.95.7 ohjelmasta libexpat on rikki, päivitä se!"
 
-#: ../gdesklets:51
+#: ../gdesklets:57
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr "SAX-parseri vaaditaan: jotkut SuSE-versiot toimitetaan ilman sitä."
 
-#: ../gdesklets:55
+#: ../gdesklets:61
+#, fuzzy
 msgid ""
-"GTK python bindings (pygtk2) version >= 2.4.0 and GTK+ version >= 2.4.0 are "
-"required."
+"GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
+"are required."
 msgstr ""
 "GTK:n pythonsidokset (pygtk2) versio >= 2.4.0 ja GTK+ versio >= 2.4.0 "
 "vaaditaan."
 
-#: ../gdesklets:59
+#: ../gdesklets:65
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
 msgstr "Vaaditaan ORBitin python-sidokset (pyorbit) versio 2.0.1 tai uudempi."
 
-#: ../gdesklets:62
+#: ../gdesklets:68
 msgid "bonobo python bindings are required."
 msgstr "Bonobon pythonsidokset vaaditaan."
 
-#: ../gdesklets:71
+#: ../gdesklets:77
 msgid "found"
 msgstr "löytyi"
 
-#: ../gdesklets:75
+#: ../gdesklets:81
 msgid "missing"
 msgstr "puuttuu"
 
-#: ../gdesklets:81
+#: ../gdesklets:87
 msgid "Version check failed."
 msgstr "Versioiden tarkistus epäonnistui."
 
-#: ../gdesklets:82
+#: ../gdesklets:88
 #, c-format
 msgid ""
 "\n"
@@ -279,7 +265,7 @@ msgstr ""
 "\n"
 "%s\n"
 
-#: ../gdesklets:83
+#: ../gdesklets:89
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -297,7 +283,11 @@ msgstr ""
 "\n"
 "gDeskletsin käynnistys keskeytetään nyt!\n"
 
-#: ../gdesklets:99
+#: ../gdesklets:98
+msgid "Requirements checking done. Your system looks ok!"
+msgstr ""
+
+#: ../gdesklets:105
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
@@ -307,7 +297,7 @@ msgstr ""
 "Suoritat ohjelman gDesklets ensimmäistä kertaa.\n"
 "gDesklets tarkistaa aluksi riippuuvuutensa...\n"
 
-#: ../gdesklets:110
+#: ../gdesklets:116
 msgid ""
 "Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
@@ -355,103 +345,115 @@ msgstr ""
 "\t\t--no-tray-icon     (Poistaa ilmoitusalueen kuvakkeen käytöstä)\n"
 "\t\t--translucent      (Ottaa läpinäkyvyyden käyttöön X.org-palvelimilla)\n"
 
-#: ../gdesklets:183 ../gdesklets:257
+#: ../gdesklets:161
+#, c-format
+msgid ""
+"Error while starting gdesklets-daemon\n"
+"More information about this crash is available in \"%s\"."
+msgstr ""
+
+#: ../gdesklets:164
+#, c-format
+msgid "Exception was: %s\n"
+msgstr ""
+
+#: ../gdesklets:189 ../gdesklets:258
 #, c-format
 msgid "Could not open desklet %s."
 msgstr "Sovelmaa \"%s\" ei voi avata."
 
-#: ../gdesklets:265
+#: ../gdesklets:266
 msgid "Starting gdesklets-daemon..."
 msgstr "Käynnistetään gdesklets-daemon..."
 
-#: ../gdesklets:271
+#: ../gdesklets:272
 msgid "Shutting down gdesklets-daemon..."
 msgstr "Sammutetaan gdesklets-daemon..."
 
-#: ../gdesklets:283
+#: ../gdesklets:284
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr "Nyt avoimet näytöt profiilissa \"%s\":\n"
 
-#: ../gdesklets:288
+#: ../gdesklets:289
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr "Tällä hetkellä profiilissa \"%s\" ei ole sovelmia"
 
-#: ../gdesklets:292
+#: ../gdesklets:293
 msgid "Restarting gdesklets-daemon..."
 msgstr "Käynnistetään gdesklets-daemon uudestaan..."
 
-#: ../gdesklets:305
+#: ../gdesklets:306
 msgid "gdesklets-daemon is running"
 msgstr "gdesklets-daemon on käynnissä"
 
-#: ../gdesklets:307
+#: ../gdesklets:308
 msgid "gdesklets-daemon is not running"
 msgstr "gdesklets-daemon ei ole käynnissä"
 
-#: ../gdesklets:311
+#: ../gdesklets:312
 #, c-format
 msgid "Current profile: %s"
 msgstr "Nykyinen profiili: %s"
 
-#: ../gdesklets:322
+#: ../gdesklets:323
 #, c-format
 msgid "New profile: %s"
 msgstr "Uusi profiili: %s"
 
-#: ../gdesklets:325
+#: ../gdesklets:326
 #, c-format
 msgid "Available profiles: %s"
 msgstr "Tarjolla olevat profiilit: %s"
 
-#: ../gdesklets:329
+#: ../gdesklets:330
 #, c-format
 msgid "This is %s, version %s."
 msgstr "Tämä on %s, versio %s."
 
-#: ../gdesklets:357
+#: ../gdesklets:358
 msgid "Nothing to slay."
 msgstr "Ei mitään poistettavaa."
 
-#: ../gdesklets:381
+#: ../gdesklets:382
 msgid "Invalid command. Please try one of the following commands:"
 msgstr "Virheellinen komento, kokeile jotain seuraavista komennoista:"
 
-#: ../gdesklets-daemon:20
+#: ../gdesklets-daemon:27
 msgid "You need a recent version of PyGTK to run this program.\n"
 msgstr "Tarvitset PyGTK:n uuden version ajaaksesi tämän ohjelman.\n"
 
-#: ../gdesklets-daemon:45
+#: ../gdesklets-daemon:52
 msgid "Could not fork daemon.\n"
 msgstr "Taustaprosessia ei voitu käynnistää.\n"
 
-#: ../gdesklets-daemon:66 ../gdesklets-daemon:86
+#: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
 #, c-format
 msgid "The following error occurred: %s\n"
 msgstr "Tapahtui seuraava virhe: %s\n"
 
-#: ../libdesklets/convert.py:21
+#: ../libdesklets/convert.py:22
 #, python-format
 msgid "%.2f TB"
 msgstr "%.2f Tt"
 
-#: ../libdesklets/convert.py:23
+#: ../libdesklets/convert.py:24
 #, python-format
 msgid "%.2f GB"
 msgstr "%.2f Gt"
 
-#: ../libdesklets/convert.py:25
+#: ../libdesklets/convert.py:26
 #, python-format
 msgid "%.2f MB"
 msgstr "%.2f Mt"
 
-#: ../libdesklets/convert.py:27
+#: ../libdesklets/convert.py:28
 #, python-format
 msgid "%.2f kB"
 msgstr "%.2f kt"
 
-#: ../libdesklets/convert.py:29
+#: ../libdesklets/convert.py:30
 #, python-format
 msgid "%d B"
 msgstr "%d t"
@@ -483,32 +485,41 @@ msgstr "Yhdistettiin taustaprosessiin %d mikrosekunnissa."
 msgid "Connected to daemon in %d milliseconds."
 msgstr "Yhdistettiin taustaprosessiin %d millisekunnissa."
 
-#: ../main/__init__.py:69
+#: ../main/__init__.py:71
 #, python-format
 msgid "Version %s"
 msgstr "Versio %s"
 
-#: ../main/__init__.py:72
+#: ../main/__init__.py:74
 msgid "Core Programming:"
 msgstr "Ytimen ohjelmointi:"
 
-#: ../main/__init__.py:76
+#: ../main/__init__.py:77
 msgid "Architecture Design:"
 msgstr "Arkkitehtuurisuunnittelu:"
 
-#: ../main/__init__.py:79
+#: ../main/__init__.py:80
 msgid "GNOME Integration:"
 msgstr "Gnome-integrointi:"
 
 #: ../main/__init__.py:83
+#, fuzzy
+msgid "Additional Programming:"
+msgstr "Ytimen ohjelmointi:"
+
+#: ../main/__init__.py:86
+msgid "Documentation:"
+msgstr ""
+
+#: ../main/__init__.py:89
 msgid "Artwork:"
 msgstr "Grafiikat:"
 
-#: ../main/__init__.py:86
+#: ../main/__init__.py:92
 msgid "Website:"
 msgstr "WWW-sivut:"
 
-#: ../main/__init__.py:89
+#: ../main/__init__.py:95
 msgid "Thank you:"
 msgstr "Kiitokset:"
 
@@ -532,29 +543,30 @@ msgstr "_Tietoja..."
 msgid "_Stop daemon"
 msgstr "Py_säytä taustaprosessi"
 
-#: ../main/Starter.py:227
+#: ../main/Starter.py:224
 #, python-format
 msgid "Could not open desklet file \"%s\""
 msgstr "Sovelmatiedostoa \"%s\" ei voi avata"
 
-#: ../main/Starter.py:228
+#: ../main/Starter.py:225
 msgid "The desklet file could not be opened because the file was not readable."
 msgstr "Sovelman tiedostoa ei voi avata, koska tiedosto ei ole luettavissa."
 
-#. CVS warning :)
-#: ../main/transition.py:42
+#: ../main/transition.py:39
+#, fuzzy
 msgid ""
-"This is a CVS version of gDesklets. CVS versions represent the current state "
-"of development and might be unstable or cause problems from time to time.\n"
+"This is a unstable version of gDesklets. Unstable versions represent the "
+"current state of development and might be unstable or cause problems from "
+"time to time.\n"
 "\n"
 "If you're new to gDesklets, it is thus highly recommended to <b>not</b> use "
-"a CVS version, but a stable release!\n"
+"this version, but a stable release!\n"
 "\n"
-"If you still want to run the CVS version instead of a stable release "
+"If you still want to run the unstable version instead of a stable release "
 "version, we'd highly appreciate it if you report any weird behavior to the "
 "developers.\n"
 "\n"
-"Experienced users are encouraged to try a CVS version, though!"
+"Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
 "Tämä on gDeskletsin CVS-versio. CVS-versiot ovat tämänhetkisiä ohjelman "
 "kehitysversioita ja voivat ajoittain olla herkkiä kaatuilemaan taiaiheuttaa "
@@ -567,7 +579,7 @@ msgstr ""
 "\n"
 "Edistyneet käyttäjät ovat tervetuuleita käyttämään CVS-versiota!"
 
-#: ../main/transition.py:54
+#: ../main/transition.py:51
 msgid ""
 "This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
 "Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
@@ -588,7 +600,8 @@ msgstr ""
 
 #. our informative transition message which we can change with
 #. every release
-#: ../main/transition.py:65
+#: ../main/transition.py:62
+#, fuzzy
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -597,8 +610,7 @@ msgid ""
 "change that in the configuration dialog.\n"
 "\n"
 "Please note that due to limitations of older X servers, you might see blocks "
-"around desklets in Float mode. This cannot be solved in a satisfying way "
-"except for switching the X server to real translucency (Xorg 6.8 and above)."
+"around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
 "Tässä gDeskletsin versiossa on mukana kelluntatila: paina näppäintä ja "
 "kaikki sovelmasi tulevat näkyville, kelluen sovellustesi päällä, kunnes "
@@ -611,7 +623,7 @@ msgstr ""
 "tyydyttävällä tavalla muuten kuin vaihtamalla aidon läpinäkyvyyden osaavaan "
 "X-palvelimeen (Xorg 6.8 ja uudemmat)."
 
-#: ../main/transition.py:80
+#: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
 msgstr "Huomautus (tämä viesti näytetään vain kerran):"
 
@@ -709,19 +721,19 @@ msgstr "Otsikoissa käytetyn kirjasimen väri #%i"
 msgid "%s Control"
 msgstr "%s ohjain"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:55
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:54
 msgid "Interface Name"
 msgstr "Liittymän nimi"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:58
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:57
 msgid "Property Name"
 msgstr "Ominaisuuden nimi"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:61
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:60
 msgid "Property Access"
 msgstr "Ominaisuuden pääsyoikeus"
 
-#: ../shell/plugins/ControlBrowser/ControlInspector.py:64
+#: ../shell/plugins/ControlBrowser/ControlInspector.py:63
 msgid "Property Description"
 msgstr "Ominaisuuden kuvaus"
 
@@ -1039,3 +1051,23 @@ msgstr "Ajonaikainen virhe"
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
 msgstr "Tapahtui virhe suoritettaessa sovelmaa."
+
+#~ msgid "XComposite support (requires composition manager)"
+#~ msgstr "XComposite-tuki (vaatii yhdisteiden hallinnan)"
+
+#~ msgid ""
+#~ "\n"
+#~ "     <small><i>"
+#~ msgstr ""
+#~ "\n"
+#~ "     <small><i>"
+
+#~ msgid "this does not work with GTK 2.8 or higher for technical reasons"
+#~ msgstr ""
+#~ "Tämä ei toimi teknisistä syistä GTK-version 2.8 tai uudempien kanssa"
+
+#~ msgid "</i></small>"
+#~ msgstr "</i></small>"
+
+#~ msgid "Translucency (takes effect after restarting a display)"
+#~ msgstr "Läpinäkyvyys (tulee voimaan, kun näyttö on uudistettu)"
