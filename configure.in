@@ -103,6 +103,7 @@ Controls/Calendar/Makefile
 Controls/EventPipe/Makefile
 Controls/HDDTemp/Makefile
 Controls/Makefile
+Controls/Random/Makefile
 Controls/Sensor/Makefile
 Controls/System/Makefile
 Controls/Time/Makefile
