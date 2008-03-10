@@ -1,3 +1,7 @@
+2008-03-11  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* display/TargetPlotter.py: first version of new property (bars)
+
 2008-03-08  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* Controls/Random/
@@ -6,7 +10,6 @@
 	* Controls/Random/__init__.py
 	* Controls/Makefile.am
 	* configure.in: New Control (Random) added.
-
 
 2008-03-02  Bjoern Koch  <H.Humpel@gmx.de>
 

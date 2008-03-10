@@ -51,6 +51,10 @@ class TargetPlotter(TargetCanvas):
                                 self._setp, self._getp)
         self._setp("scale-holdmax", False)
 
+        self._register_property("bars", TYPE_BOOL,
+                                self._setp, self._getp)
+        self._setp("bars", False)
+
 
     #
     # Plots the values from the history.
@@ -92,23 +96,35 @@ class TargetPlotter(TargetCanvas):
 
             history_size = min(len(self.__history), size)
 
-            x, y = x, self.__history[-history_size]
-            body += "<path d=\"M%f %f " % (x, 100 - (y - min_value) * scale)
-            x += delta_x
-
-            for y in self.__history[-history_size + 1:]:
-                y = 100 - (y - min_value) * scale
-                body += "L%(x)f %(y)f " % vars()
+            if (self.get_prop("bars")):
+                x, y = x, self.__history[-history_size]
+                for y in self.__history[-history_size + 1:]:
+                    body += "<path d=\"M%f %f " % (x, 100 * scale)
+                    y = 100 - (y - min_value) * scale
+                    body += "L%(x)f %(y)f " % vars()
+                    x += delta_x
+                    try:
+                        color, opacity = self.__parse_color(fg)
+                    except ValueError, exc:
+                        log(`exc`)
+                        return
+                    body += "\" style=\"stroke:%s;opacity:%d%%;fill:none\"/>" % \
+                             (color, opacity)
+            else:
+                x, y = x, self.__history[-history_size]
+                body += "<path d=\"M%f %f " % (x, 100 - (y - min_value) * scale)
                 x += delta_x
-
-            try:
-                color, opacity = self.__parse_color(fg)
-            except ValueError, exc:
-                log(`exc`)
-                return
-
-            body += "\" style=\"stroke:%s;opacity:%d%%;fill:none\"/>" % \
-                     (color, opacity)
+                for y in self.__history[-history_size + 1:]:
+                    y = 100 - (y - min_value) * scale
+                    body += "L%(x)f %(y)f " % vars()
+                    x += delta_x
+                try:
+                    color, opacity = self.__parse_color(fg)
+                except ValueError, exc:
+                    log(`exc`)
+                    return
+                body += "\" style=\"stroke:%s;opacity:%d%%;fill:none\"/>" % \
+                         (color, opacity)
 
         # draw scala
         scala = self.get_prop("scala")
