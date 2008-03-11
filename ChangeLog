@@ -1,3 +1,7 @@
+2008-03-12  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* display/TargetPlotter.py: code optimization and cleanup
+
 2008-03-11  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* display/TargetPlotter.py: first version of new property (bars)
@@ -19,6 +23,8 @@
 	* doc/book/ctrl-included.xml: updated information, new chapter: included Controls 
 	* main/__init__.py
 	* configure.in: updated information and new version (0.36.1beta)
+
+=== 0.36 release ===
 
 2008-01-11  Bjoern Koch  <H.Humpel@gmx.de>
 

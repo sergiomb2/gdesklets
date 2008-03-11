@@ -95,36 +95,30 @@ class TargetPlotter(TargetCanvas):
             scale = 100.0 / (max_value - min_value)
 
             history_size = min(len(self.__history), size)
+            x, y = x, self.__history[-history_size]
 
             if (self.get_prop("bars")):
-                x, y = x, self.__history[-history_size]
+                body += "<path d=\"M%f %f " % (x, 100 + min_value * scale)
+                x += delta_x
                 for y in self.__history[-history_size + 1:]:
-                    body += "<path d=\"M%f %f " % (x, 100 * scale)
                     y = 100 - (y - min_value) * scale
                     body += "L%(x)f %(y)f " % vars()
                     x += delta_x
-                    try:
-                        color, opacity = self.__parse_color(fg)
-                    except ValueError, exc:
-                        log(`exc`)
-                        return
-                    body += "\" style=\"stroke:%s;opacity:%d%%;fill:none\"/>" % \
-                             (color, opacity)
+                    body += "M%f %f " % (x, 100 + min_value * scale)
             else:
-                x, y = x, self.__history[-history_size]
                 body += "<path d=\"M%f %f " % (x, 100 - (y - min_value) * scale)
                 x += delta_x
                 for y in self.__history[-history_size + 1:]:
                     y = 100 - (y - min_value) * scale
                     body += "L%(x)f %(y)f " % vars()
                     x += delta_x
-                try:
-                    color, opacity = self.__parse_color(fg)
-                except ValueError, exc:
-                    log(`exc`)
-                    return
-                body += "\" style=\"stroke:%s;opacity:%d%%;fill:none\"/>" % \
-                         (color, opacity)
+            try:
+                color, opacity = self.__parse_color(fg)
+            except ValueError, exc:
+                log(`exc`)
+                return
+            body += "\" style=\"stroke:%s;opacity:%d%%;fill:none\"/>" % \
+                     (color, opacity)
 
         # draw scala
         scala = self.get_prop("scala")
