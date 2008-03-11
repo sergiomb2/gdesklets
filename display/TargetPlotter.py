@@ -99,7 +99,6 @@ class TargetPlotter(TargetCanvas):
 
             if (self.get_prop("bars")):
                 body += "<path d=\"M%f %f " % (x, 100 + min_value * scale)
-                x += delta_x
                 for y in self.__history[-history_size + 1:]:
                     y = 100 - (y - min_value) * scale
                     body += "L%(x)f %(y)f " % vars()
