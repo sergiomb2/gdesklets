@@ -233,6 +233,10 @@ class UI_DisplayBrowser(Plugin):
             query = "(MATCH 'name' '%c*')" % (c,)
             if collection.query( query ):
                 values.append((icon, c, query))
+        for c in range(10):
+            query = "(MATCH 'name' '%d*')" % c
+            if collection.query( query ):
+                values.append((icon, str(c), query))
 
         return values
 

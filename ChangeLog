@@ -1,3 +1,8 @@
+2008-03-14  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* doc/book/ctrl-included.xml: updated documentation
+	* shell/plugins/DisplayBrowser/__init__.py: Fixed #197778 (thanks to MarioGonzalez)
+
 2008-03-12  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* display/TargetPlotter.py: code optimization and cleanup
