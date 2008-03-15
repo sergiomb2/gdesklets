@@ -19,7 +19,7 @@
 
 <section><title>Past</title>
 
-  <para>The concept of <emphasize>sensors</emphasize> solved the problems in
+  <para>The concept of <emphasis>sensors</emphasis> solved the problems in
     some way. A sensor was a reusable module of privileged (unsandboxed) code.
     </para>
 
@@ -37,7 +37,7 @@
 
   <para>It has become necessary to design a new framework to replace the old
     sensors framework. Instead of sensors, the new framework is about
-    <emphasize>controls</emphasize>.</para>
+    <emphasis>controls</emphasis>.</para>
 
   <para>A control is a privileged (unsandboxed) property-based module, which
     can be shared among applets, and implements certain interfaces.</para>

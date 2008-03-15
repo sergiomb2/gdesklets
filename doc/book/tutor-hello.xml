@@ -300,7 +300,7 @@
     XML, such as "&lt;", "&gt;", or "&amp;". They can be entered by using the
     common XML entities instead, e.g. "&amp;lt;", "&amp;gt;", or "&amp;amp;".
     While this is neccessary for action handler scripts, we can use
-    <emphasize>CDATA</emphasize> sections in the
+    <emphasis>CDATA</emphasis> sections in the
     <command>&lt;script&gt;</command> tag to avoid it. A CDATA section is a
     section which the XML parser doesn't parse. Therefore, there is no need
     for escaping reserved characters.</para>

@@ -10,7 +10,7 @@
   <tip>
     <para>Some characters are reserved for XML and thus have to be escaped
       inside inline scripts. You can, however, put the script into a
-      <emphasize>CDATA</emphasize> section to make the XML parser ignore the
+      <emphasis>CDATA</emphasis> section to make the XML parser ignore the
       reserved characters.</para>
   </tip>
 

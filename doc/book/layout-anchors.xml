@@ -1,7 +1,7 @@
 <section id="layout-anchors" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Anchors</title>
 
-  <para>The <emphasize>anchor</emphasize> of a display element is the point
+  <para>The <emphasis>anchor</emphasis> of a display element is the point
     of the element which is used for positioning. If you place an element at
     the coordinates <literal>(10, 10)</literal>, then the element will be
     positioned with its anchor lying on that point.</para>

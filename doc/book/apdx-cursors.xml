@@ -1,5 +1,5 @@
 <appendix id="apdx-cursors"  xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Cursors <emphasize>[New in 0.35]</emphasize></title>
+  <title>Cursors <emphasis>[New in 0.35]</emphasis></title>
 
   <para>The appearance of the cursors depends on the desktop cursor theme which
     the user has selected. Thus you should not choose cursors by their image but

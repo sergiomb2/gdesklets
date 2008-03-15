@@ -39,7 +39,7 @@
        on-click="Dsp.myimg.uri = 'gfx/button-clicked.png'"/>
   ]]></programlisting>
 
-  <para>Some actions create an <emphasize>event</emphasize> object with
+  <para>Some actions create an <emphasis>event</emphasis> object with
     information about the action. A click action, e.g. generates an event
     object with information about the mouse button that has been clicked.</para>
 

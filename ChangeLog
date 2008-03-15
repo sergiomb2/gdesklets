@@ -1,3 +1,43 @@
+2008-03-15  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* doc/book/apdx-cursors.xml
+	* doc/book/ctrl-idea.xml
+	* doc/book/ctrl-included.xml
+	* doc/book/ctrl-interface.xml
+  	* doc/book/ctrl-write.xml
+	* doc/book/dsp-tag-common.xml
+	* doc/book/dsp-tag-display.xml
+	* doc/book/dsp-tag-image.xml
+	* doc/book/dsp-tag-label.xml
+	* doc/book/dsp-tag-plotter.xml
+	* doc/book/dsp-tag-script.xml
+	* doc/book/layout-anchors.xml
+	* doc/book/layout-mistakes.xml
+	* doc/book/layout-relative.xml
+	* doc/book/meta.xml
+	* doc/book/prefs-system.xml
+	* doc/book/prefs-tag-boolean.xml
+	* doc/book/prefs-tag-color.xml
+	* doc/book/prefs-tag-date.xml
+	* doc/book/prefs-tag-enum.xml
+	* doc/book/prefs-tag-float.xml
+	* doc/book/prefs-tag-font.xml
+	* doc/book/prefs-tag-info.xml
+	* doc/book/prefs-tag-integer.xml
+	* doc/book/prefs-tag-radio.xml
+	* doc/book/prefs-tag-string.xml
+	* doc/book/prefs-tag-uri.xml
+	* doc/book/script-builtins.xml
+	* doc/book/script-menu.xml
+	* doc/book/script-sandbox.xml
+	* doc/book/script-using.xml
+	* doc/book/tutor-1st-steps.xml
+	* doc/book/tutor-canvas.xml
+	* doc/book/tutor-hello.xml
+	* doc/book/tutor-tutor.xml
+	* doc/book/tutor-xml.xml
+	* doc/book/tutor.xml: code cleaning (almost no errors left)
+
 2008-03-14  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* doc/book/ctrl-included.xml: updated documentation

@@ -8,7 +8,7 @@
     control gets loaded as long as the control does exactly what was expected.
     </para>
 
-  <para>The functionality is described by <emphasize>interfaces</emphasize>
+  <para>The functionality is described by <emphasis>interfaces</emphasis>
     and several implementations of an interface can exist. However, control
     authors have to make sure that two different implementations of the same
     interface provide the same functionality.</para>

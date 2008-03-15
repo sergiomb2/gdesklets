@@ -1,5 +1,5 @@
 <section id="prefs-tag-info" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>&lt;info&gt; <emph>[new in 0.36]</emph></title>
+  <title>&lt;info&gt; <emphasis>[new in 0.36]</emphasis></title>
 
   <para>An information text in the dialog with pango markup support.</para>
 

@@ -1,4 +1,4 @@
-<section id="ctrl-interface" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section id="ctrl-included" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Included Controls</title>
 
 <section><title>Overview</title>
@@ -6,8 +6,7 @@
   <para>gDesklets provides a basic set of Controls which can be used
     out-of-the-box. The following list shows all currently included Controls
     and their interface identifiers followed by more detailed information on
-    each Control.    
-    </para>
+    each Control.</para>
 
   <programlisting>
 IArrayBuffer:10i2docuzddulm08s5h8qho3o-2
@@ -26,8 +25,7 @@ IURI:3mufry4gxx4vihs2dufszo21p-2
 <section><title>ArrayBuffer</title>
 
   <para>An object buffer that makes it easier to scroll and update arrays of
-    objects.
-    </para>
+    objects.</para>
 
   <programlisting>
 IArrayBuffer:10i2docuzddulm08s5h8qho3o-2
@@ -64,39 +62,31 @@ ICalendar:edslroj9o537asmjt8g2i7kse-2
 
 <section><title>EventPipe</title>
 
-  <para>Control for piping events to other desklets.
-    </para>
+  <para>Control for piping events to other desklets.</para>
 
   <para>This control acts as a hub providing a push based notification system with
-    different channels of interests.
-    </para>
+    different channels of interests.</para>
 
   <para>You can use this control to subscribe to channels in order to automatically
-    receive messages:
-    </para>
+    receive messages:</para>
 
-  <para>epipe.subscriptions = ["SideCandy", "System"]
-    </para>
+  <programlisting>epipe.subscriptions = ["SideCandy", "System"]
+  </programlisting>
 
   <para>By binding a handler to the "event" property, you can receive broadcasted
-    messages:
-    </para>
+    messages:</para>
 
-  <para>epipe.bind("event", on_epipe_message)
-    </para>
+  <programlisting>epipe.bind("event", on_epipe_message)</programlisting>
 
   <para>In order to broadcast a message to other desklets, you put the message into
-    the "event" property:
-    </para>
+    the "event" property:</para>
 
-  <para>epipe.event = ("SideCandy", "my message")
-    </para>
+  <programlisting>epipe.event = ("SideCandy", "my message")</programlisting>
 
   <para>A message is a list of elements, where the first element is the name of the
     channel, and the second is the name of the message. The list may also
     contain further, arbitrary elements, but the channel and the message name
-    must be strings.
-    </para>
+    must be strings.</para>
 
   <programlisting>
 IEventPipe:1v11pn3wj3jk1tmnnvl312sg3-2
@@ -105,8 +95,7 @@ IEventPipe:1v11pn3wj3jk1tmnnvl312sg3-2
   subscriptions            rw  The subscribed channels 
   </programlisting>
 
-  <para>The <quote>event</quote> property is bindable.
-    </para>
+  <para>The <quote>event</quote> property is bindable.</para>
 
 </section>
 
@@ -127,10 +116,11 @@ IHDDTemp:6da6kg9xaciyyv0xvpexg8hyp-2
 
 <section><title>Sensor</title>
 
-  <para>This control wraps legacy sensors to make them still usable.
-    Sensors are deprecated and shouldn't be used in new stuff. This control is
-    solely meant for retaining backwards compatibility.
-    </para>
+  <warning>
+    <para>This control wraps legacy sensors to make them still usable.
+      Sensors are deprecated and shouldn't be used in new stuff. This control is
+      solely meant for retaining backwards compatibility.</para>
+  </warning>
 
   <programlisting>
 ISensor:blbed9sqifj2dnabrwpbd7guz-2
@@ -145,8 +135,7 @@ ISensor:blbed9sqifj2dnabrwpbd7guz-2
   </programlisting>
 
   <para>The <quote>output</quote> and <quote>menu</quote> properties are
-    bindable.
-    </para>
+    bindable.</para>
 
 </section>
 
@@ -195,8 +184,7 @@ ISystem:4zcicmk4botcub7iypo46t2l7-2
   </programlisting>
 
   <para>The <quote>allfs</quote>, <quote>device</quote>, <quote>mountdir</quote>,
-    <quote>pid</quote> and <quote>which</quote> properties are bindable.
-    </para>
+    <quote>pid</quote> and <quote>which</quote> properties are bindable.</para>
 
 </section>
 
@@ -212,8 +200,7 @@ ITime:5oak91gpdt1dyiepbqmn48plp-2
   timezone                 rw  the timezone 
   </programlisting>
 
-  <para>The <quote>date</quote>, <quote>time</quote> and <quote>timezone</quote> properties are bindable.
-    </para>
+  <para>The <quote>date</quote>, <quote>time</quote> and <quote>timezone</quote> properties are bindable.</para>
 
 </section>
 

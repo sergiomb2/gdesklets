@@ -16,7 +16,7 @@
       to make a more efficient implementation, please implement the interfaces
       of the other control to ensure backwards compatibility.</listitem>
 
-    <listitem><emphasize>Never</emphasize> put applet-specific functionality
+    <listitem><emphasis>Never</emphasis> put applet-specific functionality
       into a control! Controls are meant to be shared among applets.</listitem>
 
     <listitem>Never publish a control without obeying rules 1 - 3!</listitem>
@@ -196,7 +196,7 @@ class C(object):
         <link linkend="ctrl-use-watch"><function>bind()</function></link>
         changes its value.
         Of course it does not make sense for all properties to be watchable.
-        Always call this method <emphasize>after</emphasize> the change has
+        Always call this method <emphasis>after</emphasis> the change has
         actually taken place.</entry>
     </row>
 

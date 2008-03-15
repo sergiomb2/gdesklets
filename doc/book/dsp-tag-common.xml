@@ -33,7 +33,7 @@
         <entry valign="top">cursor</entry>
         <entry valign="top">string</entry>
         <entry valign="top"></entry>
-        <entry valign="top"><emphasize>[New in 0.35]</emphasize> The
+        <entry valign="top"><emphasis>[New in 0.35]</emphasis> The
           <link linkend="apdx-cursors">name of the mouse cursor</link> which will be displayed
           when the mouse pointer enters the element. Set this property to an empty string
           in order to revert that setting.</entry>
@@ -51,7 +51,7 @@
         <entry valign="top">menu</entry>
         <entry valign="top">object</entry>
         <entry valign="top"></entry>
-        <entry valign="top"><emphasize>[New in 0.35]</emphasize> The menu to be displayed.
+        <entry valign="top"><emphasis>[New in 0.35]</emphasis> The menu to be displayed.
           Whenever you assign a menu (a list of MenuItem objects) to this property,
           it will immediately popup.</entry>
       </row>

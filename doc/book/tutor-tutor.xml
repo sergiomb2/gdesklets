@@ -172,7 +172,7 @@
   <screen>
     <prompt>$> </prompt><userinput>export CVSROOT=:pserver:anonymous@anoncvs.gnome.org/cvs/gnome</userinput>
     <prompt>$> </prompt><userinput>cvs login</userinput>
-    (press <key>Enter</key> when asked for a password)
+    (press <keycap>Enter</keycap> when asked for a password)
     <prompt>$> </prompt><userinput>cvs co gdesklets/doc/book</userinput>
   </screen>
 

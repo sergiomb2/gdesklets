@@ -18,12 +18,12 @@
  
   <para>Think of an XML document as a tree of genealogy: there are ancestors,
     children, siblings, and so on. These individuals are known as
-    <emphasize>nodes.</emphasize>
+    <emphasis>nodes.</emphasis>
     Every XML document requires a root node, which is the ancestor of all
     other nodes.</para>
       
   <para>Nodes are represented by pointy braces between which you can find
-    their name. This representation is called a <emphasize>tag.</emphasize>
+    their name. This representation is called a <emphasis>tag.</emphasis>
     Here you can see some examples of tags:</para>
       
   <programlisting><![CDATA[

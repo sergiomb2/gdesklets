@@ -39,7 +39,7 @@
         if the value had not been stored previously.</entry>
     </row>
     <row>
-      <entry valign="top">get_control <emph>[deprecated]</emph></entry>
+      <entry valign="top">get_control <emphasis>[deprecated]</emphasis></entry>
       <entry valign="top">
         <para>interface: string</para>
       </entry>

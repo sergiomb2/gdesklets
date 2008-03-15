@@ -93,7 +93,7 @@
     element, scripts can animate the image.</para>
 
   <para>The composition tree of SVG elements is represented by a
-    <emphasize>Document Object Model</emphasize>, a DOM. The DOM is a tree of
+    <emphasis>Document Object Model</emphasis>, a DOM. The DOM is a tree of
     nodes where each node represents a node in the SVG tree of elements.
     Element properties can be directly manipulated on the DOM.</para>
 

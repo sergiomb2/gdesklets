@@ -35,7 +35,7 @@
         <entry valign="top">The text color. You cannot use an alpha channel for
           colors here. The text color can also be changed with markup tags in
           the running text.
-          (<emph>[new in 0.35]</emph> the alpha channel can be used!)</entry>
+          (<emphasis>[new in 0.35]</emphasis> the alpha channel can be used!)</entry>
       </row>
       <row>
         <entry valign="top">font</entry>

@@ -16,7 +16,7 @@
     
   <para>A common mistake is to put only elements with percentual geometry values
     into a container. A child element with any percentual geometry value does
-    <emph>not</emph> contribute to the container's size because its size or
+    <emphasis>not</emphasis> contribute to the container's size because its size or
     position itself is dependant on the container's size.</para>
     
   <para>With older versions of <application>gDesklets</application> the results

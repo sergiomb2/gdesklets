@@ -7,7 +7,7 @@
     tedious and not neccessary.</para>
 
   <para><application>gDesklets</application> supports
-    <emphasize>relative positioning</emphasize>. With relative positioning,
+    <emphasis>relative positioning</emphasis>. With relative positioning,
     you can use the <property>x</property> and <property>y</property>
     properties to place an element next to another one.</para>
 

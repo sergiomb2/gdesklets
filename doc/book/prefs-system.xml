@@ -73,7 +73,7 @@
 
 
 
-<section><title>Callback Function <emph>[new in 0.34]</emph></title>
+<section><title>Callback Function</title>
 
   <para>Sometimes, it is neccessary to react to configuration changes in a
     special way. For example, an URI should be checked for validity before it

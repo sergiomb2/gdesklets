@@ -1,5 +1,5 @@
 <section id="script-menu" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Custom Menus <emphasize>[new in 0.35]</emphasize></title>
+  <title>Custom Menus <emphasis>[new in 0.35]</emphasis></title>
 
   <para>Each display element can have its own custom menu by setting the
     <property>menu</property> property.</para>

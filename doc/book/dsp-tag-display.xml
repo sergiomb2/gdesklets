@@ -109,7 +109,7 @@
   </section>
 
 
-  <section><title>Desktop Borders <emphasize>[new in 0.35]</emphasize></title>
+  <section><title>Desktop Borders <emphasis>[new in 0.35]</emphasis></title>
 
     <para>Desktop borders define areas on the desktop which cannot be covered
       by maximized windows. Panels (i.e. gnome-panel, pypanel) use this 

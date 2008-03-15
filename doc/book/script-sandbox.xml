@@ -11,7 +11,7 @@
     way to read or modify data on the system.</para>
 
   <para>If there is need for such actions, you have to use
-    <emphasize>controls</emphasize>, which provide a controlled way to access
+    <emphasis>controls</emphasis>, which provide a controlled way to access
     data outside the sandbox. The use of controls is explained in
     <link linkend="ctrl">another chapter.</link></para>
 

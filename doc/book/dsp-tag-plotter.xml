@@ -42,6 +42,24 @@
         <entry valign="top">The plot color.</entry>
       </row>
       <row>
+        <entry valign="top">scala</entry>
+        <entry valign="top">integer</entry>
+        <entry valign="top">0</entry>
+        <entry valign="top">The scale to be used for the scala (0 turns the scala off).</entry>
+      </row>
+      <row>
+        <entry valign="top">scala-color</entry>
+        <entry valign="top">color</entry>
+        <entry valign="top">black</entry>
+        <entry valign="top">The font color to be used for the scala.</entry>
+      </row>
+      <row>
+        <entry valign="top">scala-font</entry>
+        <entry valign="top">font</entry>
+        <entry valign="top">Sans</entry>
+        <entry valign="top">The font to be used for the scala.</entry>
+      </row>
+      <row>
         <entry valign="top">scale-bidir</entry>
         <entry valign="top">boolean</entry>
         <entry valign="top">false</entry>

@@ -39,9 +39,7 @@
         <entry valign="top">callback</entry>
         <entry valign="top">function</entry>
         <entry valign="top"></entry>
-        <entry valign="top"><emph>[new in 0.34]</emph>
-          A callback function
-          which is called every time
+        <entry valign="top">A callback function which is called every time
           the value changes. The callback takes the name of the bound
           property and the new value as arguments.</entry>
       </row>
@@ -49,9 +47,8 @@
         <entry valign="top">enabled</entry>
         <entry valign="top">boolean</entry>
         <entry valign="top">true</entry>
-        <entry valign="top"><emph>[new in 0.34]</emph> 
-          Whether the config item is enabled. Disabled items appear greyed
-          out.</entry>
+        <entry valign="top">Whether the config item is enabled. Disabled items
+          appear greyed out.</entry>
       </row>
       <row>
         <entry valign="top">help</entry>

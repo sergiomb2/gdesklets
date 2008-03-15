@@ -47,6 +47,10 @@
         <entry valign="top">Path to an image representing the display.  This
           could be an icon or an actual screenshot, for example.</entry>
       </row>
+      <row>
+        <entry valign="top">version</entry>
+        <entry valign="top">The version of the desklet.</entry>
+      </row>
     </tbody>
 
     </tgroup>

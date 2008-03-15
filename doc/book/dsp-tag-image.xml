@@ -55,7 +55,7 @@
         <entry valign="top">opacity</entry>
         <entry valign="top">float</entry>
         <entry valign="top">1.0</entry>
-        <entry valign="top"><emphasize>[new in 0.34.3]</emphasize> A floating point value greater than or equal to 
+        <entry valign="top">A floating point value greater than or equal to 
           <literal>0.0</literal> and less than or equal to
           <literal>1.0</literal>.  
           <literal>0.0</literal> corresponds to invisible and 
