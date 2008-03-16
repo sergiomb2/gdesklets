@@ -35,6 +35,7 @@ class Shell_Help(Plugin):
         menu = self._get_plugin("UI_Menu")
         menu.insert("Slot2", "Help")
         menu.set_item("Help", None, _("_Help"), None)
+        menu.set_item("Help/Contents", gtk.STOCK_HELP, _("_Contents"), self.__show_doc)
         menu.set_item("Help/Tip", gtk.STOCK_DIALOG_INFO, _("_Tip of the Day"),
                       self.__show_tip)
         menu.set_separator("Help/Separator2")
@@ -42,6 +43,12 @@ class Shell_Help(Plugin):
                       self.__show_about)
 
         self.__about = AboutDialog(os.path.join(HOME, "data"))
+
+
+    def __show_doc(self):
+
+	path = os.path.join(HOME, "doc/basic")
+        os.system("yelp " + path + "/gdesklets-doc.xml&")
 
 
     def __show_tip(self):
