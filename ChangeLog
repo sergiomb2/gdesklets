@@ -1,3 +1,8 @@
+2008-03-19  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* doc/book/* : removed from this branch as it has its own branch now
+	* shell/plugins/DisplayCollection/__init__.py: Fixed Bug #202995
+
 2008-03-15  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* doc/book/apdx-cursors.xml

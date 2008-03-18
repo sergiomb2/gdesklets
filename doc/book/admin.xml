@@ -1,7 +1,0 @@
-<chapter id="admin"  xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Administration</title>
-
-  <xi:include href="admin-filedir.xml"/>
-  <xi:include href="admin-displays.xml"/>
-
-</chapter>

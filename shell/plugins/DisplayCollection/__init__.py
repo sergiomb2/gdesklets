@@ -39,7 +39,7 @@ class Core_DisplayCollection(Plugin, Observable):
                                   version = meta.get(meta.KEY_VERSION),
                                   author = meta.get(meta.KEY_AUTHOR),
                                   description = meta.get(meta.KEY_DESCRIPTION),
-                                  category = meta.get(meta.KEY_CATEGORY),
+                                  category = meta.get(meta.KEY_CATEGORY).lower(),
                                   preview = meta.get(meta.KEY_PREVIEW))
 
                     self.__insert_into_trie(item)
