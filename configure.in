@@ -117,6 +117,8 @@ data/Makefile
 display/Makefile
 doc/Makefile
 doc/man/Makefile
+doc/basic/Makefile
+doc/basic/Images/Makefile
 factory/Makefile
 layout/Makefile
 libdesklets/Makefile

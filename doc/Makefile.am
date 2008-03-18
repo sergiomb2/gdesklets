@@ -1,4 +1,5 @@
-SUBDIRS = man
+SUBDIRS = man   \
+          basic
 
 SYNOPSIS = python2.2 /usr/bin/synopsis
 SYN_FLAGS = -Wc,parser=Python,formatter=HTML,linker=Linker
