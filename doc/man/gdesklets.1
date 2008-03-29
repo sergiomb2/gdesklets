@@ -69,8 +69,10 @@ Usage of the command line frontend:
                                 profiles)
              shell             (Opens the graphical shell)
              slay              (Kills the daemon -- use in emergency)
+             status            (Checks daemon status)
              about             (Prints information about gDesklets)
              version           (Prints gDesklets version)
+             configure         (Opens the configuration dialog)
              help              (Displays this text)
              check             (Dependency check for python bindings)
 
@@ -106,18 +108,30 @@ It depends on the display what you will see there, but the following items are
 always available:
 .PP
 .HP
-\fBConfigure display\fR
+\fBConfigure desklet\fR
 .IP
 Opens the configuration dialog for this display. It depends on the display what 
 you can configure.
 .HP
-\fBRestart display\fR
+\fBMove desklet\fR
+.IP
+Attaches desklet to cursor for moving it around. Click to release it.
+.HP
+\fBView Source\fR
+.IP
+Lets you view the desklet's source file (.display).
+.HP
+\fBRestart desklet\fR
 .IP
 Restarts this display. This menu item is mainly for sensor debugging.
 .HP
-\fBRemove display\fR
+\fBRemove desklet\fR
 .IP
 Removes this display from your desktop.
+.HP
+\fBAbout\fR
+.IP
+Lets you view desklet's "About" information, license and readme file.
 
 .SH LOGFILE
 The gdesklets-daemon writes a log file. That file can be found in
@@ -168,7 +182,8 @@ sure of that.
 .PP
 At startup the program claims approximately 16 MB of RAM. In the future we're
 going to decrease that number. Some people in the GNOME and GTK+ community
-are also addressing these problems at a lower level (gtk+ and gnome libraries). gDesklets will automatically benefit from these efforts.
+are also addressing these problems at a lower level (gtk+ and gnome libraries).
+gDesklets will automatically benefit from these efforts.
 
 
 .SH COMMUNITY
@@ -181,9 +196,8 @@ http://mail.gnome.org/mailman/listinfo/gdesklets-list
 gDesklets Developer's Book  (for developing on the gDesklets platform)
 http://develbook.gdesklets.de
 .PP
-A printed reference in German language is available from
-'Software & Support Verlag GmbH'. The book 'Exploring Python' covers desklet
-development on 34 pages.
+A printed reference in German language is available from 'Software & Support
+Verlag GmbH'. The book 'Exploring Python' covers desklet development on 34 pages.
 .PP
 You can meet the 'gDesklets' developers and other fans on the IRC channel
 #gdesklets on GIMPnet (irc.gimp.org).
@@ -218,13 +232,22 @@ well with 'gDesklets'. Please complain if I forgot you... ;)
   * Luke Stroven -- gdesklets.gnomedesktop.org and 'gDesklets' forum
 .PP
   * James Henstridge -- excellent GTK bindings for Python
+.PP
+  * Joe Sapp  -- documentation
+.PP
+  * Bjoern Koch  -- additional programming, documentation
+.PP
+  * Robert Pastierovic  -- additional programming, documentation
+.PP
+  * Lauri Kainulainen  -- additional programming, gdesklets website
+
 
 .SH BUGS
 If you encounter bugs which are not listed here, please post a bug report at
-bugzilla.gnome.org for \fBgDesklets\fR. Please don't report useless bug
-reports, like "gDesklets crashes" without checking the log file first, because
-that doesn't tell us much. Also make sure, that you have all the necessary
-dependencies installed.
+https://launchpad.net/gdesklets/+filebug for \fBgDesklets\fR. Please don't
+report useless bug reports, like "gDesklets crashes" without checking the log
+file first, because that doesn't tell us much. Also make sure, that you have
+all the necessary dependencies installed.
 .PP
 If the log says: "ImportError: No module named X" then you clearly don't have
 the python module "X" installed on your system.
