@@ -1,3 +1,8 @@
+2008-03-29  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* config/ConfigList.py: Code clean up
+	* utils/datatypes.py: finally make lists work in the config system
+
 2008-03-19  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* doc/book/* : removed from this branch as it has its own branch now

@@ -220,9 +220,6 @@ class ConfigList(ConfigWidget):
 
     def _setp_value(self, key, value):
 
-        print "key: "+str(key)
-        print "Value: "+str(value)
-        
         try:
             index = self.__items_values.index(value)
         except:
