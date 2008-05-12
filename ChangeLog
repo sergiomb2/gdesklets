@@ -1,3 +1,7 @@
+2008-05-12  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* main/TrayIcon.py: Fixed Bug #229506 (thanks to idefix)
+
 2008-03-29  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* config/ConfigList.py: Code clean up

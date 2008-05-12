@@ -18,8 +18,10 @@ class TrayIcon:
 
     def __on_button(self, widget, button, time):
 
-        if (button == 3):
-            self.__menu.popup(None, None, None, button, time)
+        self.__menu.popup(None, None, gtk.status_icon_position_menu, button, time, self.__trayicon)
+
+        if (button == 0):
+            self.__menu.select_first(FALSE)
 
 
     def set_menu(self, items):
