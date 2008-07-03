@@ -105,7 +105,7 @@ class ControlRegistry:
         self.__mdreg.scan_repositories()
 
         self.__registry = {}
-
+        
         # for all items
         for item in self.__mdreg.get_item_list():
             # go through all key-value pairs
@@ -114,10 +114,21 @@ class ControlRegistry:
                 if (k in ("ID1", "ID2")):
                     # register every single ID
                     for iface in v.split(" "):
-                        if (not iface in self.__registry):
+                        
+                        # add two references to the control to the registry
+                        # a short one without the ID part and the long (traditional)
+                        # one
+                        short_iface = iface.split(':')[0]
+                        if short_iface not in self.__registry:
+                            self.__registry[short_iface] = []
                             self.__registry[iface] = []
-                        self.__registry[iface].append(item)
 
+                        elif (not iface in self.__registry):
+                            self.__registry[iface] = []
+                        
+                        self.__registry[iface].append(item)
+                        self.__registry[short_iface].append(item)
+                        
 
 
     #
