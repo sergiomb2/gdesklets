@@ -5,6 +5,7 @@ install_DATA = \
 	client.py \
 	Control.py \
 	DisplayList.py \
+	LoadingFeedback.py \
 	MetaData.py  \
 	remotecommands.py \
 	RemoteSocket.py \
