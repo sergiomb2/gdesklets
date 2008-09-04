@@ -1,3 +1,10 @@
+2008-09-04  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* main/__init__.py
+	* configure.in: updated information (bug tracker), new version (0.36.2beta)
+
+=== 0.36.1 frozen for release ===
+
 2008-05-12  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* main/TrayIcon.py: Fixed Bug #229506 (thanks to idefix)
