@@ -1,6 +1,7 @@
 from shell.Plugin import Plugin
 from shell.ItemBrowser import ItemBrowser
-from main import HOME
+from main import HOME, USERHOME
+from main.DisplayList import DisplayList
 from utils import dialog
 
 try:
@@ -15,6 +16,8 @@ import os
 import textwrap
 
 
+_DISPLAYLIST = os.path.join(USERHOME, "displays")
+_DSPLIST = DisplayList(_DISPLAYLIST)
 
 class UI_DisplayBrowser(Plugin):
 
@@ -50,6 +53,8 @@ class UI_DisplayBrowser(Plugin):
         shell.set_sidebar(w1)
         shell.set_body(w2)
 
+        profile = _DSPLIST.get_profile()
+        self.__displays = _DSPLIST.get_displays(profile)
 
 
     def show(self):
@@ -114,11 +119,38 @@ class UI_DisplayBrowser(Plugin):
 
     def __on_activate(self, *args):
 
+        def run_old_one(*args):
+        
+            client.open_display_with_id(path, ident)
+
+        def run_new_one(*args):
+
+            client.open_display(path)
+
+
+        found_display = False
         item = self.__browser.get_selected_item()
         if (item):
             client = self._get_plugin("Core_Client")
             path = os.path.abspath(item.path)
-            ident = client.open_display(path)
+
+            if self.__displays:
+                for ident in self.__displays:
+                    saved_path = _DSPLIST.lookup_display(ident)[1]
+
+                    if saved_path == path:
+                        found_display = True
+                        break
+
+            if found_display is True:
+
+                dialog.question(None,
+                            _("There is a saved instance of this display."),
+                            _("Would you like to open this?"),
+                            (gtk.STOCK_YES, run_old_one),
+                            (gtk.STOCK_NO, run_new_one))
+            
+            else: run_new_one()
 
 
     def __on_remove(self, *args):

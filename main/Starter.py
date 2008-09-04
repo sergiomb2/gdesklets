@@ -134,20 +134,25 @@ class Starter:
     #
     def __on_display_action(self, src, cmd, *args):
 
+        ident = args[0]
         if (cmd == src.OBS_CLOSE):
-            ident = args[0]
             self.__close_display(ident)
-            del src
 
         elif (cmd == src.OBS_RESTART):
-            ident = args[0]
             path = self.__display_paths[ident]
             self.__remove_display(ident)
             def f(*args): pass
             gobject.timeout_add(250, self.__handle_open_display_with_id,
                                 f, path, ident)
-            del src
 
+        elif (cmd == src.OBS_DISABLE):
+            self.__remove_display(ident)
+            
+        else:
+            log("Warning(Starter.py): Unhandled command %s " % (cmd))
+
+
+        del src
 
 
     #

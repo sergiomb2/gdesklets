@@ -5,6 +5,7 @@ from main import LOGFILE, LOG_PATH, PID_PATH, REGISTRY_PATH, SOCKET_PATH
 from main.DisplayList import DisplayList
 from utils import i18n
 
+import optparse
 import utils
 
 import os
@@ -113,28 +114,24 @@ def usage_and_exit():
     """ prints how to use gdesklets"""
 
     print _(
-        "Usage: gdesklets [option] <command> [arguments...]\n"
         "\n"
-        "\t<command>\n"
-        "\t\topen    <files>   (Opens the given desklet files)\n"
-        "\t\tstart             (Runs the gDesklets daemon, this is default)\n"
-        "\t\tstop              (Stops the gDesklets daemon)\n"
-        "\t\tlist              (Lists open desklets)\n"
-        "\t\trestart           (Restarts the gDesklets daemon)\n"
-        "\t\tprofile <profile> (Switches to the given profile)\n"
-        "\t\tprofile           (Shows the current and the available profiles)\n"
-        "\t\tshell             (Opens the graphical shell)\n"
-        "\t\tslay              (Kills the daemon -- use in emergency)\n"
-        "\t\tstatus            (Checks daemon status)\n"
-        "\t\tabout             (Prints information about gDesklets)\n"
-        "\t\tversion           (Prints gDesklets version)\n"
-        "\t\tconfigure         (Opens the configuration dialog)\n"
-        "\t\thelp              (Displays this text)\n"
-        "\t\tcheck             (Checks requirements)\n"
+        "Orders:\n"
+        "  open    <files>   (Opens the given desklet files)\n"
+        "  start             (Runs the gDesklets daemon, this is default)\n"
+        "  stop              (Stops the gDesklets daemon)\n"
+        "  list              (Lists open desklets)\n"
+        "  restart           (Restarts the gDesklets daemon)\n"
+        "  profile <profile> (Switches to the given profile)\n"
+        "  profile           (Shows the current and the available profiles)\n"
+        "  shell             (Opens the graphical shell)\n"
+        "  slay              (Kills the daemon -- use in emergency)\n"
+        "  status            (Checks daemon status)\n"
+        "  about             (Prints information about gDesklets)\n"
+        "  version           (Prints gDesklets version)\n"
+        "  configure         (Opens the configuration dialog)\n"
+        "  help              (Displays this text)\n"
+        "  check             (Checks requirements)\n"
         "\n"
-        "\t[option]\n"
-        "\t\t--no-tray-icon    (disables the systray icon)\n"
-        "\t\t--translucent     (enables translucency on the xorg servers)\n"
         )
     sys.exit(1)
 
@@ -144,8 +141,8 @@ class Command(object):
     def __init__(self, args):
 
         self.__args = args
-        self.__command = ""
-        self.__files = []
+        self.__command = "" 
+        self.__displays = None
 
 
 
@@ -202,65 +199,78 @@ class Command(object):
 
 
 
-    def parse_args(self):
+    def parse_cmdline(self):
 
-        try:
+        parser = optparse.OptionParser(usage="%prog [options] order")
 
-            try:
-                self.__args.remove("--no-tray-icon")
-            except Exception:
-                pass
+        parser.add_option("-n", "--no-tray-icon",
+                        action="store_true",
+                        dest="no_tray_icon",
+                        help="Avoid to show the icon on the tray",
+                        default=False)
 
-            try:
-                self.__args.remove("--debug")
-            except Exception:
-                pass
+        parser.add_option("-d", "--debug",
+                        action="store_true",
+                        dest="debug",
+                        help="Avoid show the icon on the tray",
+                        default=False)
 
-            try:
-                index = self.__args.index("--sm-config-prefix")
-                del args[index:index+2]
-            except Exception:
-                pass
+        parser.add_option("-c", "--check-first",
+                        action="store_true",
+                        dest="check_first",
+                        help="Launch pre-existing display ",
+                        default=False)
 
-            try:
-                index = self.__args.index("--sm-client-id")
-                del args[index:index+2]
-            except Exception:
-                pass
+        parser.add_option("-p", "--sm-config-prefix",
+                        action="store",
+                        type="string",
+                        dest="sm_config_prefix",
+                        help="I have no idea!")
 
-            if (not self.__args):
-                self.__args = ["start"]
+        parser.add_option("-i", "--sm-client-id",
+                        action="store",
+                        dest="sm_client_id",
+                        help="I have no idea!")
 
-            self.__command = self.__args.pop(0)
-            self.__files = self.__args
+        options, args = parser.parse_args()
 
-        except Exception:
-            usage_and_exit()
-
-
-
-    def parse_command(self):
+        if not args: self.__command = "start"
+        else: self.__command = args.pop(0)
 
         if (self.__command == "open"):
-            if (len(self.__files) == 0):
+            if (len(args) == 0):
+                parser.print_help()
                 usage_and_exit()
 
             daemon = self.__client_daemon()
-            for item in self.__files:
+            prof = _DSPLIST.get_profile()
+            
+            if options.check_first:
+                self.__displays = _DSPLIST.get_displays(prof)
+
+            for item in args:
+                found_display = False
                 if (0 < item.find("://") < 8):
                    path = item
                 else:
                    path = os.path.abspath(item)
 
                 try:
-                    ident = daemon.open_display(path)
+                    if self.__displays:
+                        for ident in self.__displays:
+                            saved_path = _DSPLIST.lookup_display(ident)[1]
+                            if saved_path == path:
+                                daemon.open_display_with_id(path, ident)
+                                found_display = True
+
+                    if not self.__displays or found_display is False:
+                        print "Entering to NEW one..."
+                        ident = daemon.open_display(path)
+                        _DSPLIST.add_display(prof, path, ident)
+                        _DSPLIST.commit()
                 except Exception:
                     print _("Could not open desklet %s.") % path
                     continue
-
-                prof = _DSPLIST.get_profile()
-                _DSPLIST.add_display(prof, path, ident)
-                _DSPLIST.commit()
 
         elif (self.__command == "start"):
             print _("Starting gdesklets-daemon...")
@@ -311,8 +321,8 @@ class Command(object):
             current_profile = _DSPLIST.get_profile()
             print _("Current profile: %s") % (current_profile,)
 
-            if (self.__files):
-                new_profile = self.__files[0]
+            if (args):
+                new_profile = args.pop()
                 if (new_profile != current_profile):
                    # close displays of the old profile
                    self.__close_profile(current_profile)
@@ -340,7 +350,7 @@ class Command(object):
             usage_and_exit()
 
         elif (self.__command == "_remove"):
-            ident = self.__files[0]
+            ident = args.pop()
             _DSPLIST.remove_display(ident)
             try:
                 _DSPLIST.commit()
@@ -381,6 +391,7 @@ class Command(object):
         else:
             print _("Invalid command. Please try one of the following "
                     "commands:")
+            parser.print_help()
             usage_and_exit()
 
 
@@ -389,6 +400,5 @@ command = Command(sys.argv[1:])
 
 check_user()
 check_first_run()
-command.parse_args()
-command.parse_command()
+command.parse_cmdline()
 

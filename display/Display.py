@@ -61,6 +61,7 @@ class Display(gtk.HBox, Observable):
     OBS_BORDERS = 7
     OBS_CURSOR = 8
     OBS_CLOSED = 9
+    OBS_DISABLE = 10
 
 
     # event types
@@ -94,6 +95,8 @@ class Display(gtk.HBox, Observable):
                      callback = self.__handle_restart),
             MenuItem("/__remove", _("_Remove desklet"),
                      callback = self.__handle_remove),
+            MenuItem("/__remove", _("_Disable desklet"),
+                     callback = self.__handle_disable),
             MenuItem("/__sep3"),
             MenuItem("/__about", _("_About"),
                      callback = self.__handle_about)
@@ -1098,6 +1101,11 @@ class Display(gtk.HBox, Observable):
 
         self.close()
 
+
+
+    def __handle_disable(self, *args):
+    
+        self.update_observer(self.OBS_DISABLE, self.__id)
 
 
     def __handle_about(self, *args):
