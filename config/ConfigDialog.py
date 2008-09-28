@@ -11,6 +11,7 @@ from ConfigList import ConfigList
 from ConfigRadio import ConfigRadio
 from ConfigString import ConfigString
 from ConfigTitle import ConfigTitle
+from ConfigToggle import ConfigToggle
 from ConfigUnit import ConfigUnit
 from ConfigURI import ConfigURI
 
@@ -45,6 +46,7 @@ class ConfigDialog(HIGDialog):
                     "radio": ConfigRadio,
                     "string": ConfigString,
                     "title": ConfigTitle,
+                    "toggle": ConfigToggle,
                     "unit": ConfigUnit,
                     "uri": ConfigURI,
                     
@@ -297,14 +299,14 @@ class ConfigDialog(HIGDialog):
                 configitem = self.__create_config_item(itype, settings)
                 if (not configitem): continue
 
-                if (itype == "radio"): widgets = configitem.get_widgets(item_list)
+                if (itype in ("radio", "toggle")): widgets = configitem.get_widgets(item_list)
                 else: widgets = configitem.get_widgets()
 
                 if (itype not in ("title", "button")):
                     configitem.set_prop_from_string("bind", settings["bind"])
-                if (itype == "enum"): configitem.set_prop("items", item_list)
-                if (itype == "list"): configitem.set_prop("items", item_list)
-                if (itype == "radio"): configitem.set_prop("items", item_list)
+                if (itype in ("enum", "list", "radio", "toggle")):
+                    configitem.set_prop("items", item_list)
+
                 for k, v in settings.items():
                     configitem.set_prop_from_string(k, v)
 

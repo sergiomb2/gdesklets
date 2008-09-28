@@ -1,3 +1,9 @@
+2008-09-28  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* config/ConfigToggle.py
+	* config/ConfigDialog.py
+	* factory/DisplayFactory.py: new config element (ConfigToggle)
+
 2008-09-04  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* main/__init__.py
