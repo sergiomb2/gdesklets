@@ -17,6 +17,7 @@ install_DATA = \
 	ConfigRadio.py      \
 	ConfigString.py   \
 	ConfigTitle.py    \
+	ConfigToggle.py    \
 	ConfigUnit.py     \
 	ConfigURI.py      \
 	ConfigDialog.py   \
