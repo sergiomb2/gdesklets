@@ -13,12 +13,12 @@ msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-03-02 21:49+0100\n"
-"PO-Revision-Date: 2006-06-15 16:20+0200\n"
+"PO-Revision-Date: 2008-12-30 15:54+0100\n"
 "Last-Translator: Hendrik Richter <hendrikr@gnome.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #: ../config/ConfigDialog.py:113
 msgid "Invalid Function Call"
@@ -125,13 +125,12 @@ msgid "_Remove desklet"
 msgstr "Desklet _entfernen"
 
 #: ../display/Display.py:98
-#, fuzzy
 msgid "_About"
 msgstr "_Info …"
 
 #: ../display/Display.py:337
 msgid "_Readme"
-msgstr ""
+msgstr "_Lies mich	"
 
 #: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
 msgid "Do you really want to remove this desklet ?"
@@ -238,12 +237,11 @@ msgstr ""
 "SAX-Parser wird benötigt. Einige SuSE-Versionen werden ohne ihn ausgeliefert."
 
 #: ../gdesklets:61
-#, fuzzy
 msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
-"GTK-Python-Anbindungen (pygtk2) Version >= 2.4.0 und GTK+ Version >= 2.4.0 "
+"GTK-Python-Anbindungen (pygtk2) Version >= 2.10.0 und GTK+ Version >= 2.10.0 "
 "werden benötigt."
 
 #: ../gdesklets:65
@@ -295,7 +293,7 @@ msgstr ""
 
 #: ../gdesklets:98
 msgid "Requirements checking done. Your system looks ok!"
-msgstr ""
+msgstr "Überprüfung der Mindestvoraussetzungen abgeschlossen. Ihr System ist OK!"
 
 #: ../gdesklets:105
 msgid ""
@@ -360,12 +358,13 @@ msgstr ""
 msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
-msgstr ""
+msgstr "Es ist ein Fehler beim Starten des gdesklets-Daemons aufgetreten\n"
+"Mehr Informationen über den Fehler sind in \"%s\" zu finden."
 
 #: ../gdesklets:164
 #, c-format
 msgid "Exception was: %s\n"
-msgstr ""
+msgstr "Fehlermeldung: %s\n"
 
 #: ../gdesklets:189 ../gdesklets:258
 #, c-format
@@ -566,7 +565,6 @@ msgstr ""
 "Die Desklet-Datei konnte nicht geöffnet werden, da sie nicht lesbar war."
 
 #: ../main/transition.py:39
-#, fuzzy
 msgid ""
 "This is a unstable version of gDesklets. Unstable versions represent the "
 "current state of development and might be unstable or cause problems from "
@@ -581,19 +579,19 @@ msgid ""
 "\n"
 "Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
-"Dies ist eine CVS-Version von gDesklets. CVS-Versionen stellen den "
+"Dies ist eine Entwickler-Version von gDesklets. Entwickler-Versionen stellen den "
 "momentanen Stand der Entwicklung dar und können unstabil sein oder von Zeit "
 "zu Zeit Probleme verursachen.\n"
 "\n"
 "Wenn Sie gDesklets das erste Mal einsetzen, ist es sehr zu empfehlen, "
-"<b>keine</b> CVS-Version, sondern eine stabile Veröffentlichung zu "
+"<b>keine</b> Entwickler-Version, sondern eine stabile Veröffentlichung zu "
 "verwenden!\n"
 "\n"
-"Falls Sie dennoch die CVS-Version einer stabilen Version vorziehen, wäre es "
+"Falls Sie dennoch die Entwickler-Version einer stabilen Version vorziehen, wäre es "
 "sehr zu begrüßen, wenn Sie die Entwickler über jedes unnormale Verhalten "
 "informieren würden.\n"
 "\n"
-"Erfahrene Benutzer sind natürlich dazu aufgerufen, eine CVS-Version "
+"Erfahrene Benutzer sind natürlich dazu aufgerufen, eine Entwickler-Version "
 "auszuprobieren!"
 
 #: ../main/transition.py:51
@@ -618,7 +616,6 @@ msgstr ""
 #. our informative transition message which we can change with
 #. every release
 #: ../main/transition.py:62
-#, fuzzy
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -629,7 +626,7 @@ msgid ""
 "Please note that due to limitations of older X servers, you might see blocks "
 "around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
-"Diese Version von gDesklets verfügt über einen Schwebemodus: Beim Betätigen "
+"Diese Version von gDesklets verfügt über einen Schwebemodus: beim Betätigen "
 "einer Tastenkombination erscheinen alle Desklets im Vordergrund und schweben "
 "über den Anwendungen, bis diese Tastenkombination erneut gedrückt wird!\n"
 "Die voreingestellte Tastenkombination ist &lt;Shift&gt; &lt;F12&gt;. Sie "
