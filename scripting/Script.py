@@ -7,6 +7,7 @@ from utils.ErrorFormatter import ErrorFormatter
 from utils import dialog
 from layout import Unit
 import exceptions
+import gobject
 
 
 
@@ -57,6 +58,7 @@ class Script:
         self.__environment["MenuItem"] = MenuItem
 
         self.__environment["add_timer"] = self.__script_add_timer
+        self.__environment["remove_timer"] = self.__script_remove_timer
         self.__environment["get_config"] = self.__script_get_config
         self.__environment["get_control"] = self.__script_get_control
         self.__environment["set_config"] = self.__script_set_config
@@ -160,8 +162,19 @@ class Script:
             #               % `interval`)
             #return
 
-        import gobject
-        gobject.timeout_add(interval, f)
+        return gobject.timeout_add(interval, f)
+
+
+
+    #
+    # Removes a timer
+    #
+    def __script_remove_timer(self, ident):
+
+        """ Removes timer with given ID. """
+
+        if gobject.source_remove(ident) is False:
+            log(_("Timer ident '%s' was not found" % ident))
 
 
 
