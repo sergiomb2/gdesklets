@@ -44,7 +44,8 @@ CLEANFILES = \
 	intltool-update
 
 installdir = ${coredir}
-install_SCRIPTS = ctrlinfo gdesklets gdesklets-daemon gdesklets-logview gdesklets-migration-tool gdesklets-shell
+install_SCRIPTS = ctrlinfo gdesklets gdesklets-daemon gdesklets-logview gdesklets-migration-tool gdesklets-shell test-control.py \
+	AUTHORS COPYING README TODO NEWS
 
 install-data-hook:
 	if test '!' -d $(DESTDIR)$(bindir); then \

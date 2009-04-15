@@ -1,3 +1,7 @@
+2009-04-15  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* Makefile.am: Fixed Bug #310339
+
 2008-09-28  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* config/ConfigToggle.py
