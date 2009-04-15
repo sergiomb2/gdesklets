@@ -1,3 +1,7 @@
+2009-04-16  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* config/ConfigURI.py: Fixed image path in ConfigURI (Bug #323347)
+
 2009-04-15  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* Makefile.am: Fixed Bug #310339

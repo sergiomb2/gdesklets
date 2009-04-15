@@ -50,6 +50,7 @@ class ConfigURI(ConfigWidget):
             self.__dialog.set_local_only(False)
             path = os.path.join(self._get_path(), entry.get_text())
             self.__dialog.set_current_folder_uri(os.path.dirname(path))
+            self.__dialog.set_filename(os.path.abspath(path))
             self.__dialog.set_preview_widget(preview)
             self.__dialog.set_preview_widget_active(False)
             self.__dialog.set_use_preview_label(False)
