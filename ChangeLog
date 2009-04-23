@@ -1,3 +1,12 @@
+2009-04-24  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* configure.in
+	* po/LINGUAS: use po/LINGUAS file (Bug #363197)
+	* Makefile.am: added forgotten text files
+	* AUTHORS
+	* MAINTAINERS
+	* main/__init__.py: Updated information
+
 2009-04-16  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* config/ConfigURI.py: Fixed image path in ConfigURI (Bug #323347)

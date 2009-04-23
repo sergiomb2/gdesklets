@@ -45,7 +45,7 @@ CLEANFILES = \
 
 installdir = ${coredir}
 install_SCRIPTS = ctrlinfo gdesklets gdesklets-daemon gdesklets-logview gdesklets-migration-tool gdesklets-shell test-control.py \
-	AUTHORS COPYING README TODO NEWS
+	AUTHORS COPYING MAINTAINERS NEWS README TODO 
 
 install-data-hook:
 	if test '!' -d $(DESTDIR)$(bindir); then \
