@@ -11,17 +11,27 @@ class TrayIcon:
 
         self.__menu = gtk.Menu()
 
-        self.__trayicon = gtk.status_icon_new_from_file(ICON)
-        self.__trayicon.connect("popup-menu", self.__on_button)
+#        self.__trayicon = gtk.status_icon_new_from_file(ICON)
+#        self.__trayicon.connect("popup-menu", self.__on_button)
+        self.__trayicon = gtk.StatusIcon()
+        self.__trayicon.set_from_file(ICON)
+        self.__trayicon.set_visible(True)
+        self.__trayicon.set_tooltip("gDesklets StatusIcon")
+        self.__trayicon.connect("popup-menu", self.__on_button, self.__menu)
 
 
 
-    def __on_button(self, widget, button, time):
+    def __on_button(self, widget, button, time, data = None):
 
-        self.__menu.popup(None, None, gtk.status_icon_position_menu, button, time, self.__trayicon)
+#        self.__menu.popup(None, None, gtk.status_icon_position_menu, button, time, self.__trayicon)
 
         if (button == 0):
-            self.__menu.select_first(FALSE)
+            if data:
+                data.show_all()
+                data.popup(None, None,  gtk.status_icon_position_menu, button, time, self.__trayicon)
+                data.select_first(False)
+        pass
+
 
 
     def set_menu(self, items):
@@ -43,4 +53,5 @@ class TrayIcon:
 
             item.show()
             self.__menu.append(item)
+        self.__trayicon.set_visible(True)
 

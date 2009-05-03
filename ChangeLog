@@ -1,3 +1,7 @@
+2009-05-03  Bjoern Koch  <H.Humpel@gmx.de>
+	* Makefile.am: don't install informational text files
+	* main/TrayIcon.py: Switching to gtk.StatusIcon for the TrayIcon (not fully working yet)
+
 2009-04-24  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* configure.in
