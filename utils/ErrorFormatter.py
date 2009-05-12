@@ -113,9 +113,9 @@ class _ErrorFormatter(object):
 # give us an absolute path.
 #
 _old_imp = __import__
-def _new_imp(name, globs = {}, locls = {}, fromlist = []):
+def _new_imp(*args, **kwargs):
 
-    module = _old_imp(name, globs, locls, fromlist)
+    module = _old_imp(*args, **kwargs)
     # builtin modules have no "__file__" attribute, so we have to check for it
     if (module):
         if (hasattr(module, "__file__")):

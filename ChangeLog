@@ -1,4 +1,9 @@
+2009-05-12  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* utils/ErrorFormatter.py: Applied import error patch from Bug #344079 (Comment #5)
+
 2009-05-03  Bjoern Koch  <H.Humpel@gmx.de>
+
 	* Makefile.am: don't install informational text files
 	* main/TrayIcon.py: Switching to gtk.StatusIcon for the TrayIcon (not fully working yet)
 
