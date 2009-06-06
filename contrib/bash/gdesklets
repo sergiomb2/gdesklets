@@ -37,8 +37,8 @@ _gdesklets()
 	esac
 
 	if [[ ${COMP_CWORD} -eq 1 ]] ; then
-		local status="$(gdesklets status)"
-		if [[ "${status}" == *not* ]] ; then
+		local stat="$(gdesklets status)"
+		if [[ "${stat}" == *not* ]] ; then
 			opts="${opts} ${not_running_opts}"
 		else
 			opts="${opts} ${running_opts}"
