@@ -1,6 +1,7 @@
 import os
 import sys
 import utils
+import gtk
 from utils import vfs
 
 
@@ -11,10 +12,11 @@ OLDHOME = os.path.join(HOME, os.pardir, os.pardir, "share", "gdesklets")
 
 # we need the DISPLAY variable
 try:
-    DISPLAY = vfs.escape_path(os.environ["DISPLAY"].replace("/", "_"))
-except KeyError:
-    print "The DISPLAY variable is NOT set, which usually means, " \
-          "that X isn't running!"
+    # Use gtk's get_name() to return a string containing the screen number (in
+    # case the DISPLAY variable doesn't contain the screen number)
+    DISPLAY = vfs.escape_path(gtk.gdk.Display(os.environ["DISPLAY"]).get_name()).replace("/", "_")
+except:
+    print "Error: could not open display", os.environ["DISPLAY"]
     sys.exit(1)
 
 

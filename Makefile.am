@@ -34,7 +34,7 @@ EXTRA_DIST = \
 	gdesklets		\
 	gdesklets-daemon	\
 	gdesklets-logview	\
-	gdesklets-migration-tool\
+	contrib/gdesklets-migration-tool\
 	gdesklets-shell		\
 	test-control.py
 
@@ -44,7 +44,7 @@ CLEANFILES = \
 	intltool-update
 
 installdir = ${coredir}
-install_SCRIPTS = ctrlinfo gdesklets gdesklets-daemon gdesklets-logview gdesklets-migration-tool gdesklets-shell test-control.py
+install_SCRIPTS = ctrlinfo gdesklets gdesklets-daemon gdesklets-logview contrib/gdesklets-migration-tool gdesklets-shell test-control.py
 
 install-data-hook:
 	if test '!' -d $(DESTDIR)$(bindir); then \

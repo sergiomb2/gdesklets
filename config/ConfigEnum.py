@@ -55,7 +55,7 @@ class ConfigEnum(ConfigWidget):
 
     def __on_change(self, src):
 
-        if (self.__items_values):
+        if (self.__items_values) and (src.get_active() != -1):
             value = self.__items_values[src.get_active()]
             self._setp("selection", self.__optmenu.get_active())
             self._set_config(value)
