@@ -1,9 +1,13 @@
+2009-09-05  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* main/TrayIcon.py: trying to make it work again (see Bug #229506)
+	* plugin/Interface.py: Fixed Bug #413798
+
 2009-08-28  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* Makefile.am: adjusted location of gdesklets-migration-tool
 	* config/ConfigEnum.py: Fixed Bug #418654
 	* main/__init__.py: Fixed Bug #420552
-
 
 2009-05-12  Bjoern Koch  <H.Humpel@gmx.de>
 
