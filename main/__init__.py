@@ -55,7 +55,7 @@ _ = Translator("gdesklets")
 
 
 NAME = "gDesklets"
-VERSION = "0.36.2beta"
+VERSION = "0.36.2_rc1"
 COPYRIGHT = u"Copyright \xa9 2003 - 2009 The gDesklets Team"
 DESCRIPTION = _("A desktop applet system for GNOME")
 AUTHORS = ( "Martin Grimme <martin@pycage.de>",
