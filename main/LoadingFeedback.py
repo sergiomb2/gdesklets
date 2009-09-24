@@ -1,4 +1,5 @@
 import gtk
+import os
 
 #
 # Class for giving feedback while loading a display.

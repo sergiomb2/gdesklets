@@ -60,11 +60,17 @@ class Interface(object):
           backwards compatibility.
         """
 
-        import md5
         import utils
 
         name = iface.__name__
-        ash = md5.new(name + ":").hexdigest()
+
+        try:
+            import hashlib
+            ash = hashlib.md5(name + ":").hexdigest()
+        except:
+            import md5
+            ash = md5.new(name + ":").hexdigest()
+
         # encode it in base36 to get shorter ID
         ash = utils.radix( int(ash, 16), 36 )
         # ID have to be 25 char long
@@ -83,7 +89,7 @@ class Interface(object):
         # the algorithm is simple:
         # build a string containing the class name and a sorted list of the
         # properties and return the MD5 fingerprint of it
-        import md5
+        import hashlib
         import utils
 
         name = iface.__name__
@@ -95,7 +101,13 @@ class Interface(object):
         tmp = ["%s:%s" % (k, v) for k, v in items1 + items2]
         tmp = "%s:%s" % (name, ",".join(tmp))
 
-        ash = md5.new(tmp).hexdigest()
+        try:
+            import hashlib
+            ash = hashlib.md5(tmp).hexdigest()
+        except:
+            import md5
+            ash = md5.new(tmp).hexdigest()
+
         # encode it in base36 to get shorter ID
         ash = utils.radix( int(ash, 16), 36 )
         # ID have to be 25 char long
