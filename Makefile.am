@@ -34,7 +34,9 @@ EXTRA_DIST = \
 	gdesklets		\
 	gdesklets-daemon	\
 	gdesklets-logview	\
-	contrib/gdesklets-migration-tool\
+	contrib/gdesklets-migration-tool \
+	contrib/gdesklets.desktop \
+	contrib/bash/gdesklets \
 	gdesklets-shell		\
 	test-control.py
 

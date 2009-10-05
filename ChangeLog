@@ -1,5 +1,13 @@
 === 0.36.2_rc1 ===
 
+2009-10-04  Joe Sapp  <nixphoeni@gmail.com>
+
+	* configure.in: Don't bother looking for update-{mime,desktop}-database and
+	    remove the check for shared-mime-info - they aren't being executed by the
+	    gDesklets build scripts any more (bug #264043).
+	* Makefile.am: Added .desktop file and bash completion script in contrib/ to
+	    the list of scripts to be packaged.
+
 2009-09-20  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* configure.in: switching to 0.36.2_rc1
@@ -77,7 +85,7 @@
 	* doc/book/ctrl-idea.xml
 	* doc/book/ctrl-included.xml
 	* doc/book/ctrl-interface.xml
-  	* doc/book/ctrl-write.xml
+	* doc/book/ctrl-write.xml
 	* doc/book/dsp-tag-common.xml
 	* doc/book/dsp-tag-display.xml
 	* doc/book/dsp-tag-image.xml
