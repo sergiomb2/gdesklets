@@ -1,41 +1,38 @@
-# Spanish gDesklets translation.
-# Copyright (C) 2003 Martin Grimme <martin@pycage.de>
-# This file is distributed under the same license as the gDesklets package.
+# Spanish translation for gdesklets
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the gdesklets package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
 #
-# Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2003, 2004, 2005, 2006.
-# Miguel Cabrera <mfcabrera@gmail.com>, 2005.
-# Jorge González <jorgegonz@svn.gnome.org>, 2007.
-# Juan Pablo Puerta <ews@madridwireless.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: gdesklets.HEAD.es\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-02 21:49+0100\n"
-"PO-Revision-Date: 2007-04-24 23:49+0200\n"
-"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
-"Language-Team: Spanish <traductores@es.gnome.org>\n"
+"Project-Id-Version: gdesklets\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-12-29 09:28-0300\n"
+"PO-Revision-Date: 2009-04-10 22:52+0000\n"
+"Last-Translator: DiegoJ <diegojromerolopez@gmail.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
 
-#: ../config/ConfigDialog.py:113
+#: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
-msgstr "Llamada a función inválida"
+msgstr "Llamada a función no válida"
 
-#: ../config/ConfigDialog.py:114
+#: ../config/ConfigDialog.py:116
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
 "This means that there's an error in the desklet's code. You should inform "
 "the author of the desklet about this problem."
 msgstr ""
-"No hay una función llamada <b>%s</b>.\n"
+"No hay ninguna función con el nombre <b>%s</b>.\n"
 "Esto significa que hay un error en el código del desklet. Debería informar "
-"al autor del desklet acerca de este problema."
+"al autor del desklet sobre este problema."
 
-#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
+#: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
 msgstr "Este desklet no es configurable."
 
@@ -57,23 +54,23 @@ msgstr "pulgada"
 
 #: ../config/DaemonConfigger.py:17
 msgid "Editor to view/edit the desklet source code"
-msgstr "Editor para ver/modificar el código fuente del desklet"
+msgstr "Editor para ver/editar código fuente del desklet"
 
 #: ../config/DaemonConfigger.py:18
 msgid "Your favorite editor"
-msgstr "Su editor favorito"
+msgstr "Tu editor favorito"
 
 #: ../config/DaemonConfigger.py:20
 msgid "Screen Resolution (DPI)"
-msgstr "Resolución de pantalla (DPI)"
+msgstr "Resolución de pantalla (PPP)"
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
-"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
-"\"</b> wide"
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
+"<b>1.97\"</b> wide"
 msgstr ""
-"Ajuste el valor de arriba de manera que la barra sea exactamente de <b>5 cm</"
-"b> o <b>1.97\"</b> de ancho"
+"Ajuste el valor por encima, de modo que la barra mida exactamente <b>5 "
+"cm</b>  o <b>1.97\"</b> de ancho."
 
 #: ../config/DaemonConfigger.py:26
 msgid "Behavior"
@@ -81,16 +78,15 @@ msgstr "Comportamiento"
 
 #: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
-msgstr ""
-"_Mostrar icono en el área de notificación (tiene efecto después de reiniciar)"
+msgstr "Mostrar icono en _bandeja (tiene efecto al reiniciar)"
 
 #: ../config/DaemonConfigger.py:29
 msgid "Show _notification while loading a desklet"
-msgstr "Mostrar una _notificación cuando se esté cargando un desklet"
+msgstr "Mostrar _aviso al cargar el desklet"
 
 #: ../config/DaemonConfigger.py:31
 msgid "Key for toggling Float mode:"
-msgstr "Tecla para cambiar el modo flotante:"
+msgstr "Tecla para activar/desactivar el modo flotante:"
 
 #: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
 #: ../display/DisplayConfigurator.py:16
@@ -103,59 +99,62 @@ msgstr "Un sistema de miniaplicaciones de escritorio para GNOME"
 
 #: ../data/gdesklets.xml.in.h:1
 msgid "gDesklets display"
-msgstr "Visor de gDesklets"
+msgstr "display de gDesklets"
 
-#: ../display/Display.py:85
+#: ../display/Display.py:86
 msgid "_Configure desklet"
 msgstr "_Configurar desklet"
 
-#: ../display/Display.py:87
+#: ../display/Display.py:88
 msgid "_Move desklet"
 msgstr "_Mover desklet"
 
-#: ../display/Display.py:90
+#: ../display/Display.py:91
 msgid "_View Source"
-msgstr "_Ver origen"
+msgstr "_Ver código"
 
-#: ../display/Display.py:93
+#: ../display/Display.py:94
 msgid "Re_start desklet"
 msgstr "Re_iniciar desklet"
 
-#: ../display/Display.py:95
+#: ../display/Display.py:96
 msgid "_Remove desklet"
-msgstr "_Quitar desklet"
+msgstr "_Eliminar desklet"
 
 #: ../display/Display.py:98
-#, fuzzy
+msgid "_Disable desklet"
+msgstr "_Desactivar desklet"
+
+#: ../display/Display.py:101
 msgid "_About"
-msgstr "_Acerca de…"
+msgstr "_Acerca de"
 
-#: ../display/Display.py:337
+#: ../display/Display.py:340
 msgid "_Readme"
-msgstr ""
+msgstr "_Léeme"
 
-#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
+#: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
-msgstr "¿Seguro que quiere quitar este desklet?"
+msgstr "¿De verdad desea eliminar este desklet?"
 
-#: ../display/Display.py:1116
+#: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
-msgstr "Este desklet no se mostrará más y su configuración se purgará."
+msgstr "Este desklet no se mostrará más y su configuración será eliminada."
 
 #: ../display/DisplayTarget.py:417
 #, python-format
 msgid "Element \"%s\" does not exist"
-msgstr "El elemento «%s» no existe"
+msgstr "El elemento \"%s\" no existe."
 
 #: ../display/DisplayTarget.py:418
 msgid ""
 "The <tt>relative-to</tt> property requires a reference to an existing "
 "display element within the same parent container."
 msgstr ""
-"La propiedad <tt>relative-to</tt> requiere una referencia a un visor "
-"existente entre el mismo contenedor padre."
+"La propiedad <tt>relativo-a</tt> requiere una referencia a un elemento de "
+"visualización en el mismo contenedor padre."
 
 #: ../display/targetregistry.py:45
 #, python-format
@@ -167,16 +166,16 @@ msgid ""
 "Either there is a typo in the .display file or you have an incompatible "
 "version of gDesklets."
 msgstr ""
-"Puede que exista un error en el archivo .display o que tenga una versión "
+"O bien existe un error en el archivo .display o tiene una versión "
 "incompatible de gDesklets."
 
 #: ../factory/DisplayFactory.py:89 ../utils/DOM.py:31
 msgid "XML parse error"
-msgstr "Error de parseo XML"
+msgstr "Error de análisis del XML"
 
 #: ../factory/DisplayFactory.py:90
 msgid "This .display file has invalid XML syntax."
-msgstr "El archivo .display  contiene una sintaxis XML inválida."
+msgstr "El archivo .display no tiene una sintaxis XML válida."
 
 #: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
@@ -185,86 +184,86 @@ msgstr "El archivo no existe o no se pudo cargar"
 #: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
 msgstr ""
-"Un archivo que contiene un script no está disponible para su ejecución."
+"Un archivo que contiene una secuencia de órdenes no está disponible para su "
+"ejecución."
 
 #: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
-msgstr "No se ha podido cargar el sensor"
+msgstr "No se pudo cargar sensor"
 
 #: ../factory/DisplayFactory.py:243
 #, python-format
 msgid "&lt;%s&gt; needs a bind attribute"
-msgstr "&lt;%s&gt; necesita un atributo bind"
+msgstr "&lt;%s&gt; necesita un atributo de enlace"
 
 #: ../factory/DisplayFactory.py:245
 msgid "The &lt;prefs&gt; section of this desklet file is broken."
-msgstr "La sección &lt;prefs&gt; del archivo del desklet está rota."
+msgstr "La sección &lt;prefs&gt; de este archivo de desklet está rota."
 
 #: ../factory/SensorFactory.py:75
 #, python-format
 msgid "Could not find sensor '%(name)s'"
-msgstr "No se ha podido encontrar el sensor '%(name)s'"
+msgstr "No se pudo encontrar el sensor '%(name)s'"
 
 #: ../factory/SensorFactory.py:76
 msgid ""
 "A sensor could not be found. This usually means that it has not been "
 "installed."
 msgstr ""
-"No pudo encontrarse un sensor. Esto normalmente significa que no se ha "
-"instalado."
+"No se pudo encontrar un sensor. Esto suele ocurrir cuando no ha sido "
+"instalado"
 
-#: ../gdesklets:26
+#: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
-msgstr "NO debe ejecutar gDesklets como superusuario (root)."
+msgstr "NO debe ejecutar gDesklets como superusuario (administrador)."
 
-#: ../gdesklets:46
+#: ../gdesklets:47
 msgid "Checking requirements:"
-msgstr "Comprobando requisitos:"
+msgstr "Cargando requisitos:"
 
-#: ../gdesklets:50
+#: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
-msgstr "Se requiere una versión de Python => 2.3.0."
+msgstr "Se requiere una versión de Python >= 2.3.0."
 
-#: ../gdesklets:54
+#: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
-msgstr "libexpat versión 1.95.7 está rota. Actualice"
+msgstr "libexpat (versión 1.95.7) está rota. ¡Por favor, actualiza!"
 
-#: ../gdesklets:57
+#: ../gdesklets:58
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr ""
-"Se requiere un analizador sintáctico SAX, algunas versiones de SuSE vienen "
-"sin él."
+"Se requiere un analizador SAX, algunas versiones de SuSE lo llevan de serie."
 
-#: ../gdesklets:61
-#, fuzzy
+#: ../gdesklets:62
 msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
-"Se requieren los bindings de python GTK (pygtk2) versión >= 2.4.0 y GTK+ "
-"versión >= 2.4.0."
+"Se necesitan bidings de Python para GTK (pygtk2) de una versión >= 2.10.0 y "
+"para GTK+ de una versión >= 2.10.0."
 
-#: ../gdesklets:65
+#: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
-msgstr "Se requieren los bindings ORBit python (pyorbit) versión == 2.0.1."
+msgstr ""
+"Se necesitan bindings de Python para ORBit (pyorbit) de una versión >= 2.0.1."
 
-#: ../gdesklets:68
+#: ../gdesklets:69
 msgid "bonobo python bindings are required."
-msgstr "Se requieren bindings para bonobo-python."
+msgstr "Se necesitan bindings de Python para bonobo."
 
-#: ../gdesklets:77
+#: ../gdesklets:78
 msgid "found"
 msgstr "encontrado"
 
-#: ../gdesklets:81
+#: ../gdesklets:82
 msgid "missing"
-msgstr "falta"
+msgstr "perdido"
 
-#: ../gdesklets:87
+#: ../gdesklets:88
 msgid "Version check failed."
 msgstr "Falló la comprobación de versión."
 
-#: ../gdesklets:88
+#: ../gdesklets:89
 #, c-format
 msgid ""
 "\n"
@@ -273,7 +272,7 @@ msgstr ""
 "\n"
 "%s\n"
 
-#: ../gdesklets:89
+#: ../gdesklets:90
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -283,19 +282,19 @@ msgid ""
 "\n"
 "THE STARTUP WILL BE CANCELLED NOW!\n"
 msgstr ""
-"Asegúrese de que todo el software requerido esté instalado.\n"
-"De igual manera evite tener varias versiones de una biblioteca/binding en su "
-"sistema.\n"
-"gDesklets no funcionará si no tiene todas las dependencias necesarias\n"
-"instaladas en su sistema.\n"
+"Por favor, asegúrese que el software requerido está instalado.\n"
+"En lo posible, evite tener múltiples versiones de bibliotecas o bindings en "
+"su sistema.\n"
+"gDesklets no funcionará si usted no tiene todas las depencias requeridas\n"
+"instaladas.\n"
 "\n"
-"¡EL INICIO SERÁ CANCELADO AHORA!\n"
+"¡LA INICIALIZACION SERA CANCELLADA AHORA!\n"
 
-#: ../gdesklets:98
+#: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
-msgstr ""
+msgstr "Comprobacion de requisitos terminada. ¡Su sistema está a punto!"
 
-#: ../gdesklets:105
+#: ../gdesklets:106
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
@@ -303,163 +302,184 @@ msgid ""
 msgstr ""
 "\n"
 "Está ejecutando gDesklets por primera vez.\n"
-"gDesklets iniciará una comprobación de requisitos ahora…\n"
+"gDesklets comenzará ahora una comprobación de requisitos...\n"
 
-#: ../gdesklets:116
+#: ../gdesklets:117
 msgid ""
-"Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
-"\t<command>\n"
-"\t\topen    <files>   (Opens the given desklet files)\n"
-"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
-"\t\tstop              (Stops the gDesklets daemon)\n"
-"\t\tlist              (Lists open desklets)\n"
-"\t\trestart           (Restarts the gDesklets daemon)\n"
-"\t\tprofile <profile> (Switches to the given profile)\n"
-"\t\tprofile           (Shows the current and the available profiles)\n"
-"\t\tshell             (Opens the graphical shell)\n"
-"\t\tslay              (Kills the daemon -- use in emergency)\n"
-"\t\tstatus            (Checks daemon status)\n"
-"\t\tabout             (Prints information about gDesklets)\n"
-"\t\tversion           (Prints gDesklets version)\n"
-"\t\tconfigure         (Opens the configuration dialog)\n"
-"\t\thelp              (Displays this text)\n"
-"\t\tcheck             (Checks requirements)\n"
+"Orders:\n"
+"  open    <files>   (Opens the given desklet files)\n"
+"  start             (Runs the gDesklets daemon, this is default)\n"
+"  stop              (Stops the gDesklets daemon)\n"
+"  list              (Lists open desklets)\n"
+"  restart           (Restarts the gDesklets daemon)\n"
+"  profile <profile> (Switches to the given profile)\n"
+"  profile           (Shows the current and the available profiles)\n"
+"  shell             (Opens the graphical shell)\n"
+"  slay              (Kills the daemon -- use in emergency)\n"
+"  status            (Checks daemon status)\n"
+"  about             (Prints information about gDesklets)\n"
+"  version           (Prints gDesklets version)\n"
+"  configure         (Opens the configuration dialog)\n"
+"  help              (Displays this text)\n"
+"  check             (Checks requirements)\n"
 "\n"
-"\t[option]\n"
-"\t\t--no-tray-icon    (disables the systray icon)\n"
-"\t\t--translucent     (enables translucency on the xorg servers)\n"
 msgstr ""
-"Uso: gdesklets [opción] <comando> [argumentos…]\n"
 "\n"
-"\t<comando>\n"
-"\t\topen    <archivo>   (Abre los archivos de visores dados)\n"
-"\t\tstart             (Ejecuta el servidor gDesklets)\n"
-"\t\tstop              (Detiene el servidor gDesklets)\n"
-"\t\tlist              (Lista los visores abiertos)\n"
-"\t\trestart              (Reinicia el servidor de gDesklets)\n"
-"\t\tprofile <perfil> (Cambia al perfil dado)\n"
-"\t\tprofile              (Muestra el perfil actual y los disponibles)\n"
-"\t\tshell              (Abre una shell gráfica)\n"
-"\t\tslay              (Mata el servidor -- úselo en caso de emergencia)\n"
-"\t\tstatus            (Comprueba el estado del servidor)\n"
-"\t\tabout              (Imprime información acerca de los gDesklets)\n"
-"\t\tversion              (Imprime la versión de los gDesklets)\n"
-"\t\tconfigure         (Abre el diálogo de configuración)\n"
-"\t\thelp              (Muestra este texto)\n"
-"\t\tcheck             (Comprueba los requerimientos)\n"
+"Órdenes:\n"
+"  abrir    <archivos>   (Abre archivos desklet dados)\n"
+"  iniciar             (Ejecuta el daemon de gDesklets, opción por defecto)\n"
+"  detener              (Detiene el daemon de gDesklets)\n"
+"  listar              (Lista los desklets abiertos)\n"
+"  reiniciar           (Reinicia el daemon de gDesklets)\n"
+"  perfil <perfil> (Cambia a dicho perfil)\n"
+"  perfil           (Muestra el perfil actual y todos los disponibles.)\n"
+"  terminal             (Abre una terminal gráfica)\n"
+"  matar              (Mata el daemon -- usar en caso emergencia)\n"
+"  estado            (Comprueba el estado del daemon)\n"
+"  acerca de             (Muestra información acerca de gDesklets)\n"
+"  versión           (Muestra la versión de gDesklets)\n"
+"  configurar         (Abre la pantalla de configuración)\n"
+"  ayuda              (Muestra este texto)\n"
+"  comprobar             (Comprueba requisitos)\n"
 "\n"
-"\t[opción]\n"
-"\t\t--no-tray-icon    (deshabilita el icono de la bandeja del sistema)\n"
-"\t\t--translucent    (Activa la translucidez en los servidores xorg)\n"
 
-#: ../gdesklets:161
+#: ../gdesklets:158
 #, c-format
 msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
+"Error al iniciar gdesklets-daemon\n"
+"Hay más información disponible sobre este fallo en \"%s\"."
 
-#: ../gdesklets:164
+#: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
-msgstr ""
+msgstr "La excepción fue: %s\n"
 
-#: ../gdesklets:189 ../gdesklets:258
+#: ../gdesklets:186 ../gdesklets:272
 #, c-format
 msgid "Could not open desklet %s."
-msgstr "No se puede abrir el desklet «%s»."
+msgstr "No se puede abrir el desklet %s."
 
-#: ../gdesklets:266
+#: ../gdesklets:204
+#, c-format
+msgid "%prog [options] order"
+msgstr "%prog [opciones] orden"
+
+#: ../gdesklets:209
+msgid "Avoid to show the icon on the tray"
+msgstr "No mostrar el icono en la bandeja de sistema"
+
+#: ../gdesklets:215
+msgid "Debug the application"
+msgstr "Depurar aplicación"
+
+#: ../gdesklets:221
+msgid "Launch pre-existing display "
+msgstr "Lanzar display ya existente "
+
+#: ../gdesklets:228
+msgid "Session manager prefix"
+msgstr "Prefijo del administrador de sesión"
+
+#: ../gdesklets:233
+msgid "Session manager ID"
+msgstr "ID del admistrador de sesión"
+
+#: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
-msgstr "Iniciando el servidor gdesklets…"
+msgstr "Iniciando gdesklets-daemon..."
 
-#: ../gdesklets:272
+#: ../gdesklets:282
 msgid "Shutting down gdesklets-daemon..."
-msgstr "Parando el servidor gdesklets…"
+msgstr "Apagando gdesklets-daemon..."
 
-#: ../gdesklets:284
+#: ../gdesklets:294
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
-msgstr "Visores abiertos actualmente en el perfil «%s»:\n"
+msgstr "Pantallas abiertas actualmente en el perfil \"%s\":\n"
 
-#: ../gdesklets:289
+#: ../gdesklets:299
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
-msgstr "Actualmente no hay ningún desklet en el perfil «%s»"
+msgstr "Actualmente no existe ningún desklet en el perfil \"%s\"."
 
-#: ../gdesklets:293
+#: ../gdesklets:303
 msgid "Restarting gdesklets-daemon..."
-msgstr "Reiniciando el servidor gdesklets…"
+msgstr "Reiniciando daemon de gedesklests"
 
-#: ../gdesklets:306
+#: ../gdesklets:316
 msgid "gdesklets-daemon is running"
-msgstr "el gdesklet-daemon está funcionando"
+msgstr "El daemon de gdesklests está en ejecución"
 
-#: ../gdesklets:308
+#: ../gdesklets:318
 msgid "gdesklets-daemon is not running"
-msgstr "el gdesklets-daemon no está funcionando"
+msgstr "El daemon de gdesklests no está en ejecución"
 
-#: ../gdesklets:312
+#: ../gdesklets:322
 #, c-format
 msgid "Current profile: %s"
 msgstr "Perfil actual: %s"
 
-#: ../gdesklets:323
+#: ../gdesklets:333
 #, c-format
 msgid "New profile: %s"
-msgstr "Perfil nuevo: %s"
+msgstr "Nuevo perfil: %s"
 
-#: ../gdesklets:326
+#: ../gdesklets:336
 #, c-format
 msgid "Available profiles: %s"
 msgstr "Perfiles disponibles: %s"
 
-#: ../gdesklets:330
+#: ../gdesklets:340
 #, c-format
 msgid "This is %s, version %s."
 msgstr "Esto es %s, versión %s."
 
-#: ../gdesklets:358
+#: ../gdesklets:368
 msgid "Nothing to slay."
-msgstr "Nada para matar."
+msgstr "Ningún proceso para matar."
 
-#: ../gdesklets:382
+#: ../gdesklets:392
 msgid "Invalid command. Please try one of the following commands:"
-msgstr "Comando inválido. Intente uno de los comandos siguientes:"
+msgstr ""
+"Orden no válida. Por favor, prueba con alguno de las siguientes órdenes:"
 
 #: ../gdesklets-daemon:27
 msgid "You need a recent version of PyGTK to run this program.\n"
-msgstr "Necesita una versión reciente de PyGTK para ejecutar este programa.\n"
+msgstr ""
+"Necesita una versión reciente de PyGTK para ejecutar este programa.\n"
 
 #: ../gdesklets-daemon:52
 msgid "Could not fork daemon.\n"
-msgstr "No se puede bifurcar el servidor.\n"
+msgstr "No se puede bifurcar al daemon.\n"
 
 #: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
 #, c-format
 msgid "The following error occurred: %s\n"
-msgstr "Ocurrió el siguiente error: %s\n"
+msgstr "Ha ocurrido el siguiente error: %s\n"
 
 #: ../libdesklets/convert.py:22
 #, python-format
 msgid "%.2f TB"
-msgstr "%.2f TiB"
+msgstr "%.2f TB"
 
 #: ../libdesklets/convert.py:24
 #, python-format
 msgid "%.2f GB"
-msgstr "%.2f GiB"
+msgstr "%.2f GB"
 
 #: ../libdesklets/convert.py:26
 #, python-format
 msgid "%.2f MB"
-msgstr "%.2f MiB"
+msgstr "%.2f MB"
 
 #: ../libdesklets/convert.py:28
 #, python-format
 msgid "%.2f kB"
-msgstr "%.2f KiB"
+msgstr "%.2f kB"
 
 #: ../libdesklets/convert.py:30
 #, python-format
@@ -473,25 +493,25 @@ msgstr "Acerca de gDesklets"
 #: ../main/client.py:276
 #, python-format
 msgid "Connecting to daemon [%s]"
-msgstr "Conectando al servidor [%s]"
+msgstr "Conectando a daemon [%s]"
 
 #: ../main/client.py:293
 msgid ""
 "Cannot establish connection to daemon: timeout!\n"
 "The log file might help you solving the problem."
 msgstr ""
-"No se puede establecer una conexión con el servidor: tiempo agotado\n"
-"El registro de sucesos quizá le ayude a resolver el problema."
+"No se pudo conectar con el daemon: ¡La conexión ha vencido!\n"
+"El archivo de registro quizás pueda ayudarle a resolver el problema."
 
 #: ../main/client.py:299
 #, python-format
 msgid "Connected to daemon in %d microseconds."
-msgstr "Se conectó con el servidor en %d microsegundos."
+msgstr "Conectado al daemon en %d microsegundos."
 
 #: ../main/client.py:302
 #, python-format
 msgid "Connected to daemon in %d milliseconds."
-msgstr "Se conectó con el servidor en %d milisegundos."
+msgstr "Conectado al daemon en %d milisegundos."
 
 #: ../main/__init__.py:71
 #, python-format
@@ -504,20 +524,19 @@ msgstr "Programación del núcleo:"
 
 #: ../main/__init__.py:77
 msgid "Architecture Design:"
-msgstr "Diseño de arquitectura:"
+msgstr "Diseño de la arquitectura:"
 
 #: ../main/__init__.py:80
 msgid "GNOME Integration:"
 msgstr "Integración con GNOME:"
 
 #: ../main/__init__.py:83
-#, fuzzy
 msgid "Additional Programming:"
-msgstr "Programación del núcleo:"
+msgstr "Programación adicional:"
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
-msgstr ""
+msgstr "Documentación:"
 
 #: ../main/__init__.py:89
 msgid "Artwork:"
@@ -529,39 +548,39 @@ msgstr "Sitio web:"
 
 #: ../main/__init__.py:95
 msgid "Thank you:"
-msgstr "Agradecimientos:"
+msgstr "Gracias:"
 
-#: ../main/Starter.py:102
+#: ../main/Starter.py:103
 msgid "_Manage desklets"
-msgstr "_Administrar desklets"
+msgstr "_Gestionar desklets"
 
-#: ../main/Starter.py:105
+#: ../main/Starter.py:106
 msgid "_Configuration"
 msgstr "_Configuración"
 
-#: ../main/Starter.py:107
+#: ../main/Starter.py:108
 msgid "_View log"
-msgstr "_Ver registro"
+msgstr "_Ver bitácora"
 
-#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
+#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
-msgstr "_Acerca de…"
+msgstr "_Acerca de..."
 
-#: ../main/Starter.py:113
+#: ../main/Starter.py:114
 msgid "_Stop daemon"
-msgstr "_Parar servidor"
+msgstr "_Parar daemon"
 
-#: ../main/Starter.py:224
+#: ../main/Starter.py:230
 #, python-format
 msgid "Could not open desklet file \"%s\""
-msgstr "No se pudo abrir el archivo de visor «%s»"
+msgstr "No se puede abrir el archivo de desklet \"%s\""
 
-#: ../main/Starter.py:225
-msgid "The desklet file could not be opened because the file was not readable."
-msgstr "El archivo del visor no pudo abrirse porque el archivo no es legible."
+#: ../main/Starter.py:231
+msgid ""
+"The desklet file could not be opened because the file was not readable."
+msgstr "El archivo del desklet no se pudo abrir porque no era legible."
 
 #: ../main/transition.py:39
-#, fuzzy
 msgid ""
 "This is a unstable version of gDesklets. Unstable versions represent the "
 "current state of development and might be unstable or cause problems from "
@@ -576,17 +595,18 @@ msgid ""
 "\n"
 "Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
-"Esta es una versión del CVS de gDesklets. Las versiones del CVS representan "
-"el estado actual del desarrollo;  puede que sea inestable y cause problemas "
-"de vez en cuando.\n"
+"Esta es una versión inestable de gDesklets. Las versiones inestables "
+"representan el estado actual de desarrollo y pueden ser inestables o causar "
+"problemas cada cierto tiempo.\n"
 "\n"
-"Si es la primera vez que usa gDesklets, se recomienda que <b>no</b> use una "
-"versión de CVS, sino una versión estable!\n"
+"Si es la primera vez que usa gDesklets, se recomienda <b>no</b> usar esta "
+"versión, sino la versión estable.\n"
 "\n"
-"Si aún desea ejecutar una versión de CVS en vez de una versión estable, le "
-"agradeceríamos si informa a los desarrolladores de cualquier comportamiento "
-"anómalo. Por supuesto, se anima a los usuarios experimentados a que prueben "
-"una versión del CVS."
+"Si todavía desea usar la versión inestable en vez de la estable, "
+"apreciaremos cualquier informe de comportamiento no esperado de la "
+"aplicación a los desarrolladores.\n"
+"\n"
+"Sin embargo, se pide a los usuarios con experiencia que usen una versión bzr."
 
 #: ../main/transition.py:51
 msgid ""
@@ -598,19 +618,17 @@ msgid ""
 "\n"
 "Thanks for testing this release candidate!"
 msgstr ""
-"Esta es una versión <b>candidata para publicar</b> de una publicación "
-"cercana de gDesklets.\n"
-"Pruébela e informe de los errores en <i>http://bugzilla.gnome.org</i>\n"
-"Esta versión podría romper su configuración o no restaurarla de una versión "
-"anterior. En la mayoría de los casos esto es intencional, dado que gDesklets "
-"todavía está en sus primeras etapas de desarrollo.\n"
+"Esta es una <b>versión candidata</b> de la siguiente versión de gDesklets.\n"
+"Por favor, pruébela y envíe los errores a <i>http://bugzilla.gnome.org</i>\n"
+"Esta versión puede romper su configuración o no puede recuperar la de una "
+"versión anterior. En la mayoría de los casos se hace con intención, dado que "
+"gDesklets está todavía en los primeros estados de desarrollo.\n"
 "\n"
-"Gracias por probar esta candidata para publicación."
+"¡Gracias por probar la versión candidata!"
 
 #. our informative transition message which we can change with
 #. every release
 #: ../main/transition.py:62
-#, fuzzy
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -621,50 +639,50 @@ msgid ""
 "Please note that due to limitations of older X servers, you might see blocks "
 "around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
-"Esta versión de gDesklets ofrece el modo flotante: presione una tecla y "
-"todos sus desklets vendrán al frente, flotando sobre sus aplicaciones, hasta "
-"que usted presione esa misma tecla otra vez.\n"
-"La combinación de teclas predeterminada es &lt;Mayús&gt;·&lt;F12&gt;, pero "
-"puede cambiarlo fácilmente en diálogo de configuración. \n"
+"Esta versión de gDesklets contiene un modo flotante: presione una tecla y "
+"sus desklests irán al frente, flotando por encima de sus otras aplicaciones, "
+"hasta que presiones otra vez esa tecla.\n"
 "\n"
-"Tenga en cuenta que debido a limitaciones de los servidores X antiguos, "
-"podría ver bloques alrededor de los desklets en modo flotante. Esto no se "
-"puede resolver de modo satisfactorio excepto cambiando el servidor X a "
-"translucidez real (Xorg 6.8 y superiores)."
+"Por defecto, las teclas asociadas son &lt;Shift&gt; &lt;F12&gt;, pero se "
+"puede cambiar en el diálogo de configuracion.\n"
+"\n"
+"Por favor, tenga en cuenta que debido a limitaciones de los servidores X "
+"antiguos, puede ver bloques alrededor de los desklets en el modo flotante. "
+"Esto no se puede solucionar de una manera satisfactoria."
 
 #: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
-msgstr "Nota informativa (este mensaje aparecerá una vez):"
+msgstr "Preste atención (este mensaje solamente aparecerá una vez):"
 
 #: ../plugin/Interface.py:200 ../plugin/Interface.py:227
 msgid "no description"
 msgstr "sin descripción"
 
-#: ../scripting/Script.py:154
+#: ../scripting/Script.py:155
 msgid "Error in add_timer function"
 msgstr "Error en la función add_timer"
 
-#: ../scripting/Script.py:155
+#: ../scripting/Script.py:156
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
-msgstr "«%s» no es un valor entero valido!"
+msgstr "¡\"%s\" no es un valor entero válido!"
 
-#: ../scripting/Script.py:199
+#: ../scripting/Script.py:200
 #, python-format
 msgid "No Control could be found for interface %s"
-msgstr "No se pudo encontrar ningún control para el interfaz %s"
+msgstr "No se encontró control para la interfaz %s"
 
-#: ../scripting/Script.py:201
+#: ../scripting/Script.py:202
 msgid "This means that a functionality won't be available during execution!"
 msgstr ""
-"Esto significa que una funcionalidad no estará disponible durante la "
-"ejecución."
+"¡Esto implica que la funcionaliadad no estará disponible durante la "
+"ejecución!"
 
-#: ../scripting/Script.py:241
+#: ../scripting/Script.py:242
 msgid "Security Risk"
 msgstr "Riesgo de seguridad"
 
-#: ../scripting/Script.py:242
+#: ../scripting/Script.py:243
 #, python-format
 msgid ""
 "The desklet %s wants to execute a system command:\n"
@@ -677,55 +695,55 @@ msgid ""
 "If you are sure that the command is harmless, you may permanently allow this "
 "desklet instance to run it."
 msgstr ""
-"El desklet %s desea ejecutar un comando del sistema:\n"
+"El desklet %s quiere ejecutar una orden de sistema:\n"
 "\n"
-"    <tt><b>%s</b></tt>\n"
+"     <tt><b>%s</b></tt>\n"
 "\n"
-"Para proteger a su sistema de programas maliciosos, puede denegar la "
-"ejecución de este comando.\n"
+"Para proteger su sistema de programas maliciosos, puede impedir la ejecución "
+"de esta orden.\n"
 "\n"
-"Si está seguro de que este comando es inofensivo, puede permitir "
-"permanentemente a este desklet ejecutarlo."
-
-#: ../scripting/Script.py:255
-msgid "Deny!"
-msgstr "Denegar"
+"Si está seguro que que la orden no dañará su sistema, puede permitir "
+"ejecutarla a instancias de este desklet de forma permanente."
 
 #: ../scripting/Script.py:256
+msgid "Deny!"
+msgstr "¡Denegado!"
+
+#: ../scripting/Script.py:257
 msgid "Allow once"
 msgstr "Permitir una vez"
 
-#: ../scripting/Script.py:257
+#: ../scripting/Script.py:258
 msgid "Allow for this desklet"
 msgstr "Permitir para este desklet"
 
 #: ../Sensors/FontSelector/__init__.py:86
 msgid "Fonts"
-msgstr "Tipografías"
+msgstr "Tipos de letra"
 
 #: ../Sensors/FontSelector/__init__.py:87
 msgid "Fonts settings"
-msgstr "Configuración de tipografías"
+msgstr "Ajustes de tipos de letra"
 
 #: ../Sensors/FontSelector/__init__.py:90
 #, python-format
 msgid "Font #%i:"
-msgstr "Tipografía #%i:"
+msgstr "Tipo de letra #%i:"
 
 #: ../Sensors/FontSelector/__init__.py:92
 #, python-format
 msgid "Font #%i used in the labels"
-msgstr "Tipografía #%i usada en las etiquetas"
+msgstr "Tipo de letra #%i usada en etiquetas"
 
 #: ../Sensors/FontSelector/__init__.py:93
 #, python-format
 msgid "Font color #%i:"
-msgstr "Color de la tipografía #%i:"
+msgstr "Color de tipo de letra #%i:"
 
 #: ../Sensors/FontSelector/__init__.py:95
 #, python-format
 msgid "Font color #%i used in the labels"
-msgstr "Color de la tipografía #%i usado en las etiquetas"
+msgstr "Tipo de letra #%i usada en etiquetas"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:16
 #, python-format
@@ -734,7 +752,7 @@ msgstr "Control %s"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:54
 msgid "Interface Name"
-msgstr "Nombre de interfaz"
+msgstr "Nombre de la interfaz"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:57
 msgid "Property Name"
@@ -742,7 +760,7 @@ msgstr "Nombre de la propiedad"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:60
 msgid "Property Access"
-msgstr "Acceso de la propiedad"
+msgstr "Acceso a propiedad"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:63
 msgid "Property Description"
@@ -753,71 +771,83 @@ msgid "by interface"
 msgstr "por interfaz"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:28
-#: ../shell/plugins/DisplayBrowser/__init__.py:80
+#: ../shell/plugins/DisplayBrowser/__init__.py:85
 msgid "alphabetically"
 msgstr "alfabéticamente"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:72
 #, python-format
 msgid "Found %d controls."
-msgstr "Se encontraron %d controles."
+msgstr "%d controles encontrados."
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
-#: ../shell/plugins/DisplayBrowser/__init__.py:158
+#: ../shell/plugins/DisplayBrowser/__init__.py:190
 msgid "Invalid search expression."
 msgstr "Expresión de búsqueda inválida."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:40
-msgid "R_emove selected desklet"
-msgstr "_Quitar el desklet seleccionado"
-
 #: ../shell/plugins/DisplayBrowser/__init__.py:43
+msgid "R_emove selected desklet"
+msgstr "E_liminar el desklet seleccionado"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:46
 msgid "_Run (remote) desklet..."
-msgstr "_Ejecutar desklet (remoto)…"
+msgstr "_Ejecutar desklet (remoto)..."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:45
+#: ../shell/plugins/DisplayBrowser/__init__.py:48
 msgid "R_un selected desklet"
-msgstr "_Ejecutar el desklet seleccionado"
+msgstr "E_jecutar desklet seleccionado"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:78
+#: ../shell/plugins/DisplayBrowser/__init__.py:83
 msgid "by category"
 msgstr "por categoría"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:79
+#: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
 msgstr "por autor"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:130
-msgid "Could not remove"
-msgstr "No se pudo quitar"
+#: ../shell/plugins/DisplayBrowser/__init__.py:148
+msgid "There is a saved instance of this display."
+msgstr "No hay una instancia guardada para este display."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:131
+#: ../shell/plugins/DisplayBrowser/__init__.py:149
+msgid "Would you like to open this?"
+msgstr "¿Desea abrir esto?"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:162
+msgid "Could not remove"
+msgstr "No se pudo remover"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:163
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
 msgstr ""
-"El archivo del desklet no se pudo quitar. Esto suele pasar porque no tienen "
+"El archivo del desklet no se ha podido eliminar. Seguramente no tiene "
 "permisos de escritura sobre él."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:143
+#: ../shell/plugins/DisplayBrowser/__init__.py:175
 msgid ""
 "The desklet will be removed from your system and no longer be available."
-msgstr "El desklet se quitará de su sistema y no estará disponible más."
+msgstr "El desklet se eliminará del sistema y no volverá a estar disponible."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#: ../shell/plugins/DisplayBrowser/__init__.py:187
 #, python-format
 msgid "Found %d desklets"
-msgstr "Se encontraron %d desklets"
+msgstr "Encontrados %d desklets"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:177
+#: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
-msgstr "Sin descripción disponible"
+msgstr "No hay una descripción disponible"
 
 #: ../shell/plugins/Help/__init__.py:37
 msgid "_Help"
-msgstr "Ay_uda"
+msgstr "_Ayuda"
 
 #: ../shell/plugins/Help/__init__.py:38
+msgid "_Contents"
+msgstr "_Contenidos"
+
+#: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
 msgstr "_Consejo del día"
 
@@ -838,12 +868,12 @@ msgid ""
 "and\n"
 "http://gdesklets.zencomputer.ca/"
 msgstr ""
-"Puede encontrar muchas miniaplicaciones\n"
-"de escritorio para usar con GDesklets en\n"
+"Puede encontrar muchas aplicaciones de escritorio para usarlas\n"
+"con gDesklets en\n"
 "\n"
 "http://www.gdesklets.org\n"
 "y\n"
-"http://gdesklets.zencomputer.ca"
+"http://gdesklets.zencomputer.ca/"
 
 #: ../shell/plugins/Help/tips.py:9
 msgid ""
@@ -851,18 +881,17 @@ msgid ""
 "dragging the download link for the package\n"
 "from your web browser into the gDesklets Shell."
 msgstr ""
-"Puede instalar miniaplicaciones de escritorio nuevas\n"
-"fácilmente arrastrando el enlace del paquete desde\n"
-"su navegador web al Shell de gDesklets."
+"Puede instalar nuevas aplicaciones de escritorio\n"
+"arrastrando el enlace de descarga del paquete\n"
+"desde su navegador web al terminal de gDesklets."
 
 #: ../shell/plugins/Help/tips.py:13
 msgid ""
 "Click the right mouse button on a desktop\n"
 "applet or press F10 to open the popup menu."
 msgstr ""
-"Pulse el botón derecho del ratón en una\n"
-"miniaplicación del escritorio o pulse F10\n"
-"para abrir el menú emergente."
+"Haga clic con el botón derecho del ratón sobre una aplicación\n"
+"de escritorio o presione F10 para abrir el menú emergente."
 
 #: ../shell/plugins/Help/tips.py:16
 msgid ""
@@ -873,11 +902,11 @@ msgid ""
 "hold down both of them simultaneously\n"
 "in order to simulate the middle button."
 msgstr ""
-"Puede mover las miniaplicaciones por la pantalla\n"
-"manteniendo pulsado el botón central.\n"
+"Puede mover las aplicaciones por la pantalla\n"
+"presionándolas con el botón central del ratón.\n"
 "\n"
-"Si su ratón sólo tiene dos botones,\n"
-"mantenga pulsados ambos simultáneamente\n"
+"Si el ratón sólo tiene dos botones,\n"
+"presione ambos simultáneamente\n"
 "para simular el botón central."
 
 #: ../shell/plugins/Help/tips.py:23
@@ -890,12 +919,11 @@ msgid ""
 "\n"
 "Empty profiles get discarded automatically."
 msgstr ""
-"Puede tener diferentes perfiles de\n"
-"las miniaplicaciones del escritorio\n"
-"y cambiar entre ellas.\n"
+"Puede tener perfiles diferences de\n"
+"aplicaciones de escritorio y cambiarlas.\n"
 "\n"
-"Seleccione «Perfiles -> Perfil nuevo…» desde\n"
-"la barra de menú para crear perfiles nuevos.\n"
+"Seleccione \"Perfiles->Nuevo perfil...\" de\n"
+"la barra de menú para crear nuevos perfiles.\n"
 "\n"
 "Los perfiles vacíos se descartan automáticamente."
 
@@ -904,9 +932,8 @@ msgid ""
 "The search bar accepts complex search\n"
 "expressions for finding your applets."
 msgstr ""
-"La barra de búsqueda acepta expresiones\n"
-" de búsqueda complejas para encontrar sus\n"
-" miniaplicaciones."
+"La barra de búsqueda acepta expresiones complejas\n"
+"de búsqueda para buscar entre sus aplicaciones."
 
 #: ../shell/plugins/Help/tips.py:34
 msgid ""
@@ -915,10 +942,10 @@ msgid ""
 " ? matches any one character\n"
 " * matches zero or more characters"
 msgstr ""
-"Las expresiones de búsqueda quizá contengan comodines:\n"
+"Las expresiones de búsqueda pueden contener comodines:\n"
 "\n"
-"? coincide con un carácter cualquiera\n"
-"* coincide con cero o más caracteres"
+" ? se empareja con cualquier carácter (sólo uno)\n"
+" * se empareja con cero o más carecteres"
 
 #: ../shell/plugins/Help/tips.py:39
 msgid ""
@@ -927,46 +954,46 @@ msgid ""
 "book for more details."
 msgstr ""
 "¿Tiene una buena idea para un desklet?\n"
-"¡Escriba el suyo! Vea el libro del desarrollador\n"
-"para más detalles."
+"¡Escriba el suyo propio! Mire el libro del\n"
+"desarrollador para más detalles."
 
 #: ../shell/plugins/PackageInstaller/Downloader.py:29
 msgid "Retrieving:"
-msgstr "Obteniendo:"
+msgstr "Recuperando:"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:26
 msgid "I_nstall remote package..."
-msgstr "_Instalar paquete remoto…"
+msgstr "I_nstalar paquete remoto..."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:27
 msgid "_Install package..."
-msgstr "_Instalar paquete…"
+msgstr "_Instalar paquete..."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:97
 msgid "Invalid package"
-msgstr "Paquete inválido"
+msgstr "Paquete inváildo"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:98
 msgid ""
 "The supplied file could not be opened as a package. It is either corrupted "
 "or not of the correct file type."
 msgstr ""
-"El archivo suministrado no pudo abrirse como un paquete. O está corrompido o "
-"no es del tipo de archivo correcto."
+"El archivo dado no se pudo abrir como paquete. O bien está corrupto o no es "
+"un archivo del tipo correcto."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:115
 msgid "Installation failed"
-msgstr "La instalación falló"
+msgstr "La instalación ha fallado"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:116
 msgid ""
 "The package could not be installed because it contained no installable files."
 msgstr ""
-"El paquete no se pudo instalar porque no contenía ningún archivo instalable."
+"El paquete no se pudo instalar porque no contenía archivos instalables."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:119
 msgid "Installation complete"
-msgstr "Instalación completa"
+msgstr "Instalación completada"
 
 #: ../shell/plugins/Profiles/__init__.py:18
 msgid "_Profiles"
@@ -974,19 +1001,19 @@ msgstr "_Perfiles"
 
 #: ../shell/plugins/Profiles/__init__.py:20
 msgid "New profile..."
-msgstr "Perfil nuevo…"
+msgstr "Nuevo perfil..."
 
 #: ../shell/plugins/Profiles/__init__.py:75
 msgid "New profile"
-msgstr "Perfil nuevo"
+msgstr "Nuevo perfil"
 
 #: ../shell/plugins/Profiles/__init__.py:76
 msgid "Enter the name for a new profile"
-msgstr "Introduzca el nombre para un perfil nuevo"
+msgstr "Introduzca el nombre del nuevo perfil"
 
 #: ../shell/plugins/Shell/__init__.py:62
 msgid "_File"
-msgstr "_Archivar"
+msgstr "_Archivo"
 
 #: ../shell/SearchBar.py:20
 msgid "Search"
@@ -999,16 +1026,16 @@ msgstr "_Detalles (%d líneas)"
 
 #: ../utils/dialog.py:194
 msgid "_Ignore errors from this desklet"
-msgstr "_Ignorar errores para este desklet"
+msgstr "_Ignorar errores de este desklet"
 
 #: ../utils/DOM.py:32
 msgid "An invalid graphics code was loaded into a canvas."
-msgstr "Se ha cargado en un lienzo un código de gráficos inválido."
+msgstr "Un código de gráficos inválido se ha cargado en el lienzo."
 
 #: ../utils/DOM.py:153
 #, python-format
 msgid "No such element: %s"
-msgstr "No existe dicho elemento: %s"
+msgstr "No existe el elemento: %s"
 
 #: ../utils/DOM.py:154
 #, python-format
@@ -1032,16 +1059,16 @@ msgstr "El elemento <b>%s</b> no tiene la propiedad <b>%s</b>."
 
 #: ../utils/Element.py:96 ../utils/Element.py:126
 msgid "Permission Error"
-msgstr "Error de permisos"
+msgstr "Error de permisos."
 
 #: ../utils/Element.py:97
 #, python-format
 msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
-msgstr "La propiedad <b>%s</b> del elemento <b>%s</b> no es modificable."
+msgstr "La propiedad <b>%s</b> del elemento <b>%s</b> no es editable."
 
 #: ../utils/Element.py:105
 msgid "Type Error"
-msgstr "Error de tipo"
+msgstr "Error de tipos"
 
 #: ../utils/Element.py:106
 #, python-format
@@ -1056,31 +1083,12 @@ msgstr ""
 #: ../utils/Element.py:127
 #, python-format
 msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
-msgstr "La propiedad <b>%s</b> del elemento <b>%s</b> no se puede leer."
+msgstr "La propiedad <b>%s</b> del elemento <b>%s</b> no es legible."
 
 #: ../utils/error.py:158
 msgid "Runtime Error"
-msgstr "Error en tiempo de ejecución"
+msgstr "Error de ejecución"
 
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
-msgstr "Ocurrió un error al ejecutar un desklet."
-
-#~ msgid "XComposite support (requires composition manager)"
-#~ msgstr "Soporte para XComposite (requiere gestor de composición)"
-
-#~ msgid ""
-#~ "\n"
-#~ "     <small><i>"
-#~ msgstr ""
-#~ "\n"
-#~ "     <small><i>"
-
-#~ msgid "this does not work with GTK 2.8 or higher for technical reasons"
-#~ msgstr "esto no funciona con GTK 2.8 o superior por razones técnicas"
-
-#~ msgid "</i></small>"
-#~ msgstr "</i></small>"
-
-#~ msgid "Translucency (takes effect after restarting a display)"
-#~ msgstr "Translucidez (hace efecto después de reiniciar un visor)"
+msgstr "Ocurrió un error durante la ejecución desklet."

@@ -8,22 +8,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-02 21:49+0100\n"
-"PO-Revision-Date: 2006-09-19 09:38+0300\n"
+"POT-Creation-Date: 2008-12-29 09:28-0300\n"
+"PO-Revision-Date: 2009-01-01 07:32+0000\n"
 "Last-Translator: Raivis Dejus <orvils@gmail.com>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.2\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
-"2);\n"
+"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
 
-#: ../config/ConfigDialog.py:113
+#: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
 msgstr "Nederīgs funkcijas izsaukums"
 
-#: ../config/ConfigDialog.py:114
+#: ../config/ConfigDialog.py:116
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -34,7 +33,7 @@ msgstr ""
 "Tas nozīmē, ka deskleta kodā ir radusies kļūda. Jums vajadzētu ziņot par šo "
 "problēmu deskleta autoram."
 
-#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
+#: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
 msgstr "Desklets nav konfigurējams."
 
@@ -68,8 +67,8 @@ msgstr "Ekrāna izšķirtspēja (DPI)"
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
-"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
-"\"</b> wide"
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
+"<b>1.97\"</b> wide"
 msgstr ""
 "Noregulē vērtību, kas redzama augstāk tā, lai josla būtu tieši <b>5 cm</b> "
 "vai <b>1.97\"</b> plata"
@@ -103,40 +102,43 @@ msgstr "Ekrāna sīklietotņu sistēma GNOME videi"
 msgid "gDesklets display"
 msgstr "gDeskleta ekrāns"
 
-#: ../display/Display.py:85
+#: ../display/Display.py:86
 msgid "_Configure desklet"
 msgstr "_Konfigurēt deskletu"
 
-#: ../display/Display.py:87
+#: ../display/Display.py:88
 msgid "_Move desklet"
 msgstr "_Pārvietot deskletu"
 
-#: ../display/Display.py:90
+#: ../display/Display.py:91
 msgid "_View Source"
 msgstr "_Aplūkot pirmkodu"
 
-#: ../display/Display.py:93
+#: ../display/Display.py:94
 msgid "Re_start desklet"
 msgstr "Pār_startēt deskletu"
 
-#: ../display/Display.py:95
+#: ../display/Display.py:96
 msgid "_Remove desklet"
 msgstr "_Aizvākt deskletu"
 
 #: ../display/Display.py:98
-#, fuzzy
-msgid "_About"
-msgstr "Par..."
+msgid "_Disable desklet"
+msgstr ""
 
-#: ../display/Display.py:337
+#: ../display/Display.py:101
+msgid "_About"
+msgstr ""
+
+#: ../display/Display.py:340
 msgid "_Readme"
 msgstr ""
 
-#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
+#: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
 msgstr "Vai Jūs tiešām vēlaties aizvākt šo deskletu ?"
 
-#: ../display/Display.py:1116
+#: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
@@ -208,58 +210,53 @@ msgid ""
 "installed."
 msgstr "Sensors nav atrasts. Tas parasti nozīmē, ka tas nav instalēts."
 
-#: ../gdesklets:26
+#: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
 msgstr "Jūs NAV jāpalaiž g Desklets kā superlietotājam (saknes)."
 
-#: ../gdesklets:46
+#: ../gdesklets:47
 msgid "Checking requirements:"
 msgstr "Pārbauda vajadības:"
 
-#: ../gdesklets:50
-#, fuzzy
+#: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
-msgstr "Nepieciešama Python varsija => 2.3.0."
+msgstr ""
 
-#: ../gdesklets:54
+#: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr "libexpat versija 1.95.7 ir bojāta. Lūdzu atjaunojiet!"
 
-#: ../gdesklets:57
+#: ../gdesklets:58
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr "Ir nepieciešams SAX parsētājs, dažas SuSE versijas iztiek bez tā."
 
-#: ../gdesklets:61
-#, fuzzy
+#: ../gdesklets:62
 msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
-"Ir nepieciešami GTK python saistījumi (pygtk2) varsija >= 2.4.0 un GTK+ "
-"versija >=  2.4.0."
 
-#: ../gdesklets:65
-#, fuzzy
+#: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
-msgstr "Ir nepieciešami ORBit python saistījumi (pyorbit) versija == 2.0.1."
+msgstr ""
 
-#: ../gdesklets:68
+#: ../gdesklets:69
 msgid "bonobo python bindings are required."
 msgstr "Ir nepieciešami bonobo python saistījumi."
 
-#: ../gdesklets:77
+#: ../gdesklets:78
 msgid "found"
 msgstr "atrasts"
 
-#: ../gdesklets:81
+#: ../gdesklets:82
 msgid "missing"
 msgstr "trūkst"
 
-#: ../gdesklets:87
+#: ../gdesklets:88
 msgid "Version check failed."
 msgstr "Versijas pārbaude nav izdevusies."
 
-#: ../gdesklets:88
+#: ../gdesklets:89
 #, c-format
 msgid ""
 "\n"
@@ -268,7 +265,7 @@ msgstr ""
 "\n"
 "%s\n"
 
-#: ../gdesklets:89
+#: ../gdesklets:90
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -286,11 +283,11 @@ msgstr ""
 "\n"
 "STARTĒŠANA TIKS ATCELTA TAGAD!\n"
 
-#: ../gdesklets:98
+#: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
 msgstr ""
 
-#: ../gdesklets:105
+#: ../gdesklets:106
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
@@ -300,126 +297,125 @@ msgstr ""
 "Jūs palaižat gDeskletu pirmo reizi.\n"
 "gDesklets sāks prasību pārbaudi tagad...\n"
 
-#: ../gdesklets:116
+#: ../gdesklets:117
 msgid ""
-"Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
-"\t<command>\n"
-"\t\topen    <files>   (Opens the given desklet files)\n"
-"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
-"\t\tstop              (Stops the gDesklets daemon)\n"
-"\t\tlist              (Lists open desklets)\n"
-"\t\trestart           (Restarts the gDesklets daemon)\n"
-"\t\tprofile <profile> (Switches to the given profile)\n"
-"\t\tprofile           (Shows the current and the available profiles)\n"
-"\t\tshell             (Opens the graphical shell)\n"
-"\t\tslay              (Kills the daemon -- use in emergency)\n"
-"\t\tstatus            (Checks daemon status)\n"
-"\t\tabout             (Prints information about gDesklets)\n"
-"\t\tversion           (Prints gDesklets version)\n"
-"\t\tconfigure         (Opens the configuration dialog)\n"
-"\t\thelp              (Displays this text)\n"
-"\t\tcheck             (Checks requirements)\n"
+"Orders:\n"
+"  open    <files>   (Opens the given desklet files)\n"
+"  start             (Runs the gDesklets daemon, this is default)\n"
+"  stop              (Stops the gDesklets daemon)\n"
+"  list              (Lists open desklets)\n"
+"  restart           (Restarts the gDesklets daemon)\n"
+"  profile <profile> (Switches to the given profile)\n"
+"  profile           (Shows the current and the available profiles)\n"
+"  shell             (Opens the graphical shell)\n"
+"  slay              (Kills the daemon -- use in emergency)\n"
+"  status            (Checks daemon status)\n"
+"  about             (Prints information about gDesklets)\n"
+"  version           (Prints gDesklets version)\n"
+"  configure         (Opens the configuration dialog)\n"
+"  help              (Displays this text)\n"
+"  check             (Checks requirements)\n"
 "\n"
-"\t[option]\n"
-"\t\t--no-tray-icon    (disables the systray icon)\n"
-"\t\t--translucent     (enables translucency on the xorg servers)\n"
 msgstr ""
-"Izmantošana: gdesklets [opcija] <komanda> [argumenti...]\n"
-"\n"
-"\t<komanda>\n"
-"\t\tatver    <faili>   (ver vaļā dotos deskleta failus)\n"
-"\t\tstart             (palaiž gDeskleta dēmonu, tas notiek noklusēti)\n"
-"\t\tstop              (apstādina gDeskleta dēmonu)\n"
-"\t\tlist              (izdrukā atvērtos deskletus)\n"
-"\t\trestart           (pārstartē gdeskleta dēmonu)\n"
-"\t\tprofile <profile> (pārslēdzas uz doto profilu)\n"
-"\t\tprofile           (parāda tagadējos un pieejamos profilus)\n"
-"\t\tshell             (atver grafisko čaulu)\n"
-"\t\tslay              (aizver dēmonu -- izmanto ārkārtas gadījumos)\n"
-"\t\tstatus            (pārbauda dēmona statusu)\n"
-"\t\tabout             (izdrukā informāciju par gDeskletu)\n"
-"\t\tversion           (izdrukā gDeskleta varsiju)\n"
-"\t\tconfigure         (atver konfigurāciju dialoga logu)\n"
-"\t\thelp              (parāda šo tekstu)\n"
-"\t\tcheck             (pārbauda vajadzības)\n"
-"\n"
-"\t[option]\n"
-"\t\t--no-tray-icon    (atslēdz sistēmas paplātes ikonu)\n"
-"\t\t--translucent     (atļauj caurspīdību uz xorg serveriem)\n"
 
-#: ../gdesklets:161
+#: ../gdesklets:158
 #, c-format
 msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
 
-#: ../gdesklets:164
+#: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
 msgstr ""
 
-#: ../gdesklets:189 ../gdesklets:258
+#: ../gdesklets:186 ../gdesklets:272
 #, c-format
 msgid "Could not open desklet %s."
 msgstr "Nevarēja atvērt dekletu %s."
 
-#: ../gdesklets:266
+#: ../gdesklets:204
+#, c-format
+msgid "%prog [options] order"
+msgstr ""
+
+#: ../gdesklets:209
+msgid "Avoid to show the icon on the tray"
+msgstr ""
+
+#: ../gdesklets:215
+msgid "Debug the application"
+msgstr ""
+
+#: ../gdesklets:221
+msgid "Launch pre-existing display "
+msgstr ""
+
+#: ../gdesklets:228
+msgid "Session manager prefix"
+msgstr ""
+
+#: ../gdesklets:233
+msgid "Session manager ID"
+msgstr ""
+
+#: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
 msgstr "Startē gdeskleta dēmonu..."
 
-#: ../gdesklets:272
+#: ../gdesklets:282
 msgid "Shutting down gdesklets-daemon..."
 msgstr "Izslēdz gdeskleta dēmonu..."
 
-#: ../gdesklets:284
+#: ../gdesklets:294
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr "Pašlaik atvērtie ekrāni profilā \"%s\":\n"
 
-#: ../gdesklets:289
+#: ../gdesklets:299
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr "Pašlaik profilā \"%s\" nav neviena deskleta"
 
-#: ../gdesklets:293
+#: ../gdesklets:303
 msgid "Restarting gdesklets-daemon..."
 msgstr "Pārstartē gdeskleta dēmonu..."
 
-#: ../gdesklets:306
+#: ../gdesklets:316
 msgid "gdesklets-daemon is running"
 msgstr "gdesklets dēmons darbojas"
 
-#: ../gdesklets:308
+#: ../gdesklets:318
 msgid "gdesklets-daemon is not running"
 msgstr "gdeskleta dēmons nedarbojas"
 
-#: ../gdesklets:312
+#: ../gdesklets:322
 #, c-format
 msgid "Current profile: %s"
 msgstr "Pašreizējais profils: %s"
 
-#: ../gdesklets:323
+#: ../gdesklets:333
 #, c-format
 msgid "New profile: %s"
 msgstr "Jauns profils: %s"
 
-#: ../gdesklets:326
+#: ../gdesklets:336
 #, c-format
 msgid "Available profiles: %s"
 msgstr "Pieejamie profili: %s"
 
-#: ../gdesklets:330
+#: ../gdesklets:340
 #, c-format
 msgid "This is %s, version %s."
 msgstr "Šis ir %s, versija %s."
 
-#: ../gdesklets:358
+#: ../gdesklets:368
 msgid "Nothing to slay."
 msgstr "Nav ko aizvērt."
 
-#: ../gdesklets:382
+#: ../gdesklets:392
 msgid "Invalid command. Please try one of the following commands:"
 msgstr "Nederīga komanda. Lūdzu mēģiniet kādu no sekojošajām komandām:"
 
@@ -507,9 +503,8 @@ msgid "GNOME Integration:"
 msgstr "GNOME koordinēšana:"
 
 #: ../main/__init__.py:83
-#, fuzzy
 msgid "Additional Programming:"
-msgstr "Kodola programmēšana:"
+msgstr ""
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
@@ -527,37 +522,37 @@ msgstr "Tīmekļa vietne:"
 msgid "Thank you:"
 msgstr "Paldies:"
 
-#: ../main/Starter.py:102
+#: ../main/Starter.py:103
 msgid "_Manage desklets"
 msgstr "Pāvaldīt deskletus"
 
-#: ../main/Starter.py:105
+#: ../main/Starter.py:106
 msgid "_Configuration"
 msgstr "Konfigurācija"
 
-#: ../main/Starter.py:107
+#: ../main/Starter.py:108
 msgid "_View log"
 msgstr "Skatīt log"
 
-#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
+#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
 msgstr "Par..."
 
-#: ../main/Starter.py:113
+#: ../main/Starter.py:114
 msgid "_Stop daemon"
 msgstr "Apstādināt dēmonu"
 
-#: ../main/Starter.py:224
+#: ../main/Starter.py:230
 #, python-format
 msgid "Could not open desklet file \"%s\""
 msgstr "Nevarēja atvērt deskleta failu  \"%s\""
 
-#: ../main/Starter.py:225
-msgid "The desklet file could not be opened because the file was not readable."
+#: ../main/Starter.py:231
+msgid ""
+"The desklet file could not be opened because the file was not readable."
 msgstr "Deskleta failu nevarēja atvērt, jo fails nebija lasāms."
 
 #: ../main/transition.py:39
-#, fuzzy
 msgid ""
 "This is a unstable version of gDesklets. Unstable versions represent the "
 "current state of development and might be unstable or cause problems from "
@@ -572,17 +567,6 @@ msgid ""
 "\n"
 "Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
-"Šī ir gDeskleta CVS versija. CVS versijas pārstāv pašreizējo izstrādes "
-"stāvokli un varētu būt nestabilas vai radīt problēmas laika gaitā.\n"
-"\n"
-"Ja jūs esat iesācējs darbā ar gDeskletu, ir ļoti ieteicams priekš  <b>not</"
-"b>  izmantot CVS versiju, bet stabilu laidienu!\n"
-"\n"
-"Ja jūs joprojām vēlaties palaist šo CVS versiju stabila laidiena versijas "
-"vietā, mēs būtu pateicīgi, ja jūs ziņotu par jebkādu savādu uzvedību "
-"izstrādātājiem.\n"
-"\n"
-"Pieredzējušus lietotājus tomēr vēlamies iedrošināt izmēģināt CVS versiju!"
 
 #: ../main/transition.py:51
 msgid ""
@@ -605,7 +589,6 @@ msgstr ""
 #. our informative transition message which we can change with
 #. every release
 #: ../main/transition.py:62
-#, fuzzy
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -616,16 +599,6 @@ msgid ""
 "Please note that due to limitations of older X servers, you might see blocks "
 "around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
-"Šī gDeskleta versija atbalsta peldošo režīmu: nospiediet taustiņu un visi "
-"jūsu deskleti izvirzīsies priekšpusē, peldot virs jūsu aplikācijām, līdz jūs "
-"atkal nospiedīsiet to pašu taustiņu!\n"
-" Noklusētie taustiņu sasaistījumi ir &lt;Shift&gt; &lt;F12&gt;, bet jūs "
-"viegli varat tos mainīt konfigurāciju dialoga logā.\n"
-"\n"
-"Lūdzu ievērojiet, ka dēļ ierobežojumiem vecākos X serveros, jūs iespējams "
-"redzēsiet ap deskletiem blokus peldošā režīmā. To nevar atrisināt pietiekami "
-"apmierinošā līmenī, izņemot komutējot X serveri uz reālo caurspīdību  (Xorg "
-"6.8 un jaunāki)."
 
 #: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
@@ -635,29 +608,29 @@ msgstr "Lūdzu ievērojiet (šis ziņojums parādīsies tikai vienreiz):"
 msgid "no description"
 msgstr "nav apraksta"
 
-#: ../scripting/Script.py:154
+#: ../scripting/Script.py:155
 msgid "Error in add_timer function"
 msgstr "Kļūda add_timer funkcijā"
 
-#: ../scripting/Script.py:155
+#: ../scripting/Script.py:156
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
 msgstr "\"%s\" nav vesels skaitlis!"
 
-#: ../scripting/Script.py:199
+#: ../scripting/Script.py:200
 #, python-format
 msgid "No Control could be found for interface %s"
 msgstr "Neviena vadības iespēja netika atrasta %s saskarnei"
 
-#: ../scripting/Script.py:201
+#: ../scripting/Script.py:202
 msgid "This means that a functionality won't be available during execution!"
 msgstr "Tas nozīmē, ka izildes laikā funkcionēšana nebūs pieejama!"
 
-#: ../scripting/Script.py:241
+#: ../scripting/Script.py:242
 msgid "Security Risk"
 msgstr "Risks drošībai"
 
-#: ../scripting/Script.py:242
+#: ../scripting/Script.py:243
 #, python-format
 msgid ""
 "The desklet %s wants to execute a system command:\n"
@@ -680,15 +653,15 @@ msgstr ""
 "Ja jūs esat pārliecinats par komandas nekaitīgumu, jūs varat atļaut šai "
 "deskleta instancei to palaist."
 
-#: ../scripting/Script.py:255
+#: ../scripting/Script.py:256
 msgid "Deny!"
 msgstr "Aizliegt!"
 
-#: ../scripting/Script.py:256
+#: ../scripting/Script.py:257
 msgid "Allow once"
 msgstr "Atļaut vienreiz"
 
-#: ../scripting/Script.py:257
+#: ../scripting/Script.py:258
 msgid "Allow for this desklet"
 msgstr "Atļaut šim deskletam"
 
@@ -746,7 +719,7 @@ msgid "by interface"
 msgstr "pēc saskarnes"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:28
-#: ../shell/plugins/DisplayBrowser/__init__.py:80
+#: ../shell/plugins/DisplayBrowser/__init__.py:85
 msgid "alphabetically"
 msgstr "alfabētiski"
 
@@ -756,35 +729,43 @@ msgid "Found %d controls."
 msgstr "Atrastas %d vadības."
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
-#: ../shell/plugins/DisplayBrowser/__init__.py:158
+#: ../shell/plugins/DisplayBrowser/__init__.py:190
 msgid "Invalid search expression."
 msgstr "Nederīga meklēšanas izteiksme."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:40
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
 msgid "R_emove selected desklet"
 msgstr "Likvidēt izvēlēto deskletu"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:43
+#: ../shell/plugins/DisplayBrowser/__init__.py:46
 msgid "_Run (remote) desklet..."
 msgstr "Palaist (attālināti) deskletu..."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:45
+#: ../shell/plugins/DisplayBrowser/__init__.py:48
 msgid "R_un selected desklet"
 msgstr "Palaist izvelēto deskletu"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:78
+#: ../shell/plugins/DisplayBrowser/__init__.py:83
 msgid "by category"
-msgstr " pēc kategorijas"
+msgstr "pēc kategorijas"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:79
+#: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
-msgstr " pēc autora"
+msgstr "pēc autora"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:130
+#: ../shell/plugins/DisplayBrowser/__init__.py:148
+msgid "There is a saved instance of this display."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:149
+msgid "Would you like to open this?"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
 msgstr "Nevarēja aizvākt"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:131
+#: ../shell/plugins/DisplayBrowser/__init__.py:163
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
@@ -792,17 +773,17 @@ msgstr ""
 "Šo deskleta failu nevarēja likvidēt.  tas ļoti iespejams nozīmē, ka jumsuz "
 "to nav rakstīšanas tiesību."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:143
+#: ../shell/plugins/DisplayBrowser/__init__.py:175
 msgid ""
 "The desklet will be removed from your system and no longer be available."
 msgstr "Desklets tiks aizvākts no jūsu sistēmas un vairs nebūs pieejams."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#: ../shell/plugins/DisplayBrowser/__init__.py:187
 #, python-format
 msgid "Found %d desklets"
 msgstr "Atrasti %d deskleti"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:177
+#: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
 msgstr "Apraksts nav pieejams"
 
@@ -811,6 +792,10 @@ msgid "_Help"
 msgstr "Palīdzība"
 
 #: ../shell/plugins/Help/__init__.py:38
+msgid "_Contents"
+msgstr ""
+
+#: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
 msgstr "Dienas padoms"
 
@@ -823,7 +808,6 @@ msgid "Show tips at startup"
 msgstr "Parādīt padomus startējot"
 
 #: ../shell/plugins/Help/tips.py:2
-#, fuzzy
 msgid ""
 "You can find lots of desktop applets for use\n"
 "with gDesklets at\n"
@@ -832,12 +816,6 @@ msgid ""
 "and\n"
 "http://gdesklets.zencomputer.ca/"
 msgstr ""
-"Jūs varat atrast ļoti daudz apletu lietošanai\n"
-"ar gDeskletu adresē\n"
-"\n"
-"http://www.gdesklets.org\n"
-"un\n"
-"http://gdesklets.gnomedesktop.org"
 
 #: ../shell/plugins/Help/tips.py:9
 msgid ""
@@ -1053,22 +1031,3 @@ msgstr "Izpildlaika kļūda"
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
 msgstr "Parādījās kļūda deskleta izpildes laikā."
-
-#~ msgid "XComposite support (requires composition manager)"
-#~ msgstr "Xcomposite atbalsts (nepieciešams kompozīcijas pārvaldnieks)"
-
-#~ msgid ""
-#~ "\n"
-#~ "     <small><i>"
-#~ msgstr ""
-#~ "\n"
-#~ "     <small><i>"
-
-#~ msgid "this does not work with GTK 2.8 or higher for technical reasons"
-#~ msgstr "nestrādā ar GTK 2.8 vai GTK jaunāku versiju tehnisku iemslu dēļ"
-
-#~ msgid "</i></small>"
-#~ msgstr "</i></small>"
-
-#~ msgid "Translucency (takes effect after restarting a display)"
-#~ msgstr "Caurspīdība (sāk darboties tikai pēc ekrāna pārlādēšanas)"

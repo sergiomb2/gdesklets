@@ -7,19 +7,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-02 21:49+0100\n"
-"PO-Revision-Date: 2004-05-12 21:28-0000\n"
-"Last-Translator: Samuel Jon Gunnarsson <sammi@techattack.nu>\n"
+"POT-Creation-Date: 2008-12-29 09:28-0300\n"
+"PO-Revision-Date: 2009-01-01 06:57+0000\n"
+"Last-Translator: Samel Jn Gunnarsson <Unknown>\n"
 "Language-Team: Icelandic <gnome@techattack.nu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
 
-#: ../config/ConfigDialog.py:113
+#: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
 msgstr ""
 
-#: ../config/ConfigDialog.py:114
+#: ../config/ConfigDialog.py:116
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -27,19 +29,17 @@ msgid ""
 "the author of the desklet about this problem."
 msgstr ""
 
-#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
-#, fuzzy
+#: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
-msgstr "Þessi skjámynd er ekki stillanleg"
+msgstr ""
 
 #: ../config/ConfigUnit.py:57
 msgid "pixel"
 msgstr ""
 
 #: ../config/ConfigUnit.py:58
-#, fuzzy
 msgid "point"
-msgstr "Leturgerðir"
+msgstr ""
 
 #: ../config/ConfigUnit.py:59
 msgid "cm"
@@ -63,8 +63,8 @@ msgstr ""
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
-"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
-"\"</b> wide"
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
+"<b>1.97\"</b> wide"
 msgstr ""
 
 #: ../config/DaemonConfigger.py:26
@@ -88,52 +88,51 @@ msgstr ""
 msgid "Configuration"
 msgstr "Stillingar"
 
-#  end for
-#  Parses the given list of command line arguments. This is usually
-#  sys.argv[1:].
-#  end for
 #: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
 msgid "A desktop applet system for GNOME"
 msgstr ""
 
 #: ../data/gdesklets.xml.in.h:1
-#, fuzzy
 msgid "gDesklets display"
-msgstr "gDesklets skjámyndaskrá"
+msgstr ""
 
-#: ../display/Display.py:85
+#: ../display/Display.py:86
 msgid "_Configure desklet"
 msgstr ""
 
-#: ../display/Display.py:87
+#: ../display/Display.py:88
 msgid "_Move desklet"
 msgstr ""
 
-#: ../display/Display.py:90
+#: ../display/Display.py:91
 msgid "_View Source"
 msgstr ""
 
-#: ../display/Display.py:93
+#: ../display/Display.py:94
 msgid "Re_start desklet"
 msgstr ""
 
-#: ../display/Display.py:95
+#: ../display/Display.py:96
 msgid "_Remove desklet"
 msgstr ""
 
 #: ../display/Display.py:98
+msgid "_Disable desklet"
+msgstr ""
+
+#: ../display/Display.py:101
 msgid "_About"
 msgstr ""
 
-#: ../display/Display.py:337
+#: ../display/Display.py:340
 msgid "_Readme"
 msgstr ""
 
-#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
+#: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
 msgstr ""
 
-#: ../display/Display.py:1116
+#: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
@@ -166,9 +165,8 @@ msgid "XML parse error"
 msgstr ""
 
 #: ../factory/DisplayFactory.py:90
-#, fuzzy
 msgid "This .display file has invalid XML syntax."
-msgstr "Skjámyndaskráin inniheldur ógild gögn og ekki er hægt að nota hana."
+msgstr ""
 
 #: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
@@ -178,31 +176,9 @@ msgstr ""
 msgid "A file which contains a script isn't available for further execution."
 msgstr ""
 
-#  Creates a TargetSettings object from the given Attributes object.
-#  remember everything for later
-#  ignore the <meta> tag for now
-#  self.__script = ""
-#  end if
-#  nesting errors in XML are detected by the SAX parser; if we
-#  get here, it means our parser is buggy, not the XML input
-#  self.__display.execute_script(self.__script)
-#  if there is no ID given, guess a unique one
-#  build the tree of children from bottom up
-#  Factory class for dynamically loaded Sensors.
-#  a set to remember the modules loaded so far
-#  get instance of the configuration manager
-#  Creates and returns a Sensor of the given type or None if the Sensor
-#  could not be created.
-#  reload old modules to force using the latest version; this
-#  means we can edit modules while running gDesklets
-#  TODO: clean up
-#  a stack trace could be useful for debugging sensors
-#  a stack trace could be useful for debugging sensors
-#  end for
 #: ../factory/DisplayFactory.py:227
-#, fuzzy
 msgid "Could not load sensor"
-msgstr "Gat ekki hlaðið skynjara '%(name)s'"
+msgstr ""
 
 #: ../factory/DisplayFactory.py:243
 #, python-format
@@ -213,31 +189,10 @@ msgstr ""
 msgid "The &lt;prefs&gt; section of this desklet file is broken."
 msgstr ""
 
-#  Creates a TargetSettings object from the given Attributes object.
-#  remember everything for later
-#  ignore the <meta> tag for now
-#  self.__script = ""
-#  end if
-#  nesting errors in XML are detected by the SAX parser; if we
-#  get here, it means our parser is buggy, not the XML input
-#  self.__display.execute_script(self.__script)
-#  if there is no ID given, guess a unique one
-#  build the tree of children from bottom up
-#  Factory class for dynamically loaded Sensors.
-#  a set to remember the modules loaded so far
-#  get instance of the configuration manager
-#  Creates and returns a Sensor of the given type or None if the Sensor
-#  could not be created.
-#  reload old modules to force using the latest version; this
-#  means we can edit modules while running gDesklets
-#  TODO: clean up
-#  a stack trace could be useful for debugging sensors
-#  a stack trace could be useful for debugging sensors
-#  end for
 #: ../factory/SensorFactory.py:75
-#, fuzzy, python-format
+#, python-format
 msgid "Could not find sensor '%(name)s'"
-msgstr "Gat ekki hlaðið skynjara '%(name)s'"
+msgstr ""
 
 #: ../factory/SensorFactory.py:76
 msgid ""
@@ -245,60 +200,60 @@ msgid ""
 "installed."
 msgstr ""
 
-#: ../gdesklets:26
+#: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
 msgstr ""
 
-#: ../gdesklets:46
+#: ../gdesklets:47
 msgid "Checking requirements:"
 msgstr ""
 
-#: ../gdesklets:50
+#: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
 msgstr ""
 
-#: ../gdesklets:54
+#: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr ""
 
-#: ../gdesklets:57
+#: ../gdesklets:58
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr ""
 
-#: ../gdesklets:61
+#: ../gdesklets:62
 msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
 
-#: ../gdesklets:65
+#: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
 msgstr ""
 
-#: ../gdesklets:68
+#: ../gdesklets:69
 msgid "bonobo python bindings are required."
 msgstr ""
 
-#: ../gdesklets:77
+#: ../gdesklets:78
 msgid "found"
 msgstr ""
 
-#: ../gdesklets:81
+#: ../gdesklets:82
 msgid "missing"
 msgstr ""
 
-#: ../gdesklets:87
+#: ../gdesklets:88
 msgid "Version check failed."
 msgstr ""
 
-#: ../gdesklets:88
+#: ../gdesklets:89
 #, c-format
 msgid ""
 "\n"
 "%s\n"
 msgstr ""
 
-#: ../gdesklets:89
+#: ../gdesklets:90
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -309,115 +264,136 @@ msgid ""
 "THE STARTUP WILL BE CANCELLED NOW!\n"
 msgstr ""
 
-#: ../gdesklets:98
+#: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
 msgstr ""
 
-#: ../gdesklets:105
+#: ../gdesklets:106
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
 "gDesklets will start a requirements check now...\n"
 msgstr ""
 
-#: ../gdesklets:116
+#: ../gdesklets:117
 msgid ""
-"Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
-"\t<command>\n"
-"\t\topen    <files>   (Opens the given desklet files)\n"
-"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
-"\t\tstop              (Stops the gDesklets daemon)\n"
-"\t\tlist              (Lists open desklets)\n"
-"\t\trestart           (Restarts the gDesklets daemon)\n"
-"\t\tprofile <profile> (Switches to the given profile)\n"
-"\t\tprofile           (Shows the current and the available profiles)\n"
-"\t\tshell             (Opens the graphical shell)\n"
-"\t\tslay              (Kills the daemon -- use in emergency)\n"
-"\t\tstatus            (Checks daemon status)\n"
-"\t\tabout             (Prints information about gDesklets)\n"
-"\t\tversion           (Prints gDesklets version)\n"
-"\t\tconfigure         (Opens the configuration dialog)\n"
-"\t\thelp              (Displays this text)\n"
-"\t\tcheck             (Checks requirements)\n"
+"Orders:\n"
+"  open    <files>   (Opens the given desklet files)\n"
+"  start             (Runs the gDesklets daemon, this is default)\n"
+"  stop              (Stops the gDesklets daemon)\n"
+"  list              (Lists open desklets)\n"
+"  restart           (Restarts the gDesklets daemon)\n"
+"  profile <profile> (Switches to the given profile)\n"
+"  profile           (Shows the current and the available profiles)\n"
+"  shell             (Opens the graphical shell)\n"
+"  slay              (Kills the daemon -- use in emergency)\n"
+"  status            (Checks daemon status)\n"
+"  about             (Prints information about gDesklets)\n"
+"  version           (Prints gDesklets version)\n"
+"  configure         (Opens the configuration dialog)\n"
+"  help              (Displays this text)\n"
+"  check             (Checks requirements)\n"
 "\n"
-"\t[option]\n"
-"\t\t--no-tray-icon    (disables the systray icon)\n"
-"\t\t--translucent     (enables translucency on the xorg servers)\n"
 msgstr ""
 
-#: ../gdesklets:161
+#: ../gdesklets:158
 #, c-format
 msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
 
-#: ../gdesklets:164
+#: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
 msgstr ""
 
-#: ../gdesklets:189 ../gdesklets:258
-#, fuzzy, c-format
+#: ../gdesklets:186 ../gdesklets:272
+#, c-format
 msgid "Could not open desklet %s."
-msgstr "Gat ekki opnað skjámyndaskrá '%(path)s'"
+msgstr ""
 
-#: ../gdesklets:266
+#: ../gdesklets:204
+#, c-format
+msgid "%prog [options] order"
+msgstr ""
+
+#: ../gdesklets:209
+msgid "Avoid to show the icon on the tray"
+msgstr ""
+
+#: ../gdesklets:215
+msgid "Debug the application"
+msgstr ""
+
+#: ../gdesklets:221
+msgid "Launch pre-existing display "
+msgstr ""
+
+#: ../gdesklets:228
+msgid "Session manager prefix"
+msgstr ""
+
+#: ../gdesklets:233
+msgid "Session manager ID"
+msgstr ""
+
+#: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
 msgstr ""
 
-#: ../gdesklets:272
+#: ../gdesklets:282
 msgid "Shutting down gdesklets-daemon..."
 msgstr ""
 
-#: ../gdesklets:284
-#, fuzzy, c-format
+#: ../gdesklets:294
+#, c-format
 msgid "Currently open displays in profile \"%s\":\n"
-msgstr "Gat ekki opnað skjámyndaskrá '%(path)s'"
+msgstr ""
 
-#: ../gdesklets:289
+#: ../gdesklets:299
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr ""
 
-#: ../gdesklets:293
+#: ../gdesklets:303
 msgid "Restarting gdesklets-daemon..."
 msgstr ""
 
-#: ../gdesklets:306
+#: ../gdesklets:316
 msgid "gdesklets-daemon is running"
 msgstr ""
 
-#: ../gdesklets:308
+#: ../gdesklets:318
 msgid "gdesklets-daemon is not running"
 msgstr ""
 
-#: ../gdesklets:312
+#: ../gdesklets:322
 #, c-format
 msgid "Current profile: %s"
 msgstr ""
 
-#: ../gdesklets:323
+#: ../gdesklets:333
 #, c-format
 msgid "New profile: %s"
 msgstr ""
 
-#: ../gdesklets:326
+#: ../gdesklets:336
 #, c-format
 msgid "Available profiles: %s"
 msgstr ""
 
-#: ../gdesklets:330
+#: ../gdesklets:340
 #, c-format
 msgid "This is %s, version %s."
 msgstr ""
 
-#: ../gdesklets:358
+#: ../gdesklets:368
 msgid "Nothing to slay."
 msgstr ""
 
-#: ../gdesklets:382
+#: ../gdesklets:392
 msgid "Invalid command. Please try one of the following commands:"
 msgstr ""
 
@@ -521,36 +497,35 @@ msgstr ""
 msgid "Thank you:"
 msgstr ""
 
-#: ../main/Starter.py:102
+#: ../main/Starter.py:103
 msgid "_Manage desklets"
 msgstr ""
 
-#: ../main/Starter.py:105
-#, fuzzy
+#: ../main/Starter.py:106
 msgid "_Configuration"
-msgstr "Stillingar"
+msgstr ""
 
-#: ../main/Starter.py:107
+#: ../main/Starter.py:108
 msgid "_View log"
 msgstr ""
 
-#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
+#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
 msgstr ""
 
-#: ../main/Starter.py:113
+#: ../main/Starter.py:114
 msgid "_Stop daemon"
 msgstr ""
 
-#: ../main/Starter.py:224
-#, fuzzy, python-format
+#: ../main/Starter.py:230
+#, python-format
 msgid "Could not open desklet file \"%s\""
-msgstr "Gat ekki opnað skjámyndaskrá '%(path)s'"
+msgstr ""
 
-#: ../main/Starter.py:225
-#, fuzzy
-msgid "The desklet file could not be opened because the file was not readable."
-msgstr "Ekki tókst að opna skjámyndaskránna því hún er ekki læsileg."
+#: ../main/Starter.py:231
+msgid ""
+"The desklet file could not be opened because the file was not readable."
+msgstr ""
 
 #: ../main/transition.py:39
 msgid ""
@@ -601,29 +576,29 @@ msgstr ""
 msgid "no description"
 msgstr ""
 
-#: ../scripting/Script.py:154
+#: ../scripting/Script.py:155
 msgid "Error in add_timer function"
 msgstr ""
 
-#: ../scripting/Script.py:155
+#: ../scripting/Script.py:156
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
 msgstr ""
 
-#: ../scripting/Script.py:199
+#: ../scripting/Script.py:200
 #, python-format
 msgid "No Control could be found for interface %s"
 msgstr ""
 
-#: ../scripting/Script.py:201
+#: ../scripting/Script.py:202
 msgid "This means that a functionality won't be available during execution!"
 msgstr ""
 
-#: ../scripting/Script.py:241
+#: ../scripting/Script.py:242
 msgid "Security Risk"
 msgstr ""
 
-#: ../scripting/Script.py:242
+#: ../scripting/Script.py:243
 #, python-format
 msgid ""
 "The desklet %s wants to execute a system command:\n"
@@ -637,15 +612,15 @@ msgid ""
 "desklet instance to run it."
 msgstr ""
 
-#: ../scripting/Script.py:255
+#: ../scripting/Script.py:256
 msgid "Deny!"
 msgstr ""
 
-#: ../scripting/Script.py:256
+#: ../scripting/Script.py:257
 msgid "Allow once"
 msgstr ""
 
-#: ../scripting/Script.py:257
+#: ../scripting/Script.py:258
 msgid "Allow for this desklet"
 msgstr ""
 
@@ -703,7 +678,7 @@ msgid "by interface"
 msgstr ""
 
 #: ../shell/plugins/ControlBrowser/__init__.py:28
-#: ../shell/plugins/DisplayBrowser/__init__.py:80
+#: ../shell/plugins/DisplayBrowser/__init__.py:85
 msgid "alphabetically"
 msgstr ""
 
@@ -713,51 +688,59 @@ msgid "Found %d controls."
 msgstr ""
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
-#: ../shell/plugins/DisplayBrowser/__init__.py:158
+#: ../shell/plugins/DisplayBrowser/__init__.py:190
 msgid "Invalid search expression."
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:40
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
 msgid "R_emove selected desklet"
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:43
+#: ../shell/plugins/DisplayBrowser/__init__.py:46
 msgid "_Run (remote) desklet..."
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:45
+#: ../shell/plugins/DisplayBrowser/__init__.py:48
 msgid "R_un selected desklet"
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:78
+#: ../shell/plugins/DisplayBrowser/__init__.py:83
 msgid "by category"
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:79
+#: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:130
+#: ../shell/plugins/DisplayBrowser/__init__.py:148
+msgid "There is a saved instance of this display."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:149
+msgid "Would you like to open this?"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:131
+#: ../shell/plugins/DisplayBrowser/__init__.py:163
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:143
+#: ../shell/plugins/DisplayBrowser/__init__.py:175
 msgid ""
 "The desklet will be removed from your system and no longer be available."
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#: ../shell/plugins/DisplayBrowser/__init__.py:187
 #, python-format
 msgid "Found %d desklets"
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:177
+#: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
 msgstr ""
 
@@ -766,9 +749,12 @@ msgid "_Help"
 msgstr ""
 
 #: ../shell/plugins/Help/__init__.py:38
-#, fuzzy
+msgid "_Contents"
+msgstr ""
+
+#: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
-msgstr "Heilræði dagsins"
+msgstr ""
 
 #: ../shell/plugins/Help/TipOfTheDay.py:24
 msgid "Tip of the Day"
@@ -870,10 +856,9 @@ msgid "Installation failed"
 msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:116
-#, fuzzy
 msgid ""
 "The package could not be installed because it contained no installable files."
-msgstr "Ekki tókst að opna skjámyndaskránna því hún er ekki læsileg."
+msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:119
 msgid "Installation complete"
@@ -973,186 +958,3 @@ msgstr ""
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
 msgstr ""
-
-#  make the close button the default button
-#  Module for holding runtime settings.
-#  public settings : default values
-#  parsing command line arguments.
-#~ msgid "Usage: gdesklets <OPTION> <my.display>\n"
-#~ msgstr "Notkun: gdesklets <VALMÖGULEIKI> <mitt.display>\n"
-
-#~ msgid "Options:\n"
-#~ msgstr "Valmöguleikar\n"
-
-#~ msgid ""
-#~ "\t--no-config\t\tignore the configuration stored in the database (GConf)"
-#~ msgstr ""
-#~ "\t--no-config\t\thunsa stillingarnar geymdar í gagnagrunninum (GConf)"
-
-#~ msgid ""
-#~ "\t--orig-coords\t\tset the coordinates for every display to the upper "
-#~ "left corner"
-#~ msgstr ""
-#~ "\t--orig-coords\t\tStilla hnitin fyrir hverja skjámyndset the coordinates "
-#~ "for every display to the upper left corner"
-
-#~ msgid "\t--version\t\toutput version information and exit"
-#~ msgstr "\t--version\t\tSýna útgáfunúmer og hætta"
-
-#~ msgid "The %(name)s container accepts only one child."
-#~ msgstr "%(name)s gámurinn tekur aðeins við einum hlut."
-
-#~ msgid "Error while configuring display"
-#~ msgstr "Villa við stillingu birtingar"
-
-#~ msgid ""
-#~ "A display could not be configured properly. It will most likely be broken "
-#~ "and you should consider removing it."
-#~ msgstr ""
-#~ "Ekki tókst að stilla skjámynd eðlilega. Hún er líklega biluð og þú ættir "
-#~ "að íhuga að fjarlægja hana."
-
-#~ msgid ""
-#~ "An error occurred while loading a sensor. This most likely means that the "
-#~ "sensor is broken or simply not installed."
-#~ msgstr ""
-#~ "Villa kom upp meðan reynt var að hlaða inn skynjara. Þetta þýðir "
-#~ "líklegast til að skynjarinn sé bilaður eða einfaldlega ekki uppsettur."
-
-#~ msgid "Invalid display file '%(path)s'"
-#~ msgstr "Ógild skjámyndaskrá '%(path)s'"
-
-#  Removes the given display.
-#  better use python2.3 dict.pop
-#  Purges unused config entries.
-#  rep doesn't start with any ident
-#  so we can safely purge it
-#  get paths to purge
-#  empty are ignored
-#  relative paths are relative to USERHOME
-#  make sure that only paths below USERHOME can be purged
-#  end for
-#  end for_else
-#  end for
-#  Loads the display positions from file.
-#  Saves the current display positions to a file.
-#  FIXME: create a good unique ID
-#  ident = str(time.time())
-#  :section Sensor
-#  :  para The [cmd:Sensor] class is an abstract base class where new sensors are
-#  derived from. This class takes care of communication with the
-#  [app:gDesklets] core, so you can fully concentrate on the sensor
-#  itself.
-#  :class Sensor |
-#  Abstract base class for all sensors. Every sensor has to inherit from this
-#  class.
-#  the path of this sensor
-#  configuration manager for sensor properties
-#  the ID of this sensor
-#  the configuration watcher callback
-#  flag for stopping the sensor
-#  when stopping, the flag is set to True, then the callback is called
-#  converter for data types
-#  Sets the ID of this sensor.
-#  :function get_id | |
-#  Returns the ID of this sensor. It is not yet valid in the
-#  constructor.
-#  :  return string
-#  :/function
-#  Sets the configuration ID for this sensor.
-#  If the user has set a callback function for watching the config,
-#  the config will be watched.
-#  :function get_config_id | |
-#  Returns the unique config ID of the sensor. You can use the ID
-#  if you need to store data in other places.
-#  :  return string
-#  :/function
-#  :function set_config | key, value |
-#  Stores the given value in the configuration base.
-#  :  param key   | string | The key name.
-#  :  param value | string | The value to set.
-#  :/function
-#  self.__config_lock.acquire()
-#  self.__to_set.append((key, value))
-#  self.__config_lock.release()
-#  :function get_config | key |
-#  Returns the configuration value for the given key.
-#  :  param  key | string | The key name.
-#  :  return string
-#  :/function
-#  :function watch_config | callback |
-#  Registers a watcher for config changes.
-#  :  param callback | function | The callback function for configuration
-#  changes.
-#  :/function
-#  :function _set_config_type | key, type, default |
-#  Sets the data types to be used for the configuration values.
-#  Use this method in the constructor of your sensor.
-#  :  param  key | string | The name of the configuration key.
-#  :  param  type | enum  | The data type of the configuration key.
-#  :  param  default | string | The default value or unset keys.
-#  :/function
-#  :function get_path | | Returns the filesystem path of the sensor. Use this
-#  method if you want to load resource files that come
-#  with the sensor.
-#  :  return string
-#  :/function
-#  :function set_path_to_purge | paths |
-#  Sets the paths which are to be removed when the desklet that
-#  uses the sensor gets removed.
-#  If your sensor creates files, you need to specify the paths here
-#  in order to clean up.
-#  :  param  paths | string list | The paths to purge.
-#  :/function
-#  :function new_output || Returns a new empty [cmd:TargetSettings] object for sending data to
-#  the display.
-#  :  return TargetSettings
-#  :/function
-#  :function send_output | output | Sends the given [cmd:TargetSettings] object to the display.
-#  [emph:Never call this method from within a thread!]
-#  :  param  output | TargetSettings | The object for sending to the display.
-#  :/function
-#  :function add_timer | interval, callback, *args | Adds a timeout function with the given
-#  interval in ms.
-#  :  param  interval | int | The timeout interval between each invokation of the callback.
-#  :  param  callback | function | The callback function.
-#  :/function
-#  :function add_thread | threadfunction, *args | Adds and runs a new thread.
-#  Use this to start new threads. It's recommended to put blocking actions into threads
-#  in order to not block [app:gDesklets].
-#  :  param threadfunction | function | The thread function.
-#  :/function
-#  the thread should not start before setup is complete, therefore
-#  we are using the GTK idle handler
-#  Sends an action to this sensor.
-#  :function call_function | call, path, *args | Method for handling action calls from the
-#  display. Sensors have to override this method. [emph:This method may soon be
-#  deprecated!]
-#  :  param  call | string | The function to call.
-#  :  param  path | int list | The path of the target on which the action occurred.
-#  :  param  args | any list | The list of arguments for the function call.
-#  :/function
-#  Stops this sensor and cleans up.
-#  shut down sensor
-#  :function is_stopped | | Returns whether this sensor has been stopped. Use this method to
-#  check if your threads have to terminate.
-#  :  return bool
-#  :/function
-#  :function _shutdown | | Executes tasks for sensor shutdown. Override this method if your
-#  sensor has to clean up things after it has been terminated.
-#  :/function
-#  :function _new_configurator | | Creates and returns an empty new sensor configurator.
-#  [emph:This method may soon be deprecated!]
-#  :  return SensorConfigurator.
-#  :/function
-#  Returns the configurator of this sensor.
-#  Method for duplicating the display using this sensor
-#  :function open_menu | menu | Opens the given popup menu. The menu is a list of
-#  [cmd:(label:str, sensitive:bool, submenu:list, callback:function, args: list)]
-#  tuples.
-#  :  param  menu | list | The menu to open.
-#  :/function
-#  Reacts on changes in the configuration and delegates the call to the
-#  user's callback.
-#~ msgid "translator_credits"
-#~ msgstr "Victor Jónsson"
