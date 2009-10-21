@@ -9,19 +9,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gDesklets VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-02 21:49+0100\n"
-"PO-Revision-Date: 2005-07-05 20:34+0200\n"
-"Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
+"POT-Creation-Date: 2008-12-29 09:28-0300\n"
+"PO-Revision-Date: 2009-01-01 08:22+0000\n"
+"Last-Translator: Miloslav Trmac <Unknown>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
 
-#: ../config/ConfigDialog.py:113
+#: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
 msgstr "Neplatné volání funkce"
 
-#: ../config/ConfigDialog.py:114
+#: ../config/ConfigDialog.py:116
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -32,7 +34,7 @@ msgstr ""
 "To znamená, že v kódu deskletu je chyba. Měli byste o tomto problému "
 "informovat autora deskletu."
 
-#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
+#: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
 msgstr "Tento desklet není nastavitelný."
 
@@ -66,11 +68,11 @@ msgstr "Rozlišení obrazovky (DPI)"
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
-"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
-"\"</b> wide"
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
+"<b>1.97\"</b> wide"
 msgstr ""
-"Upravte hodnotu výše, aby byl obdélník široký přesně <b>5 cm</b> nebo <b>1.97"
-"\"</b>"
+"Upravte hodnotu výše, aby byl obdélník široký přesně <b>5 cm</b> nebo "
+"<b>1.97\"</b>"
 
 #: ../config/DaemonConfigger.py:26
 msgid "Behavior"
@@ -95,50 +97,54 @@ msgstr "Nastavení"
 
 #: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
 msgid "A desktop applet system for GNOME"
-msgstr "Systém apletů na pracovní ploše pro GNOME "
+msgstr "Systém apletů na pracovní ploše pro GNOME"
 
 #: ../data/gdesklets.xml.in.h:1
 msgid "gDesklets display"
 msgstr "Zobrazení gDesklets"
 
-#: ../display/Display.py:85
+#: ../display/Display.py:86
 msgid "_Configure desklet"
 msgstr "_Nastavit desklet"
 
-#: ../display/Display.py:87
+#: ../display/Display.py:88
 msgid "_Move desklet"
 msgstr "_Přesunout desklet"
 
-#: ../display/Display.py:90
+#: ../display/Display.py:91
 msgid "_View Source"
 msgstr "_Zobrazit zdroj"
 
-#: ../display/Display.py:93
+#: ../display/Display.py:94
 msgid "Re_start desklet"
 msgstr "_Restartovat desklet"
 
-#: ../display/Display.py:95
+#: ../display/Display.py:96
 msgid "_Remove desklet"
 msgstr "_Odstranit desklet"
 
 #: ../display/Display.py:98
-#, fuzzy
-msgid "_About"
-msgstr "O _aplikaci..."
+msgid "_Disable desklet"
+msgstr ""
 
-#: ../display/Display.py:337
+#: ../display/Display.py:101
+msgid "_About"
+msgstr ""
+
+#: ../display/Display.py:340
 msgid "_Readme"
 msgstr ""
 
-#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
+#: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
 msgstr "Opravdu chcete odstranit tento desklet?"
 
-#: ../display/Display.py:1116
+#: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
-msgstr "Tento desklet se už nebude zobrazovat a jeho nastavení bude vymazáno."
+msgstr ""
+"Tento desklet se už nebude zobrazovat a jeho nastavení bude vymazáno."
 
 #: ../display/DisplayTarget.py:417
 #, python-format
@@ -205,58 +211,53 @@ msgid ""
 "installed."
 msgstr "Senzor nebyl nalezen. To obvykle znamená, že nebyl nainstalován."
 
-#: ../gdesklets:26
+#: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
 msgstr "gDesklets NESMÍTE spouštět jako superuživatel (root)."
 
-#: ../gdesklets:46
+#: ../gdesklets:47
 msgid "Checking requirements:"
 msgstr "Kontroluji požadavky:"
 
-#: ../gdesklets:50
-#, fuzzy
+#: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
-msgstr "Je vyžadován Python verze => 2.3.0."
+msgstr ""
 
-#: ../gdesklets:54
+#: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr "verze libexpat 1.95.7 je špatná. Aktualizujte ji prosím!"
 
-#: ../gdesklets:57
+#: ../gdesklets:58
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr "Je vyžadován parser SAX, některé verze SuSE se dodávají bez něj."
 
-#: ../gdesklets:61
-#, fuzzy
+#: ../gdesklets:62
 msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
-"Jsou vyžadovány vazby GTK do pythonu (pygtk2) verze >= 2.4.0 a GTK+ verze >= "
-"2.4.0."
 
-#: ../gdesklets:65
-#, fuzzy
+#: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
-msgstr "Jsou vyžadovány vazby ORBitu do pythonu (pyorbit) verze == 2.0.1."
+msgstr ""
 
-#: ../gdesklets:68
+#: ../gdesklets:69
 msgid "bonobo python bindings are required."
 msgstr "Jsou vyžadovány vazby bonobo do pythonu."
 
-#: ../gdesklets:77
+#: ../gdesklets:78
 msgid "found"
 msgstr "nalezeno"
 
-#: ../gdesklets:81
+#: ../gdesklets:82
 msgid "missing"
 msgstr "chybí"
 
-#: ../gdesklets:87
+#: ../gdesklets:88
 msgid "Version check failed."
 msgstr "Kontrola verzí selhala."
 
-#: ../gdesklets:88
+#: ../gdesklets:89
 #, c-format
 msgid ""
 "\n"
@@ -265,7 +266,7 @@ msgstr ""
 "\n"
 "%s\n"
 
-#: ../gdesklets:89
+#: ../gdesklets:90
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -283,11 +284,11 @@ msgstr ""
 "\n"
 "SPOUŠTĚNÍ BUDE NYNÍ ZRUŠENO!\n"
 
-#: ../gdesklets:98
+#: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
 msgstr ""
 
-#: ../gdesklets:105
+#: ../gdesklets:106
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
@@ -297,126 +298,125 @@ msgstr ""
 "Spouštíte gDesklets poprvé.\n"
 "gDesklets nyní spustí kontrolu požadavků...\n"
 
-#: ../gdesklets:116
+#: ../gdesklets:117
 msgid ""
-"Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
-"\t<command>\n"
-"\t\topen    <files>   (Opens the given desklet files)\n"
-"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
-"\t\tstop              (Stops the gDesklets daemon)\n"
-"\t\tlist              (Lists open desklets)\n"
-"\t\trestart           (Restarts the gDesklets daemon)\n"
-"\t\tprofile <profile> (Switches to the given profile)\n"
-"\t\tprofile           (Shows the current and the available profiles)\n"
-"\t\tshell             (Opens the graphical shell)\n"
-"\t\tslay              (Kills the daemon -- use in emergency)\n"
-"\t\tstatus            (Checks daemon status)\n"
-"\t\tabout             (Prints information about gDesklets)\n"
-"\t\tversion           (Prints gDesklets version)\n"
-"\t\tconfigure         (Opens the configuration dialog)\n"
-"\t\thelp              (Displays this text)\n"
-"\t\tcheck             (Checks requirements)\n"
+"Orders:\n"
+"  open    <files>   (Opens the given desklet files)\n"
+"  start             (Runs the gDesklets daemon, this is default)\n"
+"  stop              (Stops the gDesklets daemon)\n"
+"  list              (Lists open desklets)\n"
+"  restart           (Restarts the gDesklets daemon)\n"
+"  profile <profile> (Switches to the given profile)\n"
+"  profile           (Shows the current and the available profiles)\n"
+"  shell             (Opens the graphical shell)\n"
+"  slay              (Kills the daemon -- use in emergency)\n"
+"  status            (Checks daemon status)\n"
+"  about             (Prints information about gDesklets)\n"
+"  version           (Prints gDesklets version)\n"
+"  configure         (Opens the configuration dialog)\n"
+"  help              (Displays this text)\n"
+"  check             (Checks requirements)\n"
 "\n"
-"\t[option]\n"
-"\t\t--no-tray-icon    (disables the systray icon)\n"
-"\t\t--translucent     (enables translucency on the xorg servers)\n"
 msgstr ""
-"Použití: gdesklets [přepínač] <příkaz> [parametry...]\n"
-"\n"
-"\t<příkaz>\n"
-"\t\topen    <soubory> (Otevře zadané soubory deskletů)\n"
-"\t\tstart             (Spustí démona gDesklets)\n"
-"\t\tstop              (Zastaví démona gDesklets)\n"
-"\t\tlist              (Vypíše otevřené desklety)\n"
-"\t\trestart           (Restartuje démona gDesklets)\n"
-"\t\tprofile <profil>  (Přepne na daný profil)\n"
-"\t\tprofile           (Zobrazí aktuální a dostupné profily)\n"
-"\t\tshell             (Otevře grafický shell)\n"
-"\t\tslay              (Zabije démona - používejte v případu nouze)\n"
-"\t\tstatus            (Zkontroluje stav démona)\n"
-"\t\tabout             (Vypíše informace o gDesklets)\n"
-"\t\tconfigure         (Otevře dialog nastavení)\n"
-"\t\tversion           (Vypíše verzi gDesklets)\n"
-"\t\thelp              (Zobrazí tento text)\n"
-"\t\tcheck             (Zkontroluje požadavky)\n"
-"\n"
-"\t[přepínač]:\n"
-"\t\t--no-tray-icon    (zakáže ikonu v oznamovací oblasti)\n"
-"\t\t--translucent     (povolí průhlednost v serverech xorg)\n"
 
-#: ../gdesklets:161
+#: ../gdesklets:158
 #, c-format
 msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
 
-#: ../gdesklets:164
+#: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
 msgstr ""
 
-#: ../gdesklets:189 ../gdesklets:258
+#: ../gdesklets:186 ../gdesklets:272
 #, c-format
 msgid "Could not open desklet %s."
 msgstr "Nemohu otevřít desklet %s."
 
-#: ../gdesklets:266
+#: ../gdesklets:204
+#, c-format
+msgid "%prog [options] order"
+msgstr ""
+
+#: ../gdesklets:209
+msgid "Avoid to show the icon on the tray"
+msgstr ""
+
+#: ../gdesklets:215
+msgid "Debug the application"
+msgstr ""
+
+#: ../gdesklets:221
+msgid "Launch pre-existing display "
+msgstr ""
+
+#: ../gdesklets:228
+msgid "Session manager prefix"
+msgstr ""
+
+#: ../gdesklets:233
+msgid "Session manager ID"
+msgstr ""
+
+#: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
 msgstr "Spouštím gdesklets-daemon..."
 
-#: ../gdesklets:272
+#: ../gdesklets:282
 msgid "Shutting down gdesklets-daemon..."
 msgstr "Ukončuji gdesklets-daemon..."
 
-#: ../gdesklets:284
+#: ../gdesklets:294
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr "Momentálně otevřené displeje v profilu \"%s\":\n"
 
-#: ../gdesklets:289
+#: ../gdesklets:299
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr "Momentálně v profilu \"%s\" není žádný desklet"
 
-#: ../gdesklets:293
+#: ../gdesklets:303
 msgid "Restarting gdesklets-daemon..."
 msgstr "Restartuji gdesklets-daemon..."
 
-#: ../gdesklets:306
+#: ../gdesklets:316
 msgid "gdesklets-daemon is running"
 msgstr "gdesklets-daemon běží"
 
-#: ../gdesklets:308
+#: ../gdesklets:318
 msgid "gdesklets-daemon is not running"
 msgstr "gdesklets-daemon neběží"
 
-#: ../gdesklets:312
+#: ../gdesklets:322
 #, c-format
 msgid "Current profile: %s"
 msgstr "Aktuální profil: %s"
 
-#: ../gdesklets:323
+#: ../gdesklets:333
 #, c-format
 msgid "New profile: %s"
 msgstr "Nový profil: %s"
 
-#: ../gdesklets:326
+#: ../gdesklets:336
 #, c-format
 msgid "Available profiles: %s"
 msgstr "Dostupné profily: %s"
 
-#: ../gdesklets:330
+#: ../gdesklets:340
 #, c-format
 msgid "This is %s, version %s."
 msgstr "Toto je %s, verze %s."
 
-#: ../gdesklets:358
+#: ../gdesklets:368
 msgid "Nothing to slay."
 msgstr "Není co zabít."
 
-#: ../gdesklets:382
+#: ../gdesklets:392
 msgid "Invalid command. Please try one of the following commands:"
 msgstr "Neplatný příkaz. Zkuste prosím jeden z následujících příkazů:"
 
@@ -503,9 +503,8 @@ msgid "GNOME Integration:"
 msgstr "Integrace do GNOME:"
 
 #: ../main/__init__.py:83
-#, fuzzy
 msgid "Additional Programming:"
-msgstr "Programování jádra:"
+msgstr ""
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
@@ -523,33 +522,34 @@ msgstr "WWW server:"
 msgid "Thank you:"
 msgstr "Děkujeme:"
 
-#: ../main/Starter.py:102
+#: ../main/Starter.py:103
 msgid "_Manage desklets"
 msgstr "_Spravovat desklety"
 
-#: ../main/Starter.py:105
+#: ../main/Starter.py:106
 msgid "_Configuration"
 msgstr "_Nastavení"
 
-#: ../main/Starter.py:107
+#: ../main/Starter.py:108
 msgid "_View log"
 msgstr "_Zobrazit záznam"
 
-#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
+#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
 msgstr "O _aplikaci..."
 
-#: ../main/Starter.py:113
+#: ../main/Starter.py:114
 msgid "_Stop daemon"
 msgstr "Za_stavit démona"
 
-#: ../main/Starter.py:224
+#: ../main/Starter.py:230
 #, python-format
 msgid "Could not open desklet file \"%s\""
 msgstr "Nemohu otevřít soubor deskletu \"%s\""
 
-#: ../main/Starter.py:225
-msgid "The desklet file could not be opened because the file was not readable."
+#: ../main/Starter.py:231
+msgid ""
+"The desklet file could not be opened because the file was not readable."
 msgstr "Soubor deskletu nelze otevřít, protože soubor nelze přečíst."
 
 #: ../main/transition.py:39
@@ -601,29 +601,29 @@ msgstr "Všimněte si prosím (tato zpráva se objeví jen jednou):"
 msgid "no description"
 msgstr "žádný popis"
 
-#: ../scripting/Script.py:154
+#: ../scripting/Script.py:155
 msgid "Error in add_timer function"
 msgstr "Chyba ve funkci add_timer"
 
-#: ../scripting/Script.py:155
+#: ../scripting/Script.py:156
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
 msgstr "\"%s\" není platná hodnota celého čísla!"
 
-#: ../scripting/Script.py:199
+#: ../scripting/Script.py:200
 #, python-format
 msgid "No Control could be found for interface %s"
 msgstr "Pro rozhraní %s nebyl nalezen ovládací prvek"
 
-#: ../scripting/Script.py:201
+#: ../scripting/Script.py:202
 msgid "This means that a functionality won't be available during execution!"
 msgstr "To znamená, že při provádění nebude některáfunkce k dispozici!"
 
-#: ../scripting/Script.py:241
+#: ../scripting/Script.py:242
 msgid "Security Risk"
 msgstr "Riziko zabezpečení"
 
-#: ../scripting/Script.py:242
+#: ../scripting/Script.py:243
 #, python-format
 msgid ""
 "The desklet %s wants to execute a system command:\n"
@@ -645,15 +645,15 @@ msgstr ""
 "Pokud jste si jisti, že je tento příkaz neškodný, můžete natrvalo této "
 "instanci deskletu povolit jej spouštět."
 
-#: ../scripting/Script.py:255
+#: ../scripting/Script.py:256
 msgid "Deny!"
 msgstr "Odmítnout!"
 
-#: ../scripting/Script.py:256
+#: ../scripting/Script.py:257
 msgid "Allow once"
 msgstr "Povolit jednou"
 
-#: ../scripting/Script.py:257
+#: ../scripting/Script.py:258
 msgid "Allow for this desklet"
 msgstr "Povolit pro tento desklet"
 
@@ -711,7 +711,7 @@ msgid "by interface"
 msgstr "podle rozhraní"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:28
-#: ../shell/plugins/DisplayBrowser/__init__.py:80
+#: ../shell/plugins/DisplayBrowser/__init__.py:85
 msgid "alphabetically"
 msgstr "abecedně"
 
@@ -721,35 +721,43 @@ msgid "Found %d controls."
 msgstr "Naelezeno % ovládacích prvků."
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
-#: ../shell/plugins/DisplayBrowser/__init__.py:158
+#: ../shell/plugins/DisplayBrowser/__init__.py:190
 msgid "Invalid search expression."
 msgstr "Neplatný výraz hledání"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:40
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
 msgid "R_emove selected desklet"
 msgstr "_Odstranit zvolený desklet"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:43
+#: ../shell/plugins/DisplayBrowser/__init__.py:46
 msgid "_Run (remote) desklet..."
 msgstr "_Spustit (vzdáleně) desklet..."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:45
+#: ../shell/plugins/DisplayBrowser/__init__.py:48
 msgid "R_un selected desklet"
 msgstr "_Spustit zvolený desklet"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:78
+#: ../shell/plugins/DisplayBrowser/__init__.py:83
 msgid "by category"
 msgstr "podle kategorie"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:79
+#: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
 msgstr "podle autora"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:130
+#: ../shell/plugins/DisplayBrowser/__init__.py:148
+msgid "There is a saved instance of this display."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:149
+msgid "Would you like to open this?"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
 msgstr "Nemohu odstranit"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:131
+#: ../shell/plugins/DisplayBrowser/__init__.py:163
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
@@ -757,17 +765,17 @@ msgstr ""
 "Soubor deskletu nelze odstranit. Praděpodobně nemáte oprávnění do něj "
 "zapisovat."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:143
+#: ../shell/plugins/DisplayBrowser/__init__.py:175
 msgid ""
 "The desklet will be removed from your system and no longer be available."
 msgstr "Desklet bude odstraněn z vašeho systému a nebude už k dispozici."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#: ../shell/plugins/DisplayBrowser/__init__.py:187
 #, python-format
 msgid "Found %d desklets"
 msgstr "Nalezeno %d deskletů"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:177
+#: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
 msgstr "Popis není k dispozici"
 
@@ -776,6 +784,10 @@ msgid "_Help"
 msgstr "_Nápověda"
 
 #: ../shell/plugins/Help/__init__.py:38
+msgid "_Contents"
+msgstr ""
+
+#: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
 msgstr "_Tip dne"
 
@@ -788,7 +800,6 @@ msgid "Show tips at startup"
 msgstr "Zobrazovat tipy při spuštění"
 
 #: ../shell/plugins/Help/tips.py:2
-#, fuzzy
 msgid ""
 "You can find lots of desktop applets for use\n"
 "with gDesklets at\n"
@@ -797,10 +808,6 @@ msgid ""
 "and\n"
 "http://gdesklets.zencomputer.ca/"
 msgstr ""
-"Mnoho apletů na pracovní plochu použitelných\n"
-"s gDesklets můžete najít na\n"
-"\n"
-"http://gdesklets.gnomedesktop.org"
 
 #: ../shell/plugins/Help/tips.py:9
 msgid ""
@@ -1015,57 +1022,3 @@ msgstr "Chyba za běhu"
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
 msgstr "Při provádění deskletu došlo k chybě."
-
-#~ msgid "XComposite support (requires composition manager)"
-#~ msgstr "Podpora XComposite (vyžaduje správce skládání)"
-
-#~ msgid "Translucency (takes effect after restarting a display)"
-#~ msgstr "Průsvitnost (projeví se po restartu displeje)"
-
-#~ msgid "Error while configuring desklet"
-#~ msgstr "Chyba při nastavování deskletu"
-
-#~ msgid ""
-#~ "A desklet could not be configured properly. It will most likely be broken "
-#~ "and you should consider removing it."
-#~ msgstr ""
-#~ "Desklet nelze správně nastavit. Nejspíše je poškozen a měli byste zvážit "
-#~ "jeho odstranění."
-
-#~ msgid "Error in sensor '%(name)s'"
-#~ msgstr "Chyba v senzoru '%(name)s'"
-
-#~ msgid ""
-#~ "An error occurred while loading a sensor. This most likely means that "
-#~ "your system does not fulfill all its requirements."
-#~ msgstr ""
-#~ "Došlo k chybě při načítání senzoru. To pravděpodobně znamená, že váš "
-#~ "systém nesplňuje všechny požadavky senzoru."
-
-#~ msgid "Error in sensor %(name)s"
-#~ msgstr "Chyba v seznoru %(name)s"
-
-#~ msgid "An error occurred while running a sensor."
-#~ msgstr "Došlo k chybě při spouštění senzoru."
-
-#~ msgid "Invalid desklet file \"%s\""
-#~ msgstr "Neplatný soubor deskletu \"%s\""
-
-#~ msgid "The desklet file contains invalid data and could not be loaded."
-#~ msgstr "Soubor deskletu obsahuje neplatná data a nemůže být nahrán."
-
-#~ msgid "Error in script"
-#~ msgstr "Chyba ve skriptu"
-
-#~ msgid "SVG parse error"
-#~ msgstr "Chyba zpracovávání SVG"
-
-#~ msgid "GNOME python bindings (gnome-python2) version >= 2.6.0 are required."
-#~ msgstr ""
-#~ "Jsou vyžadovány vazby GNOME do pythonu (gnome-python2) verze >= 2.6.0."
-
-#~ msgid "GConf python bindings are required."
-#~ msgstr "Jsou vyžadovány vazby GConf do pythonu."
-
-#~ msgid "gtkhtml2 python bindings are required."
-#~ msgstr "Jsou vyžadovány vazby gtkhtml2 do pythonu."

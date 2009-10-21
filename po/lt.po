@@ -8,19 +8,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-02 21:49+0100\n"
-"PO-Revision-Date: 2005-01-09 14:02+0200\n"
+"POT-Creation-Date: 2008-12-29 09:28-0300\n"
+"PO-Revision-Date: 2009-01-01 07:23+0000\n"
 "Last-Translator: Žygimantas Beručka <uid0@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
 
-#: ../config/ConfigDialog.py:113
+#: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
 msgstr ""
 
-#: ../config/ConfigDialog.py:114
+#: ../config/ConfigDialog.py:116
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -28,19 +30,17 @@ msgid ""
 "the author of the desklet about this problem."
 msgstr ""
 
-#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
-#, fuzzy
+#: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
-msgstr "Ekranas nekonfigūruojamas."
+msgstr ""
 
 #: ../config/ConfigUnit.py:57
 msgid "pixel"
 msgstr ""
 
 #: ../config/ConfigUnit.py:58
-#, fuzzy
 msgid "point"
-msgstr "Šriftai"
+msgstr ""
 
 #: ../config/ConfigUnit.py:59
 msgid "cm"
@@ -64,8 +64,8 @@ msgstr ""
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
-"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
-"\"</b> wide"
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
+"<b>1.97\"</b> wide"
 msgstr ""
 
 #: ../config/DaemonConfigger.py:26
@@ -97,56 +97,52 @@ msgstr "GNOME darbastalio įtaisų sistema"
 msgid "gDesklets display"
 msgstr "gDesklets ekranas"
 
-#: ../display/Display.py:85
-#, fuzzy
+#: ../display/Display.py:86
 msgid "_Configure desklet"
-msgstr "_Konfigūruoti ekraną"
+msgstr ""
 
-#: ../display/Display.py:87
-#, fuzzy
+#: ../display/Display.py:88
 msgid "_Move desklet"
-msgstr "_Tvarkyti ekranus"
+msgstr ""
 
-#: ../display/Display.py:90
+#: ../display/Display.py:91
 msgid "_View Source"
 msgstr "Ž_iūrėti pradinį tekstą"
 
-#: ../display/Display.py:93
-#, fuzzy
+#: ../display/Display.py:94
 msgid "Re_start desklet"
-msgstr "Pe_rkrauti ekraną"
+msgstr ""
 
-#: ../display/Display.py:95
-#, fuzzy
+#: ../display/Display.py:96
 msgid "_Remove desklet"
-msgstr "_Pašalinti ekraną"
+msgstr ""
 
 #: ../display/Display.py:98
-#, fuzzy
-msgid "_About"
-msgstr "_Apie..."
+msgid "_Disable desklet"
+msgstr ""
 
-#: ../display/Display.py:337
+#: ../display/Display.py:101
+msgid "_About"
+msgstr ""
+
+#: ../display/Display.py:340
 msgid "_Readme"
 msgstr ""
 
-#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
-#, fuzzy
+#: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
-msgstr "Ar tikrai norite pašalinti šį ekraną?"
+msgstr ""
 
-#: ../display/Display.py:1116
-#, fuzzy
+#: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
 msgstr ""
-"Šis ekranas daugiau nebebus rodomas ir visa jo konfigūracija bus išvalyta."
 
 #: ../display/DisplayTarget.py:417
-#, fuzzy, python-format
+#, python-format
 msgid "Element \"%s\" does not exist"
-msgstr "Tokia byla neegzistuoja."
+msgstr ""
 
 #: ../display/DisplayTarget.py:418
 msgid ""
@@ -170,9 +166,8 @@ msgid "XML parse error"
 msgstr ""
 
 #: ../factory/DisplayFactory.py:90
-#, fuzzy
 msgid "This .display file has invalid XML syntax."
-msgstr "Ekrano byloje yra netinkamų duomenų ir todėl ji negali būti įkelta."
+msgstr ""
 
 #: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
@@ -204,62 +199,63 @@ msgstr "Nepavyko rasti sensoriaus '%(name)s'"
 msgid ""
 "A sensor could not be found. This usually means that it has not been "
 "installed."
-msgstr "Sensorius nerastas. Dažniausiai tai reiškia, kad jis nebuvo įdiegtas."
+msgstr ""
+"Sensorius nerastas. Dažniausiai tai reiškia, kad jis nebuvo įdiegtas."
 
-#: ../gdesklets:26
+#: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
 msgstr "Jūs NETURĖTUMĖTE leisti gDesklets kaip super vartotojas (root)."
 
-#: ../gdesklets:46
+#: ../gdesklets:47
 msgid "Checking requirements:"
 msgstr ""
 
-#: ../gdesklets:50
+#: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
 msgstr ""
 
-#: ../gdesklets:54
+#: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr ""
 
-#: ../gdesklets:57
+#: ../gdesklets:58
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr ""
 
-#: ../gdesklets:61
+#: ../gdesklets:62
 msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
 
-#: ../gdesklets:65
+#: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
 msgstr ""
 
-#: ../gdesklets:68
+#: ../gdesklets:69
 msgid "bonobo python bindings are required."
 msgstr ""
 
-#: ../gdesklets:77
+#: ../gdesklets:78
 msgid "found"
 msgstr ""
 
-#: ../gdesklets:81
+#: ../gdesklets:82
 msgid "missing"
 msgstr ""
 
-#: ../gdesklets:87
+#: ../gdesklets:88
 msgid "Version check failed."
 msgstr ""
 
-#: ../gdesklets:88
+#: ../gdesklets:89
 #, c-format
 msgid ""
 "\n"
 "%s\n"
 msgstr ""
 
-#: ../gdesklets:89
+#: ../gdesklets:90
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -270,149 +266,146 @@ msgid ""
 "THE STARTUP WILL BE CANCELLED NOW!\n"
 msgstr ""
 
-#: ../gdesklets:98
+#: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
 msgstr ""
 
-#: ../gdesklets:105
+#: ../gdesklets:106
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
 "gDesklets will start a requirements check now...\n"
 msgstr ""
 
-#: ../gdesklets:116
-#, fuzzy
+#: ../gdesklets:117
 msgid ""
-"Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
-"\t<command>\n"
-"\t\topen    <files>   (Opens the given desklet files)\n"
-"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
-"\t\tstop              (Stops the gDesklets daemon)\n"
-"\t\tlist              (Lists open desklets)\n"
-"\t\trestart           (Restarts the gDesklets daemon)\n"
-"\t\tprofile <profile> (Switches to the given profile)\n"
-"\t\tprofile           (Shows the current and the available profiles)\n"
-"\t\tshell             (Opens the graphical shell)\n"
-"\t\tslay              (Kills the daemon -- use in emergency)\n"
-"\t\tstatus            (Checks daemon status)\n"
-"\t\tabout             (Prints information about gDesklets)\n"
-"\t\tversion           (Prints gDesklets version)\n"
-"\t\tconfigure         (Opens the configuration dialog)\n"
-"\t\thelp              (Displays this text)\n"
-"\t\tcheck             (Checks requirements)\n"
+"Orders:\n"
+"  open    <files>   (Opens the given desklet files)\n"
+"  start             (Runs the gDesklets daemon, this is default)\n"
+"  stop              (Stops the gDesklets daemon)\n"
+"  list              (Lists open desklets)\n"
+"  restart           (Restarts the gDesklets daemon)\n"
+"  profile <profile> (Switches to the given profile)\n"
+"  profile           (Shows the current and the available profiles)\n"
+"  shell             (Opens the graphical shell)\n"
+"  slay              (Kills the daemon -- use in emergency)\n"
+"  status            (Checks daemon status)\n"
+"  about             (Prints information about gDesklets)\n"
+"  version           (Prints gDesklets version)\n"
+"  configure         (Opens the configuration dialog)\n"
+"  help              (Displays this text)\n"
+"  check             (Checks requirements)\n"
 "\n"
-"\t[option]\n"
-"\t\t--no-tray-icon    (disables the systray icon)\n"
-"\t\t--translucent     (enables translucency on the xorg servers)\n"
 msgstr ""
-"Naudojimas: gdesklets [parinktis] <komanda> [argumentai...]\n"
-"\n"
-"\t<komanda>\n"
-"\t\topen    <bylos>   (Atidaro nurodytas ekrano bylas)\n"
-"\t\tstart             (Paleidžia gDesklets demoną, ši komanda yra "
-"standartinė)\n"
-"\t\tstop              (Sustabdo gDesklets demoną)\n"
-"\t\tlist              (Parodo, kokie ekranai šiuo metu atidaryti)\n"
-"\t\trestart           (Perkrauna gDesklets demoną)\n"
-"\t\tprofile <profilis> (Perjungia į nurodytą profilį)\n"
-"\t\tprofile           (Rodo esamą ir prieinamus profilius)\n"
-"\t\tshell             (Atidaro grafinį apvalkalą)\n"
-"\t\tslay              (Nužudo demoną -- naudoti tik ekstra atveju)\n"
-"\t\tstatus            (Patikrina demono būseną)\n"
-"\t\tabout             (Parodo informaciją apie gDesklets)\n"
-"\t\tversion           (Parodo gDesklets versiją)\n"
-"\t\thelp              (Parodo šį tekstą)\n"
-"\n"
-"\t[parinktis]\n"
-"\t\t--translucent (įjungia permatomumą xorg serveriuose)\n"
 
-#: ../gdesklets:161
+#: ../gdesklets:158
 #, c-format
 msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
 
-#: ../gdesklets:164
+#: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
 msgstr ""
 
-#: ../gdesklets:189 ../gdesklets:258
-#, fuzzy, c-format
+#: ../gdesklets:186 ../gdesklets:272
+#, c-format
 msgid "Could not open desklet %s."
-msgstr "Nepavyko atidaryti ekrano bylos '%(path)s'"
+msgstr ""
 
-#: ../gdesklets:266
+#: ../gdesklets:204
+#, c-format
+msgid "%prog [options] order"
+msgstr ""
+
+#: ../gdesklets:209
+msgid "Avoid to show the icon on the tray"
+msgstr ""
+
+#: ../gdesklets:215
+msgid "Debug the application"
+msgstr ""
+
+#: ../gdesklets:221
+msgid "Launch pre-existing display "
+msgstr ""
+
+#: ../gdesklets:228
+msgid "Session manager prefix"
+msgstr ""
+
+#: ../gdesklets:233
+msgid "Session manager ID"
+msgstr ""
+
+#: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
 msgstr "Paleidžiamas gdesklets-daemon..."
 
-#: ../gdesklets:272
+#: ../gdesklets:282
 msgid "Shutting down gdesklets-daemon..."
 msgstr "Išjungiamas gdesklets-daemon..."
 
-#: ../gdesklets:284
-#, fuzzy, c-format
+#: ../gdesklets:294
+#, c-format
 msgid "Currently open displays in profile \"%s\":\n"
-msgstr "Nepavyko atidaryti ekranų esančių profilyje „%s“"
+msgstr ""
 
-#: ../gdesklets:289
-#, fuzzy, c-format
+#: ../gdesklets:299
+#, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
-msgstr "Šiuo metu profilyje „%s“ nėra jokių ekranų"
+msgstr ""
 
-#: ../gdesklets:293
+#: ../gdesklets:303
 msgid "Restarting gdesklets-daemon..."
 msgstr "Perkraunamas gdesklets-daemon..."
 
-#: ../gdesklets:306
+#: ../gdesklets:316
 msgid "gdesklets-daemon is running"
 msgstr "gdesklets-daemon yra paleistas"
 
-#: ../gdesklets:308
+#: ../gdesklets:318
 msgid "gdesklets-daemon is not running"
 msgstr "gdesklets-daemon nėra paleistas"
 
-#: ../gdesklets:312
+#: ../gdesklets:322
 #, c-format
 msgid "Current profile: %s"
 msgstr "Esamas profilis: %s"
 
-#: ../gdesklets:323
+#: ../gdesklets:333
 #, c-format
 msgid "New profile: %s"
 msgstr "Naujas profilis: %s"
 
-#: ../gdesklets:326
+#: ../gdesklets:336
 #, c-format
 msgid "Available profiles: %s"
 msgstr "Prieinami profiliai: %s"
 
-#: ../gdesklets:330
+#: ../gdesklets:340
 #, c-format
 msgid "This is %s, version %s."
 msgstr "Čia yra %s, versija %s."
 
-#: ../gdesklets:358
+#: ../gdesklets:368
 msgid "Nothing to slay."
 msgstr ""
 
-#: ../gdesklets:382
-#, fuzzy
+#: ../gdesklets:392
 msgid "Invalid command. Please try one of the following commands:"
-msgstr "Netinkama komanda. Prašau bandyti vieną iš sekančių komandų!"
+msgstr ""
 
 #: ../gdesklets-daemon:27
-#, fuzzy
 msgid "You need a recent version of PyGTK to run this program.\n"
-msgstr "Norint naudotis šia programa Jums reikalinga nauja PyGTK versija."
+msgstr ""
 
 #: ../gdesklets-daemon:52
-#, fuzzy
 msgid "Could not fork daemon.\n"
-msgstr "Nepavyko atšakoti demono."
+msgstr ""
 
 #: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
 #, c-format
@@ -454,11 +447,10 @@ msgid "Connecting to daemon [%s]"
 msgstr "Jungiamasi prie demono [%s]"
 
 #: ../main/client.py:293
-#, fuzzy
 msgid ""
 "Cannot establish connection to daemon: timeout!\n"
 "The log file might help you solving the problem."
-msgstr "Nepavyko prisijungti prie demono: baigėsi laiko limitas!"
+msgstr ""
 
 #: ../main/client.py:299
 #, python-format
@@ -488,9 +480,8 @@ msgid "GNOME Integration:"
 msgstr "GNOME integravimas:"
 
 #: ../main/__init__.py:83
-#, fuzzy
 msgid "Additional Programming:"
-msgstr "Šerdį suprogramavo:"
+msgstr ""
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
@@ -508,36 +499,35 @@ msgstr "Tinklalapis:"
 msgid "Thank you:"
 msgstr ""
 
-#: ../main/Starter.py:102
+#: ../main/Starter.py:103
 msgid "_Manage desklets"
 msgstr "_Tvarkyti ekranus"
 
-#: ../main/Starter.py:105
-#, fuzzy
+#: ../main/Starter.py:106
 msgid "_Configuration"
-msgstr "Konfigūracija"
+msgstr ""
 
-#: ../main/Starter.py:107
+#: ../main/Starter.py:108
 msgid "_View log"
 msgstr "Žiū_rėti žurnalą"
 
-#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
+#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
 msgstr "_Apie..."
 
-#: ../main/Starter.py:113
+#: ../main/Starter.py:114
 msgid "_Stop daemon"
 msgstr "_Sustabdyti demoną"
 
-#: ../main/Starter.py:224
-#, fuzzy, python-format
+#: ../main/Starter.py:230
+#, python-format
 msgid "Could not open desklet file \"%s\""
-msgstr "Nepavyko atidaryti ekrano bylos '%(path)s'"
+msgstr ""
 
-#: ../main/Starter.py:225
-#, fuzzy
-msgid "The desklet file could not be opened because the file was not readable."
-msgstr "Nepavyko atidaryti ekrano bylos, nes ši byla buvo neperskaitoma."
+#: ../main/Starter.py:231
+msgid ""
+"The desklet file could not be opened because the file was not readable."
+msgstr ""
 
 #: ../main/transition.py:39
 msgid ""
@@ -588,29 +578,29 @@ msgstr ""
 msgid "no description"
 msgstr "nėra aprašymo"
 
-#: ../scripting/Script.py:154
+#: ../scripting/Script.py:155
 msgid "Error in add_timer function"
 msgstr ""
 
-#: ../scripting/Script.py:155
+#: ../scripting/Script.py:156
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
 msgstr ""
 
-#: ../scripting/Script.py:199
+#: ../scripting/Script.py:200
 #, python-format
 msgid "No Control could be found for interface %s"
 msgstr ""
 
-#: ../scripting/Script.py:201
+#: ../scripting/Script.py:202
 msgid "This means that a functionality won't be available during execution!"
 msgstr ""
 
-#: ../scripting/Script.py:241
+#: ../scripting/Script.py:242
 msgid "Security Risk"
 msgstr ""
 
-#: ../scripting/Script.py:242
+#: ../scripting/Script.py:243
 #, python-format
 msgid ""
 "The desklet %s wants to execute a system command:\n"
@@ -624,15 +614,15 @@ msgid ""
 "desklet instance to run it."
 msgstr ""
 
-#: ../scripting/Script.py:255
+#: ../scripting/Script.py:256
 msgid "Deny!"
 msgstr ""
 
-#: ../scripting/Script.py:256
+#: ../scripting/Script.py:257
 msgid "Allow once"
 msgstr ""
 
-#: ../scripting/Script.py:257
+#: ../scripting/Script.py:258
 msgid "Allow for this desklet"
 msgstr ""
 
@@ -690,7 +680,7 @@ msgid "by interface"
 msgstr "pagal sąsają"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:28
-#: ../shell/plugins/DisplayBrowser/__init__.py:80
+#: ../shell/plugins/DisplayBrowser/__init__.py:85
 msgid "alphabetically"
 msgstr "pagal abėcelę"
 
@@ -700,57 +690,59 @@ msgid "Found %d controls."
 msgstr "Rasta %d valdikliai."
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
-#: ../shell/plugins/DisplayBrowser/__init__.py:158
+#: ../shell/plugins/DisplayBrowser/__init__.py:190
 msgid "Invalid search expression."
 msgstr "Netinkama paieškos išraiška."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:40
-#, fuzzy
-msgid "R_emove selected desklet"
-msgstr "Pašalinti pažymėtą _ekraną"
-
 #: ../shell/plugins/DisplayBrowser/__init__.py:43
+msgid "R_emove selected desklet"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:46
 msgid "_Run (remote) desklet..."
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:45
-#, fuzzy
+#: ../shell/plugins/DisplayBrowser/__init__.py:48
 msgid "R_un selected desklet"
-msgstr "_Paleisti pažymėtą ekraną"
+msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:78
+#: ../shell/plugins/DisplayBrowser/__init__.py:83
 msgid "by category"
 msgstr "pagal kategoriją"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:79
+#: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
 msgstr "pagal autorių"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:130
+#: ../shell/plugins/DisplayBrowser/__init__.py:148
+msgid "There is a saved instance of this display."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:149
+msgid "Would you like to open this?"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
 msgstr "Nepavyko pašalinti"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:131
-#, fuzzy
+#: ../shell/plugins/DisplayBrowser/__init__.py:163
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
 msgstr ""
-"Ši ekrano byla negali būti pašalinta. Greičiausiai tai reiškia, kad Jūs šiai "
-"bylai neturite rašymo teisių."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:143
-#, fuzzy
+#: ../shell/plugins/DisplayBrowser/__init__.py:175
 msgid ""
 "The desklet will be removed from your system and no longer be available."
-msgstr "Ekranas bus pašalintas iš Jūsų sistemos ir daugiau bus neprieinamas."
+msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:155
-#, fuzzy, python-format
+#: ../shell/plugins/DisplayBrowser/__init__.py:187
+#, python-format
 msgid "Found %d desklets"
-msgstr "Rasti %d ekranai(-ų)"
+msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:177
+#: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
 msgstr "Nėra aprašymo"
 
@@ -759,6 +751,10 @@ msgid "_Help"
 msgstr "_Pagalba"
 
 #: ../shell/plugins/Help/__init__.py:38
+msgid "_Contents"
+msgstr ""
+
+#: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
 msgstr "_Dienos patarimas"
 
@@ -771,7 +767,6 @@ msgid "Show tips at startup"
 msgstr "Paleidimo metu rodyti patarimus"
 
 #: ../shell/plugins/Help/tips.py:2
-#, fuzzy
 msgid ""
 "You can find lots of desktop applets for use\n"
 "with gDesklets at\n"
@@ -780,10 +775,6 @@ msgid ""
 "and\n"
 "http://gdesklets.zencomputer.ca/"
 msgstr ""
-"Jūs galite rasti daug darbastalio įtaisų,\n"
-"naudojamų su gDesklets, tinklalapyje\n"
-"\n"
-"http://gdesklets.gnomedesktop.org"
 
 #: ../shell/plugins/Help/tips.py:9
 msgid ""
@@ -868,9 +859,8 @@ msgid "Retrieving:"
 msgstr "Gaunama:"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:26
-#, fuzzy
 msgid "I_nstall remote package..."
-msgstr "Įd_iegti paketą..."
+msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:27
 msgid "_Install package..."
@@ -895,7 +885,8 @@ msgstr "Įdiegti nepavyko"
 #: ../shell/plugins/PackageInstaller/__init__.py:116
 msgid ""
 "The package could not be installed because it contained no installable files."
-msgstr "Paketo įdiegti nepavyko, jame nebuvo bylų, kurias būtų galima įdiegti."
+msgstr ""
+"Paketo įdiegti nepavyko, jame nebuvo bylų, kurias būtų galima įdiegti."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:119
 msgid "Installation complete"
@@ -926,9 +917,9 @@ msgid "Search"
 msgstr "Paieška"
 
 #: ../utils/dialog.py:46
-#, fuzzy, python-format
+#, python-format
 msgid "_Details (%d lines)"
-msgstr "Detalės (%d eil.)"
+msgstr ""
 
 #: ../utils/dialog.py:194
 msgid "_Ignore errors from this desklet"
@@ -939,14 +930,14 @@ msgid "An invalid graphics code was loaded into a canvas."
 msgstr ""
 
 #: ../utils/DOM.py:153
-#, fuzzy, python-format
+#, python-format
 msgid "No such element: %s"
-msgstr "Nėra tokio elemento: %s"
+msgstr ""
 
 #: ../utils/DOM.py:154
-#, fuzzy, python-format
+#, python-format
 msgid "The element with ID <b>%s</b> does not exist in the SVG image."
-msgstr "Elementas <b>%(name)s</b> neturi <b>%(key)s</b> savybės."
+msgstr ""
 
 #: ../utils/DOM.py:182 ../utils/Element.py:91
 #, python-format
@@ -954,14 +945,14 @@ msgid "No such property: %s"
 msgstr "Nėra tokios savybės: %s"
 
 #: ../utils/DOM.py:183
-#, fuzzy, python-format
+#, python-format
 msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
-msgstr "Elementas <b>%(name)s</b> neturi <b>%(key)s</b> savybės."
+msgstr ""
 
 #: ../utils/Element.py:92
-#, fuzzy, python-format
+#, python-format
 msgid "The element <b>%s</b> does not have the <b>%s</b> property."
-msgstr "Elementas <b>%(name)s</b> neturi <b>%(key)s</b> savybės."
+msgstr ""
 
 #: ../utils/Element.py:96 ../utils/Element.py:126
 msgid "Permission Error"
@@ -977,11 +968,11 @@ msgid "Type Error"
 msgstr ""
 
 #: ../utils/Element.py:106
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
 "Expected <b>%s</b>, but got <b>%s</b>."
-msgstr "Savybė <b>%s</b> priklausanti elementui <b>%s</b> nėra įrašoma."
+msgstr ""
 
 #: ../utils/Element.py:127
 #, python-format
@@ -993,66 +984,5 @@ msgid "Runtime Error"
 msgstr ""
 
 #: ../utils/error.py:160
-#, fuzzy
 msgid "An error occurred while executing a desklet."
-msgstr "Vykdant skriptą įvyko klaida."
-
-#~ msgid "The %(name)s container accepts only one child."
-#~ msgstr "%(name)s konteineris priima tik vieną antrinį."
-
-#~ msgid "_Move display"
-#~ msgstr "Perke_lti ekraną"
-
-#~ msgid "Error while configuring display"
-#~ msgstr "Klaida konfigūruojant ekraną"
-
-#~ msgid ""
-#~ "A display could not be configured properly. It will most likely be broken "
-#~ "and you should consider removing it."
-#~ msgstr ""
-#~ "Ekranas negali būti tinkamai sukonfigūruotas. Greičiausiai jis yra "
-#~ "sugadintas ir Jūs turėtumėte jį pašalinti."
-
-#~ msgid "Error in sensor '%(name)s'"
-#~ msgstr "Klaida sensoriuje '%(name)s'"
-
-#~ msgid ""
-#~ "An error occurred while loading a sensor. This most likely means that "
-#~ "your system does not fulfill all its requirements."
-#~ msgstr ""
-#~ "Įkeliant sensorių įvyko klaida. Tai greičiausiai reiškia, kad jūsų "
-#~ "sistema neatitinka visų jo reikalavimų."
-
-#~ msgid "Error in sensor %(name)s"
-#~ msgstr "Klaida sensoriuje %(name)s"
-
-#~ msgid "An error occurred while running a sensor."
-#~ msgstr "Veikiant sensoriui įvyko klaida."
-
-#~ msgid "Could not find X display."
-#~ msgstr "Nepavyko rasti X ekrano."
-
-#~ msgid "Log Messages"
-#~ msgstr "Įrašinėti žinutes"
-
-#~ msgid "Invalid display file '%(path)s'"
-#~ msgstr "Netinkama ekrano byla '%(path)s'"
-
-#~ msgid ""
-#~ "Could not connect to gnome-session. GNOME session management will not be "
-#~ "available for this application."
-#~ msgstr ""
-#~ "Nepavyko prisijungti prie gnome-session. GNOME sesijų valdymas šiai "
-#~ "programai bus neprieinamas."
-
-#~ msgid "Error in script"
-#~ msgstr "Klaida skripte"
-
-#~ msgid "An error occurred while loading a script."
-#~ msgstr "Įkeliant skriptą įvyko klaida."
-
-#~ msgid "translator_credits"
-#~ msgstr "Žygimantas Beručka <uid0@akl.lt>"
-
-#~ msgid "Do you really want to remove this display?"
-#~ msgstr "Ar tikrai norite pašalinti šį ekraną?"
+msgstr ""

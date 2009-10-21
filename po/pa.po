@@ -7,22 +7,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-02 21:49+0100\n"
-"PO-Revision-Date: 2004-11-04 16:16+0530\n"
-"Last-Translator: Amanpreet Singh Alam <aalam@redhat.com>\n"
+"POT-Creation-Date: 2008-12-29 09:28-0300\n"
+"PO-Revision-Date: 2009-01-01 06:53+0000\n"
+"Last-Translator: Amanpreet Singh Alam <Unknown>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
-"Plural-Forms: Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"\n"
+"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
 
-#: ../config/ConfigDialog.py:113
+#: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
 msgstr ""
 
-#: ../config/ConfigDialog.py:114
+#: ../config/ConfigDialog.py:116
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -30,20 +29,17 @@ msgid ""
 "the author of the desklet about this problem."
 msgstr ""
 
-#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
-#, fuzzy
+#: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
-msgstr "ਇਹ ਦਰਿਸ਼ ਸੰਰਚਨਾਯੋਗ ਨਹੀਂ ਹੈ।"
+msgstr ""
 
 #: ../config/ConfigUnit.py:57
-#, fuzzy
 msgid "pixel"
-msgstr "ਅਪ੍ਰੈਲ"
+msgstr ""
 
 #: ../config/ConfigUnit.py:58
-#, fuzzy
 msgid "point"
-msgstr "ਫੋਂਟ"
+msgstr ""
 
 #: ../config/ConfigUnit.py:59
 msgid "cm"
@@ -67,8 +63,8 @@ msgstr ""
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
-"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
-"\"</b> wide"
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
+"<b>1.97\"</b> wide"
 msgstr ""
 
 #: ../config/DaemonConfigger.py:26
@@ -100,56 +96,52 @@ msgstr "ਗਨੋਮ ਲਈ ਇੱਕ ਵਿਹੜਾ ਐਪਲਿਟ ਸਿਸ�
 msgid "gDesklets display"
 msgstr "gDesklets ਦਰਿਸ਼"
 
-#: ../display/Display.py:85
-#, fuzzy
+#: ../display/Display.py:86
 msgid "_Configure desklet"
-msgstr "ਦਰਿਸ਼ ਸੰਰਚਨਾ(_C)"
+msgstr ""
 
-#: ../display/Display.py:87
-#, fuzzy
+#: ../display/Display.py:88
 msgid "_Move desklet"
-msgstr "ਡਿਸਕਲਿਟ ਪ੍ਰਬੰਧਨ(_M)"
+msgstr ""
 
-#: ../display/Display.py:90
-#, fuzzy
+#: ../display/Display.py:91
 msgid "_View Source"
-msgstr "ਲਾੱਗ ਵੇਖੋ(_V)"
+msgstr ""
 
-#: ../display/Display.py:93
-#, fuzzy
+#: ../display/Display.py:94
 msgid "Re_start desklet"
-msgstr "ਦਰਿਸ਼ ਮੁੜ ਚਾਲੂ(_s)"
+msgstr ""
 
-#: ../display/Display.py:95
-#, fuzzy
+#: ../display/Display.py:96
 msgid "_Remove desklet"
-msgstr "ਦਰਸ਼ਿ ਹਟਾਉ(_R)"
+msgstr ""
 
 #: ../display/Display.py:98
-#, fuzzy
-msgid "_About"
-msgstr "ਇਸ ਬਾਰੇ(_A)..."
+msgid "_Disable desklet"
+msgstr ""
 
-#: ../display/Display.py:337
+#: ../display/Display.py:101
+msgid "_About"
+msgstr ""
+
+#: ../display/Display.py:340
 msgid "_Readme"
 msgstr ""
 
-#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
-#, fuzzy
+#: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
-msgstr "ਕੀ ਤੁਸੀਂ ਇਸ ਦਰਿਸ਼ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+msgstr ""
 
-#: ../display/Display.py:1116
-#, fuzzy
+#: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
-msgstr "ਇਹ ਦਰਿਸ਼ ਹੁਣ ਵੇਖਣ ਲਈ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ ਅਤੇ ਇਸ ਦੀ ਸੰਰਚਨਾ ਵੀ ਹਟਾ ਦਿੱਤੀ ਜਾਵੇਗੀ।"
+msgstr ""
 
 #: ../display/DisplayTarget.py:417
-#, fuzzy, python-format
+#, python-format
 msgid "Element \"%s\" does not exist"
-msgstr "ਫਾਇਲ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
+msgstr ""
 
 #: ../display/DisplayTarget.py:418
 msgid ""
@@ -208,60 +200,60 @@ msgid ""
 "installed."
 msgstr ""
 
-#: ../gdesklets:26
+#: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
 msgstr ""
 
-#: ../gdesklets:46
+#: ../gdesklets:47
 msgid "Checking requirements:"
 msgstr ""
 
-#: ../gdesklets:50
+#: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
 msgstr ""
 
-#: ../gdesklets:54
+#: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr ""
 
-#: ../gdesklets:57
+#: ../gdesklets:58
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr ""
 
-#: ../gdesklets:61
+#: ../gdesklets:62
 msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
 
-#: ../gdesklets:65
+#: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
 msgstr ""
 
-#: ../gdesklets:68
+#: ../gdesklets:69
 msgid "bonobo python bindings are required."
 msgstr ""
 
-#: ../gdesklets:77
+#: ../gdesklets:78
 msgid "found"
 msgstr ""
 
-#: ../gdesklets:81
+#: ../gdesklets:82
 msgid "missing"
 msgstr ""
 
-#: ../gdesklets:87
+#: ../gdesklets:88
 msgid "Version check failed."
 msgstr ""
 
-#: ../gdesklets:88
+#: ../gdesklets:89
 #, c-format
 msgid ""
 "\n"
 "%s\n"
 msgstr ""
 
-#: ../gdesklets:89
+#: ../gdesklets:90
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -272,127 +264,146 @@ msgid ""
 "THE STARTUP WILL BE CANCELLED NOW!\n"
 msgstr ""
 
-#: ../gdesklets:98
+#: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
 msgstr ""
 
-#: ../gdesklets:105
+#: ../gdesklets:106
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
 "gDesklets will start a requirements check now...\n"
 msgstr ""
 
-#: ../gdesklets:116
+#: ../gdesklets:117
 msgid ""
-"Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
-"\t<command>\n"
-"\t\topen    <files>   (Opens the given desklet files)\n"
-"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
-"\t\tstop              (Stops the gDesklets daemon)\n"
-"\t\tlist              (Lists open desklets)\n"
-"\t\trestart           (Restarts the gDesklets daemon)\n"
-"\t\tprofile <profile> (Switches to the given profile)\n"
-"\t\tprofile           (Shows the current and the available profiles)\n"
-"\t\tshell             (Opens the graphical shell)\n"
-"\t\tslay              (Kills the daemon -- use in emergency)\n"
-"\t\tstatus            (Checks daemon status)\n"
-"\t\tabout             (Prints information about gDesklets)\n"
-"\t\tversion           (Prints gDesklets version)\n"
-"\t\tconfigure         (Opens the configuration dialog)\n"
-"\t\thelp              (Displays this text)\n"
-"\t\tcheck             (Checks requirements)\n"
+"Orders:\n"
+"  open    <files>   (Opens the given desklet files)\n"
+"  start             (Runs the gDesklets daemon, this is default)\n"
+"  stop              (Stops the gDesklets daemon)\n"
+"  list              (Lists open desklets)\n"
+"  restart           (Restarts the gDesklets daemon)\n"
+"  profile <profile> (Switches to the given profile)\n"
+"  profile           (Shows the current and the available profiles)\n"
+"  shell             (Opens the graphical shell)\n"
+"  slay              (Kills the daemon -- use in emergency)\n"
+"  status            (Checks daemon status)\n"
+"  about             (Prints information about gDesklets)\n"
+"  version           (Prints gDesklets version)\n"
+"  configure         (Opens the configuration dialog)\n"
+"  help              (Displays this text)\n"
+"  check             (Checks requirements)\n"
 "\n"
-"\t[option]\n"
-"\t\t--no-tray-icon    (disables the systray icon)\n"
-"\t\t--translucent     (enables translucency on the xorg servers)\n"
 msgstr ""
 
-#: ../gdesklets:161
+#: ../gdesklets:158
 #, c-format
 msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
 
-#: ../gdesklets:164
+#: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
 msgstr ""
 
-#: ../gdesklets:189 ../gdesklets:258
-#, fuzzy, c-format
+#: ../gdesklets:186 ../gdesklets:272
+#, c-format
 msgid "Could not open desklet %s."
-msgstr "ਫਾਇਲ %s ਨੂੰ ਖੋਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ।"
+msgstr ""
 
-#: ../gdesklets:266
+#: ../gdesklets:204
+#, c-format
+msgid "%prog [options] order"
+msgstr ""
+
+#: ../gdesklets:209
+msgid "Avoid to show the icon on the tray"
+msgstr ""
+
+#: ../gdesklets:215
+msgid "Debug the application"
+msgstr ""
+
+#: ../gdesklets:221
+msgid "Launch pre-existing display "
+msgstr ""
+
+#: ../gdesklets:228
+msgid "Session manager prefix"
+msgstr ""
+
+#: ../gdesklets:233
+msgid "Session manager ID"
+msgstr ""
+
+#: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
 msgstr "gdesklets-daemon ਚਾਲੂ ਹੋ ਰਿਹਾ ਹੈ..."
 
-#: ../gdesklets:272
+#: ../gdesklets:282
 msgid "Shutting down gdesklets-daemon..."
 msgstr "gdesklets-daemon ਬੰਦ ਹੋ ਰਿਹਾ ਹੈ..."
 
-#: ../gdesklets:284
-#, fuzzy, c-format
+#: ../gdesklets:294
+#, c-format
 msgid "Currently open displays in profile \"%s\":\n"
-msgstr "ਮੌਜੂਦਾ ਪ੍ਰੋਫਾਇਲ: %s"
+msgstr ""
 
-#: ../gdesklets:289
+#: ../gdesklets:299
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr ""
 
-#: ../gdesklets:293
+#: ../gdesklets:303
 msgid "Restarting gdesklets-daemon..."
 msgstr "gdesklets-daemon ਮੁੜ ਚਾਲੂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
 
-#: ../gdesklets:306
+#: ../gdesklets:316
 msgid "gdesklets-daemon is running"
 msgstr ""
 
-#: ../gdesklets:308
+#: ../gdesklets:318
 msgid "gdesklets-daemon is not running"
 msgstr ""
 
-#: ../gdesklets:312
+#: ../gdesklets:322
 #, c-format
 msgid "Current profile: %s"
 msgstr "ਮੌਜੂਦਾ ਪ੍ਰੋਫਾਇਲ: %s"
 
-#: ../gdesklets:323
+#: ../gdesklets:333
 #, c-format
 msgid "New profile: %s"
 msgstr "ਨਵਾਂ ਪ੍ਰੋਫਾਇਲ਼: %s"
 
-#: ../gdesklets:326
+#: ../gdesklets:336
 #, c-format
 msgid "Available profiles: %s"
 msgstr "ਉਪਲੱਬਧ ਪ੍ਰੋਫਾਇਲ: %s"
 
-#: ../gdesklets:330
+#: ../gdesklets:340
 #, c-format
 msgid "This is %s, version %s."
 msgstr "ਇਹ %s ਹੈ, ਵਰਜਨ %s ਹੈ।"
 
-#: ../gdesklets:358
+#: ../gdesklets:368
 msgid "Nothing to slay."
 msgstr ""
 
-#: ../gdesklets:382
-#, fuzzy
+#: ../gdesklets:392
 msgid "Invalid command. Please try one of the following commands:"
-msgstr "ਗਲਤ ਕਮਾਂਡ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਹੇਠ ਦਿੱਤੀਆਂ ਕਮਾਂਡਾਂ ਇਸਤੇਮਾਲ ਕਰੋ!"
+msgstr ""
 
 #: ../gdesklets-daemon:27
 msgid "You need a recent version of PyGTK to run this program.\n"
 msgstr ""
 
 #: ../gdesklets-daemon:52
-#, fuzzy
 msgid "Could not fork daemon.\n"
-msgstr "ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
+msgstr ""
 
 #: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
 #, c-format
@@ -467,9 +478,8 @@ msgid "GNOME Integration:"
 msgstr "ਗਨੋਮ ਜੋੜ:"
 
 #: ../main/__init__.py:83
-#, fuzzy
 msgid "Additional Programming:"
-msgstr "ਮੂਲ ਪ੍ਰੋਗਰਾਮਿੰਗ:"
+msgstr ""
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
@@ -487,34 +497,34 @@ msgstr "ਵੈੱਬਸਾਇਟ:"
 msgid "Thank you:"
 msgstr ""
 
-#: ../main/Starter.py:102
+#: ../main/Starter.py:103
 msgid "_Manage desklets"
 msgstr "ਡਿਸਕਲਿਟ ਪ੍ਰਬੰਧਨ(_M)"
 
-#: ../main/Starter.py:105
-#, fuzzy
+#: ../main/Starter.py:106
 msgid "_Configuration"
-msgstr "ਸੰਰਚਨਾ"
+msgstr ""
 
-#: ../main/Starter.py:107
+#: ../main/Starter.py:108
 msgid "_View log"
 msgstr "ਲਾੱਗ ਵੇਖੋ(_V)"
 
-#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
+#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
 msgstr "ਇਸ ਬਾਰੇ(_A)..."
 
-#: ../main/Starter.py:113
+#: ../main/Starter.py:114
 msgid "_Stop daemon"
 msgstr ""
 
-#: ../main/Starter.py:224
-#, fuzzy, python-format
+#: ../main/Starter.py:230
+#, python-format
 msgid "Could not open desklet file \"%s\""
-msgstr "ਫਾਇਲ %s ਨੂੰ ਖੋਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ।"
+msgstr ""
 
-#: ../main/Starter.py:225
-msgid "The desklet file could not be opened because the file was not readable."
+#: ../main/Starter.py:231
+msgid ""
+"The desklet file could not be opened because the file was not readable."
 msgstr ""
 
 #: ../main/transition.py:39
@@ -563,33 +573,32 @@ msgid "Please note (this message will appear only once):"
 msgstr ""
 
 #: ../plugin/Interface.py:200 ../plugin/Interface.py:227
-#, fuzzy
 msgid "no description"
-msgstr "ਕੋਈ ਵੇਰਵਾ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ"
-
-#: ../scripting/Script.py:154
-msgid "Error in add_timer function"
 msgstr ""
 
 #: ../scripting/Script.py:155
+msgid "Error in add_timer function"
+msgstr ""
+
+#: ../scripting/Script.py:156
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
 msgstr ""
 
-#: ../scripting/Script.py:199
+#: ../scripting/Script.py:200
 #, python-format
 msgid "No Control could be found for interface %s"
 msgstr ""
 
-#: ../scripting/Script.py:201
+#: ../scripting/Script.py:202
 msgid "This means that a functionality won't be available during execution!"
 msgstr ""
 
-#: ../scripting/Script.py:241
+#: ../scripting/Script.py:242
 msgid "Security Risk"
 msgstr ""
 
-#: ../scripting/Script.py:242
+#: ../scripting/Script.py:243
 #, python-format
 msgid ""
 "The desklet %s wants to execute a system command:\n"
@@ -603,15 +612,15 @@ msgid ""
 "desklet instance to run it."
 msgstr ""
 
-#: ../scripting/Script.py:255
+#: ../scripting/Script.py:256
 msgid "Deny!"
 msgstr ""
 
-#: ../scripting/Script.py:256
+#: ../scripting/Script.py:257
 msgid "Allow once"
 msgstr ""
 
-#: ../scripting/Script.py:257
+#: ../scripting/Script.py:258
 msgid "Allow for this desklet"
 msgstr ""
 
@@ -649,9 +658,8 @@ msgid "%s Control"
 msgstr "%s ਕੰਟਰੋਲ"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:54
-#, fuzzy
 msgid "Interface Name"
-msgstr "ਇੰਟਰਫੇਸ"
+msgstr ""
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:57
 msgid "Property Name"
@@ -670,7 +678,7 @@ msgid "by interface"
 msgstr "ਇੰਟਰਫੇਸ"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:28
-#: ../shell/plugins/DisplayBrowser/__init__.py:80
+#: ../shell/plugins/DisplayBrowser/__init__.py:85
 msgid "alphabetically"
 msgstr "ਵਰਣਮਾਲਾ"
 
@@ -680,51 +688,59 @@ msgid "Found %d controls."
 msgstr "%d ਕੰਟਰੋਲ ਲੱਭੇ ਹਨ।"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
-#: ../shell/plugins/DisplayBrowser/__init__.py:158
+#: ../shell/plugins/DisplayBrowser/__init__.py:190
 msgid "Invalid search expression."
 msgstr "ਗਲਤ ਖੋਜ ਸਮੀਕਰਨ ਹੈ।"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:40
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
 msgid "R_emove selected desklet"
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:43
+#: ../shell/plugins/DisplayBrowser/__init__.py:46
 msgid "_Run (remote) desklet..."
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:45
+#: ../shell/plugins/DisplayBrowser/__init__.py:48
 msgid "R_un selected desklet"
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:78
+#: ../shell/plugins/DisplayBrowser/__init__.py:83
 msgid "by category"
 msgstr "ਵਰਗ ਅਨੁਸਾਰ"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:79
+#: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
 msgstr "ਲੇਖਕ"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:130
+#: ../shell/plugins/DisplayBrowser/__init__.py:148
+msgid "There is a saved instance of this display."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:149
+msgid "Would you like to open this?"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
 msgstr "ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:131
+#: ../shell/plugins/DisplayBrowser/__init__.py:163
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:143
+#: ../shell/plugins/DisplayBrowser/__init__.py:175
 msgid ""
 "The desklet will be removed from your system and no longer be available."
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:155
-#, fuzzy, python-format
+#: ../shell/plugins/DisplayBrowser/__init__.py:187
+#, python-format
 msgid "Found %d desklets"
-msgstr "%d ਦਰਿਸ਼ ਲੱਭੇ ਹਨ।"
+msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:177
+#: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
 msgstr "ਕੋਈ ਵੇਰਵਾ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ"
 
@@ -733,6 +749,10 @@ msgid "_Help"
 msgstr "ਸਹਾਇਤਾ(_H)"
 
 #: ../shell/plugins/Help/__init__.py:38
+msgid "_Contents"
+msgstr ""
+
+#: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
 msgstr "ਅੱਜ ਦਾ ਇਸ਼ਾਰਾ(_T)"
 
@@ -814,9 +834,8 @@ msgid "Retrieving:"
 msgstr "ਪ੍ਰਾਪਤ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ:"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:26
-#, fuzzy
 msgid "I_nstall remote package..."
-msgstr "ਪੈਕੇਜ ਇੰਸਟਾਲ(_I)..."
+msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:27
 msgid "_Install package..."
@@ -858,9 +877,8 @@ msgid "New profile"
 msgstr "ਨਵਾਂ ਪ੍ਰੋਫਾਇਲ"
 
 #: ../shell/plugins/Profiles/__init__.py:76
-#, fuzzy
 msgid "Enter the name for a new profile"
-msgstr "ਨਵੇਂ ਪ੍ਰੋਫਾਇਲ਼ ਦਾ ਨਾਂ ਦਿਓ:"
+msgstr ""
 
 #: ../shell/plugins/Shell/__init__.py:62
 msgid "_File"
@@ -871,9 +889,9 @@ msgid "Search"
 msgstr "ਖੋਜ"
 
 #: ../utils/dialog.py:46
-#, fuzzy, python-format
+#, python-format
 msgid "_Details (%d lines)"
-msgstr "ਵੇਰਵਾ (%d ਸਤਰਾਂ)"
+msgstr ""
 
 #: ../utils/dialog.py:194
 msgid "_Ignore errors from this desklet"
@@ -884,9 +902,9 @@ msgid "An invalid graphics code was loaded into a canvas."
 msgstr ""
 
 #: ../utils/DOM.py:153
-#, fuzzy, python-format
+#, python-format
 msgid "No such element: %s"
-msgstr "ਕੋਈ ਇਕਾਈ ਨਹੀਂ: %s"
+msgstr ""
 
 #: ../utils/DOM.py:154
 #, python-format
@@ -938,92 +956,5 @@ msgid "Runtime Error"
 msgstr ""
 
 #: ../utils/error.py:160
-#, fuzzy
 msgid "An error occurred while executing a desklet."
-msgstr "ਸਕ੍ਰਿਪਟ ਚਲਾਉਣ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ।"
-
-#~ msgid "Monday"
-#~ msgstr "ਸੋਮਵਾਰ"
-
-#~ msgid "Tuesday"
-#~ msgstr "ਮੰਗਲਵਾਰ"
-
-#~ msgid "Wednesday"
-#~ msgstr "ਬੁੱਧਵਾਰ"
-
-#~ msgid "Thursday"
-#~ msgstr "ਵੀਰਵਾਰ"
-
-#~ msgid "Friday"
-#~ msgstr "ਸ਼ੁੱਕਰਵਾਰ"
-
-#~ msgid "Saturday"
-#~ msgstr "ਸ਼ਨੀਚਰਵਾਰ"
-
-#~ msgid "Sunday"
-#~ msgstr "ਐਤਵਾਰ"
-
-#~ msgid "January"
-#~ msgstr "ਜਨਵਰੀ"
-
-#~ msgid "February"
-#~ msgstr "ਫਰਵਰੀ"
-
-#~ msgid "March"
-#~ msgstr "ਮਾਰਚ"
-
-#~ msgid "May"
-#~ msgstr "ਮਈ"
-
-#~ msgid "June"
-#~ msgstr "ਜੂਨ"
-
-#~ msgid "July"
-#~ msgstr "ਜੁਲਾਈ"
-
-#~ msgid "August"
-#~ msgstr "ਅਗਸਤ"
-
-#~ msgid "September"
-#~ msgstr "ਸਤੰਬਰ"
-
-#~ msgid "October"
-#~ msgstr "ਅਕਤੂਬਰ"
-
-#~ msgid "November"
-#~ msgstr "ਨਵੰਬਰ"
-
-#~ msgid "December"
-#~ msgstr "ਦਸੰਬਰ"
-
-#~ msgid "_Move display"
-#~ msgstr "ਦਰਿਸ਼ ਏਧਰ-ਓਧਰ(_M)"
-
-#~ msgid "Error while configuring display"
-#~ msgstr "ਦਰਿਸ਼ ਸੰਰਚਨਾ ਦੌਰਾਨ ਗਲਤੀ"
-
-#~ msgid "An error occurred while running a sensor."
-#~ msgstr "ਸੰਕੇਤਕ ਚਲਾਉਣ ਦੌਰਾਨ ਗਲਤੀ ਹੈ।"
-
-#~ msgid "Could not find X display."
-#~ msgstr "X ਦਰਿਸ਼ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋ ਸਕਿਆ ਹੈ।"
-
-#~ msgid "This software is licensed under the terms of the GNU GPL."
-#~ msgstr "ਇਹ ਸਾਫਟਵੇਅਰ GNU GPL ਅਧੀਨ ਜਾਰੀ ਕੀਤਾ ਗਿਆ ਹੈ।"
-
-#~ msgid "Log Messages"
-#~ msgstr "ਲਾੱਗ ਸੁਨੇਹੇ"
-
-#~ msgid "Error in script"
-#~ msgstr "ਸਕ੍ਰਿਪਟ ਵਿੱਚ ਗਲਤੀ"
-
-#~ msgid "An error occurred while loading a script."
-#~ msgstr "ਸਕ੍ਰਿਪਟ ਲੋਡ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ।"
-
-#~ msgid "translator_credits"
-#~ msgstr ""
-#~ "ਅਮਨਪ੍ਰੀਤ ਸਿੰਘ ਆਲਮਵਾਲਾ <aalam@redhat.com>\n"
-#~ "ਜਸਵਿੰਦਰ ਸਿੰਘ ਫੂਲੇਵਾਲਾ <jaswinderphulewala@yahoo.com>"
-
-#~ msgid "Do you really want to remove this display?"
-#~ msgstr "ਕੀ ਤੁਸੀਂ ਇਸ ਦਰਿਸ਼ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+msgstr ""

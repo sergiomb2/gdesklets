@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the gdesklets package.
 # Vincent van Adrighem <V.vanAdrighem@dirck.mine.nu>, 2003.
 # Tino Meinen <a.t.meinen@chello.nl>, 2003, 2004, 2005, 2006
+# Reinout van Schouwen <reinouts@gnome.org>, 2009
 #
 # Control -? meter/meterplaat/control/
 # display -? applet/weergave
@@ -12,19 +13,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets cvs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-02 21:49+0100\n"
-"PO-Revision-Date: 2006-08-20 20:43+0200\n"
-"Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
+"POT-Creation-Date: 2008-12-29 09:28-0300\n"
+"PO-Revision-Date: 2009-09-07 10:09+0000\n"
+"Last-Translator: Reinout van Schouwen <reinouts@gnome.org>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
 
-#: ../config/ConfigDialog.py:113
+#: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
 msgstr "Ongeldige functieaanroep"
 
-#: ../config/ConfigDialog.py:114
+#: ../config/ConfigDialog.py:116
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -35,7 +38,7 @@ msgstr ""
 "Dit betekent dat er een fout zit in de desklet's code. U zou de auteur van "
 "de desklet moeten informeren over het probleem."
 
-#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
+#: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
 msgstr "Deze desklet is niet configureerbaar."
 
@@ -70,8 +73,8 @@ msgstr "Schermresolutie (DPI)"
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
-"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
-"\"</b> wide"
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
+"<b>1.97\"</b> wide"
 msgstr ""
 "Wijzig de waarde hierboven zodat de balk exact <b>5 cm</b> of <b>1,97\"</b> "
 "breed is"
@@ -82,7 +85,7 @@ msgstr "Gedrag"
 
 #: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
-msgstr "Paneelpictogram tonen (werkt pas na een herstart)"
+msgstr "_Mededelingspictogram tonen (werkt pas na een herstart)"
 
 #: ../config/DaemonConfigger.py:29
 msgid "Show _notification while loading a desklet"
@@ -108,40 +111,43 @@ msgid "gDesklets display"
 msgstr "gDesklets weergave"
 
 # instellen/configureren
-#: ../display/Display.py:85
+#: ../display/Display.py:86
 msgid "_Configure desklet"
 msgstr "Desklet _configureren"
 
-#: ../display/Display.py:87
+#: ../display/Display.py:88
 msgid "_Move desklet"
 msgstr "Desklet ver_plaatsen"
 
-#: ../display/Display.py:90
+#: ../display/Display.py:91
 msgid "_View Source"
 msgstr "_Bron weergeven"
 
-#: ../display/Display.py:93
+#: ../display/Display.py:94
 msgid "Re_start desklet"
 msgstr "Desklet _herstarten"
 
-#: ../display/Display.py:95
+#: ../display/Display.py:96
 msgid "_Remove desklet"
 msgstr "Desklet _verwijderen"
 
 #: ../display/Display.py:98
-#, fuzzy
+msgid "_Disable desklet"
+msgstr "Desklet _uitschakelen"
+
+#: ../display/Display.py:101
 msgid "_About"
-msgstr "In_fo..."
+msgstr "I_nfo over"
 
-#: ../display/Display.py:337
+#: ../display/Display.py:340
 msgid "_Readme"
-msgstr ""
+msgstr "_Leesmij"
 
-#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
+#: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
 msgstr "Wilt u deze desklet echt verwijderen?"
 
-#: ../display/Display.py:1116
+#: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
@@ -218,59 +224,56 @@ msgstr ""
 "Een sensor kon niet worden gevonden. Dit betekent gewoonlijk dat het niet is "
 "geïnstalleerd."
 
-#: ../gdesklets:26
+#: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
 msgstr "U moet gDesklets NIET als systeembeheerder (root) uitvoeren."
 
-#: ../gdesklets:46
+#: ../gdesklets:47
 msgid "Checking requirements:"
 msgstr "Vereisten controleren:"
 
-#: ../gdesklets:50
-#, fuzzy
+#: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
-msgstr "Python-versie => 2.3.0 is vereist."
+msgstr "Python versie >= 2.3.0 is required."
 
-#: ../gdesklets:54
+#: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr "libexpat-versie 1.95.7 is kapot. Doe een upgrade alstublieft!"
 
-#: ../gdesklets:57
+#: ../gdesklets:58
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr ""
 "SAX is vereist, bepaalde SuSe-versies worden zonder dit pakket geleverd."
 
-#: ../gdesklets:61
-#, fuzzy
+#: ../gdesklets:62
 msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
-"GTK python bindings (pygtk2) versie >= 2.4.0 en GTK+ versie >= 2.4.0 zijn "
+"GTK python bindings (pygtk2) versie >= 2.10.0 en GTK+ versie >= 2.10.0 zijn "
 "vereist."
 
-#: ../gdesklets:65
-#, fuzzy
+#: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
-msgstr "ORBit python bindings (pyorbit) versie == 2.0.1 is vereist."
+msgstr "ORBit python bindings (pyorbit) versie >= 2.0.1 zijn vereist."
 
-#: ../gdesklets:68
+#: ../gdesklets:69
 msgid "bonobo python bindings are required."
 msgstr "bonobo python bindings zijn vereist."
 
-#: ../gdesklets:77
+#: ../gdesklets:78
 msgid "found"
 msgstr "gevonden"
 
-#: ../gdesklets:81
+#: ../gdesklets:82
 msgid "missing"
 msgstr "ontbrekend"
 
-#: ../gdesklets:87
+#: ../gdesklets:88
 msgid "Version check failed."
 msgstr "Versie-controle mislukt."
 
-#: ../gdesklets:88
+#: ../gdesklets:89
 #, c-format
 msgid ""
 "\n"
@@ -280,7 +283,7 @@ msgstr ""
 "%s\n"
 
 # geïnstalleerd
-#: ../gdesklets:89
+#: ../gdesklets:90
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -298,11 +301,11 @@ msgstr ""
 "\n"
 "HET OPSTARTEN ZAL NU WORDEN AFGEBROKEN!\n"
 
-#: ../gdesklets:98
+#: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
-msgstr ""
+msgstr "Nagaan van vereisten gereed. Uw systeem ziet er OK uit!"
 
-#: ../gdesklets:105
+#: ../gdesklets:106
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
@@ -312,128 +315,146 @@ msgstr ""
 "U gebruikt gDesklets voor de eerste keer.\n"
 "gDesklets zal nu eerst controleren op vereisten...\n"
 
-# enkele tabs gebruikt ipv dubbele
-#: ../gdesklets:116
+#: ../gdesklets:117
 msgid ""
-"Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
-"\t<command>\n"
-"\t\topen    <files>   (Opens the given desklet files)\n"
-"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
-"\t\tstop              (Stops the gDesklets daemon)\n"
-"\t\tlist              (Lists open desklets)\n"
-"\t\trestart           (Restarts the gDesklets daemon)\n"
-"\t\tprofile <profile> (Switches to the given profile)\n"
-"\t\tprofile           (Shows the current and the available profiles)\n"
-"\t\tshell             (Opens the graphical shell)\n"
-"\t\tslay              (Kills the daemon -- use in emergency)\n"
-"\t\tstatus            (Checks daemon status)\n"
-"\t\tabout             (Prints information about gDesklets)\n"
-"\t\tversion           (Prints gDesklets version)\n"
-"\t\tconfigure         (Opens the configuration dialog)\n"
-"\t\thelp              (Displays this text)\n"
-"\t\tcheck             (Checks requirements)\n"
+"Orders:\n"
+"  open    <files>   (Opens the given desklet files)\n"
+"  start             (Runs the gDesklets daemon, this is default)\n"
+"  stop              (Stops the gDesklets daemon)\n"
+"  list              (Lists open desklets)\n"
+"  restart           (Restarts the gDesklets daemon)\n"
+"  profile <profile> (Switches to the given profile)\n"
+"  profile           (Shows the current and the available profiles)\n"
+"  shell             (Opens the graphical shell)\n"
+"  slay              (Kills the daemon -- use in emergency)\n"
+"  status            (Checks daemon status)\n"
+"  about             (Prints information about gDesklets)\n"
+"  version           (Prints gDesklets version)\n"
+"  configure         (Opens the configuration dialog)\n"
+"  help              (Displays this text)\n"
+"  check             (Checks requirements)\n"
 "\n"
-"\t[option]\n"
-"\t\t--no-tray-icon    (disables the systray icon)\n"
-"\t\t--translucent     (enables translucency on the xorg servers)\n"
 msgstr ""
-"Gebruik: gdesklets [optie] <opdracht> [argumenten...]\n"
 "\n"
-"<opdracht> \n"
-"\topen    <bestanden> (Opent de gegeven desklets)\n"
-"\tstart               (Start de gDesklets-daemon, dit is standaard)\n"
-"\tstop                (Stopt de gDesklets-daemon)\n"
-"\tlist                (Geeft opsomming van lopende desklets)\n"
-"\trestart             (Herstart de gDesklets-daemon)\n"
-"\tprofile <profiel>   (Wisselt naar het gegeven profiel)\n"
-"\tprofile             (Toont de huidige en de beschikbare profielen)\n"
-"\tshell               (Opent een grafische shell)\n"
-"\tslay                (Kills de daemon -- voor noodgevallen)\n"
-"\tstatus              (Controleert de status van de daemon)\n"
-"\tabout               (Geeft informatie over gDesklets)\n"
-"\tversion             (Geeft de versie van gDesklets)\n"
-"\tconfigure           (Opent het configuratievenster)\n"
-"\thelp                (Toont deze tekst)\n"
-"\tcheck               (Controleert de vereisten)\n"
+"Opdrachten:\n"
+"  open    <files>   (Opent de gegeven deskletbestanden)\n"
+"  start             (Start de gDesklets-voorziening, dit is standaard)\n"
+"  stop              (Stopt de gDesklets-voorziening)\n"
+"  list              (Somt open desklets op)\n"
+"  restart           (Herstart de gDesklets-voorziening)\n"
+"  profile <profile> (Schakelt naar het gegeven profiel)\n"
+"  profile           (Toont de huidige en beschikbare profielen)\n"
+"  shell             (Opent de grafische schil)\n"
+"  slay              (Breekt de voorziening af -- voor noodgevallen)\n"
+"  status            (Controleert de voorzieningsstatus)\n"
+"  about             (Drukt informatie over gDesklets af)\n"
+"  version           (Drukt de gDesklets-versie af)\n"
+"  configure         (Opent het configuratiescherm)\n"
+"  help              (Geeft deze tekst weer)\n"
+"  check             (Gaat vereisten na)\n"
 "\n"
-"[optie]\n"
-"\t--no-tray-icon      (Zet de paneelpicogram uit)\n"
-"\t--translucent       (Zet doorzichtigheid aan op de xorg-servers)\n"
 
-#: ../gdesklets:161
+#: ../gdesklets:158
 #, c-format
 msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
+"Er is een fout opgetreden bij het starten van gdesklets-daemon\n"
+"Meer informatie over deze storing is te vinden in \"%s\"."
 
-#: ../gdesklets:164
+#: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
-msgstr ""
+msgstr "Exception was: %s\n"
 
-#: ../gdesklets:189 ../gdesklets:258
+#: ../gdesklets:186 ../gdesklets:272
 #, c-format
 msgid "Could not open desklet %s."
 msgstr "Kon desklet %s niet openen."
 
-#: ../gdesklets:266
-msgid "Starting gdesklets-daemon..."
-msgstr "Opstarten van gdesklets-daemon..."
+#: ../gdesklets:204
+#, c-format
+msgid "%prog [options] order"
+msgstr "%prog [options] volgorde"
 
-#: ../gdesklets:272
+#: ../gdesklets:209
+msgid "Avoid to show the icon on the tray"
+msgstr "Tonen van mededelingspictogram vermijden"
+
+#: ../gdesklets:215
+msgid "Debug the application"
+msgstr "Toepassing debuggen"
+
+#: ../gdesklets:221
+msgid "Launch pre-existing display "
+msgstr "Reeds bestaande weergave starten "
+
+#: ../gdesklets:228
+msgid "Session manager prefix"
+msgstr "Sessiebeheer-prefix"
+
+#: ../gdesklets:233
+msgid "Session manager ID"
+msgstr "Sessiebeheer-ID"
+
+#: ../gdesklets:276
+msgid "Starting gdesklets-daemon..."
+msgstr "Opstarten van gdesklets-daemon…"
+
+#: ../gdesklets:282
 msgid "Shutting down gdesklets-daemon..."
-msgstr "Afsluiten van gdesklets-daemon..."
+msgstr "Afsluiten van gdesklets-daemon…"
 
 # displays hier desklets
-#: ../gdesklets:284
+#: ../gdesklets:294
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr "Momenteel in werking zijnde desklets in profiel \"%s\":\n"
 
-#: ../gdesklets:289
+#: ../gdesklets:299
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr "Er zijn momenteel geen desklets in profiel \"%s\""
 
-#: ../gdesklets:293
+#: ../gdesklets:303
 msgid "Restarting gdesklets-daemon..."
-msgstr "Herstarten van gdesklets-daemon..."
+msgstr "Herstarten van gdesklets-daemon…"
 
-#: ../gdesklets:306
+#: ../gdesklets:316
 msgid "gdesklets-daemon is running"
 msgstr "gdesklets-daemon is opgestart"
 
-#: ../gdesklets:308
+#: ../gdesklets:318
 msgid "gdesklets-daemon is not running"
 msgstr "gdesklets-daemon is niet opgestart"
 
-#: ../gdesklets:312
+#: ../gdesklets:322
 #, c-format
 msgid "Current profile: %s"
 msgstr "Huidig profiel: %s"
 
-#: ../gdesklets:323
+#: ../gdesklets:333
 #, c-format
 msgid "New profile: %s"
 msgstr "Nieuw profiel: %s"
 
-#: ../gdesklets:326
+#: ../gdesklets:336
 #, c-format
 msgid "Available profiles: %s"
 msgstr "Beschikbare profielen: %s"
 
-#: ../gdesklets:330
+#: ../gdesklets:340
 #, c-format
 msgid "This is %s, version %s."
 msgstr "Dit is %s, versie %s."
 
-#: ../gdesklets:358
+#: ../gdesklets:368
 msgid "Nothing to slay."
 msgstr "Niets te stoppen."
 
-#: ../gdesklets:382
+#: ../gdesklets:392
 msgid "Invalid command. Please try one of the following commands:"
 msgstr "Ongeldige opdracht. Probeer een van de volgende opdrachten:"
 
@@ -524,14 +545,12 @@ msgid "GNOME Integration:"
 msgstr "GNOME-integratie:"
 
 #: ../main/__init__.py:83
-#, fuzzy
 msgid "Additional Programming:"
-msgstr "Kernprogrammering:"
+msgstr "Extra programmeerwerk:"
 
 #: ../main/__init__.py:86
-#, fuzzy
 msgid "Documentation:"
-msgstr "Oriëntatie"
+msgstr "Documentatie:"
 
 #: ../main/__init__.py:89
 msgid "Artwork:"
@@ -547,39 +566,39 @@ msgstr "Website:"
 msgid "Thank you:"
 msgstr "Met dank aan:"
 
-#: ../main/Starter.py:102
+#: ../main/Starter.py:103
 msgid "_Manage desklets"
 msgstr "Desklets _beheren"
 
 # configureren beter?
-#: ../main/Starter.py:105
+#: ../main/Starter.py:106
 msgid "_Configuration"
 msgstr "_Configuratie"
 
-#: ../main/Starter.py:107
+#: ../main/Starter.py:108
 msgid "_View log"
 msgstr "_Logboek weergeven"
 
-#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
+#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
-msgstr "In_fo..."
+msgstr "In_fo…"
 
-#: ../main/Starter.py:113
+#: ../main/Starter.py:114
 msgid "_Stop daemon"
 msgstr "Daemon _stoppen"
 
-#: ../main/Starter.py:224
+#: ../main/Starter.py:230
 #, python-format
 msgid "Could not open desklet file \"%s\""
 msgstr "Kan het desklet-bestand \"%s\" niet openen"
 
-#: ../main/Starter.py:225
-msgid "The desklet file could not be opened because the file was not readable."
+#: ../main/Starter.py:231
+msgid ""
+"The desklet file could not be opened because the file was not readable."
 msgstr ""
 "Het desklet-bestand kon niet geopend worden omdat deze niet leesbaar is."
 
 #: ../main/transition.py:39
-#, fuzzy
 msgid ""
 "This is a unstable version of gDesklets. Unstable versions represent the "
 "current state of development and might be unstable or cause problems from "
@@ -594,18 +613,19 @@ msgid ""
 "\n"
 "Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
-"Dit is een CVS-versie van gDesklets. CVS-versies tonen de meest recente "
-"ontwikkelingen maar zijn mogelijk instabiel of veroorzaken zo nu en dan "
-"problemen.\n"
+"Dit is een onstabiele versie van gDesklets. Onstabiele versies representeren "
+"de huidige staat van ontwikkeling en zouden instabiel kunnen zijn of af en "
+"toe problemen kunnen veroorzaken.\n"
 "\n"
-"Als u gDesklets voor het eerst probeert wordt aangeraden om <b>geen</b> CVS-"
-"versie te gebruiken maar een stabiele versie!\n"
+"Indien u een nieuwe gDesklets-gebruiker bent is het daarom sterk "
+"<b>afgeraden</b> om deze versie te gebruiken. Gebruik liever een stabielie "
+"versie!\n"
 "\n"
-"Indien u toch de CVS-versie wilt gebruiken in plaats van de stabiele versie, "
-"stellen we het op prijs wanneer u vreemd gDesklets-gedrag meldt aan de "
-"ontwikkelaars.\n"
+"Wilt u nog steeds de instabiele versie gebruiken in plaats van een stabiele, "
+"dan zouden wij het zeer op prijs stellen als u vreemd gedrag zou willen "
+"melden aan de ontwikkelaars.\n"
 "\n"
-"Ervaren gebruikers wordt gevraagd om wel de CVS-versie te gebruiken!"
+"Ervaren gebruikers worden echter aangemoedigd om een bzr-versie te proberen!"
 
 #: ../main/transition.py:51
 msgid ""
@@ -629,7 +649,6 @@ msgstr ""
 #. our informative transition message which we can change with
 #. every release
 #: ../main/transition.py:62
-#, fuzzy
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -640,16 +659,15 @@ msgid ""
 "Please note that due to limitations of older X servers, you might see blocks "
 "around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
-"Deze versie van gDesklets heeft nu een zweefstand: druk een toets op het "
-"toetsenbord en al uw desklets zullen naar voren springen, zichtbaar boven uw "
-"toepassingen, totdat u deze toets weer indrukt!\n"
-"De standaard toets hiervoor is &lt;Shift&gt; &lt;F12&gt;, maar u kunt dat "
-"eenvoudig wijzigen in het dialoogvenster: Configuratie.\n"
+"Deze versie van gDesklets bevat de zweefstand: u drukt op een toets en al uw "
+"desklets komen naar boven, zwevend boven uw toepassingen, totdat u die toets "
+"weer opnieuw indrukt!\n"
+"De standaard sneltoets is &lt;Shift&gt; &lt;F12&gt; maar u kunt dit "
+"makkelijk wijzigen in het configuratiescherm.\n"
 "\n"
-"Merk op dat door de beperkingen van oudere X-servers, u mogelijkerwijs, in "
-"de zweefstand, kaders om de desklets zult zien. Dit kan niet worden "
-"verholpen behalve door een X-server met echte doorschijnendheid te gebruiken "
-"(Xorg versie 6.8 of hoger)."
+"Merk op dat als gevolg van beperkingen in oudere X-servers u wellicht "
+"blokken rond desklets ziet in de zweefstand. Dit kan helaas niet op een "
+"goede manier worden opgelost."
 
 #: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
@@ -659,32 +677,32 @@ msgstr "Merk op (dit bericht verschijnt slechts één keer):"
 msgid "no description"
 msgstr "geen beschrijving"
 
-#: ../scripting/Script.py:154
+#: ../scripting/Script.py:155
 msgid "Error in add_timer function"
 msgstr "Fout in functie add_timer"
 
-#: ../scripting/Script.py:155
+#: ../scripting/Script.py:156
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
 msgstr "\"%s\" is geen geldige getalswaarde!"
 
 # interface vertalen?
-#: ../scripting/Script.py:199
+#: ../scripting/Script.py:200
 #, python-format
 msgid "No Control could be found for interface %s"
 msgstr "Er kon geen applet worden gevonden voor interface %s"
 
-#: ../scripting/Script.py:201
+#: ../scripting/Script.py:202
 msgid "This means that a functionality won't be available during execution!"
 msgstr ""
 "Dit betekent dat een functionaliteit niet beschikbaar is tijdens het "
 "uitvoeren!"
 
-#: ../scripting/Script.py:241
+#: ../scripting/Script.py:242
 msgid "Security Risk"
 msgstr "Veiligheidsrisico"
 
-#: ../scripting/Script.py:242
+#: ../scripting/Script.py:243
 #, python-format
 msgid ""
 "The desklet %s wants to execute a system command:\n"
@@ -707,15 +725,15 @@ msgstr ""
 "Indien u zeker bent dat de opdracht geen schade kan veroorzaken kunt u deze "
 "desklet toestemming geven om de opdracht altijd te mogen uitvoeren."
 
-#: ../scripting/Script.py:255
+#: ../scripting/Script.py:256
 msgid "Deny!"
 msgstr "Weigeren!"
 
-#: ../scripting/Script.py:256
+#: ../scripting/Script.py:257
 msgid "Allow once"
 msgstr "Een keer toestaan"
 
-#: ../scripting/Script.py:257
+#: ../scripting/Script.py:258
 msgid "Allow for this desklet"
 msgstr "Toestaan voor deze desklet"
 
@@ -775,7 +793,7 @@ msgid "by interface"
 msgstr "op interface"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:28
-#: ../shell/plugins/DisplayBrowser/__init__.py:80
+#: ../shell/plugins/DisplayBrowser/__init__.py:85
 msgid "alphabetically"
 msgstr "alfabetisch"
 
@@ -785,36 +803,44 @@ msgid "Found %d controls."
 msgstr "%d meters gevonden."
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
-#: ../shell/plugins/DisplayBrowser/__init__.py:158
+#: ../shell/plugins/DisplayBrowser/__init__.py:190
 msgid "Invalid search expression."
 msgstr "Ongeldige zoekuitdrukking."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:40
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
 msgid "R_emove selected desklet"
 msgstr "Geselecteerde desklet _verwijderen"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:43
+#: ../shell/plugins/DisplayBrowser/__init__.py:46
 msgid "_Run (remote) desklet..."
-msgstr "(Externe) _desklet uitvoeren..."
+msgstr "(Externe) _desklet uitvoeren…"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:45
+#: ../shell/plugins/DisplayBrowser/__init__.py:48
 msgid "R_un selected desklet"
 msgstr "Geselecteerde desklet _uitvoeren"
 
 # sorteren op...
-#: ../shell/plugins/DisplayBrowser/__init__.py:78
+#: ../shell/plugins/DisplayBrowser/__init__.py:83
 msgid "by category"
 msgstr "op category"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:79
+#: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
 msgstr "op auteur"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:130
+#: ../shell/plugins/DisplayBrowser/__init__.py:148
+msgid "There is a saved instance of this display."
+msgstr "Er is een opgeslagen instantie van deze weergave."
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:149
+msgid "Would you like to open this?"
+msgstr "Wilt u deze openen?"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
 msgstr "Kon niet verwijderen"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:131
+#: ../shell/plugins/DisplayBrowser/__init__.py:163
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
@@ -822,19 +848,19 @@ msgstr ""
 "Het desklet-bestand kon niet worden verwijderd. Waarschijnlijk omdat u geen "
 "schrijfrechten op het bestand heeft."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:143
+#: ../shell/plugins/DisplayBrowser/__init__.py:175
 msgid ""
 "The desklet will be removed from your system and no longer be available."
 msgstr ""
 "Deze desklet zal van uw systeem worden verwijderd en niet langer beschikbaar "
 "zijn."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#: ../shell/plugins/DisplayBrowser/__init__.py:187
 #, python-format
 msgid "Found %d desklets"
 msgstr "%d desklets gevonden."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:177
+#: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
 msgstr "Geen beschrijving beschikbaar"
 
@@ -843,6 +869,10 @@ msgid "_Help"
 msgstr "_Hulp"
 
 #: ../shell/plugins/Help/__init__.py:38
+msgid "_Contents"
+msgstr "In_houd"
+
+#: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
 msgstr "_Tip van de dag"
 
@@ -855,7 +885,6 @@ msgid "Show tips at startup"
 msgstr "Tips tonen bij opstarten"
 
 #: ../shell/plugins/Help/tips.py:2
-#, fuzzy
 msgid ""
 "You can find lots of desktop applets for use\n"
 "with gDesklets at\n"
@@ -864,12 +893,12 @@ msgid ""
 "and\n"
 "http://gdesklets.zencomputer.ca/"
 msgstr ""
-"U kunt nog veel meer desktopapplets voor\n"
-"gDesklets vinden op\n"
+"U kunt een heleboel desktop applets voor gebruik \n"
+"met gDesklets vinden op\n"
 "\n"
 "http://www.gdesklets.org\n"
 "en\n"
-"http://gdesklets.gnomedesktop.org"
+"http://gdesklets.zencomputer.ca/"
 
 #: ../shell/plugins/Help/tips.py:9
 msgid ""
@@ -961,11 +990,11 @@ msgstr "Binnenhalen:"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:26
 msgid "I_nstall remote package..."
-msgstr "E_xtern pakket i_nstalleren..."
+msgstr "E_xtern pakket i_nstalleren…"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:27
 msgid "_Install package..."
-msgstr "Pakket i_nstalleren..."
+msgstr "Pakket i_nstalleren…"
 
 # onjuist/ongeldig
 #: ../shell/plugins/PackageInstaller/__init__.py:97
@@ -1001,7 +1030,7 @@ msgstr "_Profielen"
 
 #: ../shell/plugins/Profiles/__init__.py:20
 msgid "New profile..."
-msgstr "Nieuw profiel..."
+msgstr "Nieuw profiel…"
 
 #: ../shell/plugins/Profiles/__init__.py:75
 msgid "New profile"
@@ -1092,333 +1121,3 @@ msgstr "Uitvoeringsfout"
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
 msgstr "Er is een fout opgetreden bij het uitvoeren van een desklet."
-
-#~ msgid "XComposite support (requires composition manager)"
-#~ msgstr "Ondersteuning voor XComposite (vereist een composition-manager)"
-
-#~ msgid ""
-#~ "\n"
-#~ "     <small><i>"
-#~ msgstr ""
-#~ "\n"
-#~ "     <small><i>"
-
-#~ msgid "this does not work with GTK 2.8 or higher for technical reasons"
-#~ msgstr "dit werkt niet met GTK 2.8 of hoger vanwege technische redenen"
-
-#~ msgid "</i></small>"
-#~ msgstr "</i></small>"
-
-#~ msgid "Translucency (takes effect after restarting a display)"
-#~ msgstr "Doorschijnend (werkt pas na herstarten van een monitor)"
-
-#~ msgid "Error while configuring desklet"
-#~ msgstr "Fout bij instellen van de desklet"
-
-#~ msgid ""
-#~ "A desklet could not be configured properly. It will most likely be broken "
-#~ "and you should consider removing it."
-#~ msgstr ""
-#~ "Een van de desklets kon niet geladen worden. Deze is waarschijnlijk kapot "
-#~ "en kan beter verwijderd worden."
-
-#~ msgid "Error in sensor '%(name)s'"
-#~ msgstr "Fout in sensor '%(name)s'"
-
-#~ msgid ""
-#~ "An error occurred while loading a sensor. This most likely means that "
-#~ "your system does not fulfill all its requirements."
-#~ msgstr ""
-#~ "Er is een fout opgetreden bij het laden van een sensor. Dit betekent "
-#~ "waarschijnlijk dat uw systeem niet aan alle eisen voldoet."
-
-#~ msgid "Error in sensor %(name)s"
-#~ msgstr "Fout in sensor '%(name)s'"
-
-#~ msgid "An error occurred while running a sensor."
-#~ msgstr "Er is een fout opgetreden bij het uitvoeren van een sensor."
-
-#~ msgid "Invalid desklet file \"%s\""
-#~ msgstr "Ongeldig desklet-bestand \"%s\""
-
-#~ msgid "The desklet file contains invalid data and could not be loaded."
-#~ msgstr ""
-#~ "Het desklet-bestand bevat ongeldige data en kan niet geladen worden."
-
-#~ msgid ""
-#~ "This version of gDesklets does no longer use the GConf database. If you "
-#~ "don't plan to use an older version of gDesklets, you can safely remove "
-#~ "the '/apps/gdesklets' folder from your GConf database.\n"
-#~ "\n"
-#~ "Due to the complete transition of the configuration data into the '~/."
-#~ "gdesklets' folder, gDesklets 0.35 will not make use of your previous "
-#~ "configuration.\n"
-#~ "\n"
-#~ "Sorry if this should cause any inconveniences!"
-#~ msgstr ""
-#~ "Deze versie van gDesklets gebruikt niet langer de GConf database. Indien "
-#~ "u niet van plan bent om oudere versies van gDesklets te gebruiken, kunt u "
-#~ "de map /apps/gdesklets veilig verwijderen uit uw GConf database.\n"
-#~ "\n"
-#~ "Vanwege de volledige omzetting van de configuratiegegevens naar de map "
-#~ "'~/.gdesklets' zal gDesklets 0.35 geen gebruik maken van uw vorige "
-#~ "configuratie.\n"
-#~ "\n"
-#~ "Excuses als dit ongemak veroorzaakt."
-
-#~ msgid "Error in script"
-#~ msgstr "Fout in script"
-
-#~ msgid "SVG parse error"
-#~ msgstr "SVG verwerkingsfout"
-
-#~ msgid ""
-#~ "The element <b>%(name)s</b> does not have the <b>%(key)s</b> property."
-#~ msgstr ""
-#~ "Het element <b>%(name)s</b> heeft de eigenschap <b>%(key)s</b> niet."
-
-#~ msgid "_Move display"
-#~ msgstr "Applet ver_plaatsen"
-
-# diplay is hier de DISPLAY van de X-server?
-#~ msgid "Could not find X display."
-#~ msgstr "Kon de X-display niet vinden."
-
-#~ msgid "Could not connect to gnome-session"
-#~ msgstr "Kon geen verbinding leggen met gnome-session"
-
-# vrij vertaald
-#~ msgid "GNOME session management will not be available for this application."
-#~ msgstr ""
-#~ "Deze toepassing zal tijdens deze sessie niet door GNOME worden beheerd."
-
-#~ msgid "translator_credits"
-#~ msgstr ""
-#~ "Vincent van Adrighem\n"
-#~ "Tino Meinen\n"
-#~ "\n"
-#~ "Kijk voor meer info op http://nl.gnome.org/"
-
-#~ msgid "Do you really want to remove this display?"
-#~ msgstr "Wilt u deze applet werkelijk verwijderen?"
-
-#~ msgid "No such item: %s"
-#~ msgstr "Item bestaat niet: %s"
-
-#~ msgid "The %(name)s container accepts only one child."
-#~ msgstr "De container %(name)s accepteert slechts een dochter."
-
-#~ msgid "Log Messages"
-#~ msgstr "Berichten loggen"
-
-#~ msgid "An error occurred while loading a script."
-#~ msgstr "Er is een fout opgetreden bij het uitvoeren van een script."
-
-#~ msgid "Monday"
-#~ msgstr "Maandag"
-
-#~ msgid "Tuesday"
-#~ msgstr "Dinsdag"
-
-#~ msgid "Wednesday"
-#~ msgstr "Woensdag"
-
-#~ msgid "Thursday"
-#~ msgstr "Donderdag"
-
-#~ msgid "Friday"
-#~ msgstr "Vrijdag"
-
-#~ msgid "Saturday"
-#~ msgstr "Zaterdag"
-
-#~ msgid "Sunday"
-#~ msgstr "Zondag"
-
-#~ msgid "January"
-#~ msgstr "Januari"
-
-#~ msgid "February"
-#~ msgstr "Februari"
-
-#~ msgid "March"
-#~ msgstr "Maart"
-
-#~ msgid "May"
-#~ msgstr "Mei"
-
-#~ msgid "June"
-#~ msgstr "Juni"
-
-#~ msgid "July"
-#~ msgstr "Juli"
-
-#~ msgid "August"
-#~ msgstr "Augustus"
-
-#~ msgid "September"
-#~ msgstr "September"
-
-#~ msgid "October"
-#~ msgstr "October"
-
-#~ msgid "November"
-#~ msgstr "November"
-
-#~ msgid "December"
-#~ msgstr "December"
-
-#~ msgid "This software is licensed under the terms of the GNU GPL."
-#~ msgstr "Deze software is uitgegeven onder de voorwaarden van de GNU GPL."
-
-# succesvol/correct/juist/goed
-#~ msgid "The package has been installed successfully."
-#~ msgstr "Het pakket is correct geïnstalleerd."
-
-#~ msgid "Closing %s."
-#~ msgstr "Sluiten van %s."
-
-#~ msgid "Purging path %s."
-#~ msgstr "Wissen van pad %s."
-
-#~ msgid "Purging %s."
-#~ msgstr "Wissen van %s."
-
-#~ msgid "Opening %s."
-#~ msgstr "Openen van %s."
-
-#~ msgid "ID: %s"
-#~ msgstr "ID: %s"
-
-#~ msgid "New profile:       %s"
-#~ msgstr "Nieuw profiel:     %s"
-
-#~ msgid "Removing %s"
-#~ msgstr "Verwijderen van %s"
-
-#~ msgid "Remove Display ?"
-#~ msgstr "Applet verwijderen?"
-
-#~ msgid ""
-#~ "There is no control installed that implements\n"
-#~ "the <b>%s</b> interface."
-#~ msgstr ""
-#~ "Er is geen meter geïnstalleerd die de interface\n"
-#~ "<b>%s</b> implementeert."
-
-#~ msgid "Usage: gdesklets <OPTION> <my.display>\n"
-#~ msgstr "Gebruik: gdesklets <OPTIE> <mijn.display>\n"
-
-#~ msgid "Options:\n"
-#~ msgstr "Opties:\n"
-
-#~ msgid ""
-#~ "\t--no-config\t\tignore the configuration stored in the database (GConf)"
-#~ msgstr ""
-#~ "\t--no-config\t\tde configuratie negeren die in de database (GConf) is "
-#~ "opgeslagen"
-
-#~ msgid ""
-#~ "\t--orig-coords\t\tset the coordinates for every display to the upper "
-#~ "left corner"
-#~ msgstr ""
-#~ "\t--orig-coords\t\tde coördinaten voor elke display instellen op de "
-#~ "linker bovenkant"
-
-#~ msgid ""
-#~ "\t--translucent\t\tuse a translucent ARGB visual, you don't want to use "
-#~ "this option unless you're running a composition manager"
-#~ msgstr ""
-#~ "\t--translucent\t\tgebruik een doorschijnend ARGB visual. Deze optie moet "
-#~ "u eigenlijk alleen gebruiken indien u een compositie-manager aan het "
-#~ "uitvoeren bent"
-
-#~ msgid "\t--version\t\toutput version information and exit"
-#~ msgstr "\t--version\t\tversie informatie tonen en afsluiten"
-
-#~ msgid "_Move"
-#~ msgstr "_Verplaatsen"
-
-#~ msgid "\t--profile=myprofile\tuse \"myprofile\" as profile."
-#~ msgstr "\t--profile=myprofile\t\"myprofile\" als profiel gebruiken."
-
-#~ msgid "_Quit"
-#~ msgstr "A_fsluiten"
-
-#~ msgid "Pixbuf"
-#~ msgstr "Pixbuf"
-
-#~ msgid "A GdkPixbuf to display"
-#~ msgstr "Een weer te geven GdkPixbuf"
-
-#~ msgid "Filename to load and display"
-#~ msgstr "Bestandsnaam te laden en te tonen"
-
-#~ msgid "Stock ID"
-#~ msgstr "Standaard ID"
-
-#~ msgid "Stock ID for a stock image to display"
-#~ msgstr "Standaard-ID voor een standaard weer te geven afbeelding"
-
-# configureren beter?
-#~ msgid "Animation"
-#~ msgstr "Animatie"
-
-#~ msgid "GdkPixbufAnimation to display"
-#~ msgstr "Weer te geven GdkPixbufAnimation"
-
-#~ msgid "Image type"
-#~ msgstr "Afbeeldingstype"
-
-#~ msgid "The representation being used for image data"
-#~ msgstr "De gebruikte representatie voor afbeeldingsdata"
-
-#~ msgid "Size"
-#~ msgstr "Grootte"
-
-#~ msgid "The size of the icon"
-#~ msgstr "De grootte van het pictogram"
-
-#~ msgid "Blinking"
-#~ msgstr "Knipperen"
-
-# 'wel of niet' weggelaten
-#~ msgid "Whether or not the status icon is blinking"
-#~ msgstr "Of het status-pictogram knippert"
-
-# tray - dienblad? 
-#~ msgid "The orientation of the tray."
-#~ msgstr "De oriëntatie van het paneel."
-
-#~ msgid ""
-#~ "The sensor %(path)s\n"
-#~ "has attempted to access the core from within\n"
-#~ "a thread. In order to prevent a disaster, the\n"
-#~ "thread will be terminated."
-#~ msgstr ""
-#~ "De sensor %(path)s\n"
-#~ "heeft getracht de kern te benaderen vanuit een\n"
-#~ "thread. Om een ramp te voorkomen zal de thread\n"
-#~ "worden afgebroken."
-
-#~ msgid "Illegal operation"
-#~ msgstr "Ongeldige bewerking"
-
-#~ msgid "Welcome to %(name)s<i>!</i>"
-#~ msgstr "Welkom bij %(name)s<i>!</i>"
-
-#~ msgid ""
-#~ "It looks like you are running %(name)s for the first time.\n"
-#~ "\n"
-#~ "You can add new displays by launching them in your file manager.\n"
-#~ "\n"
-#~ "<b>Have fun,</b>\n"
-#~ "  <i>the %(name)s developers</i>"
-#~ msgstr ""
-#~ "Het lijkt erop dat u %(name)s voor het eerst start.\n"
-#~ "\n"
-#~ "U kunt nieuwe applets toevoegen door deze te starten vanuit het "
-#~ "bestandsbeheer.\n"
-#~ "\n"
-#~ "<b>Veel plezier!</b>\n"
-#~ " <i>De %(name)s-ontwikkelaars</i>"

@@ -7,19 +7,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-02 21:49+0100\n"
-"PO-Revision-Date: 2005-07-31 6:23+0300\n"
+"POT-Creation-Date: 2008-12-29 09:28-0300\n"
+"PO-Revision-Date: 2009-01-01 05:58+0000\n"
 "Last-Translator: Maxim Dziumanenko <mvd@mylinux.com.ua>\n"
 "Language-Team: Ukrainian <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
 
-#: ../config/ConfigDialog.py:113
+#: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
 msgstr "Неправильний виклик функції"
 
-#: ../config/ConfigDialog.py:114
+#: ../config/ConfigDialog.py:116
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -30,7 +32,7 @@ msgstr ""
 "Це означає помилку у коді декслету. Слід повідомити про це автора декслета "
 "про цю проблему."
 
-#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
+#: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
 msgstr "Цей десклет не має можливості налаштовування."
 
@@ -64,8 +66,8 @@ msgstr "Роздільна здатність (DPI)"
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
-"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
-"\"</b> wide"
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
+"<b>1.97\"</b> wide"
 msgstr ""
 "Скорегуйте значення зверху, щоб ширина смуги дорівнювала <b>5 см</b> або "
 "<b>1.97\"</b>"
@@ -99,40 +101,43 @@ msgstr "Система аплетів для стільниці GNOME"
 msgid "gDesklets display"
 msgstr "Дисплей gDesklets"
 
-#: ../display/Display.py:85
+#: ../display/Display.py:86
 msgid "_Configure desklet"
 msgstr "_Налаштувати десклет"
 
-#: ../display/Display.py:87
+#: ../display/Display.py:88
 msgid "_Move desklet"
 msgstr "_Перемістити десклет"
 
-#: ../display/Display.py:90
+#: ../display/Display.py:91
 msgid "_View Source"
 msgstr "Пере_глянути джерело"
 
-#: ../display/Display.py:93
+#: ../display/Display.py:94
 msgid "Re_start desklet"
 msgstr "Пере_запустити десклет"
 
-#: ../display/Display.py:95
+#: ../display/Display.py:96
 msgid "_Remove desklet"
 msgstr "В_идалити десклет"
 
 #: ../display/Display.py:98
-#, fuzzy
-msgid "_About"
-msgstr "_Про програму..."
+msgid "_Disable desklet"
+msgstr ""
 
-#: ../display/Display.py:337
+#: ../display/Display.py:101
+msgid "_About"
+msgstr ""
+
+#: ../display/Display.py:340
 msgid "_Readme"
 msgstr ""
 
-#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
+#: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
 msgstr "Ви дійсно бажаєте видалити десклет ?"
 
-#: ../display/Display.py:1116
+#: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
@@ -179,7 +184,7 @@ msgstr "Файл не існує або не може бути завантаж�
 
 #: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
-msgstr "Файл, що містить сценарій недоступний для подальшого виконання. "
+msgstr "Файл, що містить сценарій недоступний для подальшого виконання."
 
 #: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
@@ -203,60 +208,56 @@ msgstr "Не вдається знайти сенсор '%(name)s'"
 msgid ""
 "A sensor could not be found. This usually means that it has not been "
 "installed."
-msgstr "Сенсор не знайдено. Зазвичай, це означає, що він не був встановлений."
+msgstr ""
+"Сенсор не знайдено. Зазвичай, це означає, що він не був встановлений."
 
-#: ../gdesklets:26
+#: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
 msgstr "Не слід запускати gDesklets від імені адміністратора (root)."
 
-#: ../gdesklets:46
+#: ../gdesklets:47
 msgid "Checking requirements:"
 msgstr "Перевірка вимог:"
 
-#: ../gdesklets:50
-#, fuzzy
+#: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
-msgstr "Потрібна версія Python => 2.3.0."
+msgstr ""
 
-#: ../gdesklets:54
+#: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr "libexpat версії 1.95.7 містить помилки. Будь ласка поновіть її!"
 
-#: ../gdesklets:57
+#: ../gdesklets:58
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr "Потрібен SAX аналізатор, деякі версії SuSE постачаються без нього."
 
-#: ../gdesklets:61
-#, fuzzy
+#: ../gdesklets:62
 msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
-"Потрібні прив'язки GTK до python (pygtk2) версії >= 2.4.0 та GTK+ версії >= "
-"2.4.0"
 
-#: ../gdesklets:65
-#, fuzzy
+#: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
-msgstr "Потрібні прив'язки ORBit до python (pyorbit) версії == 2.0.1."
+msgstr ""
 
-#: ../gdesklets:68
+#: ../gdesklets:69
 msgid "bonobo python bindings are required."
 msgstr "потрібні прив'язки bonobo до python."
 
-#: ../gdesklets:77
+#: ../gdesklets:78
 msgid "found"
 msgstr "знайдено"
 
-#: ../gdesklets:81
+#: ../gdesklets:82
 msgid "missing"
 msgstr "відсутнє"
 
-#: ../gdesklets:87
+#: ../gdesklets:88
 msgid "Version check failed."
 msgstr "Помилка перевірки версії."
 
-#: ../gdesklets:88
+#: ../gdesklets:89
 #, c-format
 msgid ""
 "\n"
@@ -265,7 +266,7 @@ msgstr ""
 "\n"
 "%s\n"
 
-#: ../gdesklets:89
+#: ../gdesklets:90
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -282,11 +283,11 @@ msgstr ""
 "\n"
 "НАРАЗІ ЗАПУСК СКАСОВАНО!\n"
 
-#: ../gdesklets:98
+#: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
 msgstr ""
 
-#: ../gdesklets:105
+#: ../gdesklets:106
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
@@ -296,126 +297,125 @@ msgstr ""
 "Ви запустили gDesklets перший раз.\n"
 "Запускається первірка необхідних компонентів...\n"
 
-#: ../gdesklets:116
+#: ../gdesklets:117
 msgid ""
-"Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
-"\t<command>\n"
-"\t\topen    <files>   (Opens the given desklet files)\n"
-"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
-"\t\tstop              (Stops the gDesklets daemon)\n"
-"\t\tlist              (Lists open desklets)\n"
-"\t\trestart           (Restarts the gDesklets daemon)\n"
-"\t\tprofile <profile> (Switches to the given profile)\n"
-"\t\tprofile           (Shows the current and the available profiles)\n"
-"\t\tshell             (Opens the graphical shell)\n"
-"\t\tslay              (Kills the daemon -- use in emergency)\n"
-"\t\tstatus            (Checks daemon status)\n"
-"\t\tabout             (Prints information about gDesklets)\n"
-"\t\tversion           (Prints gDesklets version)\n"
-"\t\tconfigure         (Opens the configuration dialog)\n"
-"\t\thelp              (Displays this text)\n"
-"\t\tcheck             (Checks requirements)\n"
+"Orders:\n"
+"  open    <files>   (Opens the given desklet files)\n"
+"  start             (Runs the gDesklets daemon, this is default)\n"
+"  stop              (Stops the gDesklets daemon)\n"
+"  list              (Lists open desklets)\n"
+"  restart           (Restarts the gDesklets daemon)\n"
+"  profile <profile> (Switches to the given profile)\n"
+"  profile           (Shows the current and the available profiles)\n"
+"  shell             (Opens the graphical shell)\n"
+"  slay              (Kills the daemon -- use in emergency)\n"
+"  status            (Checks daemon status)\n"
+"  about             (Prints information about gDesklets)\n"
+"  version           (Prints gDesklets version)\n"
+"  configure         (Opens the configuration dialog)\n"
+"  help              (Displays this text)\n"
+"  check             (Checks requirements)\n"
 "\n"
-"\t[option]\n"
-"\t\t--no-tray-icon    (disables the systray icon)\n"
-"\t\t--translucent     (enables translucency on the xorg servers)\n"
 msgstr ""
-"Використання: gdesklets [параметр] <команда> [аргументи...]\n"
-"\n"
-"\t<команда>\n"
-"\t\topen    <файли>   (Відкрити вказані файли десклетів)\n"
-"\t\tstart             (Запустити службу gDesklets, типова поведінка)\n"
-"\t\tstop              (Зупинити службу gDesklets)\n"
-"\t\tlist              (Перелік відкритих десклетів)\n"
-"\t\trestart           (Перезапустити службу gDesklets)\n"
-"\t\tprofile <профіль> (Перемикнутись на вказаний профіль)\n"
-"\t\tprofile           (Показати поточний та наявні профілі)\n"
-"\t\tshell             (Відкрити графічну оболонку)\n"
-"\t\tslay              (Знищити службу -- використовується при аваріях)\n"
-"\t\tstatus            (Перевірити статус служби)\n"
-"\t\tabout             (Вивести інформацію про gDesklets)\n"
-"\t\tversion           (Вивести версію gDesklets)\n"
-"\t\tconfigure         (Відкрити діалог налаштовування)\n"
-"\t\thelp              (Відобразити цей текст)\n"
-"\t\tcheck             (Перевірити потрібні модулі)\n"
-"\n"
-"\t[параметр]\n"
-"\t\t--no-tray-icon    (вимкнути значок системного лотка)\n"
-"\t\t--translucent     (вмикає прозорість на серверах xorg)\n"
 
-#: ../gdesklets:161
+#: ../gdesklets:158
 #, c-format
 msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
 
-#: ../gdesklets:164
+#: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
 msgstr ""
 
-#: ../gdesklets:189 ../gdesklets:258
+#: ../gdesklets:186 ../gdesklets:272
 #, c-format
 msgid "Could not open desklet %s."
 msgstr "Не вдається відкрити десклет %s."
 
-#: ../gdesklets:266
+#: ../gdesklets:204
+#, c-format
+msgid "%prog [options] order"
+msgstr ""
+
+#: ../gdesklets:209
+msgid "Avoid to show the icon on the tray"
+msgstr ""
+
+#: ../gdesklets:215
+msgid "Debug the application"
+msgstr ""
+
+#: ../gdesklets:221
+msgid "Launch pre-existing display "
+msgstr ""
+
+#: ../gdesklets:228
+msgid "Session manager prefix"
+msgstr ""
+
+#: ../gdesklets:233
+msgid "Session manager ID"
+msgstr ""
+
+#: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
 msgstr "Запускається служба gdesklets..."
 
-#: ../gdesklets:272
+#: ../gdesklets:282
 msgid "Shutting down gdesklets-daemon..."
 msgstr "Зупиняється служба gdesklets..."
 
-#: ../gdesklets:284
+#: ../gdesklets:294
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr "Відкриті дисплеї у профілі \"%s\":\n"
 
-#: ../gdesklets:289
+#: ../gdesklets:299
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr "Немає відкритих дисплеїв у профілі \"%s\""
 
-#: ../gdesklets:293
+#: ../gdesklets:303
 msgid "Restarting gdesklets-daemon..."
 msgstr "Перезапускається служба gdesklets..."
 
-#: ../gdesklets:306
+#: ../gdesklets:316
 msgid "gdesklets-daemon is running"
 msgstr "службу gdesklets запущено"
 
-#: ../gdesklets:308
+#: ../gdesklets:318
 msgid "gdesklets-daemon is not running"
 msgstr "службу gdesklets не запущено"
 
-#: ../gdesklets:312
+#: ../gdesklets:322
 #, c-format
 msgid "Current profile: %s"
 msgstr "Поточний профіль: %s"
 
-#: ../gdesklets:323
+#: ../gdesklets:333
 #, c-format
 msgid "New profile: %s"
 msgstr "Новий профіль: %s"
 
-#: ../gdesklets:326
+#: ../gdesklets:336
 #, c-format
 msgid "Available profiles: %s"
 msgstr "Наявні профілі: %s"
 
-#: ../gdesklets:330
+#: ../gdesklets:340
 #, c-format
 msgid "This is %s, version %s."
 msgstr "Це %s версії %s."
 
-#: ../gdesklets:358
+#: ../gdesklets:368
 msgid "Nothing to slay."
 msgstr "Нема що зупинити."
 
-#: ../gdesklets:382
+#: ../gdesklets:392
 msgid "Invalid command. Please try one of the following commands:"
 msgstr "Неправильна команда. Спробуйте одну з наступних команд:"
 
@@ -502,9 +502,8 @@ msgid "GNOME Integration:"
 msgstr "Інтеграція з GNOME:"
 
 #: ../main/__init__.py:83
-#, fuzzy
 msgid "Additional Programming:"
-msgstr "Головні розробники:"
+msgstr ""
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
@@ -522,39 +521,39 @@ msgstr "Веб-сайт:"
 msgid "Thank you:"
 msgstr "Подяки:"
 
-#: ../main/Starter.py:102
+#: ../main/Starter.py:103
 msgid "_Manage desklets"
 msgstr "_Керувати десклетами"
 
-#: ../main/Starter.py:105
+#: ../main/Starter.py:106
 msgid "_Configuration"
 msgstr "_Наташтувати"
 
-#: ../main/Starter.py:107
+#: ../main/Starter.py:108
 msgid "_View log"
 msgstr "Пере_глянути журнал"
 
-#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
+#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
 msgstr "_Про програму..."
 
-#: ../main/Starter.py:113
+#: ../main/Starter.py:114
 msgid "_Stop daemon"
 msgstr "_Зупинити службу"
 
-#: ../main/Starter.py:224
+#: ../main/Starter.py:230
 #, python-format
 msgid "Could not open desklet file \"%s\""
 msgstr "Не вдається відкрити файл десклету \"%s\""
 
-#: ../main/Starter.py:225
-msgid "The desklet file could not be opened because the file was not readable."
+#: ../main/Starter.py:231
+msgid ""
+"The desklet file could not be opened because the file was not readable."
 msgstr ""
 "Файл десклету неможливо відкрити для читання тому що його неможливо "
 "прочитати."
 
 #: ../main/transition.py:39
-#, fuzzy
 msgid ""
 "This is a unstable version of gDesklets. Unstable versions represent the "
 "current state of development and might be unstable or cause problems from "
@@ -569,16 +568,6 @@ msgid ""
 "\n"
 "Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
-"Це - версія gDesklets з CVS. Версія з CVS - поточний стан розробки та може "
-"бути нестабільною та іноді спричиняти проблеми.\n"
-"\n"
-"Якщо ви новачок у gDesklets, наполегливо рекомендується <b>не</b> "
-"використовувати версію з CVS, а використовувати стабільну версію!\n"
-"\n"
-"Якщо ви досі бажаєте користуватись версією з CVS, ми будемо вдячні за "
-"сповіщення розробників про погану поведінку програми.\n"
-"\n"
-"Досвідченим користувачам рекомендується спробувати версію з CVS!"
 
 #: ../main/transition.py:51
 msgid ""
@@ -591,8 +580,8 @@ msgid ""
 "Thanks for testing this release candidate!"
 msgstr ""
 "Ця версія - <b>кандидат</b> наступного випуску gDesklets.\n"
-"Будь ласка, тестуйте її та сповіщайте про помилки у <i>http://bugzilla.gnome."
-"org</i>\n"
+"Будь ласка, тестуйте її та сповіщайте про помилки у "
+"<i>http://bugzilla.gnome.org</i>\n"
 "Ця версія може пошкодити конфігурацію або не відновити конфігурацію "
 "попереднього випуску програми. У більшості випадків це ненавмисно, тому що "
 "gDesklets досі на ранній стадії розробки.\n"
@@ -602,7 +591,6 @@ msgstr ""
 #. our informative transition message which we can change with
 #. every release
 #: ../main/transition.py:62
-#, fuzzy
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -613,15 +601,6 @@ msgid ""
 "Please note that due to limitations of older X servers, you might see blocks "
 "around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
-"Ця версія gDesklets має плаваючий режим: натисніть клавішу та усі десклети "
-"перейдуть на передній план, плаваючи навколо ваших програм, доки ви не "
-"натиснете клавішу знову!\n"
-"Типова комбінація клавіш &lt;Shift&gt; &lt;F12&gt;, але її можна змінити у "
-"діалоговому вікні налаштовування.\n"
-"\n"
-"Зауважте, через обмеження старих X-серверів, у плаваючому режимі ви можете "
-"побачити блоки навколо десклетів. це неможливо вирішити належним чином, за "
-"винятком переходу до X-сервера з справжньою прозорістю (Xorg 6.8 та вище)."
 
 #: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
@@ -631,29 +610,29 @@ msgstr "Зауважте (це повідомлення з'являється л
 msgid "no description"
 msgstr "Опис недоступний"
 
-#: ../scripting/Script.py:154
+#: ../scripting/Script.py:155
 msgid "Error in add_timer function"
 msgstr "Помилка у функції add_timer"
 
-#: ../scripting/Script.py:155
+#: ../scripting/Script.py:156
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
 msgstr "\"%s\" не є справжнім числовим значенням!"
 
-#: ../scripting/Script.py:199
+#: ../scripting/Script.py:200
 #, python-format
 msgid "No Control could be found for interface %s"
 msgstr "Для інтерфейсу %s неможливо знайти керування"
 
-#: ../scripting/Script.py:201
+#: ../scripting/Script.py:202
 msgid "This means that a functionality won't be available during execution!"
 msgstr "Це означає, що функціональність буде недоступна при виконанні!"
 
-#: ../scripting/Script.py:241
+#: ../scripting/Script.py:242
 msgid "Security Risk"
 msgstr "Загроза безпеці"
 
-#: ../scripting/Script.py:242
+#: ../scripting/Script.py:243
 #, python-format
 msgid ""
 "The desklet %s wants to execute a system command:\n"
@@ -676,15 +655,15 @@ msgstr ""
 "Якщо ви переконані, що команда нешкідлива, можна назавжди дозволити цьому "
 "екземпляру десклета запускти її."
 
-#: ../scripting/Script.py:255
+#: ../scripting/Script.py:256
 msgid "Deny!"
 msgstr "Заборонити!"
 
-#: ../scripting/Script.py:256
+#: ../scripting/Script.py:257
 msgid "Allow once"
 msgstr "Дозволити один раз"
 
-#: ../scripting/Script.py:257
+#: ../scripting/Script.py:258
 msgid "Allow for this desklet"
 msgstr "Дозволити цьому десклету"
 
@@ -742,7 +721,7 @@ msgid "by interface"
 msgstr "за інтерфейсом"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:28
-#: ../shell/plugins/DisplayBrowser/__init__.py:80
+#: ../shell/plugins/DisplayBrowser/__init__.py:85
 msgid "alphabetically"
 msgstr "за алфавітом"
 
@@ -752,35 +731,43 @@ msgid "Found %d controls."
 msgstr "Знайдено %d елементів керування."
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
-#: ../shell/plugins/DisplayBrowser/__init__.py:158
+#: ../shell/plugins/DisplayBrowser/__init__.py:190
 msgid "Invalid search expression."
 msgstr "Неправильний вираз пошуку."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:40
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
 msgid "R_emove selected desklet"
 msgstr "В_идалити вибраний десклет"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:43
+#: ../shell/plugins/DisplayBrowser/__init__.py:46
 msgid "_Run (remote) desklet..."
 msgstr "_Запустити (віддалений) десклет..."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:45
+#: ../shell/plugins/DisplayBrowser/__init__.py:48
 msgid "R_un selected desklet"
 msgstr "За_пустити вибраний дисплей"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:78
+#: ../shell/plugins/DisplayBrowser/__init__.py:83
 msgid "by category"
 msgstr "за категорією"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:79
+#: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
 msgstr "за автором"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:130
+#: ../shell/plugins/DisplayBrowser/__init__.py:148
+msgid "There is a saved instance of this display."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:149
+msgid "Would you like to open this?"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
 msgstr "Не вдається видалити"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:131
+#: ../shell/plugins/DisplayBrowser/__init__.py:163
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
@@ -788,17 +775,17 @@ msgstr ""
 "Файл десклета неможливо видалити. Зазвичай це означає, що у вас немає права "
 "запису у файл."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:143
+#: ../shell/plugins/DisplayBrowser/__init__.py:175
 msgid ""
 "The desklet will be removed from your system and no longer be available."
 msgstr "Десклет буде видалено у вашої системи та від не буде доступний."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#: ../shell/plugins/DisplayBrowser/__init__.py:187
 #, python-format
 msgid "Found %d desklets"
 msgstr "Знайдено %d десклетів"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:177
+#: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
 msgstr "Опис недоступний"
 
@@ -807,6 +794,10 @@ msgid "_Help"
 msgstr "_Довідка"
 
 #: ../shell/plugins/Help/__init__.py:38
+msgid "_Contents"
+msgstr ""
+
+#: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
 msgstr "_Порада дня"
 
@@ -819,7 +810,6 @@ msgid "Show tips at startup"
 msgstr "Показувати поради при запуску"
 
 #: ../shell/plugins/Help/tips.py:2
-#, fuzzy
 msgid ""
 "You can find lots of desktop applets for use\n"
 "with gDesklets at\n"
@@ -828,10 +818,6 @@ msgid ""
 "and\n"
 "http://gdesklets.zencomputer.ca/"
 msgstr ""
-"Велику кількість аплетів стільниці для\n"
-"gDesklets можна знайти на\n"
-"\n"
-"http://gdesklets.gnomedesktop.org"
 
 #: ../shell/plugins/Help/tips.py:9
 msgid ""
@@ -1047,9 +1033,3 @@ msgstr "Помилка часу виконання"
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
 msgstr "Помилка при виконанні десклету."
-
-#~ msgid "XComposite support (requires composition manager)"
-#~ msgstr "Підтримка XComposite (потрібен менеджер композицій)"
-
-#~ msgid "Translucency (takes effect after restarting a display)"
-#~ msgstr "Напівпрозорість (набирає сили після перезапуску дисплея)"

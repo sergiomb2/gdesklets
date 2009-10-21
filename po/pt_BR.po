@@ -9,19 +9,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-02 21:49+0100\n"
-"PO-Revision-Date: 2007-03-09 23:17-0300\n"
-"Last-Translator: Luiz Fernando da Silva Armesto <luiz.armesto@gmail.com>\n"
+"POT-Creation-Date: 2008-12-29 09:28-0300\n"
+"PO-Revision-Date: 2009-05-04 19:26+0000\n"
+"Last-Translator: Duda Weyll <Unknown>\n"
 "Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
 
-#: ../config/ConfigDialog.py:113
+#: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
 msgstr "Chamada de Função Inválida"
 
-#: ../config/ConfigDialog.py:114
+#: ../config/ConfigDialog.py:116
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -32,7 +34,7 @@ msgstr ""
 "Isso significa que há um erro no código do miniaplicativo. Você deverá "
 "informar o autor do mesmo sobre o problema."
 
-#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
+#: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
 msgstr "Este miniaplicativo não é configurável."
 
@@ -66,11 +68,11 @@ msgstr "Resolução de Tela (DPI)"
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
-"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
-"\"</b> wide"
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
+"<b>1.97\"</b> wide"
 msgstr ""
-"Ajuste o valor acima para que a barra tenha exatamente <b>5 cm</b> ou <b>1.97"
-"\"</b> de largura"
+"Ajuste o valor acima para que a barra tenha exatamente <b>5 cm</b> ou "
+"<b>1.97\"</b> de largura"
 
 #: ../config/DaemonConfigger.py:26
 msgid "Behavior"
@@ -101,40 +103,43 @@ msgstr "Um sistema de miniaplicativos de área de trabalho para o GNOME"
 msgid "gDesklets display"
 msgstr "Display do gDesklets"
 
-#: ../display/Display.py:85
+#: ../display/Display.py:86
 msgid "_Configure desklet"
 msgstr "_Configurar miniaplicativo"
 
-#: ../display/Display.py:87
+#: ../display/Display.py:88
 msgid "_Move desklet"
 msgstr "_Mover miniaplicativo"
 
-#: ../display/Display.py:90
+#: ../display/Display.py:91
 msgid "_View Source"
 msgstr "_Ver Fonte"
 
-#: ../display/Display.py:93
+#: ../display/Display.py:94
 msgid "Re_start desklet"
 msgstr "Re_iniciar miniaplicativo"
 
-#: ../display/Display.py:95
+#: ../display/Display.py:96
 msgid "_Remove desklet"
 msgstr "_Remover miniaplicativo"
 
 #: ../display/Display.py:98
-#, fuzzy
+msgid "_Disable desklet"
+msgstr "_Desabilitar Desklet"
+
+#: ../display/Display.py:101
 msgid "_About"
-msgstr "_Sobre..."
+msgstr "_Sobre"
 
-#: ../display/Display.py:337
+#: ../display/Display.py:340
 msgid "_Readme"
-msgstr ""
+msgstr "_Leia me"
 
-#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
+#: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
 msgstr "Você deseja mesmo remover esse miniaplicativo?"
 
-#: ../display/Display.py:1116
+#: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
@@ -211,56 +216,55 @@ msgstr ""
 "Não foi possível encontrar um sensor. Isso normalmente significa que ele não "
 "foi instalado."
 
-#: ../gdesklets:26
+#: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
 msgstr "Você NÃO deve executar o gDesklets como superusuário (root)."
 
-#: ../gdesklets:46
+#: ../gdesklets:47
 msgid "Checking requirements:"
 msgstr "Checando requisitos:"
 
-#: ../gdesklets:50
+#: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
 msgstr "Python versão >= 2.3.0 é necessário."
 
-#: ../gdesklets:54
+#: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr "libexpat versão 1.95.7 está danificado. Favor atualizar!"
 
-#: ../gdesklets:57
+#: ../gdesklets:58
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr "Analisador SAX requerido, algumas versões do SuSE não o contém."
 
-#: ../gdesklets:61
-#, fuzzy
+#: ../gdesklets:62
 msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
-"Associações GTK python (pygtk2) versão >= 2.4.0 e GTK+ versão >= 2.4.0 são "
-"requeridos."
+"Depende de GTK python bindings (pygtk2) versão >= 2.10.0 e GTK+ versão >= "
+"2.10.0."
 
-#: ../gdesklets:65
+#: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
 msgstr "Associações ORBit python (pyorbit) versão >= 2.0.1 são requeridos."
 
-#: ../gdesklets:68
+#: ../gdesklets:69
 msgid "bonobo python bindings are required."
 msgstr "Associações bonobo python não requeridas."
 
-#: ../gdesklets:77
+#: ../gdesklets:78
 msgid "found"
 msgstr "encontrado"
 
-#: ../gdesklets:81
+#: ../gdesklets:82
 msgid "missing"
 msgstr "faltando"
 
-#: ../gdesklets:87
+#: ../gdesklets:88
 msgid "Version check failed."
 msgstr "Checagem de versão falhou."
 
-#: ../gdesklets:88
+#: ../gdesklets:89
 #, c-format
 msgid ""
 "\n"
@@ -269,7 +273,7 @@ msgstr ""
 "\n"
 "%s\n"
 
-#: ../gdesklets:89
+#: ../gdesklets:90
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -287,11 +291,11 @@ msgstr ""
 "\n"
 "O CARREGAMENTO SERÁ CANCELADO AGORA!\n"
 
-#: ../gdesklets:98
+#: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
-msgstr ""
+msgstr "Foi feita a verificação de dependências. Seu sistema parece correto!"
 
-#: ../gdesklets:105
+#: ../gdesklets:106
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
@@ -301,126 +305,127 @@ msgstr ""
 "Você está executando gDesklets pela primeira vez.\n"
 "gDesklets iniciará uma checagem de requisitos agora...\n"
 
-#: ../gdesklets:116
+#: ../gdesklets:117
 msgid ""
-"Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
-"\t<command>\n"
-"\t\topen    <files>   (Opens the given desklet files)\n"
-"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
-"\t\tstop              (Stops the gDesklets daemon)\n"
-"\t\tlist              (Lists open desklets)\n"
-"\t\trestart           (Restarts the gDesklets daemon)\n"
-"\t\tprofile <profile> (Switches to the given profile)\n"
-"\t\tprofile           (Shows the current and the available profiles)\n"
-"\t\tshell             (Opens the graphical shell)\n"
-"\t\tslay              (Kills the daemon -- use in emergency)\n"
-"\t\tstatus            (Checks daemon status)\n"
-"\t\tabout             (Prints information about gDesklets)\n"
-"\t\tversion           (Prints gDesklets version)\n"
-"\t\tconfigure         (Opens the configuration dialog)\n"
-"\t\thelp              (Displays this text)\n"
-"\t\tcheck             (Checks requirements)\n"
+"Orders:\n"
+"  open    <files>   (Opens the given desklet files)\n"
+"  start             (Runs the gDesklets daemon, this is default)\n"
+"  stop              (Stops the gDesklets daemon)\n"
+"  list              (Lists open desklets)\n"
+"  restart           (Restarts the gDesklets daemon)\n"
+"  profile <profile> (Switches to the given profile)\n"
+"  profile           (Shows the current and the available profiles)\n"
+"  shell             (Opens the graphical shell)\n"
+"  slay              (Kills the daemon -- use in emergency)\n"
+"  status            (Checks daemon status)\n"
+"  about             (Prints information about gDesklets)\n"
+"  version           (Prints gDesklets version)\n"
+"  configure         (Opens the configuration dialog)\n"
+"  help              (Displays this text)\n"
+"  check             (Checks requirements)\n"
 "\n"
-"\t[option]\n"
-"\t\t--no-tray-icon    (disables the systray icon)\n"
-"\t\t--translucent     (enables translucency on the xorg servers)\n"
 msgstr ""
-"Uso: gdesklets [opção] <comando> [argumentos...]\n"
-"\n"
-"\t<comando>\n"
-"\topen <arquivos>   (Abre os arquivos de display indicados)\n"
-"\tstart\t(Executa o servidor do gDesklets)\n"
-"\tstop\t(Pára o servidor do gDesklets)\n"
-"\tlist\t(Lista os displays abertos)\n"
-"\trestart\t(Reinicia o servidor do gDesklets)\n"
-"\tprofile <perfil> (Alterna para o perfil indicado)\n"
-"\tprofile\t(Mostra os perfis atuais e disponíveis)\n"
-"\tshell\t(Abre a shell gráfica)\n"
-"\tslay\t(Mata o servidor -- use em uma emergência)\n"
-"\t\tstatus\t(Verifica o estado do daemon)\n"
-"\tabout\t(Exibe informações sobre o gDesklets)\n"
-"\tversion\t(Exibe a versão do gDesklets)\n"
-"\t\tconfigure\t(Abre o diálogo)\n"
-"\thelp\t(Exibe esse texto)\n"
-"\t\tcheck\t(Verifica os requisitos)\n"
-"\n"
-"\t[opção]\n"
-"\t\t--no-tray-icon\t(desabilita o ícone da área de notificação)\n"
-"\t\t--translucent\t(Habilita a translucidez no servidor xorg)\n"
 
-#: ../gdesklets:161
+#: ../gdesklets:158
 #, c-format
 msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
+"Um erro ocorreu enquanto se iniciava o gdesklets-daemon\n"
+"Mais informações sobre este erro encontra-se em \"%s\"."
 
-#: ../gdesklets:164
+#: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
-msgstr ""
+msgstr "A exceção foi \"%s\".\n"
 
-#: ../gdesklets:189 ../gdesklets:258
+#: ../gdesklets:186 ../gdesklets:272
 #, c-format
 msgid "Could not open desklet %s."
 msgstr "Não foi possível abrir o miniaplicativo %s."
 
-#: ../gdesklets:266
+#: ../gdesklets:204
+#, c-format
+msgid "%prog [options] order"
+msgstr ""
+
+#: ../gdesklets:209
+msgid "Avoid to show the icon on the tray"
+msgstr ""
+
+#: ../gdesklets:215
+msgid "Debug the application"
+msgstr ""
+
+#: ../gdesklets:221
+msgid "Launch pre-existing display "
+msgstr ""
+
+#: ../gdesklets:228
+msgid "Session manager prefix"
+msgstr ""
+
+#: ../gdesklets:233
+msgid "Session manager ID"
+msgstr ""
+
+#: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
 msgstr "Iniciando gdesklets-daemon..."
 
-#: ../gdesklets:272
+#: ../gdesklets:282
 msgid "Shutting down gdesklets-daemon..."
 msgstr "Desligando gdesklets-daemon..."
 
-#: ../gdesklets:284
+#: ../gdesklets:294
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr "Miniaplicativos abertos no perfil \"%s\":\n"
 
-#: ../gdesklets:289
+#: ../gdesklets:299
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr "Não há quaisquer miniaplicativos atualmente no perfil \"%s\""
 
-#: ../gdesklets:293
+#: ../gdesklets:303
 msgid "Restarting gdesklets-daemon..."
 msgstr "Reiniciando gdesklets-daemon..."
 
-#: ../gdesklets:306
+#: ../gdesklets:316
 msgid "gdesklets-daemon is running"
 msgstr "gdesklets-daemon em execução"
 
-#: ../gdesklets:308
+#: ../gdesklets:318
 msgid "gdesklets-daemon is not running"
 msgstr "gdesklets-daemon não está em execução"
 
-#: ../gdesklets:312
+#: ../gdesklets:322
 #, c-format
 msgid "Current profile: %s"
 msgstr "Perfil atual: %s"
 
-#: ../gdesklets:323
+#: ../gdesklets:333
 #, c-format
 msgid "New profile: %s"
 msgstr "Novo perfil: %s"
 
-#: ../gdesklets:326
+#: ../gdesklets:336
 #, c-format
 msgid "Available profiles: %s"
 msgstr "Perfis disponíveis: %s"
 
-#: ../gdesklets:330
+#: ../gdesklets:340
 #, c-format
 msgid "This is %s, version %s."
 msgstr "Esse é o %s, versão %s."
 
-#: ../gdesklets:358
+#: ../gdesklets:368
 msgid "Nothing to slay."
 msgstr "Nada para matar."
 
-#: ../gdesklets:382
+#: ../gdesklets:392
 msgid "Invalid command. Please try one of the following commands:"
 msgstr "Comando inválido. Por favor, tente um dos seguintes comandos:"
 
@@ -508,9 +513,8 @@ msgid "GNOME Integration:"
 msgstr "Integração com o GNOME:"
 
 #: ../main/__init__.py:83
-#, fuzzy
 msgid "Additional Programming:"
-msgstr "Programação Principal:"
+msgstr ""
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
@@ -528,38 +532,38 @@ msgstr "Site da Web:"
 msgid "Thank you:"
 msgstr "Obrigado:"
 
-#: ../main/Starter.py:102
+#: ../main/Starter.py:103
 msgid "_Manage desklets"
 msgstr "_Gerenciar desklets"
 
-#: ../main/Starter.py:105
+#: ../main/Starter.py:106
 msgid "_Configuration"
 msgstr "_Configuração"
 
-#: ../main/Starter.py:107
+#: ../main/Starter.py:108
 msgid "_View log"
 msgstr "_Ver registro"
 
-#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
+#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
 msgstr "_Sobre..."
 
-#: ../main/Starter.py:113
+#: ../main/Starter.py:114
 msgid "_Stop daemon"
 msgstr "Parar _servidor"
 
-#: ../main/Starter.py:224
+#: ../main/Starter.py:230
 #, python-format
 msgid "Could not open desklet file \"%s\""
 msgstr "Não foi possível abrir o arquivo \"%s\""
 
-#: ../main/Starter.py:225
-msgid "The desklet file could not be opened because the file was not readable."
+#: ../main/Starter.py:231
+msgid ""
+"The desklet file could not be opened because the file was not readable."
 msgstr ""
 "O miniaplicativo não pôde ser aberto porque o arquivo não pode ser lido."
 
 #: ../main/transition.py:39
-#, fuzzy
 msgid ""
 "This is a unstable version of gDesklets. Unstable versions represent the "
 "current state of development and might be unstable or cause problems from "
@@ -574,17 +578,6 @@ msgid ""
 "\n"
 "Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
-"Essa é uma versão CVS do gDesklets. Versões CVS representam o estado atual "
-"de desenvolvimento e podem ser instáveis ou causar problemas de tempos em "
-"tempos.\n"
-"\n"
-"Se você é novato com o gDesklets, é altamente recomendável que <b>não</b> "
-"use uma versão CVS, e sim uma versão estável!\n"
-"Se ainda assim você preferir usar a versão CVS ao invés de uma versão "
-"estável, nós agradeceríamos se você informasse aos desenvolvedores qualquer "
-"comportamento estranho do programa.\n"
-"\n"
-"Usuários experientes são encorajados a usar a versão CVS, entretanto!"
 
 #: ../main/transition.py:51
 msgid ""
@@ -607,7 +600,6 @@ msgstr ""
 #. our informative transition message which we can change with
 #. every release
 #: ../main/transition.py:62
-#, fuzzy
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -618,16 +610,6 @@ msgid ""
 "Please note that due to limitations of older X servers, you might see blocks "
 "around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
-"Essa versão do gDesklets possui um modo Flutuante: pressione uma tecla e "
-"todos os seus miniaplicativos virão para frente, flutuando sobre suas "
-"aplicações, até que você pressione a tecla novamente!\n"
-"O atalho padrão é &lt;Shift&gt; &lt;F12&gt;, mas você pode alterá-lo "
-"facilmente nas configurações.\n"
-"\n"
-"Note que devido a limitações de versões antigas do servidor X, você poderá "
-"ver blocos em volta dos mini-aplicativos no modo Flutuante. Isso não pode "
-"ser resolvido de modo satisfatório exceto ativando translucidez real no "
-"servidor X (Xorg 6.8 e recentes)."
 
 #: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
@@ -637,31 +619,31 @@ msgstr "Atenção (essa mensagem aparecerá somente uma vez):"
 msgid "no description"
 msgstr "Sem descrição disponível"
 
-#: ../scripting/Script.py:154
+#: ../scripting/Script.py:155
 msgid "Error in add_timer function"
 msgstr "Erro na função add_timer"
 
-#: ../scripting/Script.py:155
+#: ../scripting/Script.py:156
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
 msgstr "\"%s\" não é um valor inteiro válido!"
 
-#: ../scripting/Script.py:199
+#: ../scripting/Script.py:200
 #, python-format
 msgid "No Control could be found for interface %s"
 msgstr "Nenhum controle foi encontrado para a interface %s"
 
-#: ../scripting/Script.py:201
+#: ../scripting/Script.py:202
 msgid "This means that a functionality won't be available during execution!"
 msgstr ""
 "Isso significa que uma funcionalidade não estará disponível durante a "
 "execução!"
 
-#: ../scripting/Script.py:241
+#: ../scripting/Script.py:242
 msgid "Security Risk"
 msgstr "Risco de Segurança"
 
-#: ../scripting/Script.py:242
+#: ../scripting/Script.py:243
 #, python-format
 msgid ""
 "The desklet %s wants to execute a system command:\n"
@@ -684,15 +666,15 @@ msgstr ""
 "Se você tiver certeza de que o comando é inofensivo, você pode dar permissão "
 "permanente para esse mini-aplicativo executá-lo."
 
-#: ../scripting/Script.py:255
+#: ../scripting/Script.py:256
 msgid "Deny!"
 msgstr "Negar!"
 
-#: ../scripting/Script.py:256
+#: ../scripting/Script.py:257
 msgid "Allow once"
 msgstr "Permitir uma vez"
 
-#: ../scripting/Script.py:257
+#: ../scripting/Script.py:258
 msgid "Allow for this desklet"
 msgstr "Permitir para esse miniaplicativo"
 
@@ -750,7 +732,7 @@ msgid "by interface"
 msgstr "por interface"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:28
-#: ../shell/plugins/DisplayBrowser/__init__.py:80
+#: ../shell/plugins/DisplayBrowser/__init__.py:85
 msgid "alphabetically"
 msgstr "alfabeticamente"
 
@@ -760,35 +742,43 @@ msgid "Found %d controls."
 msgstr "Foram encontrados %d controles."
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
-#: ../shell/plugins/DisplayBrowser/__init__.py:158
+#: ../shell/plugins/DisplayBrowser/__init__.py:190
 msgid "Invalid search expression."
 msgstr "Expressão de busca inválida."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:40
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
 msgid "R_emove selected desklet"
 msgstr "R_emover miniaplicativo selecionado"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:43
+#: ../shell/plugins/DisplayBrowser/__init__.py:46
 msgid "_Run (remote) desklet..."
 msgstr "E_xecutar miniaplicativo (remoto)..."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:45
+#: ../shell/plugins/DisplayBrowser/__init__.py:48
 msgid "R_un selected desklet"
 msgstr "_Executar miniaplicativo selecionado"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:78
+#: ../shell/plugins/DisplayBrowser/__init__.py:83
 msgid "by category"
 msgstr "por categoria"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:79
+#: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
 msgstr "por autor"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:130
+#: ../shell/plugins/DisplayBrowser/__init__.py:148
+msgid "There is a saved instance of this display."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:149
+msgid "Would you like to open this?"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
 msgstr "Não foi possível remover"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:131
+#: ../shell/plugins/DisplayBrowser/__init__.py:163
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
@@ -796,18 +786,18 @@ msgstr ""
 "O arquivo do miniaplicativo não pôde ser removido. Isso provavelmente "
 "significa que você não tem permissão de escrita sobre ele."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:143
+#: ../shell/plugins/DisplayBrowser/__init__.py:175
 msgid ""
 "The desklet will be removed from your system and no longer be available."
 msgstr ""
 "O miniaplicativo será removido do seu sistema e não estará mais disponível."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#: ../shell/plugins/DisplayBrowser/__init__.py:187
 #, python-format
 msgid "Found %d desklets"
 msgstr "Foram encontrados %d miniaplicativos"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:177
+#: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
 msgstr "Nenhuma descrição disponível"
 
@@ -816,6 +806,10 @@ msgid "_Help"
 msgstr "Aj_uda"
 
 #: ../shell/plugins/Help/__init__.py:38
+msgid "_Contents"
+msgstr ""
+
+#: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
 msgstr "_Dica do Dia"
 
@@ -1061,210 +1055,3 @@ msgstr "Erro de Execução"
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
 msgstr "Ocorreu um erro ao executar um miniaplicativo."
-
-#~ msgid "XComposite support (requires composition manager)"
-#~ msgstr "Suporte XComposite (requer gerenciador de composição)"
-
-#~ msgid ""
-#~ "\n"
-#~ "     <small><i>"
-#~ msgstr ""
-#~ "\n"
-#~ "     <small><i>"
-
-#~ msgid "this does not work with GTK 2.8 or higher for technical reasons"
-#~ msgstr "não funciona com GTK 2.8 ou posterior por razões técnicas"
-
-#~ msgid "</i></small>"
-#~ msgstr "</i></small>"
-
-# verificar
-#~ msgid "Translucency (takes effect after restarting a display)"
-#~ msgstr "Translucidez (tem efeito após reiniciar um miniaplicativo)"
-
-#~ msgid "Monday"
-#~ msgstr "Segunda-feira"
-
-#~ msgid "Tuesday"
-#~ msgstr "Terça-feira"
-
-#~ msgid "Wednesday"
-#~ msgstr "Quarta-feira"
-
-#~ msgid "Thursday"
-#~ msgstr "Quinta-feira"
-
-#~ msgid "Friday"
-#~ msgstr "Sexta-feira"
-
-#~ msgid "Saturday"
-#~ msgstr "Sábado"
-
-#~ msgid "Sunday"
-#~ msgstr "Domingo"
-
-#~ msgid "January"
-#~ msgstr "Janeiro"
-
-#~ msgid "February"
-#~ msgstr "Fevereiro"
-
-#~ msgid "March"
-#~ msgstr "Março"
-
-#~ msgid "May"
-#~ msgstr "Maio"
-
-#~ msgid "June"
-#~ msgstr "Junho"
-
-#~ msgid "July"
-#~ msgstr "Julho"
-
-#~ msgid "August"
-#~ msgstr "Agosto"
-
-#~ msgid "September"
-#~ msgstr "Setembro"
-
-#~ msgid "October"
-#~ msgstr "Outubro"
-
-#~ msgid "November"
-#~ msgstr "Novembro"
-
-#~ msgid "December"
-#~ msgstr "Dezembro"
-
-#~ msgid "The %(name)s container accepts only one child."
-#~ msgstr "O conteiner %(name)s aceita apenas um filho."
-
-#~ msgid "_Move display"
-#~ msgstr "_Mover display"
-
-#~ msgid "Error while configuring display"
-#~ msgstr "Erro ao configurar o display"
-
-#~ msgid ""
-#~ "A display could not be configured properly. It will most likely be broken "
-#~ "and you should consider removing it."
-#~ msgstr ""
-#~ "Um display não pode ser configurado corretamente. Possivelmente está "
-#~ "quebrado e você deve considerar a sua remoção."
-
-#~ msgid "Error in sensor '%(name)s'"
-#~ msgstr "Erro no sensor '%(name)s'"
-
-#~ msgid ""
-#~ "An error occurred while loading a sensor. This most likely means that "
-#~ "your system does not fulfill all its requirements."
-#~ msgstr ""
-#~ "Um erro ocorreu ao carregar um sensor. Na maioria das vezes isso "
-#~ "significa que o seu sistema não preenche todos os requisitos."
-
-#~ msgid "Error in sensor %(name)s"
-#~ msgstr "Erro no sensor %(name)s"
-
-#~ msgid "An error occurred while running a sensor."
-#~ msgstr "Ocorreu um erro ao executar um sensor."
-
-#~ msgid "Could not find X display."
-#~ msgstr "Não foi possível encontrar um display X."
-
-#~ msgid "This software is licensed under the terms of the GNU GPL."
-#~ msgstr "Esse software é licensiado sob os termos da GNU GPL."
-
-#~ msgid "Log Messages"
-#~ msgstr "Mensagens de Registro"
-
-#~ msgid "Invalid display file '%(path)s'"
-#~ msgstr "Arquivo de display '%(path)s' inválido"
-
-#~ msgid ""
-#~ "Could not connect to gnome-session. GNOME session management will not be "
-#~ "available for this application."
-#~ msgstr ""
-#~ "Não foi possível conectar ao gnome-session. O gerenciamento de sessões do "
-#~ "GNOME não estará disponível para essa aplicação."
-
-#~ msgid "Error in script"
-#~ msgstr "Erro no script"
-
-#~ msgid "An error occurred while loading a script."
-#~ msgstr "Ocorreu um erro ao carregar um script."
-
-#~ msgid "translator_credits"
-#~ msgstr ""
-#~ "Tiago Cardoso Menezes <zion@via-rs.net>\n"
-#~ "Raphael Higino <phhigino@gmail.com>"
-
-#~ msgid "The package has been installed successfully."
-#~ msgstr "O pacote foi instalado com sucesso."
-
-#~ msgid "Remove Display ?"
-#~ msgstr "Remover display?"
-
-#~ msgid ""
-#~ "There is no control installed that implements\n"
-#~ "the <b>%s</b> interface."
-#~ msgstr ""
-#~ "Não há nenhum controle instalado que implemente\n"
-#~ "a interface <b>%s</b>."
-
-#~ msgid "Usage: gdesklets <OPTION> <my.display>\n"
-#~ msgstr "Uso: gdesklets <OPÇÕES> <meu.display>\n"
-
-#~ msgid "Options:\n"
-#~ msgstr "Opções:\n"
-
-#~ msgid ""
-#~ "\t--no-config\t\tignore the configuration stored in the database (GConf)"
-#~ msgstr ""
-#~ "\t--no-config\t\tignora a configuração armazenada no banco de dados "
-#~ "(GConf)"
-
-#~ msgid ""
-#~ "\t--orig-coords\t\tset the coordinates for every display to the upper "
-#~ "left corner"
-#~ msgstr ""
-#~ "\t--orig-coords\t\tdefine as coordenadas de todos os displays para o "
-#~ "canto superior esquerdo"
-
-#~ msgid ""
-#~ "\t--translucent\t\tuse a translucent ARGB visual, you don't want to use "
-#~ "this option unless you're running a composition manager"
-#~ msgstr ""
-#~ "\t--translucent\t\tusa um visual ARGB translúcido, você não vai querer "
-#~ "usar esta opção a não ser que esteja executando um gerenciador de "
-#~ "composição"
-
-#~ msgid "\t--version\t\toutput version information and exit"
-#~ msgstr "\t--version\t\tmostra informações de versão e sai"
-
-#~ msgid "_Move"
-#~ msgstr "_Mover"
-
-#~ msgid "\t--profile=myprofile\tuse \"myprofile\" as profile."
-#~ msgstr "\t--profile=meuperfil\tusa \"meuperfil\" como perfil."
-
-#~ msgid "_Quit"
-#~ msgstr "Sa_ir"
-
-#~ msgid "Welcome to %(name)s<i>!</i>"
-#~ msgstr "Bem-vindo ao %(name)s<i>!</i>"
-
-#~ msgid ""
-#~ "It looks like you are running %(name)s for the first time.\n"
-#~ "\n"
-#~ "You can add new displays by launching them in your file manager.\n"
-#~ "\n"
-#~ "<b>Have fun,</b>\n"
-#~ "  <i>the %(name)s developers</i>"
-#~ msgstr ""
-#~ "Parece que você está rodando %(name)s pela primeira vez \n"
-#~ "\n"
-#~ "Você pode adicionar novos display carregando-os através do seu "
-#~ "gerenciador de arquivos \n"
-#~ "\n"
-#~ "<b>Divirta-se,</b>\n"
-#~ "  <i>Os %(name)s desenvolvedores</i>"

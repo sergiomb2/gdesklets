@@ -7,19 +7,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-02 21:49+0100\n"
-"PO-Revision-Date: 2005-01-09 23:44+0800\n"
-"Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
+"POT-Creation-Date: 2008-12-29 09:28-0300\n"
+"PO-Revision-Date: 2009-01-01 07:39+0000\n"
+"Last-Translator: Funda Wang <Unknown>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
 
-#: ../config/ConfigDialog.py:113
+#: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
 msgstr ""
 
-#: ../config/ConfigDialog.py:114
+#: ../config/ConfigDialog.py:116
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -27,19 +29,17 @@ msgid ""
 "the author of the desklet about this problem."
 msgstr ""
 
-#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
-#, fuzzy
+#: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
-msgstr "此处的显示不可以配置。"
+msgstr ""
 
 #: ../config/ConfigUnit.py:57
 msgid "pixel"
 msgstr ""
 
 #: ../config/ConfigUnit.py:58
-#, fuzzy
 msgid "point"
-msgstr "字体"
+msgstr ""
 
 #: ../config/ConfigUnit.py:59
 msgid "cm"
@@ -63,8 +63,8 @@ msgstr ""
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
-"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
-"\"</b> wide"
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
+"<b>1.97\"</b> wide"
 msgstr ""
 
 #: ../config/DaemonConfigger.py:26
@@ -96,55 +96,52 @@ msgstr "一个 GNOME 的桌面小程序系统"
 msgid "gDesklets display"
 msgstr "gDesklets 显示"
 
-#: ../display/Display.py:85
-#, fuzzy
+#: ../display/Display.py:86
 msgid "_Configure desklet"
-msgstr "配置显示(_C)"
+msgstr ""
 
-#: ../display/Display.py:87
-#, fuzzy
+#: ../display/Display.py:88
 msgid "_Move desklet"
-msgstr "管理桌面小程序(_M)"
+msgstr ""
 
-#: ../display/Display.py:90
+#: ../display/Display.py:91
 msgid "_View Source"
 msgstr "查看来源(_V)"
 
-#: ../display/Display.py:93
-#, fuzzy
+#: ../display/Display.py:94
 msgid "Re_start desklet"
-msgstr "重新启动显示(_S)"
+msgstr ""
 
-#: ../display/Display.py:95
-#, fuzzy
+#: ../display/Display.py:96
 msgid "_Remove desklet"
-msgstr "删除显示(_R)"
+msgstr ""
 
 #: ../display/Display.py:98
-#, fuzzy
-msgid "_About"
-msgstr "关于(_A)..."
+msgid "_Disable desklet"
+msgstr ""
 
-#: ../display/Display.py:337
+#: ../display/Display.py:101
+msgid "_About"
+msgstr ""
+
+#: ../display/Display.py:340
 msgid "_Readme"
 msgstr ""
 
-#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
-#, fuzzy
+#: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
-msgstr "您真的想要删除此显示吗？"
+msgstr ""
 
-#: ../display/Display.py:1116
-#, fuzzy
+#: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
-msgstr "此显示将不再显示，其配置也将被删除。"
+msgstr ""
 
 #: ../display/DisplayTarget.py:417
-#, fuzzy, python-format
+#, python-format
 msgid "Element \"%s\" does not exist"
-msgstr "文件不存在。"
+msgstr ""
 
 #: ../display/DisplayTarget.py:418
 msgid ""
@@ -168,9 +165,8 @@ msgid "XML parse error"
 msgstr ""
 
 #: ../factory/DisplayFactory.py:90
-#, fuzzy
 msgid "This .display file has invalid XML syntax."
-msgstr "显示文件包含有无效数据，不能被加载。"
+msgstr ""
 
 #: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
@@ -204,60 +200,60 @@ msgid ""
 "installed."
 msgstr "找不到传感器。这通常意味着该传感器没有安装。"
 
-#: ../gdesklets:26
+#: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
 msgstr "您必须不以超级用户(root)身份运行 gDesklets。"
 
-#: ../gdesklets:46
+#: ../gdesklets:47
 msgid "Checking requirements:"
 msgstr ""
 
-#: ../gdesklets:50
+#: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
 msgstr ""
 
-#: ../gdesklets:54
+#: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr ""
 
-#: ../gdesklets:57
+#: ../gdesklets:58
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr ""
 
-#: ../gdesklets:61
+#: ../gdesklets:62
 msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
 
-#: ../gdesklets:65
+#: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
 msgstr ""
 
-#: ../gdesklets:68
+#: ../gdesklets:69
 msgid "bonobo python bindings are required."
 msgstr ""
 
-#: ../gdesklets:77
+#: ../gdesklets:78
 msgid "found"
 msgstr ""
 
-#: ../gdesklets:81
+#: ../gdesklets:82
 msgid "missing"
 msgstr ""
 
-#: ../gdesklets:87
+#: ../gdesklets:88
 msgid "Version check failed."
 msgstr ""
 
-#: ../gdesklets:88
+#: ../gdesklets:89
 #, c-format
 msgid ""
 "\n"
 "%s\n"
 msgstr ""
 
-#: ../gdesklets:89
+#: ../gdesklets:90
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -268,128 +264,146 @@ msgid ""
 "THE STARTUP WILL BE CANCELLED NOW!\n"
 msgstr ""
 
-#: ../gdesklets:98
+#: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
 msgstr ""
 
-#: ../gdesklets:105
+#: ../gdesklets:106
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
 "gDesklets will start a requirements check now...\n"
 msgstr ""
 
-#: ../gdesklets:116
+#: ../gdesklets:117
 msgid ""
-"Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
-"\t<command>\n"
-"\t\topen    <files>   (Opens the given desklet files)\n"
-"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
-"\t\tstop              (Stops the gDesklets daemon)\n"
-"\t\tlist              (Lists open desklets)\n"
-"\t\trestart           (Restarts the gDesklets daemon)\n"
-"\t\tprofile <profile> (Switches to the given profile)\n"
-"\t\tprofile           (Shows the current and the available profiles)\n"
-"\t\tshell             (Opens the graphical shell)\n"
-"\t\tslay              (Kills the daemon -- use in emergency)\n"
-"\t\tstatus            (Checks daemon status)\n"
-"\t\tabout             (Prints information about gDesklets)\n"
-"\t\tversion           (Prints gDesklets version)\n"
-"\t\tconfigure         (Opens the configuration dialog)\n"
-"\t\thelp              (Displays this text)\n"
-"\t\tcheck             (Checks requirements)\n"
+"Orders:\n"
+"  open    <files>   (Opens the given desklet files)\n"
+"  start             (Runs the gDesklets daemon, this is default)\n"
+"  stop              (Stops the gDesklets daemon)\n"
+"  list              (Lists open desklets)\n"
+"  restart           (Restarts the gDesklets daemon)\n"
+"  profile <profile> (Switches to the given profile)\n"
+"  profile           (Shows the current and the available profiles)\n"
+"  shell             (Opens the graphical shell)\n"
+"  slay              (Kills the daemon -- use in emergency)\n"
+"  status            (Checks daemon status)\n"
+"  about             (Prints information about gDesklets)\n"
+"  version           (Prints gDesklets version)\n"
+"  configure         (Opens the configuration dialog)\n"
+"  help              (Displays this text)\n"
+"  check             (Checks requirements)\n"
 "\n"
-"\t[option]\n"
-"\t\t--no-tray-icon    (disables the systray icon)\n"
-"\t\t--translucent     (enables translucency on the xorg servers)\n"
 msgstr ""
 
-#: ../gdesklets:161
+#: ../gdesklets:158
 #, c-format
 msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
 
-#: ../gdesklets:164
+#: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
 msgstr ""
 
-#: ../gdesklets:189 ../gdesklets:258
-#, fuzzy, c-format
+#: ../gdesklets:186 ../gdesklets:272
+#, c-format
 msgid "Could not open desklet %s."
-msgstr "无法打开显示文件“%(path)s”"
+msgstr ""
 
-#: ../gdesklets:266
+#: ../gdesklets:204
+#, c-format
+msgid "%prog [options] order"
+msgstr ""
+
+#: ../gdesklets:209
+msgid "Avoid to show the icon on the tray"
+msgstr ""
+
+#: ../gdesklets:215
+msgid "Debug the application"
+msgstr ""
+
+#: ../gdesklets:221
+msgid "Launch pre-existing display "
+msgstr ""
+
+#: ../gdesklets:228
+msgid "Session manager prefix"
+msgstr ""
+
+#: ../gdesklets:233
+msgid "Session manager ID"
+msgstr ""
+
+#: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
 msgstr "正在启动 gdesklets-daemon..."
 
-#: ../gdesklets:272
+#: ../gdesklets:282
 msgid "Shutting down gdesklets-daemon..."
 msgstr "正在关闭 gdesklets-daemon..."
 
-#: ../gdesklets:284
-#, fuzzy, c-format
+#: ../gdesklets:294
+#, c-format
 msgid "Currently open displays in profile \"%s\":\n"
-msgstr "目前打开配置文件“%s”中的显示："
+msgstr ""
 
-#: ../gdesklets:289
-#, fuzzy, c-format
+#: ../gdesklets:299
+#, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
-msgstr "目前配置文件“%s”中没有任何显示"
+msgstr ""
 
-#: ../gdesklets:293
+#: ../gdesklets:303
 msgid "Restarting gdesklets-daemon..."
 msgstr "正在重新启动 gdesklets-daemon..."
 
-#: ../gdesklets:306
+#: ../gdesklets:316
 msgid "gdesklets-daemon is running"
 msgstr "gdesklets-daemon 正在运行"
 
-#: ../gdesklets:308
+#: ../gdesklets:318
 msgid "gdesklets-daemon is not running"
 msgstr "gdesklets-daemon 未在运行"
 
-#: ../gdesklets:312
+#: ../gdesklets:322
 #, c-format
 msgid "Current profile: %s"
 msgstr "当前配置文件：%s"
 
-#: ../gdesklets:323
+#: ../gdesklets:333
 #, c-format
 msgid "New profile: %s"
 msgstr "新配置文件：%s"
 
-#: ../gdesklets:326
+#: ../gdesklets:336
 #, c-format
 msgid "Available profiles: %s"
 msgstr "可用的配置文件：%s"
 
-#: ../gdesklets:330
+#: ../gdesklets:340
 #, c-format
 msgid "This is %s, version %s."
 msgstr "这是 %s，版本 %s。"
 
-#: ../gdesklets:358
+#: ../gdesklets:368
 msgid "Nothing to slay."
 msgstr ""
 
-#: ../gdesklets:382
-#, fuzzy
+#: ../gdesklets:392
 msgid "Invalid command. Please try one of the following commands:"
-msgstr "无效的命令。请试用以下命令！"
+msgstr ""
 
 #: ../gdesklets-daemon:27
-#, fuzzy
 msgid "You need a recent version of PyGTK to run this program.\n"
-msgstr "您需要更新版本的 PyGTK 才能运行此程序。"
+msgstr ""
 
 #: ../gdesklets-daemon:52
-#, fuzzy
 msgid "Could not fork daemon.\n"
-msgstr "无法调用守护程序。"
+msgstr ""
 
 #: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
 #, c-format
@@ -431,11 +445,10 @@ msgid "Connecting to daemon [%s]"
 msgstr "连接到守护程序 [%s]"
 
 #: ../main/client.py:293
-#, fuzzy
 msgid ""
 "Cannot establish connection to daemon: timeout!\n"
 "The log file might help you solving the problem."
-msgstr "无法建立到守护程序的连接：超时！"
+msgstr ""
 
 #: ../main/client.py:299
 #, python-format
@@ -465,9 +478,8 @@ msgid "GNOME Integration:"
 msgstr "GNOME 集成："
 
 #: ../main/__init__.py:83
-#, fuzzy
 msgid "Additional Programming:"
-msgstr "核心编程："
+msgstr ""
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
@@ -485,36 +497,35 @@ msgstr "网站："
 msgid "Thank you:"
 msgstr ""
 
-#: ../main/Starter.py:102
+#: ../main/Starter.py:103
 msgid "_Manage desklets"
 msgstr "管理桌面小程序(_M)"
 
-#: ../main/Starter.py:105
-#, fuzzy
+#: ../main/Starter.py:106
 msgid "_Configuration"
-msgstr "配置"
+msgstr ""
 
-#: ../main/Starter.py:107
+#: ../main/Starter.py:108
 msgid "_View log"
 msgstr "查看日志(_V)"
 
-#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
+#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
 msgstr "关于(_A)..."
 
-#: ../main/Starter.py:113
+#: ../main/Starter.py:114
 msgid "_Stop daemon"
 msgstr "停止守护程序(_S)"
 
-#: ../main/Starter.py:224
-#, fuzzy, python-format
+#: ../main/Starter.py:230
+#, python-format
 msgid "Could not open desklet file \"%s\""
-msgstr "无法打开显示文件“%(path)s”"
+msgstr ""
 
-#: ../main/Starter.py:225
-#, fuzzy
-msgid "The desklet file could not be opened because the file was not readable."
-msgstr "显示文件无法打开，原因是文件不可读。"
+#: ../main/Starter.py:231
+msgid ""
+"The desklet file could not be opened because the file was not readable."
+msgstr ""
 
 #: ../main/transition.py:39
 msgid ""
@@ -565,29 +576,29 @@ msgstr ""
 msgid "no description"
 msgstr "没有描述"
 
-#: ../scripting/Script.py:154
+#: ../scripting/Script.py:155
 msgid "Error in add_timer function"
 msgstr ""
 
-#: ../scripting/Script.py:155
+#: ../scripting/Script.py:156
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
 msgstr ""
 
-#: ../scripting/Script.py:199
+#: ../scripting/Script.py:200
 #, python-format
 msgid "No Control could be found for interface %s"
 msgstr ""
 
-#: ../scripting/Script.py:201
+#: ../scripting/Script.py:202
 msgid "This means that a functionality won't be available during execution!"
 msgstr ""
 
-#: ../scripting/Script.py:241
+#: ../scripting/Script.py:242
 msgid "Security Risk"
 msgstr ""
 
-#: ../scripting/Script.py:242
+#: ../scripting/Script.py:243
 #, python-format
 msgid ""
 "The desklet %s wants to execute a system command:\n"
@@ -601,15 +612,15 @@ msgid ""
 "desklet instance to run it."
 msgstr ""
 
-#: ../scripting/Script.py:255
+#: ../scripting/Script.py:256
 msgid "Deny!"
 msgstr ""
 
-#: ../scripting/Script.py:256
+#: ../scripting/Script.py:257
 msgid "Allow once"
 msgstr ""
 
-#: ../scripting/Script.py:257
+#: ../scripting/Script.py:258
 msgid "Allow for this desklet"
 msgstr ""
 
@@ -667,7 +678,7 @@ msgid "by interface"
 msgstr "按接口"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:28
-#: ../shell/plugins/DisplayBrowser/__init__.py:80
+#: ../shell/plugins/DisplayBrowser/__init__.py:85
 msgid "alphabetically"
 msgstr "按字母序"
 
@@ -677,55 +688,59 @@ msgid "Found %d controls."
 msgstr "找到了 %d 个控制。"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
-#: ../shell/plugins/DisplayBrowser/__init__.py:158
+#: ../shell/plugins/DisplayBrowser/__init__.py:190
 msgid "Invalid search expression."
 msgstr "无效的搜索表达式。"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:40
-#, fuzzy
-msgid "R_emove selected desklet"
-msgstr "删除选中的显示(_E)"
-
 #: ../shell/plugins/DisplayBrowser/__init__.py:43
+msgid "R_emove selected desklet"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:46
 msgid "_Run (remote) desklet..."
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:45
-#, fuzzy
+#: ../shell/plugins/DisplayBrowser/__init__.py:48
 msgid "R_un selected desklet"
-msgstr "运行选中的显示(_R)"
+msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:78
+#: ../shell/plugins/DisplayBrowser/__init__.py:83
 msgid "by category"
 msgstr "按类别"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:79
+#: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
 msgstr "按作者"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:130
+#: ../shell/plugins/DisplayBrowser/__init__.py:148
+msgid "There is a saved instance of this display."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:149
+msgid "Would you like to open this?"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
 msgstr "无法删除"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:131
-#, fuzzy
+#: ../shell/plugins/DisplayBrowser/__init__.py:163
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
-msgstr "显示文件无法删除。这可能意味着您没有盖文件的写权限。"
+msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:143
-#, fuzzy
+#: ../shell/plugins/DisplayBrowser/__init__.py:175
 msgid ""
 "The desklet will be removed from your system and no longer be available."
-msgstr "显示将从您的系统中删除，不再可用。"
+msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:155
-#, fuzzy, python-format
+#: ../shell/plugins/DisplayBrowser/__init__.py:187
+#, python-format
 msgid "Found %d desklets"
-msgstr "找到了 %d 个显示。"
+msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:177
+#: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
 msgstr "没有可用的描述"
 
@@ -734,6 +749,10 @@ msgid "_Help"
 msgstr "帮助(_H)"
 
 #: ../shell/plugins/Help/__init__.py:38
+msgid "_Contents"
+msgstr ""
+
+#: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
 msgstr "日积月累(_T)"
 
@@ -746,7 +765,6 @@ msgid "Show tips at startup"
 msgstr "启动时显示日积月累"
 
 #: ../shell/plugins/Help/tips.py:2
-#, fuzzy
 msgid ""
 "You can find lots of desktop applets for use\n"
 "with gDesklets at\n"
@@ -755,10 +773,6 @@ msgid ""
 "and\n"
 "http://gdesklets.zencomputer.ca/"
 msgstr ""
-"您可以在以下网站找到与 gDesklets 一起使用的许多\n"
-"桌面小程序\n"
-"\n"
-"http://gdesklets.gnomedesktop.org"
 
 #: ../shell/plugins/Help/tips.py:9
 msgid ""
@@ -820,9 +834,8 @@ msgid "Retrieving:"
 msgstr "正在获取："
 
 #: ../shell/plugins/PackageInstaller/__init__.py:26
-#, fuzzy
 msgid "I_nstall remote package..."
-msgstr "安装软件包(_I)..."
+msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:27
 msgid "_Install package..."
@@ -876,9 +889,9 @@ msgid "Search"
 msgstr "搜索"
 
 #: ../utils/dialog.py:46
-#, fuzzy, python-format
+#, python-format
 msgid "_Details (%d lines)"
-msgstr "细节 (%d 行)"
+msgstr ""
 
 #: ../utils/dialog.py:194
 msgid "_Ignore errors from this desklet"
@@ -894,9 +907,9 @@ msgid "No such element: %s"
 msgstr "没有这样的元素：%s"
 
 #: ../utils/DOM.py:154
-#, fuzzy, python-format
+#, python-format
 msgid "The element with ID <b>%s</b> does not exist in the SVG image."
-msgstr "元素 <b>%(name)s</b> 没有 <b>%(key)s</b> 属性。"
+msgstr ""
 
 #: ../utils/DOM.py:182 ../utils/Element.py:91
 #, python-format
@@ -904,14 +917,14 @@ msgid "No such property: %s"
 msgstr "没有这样的属性：%s"
 
 #: ../utils/DOM.py:183
-#, fuzzy, python-format
+#, python-format
 msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
-msgstr "元素 <b>%(name)s</b> 没有 <b>%(key)s</b> 属性。"
+msgstr ""
 
 #: ../utils/Element.py:92
-#, fuzzy, python-format
+#, python-format
 msgid "The element <b>%s</b> does not have the <b>%s</b> property."
-msgstr "元素 <b>%(name)s</b> 没有 <b>%(key)s</b> 属性。"
+msgstr ""
 
 #: ../utils/Element.py:96 ../utils/Element.py:126
 msgid "Permission Error"
@@ -943,70 +956,5 @@ msgid "Runtime Error"
 msgstr ""
 
 #: ../utils/error.py:160
-#, fuzzy
 msgid "An error occurred while executing a desklet."
-msgstr "执行脚本时发生错误。"
-
-#~ msgid ""
-#~ "The element <b>%(name)s</b> does not have the <b>%(key)s</b> property."
-#~ msgstr "元素 <b>%(name)s</b> 没有 <b>%(key)s</b> 属性。"
-
-#~ msgid "_Move display"
-#~ msgstr "移动显示(_M)"
-
-#~ msgid "Error while configuring display"
-#~ msgstr "配置显示时出错"
-
-#~ msgid ""
-#~ "A display could not be configured properly. It will most likely be broken "
-#~ "and you should consider removing it."
-#~ msgstr "不能正确配置显示，它可能已被破坏，您应该考虑删除它。"
-
-#~ msgid "Error in sensor '%(name)s'"
-#~ msgstr "加载传感器“%(name)s”出错"
-
-#~ msgid ""
-#~ "An error occurred while loading a sensor. This most likely means that "
-#~ "your system does not fulfill all its requirements."
-#~ msgstr "加载传感器时发生错误。最可能的原因是您的系统不满足其需求。"
-
-#~ msgid "Error in sensor %(name)s"
-#~ msgstr "传感器 %(name)s 出错"
-
-#~ msgid "An error occurred while running a sensor."
-#~ msgstr "运行传感器时出错。"
-
-#, fuzzy
-#~ msgid "Invalid display file '%s'"
-#~ msgstr "无效的显示文件“%(path)s”"
-
-#~ msgid "The display file contains invalid data and could not be loaded."
-#~ msgstr "显示文件包含有无效数据，不能被加载。"
-
-#, fuzzy
-#~ msgid "GNOME session management will not be available for this application."
-#~ msgstr "无法连接到 gnome-session。GNOME 会话管理无法应用于此应用程序。"
-
-#~ msgid "Error in script"
-#~ msgstr "脚本出错"
-
-#~ msgid "Do you really want to remove this display?"
-#~ msgstr "您真的想要删除此显示吗？"
-
-#~ msgid "No such item: %s"
-#~ msgstr "没有这样的项目：%s"
-
-#~ msgid "The %(name)s container accepts only one child."
-#~ msgstr "容器 %(name)s 只接受一个子对象。"
-
-#~ msgid "Could not find X display."
-#~ msgstr "找不到 X 显示。"
-
-#~ msgid "Log Messages"
-#~ msgstr "日志消息"
-
-#~ msgid "An error occurred while loading a script."
-#~ msgstr "装入脚本时发生错误。"
-
-#~ msgid "translator_credits"
-#~ msgstr "开源软件中文化之 GNOME 简体中文组 http://i18n.linux.net.cn"
+msgstr ""

@@ -9,20 +9,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-02 21:49+0100\n"
-"PO-Revision-Date: 2006-10-14 08:01+0100\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"POT-Creation-Date: 2008-12-29 09:28-0300\n"
+"PO-Revision-Date: 2009-04-28 21:09+0000\n"
+"Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
 
-#: ../config/ConfigDialog.py:113
+#: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
 msgstr "Ogiltigt funktionsanrop"
 
-#: ../config/ConfigDialog.py:114
+#: ../config/ConfigDialog.py:116
 #, python-format
 msgid ""
 "There is no function called <b>%s</b>.\n"
@@ -33,7 +34,7 @@ msgstr ""
 "Detta betyder att det finns ett fel i skrivbordsprogrammets kod. Du bör "
 "informera upphovsmannen av skrivbordsprogrammet om detta problem."
 
-#: ../config/ConfigDialog.py:228 ../display/DisplayConfigurator.py:32
+#: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
 msgstr "Detta skrivbordsprogram är inte konfigurerbart."
 
@@ -67,8 +68,8 @@ msgstr "Skärmupplösning (DPI)"
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
-"Adjust the value above so that the bar will be exactly <b>5 cm</b> or <b>1.97"
-"\"</b> wide"
+"Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
+"<b>1.97\"</b> wide"
 msgstr ""
 "Justera värdet ovan så att raden exakt kommer att vara <b>5 cm</b> eller "
 "<b>1.97\"</b> bred"
@@ -102,40 +103,43 @@ msgstr "Ett skrivbordsprogramssystem för GNOME"
 msgid "gDesklets display"
 msgstr "gDesklets-display"
 
-#: ../display/Display.py:85
+#: ../display/Display.py:86
 msgid "_Configure desklet"
 msgstr "_Konfigurera skrivbordsprogram"
 
-#: ../display/Display.py:87
+#: ../display/Display.py:88
 msgid "_Move desklet"
 msgstr "_Flytta skrivbordsprogram"
 
-#: ../display/Display.py:90
+#: ../display/Display.py:91
 msgid "_View Source"
 msgstr "_Visa källkod"
 
-#: ../display/Display.py:93
+#: ../display/Display.py:94
 msgid "Re_start desklet"
 msgstr "_Starta om skrivbordsprogram"
 
-#: ../display/Display.py:95
+#: ../display/Display.py:96
 msgid "_Remove desklet"
 msgstr "_Ta bort skrivbordsprogram"
 
 #: ../display/Display.py:98
+msgid "_Disable desklet"
+msgstr ""
+
+#: ../display/Display.py:101
 msgid "_About"
 msgstr "_Om"
 
-#: ../display/Display.py:337
-#, fuzzy
+#: ../display/Display.py:340
 msgid "_Readme"
-msgstr "_Ta bort"
+msgstr ""
 
-#: ../display/Display.py:1115 ../shell/plugins/DisplayBrowser/__init__.py:142
+#: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
 msgstr "Vill du verkligen ta bort detta skrivbordsprogram?"
 
-#: ../display/Display.py:1116
+#: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
@@ -212,56 +216,53 @@ msgstr ""
 "En sensor kunde inte hittas. Detta betyder oftast att den inte har "
 "installerats."
 
-#: ../gdesklets:26
+#: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
 msgstr "Du får INTE köra gDesklets som superanvändare (root)."
 
-#: ../gdesklets:46
+#: ../gdesklets:47
 msgid "Checking requirements:"
 msgstr "Kontrollerar kraven:"
 
-#: ../gdesklets:50
+#: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
 msgstr "Python version >= 2.3.0 krävs."
 
-#: ../gdesklets:54
+#: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr "libexpat version 1.95.7 är trasig. Vänligen uppgradera!"
 
-#: ../gdesklets:57
+#: ../gdesklets:58
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr "SAX-tolkare krävs, vissa SuSE-versioner skeppas utan den."
 
-#: ../gdesklets:61
-#, fuzzy
+#: ../gdesklets:62
 msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
-"GTK python-bindningar (pygtk2) version >= 2.4.0 och GTK+ version >= 2.4.0 "
-"krävs."
 
-#: ../gdesklets:65
+#: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
 msgstr "ORBit python-bindningar (pyorbit) version >= 2.0.1 krävs."
 
-#: ../gdesklets:68
+#: ../gdesklets:69
 msgid "bonobo python bindings are required."
 msgstr "bonobo python-bindningar krävs."
 
-#: ../gdesklets:77
+#: ../gdesklets:78
 msgid "found"
 msgstr "hittades"
 
-#: ../gdesklets:81
+#: ../gdesklets:82
 msgid "missing"
 msgstr "saknas"
 
-#: ../gdesklets:87
+#: ../gdesklets:88
 msgid "Version check failed."
 msgstr "Versionskontroll misslyckades."
 
-#: ../gdesklets:88
+#: ../gdesklets:89
 #, c-format
 msgid ""
 "\n"
@@ -270,7 +271,7 @@ msgstr ""
 "\n"
 "%s\n"
 
-#: ../gdesklets:89
+#: ../gdesklets:90
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -288,11 +289,11 @@ msgstr ""
 "\n"
 "UPPSTARTEN KOMMER ATT AVBRYTAS NU!\n"
 
-#: ../gdesklets:98
+#: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
 msgstr ""
 
-#: ../gdesklets:105
+#: ../gdesklets:106
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
@@ -302,126 +303,125 @@ msgstr ""
 "Du kör gDesklets för första gången.\n"
 "gDesklets kommer att påbörja en kravkontroll nu...\n"
 
-#: ../gdesklets:116
+#: ../gdesklets:117
 msgid ""
-"Usage: gdesklets [option] <command> [arguments...]\n"
 "\n"
-"\t<command>\n"
-"\t\topen    <files>   (Opens the given desklet files)\n"
-"\t\tstart             (Runs the gDesklets daemon, this is default)\n"
-"\t\tstop              (Stops the gDesklets daemon)\n"
-"\t\tlist              (Lists open desklets)\n"
-"\t\trestart           (Restarts the gDesklets daemon)\n"
-"\t\tprofile <profile> (Switches to the given profile)\n"
-"\t\tprofile           (Shows the current and the available profiles)\n"
-"\t\tshell             (Opens the graphical shell)\n"
-"\t\tslay              (Kills the daemon -- use in emergency)\n"
-"\t\tstatus            (Checks daemon status)\n"
-"\t\tabout             (Prints information about gDesklets)\n"
-"\t\tversion           (Prints gDesklets version)\n"
-"\t\tconfigure         (Opens the configuration dialog)\n"
-"\t\thelp              (Displays this text)\n"
-"\t\tcheck             (Checks requirements)\n"
+"Orders:\n"
+"  open    <files>   (Opens the given desklet files)\n"
+"  start             (Runs the gDesklets daemon, this is default)\n"
+"  stop              (Stops the gDesklets daemon)\n"
+"  list              (Lists open desklets)\n"
+"  restart           (Restarts the gDesklets daemon)\n"
+"  profile <profile> (Switches to the given profile)\n"
+"  profile           (Shows the current and the available profiles)\n"
+"  shell             (Opens the graphical shell)\n"
+"  slay              (Kills the daemon -- use in emergency)\n"
+"  status            (Checks daemon status)\n"
+"  about             (Prints information about gDesklets)\n"
+"  version           (Prints gDesklets version)\n"
+"  configure         (Opens the configuration dialog)\n"
+"  help              (Displays this text)\n"
+"  check             (Checks requirements)\n"
 "\n"
-"\t[option]\n"
-"\t\t--no-tray-icon    (disables the systray icon)\n"
-"\t\t--translucent     (enables translucency on the xorg servers)\n"
 msgstr ""
-"Användning: gdesklets [flagga] <kommando> [argument...]\n"
-"\n"
-"\t<kommando>\n"
-"\t\topen    <filer>   (Öppnar angivna skrivbordsprogramfiler)\n"
-"\t\tstart             (Kör gDesklets-demonen, detta är standard)\n"
-"\t\tstop              (Stoppar gDesklets-demonen)\n"
-"\t\tlist              (Listar öppna skrivbordsprogram)\n"
-"\t\trestart           (Startar om gDesklets-demonen)\n"
-"\t\tprofile <profil>  (Byter till angiven profil)\n"
-"\t\tprofile           (Visar aktuell och tillgängliga profiler)\n"
-"\t\tshell             (Öppnar det grafiska skalet)\n"
-"\t\tslay              (Dödar demonen -- använd i nödfall)\n"
-"\t\tstatus            (Kontrollerar demonstatus)\n"
-"\t\tabout             (Skriver ut information om gDesklets)\n"
-"\t\tversion           (Skriver ut gDesklets versionsnummer)\n"
-"\t\tconfigure         (Öppnar konfigurationsdialogrutan)\n"
-"\t\thelp              (Visar denna text)\n"
-"\t\tcheck             (Kontrollerar kraven)\n"
-"\n"
-"\t[flagga]\n"
-"\t\t--no-tray-icon    (inaktiverar systembrickeikonen)\n"
-"\t\t--translucent     (aktiverar halvgenomskinlighet på xorg-servrar)\n"
 
-#: ../gdesklets:161
+#: ../gdesklets:158
 #, c-format
 msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
 
-#: ../gdesklets:164
+#: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
 msgstr ""
 
-#: ../gdesklets:189 ../gdesklets:258
+#: ../gdesklets:186 ../gdesklets:272
 #, c-format
 msgid "Could not open desklet %s."
 msgstr "Kunde inte öppna skrivbordsprogrammet %s."
 
-#: ../gdesklets:266
+#: ../gdesklets:204
+#, c-format
+msgid "%prog [options] order"
+msgstr ""
+
+#: ../gdesklets:209
+msgid "Avoid to show the icon on the tray"
+msgstr ""
+
+#: ../gdesklets:215
+msgid "Debug the application"
+msgstr "Felsök programmet"
+
+#: ../gdesklets:221
+msgid "Launch pre-existing display "
+msgstr ""
+
+#: ../gdesklets:228
+msgid "Session manager prefix"
+msgstr ""
+
+#: ../gdesklets:233
+msgid "Session manager ID"
+msgstr ""
+
+#: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
 msgstr "Startar gdesklets-daemon..."
 
-#: ../gdesklets:272
+#: ../gdesklets:282
 msgid "Shutting down gdesklets-daemon..."
 msgstr "Stänger ner gdesklets-daemon..."
 
-#: ../gdesklets:284
+#: ../gdesklets:294
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr "För närvarande öppna displayer i profilen \"%s\":\n"
 
-#: ../gdesklets:289
+#: ../gdesklets:299
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr "För närvarande finns det inga skrivbordsprogram i profilen \"%s\""
 
-#: ../gdesklets:293
+#: ../gdesklets:303
 msgid "Restarting gdesklets-daemon..."
 msgstr "Startar om gdesklets-daemon..."
 
-#: ../gdesklets:306
+#: ../gdesklets:316
 msgid "gdesklets-daemon is running"
 msgstr "gdesklets-daemon kör"
 
-#: ../gdesklets:308
+#: ../gdesklets:318
 msgid "gdesklets-daemon is not running"
 msgstr "gdesklets-daemon kör inte"
 
-#: ../gdesklets:312
+#: ../gdesklets:322
 #, c-format
 msgid "Current profile: %s"
 msgstr "Aktuell profil: %s"
 
-#: ../gdesklets:323
+#: ../gdesklets:333
 #, c-format
 msgid "New profile: %s"
 msgstr "Ny profil: %s"
 
-#: ../gdesklets:326
+#: ../gdesklets:336
 #, c-format
 msgid "Available profiles: %s"
 msgstr "Tillgängliga profiler: %s"
 
-#: ../gdesklets:330
+#: ../gdesklets:340
 #, c-format
 msgid "This is %s, version %s."
 msgstr "Detta är %s, version %s."
 
-#: ../gdesklets:358
+#: ../gdesklets:368
 msgid "Nothing to slay."
 msgstr "Ingenting att slå ihjäl."
 
-#: ../gdesklets:382
+#: ../gdesklets:392
 msgid "Invalid command. Please try one of the following commands:"
 msgstr "Ogiltigt kommando. Försök med ett av följande kommandon:"
 
@@ -508,13 +508,12 @@ msgid "GNOME Integration:"
 msgstr "GNOME-integration:"
 
 #: ../main/__init__.py:83
-#, fuzzy
 msgid "Additional Programming:"
-msgstr "Kärnprogrammering:"
+msgstr "Ytterligare programmering:"
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
-msgstr ""
+msgstr "Dokumentation:"
 
 #: ../main/__init__.py:89
 msgid "Artwork:"
@@ -528,39 +527,39 @@ msgstr "Webbplats:"
 msgid "Thank you:"
 msgstr "Tack till:"
 
-#: ../main/Starter.py:102
+#: ../main/Starter.py:103
 msgid "_Manage desklets"
 msgstr "_Hantera skrivbordsprogram"
 
-#: ../main/Starter.py:105
+#: ../main/Starter.py:106
 msgid "_Configuration"
 msgstr "_Konfiguration"
 
-#: ../main/Starter.py:107
+#: ../main/Starter.py:108
 msgid "_View log"
 msgstr "_Visa logg"
 
-#: ../main/Starter.py:110 ../shell/plugins/Help/__init__.py:41
+#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
 msgstr "_Om..."
 
-#: ../main/Starter.py:113
+#: ../main/Starter.py:114
 msgid "_Stop daemon"
 msgstr "_Stoppa demon"
 
-#: ../main/Starter.py:224
+#: ../main/Starter.py:230
 #, python-format
 msgid "Could not open desklet file \"%s\""
 msgstr "Kunde inte öppna skrivbordsprogramfilen \"%s\""
 
-#: ../main/Starter.py:225
-msgid "The desklet file could not be opened because the file was not readable."
+#: ../main/Starter.py:231
+msgid ""
+"The desklet file could not be opened because the file was not readable."
 msgstr ""
 "Skrivbordsprogramfilen kunde inte öppnas på grund av att filen inte var "
 "läsbar."
 
 #: ../main/transition.py:39
-#, fuzzy
 msgid ""
 "This is a unstable version of gDesklets. Unstable versions represent the "
 "current state of development and might be unstable or cause problems from "
@@ -575,18 +574,18 @@ msgid ""
 "\n"
 "Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
-"Detta är en CVS-version av gDesklets. CVS-versioner representerar aktuellt "
-"tillstånd av utvecklingen och kan vara ostabil eller orsaka problem från tid "
-"till annan.\n"
+"Detta är en instabil version av gDesklets. Instabila versioner representerar "
+"det aktuella tillståndet för utvecklingen och kan vara instabil eller orsaka "
+"problem då och då.\n"
 "\n"
-"Om du är nybörjare i gDesklets, är det starkt rekommenderat att <b>inte</b> "
-"använda en CVS-version, utan en stabil utgåva!\n"
+"Om du är nybörjare med gDesklets så rekommenderas det starkt att <b>inte</b> "
+"använda denna versionen utan istället använda en stabil utgåva!\n"
 "\n"
-"Om du fortfarande vill köra CVS-versionen istället för en stabil utgåva, "
-"uppskattar vi mycket om du rapporterar eventuellt konstigt beteende i "
-"programmet till utvecklarna.\n"
+"Om du fortfarande vill köra den instabila versionen istället för den stabila "
+"utgåvan så vore vi tacksamma för om du rapporterar allt ovanligt till "
+"utvecklarna.\n"
 "\n"
-"Erfarna användare uppmuntras dock att prova en CVS-version!"
+"Erfarna användare uppmuntras dock att prova en bzr-version!"
 
 #: ../main/transition.py:51
 msgid ""
@@ -609,7 +608,6 @@ msgstr ""
 #. our informative transition message which we can change with
 #. every release
 #: ../main/transition.py:62
-#, fuzzy
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -620,16 +618,6 @@ msgid ""
 "Please note that due to limitations of older X servers, you might see blocks "
 "around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
-"Denna version av gDesklets innefattar Flytande-läget: tryck en tangent och "
-"alla dina skrivbordsprogram kommer fram, flytande ovanför dina program, "
-"tills du trycker den tangenten igen!\n"
-"Standardtangentbindningen är &lt;Shift&gt; &lt;F12&gt;, men du kan enkelt "
-"ändra den i konfigurationsdialogrutan.\n"
-"\n"
-"Observera att på grund av begränsningar i äldre X-servrar så kanske du ser "
-"block runt skrivbordsprogram i Flytande-läget. Detta kan inte lösas på ett "
-"tillfredsställande sätt förrutom att växla X-servern till riktig "
-"halvgenomskinlighet (Xorg 6.8 eller högre)."
 
 #: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
@@ -639,29 +627,30 @@ msgstr "Observera (detta meddelande visas endast en gång):"
 msgid "no description"
 msgstr "ingen beskrivning"
 
-#: ../scripting/Script.py:154
+#: ../scripting/Script.py:155
 msgid "Error in add_timer function"
 msgstr "Fel i funktionen add_timer"
 
-#: ../scripting/Script.py:155
+#: ../scripting/Script.py:156
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
 msgstr "\"%s\" är inte ett giltigt heltalsvärde!"
 
-#: ../scripting/Script.py:199
+#: ../scripting/Script.py:200
 #, python-format
 msgid "No Control could be found for interface %s"
 msgstr "Ingen kontroll kunde hittas för gränssnittet %s"
 
-#: ../scripting/Script.py:201
+#: ../scripting/Script.py:202
 msgid "This means that a functionality won't be available during execution!"
-msgstr "Detta betyder att en funktionalitet inte finns tillgänglig vid start!"
+msgstr ""
+"Detta betyder att en funktionalitet inte finns tillgänglig vid start!"
 
-#: ../scripting/Script.py:241
+#: ../scripting/Script.py:242
 msgid "Security Risk"
 msgstr "Säkerhetsrisk"
 
-#: ../scripting/Script.py:242
+#: ../scripting/Script.py:243
 #, python-format
 msgid ""
 "The desklet %s wants to execute a system command:\n"
@@ -685,15 +674,15 @@ msgstr ""
 "instans av\n"
 "skrivbordsprogrammet att köra det."
 
-#: ../scripting/Script.py:255
+#: ../scripting/Script.py:256
 msgid "Deny!"
 msgstr "Vägra!"
 
-#: ../scripting/Script.py:256
+#: ../scripting/Script.py:257
 msgid "Allow once"
 msgstr "Tillåt en enda gång"
 
-#: ../scripting/Script.py:257
+#: ../scripting/Script.py:258
 msgid "Allow for this desklet"
 msgstr "Tillåt för detta skrivbordsprogram"
 
@@ -752,7 +741,7 @@ msgid "by interface"
 msgstr "efter gränssnitt"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:28
-#: ../shell/plugins/DisplayBrowser/__init__.py:80
+#: ../shell/plugins/DisplayBrowser/__init__.py:85
 msgid "alphabetically"
 msgstr "alfabetisk"
 
@@ -762,35 +751,43 @@ msgid "Found %d controls."
 msgstr "Hittade %d kontrollrar."
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
-#: ../shell/plugins/DisplayBrowser/__init__.py:158
+#: ../shell/plugins/DisplayBrowser/__init__.py:190
 msgid "Invalid search expression."
 msgstr "Ogiltigt sökuttryck."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:40
+#: ../shell/plugins/DisplayBrowser/__init__.py:43
 msgid "R_emove selected desklet"
 msgstr "Ta _bort markerat skrivbordsprogram"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:43
+#: ../shell/plugins/DisplayBrowser/__init__.py:46
 msgid "_Run (remote) desklet..."
 msgstr "_Kör (fjärr)skrivbordsprogram..."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:45
+#: ../shell/plugins/DisplayBrowser/__init__.py:48
 msgid "R_un selected desklet"
 msgstr "Kör _markerat skrivbordsprogram"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:78
+#: ../shell/plugins/DisplayBrowser/__init__.py:83
 msgid "by category"
 msgstr "efter kategori"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:79
+#: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
 msgstr "efter upphovsman"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:130
+#: ../shell/plugins/DisplayBrowser/__init__.py:148
+msgid "There is a saved instance of this display."
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:149
+msgid "Would you like to open this?"
+msgstr ""
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
 msgstr "Kunde inte ta bort"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:131
+#: ../shell/plugins/DisplayBrowser/__init__.py:163
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
@@ -798,19 +795,19 @@ msgstr ""
 "Skrivbordsprogramfilen kunde inte tas bort. Detta betyder oftast att du inte "
 "har skrivrättigheter för filen."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:143
+#: ../shell/plugins/DisplayBrowser/__init__.py:175
 msgid ""
 "The desklet will be removed from your system and no longer be available."
 msgstr ""
 "Skrivbordsprogrammet kommer att tas bort från ditt system och inte vara "
 "tillgängligt längre."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:155
+#: ../shell/plugins/DisplayBrowser/__init__.py:187
 #, python-format
 msgid "Found %d desklets"
 msgstr "Hittade %d skrivbordsprogram"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:177
+#: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
 msgstr "Ingen beskrivning tillgänglig"
 
@@ -819,6 +816,10 @@ msgid "_Help"
 msgstr "_Hjälp"
 
 #: ../shell/plugins/Help/__init__.py:38
+msgid "_Contents"
+msgstr "_Innehåll"
+
+#: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
 msgstr "Dagens _tips"
 
@@ -1064,154 +1065,3 @@ msgstr "Körtidsfel"
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
 msgstr "Ett fel inträffade vid körning av ett skrivbordsprogram."
-
-#~ msgid "XComposite support (requires composition manager)"
-#~ msgstr "XComposite-stöd (kräver compositionhanterare)"
-
-#~ msgid ""
-#~ "\n"
-#~ "     <small><i>"
-#~ msgstr ""
-#~ "\n"
-#~ "     <small><i>"
-
-#~ msgid "this does not work with GTK 2.8 or higher for technical reasons"
-#~ msgstr "detta fungerar inte med GTK 2.8 eller högre av tekniska orsaker"
-
-#~ msgid "</i></small>"
-#~ msgstr "</i></small>"
-
-#~ msgid "Translucency (takes effect after restarting a display)"
-#~ msgstr "Halvgenomskinlighet (blir aktiverad efter omstart av display)"
-
-#~ msgid "Usage: gdesklets <OPTION> <my.display>\n"
-#~ msgstr "Användning: gdesklets <FLAGGA> <min.display>\n"
-
-#~ msgid "Options:\n"
-#~ msgstr "Flaggor:\n"
-
-#~ msgid ""
-#~ "\t--no-config\t\tignore the configuration stored in the database (GConf)"
-#~ msgstr ""
-#~ "\t--no-config\t\tignorera konfigurationen som lagrats i databasen (GConf)"
-
-#~ msgid ""
-#~ "\t--orig-coords\t\tset the coordinates for every display to the upper "
-#~ "left corner"
-#~ msgstr ""
-#~ "\t--orig-coords\t\tställ in koordinaterna för varje display till det övre "
-#~ "vänstra hörnet"
-
-#~ msgid "\t--profile=myprofile\tuse \"myprofile\" as profile."
-#~ msgstr "\t--profile=minprofil\tanvänd \"minprofil\" som profil."
-
-#~ msgid "\t--version\t\toutput version information and exit"
-#~ msgstr "\t--version\t\tvisa versionsinformation och avsluta"
-
-#~ msgid "The %(name)s container accepts only one child."
-#~ msgstr "Containern %(name)s accepterar endast ett barn."
-
-#~ msgid "Error while configuring display"
-#~ msgstr "Fel vid konfigurering av display"
-
-#~ msgid ""
-#~ "A display could not be configured properly. It will most likely be broken "
-#~ "and you should consider removing it."
-#~ msgstr ""
-#~ "En display kunde inte konfigureras korrekt. Den är högst sannolikt trasig "
-#~ "och du bör överväga att ta bort den."
-
-#~ msgid ""
-#~ "An error occurred while loading a sensor. This most likely means that the "
-#~ "sensor is broken or simply not installed."
-#~ msgstr ""
-#~ "Ett fel inträffade vid inläsning av en sensor. Detta betyder högst "
-#~ "sannolikt att sensorn är trasig eller helt enkelt inte installerad."
-
-#~ msgid "Invalid display file '%(path)s'"
-#~ msgstr "Ogiltig displayfil \"%(path)s\""
-
-#~ msgid "_Quit"
-#~ msgstr "_Avsluta"
-
-#~ msgid "translator_credits"
-#~ msgstr ""
-#~ "Daniel Nylander\n"
-#~ "Christian Rose\n"
-#~ "\n"
-#~ "Skicka synpunkter på översättningen till\n"
-#~ "tp-sv@listor.tp-sv.se"
-
-#~ msgid "Usage: gdesklets <OPTIONS> <my.display>\n"
-#~ msgstr "Användning: gdesklets <FLAGGOR> <min.display>\n"
-
-#~ msgid "Options:"
-#~ msgstr "Flaggor:"
-
-#~ msgid "Options"
-#~ msgstr "Flaggor"
-
-#~ msgid "Option"
-#~ msgstr "Flagga"
-
-#~ msgid "Could not add display"
-#~ msgstr "Kunde inte lägga till display"
-
-#~ msgid ""
-#~ "The sensor %(path)s\n"
-#~ "has attempted to access the core from within\n"
-#~ "a thread. In order to prevent a disaster, the\n"
-#~ "thread will be terminated."
-#~ msgstr ""
-#~ "Sensorn %(path)s\n"
-#~ "har försökt komma åt kärnan från en tråd.\n"
-#~ "Tråden kommer att avslutas för att\n"
-#~ "förhindra en katastrof."
-
-#~ msgid "Illegal operation"
-#~ msgstr "Otillåten åtgärd"
-
-#~ msgid "Welcome to %(name)s<i>!</i>"
-#~ msgstr "Välkommen till %(name)s<i>!</i>"
-
-#~ msgid ""
-#~ "It looks like you are running %(name)s for the first time.\n"
-#~ "\n"
-#~ "You can add new displays by launching them in your file manager.\n"
-#~ "\n"
-#~ "<b>Have fun,</b>\n"
-#~ "  <i>the %(name)s developers</i>"
-#~ msgstr ""
-#~ "Det verkar som om du kör %(name)s för första gången.\n"
-#~ "\n"
-#~ "Du kan lägga till nya displayer genom att starta dem i din filhanterare.\n"
-#~ "\n"
-#~ "<b>Ha det bra,</b>\n"
-#~ "  <i>utvecklarna av %(name)s</i>"
-
-#~ msgid "Font settings"
-#~ msgstr "Typsnittsinställningar"
-
-#~ msgid "Font Settings"
-#~ msgstr "Typsnittsinställningar"
-
-#~ msgid "Settings"
-#~ msgstr "Inställningar"
-
-#~ msgid "Font color:"
-#~ msgstr "Typsnittsfärg:"
-
-#~ msgid "Font color"
-#~ msgstr "Typsnittsfärg"
-
-#~ msgid "Welcome to %(name)s!"
-#~ msgstr "Välkommen till %(name)s!"
-
-#~ msgid "_Configure display..."
-#~ msgstr "_Konfigurera display..."
-
-#~ msgid "Configure display..."
-#~ msgstr "Konfigurera display..."
-
-#~ msgid "Restart display"
-#~ msgstr "Starta om display"
