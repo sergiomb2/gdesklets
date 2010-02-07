@@ -1,5 +1,5 @@
 from Vault import Vault
-from PropertyArray import PropertyArray
+from PropertyInterface import PropertyInterface
 from main.Control import Control
 from plugin.Interface import Interface
 from copy import deepcopy
@@ -12,7 +12,7 @@ class ControlWrapper(object):
     def __init__(self, control, size):
 
         self.__dict__["_ControlWrapper__length"] = size
-        # Use 'array_size' so the PropertyArray constructor gets the
+        # Use 'array_size' so the PropertyInterface constructor gets the
         # original setting
         array_size = size
         if size <= 0:
@@ -27,7 +27,7 @@ class ControlWrapper(object):
         self.__dict__["_ControlWrapper__original_control"] = Vault(control)
         # Create a property handler for each deep copy of control
         self.__dict__["_ControlWrapper__properties"] = \
-                     [ PropertyArray(self.__control(open)[i])
+                     [ PropertyInterface(self.__control(open)[i])
                        for i in range(array_size) ]
 
         ids =  [ Interface.get_id(i)
@@ -62,11 +62,11 @@ class ControlWrapper(object):
                     if value > self.__length:
                         self.__dict__["_ControlWrapper__control"] = \
                             Vault( self.__control(open) +           \
-                                   [ deepcopy(self.__original_control(open))  \
+                                   [ deepcopy(self.__original_control(open))    \
                                      for i in range(self.__length, value) ] )
                         self.__dict__["_ControlWrapper__properties"] = \
                             self.__properties +                        \
-                            [ PropertyArray(self.__control(open)[i])  \
+                            [ PropertyInterface(self.__control(open)[i])    \
                               for i in range(self.__length, value) ]
                     elif value < self.__length:
                         # We want to leave the "0th" item alone, which is 
