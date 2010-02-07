@@ -9,12 +9,13 @@ from copy import deepcopy
 #
 class ControlWrapper(object):
 
-    def __init__(self, control, size=0):
+    def __init__(self, control, size):
 
         self.__dict__["_ControlWrapper__length"] = size
-        # can we just use the 'size' variable?
+        # Use 'array_size' so the PropertyArray constructor gets the
+        # original setting
         array_size = size
-        if size == 0:
+        if size <= 0:
             array_size = 1
 
         # We need to deepcopy in order to get individually changeable
@@ -22,13 +23,12 @@ class ControlWrapper(object):
         self.__dict__["_ControlWrapper__control"] = \
                      Vault( [ deepcopy(control)
                               for i in range(array_size) ] )
-        # Keep a an original copy around for extending the array
+        # Keep an original copy around for extending the array
         self.__dict__["_ControlWrapper__original_control"] = Vault(control)
-        # This creates a dictionary of property arrays accesible by the keys
-        # normally used to access the property
+        # Create a property handler for each deep copy of control
         self.__dict__["_ControlWrapper__properties"] = \
-                     dict([ (k, PropertyArray(v, self.__control, array_size))
-                                    for (k, v) in Interface.get_properties(control.__class__) ])
+                     [ PropertyArray(self.__control(open)[i])
+                       for i in range(array_size) ]
 
         ids =  [ Interface.get_id(i)
                  for i in Interface.get_interfaces( control.__class__ ) ]
@@ -48,74 +48,121 @@ class ControlWrapper(object):
 
     def __setattr__(self, name, value):
 
-        if name == "length":
-            # A little bounds checking
-            if value <= 0:
-              log("Warning: Value of property \"length\" must be greater than 0 (setting to 1)")
-              value = 1
+        log("debug: trying to set %s to %s" % (name, value))
+        if self.__length > 0:
 
-            # Don't do anything if value isn't changing
-            if value != self.__length:
-                if value > self.__length:
-                    self.__dict__["_ControlWrapper__control"] = \
-                        Vault( self.__control(open) +           \
-                               [ deepcopy(self.__original_control(open))  \
-                                 for i in range(self.__length, value) ] )
-                elif value < self.__length:
-                    # We want to leave the "0th" item alone
-                    # Handled by the above conditionals
-                    start_deleting_at = value #if value != 0 else 1
-                    c = self.__control(open)
-                    for i in range(start_deleting_at, self.__length):
-                        del c[i]
-                    self.__dict__["_ControlWrapper__control"] = Vault(c)
+            if name == "length":
+                # A little bounds checking
+                if value <= 0:
+                  log("Warning: Value of property \"length\" must be greater than 0 (setting to 1)")
+                  value = 1
 
-                # Pass on the value to each item in the PropertyArray
-                for k in self.__properties.keys():
-                    # Reset the PropertyArray's control element
-                    self.__properties[k]._set_control(self.__control, open)
-                    self.__properties[k]._set_length(value, open)
-                self.__dict__["_ControlWrapper__length"] = value
-        else: # name != "length"
+                # Don't do anything if value isn't changing
+                if value != self.__length:
+                    if value > self.__length:
+                        self.__dict__["_ControlWrapper__control"] = \
+                            Vault( self.__control(open) +           \
+                                   [ deepcopy(self.__original_control(open))  \
+                                     for i in range(self.__length, value) ] )
+                        self.__dict__["_ControlWrapper__properties"] = \
+                            self.__properties +                        \
+                            [ PropertyArray(self.__control(open)[i])  \
+                              for i in range(self.__length, value) ]
+                    elif value < self.__length:
+                        # We want to leave the "0th" item alone, which is 
+                        # handled by the above conditionals
+                        start_deleting_at = value #if value != 0 else 1
+                        for i in range(start_deleting_at, self.__length):
+                            del self[i]
+
+                    self.__dict__["_ControlWrapper__length"] = value
+            else: # name != "length"
+                # This is the case where someone tries to set a property
+                # of this class when the length != 0. They should know
+                # better if they've gone and changed the length, but we'll
+                # be nice and print out some informational warnings.
+                log("Warning: Property \"%s\" must be indexed (length == %d)." % (name, self.__length))
+                return
+
+        else: # length <= 0
+
             # Backwards compatibility
-            if self.__length == 1:
-                try:
-                    prop = self.__properties[name][0]
-                except KeyError:
-                    log("Warning: Property \"%s\" isn't available." % (name,))
-                    return
-
-                prop.fset(self.__control(open)[0], value)
-            # This is the case where someone tries to access a property
-            # of this class when the length != 1. They should know
-            # better if they've gone and changed the length, but we'll
-            # be nice and print out some informational warnings.
-            else: # length != 1
-                try:
-                    prop = self.__properties[name]
-                except KeyError:
-                    log("Warning: Property \"%s\" isn't available." % (name,))
-                finally:
-                    log("Warning: Property \"%s\" must be indexed (length != 0)." % (name,))
-                    return
+            self.__dict__["_ControlWrapper__properties"][0][name] = value
 
 
 
     def __getattr__(self, name):
 
+        log("debug: trying to get %s" % (name,))
+        print self.__control(open)
         if name in Control.AUTHORIZED_METHODS:
-            if self.__length == 0:
+            if self.__length <= 0:
                 return getattr(self.__control(open)[0], name)
             else:
                 return self.__control(open)
 
-        # This is where the magic happens.
-        # The __properties dict has its own locking mechanisms, so
-        # just give the whole thing to the user.
-        if name == "length":
+        if self.__length <= 0:
+            # Backwards compatibility
+            return self.__properties[0][name]
+        elif name == "length":
             return self.__length
         else:
-            return self.__properties[name]
+            print "debug: length: %d" % self.__length
+            # This is the case where someone tries to set a property
+            # of this class when the length != 0. They should know
+            # better if they've gone and changed the length, but we'll
+            # be nice and print out some informational warnings.
+            log("Warning: Property \"%s\" must be indexed (length == %d)." % (name, self.__length))
+            return
+
+
+
+    def __setitem__(self, idx, value):
+
+        if self.__length <= 0:
+
+            log("Warning: Control not initialized as an array.")
+            raise IndexError
+
+        log("debug: setting index %d to %s" % (idx, value))
+        if (idx >= self.__length) or (idx + self.__length < 0):
+            raise IndexError("%d doesn't exist, length is %d" % (idx, self.__length))
+
+        return self.__properties[idx]
+
+
+
+    def __getitem__(self, idx):
+
+        if self.__length <= 0:
+
+            log("Warning: Control not initialized as an array.")
+            raise IndexError
+
+        log("debug: getting index %d" % (idx,))
+        if (idx >= self.__length) or (idx + self.__length < 0):
+            raise IndexError("%d doesn't exist, length is %d" % (idx, self.__length))
+
+        return self.__properties[idx]
+
+
+
+    def __delitem__(self, idx):
+
+        if idx < self.__length and idx >= 1:
+
+            # As long as we delete the same index of __control, there will be
+            # no property that uses that Control
+            del self.__dict__["_ControlWrapper__properties"][idx]
+            new_ctrl_list = self.__dict__["_ControlWrapper__control"](open)
+            del new_ctrl_list[idx]
+            del self.__dict__["_ControlWrapper__control"]
+            self.__dict__["_ControlWrapper__control"] = Vault( new_ctrl_list )
+            self.__dict__["_ControlWrapper__length"] = self.__length - 1
+
+        else:
+
+            log("Warning: Trying to delete index %d when length is %d." % (idx, self.__length))
 
 
 
