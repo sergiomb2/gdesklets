@@ -87,7 +87,7 @@ class ControlWrapper(object):
         else: # length <= 0
 
             # Backwards compatibility
-            self.__dict__["_ControlWrapper__properties"][0][name] = value
+            self.__dict__["_ControlWrapper__properties"][0].__setattr__(name, value)
 
 
 
@@ -103,11 +103,10 @@ class ControlWrapper(object):
 
         if self.__length <= 0:
             # Backwards compatibility
-            return self.__properties[0][name]
+            return self.__dict__["_ControlWrapper__properties"][0].__getattr__(name)
         elif name == "length":
             return self.__length
         else:
-            print "debug: length: %d" % self.__length
             # This is the case where someone tries to set a property
             # of this class when the length != 0. They should know
             # better if they've gone and changed the length, but we'll
