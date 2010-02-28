@@ -11,6 +11,7 @@ SUBDIRS = \
 	display		\
 	factory		\
 	layout		\
+	macros		\
 	main		\
 	plugin		\
 	po		\
