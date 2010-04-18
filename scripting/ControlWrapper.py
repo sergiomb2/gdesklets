@@ -48,7 +48,6 @@ class ControlWrapper(object):
 
     def __setattr__(self, name, value):
 
-        log("debug: trying to set %s to %s" % (name, value))
         if self.__length > 0:
 
             if name == "length":
@@ -93,8 +92,6 @@ class ControlWrapper(object):
 
     def __getattr__(self, name):
 
-        log("debug: trying to get %s" % (name,))
-        print self.__control(open)
         if name in Control.AUTHORIZED_METHODS:
             if self.__length <= 0:
                 return getattr(self.__control(open)[0], name)
@@ -123,7 +120,6 @@ class ControlWrapper(object):
             log("Warning: Control not initialized as an array.")
             raise IndexError
 
-        log("debug: setting index %d to %s" % (idx, value))
         if (idx >= self.__length) or (idx + self.__length < 0):
             raise IndexError("%d doesn't exist, length is %d" % (idx, self.__length))
 
@@ -138,7 +134,6 @@ class ControlWrapper(object):
             log("Warning: Control not initialized as an array.")
             raise IndexError
 
-        log("debug: getting index %d" % (idx,))
         if (idx >= self.__length) or (idx + self.__length < 0):
             raise IndexError("%d doesn't exist, length is %d" % (idx, self.__length))
 

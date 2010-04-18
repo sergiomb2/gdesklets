@@ -13,7 +13,6 @@ class PropertyInterface():
 
     def __setattr__(self, name, value):
 
-        log("debug: setting %s to \'%s\'" % (name, value))
         try:
             prop = self.__property(open)[name]
         except KeyError:
@@ -26,7 +25,6 @@ class PropertyInterface():
 
     def __getattr__(self, name):
 
-        log("debug: trying to get %s" % (name,))
         if name in Control.AUTHORIZED_METHODS:
             return getattr(self.__control(open), name)
 
