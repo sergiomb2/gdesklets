@@ -1,3 +1,13 @@
+2010-02-28  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* configure.in
+	* main/__init__.py: moving on to 0.36.3_beta
+	* Makefile.am
+	* macros/Makefile.am: Adding the macros dir to the build/make process
+
+
+=== This is gDesklets 0.36.2 ===
+
 === 0.36.2_rc1 ===
 
 2009-10-04  Joe Sapp  <nixphoeni@gmail.com>
