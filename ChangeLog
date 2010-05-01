@@ -1,3 +1,7 @@
+2010-05-01  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* config/ConfigDialog.py: Markup ToolTips (see bug #570267)
+
 2010-02-28  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* configure.in
