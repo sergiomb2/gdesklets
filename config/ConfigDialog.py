@@ -76,8 +76,8 @@ class ConfigDialog(HIGDialog):
         HIGDialog.__init__(self, buttons=(gtk.STOCK_CLOSE, gtk.RESPONSE_CLOSE),
                            self_destroy = False)
 
-        self.__tooltips = gtk.Tooltips()
-        self.__tooltips.enable()
+#        self.__tooltip = gtk.Tooltip()
+#        self.__tooltip.enable()
 
 
         def destroy(*args):
@@ -214,8 +214,8 @@ class ConfigDialog(HIGDialog):
                         gtk.EXPAND | gtk.FILL, 0, indent, 3)
 
         if (help):
-            self.__tooltips.set_tip(ebox, help)
-
+#            self.__tooltip.set_text(ebox, help)
+            ebox.set_tooltip_markup(help)
 
 
     #

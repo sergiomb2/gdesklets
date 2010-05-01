@@ -79,7 +79,7 @@ class Sensor(Observable):
     #:/function
     #
     def get_id(self):
-        assert(self.__id, "The ID is invalid in the constructor.")
+        assert self.__id, "The ID is invalid in the constructor."
 
         return self.__id
 
