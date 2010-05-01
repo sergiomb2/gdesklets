@@ -21,7 +21,6 @@ install_DATA = \
 	ConfigUnit.py     \
 	ConfigURI.py      \
 	ConfigDialog.py   \
-	ConfigWidget.py   \
 	ConfigManager.py  \
 	ConfigWidget.py   \
 	DaemonConfigger.py  \
