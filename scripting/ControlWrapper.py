@@ -12,23 +12,25 @@ class ControlWrapper(object):
     def __init__(self, control, size):
 
         self.__dict__["_ControlWrapper__length"] = size
-        # Use 'array_size' so the PropertyInterface constructor gets the
-        # original setting
-        array_size = size
         if size <= 0:
-            array_size = 1
+            size = 1
 
         # We need to deepcopy in order to get individually changeable
         # Control instances
         self.__dict__["_ControlWrapper__control"] = \
                      Vault( [ deepcopy(control)
-                              for i in range(array_size) ] )
+                              for i in range(size) ] )
+        # Initialize all initial copies
+        for ctl in self.__dict__["_ControlWrapper__control"](open):
+            ctl.__init__()
+        print "debug: original control: %s" % control
+        print "debug: copies: %s" % self.__control(open)
         # Keep an original copy around for extending the array
         self.__dict__["_ControlWrapper__original_control"] = Vault(control)
         # Create a property handler for each deep copy of control
         self.__dict__["_ControlWrapper__properties"] = \
                      [ PropertyInterface(self.__control(open)[i])
-                       for i in range(array_size) ]
+                       for i in range(size) ]
 
         ids =  [ Interface.get_id(i)
                  for i in Interface.get_interfaces( control.__class__ ) ]
@@ -59,10 +61,16 @@ class ControlWrapper(object):
                 # Don't do anything if value isn't changing
                 if value != self.__length:
                     if value > self.__length:
+                        # Append new copies of the control
                         self.__dict__["_ControlWrapper__control"] = \
                             Vault( self.__control(open) +           \
                                    [ deepcopy(self.__original_control(open))    \
                                      for i in range(self.__length, value) ] )
+                        # Initialize all new copies of the control
+                        for ctl in [ self.__dict__["_ControlWrapper__control"](open)[i] \
+                                     for i in range(self.__length, value) ]:
+                            ctl.__init__()
+                        # Append new PropertyInterface instances
                         self.__dict__["_ControlWrapper__properties"] = \
                             self.__properties +                        \
                             [ PropertyInterface(self.__control(open)[i])    \
