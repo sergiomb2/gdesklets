@@ -66,10 +66,10 @@ class ControlInspector(HIGDialog):
 
         textrenderer0.set_property("weight", pango.WEIGHT_BOLD)
         textrenderer0.set_property("wrap-width", 250)
-        textrenderer0.set_property("wrap-mode", gtk.WRAP_WORD)
+        textrenderer0.set_property("wrap-mode", pango.WRAP_WORD)
         textrenderer1.set_property("style", pango.STYLE_ITALIC)
         textrenderer1.set_property("wrap-width", 500)
-        textrenderer1.set_property("wrap-mode", gtk.WRAP_WORD)
+        textrenderer1.set_property("wrap-mode", pango.WRAP_WORD)
 
         for (iface, items) in texts:
 

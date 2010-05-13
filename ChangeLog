@@ -2,6 +2,8 @@
 
 	* display/DisplayTarget.py: fixed UserError output if relative-to points 
 	    to the parent object
+	* shell/plugins/ControlBrowser/ControlInspector.py: fixed bug #565624
+            (Shell expects PangoWrapMode)
 
 2010-05-01  Bjoern Koch  <H.Humpel@gmx.de>
 
