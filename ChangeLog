@@ -1,3 +1,8 @@
+2010-05-13  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* display/DisplayTarget.py: fixed UserError output if relative-to points 
+	    to the parent object
+
 2010-05-01  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* config/ConfigDialog.py: Markup ToolTips (see bug #570267)
