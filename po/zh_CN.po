@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-01-01 07:39+0000\n"
-"Last-Translator: Funda Wang <Unknown>\n"
+"PO-Revision-Date: 2010-02-28 01:32+0000\n"
+"Last-Translator: YunQiang Su <wzssyqa@gmail.com>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
-msgstr ""
+msgstr "无效调用"
 
 #: ../config/ConfigDialog.py:116
 #, python-format
@@ -28,14 +28,16 @@ msgid ""
 "This means that there's an error in the desklet's code. You should inform "
 "the author of the desklet about this problem."
 msgstr ""
+"没有<b>%s</b>这个函数.\n"
+"这意味着这个desklet的代码存在错误.你可以将这个问题反馈给程序作者."
 
 #: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
-msgstr ""
+msgstr "这个desklet不能进行配置."
 
 #: ../config/ConfigUnit.py:57
 msgid "pixel"
-msgstr ""
+msgstr "像素"
 
 #: ../config/ConfigUnit.py:58
 msgid "point"
@@ -43,23 +45,23 @@ msgstr ""
 
 #: ../config/ConfigUnit.py:59
 msgid "cm"
-msgstr ""
+msgstr "厘米"
 
 #: ../config/ConfigUnit.py:60
 msgid "inch"
-msgstr ""
+msgstr "英寸"
 
 #: ../config/DaemonConfigger.py:17
 msgid "Editor to view/edit the desklet source code"
-msgstr ""
+msgstr "用来查看或修改desklet代码的文本编辑器"
 
 #: ../config/DaemonConfigger.py:18
 msgid "Your favorite editor"
-msgstr ""
+msgstr "你最喜欢的编辑器"
 
 #: ../config/DaemonConfigger.py:20
 msgid "Screen Resolution (DPI)"
-msgstr ""
+msgstr "屏幕分辨率"
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
@@ -69,7 +71,7 @@ msgstr ""
 
 #: ../config/DaemonConfigger.py:26
 msgid "Behavior"
-msgstr ""
+msgstr "习惯"
 
 #: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
@@ -122,7 +124,7 @@ msgstr ""
 
 #: ../display/Display.py:101
 msgid "_About"
-msgstr ""
+msgstr "关于(_A)"
 
 #: ../display/Display.py:340
 msgid "_Readme"
@@ -130,13 +132,13 @@ msgstr ""
 
 #: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
-msgstr ""
+msgstr "您真的想要移除这个控件吗?"
 
 #: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
-msgstr ""
+msgstr "这个控件不会再显示,并且其配置文件也将被清楚."
 
 #: ../display/DisplayTarget.py:417
 #, python-format
@@ -170,7 +172,7 @@ msgstr ""
 
 #: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
-msgstr ""
+msgstr "文件不存在或不能加载."
 
 #: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
@@ -210,7 +212,7 @@ msgstr ""
 
 #: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
-msgstr ""
+msgstr "需要版本2.30或以上的Python."
 
 #: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
@@ -252,6 +254,8 @@ msgid ""
 "\n"
 "%s\n"
 msgstr ""
+"\n"
+"%s\n"
 
 #: ../gdesklets:90
 msgid ""
@@ -266,7 +270,7 @@ msgstr ""
 
 #: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
-msgstr ""
+msgstr "系统环境检查完成,你的系统应该没有问题."
 
 #: ../gdesklets:106
 msgid ""
@@ -274,6 +278,9 @@ msgid ""
 "You're running gDesklets for the first time.\n"
 "gDesklets will start a requirements check now...\n"
 msgstr ""
+"\n"
+"这是你第一次运行gDesklets.\n"
+"程序将要进行运行环境检查...\n"
 
 #: ../gdesklets:117
 msgid ""
@@ -321,7 +328,7 @@ msgstr ""
 
 #: ../gdesklets:209
 msgid "Avoid to show the icon on the tray"
-msgstr ""
+msgstr "不在工具栏上显示图标"
 
 #: ../gdesklets:215
 msgid "Debug the application"
@@ -483,7 +490,7 @@ msgstr ""
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
-msgstr ""
+msgstr "文档:"
 
 #: ../main/__init__.py:89
 msgid "Artwork:"
@@ -495,7 +502,7 @@ msgstr "网站："
 
 #: ../main/__init__.py:95
 msgid "Thank you:"
-msgstr ""
+msgstr "致谢:"
 
 #: ../main/Starter.py:103
 msgid "_Manage desklets"
@@ -525,7 +532,7 @@ msgstr ""
 #: ../main/Starter.py:231
 msgid ""
 "The desklet file could not be opened because the file was not readable."
-msgstr ""
+msgstr "这个desklet文件无法打开因为该文件不可读."
 
 #: ../main/transition.py:39
 msgid ""
@@ -570,7 +577,7 @@ msgstr ""
 
 #: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
-msgstr ""
+msgstr "请注意(仅显示一次):"
 
 #: ../plugin/Interface.py:200 ../plugin/Interface.py:227
 msgid "no description"
@@ -596,7 +603,7 @@ msgstr ""
 
 #: ../scripting/Script.py:242
 msgid "Security Risk"
-msgstr ""
+msgstr "安全风险"
 
 #: ../scripting/Script.py:243
 #, python-format
@@ -614,11 +621,11 @@ msgstr ""
 
 #: ../scripting/Script.py:256
 msgid "Deny!"
-msgstr ""
+msgstr "拒绝！"
 
 #: ../scripting/Script.py:257
 msgid "Allow once"
-msgstr ""
+msgstr "一次允许"
 
 #: ../scripting/Script.py:258
 msgid "Allow for this desklet"
@@ -718,7 +725,7 @@ msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:149
 msgid "Would you like to open this?"
-msgstr ""
+msgstr "您希望打开这个吗?"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
@@ -728,12 +735,12 @@ msgstr "无法删除"
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
-msgstr ""
+msgstr "这个desklet文件不能被移除.可能是你没有写权限."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:175
 msgid ""
 "The desklet will be removed from your system and no longer be available."
-msgstr ""
+msgstr "这个desklet将被永久移除."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:187
 #, python-format

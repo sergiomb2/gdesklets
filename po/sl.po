@@ -1,19 +1,16 @@
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Aktualną wersję tego pliku możesz odnaleźć w repozytorium cvs.gnome.pl
-# (:pserver:anonymous@cvs.gnome.pl:/gnomepl, puste hasło)
-# Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
-# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas na adres:
-# translators@gnome.pl
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Krzysztof Luks <kluks@iq.pl>, 2003
+# Slovenian translation for gdesklets
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the gdesklets package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: gDesklets\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: gdesklets\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2010-03-21 12:46+0000\n"
-"Last-Translator: Bartosz Kaszubowski <gosimek@gmail.com>\n"
-"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2010-04-05 05:10+0000\n"
+"Last-Translator: Štefan Baebler <Unknown>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,7 +19,7 @@ msgstr ""
 
 #: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
-msgstr "Złe odwołanie do funkcji"
+msgstr ""
 
 #: ../config/ConfigDialog.py:116
 #, python-format
@@ -31,21 +28,18 @@ msgid ""
 "This means that there's an error in the desklet's code. You should inform "
 "the author of the desklet about this problem."
 msgstr ""
-"Nie ma funkcji o nazwie <b>%s</b>.\n"
-"Oznacza to, że wystąpił błąd w kodzie desklet'u. Powinno się poinformować "
-"autora desklet'u o tym problemie."
 
 #: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
-msgstr "Ten desklet nie jest konfigurowalny."
+msgstr ""
 
 #: ../config/ConfigUnit.py:57
 msgid "pixel"
-msgstr "piksel"
+msgstr ""
 
 #: ../config/ConfigUnit.py:58
 msgid "point"
-msgstr "kropka"
+msgstr ""
 
 #: ../config/ConfigUnit.py:59
 msgid "cm"
@@ -53,36 +47,33 @@ msgstr "cm"
 
 #: ../config/ConfigUnit.py:60
 msgid "inch"
-msgstr "cal"
+msgstr ""
 
 #: ../config/DaemonConfigger.py:17
 msgid "Editor to view/edit the desklet source code"
-msgstr "Edytor do przeglądania/edycji kodu źródłowego desklet'u."
+msgstr ""
 
 #: ../config/DaemonConfigger.py:18
 msgid "Your favorite editor"
-msgstr "Twój ulubiony edytor"
+msgstr ""
 
 #: ../config/DaemonConfigger.py:20
 msgid "Screen Resolution (DPI)"
-msgstr "Rozdzielczość ekranu(DPI)"
+msgstr ""
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
 "Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
 "<b>1.97\"</b> wide"
 msgstr ""
-"Zmień powyższą wartość tak aby pasek miał dokładnie <b> 5 cm</b> lub "
-"<b>1.97\" cali</b> szerokości"
 
 #: ../config/DaemonConfigger.py:26
 msgid "Behavior"
-msgstr "Zachowanie"
+msgstr ""
 
 #: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
 msgstr ""
-"Pokaż ikonkę w trayu (efekt widoczny po ponownym uruchomieniu komputera)"
 
 #: ../config/DaemonConfigger.py:29
 msgid "Show _notification while loading a desklet"
@@ -95,11 +86,11 @@ msgstr ""
 #: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
 #: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
-msgstr "Konfiguracja"
+msgstr "Nastavitve"
 
 #: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
 msgid "A desktop applet system for GNOME"
-msgstr "System apletów pulpitu dla GNOME"
+msgstr ""
 
 #: ../data/gdesklets.xml.in.h:1
 msgid "gDesklets display"
@@ -107,15 +98,15 @@ msgstr ""
 
 #: ../display/Display.py:86
 msgid "_Configure desklet"
-msgstr "_Kkonfiguruj desklet"
+msgstr ""
 
 #: ../display/Display.py:88
 msgid "_Move desklet"
-msgstr "_Przesuń desklet"
+msgstr ""
 
 #: ../display/Display.py:91
 msgid "_View Source"
-msgstr "_Zobacz Źrudła"
+msgstr ""
 
 #: ../display/Display.py:94
 msgid "Re_start desklet"
@@ -123,15 +114,15 @@ msgstr ""
 
 #: ../display/Display.py:96
 msgid "_Remove desklet"
-msgstr "_Usuń desklet"
+msgstr ""
 
 #: ../display/Display.py:98
 msgid "_Disable desklet"
-msgstr "_Dezaktywuj desklet"
+msgstr ""
 
 #: ../display/Display.py:101
 msgid "_About"
-msgstr "_O programie"
+msgstr "_O programu"
 
 #: ../display/Display.py:340
 msgid "_Readme"
@@ -139,20 +130,18 @@ msgstr ""
 
 #: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
-msgstr "Czy napewno chcesz usunąć ten desklet?"
+msgstr ""
 
 #: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
 msgstr ""
-"Ten desklet nie będzie więcej wyświetlany a jego ustawienia zostaną "
-"skasowane."
 
 #: ../display/DisplayTarget.py:417
 #, python-format
 msgid "Element \"%s\" does not exist"
-msgstr "Element \"%s\" nie istnieje"
+msgstr ""
 
 #: ../display/DisplayTarget.py:418
 msgid ""
@@ -163,14 +152,13 @@ msgstr ""
 #: ../display/targetregistry.py:45
 #, python-format
 msgid "Unknown element <b>&lt;%s&gt;</b>"
-msgstr "Nieznay element <b>&lt;%s&gt;</b>"
+msgstr ""
 
 #: ../display/targetregistry.py:46
 msgid ""
 "Either there is a typo in the .display file or you have an incompatible "
 "version of gDesklets."
 msgstr ""
-"Jest literówka w pliku .display lub masz niekompatybilną wersję gDesklets."
 
 #: ../factory/DisplayFactory.py:89 ../utils/DOM.py:31
 msgid "XML parse error"
@@ -178,11 +166,11 @@ msgstr ""
 
 #: ../factory/DisplayFactory.py:90
 msgid "This .display file has invalid XML syntax."
-msgstr "Plik .display ma niepoprawną składnię XML."
+msgstr ""
 
 #: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
-msgstr "Plik nie instnieje lub nie mógł być wczytany"
+msgstr ""
 
 #: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
@@ -190,7 +178,7 @@ msgstr ""
 
 #: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
-msgstr "Nie można było załadować sensora"
+msgstr ""
 
 #: ../factory/DisplayFactory.py:243
 #, python-format
@@ -214,24 +202,23 @@ msgstr ""
 
 #: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
-msgstr "NIE możesz uruchamiać gDesklets jako super użytkownik (root)."
+msgstr ""
 
 #: ../gdesklets:47
 msgid "Checking requirements:"
-msgstr "Sprawdzanie wymagań:"
+msgstr ""
 
 #: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
-msgstr "Jest wymagana wersja Python >=2.3.0 ."
+msgstr ""
 
 #: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
-msgstr "libexpat version 1.95.7 jest uszkodzona. Prosze zaktualizować!"
+msgstr ""
 
 #: ../gdesklets:58
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr ""
-"jest wymagany parser SAX, niektóre wersje SuSE są dostarczane bez niego."
 
 #: ../gdesklets:62
 msgid ""
@@ -249,15 +236,15 @@ msgstr ""
 
 #: ../gdesklets:78
 msgid "found"
-msgstr "znaleziono"
+msgstr ""
 
 #: ../gdesklets:82
 msgid "missing"
-msgstr "brak"
+msgstr ""
 
 #: ../gdesklets:88
 msgid "Version check failed."
-msgstr "Błąd sprawdzania wersji."
+msgstr ""
 
 #: ../gdesklets:89
 #, c-format
@@ -265,8 +252,6 @@ msgid ""
 "\n"
 "%s\n"
 msgstr ""
-"\n"
-"%s\n"
 
 #: ../gdesklets:90
 msgid ""
@@ -281,7 +266,7 @@ msgstr ""
 
 #: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
-msgstr "Sprawdzanie wymagań zakończone. Twój system zdaje egzamin!"
+msgstr ""
 
 #: ../gdesklets:106
 msgid ""
@@ -289,9 +274,6 @@ msgid ""
 "You're running gDesklets for the first time.\n"
 "gDesklets will start a requirements check now...\n"
 msgstr ""
-"\n"
-"Uruchomiłeś gDesklets po raz pierwszy.\n"
-"Program sprawdzi teraz możliwości komputera...\n"
 
 #: ../gdesklets:117
 msgid ""
@@ -481,7 +463,7 @@ msgstr ""
 #: ../main/__init__.py:71
 #, python-format
 msgid "Version %s"
-msgstr ""
+msgstr "Različica %s"
 
 #: ../main/__init__.py:74
 msgid "Core Programming:"
@@ -497,7 +479,7 @@ msgstr ""
 
 #: ../main/__init__.py:83
 msgid "Additional Programming:"
-msgstr ""
+msgstr "Dodatno programiranje:"
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
@@ -509,7 +491,7 @@ msgstr ""
 
 #: ../main/__init__.py:92
 msgid "Website:"
-msgstr ""
+msgstr "Spletišče:"
 
 #: ../main/__init__.py:95
 msgid "Thank you:"
@@ -529,7 +511,7 @@ msgstr ""
 
 #: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
-msgstr ""
+msgstr "_O Programu..."
 
 #: ../main/Starter.py:114
 msgid "_Stop daemon"
@@ -644,31 +626,31 @@ msgstr ""
 
 #: ../Sensors/FontSelector/__init__.py:86
 msgid "Fonts"
-msgstr "Czcionki"
+msgstr "Pisave"
 
 #: ../Sensors/FontSelector/__init__.py:87
 msgid "Fonts settings"
-msgstr "Ustawienia czcionek"
+msgstr ""
 
 #: ../Sensors/FontSelector/__init__.py:90
 #, python-format
 msgid "Font #%i:"
-msgstr "Czcionka #%i:"
+msgstr ""
 
 #: ../Sensors/FontSelector/__init__.py:92
 #, python-format
 msgid "Font #%i used in the labels"
-msgstr "Czcionka #%i używana w etykietach"
+msgstr ""
 
 #: ../Sensors/FontSelector/__init__.py:93
 #, python-format
 msgid "Font color #%i:"
-msgstr "Kolor czcionki #%i:"
+msgstr ""
 
 #: ../Sensors/FontSelector/__init__.py:95
 #, python-format
 msgid "Font color #%i used in the labels"
-msgstr "Kolor czcionki #%i używanej w etykietach"
+msgstr ""
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:16
 #, python-format
@@ -728,7 +710,7 @@ msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
-msgstr ""
+msgstr "po avtorju"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:148
 msgid "There is a saved instance of this display."
@@ -764,23 +746,23 @@ msgstr ""
 
 #: ../shell/plugins/Help/__init__.py:37
 msgid "_Help"
-msgstr ""
+msgstr "_Pomoč"
 
 #: ../shell/plugins/Help/__init__.py:38
 msgid "_Contents"
-msgstr ""
+msgstr "Vsebina pomoči"
 
 #: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
-msgstr ""
+msgstr "_Nasvet dneva"
 
 #: ../shell/plugins/Help/TipOfTheDay.py:24
 msgid "Tip of the Day"
-msgstr "Podpowiedź dnia"
+msgstr "Nasvet dneva"
 
 #: ../shell/plugins/Help/TipOfTheDay.py:32
 msgid "Show tips at startup"
-msgstr "Wyświetlanie podwpowiedzi przy uruchamianiu"
+msgstr ""
 
 #: ../shell/plugins/Help/tips.py:2
 msgid ""
@@ -871,7 +853,7 @@ msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:115
 msgid "Installation failed"
-msgstr ""
+msgstr "Namestitev ni uspela"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:116
 msgid ""
@@ -880,7 +862,7 @@ msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:119
 msgid "Installation complete"
-msgstr ""
+msgstr "Namestitev je končana"
 
 #: ../shell/plugins/Profiles/__init__.py:18
 msgid "_Profiles"
@@ -888,11 +870,11 @@ msgstr ""
 
 #: ../shell/plugins/Profiles/__init__.py:20
 msgid "New profile..."
-msgstr ""
+msgstr "Nov profil..."
 
 #: ../shell/plugins/Profiles/__init__.py:75
 msgid "New profile"
-msgstr ""
+msgstr "Nov profil"
 
 #: ../shell/plugins/Profiles/__init__.py:76
 msgid "Enter the name for a new profile"
@@ -900,7 +882,7 @@ msgstr ""
 
 #: ../shell/plugins/Shell/__init__.py:62
 msgid "_File"
-msgstr ""
+msgstr "_Datoteka"
 
 #: ../shell/SearchBar.py:20
 msgid "Search"

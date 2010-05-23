@@ -10,13 +10,13 @@ msgstr ""
 "Project-Id-Version: gDesklets VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-01-01 08:22+0000\n"
-"Last-Translator: Miloslav Trmac <Unknown>\n"
+"PO-Revision-Date: 2010-04-12 12:16+0000\n"
+"Last-Translator: Konki <pavel.konkol@seznam.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
@@ -125,15 +125,15 @@ msgstr "_Odstranit desklet"
 
 #: ../display/Display.py:98
 msgid "_Disable desklet"
-msgstr ""
+msgstr "_Zakázat desklet"
 
 #: ../display/Display.py:101
 msgid "_About"
-msgstr ""
+msgstr "_O aplikaci"
 
 #: ../display/Display.py:340
 msgid "_Readme"
-msgstr ""
+msgstr "Čti _mne"
 
 #: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
@@ -221,7 +221,7 @@ msgstr "Kontroluji požadavky:"
 
 #: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
-msgstr ""
+msgstr "Je vyžadován Python verze >= 2.3.0."
 
 #: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
@@ -236,10 +236,12 @@ msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
+"Je vyžadován GTK python bindings (pygtk2) verze >= 2.10.0 a GTK+ verze >= "
+"2.10.0."
 
 #: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
-msgstr ""
+msgstr "Je vyžadován ORBit python bindings (pyorbit) verze >= 2.0.1."
 
 #: ../gdesklets:69
 msgid "bonobo python bindings are required."
@@ -286,7 +288,7 @@ msgstr ""
 
 #: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
-msgstr ""
+msgstr "Požadované kontroly byly provedeny. Váš systím vypadá v pořádku!"
 
 #: ../gdesklets:106
 msgid ""
@@ -326,11 +328,13 @@ msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
+"Chyba při spuštění gdesklets-daemon\n"
+"Více informací o tomto pádu naleznete v \"% s\"."
 
 #: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
-msgstr ""
+msgstr "Vyjímkou byl: %s\n"
 
 #: ../gdesklets:186 ../gdesklets:272
 #, c-format
@@ -344,11 +348,11 @@ msgstr ""
 
 #: ../gdesklets:209
 msgid "Avoid to show the icon on the tray"
-msgstr ""
+msgstr "Nezobrazovat ikonu na liště"
 
 #: ../gdesklets:215
 msgid "Debug the application"
-msgstr ""
+msgstr "Ladit aplikaci"
 
 #: ../gdesklets:221
 msgid "Launch pre-existing display "
@@ -356,11 +360,11 @@ msgstr ""
 
 #: ../gdesklets:228
 msgid "Session manager prefix"
-msgstr ""
+msgstr "Prefix správce sezení"
 
 #: ../gdesklets:233
 msgid "Session manager ID"
-msgstr ""
+msgstr "ID správce sezení"
 
 #: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
@@ -504,11 +508,11 @@ msgstr "Integrace do GNOME:"
 
 #: ../main/__init__.py:83
 msgid "Additional Programming:"
-msgstr ""
+msgstr "Další programátoři:"
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
-msgstr ""
+msgstr "Dokumentace:"
 
 #: ../main/__init__.py:89
 msgid "Artwork:"
@@ -747,11 +751,11 @@ msgstr "podle autora"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:148
 msgid "There is a saved instance of this display."
-msgstr ""
+msgstr "Tam je uložena instance tohoto zobrazení."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:149
 msgid "Would you like to open this?"
-msgstr ""
+msgstr "Přejete si toto otevřít?"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
@@ -785,7 +789,7 @@ msgstr "_Nápověda"
 
 #: ../shell/plugins/Help/__init__.py:38
 msgid "_Contents"
-msgstr ""
+msgstr "_Obsah"
 
 #: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
@@ -808,6 +812,11 @@ msgid ""
 "and\n"
 "http://gdesklets.zencomputer.ca/"
 msgstr ""
+"Můžete najít mnoho desktop appletů\n"
+"pro gDesklets na\n"
+"http://www.gdesklets.org\n"
+"a\n"
+"http://gdesklets.zencomputer.ca/"
 
 #: ../shell/plugins/Help/tips.py:9
 msgid ""
@@ -887,6 +896,9 @@ msgid ""
 "Write your own!  See the Developer's\n"
 "book for more details."
 msgstr ""
+"Máte dobrý nápad na nový desklet?\n"
+"Napište svůj vlastní! Pro více podrobnosti se podívejte\n"
+"do vývojářské knihy."
 
 #: ../shell/plugins/PackageInstaller/Downloader.py:29
 msgid "Retrieving:"

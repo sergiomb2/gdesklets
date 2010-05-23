@@ -10,13 +10,13 @@ msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-04-28 21:09+0000\n"
+"PO-Revision-Date: 2009-11-29 11:38+0000\n"
 "Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
@@ -125,7 +125,7 @@ msgstr "_Ta bort skrivbordsprogram"
 
 #: ../display/Display.py:98
 msgid "_Disable desklet"
-msgstr ""
+msgstr "_Inaktivera desklet"
 
 #: ../display/Display.py:101
 msgid "_About"
@@ -133,7 +133,7 @@ msgstr "_Om"
 
 #: ../display/Display.py:340
 msgid "_Readme"
-msgstr ""
+msgstr "_Läs mig"
 
 #: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
@@ -777,11 +777,11 @@ msgstr "efter upphovsman"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:148
 msgid "There is a saved instance of this display."
-msgstr ""
+msgstr "Det finns en sparad instans för denna skärm."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:149
 msgid "Would you like to open this?"
-msgstr ""
+msgstr "Vill du öppna denna?"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"

@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-01-01 06:57+0000\n"
-"Last-Translator: Samel Jn Gunnarsson <Unknown>\n"
+"PO-Revision-Date: 2009-12-01 20:08+0000\n"
+"Last-Translator: Samúel Jón Gunnarsson <sammi@villingaholt.nu>\n"
 "Language-Team: Icelandic <gnome@techattack.nu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
@@ -35,19 +35,19 @@ msgstr ""
 
 #: ../config/ConfigUnit.py:57
 msgid "pixel"
-msgstr ""
+msgstr "díll"
 
 #: ../config/ConfigUnit.py:58
 msgid "point"
-msgstr ""
+msgstr "punktur"
 
 #: ../config/ConfigUnit.py:59
 msgid "cm"
-msgstr ""
+msgstr "cm"
 
 #: ../config/ConfigUnit.py:60
 msgid "inch"
-msgstr ""
+msgstr "tomma"
 
 #: ../config/DaemonConfigger.py:17
 msgid "Editor to view/edit the desklet source code"
@@ -69,7 +69,7 @@ msgstr ""
 
 #: ../config/DaemonConfigger.py:26
 msgid "Behavior"
-msgstr ""
+msgstr "Hegðun"
 
 #: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
@@ -240,7 +240,7 @@ msgstr ""
 
 #: ../gdesklets:82
 msgid "missing"
-msgstr ""
+msgstr "vantar"
 
 #: ../gdesklets:88
 msgid "Version check failed."
@@ -252,6 +252,8 @@ msgid ""
 "\n"
 "%s\n"
 msgstr ""
+"\n"
+"%s\n"
 
 #: ../gdesklets:90
 msgid ""
@@ -413,27 +415,27 @@ msgstr ""
 #: ../libdesklets/convert.py:22
 #, python-format
 msgid "%.2f TB"
-msgstr ""
+msgstr "%.2f TB"
 
 #: ../libdesklets/convert.py:24
 #, python-format
 msgid "%.2f GB"
-msgstr ""
+msgstr "%.2f GB"
 
 #: ../libdesklets/convert.py:26
 #, python-format
 msgid "%.2f MB"
-msgstr ""
+msgstr "%.2f MB"
 
 #: ../libdesklets/convert.py:28
 #, python-format
 msgid "%.2f kB"
-msgstr ""
+msgstr "%.2f kB"
 
 #: ../libdesklets/convert.py:30
 #, python-format
 msgid "%d B"
-msgstr ""
+msgstr "%d B"
 
 #: ../main/AboutDialog.py:21
 msgid "About gDesklets"
@@ -463,7 +465,7 @@ msgstr ""
 #: ../main/__init__.py:71
 #, python-format
 msgid "Version %s"
-msgstr ""
+msgstr "Útgáfa %s"
 
 #: ../main/__init__.py:74
 msgid "Core Programming:"

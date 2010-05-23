@@ -10,13 +10,13 @@ msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-05-04 19:26+0000\n"
-"Last-Translator: Duda Weyll <Unknown>\n"
+"PO-Revision-Date: 2010-04-17 23:49+0000\n"
+"Last-Translator: Rafael nossal <rafael.nossal@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
@@ -353,23 +353,23 @@ msgstr ""
 
 #: ../gdesklets:209
 msgid "Avoid to show the icon on the tray"
-msgstr ""
+msgstr "Evite mostrar o ícone na bandeja"
 
 #: ../gdesklets:215
 msgid "Debug the application"
-msgstr ""
+msgstr "Depurar a aplicação"
 
 #: ../gdesklets:221
 msgid "Launch pre-existing display "
-msgstr ""
+msgstr "Carregar display pré-existente "
 
 #: ../gdesklets:228
 msgid "Session manager prefix"
-msgstr ""
+msgstr "Prefixo do gerente de sessão"
 
 #: ../gdesklets:233
 msgid "Session manager ID"
-msgstr ""
+msgstr "Identificador do gerente de sessão"
 
 #: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
@@ -514,11 +514,11 @@ msgstr "Integração com o GNOME:"
 
 #: ../main/__init__.py:83
 msgid "Additional Programming:"
-msgstr ""
+msgstr "Programação Adicional:"
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
-msgstr ""
+msgstr "Documentação:"
 
 #: ../main/__init__.py:89
 msgid "Artwork:"
@@ -578,6 +578,9 @@ msgid ""
 "\n"
 "Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
+"Esta é uma versão instável do gDesklets. Uma versão instável significa que o "
+"estado corrente é de desenvolvimento e possivelmente instável ou ocasionando "
+"problemas de tempos em tempos."
 
 #: ../main/transition.py:51
 msgid ""
@@ -610,6 +613,15 @@ msgid ""
 "Please note that due to limitations of older X servers, you might see blocks "
 "around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
+"Esta versão do gDesklets utiliza o modo Float: pressiona uma tecla e todos "
+"os desklets virão para frente, flutuando sobre suas aplicações, até você "
+"pressionar aquela tela mais uma vez! O atalho de teclado padrão é "
+"&lt;Shift&gt; &lt;F12&gt;, mas você pode facilmente alterá-lo na janela de "
+"configuração.\n"
+"\n"
+"Observe as devidas limitações de servidores X antigos, você pode ver blocos "
+"ao redor dos desklets no modo Float. Isso não pode ser resolvido de uma "
+"forma satisfatória."
 
 #: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
@@ -768,11 +780,11 @@ msgstr "por autor"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:148
 msgid "There is a saved instance of this display."
-msgstr ""
+msgstr "Existe uma instância salva deste display"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:149
 msgid "Would you like to open this?"
-msgstr ""
+msgstr "Gostaria de abrir isso?"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
@@ -807,7 +819,7 @@ msgstr "Aj_uda"
 
 #: ../shell/plugins/Help/__init__.py:38
 msgid "_Contents"
-msgstr ""
+msgstr "_Conteúdos"
 
 #: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
@@ -815,7 +827,7 @@ msgstr "_Dica do Dia"
 
 #: ../shell/plugins/Help/TipOfTheDay.py:24
 msgid "Tip of the Day"
-msgstr "Dica do Dia"
+msgstr "Dica do dia"
 
 #: ../shell/plugins/Help/TipOfTheDay.py:32
 msgid "Show tips at startup"

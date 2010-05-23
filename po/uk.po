@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-01-01 05:58+0000\n"
-"Last-Translator: Maxim Dziumanenko <mvd@mylinux.com.ua>\n"
+"PO-Revision-Date: 2010-04-29 05:23+0000\n"
+"Last-Translator: fh39fkd <Unknown>\n"
 "Language-Team: Ukrainian <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
@@ -54,7 +54,7 @@ msgstr "дюйм"
 
 #: ../config/DaemonConfigger.py:17
 msgid "Editor to view/edit the desklet source code"
-msgstr "Редактор програмного коду декслета"
+msgstr "Редактор програмного коду десклета"
 
 #: ../config/DaemonConfigger.py:18
 msgid "Your favorite editor"
@@ -123,11 +123,11 @@ msgstr "В_идалити десклет"
 
 #: ../display/Display.py:98
 msgid "_Disable desklet"
-msgstr ""
+msgstr "_Вимкнути десклет"
 
 #: ../display/Display.py:101
 msgid "_About"
-msgstr ""
+msgstr "_Про програму"
 
 #: ../display/Display.py:340
 msgid "_Readme"
@@ -221,7 +221,7 @@ msgstr "Перевірка вимог:"
 
 #: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
-msgstr ""
+msgstr "Потрібна версія Python >= 2.3.0."
 
 #: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
@@ -236,10 +236,12 @@ msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
+"Потрібні GTK python bindings (pygtk2) версія >= 2.10.0 та GTK+ версія >= "
+"2.10.0."
 
 #: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
-msgstr ""
+msgstr "Потрібні ORBit python bindings (pyorbit) версія >= 2.0.1."
 
 #: ../gdesklets:69
 msgid "bonobo python bindings are required."
@@ -285,7 +287,7 @@ msgstr ""
 
 #: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
-msgstr ""
+msgstr "Перевірку вимог виконано. Ваша система задовольняє вимоги!"
 
 #: ../gdesklets:106
 msgid ""
@@ -294,7 +296,7 @@ msgid ""
 "gDesklets will start a requirements check now...\n"
 msgstr ""
 "\n"
-"Ви запустили gDesklets перший раз.\n"
+"Ви запустили gDesklets вперше.\n"
 "Запускається первірка необхідних компонентів...\n"
 
 #: ../gdesklets:117
@@ -318,6 +320,24 @@ msgid ""
 "  check             (Checks requirements)\n"
 "\n"
 msgstr ""
+"\n"
+"Накази:\n"
+"  відкрити <файли> (відкривається в даних файлах Desklet)\n"
+"  стартувати (Запускає gDesklets демона, це за замовчуванням)\n"
+"  зупинити (Зупинка gDesklets демон)\n"
+"  список (списки відкритих desklets)\n"
+"  перезавантаження (перезавантаження gDesklets демона)\n"
+"  профіль <профіль> (переключення даного профілю)\n"
+"  профіль (показує поточні і доступні профіля)\n"
+"  оболонка (Відкриває графічні оболонки)\n"
+"  убити (вбиває демона - використання в надзвичайних ситуаціях)\n"
+"  статус (Перевірка статусу демона)\n"
+"  про програму (друкує інформацію про gDesklets)\n"
+"  версія (друк gDesklets версія)\n"
+"  налаштування (відкривається діалогове вікно налаштування)\n"
+"  допомога (відображає текст допомоги)\n"
+"  перевірка (перевірка вимог)\n"
+"\n"
 
 #: ../gdesklets:158
 #, c-format
@@ -325,11 +345,13 @@ msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
+"Помилка під час запуску демона gdesklets-daemon\n"
+"Більш детальну інформацію про цю помилку дивіться у  \"%s\"."
 
 #: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
-msgstr ""
+msgstr "Виняток становить:%s\n"
 
 #: ../gdesklets:186 ../gdesklets:272
 #, c-format
@@ -339,23 +361,23 @@ msgstr "Не вдається відкрити десклет %s."
 #: ../gdesklets:204
 #, c-format
 msgid "%prog [options] order"
-msgstr ""
+msgstr "%prog [options] порядку"
 
 #: ../gdesklets:209
 msgid "Avoid to show the icon on the tray"
-msgstr ""
+msgstr "Уникати показчик значку на панелі"
 
 #: ../gdesklets:215
 msgid "Debug the application"
-msgstr ""
+msgstr "Налагодження додатків"
 
 #: ../gdesklets:221
 msgid "Launch pre-existing display "
-msgstr ""
+msgstr "Завантажити вже існуючі дисплей "
 
 #: ../gdesklets:228
 msgid "Session manager prefix"
-msgstr ""
+msgstr "Сесія менеджер префікс"
 
 #: ../gdesklets:233
 msgid "Session manager ID"
@@ -507,7 +529,7 @@ msgstr ""
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
-msgstr ""
+msgstr "Документація:"
 
 #: ../main/__init__.py:89
 msgid "Artwork:"
@@ -761,7 +783,7 @@ msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:149
 msgid "Would you like to open this?"
-msgstr ""
+msgstr "Ви бажаєте це відкрити?"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
@@ -795,7 +817,7 @@ msgstr "_Довідка"
 
 #: ../shell/plugins/Help/__init__.py:38
 msgid "_Contents"
-msgstr ""
+msgstr "_Зміст"
 
 #: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"

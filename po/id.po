@@ -1,19 +1,16 @@
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Aktualną wersję tego pliku możesz odnaleźć w repozytorium cvs.gnome.pl
-# (:pserver:anonymous@cvs.gnome.pl:/gnomepl, puste hasło)
-# Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
-# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas na adres:
-# translators@gnome.pl
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Krzysztof Luks <kluks@iq.pl>, 2003
+# Indonesian translation for gdesklets
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the gdesklets package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: gDesklets\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: gdesklets\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2010-03-21 12:46+0000\n"
-"Last-Translator: Bartosz Kaszubowski <gosimek@gmail.com>\n"
-"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2010-03-27 18:05+0000\n"
+"Last-Translator: Abdul Munif Hanafi <Unknown>\n"
+"Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,7 +19,7 @@ msgstr ""
 
 #: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
-msgstr "Złe odwołanie do funkcji"
+msgstr ""
 
 #: ../config/ConfigDialog.py:116
 #, python-format
@@ -31,13 +28,13 @@ msgid ""
 "This means that there's an error in the desklet's code. You should inform "
 "the author of the desklet about this problem."
 msgstr ""
-"Nie ma funkcji o nazwie <b>%s</b>.\n"
-"Oznacza to, że wystąpił błąd w kodzie desklet'u. Powinno się poinformować "
-"autora desklet'u o tym problemie."
+"Tidak ada fungsi yang disebut <b>%s</b>.\n"
+"Itu berarti ada sebuah kesalahan di dalam kode desklet. Anda sebaiknya "
+"memberitahu pembuat desklet ini tentang masalah ini."
 
 #: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
-msgstr "Ten desklet nie jest konfigurowalny."
+msgstr "Desklet ini tidak dikonfigurasi."
 
 #: ../config/ConfigUnit.py:57
 msgid "pixel"
@@ -45,48 +42,45 @@ msgstr "piksel"
 
 #: ../config/ConfigUnit.py:58
 msgid "point"
-msgstr "kropka"
+msgstr "poin"
 
 #: ../config/ConfigUnit.py:59
 msgid "cm"
-msgstr "cm"
+msgstr "sentimeter"
 
 #: ../config/ConfigUnit.py:60
 msgid "inch"
-msgstr "cal"
+msgstr "inci"
 
 #: ../config/DaemonConfigger.py:17
 msgid "Editor to view/edit the desklet source code"
-msgstr "Edytor do przeglądania/edycji kodu źródłowego desklet'u."
+msgstr "Editor untuk melihat/mengedit kode sumber desklet"
 
 #: ../config/DaemonConfigger.py:18
 msgid "Your favorite editor"
-msgstr "Twój ulubiony edytor"
+msgstr "Editor kesukaan Anda"
 
 #: ../config/DaemonConfigger.py:20
 msgid "Screen Resolution (DPI)"
-msgstr "Rozdzielczość ekranu(DPI)"
+msgstr "Resolusi Layar (DPI)"
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
 "Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
 "<b>1.97\"</b> wide"
 msgstr ""
-"Zmień powyższą wartość tak aby pasek miał dokładnie <b> 5 cm</b> lub "
-"<b>1.97\" cali</b> szerokości"
 
 #: ../config/DaemonConfigger.py:26
 msgid "Behavior"
-msgstr "Zachowanie"
+msgstr "Perilaku"
 
 #: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
-msgstr ""
-"Pokaż ikonkę w trayu (efekt widoczny po ponownym uruchomieniu komputera)"
+msgstr "Tampilkan ikon _tray (berlaku setelah restart)"
 
 #: ../config/DaemonConfigger.py:29
 msgid "Show _notification while loading a desklet"
-msgstr ""
+msgstr "Tampilkan _notifikasi ketika memuat sebuah desklet"
 
 #: ../config/DaemonConfigger.py:31
 msgid "Key for toggling Float mode:"
@@ -95,64 +89,62 @@ msgstr ""
 #: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
 #: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
-msgstr "Konfiguracja"
+msgstr "Konfigurasi"
 
 #: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
 msgid "A desktop applet system for GNOME"
-msgstr "System apletów pulpitu dla GNOME"
+msgstr ""
 
 #: ../data/gdesklets.xml.in.h:1
 msgid "gDesklets display"
-msgstr ""
+msgstr "Tampilan gDesklets"
 
 #: ../display/Display.py:86
 msgid "_Configure desklet"
-msgstr "_Kkonfiguruj desklet"
+msgstr "_Configure desklet"
 
 #: ../display/Display.py:88
 msgid "_Move desklet"
-msgstr "_Przesuń desklet"
+msgstr "_Move desklet"
 
 #: ../display/Display.py:91
 msgid "_View Source"
-msgstr "_Zobacz Źrudła"
+msgstr "_View Source"
 
 #: ../display/Display.py:94
 msgid "Re_start desklet"
-msgstr ""
+msgstr "Re_start desklet"
 
 #: ../display/Display.py:96
 msgid "_Remove desklet"
-msgstr "_Usuń desklet"
+msgstr "_Remove desklet"
 
 #: ../display/Display.py:98
 msgid "_Disable desklet"
-msgstr "_Dezaktywuj desklet"
+msgstr "_Disable desklet"
 
 #: ../display/Display.py:101
 msgid "_About"
-msgstr "_O programie"
+msgstr "Tent_ang"
 
 #: ../display/Display.py:340
 msgid "_Readme"
-msgstr ""
+msgstr "_Readme"
 
 #: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
-msgstr "Czy napewno chcesz usunąć ten desklet?"
+msgstr "Apakah Anda yakin ingin menghapus desklet ini ?"
 
 #: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
 msgstr ""
-"Ten desklet nie będzie więcej wyświetlany a jego ustawienia zostaną "
-"skasowane."
 
 #: ../display/DisplayTarget.py:417
 #, python-format
 msgid "Element \"%s\" does not exist"
-msgstr "Element \"%s\" nie istnieje"
+msgstr "Unsur \"%s\" tidak ada"
 
 #: ../display/DisplayTarget.py:418
 msgid ""
@@ -163,26 +155,25 @@ msgstr ""
 #: ../display/targetregistry.py:45
 #, python-format
 msgid "Unknown element <b>&lt;%s&gt;</b>"
-msgstr "Nieznay element <b>&lt;%s&gt;</b>"
+msgstr "Unsur <b>&lt;%s&gt;</b> tidak diketahui"
 
 #: ../display/targetregistry.py:46
 msgid ""
 "Either there is a typo in the .display file or you have an incompatible "
 "version of gDesklets."
 msgstr ""
-"Jest literówka w pliku .display lub masz niekompatybilną wersję gDesklets."
 
 #: ../factory/DisplayFactory.py:89 ../utils/DOM.py:31
 msgid "XML parse error"
-msgstr ""
+msgstr "Kesalahan parsing XML"
 
 #: ../factory/DisplayFactory.py:90
 msgid "This .display file has invalid XML syntax."
-msgstr "Plik .display ma niepoprawną składnię XML."
+msgstr "Berkas .display ini memiliki sintaks XML yang tidak valid."
 
 #: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
-msgstr "Plik nie instnieje lub nie mógł być wczytany"
+msgstr "File tidak ada atau tidak dapat dimuat"
 
 #: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
@@ -190,74 +181,77 @@ msgstr ""
 
 #: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
-msgstr "Nie można było załadować sensora"
+msgstr "Tidak dapat memuat sensor"
 
 #: ../factory/DisplayFactory.py:243
 #, python-format
 msgid "&lt;%s&gt; needs a bind attribute"
-msgstr ""
+msgstr "&lt;%s&gt; membutuhkan sebuah atribut mengikat"
 
 #: ../factory/DisplayFactory.py:245
 msgid "The &lt;prefs&gt; section of this desklet file is broken."
-msgstr ""
+msgstr "Bagian &lt;prefs&gt; dari berkas desklet ini rusak."
 
 #: ../factory/SensorFactory.py:75
 #, python-format
 msgid "Could not find sensor '%(name)s'"
-msgstr ""
+msgstr "Tidak dapat mencari sensor '%(name)s'"
 
 #: ../factory/SensorFactory.py:76
 msgid ""
 "A sensor could not be found. This usually means that it has not been "
 "installed."
 msgstr ""
+"Sebuah sensor tidak dapat ditemukan. Hal ini biasanya berarti bahwa belum "
+"dipasang."
 
 #: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
-msgstr "NIE możesz uruchamiać gDesklets jako super użytkownik (root)."
+msgstr "Anda TIDAK boleh menjalankan gDesklets sebagai super user (root)."
 
 #: ../gdesklets:47
 msgid "Checking requirements:"
-msgstr "Sprawdzanie wymagań:"
+msgstr "Memeriksa persyaratan:"
 
 #: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
-msgstr "Jest wymagana wersja Python >=2.3.0 ."
+msgstr "Python versi >= 2.3.0 diperlukan."
 
 #: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
-msgstr "libexpat version 1.95.7 jest uszkodzona. Prosze zaktualizować!"
+msgstr "libexpat versi 1.95.7 rusak. Mohon diupgrade!"
 
 #: ../gdesklets:58
 msgid "SAX parser is required, some SuSE versions ship without it."
-msgstr ""
-"jest wymagany parser SAX, niektóre wersje SuSE są dostarczane bez niego."
+msgstr "Dibutuhkan SAX parser, beberapa versi SuSE mengirim tanpa ini."
 
 #: ../gdesklets:62
 msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
+"GTK python bindings (pygtk2) versi >= 2.10.0 dan GTK+ versi >= 2.10.0 "
+"diperlukan."
 
 #: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
-msgstr ""
+msgstr "ORBit python bindings (pyorbit) versi >= 2.0.1 diperlukan."
 
 #: ../gdesklets:69
 msgid "bonobo python bindings are required."
-msgstr ""
+msgstr "bonobo python bindings diperlukan."
 
 #: ../gdesklets:78
 msgid "found"
-msgstr "znaleziono"
+msgstr "menemukan"
 
 #: ../gdesklets:82
 msgid "missing"
-msgstr "brak"
+msgstr "hilang"
 
 #: ../gdesklets:88
 msgid "Version check failed."
-msgstr "Błąd sprawdzania wersji."
+msgstr "Gagal memeriksa versi."
 
 #: ../gdesklets:89
 #, c-format
@@ -281,7 +275,7 @@ msgstr ""
 
 #: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
-msgstr "Sprawdzanie wymagań zakończone. Twój system zdaje egzamin!"
+msgstr "Selesai memeriksa persyaratan. Sistem Anda tampak OK!"
 
 #: ../gdesklets:106
 msgid ""
@@ -290,8 +284,8 @@ msgid ""
 "gDesklets will start a requirements check now...\n"
 msgstr ""
 "\n"
-"Uruchomiłeś gDesklets po raz pierwszy.\n"
-"Program sprawdzi teraz możliwości komputera...\n"
+"Anda menjalankan gDesklets untuk pertama kali.\n"
+"gDesklets sekarang akan mulai memeriksa persyaratan...\n"
 
 #: ../gdesklets:117
 msgid ""
@@ -321,16 +315,18 @@ msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
+"Terjadi kesalahan ketika memulai gdesklets-daemon\n"
+"Informasi lebih lanjut tentang kegagalan ini tersedia di \"%s\"."
 
 #: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
-msgstr ""
+msgstr "Pengecualian: %s\n"
 
 #: ../gdesklets:186 ../gdesklets:272
 #, c-format
 msgid "Could not open desklet %s."
-msgstr ""
+msgstr "Tidak dapat membuka desklet %s."
 
 #: ../gdesklets:204
 #, c-format
@@ -343,7 +339,7 @@ msgstr ""
 
 #: ../gdesklets:215
 msgid "Debug the application"
-msgstr ""
+msgstr "Lacak kesalahan aplikasi"
 
 #: ../gdesklets:221
 msgid "Launch pre-existing display "
@@ -359,11 +355,11 @@ msgstr ""
 
 #: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
-msgstr ""
+msgstr "Memulai gdesklets-daemon..."
 
 #: ../gdesklets:282
 msgid "Shutting down gdesklets-daemon..."
-msgstr ""
+msgstr "Menutup gdesklets-daemon..."
 
 #: ../gdesklets:294
 #, c-format
@@ -373,39 +369,39 @@ msgstr ""
 #: ../gdesklets:299
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
-msgstr ""
+msgstr "Saat ini tidak ada desklet di profil  \"%s\""
 
 #: ../gdesklets:303
 msgid "Restarting gdesklets-daemon..."
-msgstr ""
+msgstr "Memulai ulang gdesklets-daemon..."
 
 #: ../gdesklets:316
 msgid "gdesklets-daemon is running"
-msgstr ""
+msgstr "gdesklets-daemon sedang berjalan"
 
 #: ../gdesklets:318
 msgid "gdesklets-daemon is not running"
-msgstr ""
+msgstr "gdesklets-daemon tidak sedang berjalan"
 
 #: ../gdesklets:322
 #, c-format
 msgid "Current profile: %s"
-msgstr ""
+msgstr "Profil saat ini: %s"
 
 #: ../gdesklets:333
 #, c-format
 msgid "New profile: %s"
-msgstr ""
+msgstr "Profil baru: %s"
 
 #: ../gdesklets:336
 #, c-format
 msgid "Available profiles: %s"
-msgstr ""
+msgstr "Profil tersedia: %s"
 
 #: ../gdesklets:340
 #, c-format
 msgid "This is %s, version %s."
-msgstr ""
+msgstr "Ini adalah %s, versi %s."
 
 #: ../gdesklets:368
 msgid "Nothing to slay."
@@ -418,6 +414,7 @@ msgstr ""
 #: ../gdesklets-daemon:27
 msgid "You need a recent version of PyGTK to run this program.\n"
 msgstr ""
+"Anda membutuhkan versi baru dari PyGTK untuk menjalankan program ini.\n"
 
 #: ../gdesklets-daemon:52
 msgid "Could not fork daemon.\n"
@@ -426,36 +423,36 @@ msgstr ""
 #: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
 #, c-format
 msgid "The following error occurred: %s\n"
-msgstr ""
+msgstr "Terjadi kesalahan berikut: %s\n"
 
 #: ../libdesklets/convert.py:22
 #, python-format
 msgid "%.2f TB"
-msgstr ""
+msgstr "%.2f TB"
 
 #: ../libdesklets/convert.py:24
 #, python-format
 msgid "%.2f GB"
-msgstr ""
+msgstr "%.2f GB"
 
 #: ../libdesklets/convert.py:26
 #, python-format
 msgid "%.2f MB"
-msgstr ""
+msgstr "%.2f MB"
 
 #: ../libdesklets/convert.py:28
 #, python-format
 msgid "%.2f kB"
-msgstr ""
+msgstr "%.2f kB"
 
 #: ../libdesklets/convert.py:30
 #, python-format
 msgid "%d B"
-msgstr ""
+msgstr "%d B"
 
 #: ../main/AboutDialog.py:21
 msgid "About gDesklets"
-msgstr ""
+msgstr "Tentang gDesklets"
 
 #: ../main/client.py:276
 #, python-format
@@ -481,69 +478,69 @@ msgstr ""
 #: ../main/__init__.py:71
 #, python-format
 msgid "Version %s"
-msgstr ""
+msgstr "Versi %s"
 
 #: ../main/__init__.py:74
 msgid "Core Programming:"
-msgstr ""
+msgstr "Pemrograman Inti:"
 
 #: ../main/__init__.py:77
 msgid "Architecture Design:"
-msgstr ""
+msgstr "Desain Arsitektur:"
 
 #: ../main/__init__.py:80
 msgid "GNOME Integration:"
-msgstr ""
+msgstr "Integrasi GNOME:"
 
 #: ../main/__init__.py:83
 msgid "Additional Programming:"
-msgstr ""
+msgstr "Pemrograman Tambahan:"
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
-msgstr ""
+msgstr "Dokumentasi"
 
 #: ../main/__init__.py:89
 msgid "Artwork:"
-msgstr ""
+msgstr "Artwork:"
 
 #: ../main/__init__.py:92
 msgid "Website:"
-msgstr ""
+msgstr "Situs web:"
 
 #: ../main/__init__.py:95
 msgid "Thank you:"
-msgstr ""
+msgstr "Terima kasih:"
 
 #: ../main/Starter.py:103
 msgid "_Manage desklets"
-msgstr ""
+msgstr "_Manage desklets"
 
 #: ../main/Starter.py:106
 msgid "_Configuration"
-msgstr ""
+msgstr "_Configuration"
 
 #: ../main/Starter.py:108
 msgid "_View log"
-msgstr ""
+msgstr "_View log"
 
 #: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
-msgstr ""
+msgstr "Tent_ang..."
 
 #: ../main/Starter.py:114
 msgid "_Stop daemon"
-msgstr ""
+msgstr "_Stop daemon"
 
 #: ../main/Starter.py:230
 #, python-format
 msgid "Could not open desklet file \"%s\""
-msgstr ""
+msgstr "Tidak dapat membuka berkas desklet \"%s\""
 
 #: ../main/Starter.py:231
 msgid ""
 "The desklet file could not be opened because the file was not readable."
-msgstr ""
+msgstr "Berkas desklet tidak dapat dibuka karena berkas tidak dapat dibaca."
 
 #: ../main/transition.py:39
 msgid ""
@@ -588,11 +585,11 @@ msgstr ""
 
 #: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
-msgstr ""
+msgstr "Harap dicatat (pesan ini akan muncul hanya sekali):"
 
 #: ../plugin/Interface.py:200 ../plugin/Interface.py:227
 msgid "no description"
-msgstr ""
+msgstr "Tidak ada deskripsi"
 
 #: ../scripting/Script.py:155
 msgid "Error in add_timer function"
@@ -614,7 +611,7 @@ msgstr ""
 
 #: ../scripting/Script.py:242
 msgid "Security Risk"
-msgstr ""
+msgstr "Risiko Keamanan"
 
 #: ../scripting/Script.py:243
 #, python-format
@@ -632,78 +629,78 @@ msgstr ""
 
 #: ../scripting/Script.py:256
 msgid "Deny!"
-msgstr ""
+msgstr "Ditolak!"
 
 #: ../scripting/Script.py:257
 msgid "Allow once"
-msgstr ""
+msgstr "Izinkan sekali"
 
 #: ../scripting/Script.py:258
 msgid "Allow for this desklet"
-msgstr ""
+msgstr "Izinkan untuk desklet ini"
 
 #: ../Sensors/FontSelector/__init__.py:86
 msgid "Fonts"
-msgstr "Czcionki"
+msgstr "Huruf"
 
 #: ../Sensors/FontSelector/__init__.py:87
 msgid "Fonts settings"
-msgstr "Ustawienia czcionek"
+msgstr "Pengaturan huruf"
 
 #: ../Sensors/FontSelector/__init__.py:90
 #, python-format
 msgid "Font #%i:"
-msgstr "Czcionka #%i:"
+msgstr "Huruf #%i:"
 
 #: ../Sensors/FontSelector/__init__.py:92
 #, python-format
 msgid "Font #%i used in the labels"
-msgstr "Czcionka #%i używana w etykietach"
+msgstr "Huruf #%i digunakan dalam label"
 
 #: ../Sensors/FontSelector/__init__.py:93
 #, python-format
 msgid "Font color #%i:"
-msgstr "Kolor czcionki #%i:"
+msgstr "Warna huruf #%i:"
 
 #: ../Sensors/FontSelector/__init__.py:95
 #, python-format
 msgid "Font color #%i used in the labels"
-msgstr "Kolor czcionki #%i używanej w etykietach"
+msgstr "Warna huruf #%i digunakan dalam label"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:16
 #, python-format
 msgid "%s Control"
-msgstr ""
+msgstr "Kontrol %s"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:54
 msgid "Interface Name"
-msgstr ""
+msgstr "Nama Antarmuka"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:57
 msgid "Property Name"
-msgstr ""
+msgstr "Nama Property"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:60
 msgid "Property Access"
-msgstr ""
+msgstr "Akses Property"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:63
 msgid "Property Description"
-msgstr ""
+msgstr "Deskripsi Property"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:27
 msgid "by interface"
-msgstr ""
+msgstr "berdasarkan interface"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:28
 #: ../shell/plugins/DisplayBrowser/__init__.py:85
 msgid "alphabetically"
-msgstr ""
+msgstr "abjad"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:72
 #, python-format
 msgid "Found %d controls."
-msgstr ""
+msgstr "Menemukan %d kontrol."
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
 #: ../shell/plugins/DisplayBrowser/__init__.py:190
@@ -712,23 +709,23 @@ msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:43
 msgid "R_emove selected desklet"
-msgstr ""
+msgstr "R_emove selected desklet"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:46
 msgid "_Run (remote) desklet..."
-msgstr ""
+msgstr "_Run (remote) desklet..."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:48
 msgid "R_un selected desklet"
-msgstr ""
+msgstr "R_un selected desklet"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:83
 msgid "by category"
-msgstr ""
+msgstr "berdasarkan kategori"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
-msgstr ""
+msgstr "berdasarkan pembuat"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:148
 msgid "There is a saved instance of this display."
@@ -736,11 +733,11 @@ msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:149
 msgid "Would you like to open this?"
-msgstr ""
+msgstr "Apakah Anda ingin membuka ini?"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
-msgstr ""
+msgstr "Tidak dapat dihapus"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:163
 msgid ""
@@ -756,31 +753,31 @@ msgstr ""
 #: ../shell/plugins/DisplayBrowser/__init__.py:187
 #, python-format
 msgid "Found %d desklets"
-msgstr ""
+msgstr "Menemukan %d desklet"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
-msgstr ""
+msgstr "Tak ada deskripsi yang tersedia"
 
 #: ../shell/plugins/Help/__init__.py:37
 msgid "_Help"
-msgstr ""
+msgstr "_Help"
 
 #: ../shell/plugins/Help/__init__.py:38
 msgid "_Contents"
-msgstr ""
+msgstr "_Contents"
 
 #: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
-msgstr ""
+msgstr "_Tip of the Day"
 
 #: ../shell/plugins/Help/TipOfTheDay.py:24
 msgid "Tip of the Day"
-msgstr "Podpowiedź dnia"
+msgstr "Tip Hari Ini"
 
 #: ../shell/plugins/Help/TipOfTheDay.py:32
 msgid "Show tips at startup"
-msgstr "Wyświetlanie podwpowiedzi przy uruchamianiu"
+msgstr "Tampilkan tip saat memulai"
 
 #: ../shell/plugins/Help/tips.py:2
 msgid ""
@@ -791,6 +788,12 @@ msgid ""
 "and\n"
 "http://gdesklets.zencomputer.ca/"
 msgstr ""
+"Anda dapat mencari banyak desktop applets untuk digunakan\n"
+"dengan gDesklets di\n"
+"\n"
+"http://www.gdesklets.org\n"
+"dan\n"
+"http://gdesklets.zencomputer.ca/"
 
 #: ../shell/plugins/Help/tips.py:9
 msgid ""
@@ -804,6 +807,8 @@ msgid ""
 "Click the right mouse button on a desktop\n"
 "applet or press F10 to open the popup menu."
 msgstr ""
+"Klik tombol kanan mouse pada sebuah desktop\n"
+"applet atau tekan F10 untuk membuka popup menu."
 
 #: ../shell/plugins/Help/tips.py:16
 msgid ""
@@ -849,19 +854,19 @@ msgstr ""
 
 #: ../shell/plugins/PackageInstaller/Downloader.py:29
 msgid "Retrieving:"
-msgstr ""
+msgstr "Menerima:"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:26
 msgid "I_nstall remote package..."
-msgstr ""
+msgstr "I_nstal paket remot..."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:27
 msgid "_Install package..."
-msgstr ""
+msgstr "_Instal paket..."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:97
 msgid "Invalid package"
-msgstr ""
+msgstr "Paket tidak sah"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:98
 msgid ""
@@ -871,7 +876,7 @@ msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:115
 msgid "Installation failed"
-msgstr ""
+msgstr "Pemasangan gagal"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:116
 msgid ""
@@ -880,40 +885,40 @@ msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:119
 msgid "Installation complete"
-msgstr ""
+msgstr "Pemasangan selesai"
 
 #: ../shell/plugins/Profiles/__init__.py:18
 msgid "_Profiles"
-msgstr ""
+msgstr "_Profil"
 
 #: ../shell/plugins/Profiles/__init__.py:20
 msgid "New profile..."
-msgstr ""
+msgstr "Profil baru..."
 
 #: ../shell/plugins/Profiles/__init__.py:75
 msgid "New profile"
-msgstr ""
+msgstr "Profil baru"
 
 #: ../shell/plugins/Profiles/__init__.py:76
 msgid "Enter the name for a new profile"
-msgstr ""
+msgstr "Masukkan nama untuk profil baru"
 
 #: ../shell/plugins/Shell/__init__.py:62
 msgid "_File"
-msgstr ""
+msgstr "_File"
 
 #: ../shell/SearchBar.py:20
 msgid "Search"
-msgstr ""
+msgstr "Pencarian"
 
 #: ../utils/dialog.py:46
 #, python-format
 msgid "_Details (%d lines)"
-msgstr ""
+msgstr "_Detil (%d baris)"
 
 #: ../utils/dialog.py:194
 msgid "_Ignore errors from this desklet"
-msgstr ""
+msgstr "_Ignore errors from this desklet"
 
 #: ../utils/DOM.py:32
 msgid "An invalid graphics code was loaded into a canvas."
@@ -922,7 +927,7 @@ msgstr ""
 #: ../utils/DOM.py:153
 #, python-format
 msgid "No such element: %s"
-msgstr ""
+msgstr "Tidak ada unsur seperti: %s"
 
 #: ../utils/DOM.py:154
 #, python-format
@@ -932,21 +937,21 @@ msgstr ""
 #: ../utils/DOM.py:182 ../utils/Element.py:91
 #, python-format
 msgid "No such property: %s"
-msgstr ""
+msgstr "Tidak ada properti seperti: %s"
 
 #: ../utils/DOM.py:183
 #, python-format
 msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
-msgstr ""
+msgstr "Unsur SVG <b>%s</b> tidak memiliki properti <b>%s</b>."
 
 #: ../utils/Element.py:92
 #, python-format
 msgid "The element <b>%s</b> does not have the <b>%s</b> property."
-msgstr ""
+msgstr "Unsur <b>%s</b> tidak memiliki properti <b>%s</b>."
 
 #: ../utils/Element.py:96 ../utils/Element.py:126
 msgid "Permission Error"
-msgstr ""
+msgstr "Kesalahan Izin"
 
 #: ../utils/Element.py:97
 #, python-format

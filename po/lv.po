@@ -9,13 +9,13 @@ msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-01-01 07:32+0000\n"
-"Last-Translator: Raivis Dejus <orvils@gmail.com>\n"
+"PO-Revision-Date: 2010-01-16 23:11+0000\n"
+"Last-Translator: Kārlis Šteinbergs <Unknown>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
@@ -124,15 +124,15 @@ msgstr "_Aizvākt deskletu"
 
 #: ../display/Display.py:98
 msgid "_Disable desklet"
-msgstr ""
+msgstr "Atslēgt _deskletu"
 
 #: ../display/Display.py:101
 msgid "_About"
-msgstr ""
+msgstr "P_ar"
 
 #: ../display/Display.py:340
 msgid "_Readme"
-msgstr ""
+msgstr "_Lasi mani"
 
 #: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
@@ -220,7 +220,7 @@ msgstr "Pārbauda vajadības:"
 
 #: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
-msgstr ""
+msgstr "Nepieciešama Python versija >= 2.3.0"
 
 #: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
@@ -235,10 +235,12 @@ msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
+"Ir nepieciešama GTK python saites (pygtk2) versija >= 2.10.0 un GTK+ versija "
+">= 2.10.0."
 
 #: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
-msgstr ""
+msgstr "Ir nepieciešama ORBit python saites (pyorbit) versija >= 2.0.1."
 
 #: ../gdesklets:69
 msgid "bonobo python bindings are required."
@@ -285,7 +287,7 @@ msgstr ""
 
 #: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
-msgstr ""
+msgstr "Prasību pārbaude pabeigta. Jūsu sistēma izskatās atbilstoša!"
 
 #: ../gdesklets:106
 msgid ""
@@ -318,6 +320,24 @@ msgid ""
 "  check             (Checks requirements)\n"
 "\n"
 msgstr ""
+"\n"
+"Komandas:\n"
+"  open    <fails>   (Atver norādīto deskleta failu)\n"
+"  start             (Palaiž gDesklets dēmonu, tas ir noklusēti)\n"
+"  stop              (Apstādīna gDesklets dēmonu)\n"
+"  list              (Parāda visus atvērtos deskletus)\n"
+"  restart           (Pārstartē gDesklets dēmonu)\n"
+"  profile <profils> (Pārslēdzas uz norādīto profilu)\n"
+"  profile           (Parāda pašreizējo un pieejamos profilus)\n"
+"  shell             (Atver grafisku čaulu)\n"
+"  slay              (Nobeidz dēmonu-- lietot ārkārtas gadījumos)\n"
+"  status            (Pārbauda dēmona stāvokli)\n"
+"  about             (Parāda informāciju par gDesklets)\n"
+"  version           (Parāda gDesklets versiju)\n"
+"  configure         (Atver uzstādījumu logu)\n"
+"  help              (Parāda šo tekstu)\n"
+"  check             (Pārbauda prasības)\n"
+"\n"
 
 #: ../gdesklets:158
 #, c-format
@@ -325,11 +345,13 @@ msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
+"Kļūda palaižot gdesklets-daemon\n"
+"Vairāk informācijas par šo kļūdu varat iegūt \"%s\"."
 
 #: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
-msgstr ""
+msgstr "Izņēmums bija: %s\n"
 
 #: ../gdesklets:186 ../gdesklets:272
 #, c-format
@@ -339,27 +361,27 @@ msgstr "Nevarēja atvērt dekletu %s."
 #: ../gdesklets:204
 #, c-format
 msgid "%prog [options] order"
-msgstr ""
+msgstr "%prog [opcijas] kārtība"
 
 #: ../gdesklets:209
 msgid "Avoid to show the icon on the tray"
-msgstr ""
+msgstr "Nerādīt šo ikonu sistēmas ikonu joslā"
 
 #: ../gdesklets:215
 msgid "Debug the application"
-msgstr ""
+msgstr "Atkļūdot programmu"
 
 #: ../gdesklets:221
 msgid "Launch pre-existing display "
-msgstr ""
+msgstr "Palaist eksistējošu ekrānu "
 
 #: ../gdesklets:228
 msgid "Session manager prefix"
-msgstr ""
+msgstr "Sesiju pārvaldnieka prefikss"
 
 #: ../gdesklets:233
 msgid "Session manager ID"
-msgstr ""
+msgstr "Sesiju pārvaldnieka ID"
 
 #: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
@@ -504,11 +526,11 @@ msgstr "GNOME koordinēšana:"
 
 #: ../main/__init__.py:83
 msgid "Additional Programming:"
-msgstr ""
+msgstr "Papildus programmēšana:"
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
-msgstr ""
+msgstr "Dokumentācija:"
 
 #: ../main/__init__.py:89
 msgid "Artwork:"
@@ -567,6 +589,16 @@ msgid ""
 "\n"
 "Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
+"Šī ir gDesklets nestabilā versija. Nestabilā versija parāda pašreizējo "
+"izstrādes gaitu un var būt reizēm nestabila vai radīt problēmas.\n"
+"\n"
+"Ja nesen lietojat gDesklets, ieteicams šo versiju <b>ne</b>izmantot, bet "
+"lietot stabilo versiju!\n"
+"\n"
+"Ja tomēr lietojat nestabilo versiju, mēs būtu pateicīgi, ja ziņotu par "
+"jebkuru dīvainu programmas darbību tās izstrādātājiem.\n"
+"\n"
+"Pieredzējuši lietotāji ir laipni lūgti lietot  bzr versiju!"
 
 #: ../main/transition.py:51
 msgid ""
@@ -599,6 +631,14 @@ msgid ""
 "Please note that due to limitations of older X servers, you might see blocks "
 "around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
+"Šī gDesklets versija piedāvā \"peldošo\" režīmu: nospiediet taustiņu un visi "
+"deskleti uzpeldēs virs programmu logiem līdz jūs atkal nospiedīsiet šo  "
+"taustiņu.\n"
+"Noklusēta taustiņu kombinācija ir &lt;Shift&gt; &lt;F12&gt;, bet jūs to "
+"varat nomainīt konfigurācijas logā.\n"
+"\n"
+"Lūdzu ievērojiet, ka sakarā ar vecāku X serveru ierobežojumiem jūs varēsiet "
+"redzēt blokus apkārt deskletiem \"peldošajā\" režīmā. Šo defektu nevar labot."
 
 #: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
@@ -755,11 +795,11 @@ msgstr "pēc autora"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:148
 msgid "There is a saved instance of this display."
-msgstr ""
+msgstr "Šim displejam nav saglabāto instanču."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:149
 msgid "Would you like to open this?"
-msgstr ""
+msgstr "Vēlaties šo atvērt?"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
@@ -793,7 +833,7 @@ msgstr "Palīdzība"
 
 #: ../shell/plugins/Help/__init__.py:38
 msgid "_Contents"
-msgstr ""
+msgstr "_Saturs"
 
 #: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
@@ -816,6 +856,11 @@ msgid ""
 "and\n"
 "http://gdesklets.zencomputer.ca/"
 msgstr ""
+"Jūs varat atrast papildus deskletus \n"
+"kurus lietot ar gDesklets\n"
+"http://www.gdesklets.org\n"
+"un\n"
+"http://gdesklets.zencomputer.ca"
 
 #: ../shell/plugins/Help/tips.py:9
 msgid ""

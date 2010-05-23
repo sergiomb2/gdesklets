@@ -10,13 +10,13 @@ msgstr ""
 "Project-Id-Version: gdesklets.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-01-01 04:49+0000\n"
-"Last-Translator: Djihed <djihed@gmail.com>\n"
+"PO-Revision-Date: 2010-03-11 20:06+0000\n"
+"Last-Translator: Morad Taleeb <Unknown>\n"
 "Language-Team: Arabic <support@eglug.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 "X-Poedit-Language: Arabic\n"
 
@@ -130,11 +130,11 @@ msgstr ""
 
 #: ../display/Display.py:101
 msgid "_About"
-msgstr ""
+msgstr "حول"
 
 #: ../display/Display.py:340
 msgid "_Readme"
-msgstr ""
+msgstr "إقرأني"
 
 #: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
@@ -343,11 +343,11 @@ msgstr ""
 
 #: ../gdesklets:209
 msgid "Avoid to show the icon on the tray"
-msgstr ""
+msgstr "تجنب إظهار الأيقون في الـ Tray"
 
 #: ../gdesklets:215
 msgid "Debug the application"
-msgstr ""
+msgstr "معالجة التطبيق"
 
 #: ../gdesklets:221
 msgid "Launch pre-existing display "
@@ -503,11 +503,11 @@ msgstr "عملية دمج جنوم:"
 
 #: ../main/__init__.py:83
 msgid "Additional Programming:"
-msgstr ""
+msgstr "برمجة إضافية:"
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
-msgstr ""
+msgstr "الوثائق"
 
 #: ../main/__init__.py:89
 msgid "Artwork:"
@@ -756,7 +756,7 @@ msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:149
 msgid "Would you like to open this?"
-msgstr ""
+msgstr "هل تريد فتح هذا؟"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
@@ -790,7 +790,7 @@ msgstr "م_ساعدة"
 
 #: ../shell/plugins/Help/__init__.py:38
 msgid "_Contents"
-msgstr ""
+msgstr "المحتويات"
 
 #: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"

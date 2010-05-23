@@ -12,13 +12,13 @@ msgstr ""
 "Project-Id-Version: gDesklets 0.33\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-01-01 06:24+0000\n"
-"Last-Translator: Jonathan Ernst <jonathan@ernstfamily.ch>\n"
+"PO-Revision-Date: 2009-11-09 23:17+0000\n"
+"Last-Translator: Julien Rosa <epicxnausea@yahoo.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
@@ -129,15 +129,15 @@ msgstr "_Enlever le desklet"
 
 #: ../display/Display.py:98
 msgid "_Disable desklet"
-msgstr ""
+msgstr "_Désactiver desklet"
 
 #: ../display/Display.py:101
 msgid "_About"
-msgstr ""
+msgstr "_A propos"
 
 #: ../display/Display.py:340
 msgid "_Readme"
-msgstr ""
+msgstr "_Lisez moi"
 
 #: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
@@ -250,6 +250,8 @@ msgid ""
 "GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
 "are required."
 msgstr ""
+"Le package de liaison Python pour GTK (pygtk2) version >= 2.10.0 et pour "
+"GTK+ version >= 2.10.0 sont requis"
 
 #: ../gdesklets:66
 msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
@@ -302,7 +304,7 @@ msgstr ""
 
 #: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
-msgstr ""
+msgstr "Vérification des pré-requis complété. Votre système semble OK!"
 
 #: ../gdesklets:106
 msgid ""
@@ -335,6 +337,25 @@ msgid ""
 "  check             (Checks requirements)\n"
 "\n"
 msgstr ""
+"\n"
+"Commandes:\n"
+"  ouvrir <fichier> (Ouvre le fichier desklet transmis)\n"
+"  démarrer (Lance le démon gDesklets, effectuer par defaut)\n"
+"  arrêt (Arrête le démon gDesklets)\n"
+"  liste (Liste les desklets ouvert)\n"
+"  redémarrer (Relance le démon gDesklets)\n"
+"  profile <profile> (Change vers le profile choisis)\n"
+"  profile (Montre le profile actuellement utilisé et les profiles "
+"disponibles)\n"
+"  shell (Ouvre un shell)\n"
+"  tuer (Tue le démon - utiliser en cas d'urgence)\n"
+"  status (Vérifie le status du démon)\n"
+"  a propos (Affiche les information concernant gDesklets)\n"
+"  version (indique la version de gDesklets)\n"
+"  préférence (Ouvre la boite de dialogue préférence)\n"
+"  aide (Affiche ce message)\n"
+" vérifier (Vérifie les pré-requis)\n"
+"\n"
 
 #: ../gdesklets:158
 #, c-format
@@ -342,11 +363,13 @@ msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
+"Erreur lors du lancement de gdesklets-daemon\n"
+"Plus de détail sur l'erreur dans \"%s\"."
 
 #: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
-msgstr ""
+msgstr "L'erreur est: %s\n"
 
 #: ../gdesklets:186 ../gdesklets:272
 #, c-format
@@ -356,27 +379,27 @@ msgstr "Impossible d'ouvrir le desklet %s."
 #: ../gdesklets:204
 #, c-format
 msgid "%prog [options] order"
-msgstr ""
+msgstr "%prog [options] ordre"
 
 #: ../gdesklets:209
 msgid "Avoid to show the icon on the tray"
-msgstr ""
+msgstr "Ne pas montrer l'icône dans le dock"
 
 #: ../gdesklets:215
 msgid "Debug the application"
-msgstr ""
+msgstr "Débogage de l'application"
 
 #: ../gdesklets:221
 msgid "Launch pre-existing display "
-msgstr ""
+msgstr "Démarrer l'affichage pré-existant "
 
 #: ../gdesklets:228
 msgid "Session manager prefix"
-msgstr ""
+msgstr "Préfixe de gestionnaire de session"
 
 #: ../gdesklets:233
 msgid "Session manager ID"
-msgstr ""
+msgstr "ID de gestionnaire de session"
 
 #: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
@@ -523,11 +546,11 @@ msgstr "Intégration à GNOME :"
 
 #: ../main/__init__.py:83
 msgid "Additional Programming:"
-msgstr ""
+msgstr "Programme Additionnel:"
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
-msgstr ""
+msgstr "Documentation:"
 
 #: ../main/__init__.py:89
 msgid "Artwork:"
@@ -588,6 +611,14 @@ msgid ""
 "\n"
 "Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
+"C'est une version instable de gDesklets. Les versions instables "
+"correspondent au version en cours de développement, et peuvent être "
+"instables et ou provoquer des erreurs de temps en temps.\n"
+"Si vous êtes un nouvel utilisateur de gDesklets, il est hautement recommandé "
+"de <b>ne pas</b> utiliser cette version, mais plutôt une version stable !\n"
+"Si vous souhaitez exécuter une version instable, nous apprécierons "
+"chaudement tous rapport d'erreur!\n"
+"Et les utilisateurs expérimentés sont encouragés à le faire."
 
 #: ../main/transition.py:51
 msgid ""
@@ -621,6 +652,15 @@ msgid ""
 "Please note that due to limitations of older X servers, you might see blocks "
 "around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
+"Cette version de gDesklets permet le mode flottant: taper une touche pré-"
+"définie et tous les desklets vont passer en premier plan, devant les "
+"applications, jusqu'à ce que cette touche soit enfoncée à nouveau !\n"
+"La touche par défaut est &lt;Maj&gt; &lt;F12&gt;, mais cela est modifiable "
+"dans la boite de dialogue de configuration.\n"
+"\n"
+"Note: A cause de limitations de serveur graphique X ancien, il se peut que "
+"des blocs apparaissent autour des desklets en mode flottant. Il n'y a pas de "
+"bonne solution connue."
 
 #: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
@@ -779,11 +819,11 @@ msgstr "par auteur"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:148
 msgid "There is a saved instance of this display."
-msgstr ""
+msgstr "Une instanciation a été sauvergardée pour cet écran."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:149
 msgid "Would you like to open this?"
-msgstr ""
+msgstr "Souhaitez vous ouvrir ceci?"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
@@ -818,7 +858,7 @@ msgstr "Aid_e"
 
 #: ../shell/plugins/Help/__init__.py:38
 msgid "_Contents"
-msgstr ""
+msgstr "_Sommaire"
 
 #: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"

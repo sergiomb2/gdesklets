@@ -9,13 +9,13 @@ msgstr ""
 "Project-Id-Version: gdesklets HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-01-01 07:23+0000\n"
-"Last-Translator: Žygimantas Beručka <uid0@akl.lt>\n"
+"PO-Revision-Date: 2009-11-12 21:19+0000\n"
+"Last-Translator: mindedie <Unknown>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
@@ -32,11 +32,11 @@ msgstr ""
 
 #: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
-msgstr ""
+msgstr "Šios desklet negalima konfiguruoti."
 
 #: ../config/ConfigUnit.py:57
 msgid "pixel"
-msgstr ""
+msgstr "taškas"
 
 #: ../config/ConfigUnit.py:58
 msgid "point"
@@ -44,19 +44,19 @@ msgstr ""
 
 #: ../config/ConfigUnit.py:59
 msgid "cm"
-msgstr ""
+msgstr "cm"
 
 #: ../config/ConfigUnit.py:60
 msgid "inch"
-msgstr ""
+msgstr "colis"
 
 #: ../config/DaemonConfigger.py:17
 msgid "Editor to view/edit the desklet source code"
-msgstr ""
+msgstr "Redaktorius peržiūrėti/taisyti desklet pradinį tekstą"
 
 #: ../config/DaemonConfigger.py:18
 msgid "Your favorite editor"
-msgstr ""
+msgstr "Jūsų mėgstamas redaktorius"
 
 #: ../config/DaemonConfigger.py:20
 msgid "Screen Resolution (DPI)"
@@ -70,7 +70,7 @@ msgstr ""
 
 #: ../config/DaemonConfigger.py:26
 msgid "Behavior"
-msgstr ""
+msgstr "Elgsena"
 
 #: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
@@ -99,11 +99,11 @@ msgstr "gDesklets ekranas"
 
 #: ../display/Display.py:86
 msgid "_Configure desklet"
-msgstr ""
+msgstr "_Konfigūruoti desklet"
 
 #: ../display/Display.py:88
 msgid "_Move desklet"
-msgstr ""
+msgstr "_Perkelti desklet"
 
 #: ../display/Display.py:91
 msgid "_View Source"
@@ -111,11 +111,11 @@ msgstr "Ž_iūrėti pradinį tekstą"
 
 #: ../display/Display.py:94
 msgid "Re_start desklet"
-msgstr ""
+msgstr "Per_krauti desklet"
 
 #: ../display/Display.py:96
 msgid "_Remove desklet"
-msgstr ""
+msgstr "_Pašalinti desklet"
 
 #: ../display/Display.py:98
 msgid "_Disable desklet"
@@ -123,7 +123,7 @@ msgstr ""
 
 #: ../display/Display.py:101
 msgid "_About"
-msgstr ""
+msgstr "_Apie"
 
 #: ../display/Display.py:340
 msgid "_Readme"
@@ -131,7 +131,7 @@ msgstr ""
 
 #: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
-msgstr ""
+msgstr "Ar tikrai norite pašalinti desklet ?"
 
 #: ../display/Display.py:1124
 msgid ""
@@ -142,7 +142,7 @@ msgstr ""
 #: ../display/DisplayTarget.py:417
 #, python-format
 msgid "Element \"%s\" does not exist"
-msgstr ""
+msgstr "Elementas \"%s\"neegzistuoja"
 
 #: ../display/DisplayTarget.py:418
 msgid ""
@@ -238,7 +238,7 @@ msgstr ""
 
 #: ../gdesklets:78
 msgid "found"
-msgstr ""
+msgstr "rasta"
 
 #: ../gdesklets:82
 msgid "missing"
@@ -254,6 +254,8 @@ msgid ""
 "\n"
 "%s\n"
 msgstr ""
+"\n"
+"%s\n"
 
 #: ../gdesklets:90
 msgid ""
@@ -497,7 +499,7 @@ msgstr "Tinklalapis:"
 
 #: ../main/__init__.py:95
 msgid "Thank you:"
-msgstr ""
+msgstr "Ačiū:"
 
 #: ../main/Starter.py:103
 msgid "_Manage desklets"
@@ -740,7 +742,7 @@ msgstr ""
 #: ../shell/plugins/DisplayBrowser/__init__.py:187
 #, python-format
 msgid "Found %d desklets"
-msgstr ""
+msgstr "Rasta %d desklets"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
@@ -898,7 +900,7 @@ msgstr "_Profiliai"
 
 #: ../shell/plugins/Profiles/__init__.py:20
 msgid "New profile..."
-msgstr "Naujas profilis..."
+msgstr ""
 
 #: ../shell/plugins/Profiles/__init__.py:75
 msgid "New profile"
