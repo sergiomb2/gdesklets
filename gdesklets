@@ -47,8 +47,8 @@ def check_system():
     print _("Checking requirements:")
 
     for modules, predicate, message in (
-        ( ("sys",), lambda m : m.version_info[:2] >= (2, 3),
-          _("Python version >= 2.3.0 is required.")
+        ( ("sys",), lambda m : m.version_info[:2] >= (2, 4),
+          _("Python version >= 2.4.0 is required.")
         ),
         ( ("xml.parsers.expat",),
           lambda m: m.parsers.expat.version_info != (1, 95, 7),

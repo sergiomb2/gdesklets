@@ -6,6 +6,12 @@
 	* scripting/Script.py
 	* display/Display.py: Removed the first argument in the call to
 			dialog.question() as it wasn't being used
+	* README
+	* gdesklets: Updated Python dependency to 2.4
+	* config/settings.py
+	* config/DaemonConfigger.py: Implemented the auto-update config item;
+			see blueprint at
+			https://blueprints.launchpad.net/gdesklets/+spec/new-version-detection
 
 2010-05-13  Bjoern Koch  <H.Humpel@gmx.de>
 

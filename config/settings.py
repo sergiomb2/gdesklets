@@ -2,7 +2,8 @@
 # Module for holding runtime settings.
 #
 
-
+check_for_updates_visible = True
+check_for_updates = True
 show_tray_icon = True
 show_load_splash = False
 dpi = 96

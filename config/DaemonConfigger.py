@@ -14,22 +14,24 @@ class DaemonConfigger(ConfigDialog):
     """
 
     __ITEMS = (
-      ("title", {"label": _("Editor to view/edit the desklet source code")}),
+      ("title", {"label": _("Editor to view/edit the desklet source code")}, True),
       ("uri",   {"label": _("Your favorite editor"),
-                 "bind": "editor"}),
-      ("title", {"label": _("Screen Resolution (DPI)")}),
+                 "bind": "editor"}, True),
+      ("title", {"label": _("Screen Resolution (DPI)")}, True),
       ("dpi",   {"label": "<small>" +
                           _("Adjust the value above so that the bar will be "
                             "exactly <b>5 cm</b> or <b>1.97\"</b> wide") +
                           "</small>",
-                          "bind": "dpi", "value": 96}),
-      ("title", {"label": _("Behavior")}),
+                          "bind": "dpi", "value": 96}, True),
+      ("title", {"label": _("Behavior")}, True),
       ("boolean", {"label": _("Show _tray icon (takes effect after restart)"),
-                              "bind": "trayicon"}),
+                              "bind": "trayicon"}, True),
       ("boolean", {"label": _("Show _notification while loading a desklet"),
-                              "bind": "loadsplash"}),
+                              "bind": "loadsplash"}, True),
+      ("boolean", {"label": _("Automatically check for _updates (takes effect after restart)"),
+                              "bind": "update_check"}, settings.check_for_updates_visible),
       ("keybinding", {"label": _("Key for toggling Float mode:"),
-                      "bind": "float_key"})
+                      "bind": "float_key"}, True)
 
       )
 
@@ -48,7 +50,7 @@ class DaemonConfigger(ConfigDialog):
         self._set_getter(self.__getter)
         self._set_caller(self.__caller)
 
-        self.build(self.__ITEMS)
+        self.build(( (itype, settings) for (itype, settings, visible) in self.__ITEMS if visible ))
 
         self.__load_config()
         self.__read_cmd_line()
@@ -72,6 +74,9 @@ class DaemonConfigger(ConfigDialog):
         elif (key == "trayicon"):
             settings.show_tray_icon = value
 
+        elif (key == "update_check"):
+            settings.check_for_updates = value
+
         self.__backend.set_key(key, value)
 
 
@@ -92,6 +97,12 @@ class DaemonConfigger(ConfigDialog):
         elif (key == "trayicon"):
             return settings.show_tray_icon
 
+        elif (key == "update_check"):
+            if (settings.check_for_updates_visible):
+                return settings.check_for_updates
+            else:
+                return False
+
         else:
             return "gDesklets killed a kitten!"
 
@@ -106,14 +117,19 @@ class DaemonConfigger(ConfigDialog):
         settings.float_key = self.__backend.get_key("float_key",
                                                     settings.float_key)
         settings.show_load_splash = self.__backend.get_key("loadsplash",
-                                                     settings.show_load_splash)
+                                                    settings.show_load_splash)
         settings.show_tray_icon = self.__backend.get_key("trayicon",
-                                                       settings.show_tray_icon)
+                                                    settings.show_tray_icon)
+        if settings.check_for_updates_visible:
+            settings.check_for_updates = self.__backend.get_key("update_check",
+                                                        settings.check_for_updates)
+        else:
+            settings.check_for_updates = False
 
     def __read_cmd_line(self):
 
         OPTIONS = ("sm-client-id=", "sm-config-prefix=", "sm-disable",
-                   "no-tray-icon")
+                   "no-tray-icon", "no-update-check")
 
         #
         # Parses the given list of command line arguments. This is usually
@@ -128,6 +144,8 @@ class DaemonConfigger(ConfigDialog):
         for o, a in opts:
             if (o == "--no-tray-icon"):
                 settings.show_tray_icon = False
+            elif (o == "--no-update-check"):
+                settings.check_for_updates = False
             elif (o in ("--sm-client-id", "--sm-config-prefix",
                         "--sm-disable")):
                 pass
