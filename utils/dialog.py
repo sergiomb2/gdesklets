@@ -116,24 +116,12 @@ def error(primary, secondary):
     sys.exit(1337)
 
 
-#
-# Displays an information dialog.
-#
-def info(primary, secondary):
-
-    dialog = HIGDialog((gtk.STOCK_CLOSE, gtk.RESPONSE_CLOSE),
-                       _INFO, primary, secondary)
-    _queue_dialog(0, dialog)
-
-
-#
-# Displays a question dialog.
-#
-def question(icon, primary, secondary, *buttons):
+def _configurable(icon, primary, secondary, *buttons):
 
     def responder(src, response):
         callback = buttons[response][1]
-        if (callback): callback()
+        # Before calling back, check to see if it's callable
+        if (callback and hasattr(callback, '__call__')): callback()
 
     response = 0
     btns = []
@@ -142,8 +130,28 @@ def question(icon, primary, secondary, *buttons):
         btns.append(response)
         response += 1
 
-    dialog = HIGDialog(tuple(btns), _QUESTION, primary, secondary)
+    dialog = HIGDialog(tuple(btns), icon, primary, secondary)
     dialog.connect("response", responder)
+    return dialog
+
+
+#
+# Displays an information dialog.
+#
+def info(primary, secondary, *buttons):
+
+    if not buttons:
+        buttons = (gtk.STOCK_CLOSE, gtk.RESPONSE_CLOSE)
+    dialog = _configurable(_INFO, primary, secondary, *buttons)
+    _queue_dialog(0, dialog)
+
+
+#
+# Displays a question dialog.
+#
+def question(primary, secondary, *buttons):
+
+    dialog = _configurable(_QUESTION, primary, secondary, *buttons)
     dialog.show()
 
 

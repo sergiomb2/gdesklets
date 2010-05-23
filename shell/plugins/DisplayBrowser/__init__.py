@@ -144,8 +144,7 @@ class UI_DisplayBrowser(Plugin):
 
             if found_display is True:
 
-                dialog.question(None,
-                            _("There is a saved instance of this display."),
+                dialog.question(_("There is a saved instance of this display."),
                             _("Would you like to open this?"),
                             (gtk.STOCK_YES, run_old_one),
                             (gtk.STOCK_NO, run_new_one))

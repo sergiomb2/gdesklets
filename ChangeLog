@@ -1,3 +1,12 @@
+2010-05-23  Joe Sapp  <nixphoeni@gmail.com>
+
+	* utils/dialog.py: Made the info dialog box capable of containing
+			configurable buttons; removed icon argument in question()
+	* shell/plugins/DisplayBrowser/__init__.py
+	* scripting/Script.py
+	* display/Display.py: Removed the first argument in the call to
+			dialog.question() as it wasn't being used
+
 2010-05-13  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* display/DisplayTarget.py: fixed UserError output if relative-to points 
