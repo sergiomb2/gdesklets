@@ -12,6 +12,8 @@
 	* config/DaemonConfigger.py: Implemented the auto-update config item;
 			see blueprint at
 			https://blueprints.launchpad.net/gdesklets/+spec/new-version-detection
+	* gdesklets-daemon
+	* utils/UpdateChecker.py: Implemented a first pass at the above blueprint
 
 2010-05-13  Bjoern Koch  <H.Humpel@gmx.de>
 
