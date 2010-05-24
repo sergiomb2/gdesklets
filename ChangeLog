@@ -1,6 +1,7 @@
 2010-05-24  Bjoern Koch  <H.Humpel@gmx.de>
 
-	* utils/render.c: fixed bug #260288 
+	* utils/render.c: fixed bug #260288
+	* main/Starter.py: fixed TrayIcon bugs (#151880, #229506, #197991)
 
 
 2010-05-23  Joe Sapp  <nixphoeni@gmail.com>

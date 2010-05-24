@@ -99,8 +99,8 @@ class Starter:
         # setup a nice systray icon
         if (settings.show_tray_icon):
             from main.TrayIcon import TrayIcon
-            trayicon = TrayIcon()
-            trayicon.set_menu([(None, _("_Manage desklets"),
+            self.__trayicon = TrayIcon()
+            self.__trayicon.set_menu([(None, _("_Manage desklets"),
                                 self.__handle_manage),
                                (),
                                (gtk.STOCK_PROPERTIES, _("_Configuration"),
