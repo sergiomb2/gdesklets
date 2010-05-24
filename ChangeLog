@@ -1,3 +1,8 @@
+2010-05-24  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* utils/render.c: fixed bug #260288 
+
+
 2010-05-23  Joe Sapp  <nixphoeni@gmail.com>
 
 	* utils/dialog.py: Made the info dialog box capable of containing
