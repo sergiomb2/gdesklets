@@ -2,7 +2,8 @@
 
 	* utils/render.c: fixed bug #260288
 	* main/Starter.py: fixed TrayIcon bugs (#151880, #229506, #197991)
-
+	* display/TargetCanvas.py
+	* display/TargetPlotter.py: fixed Plotter problem (see bug #71085)
 
 2010-05-23  Joe Sapp  <nixphoeni@gmail.com>
 
