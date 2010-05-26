@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-04-10 22:52+0000\n"
-"Last-Translator: DiegoJ <diegojromerolopez@gmail.com>\n"
+"PO-Revision-Date: 2010-05-07 20:52+0000\n"
+"Last-Translator: Victor Herrero <victorhera@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
-msgstr "Llamada a función no válida"
+msgstr "Función no válida"
 
 #: ../config/ConfigDialog.py:116
 #, python-format
@@ -34,7 +34,7 @@ msgstr ""
 
 #: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
-msgstr "Este desklet no es configurable."
+msgstr "No se puede configurar este desklet"
 
 #: ../config/ConfigUnit.py:57
 msgid "pixel"
@@ -54,7 +54,7 @@ msgstr "pulgada"
 
 #: ../config/DaemonConfigger.py:17
 msgid "Editor to view/edit the desklet source code"
-msgstr "Editor para ver/editar código fuente del desklet"
+msgstr "Editor para ver/editar el código fuente del desklet"
 
 #: ../config/DaemonConfigger.py:18
 msgid "Your favorite editor"
@@ -135,7 +135,7 @@ msgstr "_Léeme"
 
 #: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
-msgstr "¿De verdad desea eliminar este desklet?"
+msgstr "¿Estas seguro de eliminar este desklet?"
 
 #: ../display/Display.py:1124
 msgid ""

@@ -20,6 +20,7 @@ install_DATA =              \
 	QueryParser.py      \
 	TargetSettings.py   \
 	Trie.py             \
+	UpdateChecker.py    \
 	WindowSnapper.py    \
 	actionparser.py     \
 	datatypes.py        \

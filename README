@@ -14,7 +14,7 @@ gDesklets - GNOME Desktop Applets
 
 2. Requirements (the package names are the debian ones!)
 ---------------
-  * Python 2.3 or higher, if you want to compile gdesklets you'll have to
+  * Python 2.4 or higher, if you want to compile gdesklets you'll have to
     install the development package, too!
 
   * SuSE users will need the additional python-xml package, gDesklets won't

@@ -50,7 +50,7 @@ if (not _check_version()):
     elif ("rc" in VERSION):
         msg = _("This is a <b>release candidate</b> of an upcoming gDesklets "
                 "release.\nPlease test it and report bugs to "
-                "<i>http://bugzilla.gnome.org</i>\n"
+                "<i>https://bugs.launchpad.net/gdesklets</i>\n"
                 "This version might break your configuration or it won't "
                 "restore it from an earlier release. In most cases this is "
                 "intentional, since gDesklets is still in its early stages of "

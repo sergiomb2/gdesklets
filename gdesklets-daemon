@@ -5,12 +5,16 @@ import __builtin__
 from utils import i18n
 __builtin__._ = i18n.Translator("gdesklets")
 
+from config import settings
 from utils.logger import SyncWriter
+from utils.UpdateChecker import UpdateChecker
 from main import transition, LOGFILE
+from main import VERSION_MAJOR, VERSION_MINOR, VERSION_DEV, VERSION_TYPE
 from main.Starter import Starter
 
 import atexit
 import main
+import gobject
 import gtk
 import os
 import pygtk
@@ -112,5 +116,7 @@ def _gdesklets_main():
 _detach_as_daemon()
 _write_pid()
 _redirect_to_logfile()
+if (settings.check_for_updates_visible and settings.check_for_updates):
+    __checker = UpdateChecker(VERSION_MAJOR, VERSION_MINOR, VERSION_DEV, VERSION_TYPE)
+    gobject.timeout_add(__checker.TIMEOUT, __checker.check)
 _gdesklets_main()
-

@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-01-19 18:59+0000\n"
-"Last-Translator: Mads Konradsen <Unknown>\n"
+"PO-Revision-Date: 2010-05-13 22:34+0000\n"
+"Last-Translator: Gunleif Joensen <Unknown>\n"
 "Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
-msgstr ""
+msgstr "Ugyldig Funktion Kald"
 
 #: ../config/ConfigDialog.py:116
 #, python-format
@@ -28,18 +28,21 @@ msgid ""
 "This means that there's an error in the desklet's code. You should inform "
 "the author of the desklet about this problem."
 msgstr ""
+"Der er ingen funktion kaldet <b>%s</b>.\n"
+"Dette betyder at der er en fejl i desklet'ens kode. Du burde informere "
+"forfatteren af desklet'en omkring dette problem."
 
 #: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
-msgstr ""
+msgstr "Denne desklet kan ikke konfigureres."
 
 #: ../config/ConfigUnit.py:57
 msgid "pixel"
-msgstr ""
+msgstr "pixel"
 
 #: ../config/ConfigUnit.py:58
 msgid "point"
-msgstr ""
+msgstr "punkt"
 
 #: ../config/ConfigUnit.py:59
 msgid "cm"
@@ -51,33 +54,35 @@ msgstr "tomme"
 
 #: ../config/DaemonConfigger.py:17
 msgid "Editor to view/edit the desklet source code"
-msgstr ""
+msgstr "Editor til at vise/redigere desklet'ens kilde kode"
 
 #: ../config/DaemonConfigger.py:18
 msgid "Your favorite editor"
-msgstr ""
+msgstr "Din favorit editor"
 
 #: ../config/DaemonConfigger.py:20
 msgid "Screen Resolution (DPI)"
-msgstr ""
+msgstr "Skærm opløsning (DPI)"
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
 "Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
 "<b>1.97\"</b> wide"
 msgstr ""
+"Juster værdien over, så barren vil være præcis <b>5 cm</b> eller "
+"<b>1.97\"</b> bred"
 
 #: ../config/DaemonConfigger.py:26
 msgid "Behavior"
-msgstr ""
+msgstr "Opførsel"
 
 #: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
-msgstr ""
+msgstr "Vis _tray ikon (tager effekt efter rest"
 
 #: ../config/DaemonConfigger.py:29
 msgid "Show _notification while loading a desklet"
-msgstr ""
+msgstr "Vis _notifikation mens indlæsning af desklet"
 
 #: ../config/DaemonConfigger.py:31
 msgid "Key for toggling Float mode:"
@@ -86,62 +91,64 @@ msgstr ""
 #: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
 #: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
-msgstr ""
+msgstr "Konfiguration"
 
 #: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
 msgid "A desktop applet system for GNOME"
-msgstr ""
+msgstr "Et skrivebords applet system til GNOME"
 
 #: ../data/gdesklets.xml.in.h:1
 msgid "gDesklets display"
-msgstr ""
+msgstr "gDesklet visning"
 
 #: ../display/Display.py:86
 msgid "_Configure desklet"
-msgstr ""
+msgstr "_Konfigurér desklet"
 
 #: ../display/Display.py:88
 msgid "_Move desklet"
-msgstr ""
+msgstr "_Flyt desklet"
 
 #: ../display/Display.py:91
 msgid "_View Source"
-msgstr ""
+msgstr "_Vis Kilde"
 
 #: ../display/Display.py:94
 msgid "Re_start desklet"
-msgstr ""
+msgstr "Gen_start desklet"
 
 #: ../display/Display.py:96
 msgid "_Remove desklet"
-msgstr ""
+msgstr "_Fjern desklet"
 
 #: ../display/Display.py:98
 msgid "_Disable desklet"
-msgstr ""
+msgstr "_Deaktiver desklet"
 
 #: ../display/Display.py:101
 msgid "_About"
-msgstr ""
+msgstr "_Om"
 
 #: ../display/Display.py:340
 msgid "_Readme"
-msgstr ""
+msgstr "_Læsmig"
 
 #: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
-msgstr ""
+msgstr "Er du sikker på at du vil slette denne desklet?"
 
 #: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
 msgstr ""
+"Denne desklet vil ikke længere blive vist og dens konfiguration vil blive "
+"slettet."
 
 #: ../display/DisplayTarget.py:417
 #, python-format
 msgid "Element \"%s\" does not exist"
-msgstr ""
+msgstr "Element \"%s\" eksisterer ikke"
 
 #: ../display/DisplayTarget.py:418
 msgid ""
@@ -152,25 +159,27 @@ msgstr ""
 #: ../display/targetregistry.py:45
 #, python-format
 msgid "Unknown element <b>&lt;%s&gt;</b>"
-msgstr ""
+msgstr "Ukendt element <b>&lt;%s&gt;</b>"
 
 #: ../display/targetregistry.py:46
 msgid ""
 "Either there is a typo in the .display file or you have an incompatible "
 "version of gDesklets."
 msgstr ""
+"Enten er der en skrivefejl i .display filen eller også har du en "
+"inkompatibel version af gDesklets."
 
 #: ../factory/DisplayFactory.py:89 ../utils/DOM.py:31
 msgid "XML parse error"
-msgstr ""
+msgstr "XML parse fejl"
 
 #: ../factory/DisplayFactory.py:90
 msgid "This .display file has invalid XML syntax."
-msgstr ""
+msgstr "Denne .display fil har en invalid XML syntax"
 
 #: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
-msgstr ""
+msgstr "Fil eksisterer ikke eller kunne ikke blive indlæst"
 
 #: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
@@ -178,7 +187,7 @@ msgstr ""
 
 #: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
-msgstr ""
+msgstr "Kunne ikke indlæse sensor"
 
 #: ../factory/DisplayFactory.py:243
 #, python-format
@@ -187,38 +196,40 @@ msgstr ""
 
 #: ../factory/DisplayFactory.py:245
 msgid "The &lt;prefs&gt; section of this desklet file is broken."
-msgstr ""
+msgstr "&lt;prefs&gt; sektionen af denne desklet fil er korrupt."
 
 #: ../factory/SensorFactory.py:75
 #, python-format
 msgid "Could not find sensor '%(name)s'"
-msgstr ""
+msgstr "Kunne ikke finde sensor '%(name)s'"
 
 #: ../factory/SensorFactory.py:76
 msgid ""
 "A sensor could not be found. This usually means that it has not been "
 "installed."
 msgstr ""
+"En sensor kunne ikke blive fundet. Dette betyder for det meste at den ikke "
+"er blevet installeret."
 
 #: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
-msgstr ""
+msgstr "Du må IKKE køre gDesklets som super bruger (root)."
 
 #: ../gdesklets:47
 msgid "Checking requirements:"
-msgstr ""
+msgstr "Tjekker krav:"
 
 #: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
-msgstr ""
+msgstr "Python version >= 2.3.0 kræves."
 
 #: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
-msgstr ""
+msgstr "libexpat version 1.95.7 er korrupt. Opgrader venligst!"
 
 #: ../gdesklets:58
 msgid "SAX parser is required, some SuSE versions ship without it."
-msgstr ""
+msgstr "SAX parser er kravet, nogle SuSE versioner bliver sendt uden den."
 
 #: ../gdesklets:62
 msgid ""
@@ -232,19 +243,19 @@ msgstr ""
 
 #: ../gdesklets:69
 msgid "bonobo python bindings are required."
-msgstr ""
+msgstr "bonobo python bindings er krævet."
 
 #: ../gdesklets:78
 msgid "found"
-msgstr ""
+msgstr "fundet"
 
 #: ../gdesklets:82
 msgid "missing"
-msgstr ""
+msgstr "mangler"
 
 #: ../gdesklets:88
 msgid "Version check failed."
-msgstr ""
+msgstr "Version tjek fejlet."
 
 #: ../gdesklets:89
 #, c-format
@@ -252,6 +263,8 @@ msgid ""
 "\n"
 "%s\n"
 msgstr ""
+"\n"
+"%s\n"
 
 #: ../gdesklets:90
 msgid ""
@@ -263,10 +276,18 @@ msgid ""
 "\n"
 "THE STARTUP WILL BE CANCELLED NOW!\n"
 msgstr ""
+"Vær venligst sikker at det krævede software er installeret.\n"
+"Prøv også at undlade at have flere version af en library/binding på dit "
+"system.\n"
+"gDesklets vil ikke virke hvis du ikke har de nødvendige afhængigheder "
+"installeret\n"
+"på dit system.\n"
+"\n"
+"START OP VIL BLIVE ANNULERET NU!\n"
 
 #: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
-msgstr ""
+msgstr "Tjek af krav er færdig. Dit system ser ok ud!"
 
 #: ../gdesklets:106
 msgid ""
@@ -274,6 +295,9 @@ msgid ""
 "You're running gDesklets for the first time.\n"
 "gDesklets will start a requirements check now...\n"
 msgstr ""
+"\n"
+"Du kører gDesklets for den første gang.\n"
+"gDesklets vil køre et tjek af krav nu...\n"
 
 #: ../gdesklets:117
 msgid ""
@@ -296,6 +320,24 @@ msgid ""
 "  check             (Checks requirements)\n"
 "\n"
 msgstr ""
+"\n"
+"Befalinger:\n"
+"  open <filer> (Åbner de givne desklet filer)\n"
+"  start (Kører gDesklet daemon, dette er standard)\n"
+"  stop (Stopper gDesklet daemon)\n"
+"  list (Lister åbne desklets)\n"
+"  restart (Genstarter gDesklets daemon)\n"
+"  profile <profil> (Skifter til den givne profil)\n"
+"  profile (Viser den nuværende og tilgængelige profiler)\n"
+"  shell (Åbner den grafiske shell)\n"
+"  slay (Dræber daemon'en -- brug i nødstilfælde)\n"
+"  status (Tjekker daemon'ens status)\n"
+"  about (Printer information om gDesklets)\n"
+"  version (printer gDesklets version)\n"
+"  configure (Åbner konfigurations dialogen)\n"
+"  help (Viser denne tekst)\n"
+"  check (Tjekker krav)\n"
+"\n"
 
 #: ../gdesklets:158
 #, c-format
@@ -303,29 +345,31 @@ msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
+"Fejl imens start af gdesklets-daemon\n"
+"Mere information om dette brud er tilgængelig i \"%s\"."
 
 #: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
-msgstr ""
+msgstr "Undtagelse var: %s\n"
 
 #: ../gdesklets:186 ../gdesklets:272
 #, c-format
 msgid "Could not open desklet %s."
-msgstr ""
+msgstr "Kunne ikke åbne desklet %s."
 
 #: ../gdesklets:204
 #, c-format
 msgid "%prog [options] order"
-msgstr ""
+msgstr "%prog [muligheder] befaling"
 
 #: ../gdesklets:209
 msgid "Avoid to show the icon on the tray"
-msgstr ""
+msgstr "Undlad at vise ikonet i tray"
 
 #: ../gdesklets:215
 msgid "Debug the application"
-msgstr ""
+msgstr "Fejlsøg programmet"
 
 #: ../gdesklets:221
 msgid "Launch pre-existing display "
@@ -341,65 +385,65 @@ msgstr ""
 
 #: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
-msgstr ""
+msgstr "Starter gdesklets-daemon..."
 
 #: ../gdesklets:282
 msgid "Shutting down gdesklets-daemon..."
-msgstr ""
+msgstr "Lukker ned gdesklets-daemon..."
 
 #: ../gdesklets:294
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
-msgstr ""
+msgstr "Nuværende åbne visninger i profil \"%s\"\n"
 
 #: ../gdesklets:299
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
-msgstr ""
+msgstr "Der er ingen nuværende desklets i profil \"%s\""
 
 #: ../gdesklets:303
 msgid "Restarting gdesklets-daemon..."
-msgstr ""
+msgstr "Genstarter gdesklets-daemon..."
 
 #: ../gdesklets:316
 msgid "gdesklets-daemon is running"
-msgstr ""
+msgstr "gdesklets-daemon kører"
 
 #: ../gdesklets:318
 msgid "gdesklets-daemon is not running"
-msgstr ""
+msgstr "gdesklets-daemon kører ikke"
 
 #: ../gdesklets:322
 #, c-format
 msgid "Current profile: %s"
-msgstr ""
+msgstr "Aktuel profil: %s"
 
 #: ../gdesklets:333
 #, c-format
 msgid "New profile: %s"
-msgstr ""
+msgstr "Ny profil: %s"
 
 #: ../gdesklets:336
 #, c-format
 msgid "Available profiles: %s"
-msgstr ""
+msgstr "Tilgængelige profiler: %s"
 
 #: ../gdesklets:340
 #, c-format
 msgid "This is %s, version %s."
-msgstr ""
+msgstr "Dette er %s, version %s."
 
 #: ../gdesklets:368
 msgid "Nothing to slay."
-msgstr ""
+msgstr "Intet at dræbe."
 
 #: ../gdesklets:392
 msgid "Invalid command. Please try one of the following commands:"
-msgstr ""
+msgstr "Invalid kommando. Prøv venligst en af følgende kommandoer:"
 
 #: ../gdesklets-daemon:27
 msgid "You need a recent version of PyGTK to run this program.\n"
-msgstr ""
+msgstr "Du har brug for en sen version af PyGTK for at køre dette program.\n"
 
 #: ../gdesklets-daemon:52
 msgid "Could not fork daemon.\n"
@@ -408,62 +452,64 @@ msgstr ""
 #: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
 #, c-format
 msgid "The following error occurred: %s\n"
-msgstr ""
+msgstr "Den følgende fejl opstod: %s\n"
 
 #: ../libdesklets/convert.py:22
 #, python-format
 msgid "%.2f TB"
-msgstr ""
+msgstr "%.2f TB"
 
 #: ../libdesklets/convert.py:24
 #, python-format
 msgid "%.2f GB"
-msgstr ""
+msgstr "%.2f GB"
 
 #: ../libdesklets/convert.py:26
 #, python-format
 msgid "%.2f MB"
-msgstr ""
+msgstr "%.2f MB"
 
 #: ../libdesklets/convert.py:28
 #, python-format
 msgid "%.2f kB"
-msgstr ""
+msgstr "%.2f kB"
 
 #: ../libdesklets/convert.py:30
 #, python-format
 msgid "%d B"
-msgstr ""
+msgstr "%d B"
 
 #: ../main/AboutDialog.py:21
 msgid "About gDesklets"
-msgstr ""
+msgstr "Om gDesklets"
 
 #: ../main/client.py:276
 #, python-format
 msgid "Connecting to daemon [%s]"
-msgstr ""
+msgstr "Forbinder til daemon [%s]"
 
 #: ../main/client.py:293
 msgid ""
 "Cannot establish connection to daemon: timeout!\n"
 "The log file might help you solving the problem."
 msgstr ""
+"Kunne ikke etablere forbindelse til daemon: timeout!\n"
+"Denne log fil kan måske hjælpe dig med at løse problemet."
 
 #: ../main/client.py:299
 #, python-format
 msgid "Connected to daemon in %d microseconds."
-msgstr ""
+msgstr "Tilsluttet til daemon i %d mikrosekunder"
 
 #: ../main/client.py:302
 #, python-format
 msgid "Connected to daemon in %d milliseconds."
-msgstr ""
+msgstr "Tilsluttet til daemon i %d millisekunder."
 
 #: ../main/__init__.py:71
 #, python-format
 msgid "Version %s"
-msgstr ""
+msgstr "Version %s"
 
 #: ../main/__init__.py:74
 msgid "Core Programming:"
@@ -471,61 +517,61 @@ msgstr ""
 
 #: ../main/__init__.py:77
 msgid "Architecture Design:"
-msgstr ""
+msgstr "Arkitekturdesign:"
 
 #: ../main/__init__.py:80
 msgid "GNOME Integration:"
-msgstr ""
+msgstr "GNOME-integration:"
 
 #: ../main/__init__.py:83
 msgid "Additional Programming:"
-msgstr ""
+msgstr "Yderligere programmering:"
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
-msgstr ""
+msgstr "Dokumentation:"
 
 #: ../main/__init__.py:89
 msgid "Artwork:"
-msgstr ""
+msgstr "Kunst:"
 
 #: ../main/__init__.py:92
 msgid "Website:"
-msgstr ""
+msgstr "Hjemmeside:"
 
 #: ../main/__init__.py:95
 msgid "Thank you:"
-msgstr ""
+msgstr "Mange tak:"
 
 #: ../main/Starter.py:103
 msgid "_Manage desklets"
-msgstr ""
+msgstr "_Administrer desklets"
 
 #: ../main/Starter.py:106
 msgid "_Configuration"
-msgstr ""
+msgstr "_Konfiguration"
 
 #: ../main/Starter.py:108
 msgid "_View log"
-msgstr ""
+msgstr "_Vis logg"
 
 #: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
-msgstr ""
+msgstr "_Om..."
 
 #: ../main/Starter.py:114
 msgid "_Stop daemon"
-msgstr ""
+msgstr "_Stop daemon"
 
 #: ../main/Starter.py:230
 #, python-format
 msgid "Could not open desklet file \"%s\""
-msgstr ""
+msgstr "Kunne ikke åbne desklet fil \"%s\""
 
 #: ../main/Starter.py:231
 msgid ""
 "The desklet file could not be opened because the file was not readable."
-msgstr ""
+msgstr "Desklet filen kunne ikke blive åbner fordi filen ikke var læsbar."
 
 #: ../main/transition.py:39
 msgid ""
@@ -542,6 +588,15 @@ msgid ""
 "\n"
 "Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
+"Dette er en ustabil version af gDesklets. Ustabile versioner repræsenterer "
+"den nuværende fase i udviklingen og er måske ustabil eller årsag til "
+"problemer fra tid til anden.\n"
+"Hvis du er ny til gDesklets, er det derfor højt anbefalet <b>ikke</b> at "
+"bruge denne version, men en stabil version!\n"
+"Hvis du stadig vil køre den ustabile version istedet for en stabil version, "
+"ville vi sætte meget pris på at du reporterede underlig adfærd til "
+"udviklerne.\n"
+"Erfarne brugere er dog tilskyndet at benytte en bzr version!"
 
 #: ../main/transition.py:51
 msgid ""
@@ -570,33 +625,34 @@ msgstr ""
 
 #: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
-msgstr ""
+msgstr "Bemærk venligst (denne besked vil kun blive vist 1 gang):"
 
 #: ../plugin/Interface.py:200 ../plugin/Interface.py:227
 msgid "no description"
-msgstr ""
+msgstr "ingen beskrivelse"
 
 #: ../scripting/Script.py:155
 msgid "Error in add_timer function"
-msgstr ""
+msgstr "Fejl i add_timer funktion"
 
 #: ../scripting/Script.py:156
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
-msgstr ""
+msgstr "\"%s\" er ikke en gyldig integer værdi!"
 
 #: ../scripting/Script.py:200
 #, python-format
 msgid "No Control could be found for interface %s"
-msgstr ""
+msgstr "Ingen Kontrol kunne blive fundet for interface %s"
 
 #: ../scripting/Script.py:202
 msgid "This means that a functionality won't be available during execution!"
 msgstr ""
+"Dette betyder at en funktionalitet ikke vil blive tilgængelig under udførsel!"
 
 #: ../scripting/Script.py:242
 msgid "Security Risk"
-msgstr ""
+msgstr "Sikkerhedsrisiko"
 
 #: ../scripting/Script.py:243
 #, python-format
@@ -611,59 +667,68 @@ msgid ""
 "If you are sure that the command is harmless, you may permanently allow this "
 "desklet instance to run it."
 msgstr ""
+"Denne desklet %s vil køre en system kommando:\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"For at beskytte dit system fra ondskabsfulde programmer, kan du nægte "
+"udførslen af denne kommando.\n"
+"\n"
+"Hvis du er sikker på at denne kommando er harmløs, kan du permanent tillade "
+"denne desklet eksempel at køre den."
 
 #: ../scripting/Script.py:256
 msgid "Deny!"
-msgstr ""
+msgstr "Nægt!"
 
 #: ../scripting/Script.py:257
 msgid "Allow once"
-msgstr ""
+msgstr "Tillad én gang"
 
 #: ../scripting/Script.py:258
 msgid "Allow for this desklet"
-msgstr ""
+msgstr "Tillad for dette skrivebordsprogram"
 
 #: ../Sensors/FontSelector/__init__.py:86
 msgid "Fonts"
-msgstr ""
+msgstr "Skrifttyper"
 
 #: ../Sensors/FontSelector/__init__.py:87
 msgid "Fonts settings"
-msgstr ""
+msgstr "Skriftstype indstilling"
 
 #: ../Sensors/FontSelector/__init__.py:90
 #, python-format
 msgid "Font #%i:"
-msgstr ""
+msgstr "Skrifttype #%i:"
 
 #: ../Sensors/FontSelector/__init__.py:92
 #, python-format
 msgid "Font #%i used in the labels"
-msgstr ""
+msgstr "Skrifttype #%i brugt i etiketten"
 
 #: ../Sensors/FontSelector/__init__.py:93
 #, python-format
 msgid "Font color #%i:"
-msgstr ""
+msgstr "Skrift farve #%i:"
 
 #: ../Sensors/FontSelector/__init__.py:95
 #, python-format
 msgid "Font color #%i used in the labels"
-msgstr ""
+msgstr "Skrift farve #%i brugt i etiketterne"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:16
 #, python-format
 msgid "%s Control"
-msgstr ""
+msgstr "%s Kontrol"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:54
 msgid "Interface Name"
-msgstr ""
+msgstr "Interface Navn"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:57
 msgid "Property Name"
-msgstr ""
+msgstr "Egenskabs Navn"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:60
 msgid "Property Access"
@@ -680,37 +745,37 @@ msgstr ""
 #: ../shell/plugins/ControlBrowser/__init__.py:28
 #: ../shell/plugins/DisplayBrowser/__init__.py:85
 msgid "alphabetically"
-msgstr ""
+msgstr "alfabetisk"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:72
 #, python-format
 msgid "Found %d controls."
-msgstr ""
+msgstr "Fandt %d kontroller."
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
 #: ../shell/plugins/DisplayBrowser/__init__.py:190
 msgid "Invalid search expression."
-msgstr ""
+msgstr "Invalid søge kriterie."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:43
 msgid "R_emove selected desklet"
-msgstr ""
+msgstr "F_jern markeret desklet"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:46
 msgid "_Run (remote) desklet..."
-msgstr ""
+msgstr "_Kør (fjern) desklet..."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:48
 msgid "R_un selected desklet"
-msgstr ""
+msgstr "K_ør markeret desklet"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:83
 msgid "by category"
-msgstr ""
+msgstr "efter kategori"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
-msgstr ""
+msgstr "efter forfatter"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:148
 msgid "There is a saved instance of this display."
@@ -718,51 +783,54 @@ msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:149
 msgid "Would you like to open this?"
-msgstr ""
+msgstr "Vil du åbne dette?"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
-msgstr ""
+msgstr "Kunne ikke fjerne"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:163
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
 msgstr ""
+"Desklet filen kunne ikke blive fjernet. Dette betyder højst sandsynligt at "
+"du ikke har skrive rettigheder på den."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:175
 msgid ""
 "The desklet will be removed from your system and no longer be available."
 msgstr ""
+"Desklet'en vil blive fjernet fra dit system og ikke længere være tilgængelig."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:187
 #, python-format
 msgid "Found %d desklets"
-msgstr ""
+msgstr "Fandt %d desklets."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
-msgstr ""
+msgstr "Ingen beskrivelse tilgængelig"
 
 #: ../shell/plugins/Help/__init__.py:37
 msgid "_Help"
-msgstr ""
+msgstr "_Hjælp"
 
 #: ../shell/plugins/Help/__init__.py:38
 msgid "_Contents"
-msgstr ""
+msgstr "_Indhold"
 
 #: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
-msgstr ""
+msgstr "_Dagens tip"
 
 #: ../shell/plugins/Help/TipOfTheDay.py:24
 msgid "Tip of the Day"
-msgstr ""
+msgstr "Dagens tip"
 
 #: ../shell/plugins/Help/TipOfTheDay.py:32
 msgid "Show tips at startup"
-msgstr ""
+msgstr "Vis tips ved start"
 
 #: ../shell/plugins/Help/tips.py:2
 msgid ""
@@ -773,6 +841,12 @@ msgid ""
 "and\n"
 "http://gdesklets.zencomputer.ca/"
 msgstr ""
+"Du kan finde mange flere skrivebords applets til brug\n"
+"med gDesklets ved\n"
+"\n"
+"http://www.gdesklets.org\n"
+"og\n"
+"http://gdesklets.zencomputer.ca/"
 
 #: ../shell/plugins/Help/tips.py:9
 msgid ""
@@ -780,12 +854,17 @@ msgid ""
 "dragging the download link for the package\n"
 "from your web browser into the gDesklets Shell."
 msgstr ""
+"Du kan installeret nye skrivebord applets nemt ved at\n"
+"flytte download linket for din pakke\n"
+"fra din web browser ind i gDesklets Shell."
 
 #: ../shell/plugins/Help/tips.py:13
 msgid ""
 "Click the right mouse button on a desktop\n"
 "applet or press F10 to open the popup menu."
 msgstr ""
+"Klik den højre mus knap på et skrivebord\n"
+"applet eller tryk F10 for at åbne popup menuen."
 
 #: ../shell/plugins/Help/tips.py:16
 msgid ""
@@ -796,6 +875,12 @@ msgid ""
 "hold down both of them simultaneously\n"
 "in order to simulate the middle button."
 msgstr ""
+"Du kan flytte applets run på skærmen\n"
+"ved at holde midt knappen inde på musen.\n"
+"\n"
+"Hvis din mus kun har to knapper,\n"
+"hold begge nede samtidig\n"
+"for at simulere midt knappen."
 
 #: ../shell/plugins/Help/tips.py:23
 msgid ""
@@ -828,22 +913,25 @@ msgid ""
 "Write your own!  See the Developer's\n"
 "book for more details."
 msgstr ""
+"Har en god ide til en desklet?\n"
+"Skriv din egen! Se udviklernes\n"
+"bog for flere detaljer."
 
 #: ../shell/plugins/PackageInstaller/Downloader.py:29
 msgid "Retrieving:"
-msgstr ""
+msgstr "Henter:"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:26
 msgid "I_nstall remote package..."
-msgstr ""
+msgstr "I_nstaller fjern pakke..."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:27
 msgid "_Install package..."
-msgstr ""
+msgstr "_Installer pakke..."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:97
 msgid "Invalid package"
-msgstr ""
+msgstr "Ugyldig pakke"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:98
 msgid ""
@@ -853,7 +941,7 @@ msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:115
 msgid "Installation failed"
-msgstr ""
+msgstr "Fejl under installationen"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:116
 msgid ""
@@ -862,40 +950,40 @@ msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:119
 msgid "Installation complete"
-msgstr ""
+msgstr "Installation fuldført"
 
 #: ../shell/plugins/Profiles/__init__.py:18
 msgid "_Profiles"
-msgstr ""
+msgstr "_Profiler"
 
 #: ../shell/plugins/Profiles/__init__.py:20
 msgid "New profile..."
-msgstr ""
+msgstr "Ny profil..."
 
 #: ../shell/plugins/Profiles/__init__.py:75
 msgid "New profile"
-msgstr ""
+msgstr "Ny profil"
 
 #: ../shell/plugins/Profiles/__init__.py:76
 msgid "Enter the name for a new profile"
-msgstr ""
+msgstr "Indtast navnet for en ny profil"
 
 #: ../shell/plugins/Shell/__init__.py:62
 msgid "_File"
-msgstr ""
+msgstr "_Fil"
 
 #: ../shell/SearchBar.py:20
 msgid "Search"
-msgstr ""
+msgstr "Søg"
 
 #: ../utils/dialog.py:46
 #, python-format
 msgid "_Details (%d lines)"
-msgstr ""
+msgstr "_Detaljer (%d rækker)"
 
 #: ../utils/dialog.py:194
 msgid "_Ignore errors from this desklet"
-msgstr ""
+msgstr "_Ignorer fejl fra denne desklet"
 
 #: ../utils/DOM.py:32
 msgid "An invalid graphics code was loaded into a canvas."
@@ -909,7 +997,7 @@ msgstr ""
 #: ../utils/DOM.py:154
 #, python-format
 msgid "The element with ID <b>%s</b> does not exist in the SVG image."
-msgstr ""
+msgstr "Elementet med ID <b>%s</b> eksisterer ikke i SVG billedet."
 
 #: ../utils/DOM.py:182 ../utils/Element.py:91
 #, python-format
@@ -928,7 +1016,7 @@ msgstr ""
 
 #: ../utils/Element.py:96 ../utils/Element.py:126
 msgid "Permission Error"
-msgstr ""
+msgstr "Tilladelse Fejl"
 
 #: ../utils/Element.py:97
 #, python-format
@@ -937,7 +1025,7 @@ msgstr ""
 
 #: ../utils/Element.py:105
 msgid "Type Error"
-msgstr ""
+msgstr "Type Fejl"
 
 #: ../utils/Element.py:106
 #, python-format
@@ -957,4 +1045,4 @@ msgstr ""
 
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
-msgstr ""
+msgstr "En fejl fandt sted under udførsel af denne desklet."

@@ -9,13 +9,13 @@ msgstr ""
 "Project-Id-Version: gdesklets.HEAD.hu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-10-06 07:24+0000\n"
-"Last-Translator: Muszela Balázs <bazsi86@gmail.com>\n"
+"PO-Revision-Date: 2010-02-10 10:51+0000\n"
+"Last-Translator: Luciferko <ferenc.lengyel@gmx.com>\n"
 "Language-Team: Hungarian <gnome@gnome.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
@@ -126,7 +126,7 @@ msgstr "Kijelző _eltávolítása"
 
 #: ../display/Display.py:98
 msgid "_Disable desklet"
-msgstr ""
+msgstr "_Desklet tiltása"
 
 #: ../display/Display.py:101
 msgid "_About"
@@ -134,7 +134,7 @@ msgstr "_Névjegy"
 
 #: ../display/Display.py:340
 msgid "_Readme"
-msgstr ""
+msgstr "Olvass el"
 
 #: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
@@ -292,6 +292,8 @@ msgstr ""
 #: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
 msgstr ""
+"A minimális rendszerkövetelmények vizsgálata befejeződött. Az Ön rendszere "
+"megfelelő!"
 
 #: ../gdesklets:106
 msgid ""
@@ -324,6 +326,25 @@ msgid ""
 "  check             (Checks requirements)\n"
 "\n"
 msgstr ""
+"\n"
+"Parancsok:\n"
+"  megnyitás    <állományok>   (megnyitja a megadott Desklet-állományt)\n"
+"  futtatás             (Futtatja a Deslet_daemon-t, alapértelmezett)\n"
+"  leállítás              (Leállítja a desklet daemon-t)\n"
+"  listázás              (Kilistázza a megnyitott deskleteket)\n"
+"  úraindítás           (Újraindítja gDesklet Daemon-t)\n"
+"  profil <profil> (Váltás a megadott profilok között)\n"
+"  profil           (Megmutatja az aktuális és az elérhető profilokat)\n"
+"  shell             (Megnyitja a grafikus héjat)\n"
+"  kilövés             (Kilövi a daemon folyamatot -- csak végszükség "
+"esetén)\n"
+"  status            (A daemon állapotának ellenőrzése)\n"
+"  névjegy             (Megjeleníti a Desklet névjegyét)\n"
+"  verzió           (Megjeleníti a Desklet verzióját)\n"
+"  beállítás         (Megnyitja a beállítás párbeszédablakot)\n"
+"  súgó              (Megjeleníti ezt a szöveget )\n"
+"  ellenőrzés             (Ellenőrzi a rendszerkövetelményeket)\n"
+"\n"
 
 #: ../gdesklets:158
 #, c-format
@@ -331,11 +352,13 @@ msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
+"Hiba lépett fel a gdesklet-Daemon indítása során\n"
+"További információt a hiba okáról a \"%s\" alatt talál."
 
 #: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
-msgstr ""
+msgstr "Hiba %s:\n"
 
 #: ../gdesklets:186 ../gdesklets:272
 #, c-format
@@ -349,7 +372,7 @@ msgstr ""
 
 #: ../gdesklets:209
 msgid "Avoid to show the icon on the tray"
-msgstr ""
+msgstr "Nem jeleníti meg az ikont az értesítési táron"
 
 #: ../gdesklets:215
 msgid "Debug the application"
@@ -510,7 +533,7 @@ msgstr "GNOME integráció:"
 
 #: ../main/__init__.py:83
 msgid "Additional Programming:"
-msgstr ""
+msgstr "Kiegészítő programozás:"
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
@@ -573,6 +596,19 @@ msgid ""
 "\n"
 "Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
+"Ez a gDesklet egy nem végleges kiadása. A nem végleges változatok a "
+"fejlesztés aktuális státuszát mutatják be és nem stabilak,  időről-időre "
+"problémák léphetnek fel.\n"
+"\n"
+"Amennyiben első ízben használja a gDeskletet, <b>nem javasolt</b> a nem "
+"stabil verziók használata, hanem sokkal inkább a stabil-változatok használat "
+"ajánlott. \n"
+"\n"
+"Ha mégis a nem végleges kiadást futtatja, nagyon megköszönnénk, ha minden "
+"nem normális jelenségről értesítené a fejlesztőt.\n"
+"\n"
+"A tapasztalt felhasználókat természetesen arra kérjük, hogy teszteljék az "
+"nem végleges változatok!"
 
 #: ../main/transition.py:51
 msgid ""
@@ -766,7 +802,7 @@ msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:149
 msgid "Would you like to open this?"
-msgstr ""
+msgstr "Meg akarja ezt nyitni?"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"

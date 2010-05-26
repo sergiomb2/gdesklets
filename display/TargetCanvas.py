@@ -181,7 +181,7 @@ class TargetCanvas(DisplayTarget):
         except KeyError:
             log("Error: width and/or height not given\n")
         except UserError:
-            log("Error: Desklet contains errors. Please contact the author!")
+            log("Error: Desklet contains errors. Please contact the author!\n No width and/or height given in the SVG root element (in a Canvas element).")
         except ValueError:
             try:
                 self.__image_size = \

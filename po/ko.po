@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: gDesklets 0.22.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-01-01 07:14+0000\n"
-"Last-Translator: David C. Park <Unknown>\n"
+"PO-Revision-Date: 2010-04-14 17:06+0000\n"
+"Last-Translator: Bundo <bundo@bundo.biz>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
-msgstr ""
+msgstr "잘못된 함수 호출"
 
 #: ../config/ConfigDialog.py:116
 #, python-format
@@ -28,65 +28,67 @@ msgid ""
 "This means that there's an error in the desklet's code. You should inform "
 "the author of the desklet about this problem."
 msgstr ""
+"함수 <b>%s</b>에 대한 호출이 없습니다.\n"
+"이것은 데스크렛코드에 문제가 있다고 생각됩니다. 그 데스크렛츠 제작자에게 문제를 보고해주십시오."
 
 #: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
-msgstr ""
+msgstr "이 desklet를 구성할 수 없습니다."
 
 #: ../config/ConfigUnit.py:57
 msgid "pixel"
-msgstr ""
+msgstr "픽셀"
 
 #: ../config/ConfigUnit.py:58
 msgid "point"
-msgstr ""
+msgstr "포인트"
 
 #: ../config/ConfigUnit.py:59
 msgid "cm"
-msgstr ""
+msgstr "cm"
 
 #: ../config/ConfigUnit.py:60
 msgid "inch"
-msgstr ""
+msgstr "인치"
 
 #: ../config/DaemonConfigger.py:17
 msgid "Editor to view/edit the desklet source code"
-msgstr ""
+msgstr "desklet 소스 코드를 보기/편집 하는 편집기"
 
 #: ../config/DaemonConfigger.py:18
 msgid "Your favorite editor"
-msgstr ""
+msgstr "당신이 선호하는 편집기"
 
 #: ../config/DaemonConfigger.py:20
 msgid "Screen Resolution (DPI)"
-msgstr ""
+msgstr "스크린 해상도 (DPI)"
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
 "Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
 "<b>1.97\"</b> wide"
-msgstr ""
+msgstr "바의 값을 조정하면 모음의 너비가 실제 <b>5 센티미터</b> 또는 <b>1.97\"</b>입니다"
 
 #: ../config/DaemonConfigger.py:26
 msgid "Behavior"
-msgstr ""
+msgstr "동작"
 
 #: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
-msgstr ""
+msgstr "트래이 아이콘 보기 (다시 시작후 작업효과)(_T)"
 
 #: ../config/DaemonConfigger.py:29
 msgid "Show _notification while loading a desklet"
-msgstr ""
+msgstr "desklet을 불러오는 동안 알림창 보기(_N)"
 
 #: ../config/DaemonConfigger.py:31
 msgid "Key for toggling Float mode:"
-msgstr ""
+msgstr "플로트 모드로 전환 키:"
 
 #: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
 #: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
-msgstr ""
+msgstr "설정"
 
 #: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
 msgid "A desktop applet system for GNOME"
@@ -94,119 +96,120 @@ msgstr "GNOME용 데스크탑 애플릿"
 
 #: ../data/gdesklets.xml.in.h:1
 msgid "gDesklets display"
-msgstr ""
+msgstr "gDesklets 디스플레이"
 
 #: ../display/Display.py:86
 msgid "_Configure desklet"
-msgstr ""
+msgstr "desklet 구성(_C)"
 
 #: ../display/Display.py:88
 msgid "_Move desklet"
-msgstr ""
+msgstr "desklet 이동(_M)"
 
 #: ../display/Display.py:91
 msgid "_View Source"
-msgstr ""
+msgstr "소스 보기(_V)"
 
 #: ../display/Display.py:94
 msgid "Re_start desklet"
-msgstr ""
+msgstr "데스크렛 다시 시작(_S)"
 
 #: ../display/Display.py:96
 msgid "_Remove desklet"
-msgstr ""
+msgstr "desklet 제거(_R)"
 
 #: ../display/Display.py:98
 msgid "_Disable desklet"
-msgstr ""
+msgstr "데스크렛 비활성(_D)"
 
 #: ../display/Display.py:101
 msgid "_About"
-msgstr "gDesklets에 대하여(_A)"
+msgstr "정보(_A)"
 
 #: ../display/Display.py:340
 msgid "_Readme"
-msgstr ""
+msgstr "추가 정보(_R)"
 
 #: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
-msgstr ""
+msgstr "정말로 이desklet이 제거 되길 원하십니까?"
 
 #: ../display/Display.py:1124
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
-msgstr ""
+msgstr "이 desklet는 반환 되지 않으며, 이 설정도 제거됩니다."
 
 #: ../display/DisplayTarget.py:417
 #, python-format
 msgid "Element \"%s\" does not exist"
-msgstr ""
+msgstr "요소 \"%s\"이(가) 없습니다"
 
 #: ../display/DisplayTarget.py:418
 msgid ""
 "The <tt>relative-to</tt> property requires a reference to an existing "
 "display element within the same parent container."
 msgstr ""
+"<tt>relative-to</tt>라는 속성은 (같은 부모 컨테이너 포함) 기존의 디스플레이 요소에 대한 참조가 필요합니다."
 
 #: ../display/targetregistry.py:45
 #, python-format
 msgid "Unknown element <b>&lt;%s&gt;</b>"
-msgstr ""
+msgstr "<b>&lt;%s&gt;</b> 요소를 분석할 수 없습니다"
 
 #: ../display/targetregistry.py:46
 msgid ""
 "Either there is a typo in the .display file or you have an incompatible "
 "version of gDesklets."
-msgstr ""
+msgstr ".display 파일에 오타가 있거나 호환되지 않는 버전을 사용하고 있다고 생각합니다."
 
 #: ../factory/DisplayFactory.py:89 ../utils/DOM.py:31
 msgid "XML parse error"
-msgstr ""
+msgstr "XML 구문 분석 오류"
 
 #: ../factory/DisplayFactory.py:90
 msgid "This .display file has invalid XML syntax."
-msgstr ""
+msgstr "이 .display 파일의 XML 문법은 잘못된 것입니다."
 
 #: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
-msgstr ""
+msgstr "파일이 없거나 블러 올 수 없습니다."
 
 #: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
-msgstr ""
+msgstr "스크립트가 포함된 파일을 더 이상 실행할 수 없습니다."
 
 #: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
-msgstr ""
+msgstr "센서를 가져올 수 없습니다."
 
 #: ../factory/DisplayFactory.py:243
 #, python-format
 msgid "&lt;%s&gt; needs a bind attribute"
-msgstr ""
+msgstr "&lt;%s&gt;는 bind 속성이 필요합니다"
 
 #: ../factory/DisplayFactory.py:245
 msgid "The &lt;prefs&gt; section of this desklet file is broken."
-msgstr ""
+msgstr "이 desklet의 &lt;prefs&gt; 섹션이 손상되었습니다."
 
 #: ../factory/SensorFactory.py:75
 #, python-format
 msgid "Could not find sensor '%(name)s'"
-msgstr ""
+msgstr "센서 '%(name)s'를 찾을 수 없습니다."
 
 #: ../factory/SensorFactory.py:76
 msgid ""
 "A sensor could not be found. This usually means that it has not been "
 "installed."
-msgstr ""
+msgstr "센서를 찾을 수 없습니다. 대부분의 경우 센서가 설치되어 있지 않은 상태입니다."
 
 #: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
-msgstr ""
+msgstr "수퍼유저 (root) 권한으로 gDesklets를 시작하지 마십시오."
 
 #: ../gdesklets:47
 msgid "Checking requirements:"
-msgstr ""
+msgstr "요구 사항 검사 중:"
 
 #: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
@@ -214,11 +217,11 @@ msgstr ""
 
 #: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
-msgstr ""
+msgstr "ibexpat 버전 1.95.7은 사용하지 마십시오. 업그레이드 하십시오!"
 
 #: ../gdesklets:58
 msgid "SAX parser is required, some SuSE versions ship without it."
-msgstr ""
+msgstr "SAX 파서가 필요합니다 (SuSE를 사용하는 경우 설치가 필요합니다)."
 
 #: ../gdesklets:62
 msgid ""
@@ -232,19 +235,19 @@ msgstr ""
 
 #: ../gdesklets:69
 msgid "bonobo python bindings are required."
-msgstr ""
+msgstr "bonobo Python 바인딩 해야합니다."
 
 #: ../gdesklets:78
 msgid "found"
-msgstr ""
+msgstr "찾았습니다"
 
 #: ../gdesklets:82
 msgid "missing"
-msgstr ""
+msgstr "찾을 수 없습니다"
 
 #: ../gdesklets:88
 msgid "Version check failed."
-msgstr ""
+msgstr "버전 확인에 실패했습니다."
 
 #: ../gdesklets:89
 #, c-format
@@ -252,6 +255,8 @@ msgid ""
 "\n"
 "%s\n"
 msgstr ""
+"\n"
+"%s\n"
 
 #: ../gdesklets:90
 msgid ""
@@ -263,6 +268,11 @@ msgid ""
 "\n"
 "THE STARTUP WILL BE CANCELLED NOW!\n"
 msgstr ""
+"필요한 소프트웨어가 설치되어 있는지 확인 하십시오.\n"
+"또한 시스템에 설치되어있는 라이브러리/바인딩 여러 버전에 주의 하십시오.\n"
+"시스템에 요구사항이 해결되지 않는 한 gDesklets 동작하지 않습니다.\n"
+"\n"
+"gDesklets 시작을 취소합니다!\n"
 
 #: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
@@ -274,6 +284,9 @@ msgid ""
 "You're running gDesklets for the first time.\n"
 "gDesklets will start a requirements check now...\n"
 msgstr ""
+"\n"
+"gDesklets를 처음 시작할 것입니다.\n"
+"필요한 소프트웨어에 대한 요구사항을 지금 확인합니다...\n"
 
 #: ../gdesklets:117
 msgid ""
@@ -312,7 +325,7 @@ msgstr ""
 #: ../gdesklets:186 ../gdesklets:272
 #, c-format
 msgid "Could not open desklet %s."
-msgstr ""
+msgstr "desklet %s을(를) 열 수 없습니다."
 
 #: ../gdesklets:204
 #, c-format
@@ -325,7 +338,7 @@ msgstr ""
 
 #: ../gdesklets:215
 msgid "Debug the application"
-msgstr ""
+msgstr "프로그램 디버그"
 
 #: ../gdesklets:221
 msgid "Launch pre-existing display "
@@ -337,195 +350,197 @@ msgstr ""
 
 #: ../gdesklets:233
 msgid "Session manager ID"
-msgstr ""
+msgstr "세션 관리자 ID"
 
 #: ../gdesklets:276
 msgid "Starting gdesklets-daemon..."
-msgstr ""
+msgstr "지데스크렛-데몬 시작 중..."
 
 #: ../gdesklets:282
 msgid "Shutting down gdesklets-daemon..."
-msgstr ""
+msgstr "지데스크렛-데몬 종료 중..."
 
 #: ../gdesklets:294
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
-msgstr ""
+msgstr "프로파일 '%s'에서 현재 열려있는 작업공간 번호 :\n"
 
 #: ../gdesklets:299
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
-msgstr ""
+msgstr "현재 프로파일 '%s'에서 열린 desklets가 없습니다"
 
 #: ../gdesklets:303
 msgid "Restarting gdesklets-daemon..."
-msgstr ""
+msgstr "지데스크렛-데몬 다시 시작 중..."
 
 #: ../gdesklets:316
 msgid "gdesklets-daemon is running"
-msgstr ""
+msgstr "지데스크렛-데몬이 실행 중입니다"
 
 #: ../gdesklets:318
 msgid "gdesklets-daemon is not running"
-msgstr ""
+msgstr "지데스크렛-데몬이 실행중이지 않습니다"
 
 #: ../gdesklets:322
 #, c-format
 msgid "Current profile: %s"
-msgstr ""
+msgstr "현재 프로파일: %s"
 
 #: ../gdesklets:333
 #, c-format
 msgid "New profile: %s"
-msgstr ""
+msgstr "새 프로파일: %s"
 
 #: ../gdesklets:336
 #, c-format
 msgid "Available profiles: %s"
-msgstr ""
+msgstr "사용가능한 프로파일: %s"
 
 #: ../gdesklets:340
 #, c-format
 msgid "This is %s, version %s."
-msgstr ""
+msgstr "이것 %s의 버전은 %s입니다."
 
 #: ../gdesklets:368
 msgid "Nothing to slay."
-msgstr ""
+msgstr "종료하는 것이 없습니다."
 
 #: ../gdesklets:392
 msgid "Invalid command. Please try one of the following commands:"
-msgstr ""
+msgstr "명령이 잘못되었습니다. 다음 명령 중 하나를 시도하십시오:"
 
 #: ../gdesklets-daemon:27
 msgid "You need a recent version of PyGTK to run this program.\n"
-msgstr ""
+msgstr "이 프로그램을 실행하려면 PyGTK 최신 버전이 필요합니다.\n"
 
 #: ../gdesklets-daemon:52
 msgid "Could not fork daemon.\n"
-msgstr ""
+msgstr "데몬을 fork 할 수 없습니다.\n"
 
 #: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
 #, c-format
 msgid "The following error occurred: %s\n"
-msgstr ""
+msgstr "다음 오류가 발생했습니다: %s\n"
 
 #: ../libdesklets/convert.py:22
 #, python-format
 msgid "%.2f TB"
-msgstr ""
+msgstr "%.2f TB"
 
 #: ../libdesklets/convert.py:24
 #, python-format
 msgid "%.2f GB"
-msgstr ""
+msgstr "%.2f GB"
 
 #: ../libdesklets/convert.py:26
 #, python-format
 msgid "%.2f MB"
-msgstr ""
+msgstr "%.2f MB"
 
 #: ../libdesklets/convert.py:28
 #, python-format
 msgid "%.2f kB"
-msgstr ""
+msgstr "%.2f kB"
 
 #: ../libdesklets/convert.py:30
 #, python-format
 msgid "%d B"
-msgstr ""
+msgstr "%d B"
 
 #: ../main/AboutDialog.py:21
 msgid "About gDesklets"
-msgstr ""
+msgstr "정보"
 
 #: ../main/client.py:276
 #, python-format
 msgid "Connecting to daemon [%s]"
-msgstr ""
+msgstr "데몬에 연결 중 [%s]"
 
 #: ../main/client.py:293
 msgid ""
 "Cannot establish connection to daemon: timeout!\n"
 "The log file might help you solving the problem."
 msgstr ""
+"데몬과 연결을 설정할 수 없습니다 : 타임아웃!\n"
+"로그 파일을 참조하여 문제를 해결하십시오."
 
 #: ../main/client.py:299
 #, python-format
 msgid "Connected to daemon in %d microseconds."
-msgstr ""
+msgstr "%d 밀리초에 데몬에 연결했습니다."
 
 #: ../main/client.py:302
 #, python-format
 msgid "Connected to daemon in %d milliseconds."
-msgstr ""
+msgstr "%d 밀리초에 데몬에 연결했습니다."
 
 #: ../main/__init__.py:71
 #, python-format
 msgid "Version %s"
-msgstr ""
+msgstr "버전 %s"
 
 #: ../main/__init__.py:74
 msgid "Core Programming:"
-msgstr ""
+msgstr "코어 프로그래밍:"
 
 #: ../main/__init__.py:77
 msgid "Architecture Design:"
-msgstr ""
+msgstr "구조 설계:"
 
 #: ../main/__init__.py:80
 msgid "GNOME Integration:"
-msgstr ""
+msgstr "GNOME 통합작업:"
 
 #: ../main/__init__.py:83
 msgid "Additional Programming:"
-msgstr ""
+msgstr "추가 프로그래밍:"
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
-msgstr ""
+msgstr "문서:"
 
 #: ../main/__init__.py:89
 msgid "Artwork:"
-msgstr ""
+msgstr "아트워크:"
 
 #: ../main/__init__.py:92
 msgid "Website:"
-msgstr ""
+msgstr "웹사이트:"
 
 #: ../main/__init__.py:95
 msgid "Thank you:"
-msgstr ""
+msgstr "감사합니다:"
 
 #: ../main/Starter.py:103
 msgid "_Manage desklets"
-msgstr ""
+msgstr "데스크렛츠 관리(_M)"
 
 #: ../main/Starter.py:106
 msgid "_Configuration"
-msgstr ""
+msgstr "설정(_C)"
 
 #: ../main/Starter.py:108
 msgid "_View log"
-msgstr ""
+msgstr "로그 보기(_V)"
 
 #: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
-msgstr ""
+msgstr "정보(_A)..."
 
 #: ../main/Starter.py:114
 msgid "_Stop daemon"
-msgstr ""
+msgstr "데몬 정지(_S)"
 
 #: ../main/Starter.py:230
 #, python-format
 msgid "Could not open desklet file \"%s\""
-msgstr ""
+msgstr "\"%s\" 데스크렛 파일을 열 수 없습니다."
 
 #: ../main/Starter.py:231
 msgid ""
 "The desklet file could not be opened because the file was not readable."
-msgstr ""
+msgstr "파일을 불러올 수 없기 때문에 데스크렛 파일을 열 수 없습니다."
 
 #: ../main/transition.py:39
 msgid ""
@@ -553,6 +568,12 @@ msgid ""
 "\n"
 "Thanks for testing this release candidate!"
 msgstr ""
+"이것은 곧 지데스크렛 안정 버전에 대한 <b>릴리스 후보</b>입니다.\n"
+"꼭 설치하고 동작을 확인하여 문제가 있으면 <i> http://bugzilla.gnome.org </i>에 보고하세요.\n"
+"이 버전은 사용자의 설정을 재미있게 하고, 이전 버전의 설정을 사용하지 못할 수 있습니다. 지데스크렛은 아직 개발 초기 단계에 있고, "
+"디버깅을 고려하고, 그런 사태를 의도적으로 포함하는 경우가 있습니다.\n"
+"\n"
+"릴리스 후보의 테스트에 참가 해준 것에 감사합니다!"
 
 #. our informative transition message which we can change with
 #. every release
@@ -570,33 +591,33 @@ msgstr ""
 
 #: ../main/transition.py:75
 msgid "Please note (this message will appear only once):"
-msgstr ""
+msgstr "주의 사항 (이 메시지는 한 번만 표시됩니다):"
 
 #: ../plugin/Interface.py:200 ../plugin/Interface.py:227
 msgid "no description"
-msgstr ""
+msgstr "설명이 없음"
 
 #: ../scripting/Script.py:155
 msgid "Error in add_timer function"
-msgstr ""
+msgstr "함수 add_timer 오류"
 
 #: ../scripting/Script.py:156
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
-msgstr ""
+msgstr "\"%s\"에 유효한 정수가 없습니다!"
 
 #: ../scripting/Script.py:200
 #, python-format
 msgid "No Control could be found for interface %s"
-msgstr ""
+msgstr "인터페이스 %s에 대한 컨트롤을 찾을 수 없습니다."
 
 #: ../scripting/Script.py:202
 msgid "This means that a functionality won't be available during execution!"
-msgstr ""
+msgstr "이것은 실행 중에 사용할 수 있는 기능이 없다는 것입니다!"
 
 #: ../scripting/Script.py:242
 msgid "Security Risk"
-msgstr ""
+msgstr "보안 문제"
 
 #: ../scripting/Script.py:243
 #, python-format
@@ -611,106 +632,113 @@ msgid ""
 "If you are sure that the command is harmless, you may permanently allow this "
 "desklet instance to run it."
 msgstr ""
+"데스크렛이 %s 시스템 명령 실행을 요구하고 있습니다 :\n"
+"\n"
+"     <tt><b>%s</b></tt>\n"
+"\n"
+"시스템을 악성 프로그램으로부터 보호하기 위하여, 명령의 실행을 거부할 수 있습니다.\n"
+"\n"
+"이 명령이 무해하다고 확인한 경우, 데스크렛 실행 권한이 영원히 미칠 수 있습니다."
 
 #: ../scripting/Script.py:256
 msgid "Deny!"
-msgstr ""
+msgstr "거부!"
 
 #: ../scripting/Script.py:257
 msgid "Allow once"
-msgstr ""
+msgstr "한 번만 허용"
 
 #: ../scripting/Script.py:258
 msgid "Allow for this desklet"
-msgstr ""
+msgstr "이 데스크렛은 허용"
 
 #: ../Sensors/FontSelector/__init__.py:86
 msgid "Fonts"
-msgstr ""
+msgstr "글꼴"
 
 #: ../Sensors/FontSelector/__init__.py:87
 msgid "Fonts settings"
-msgstr ""
+msgstr "글꼴 설정"
 
 #: ../Sensors/FontSelector/__init__.py:90
 #, python-format
 msgid "Font #%i:"
-msgstr ""
+msgstr "글꼴 #%i:"
 
 #: ../Sensors/FontSelector/__init__.py:92
 #, python-format
 msgid "Font #%i used in the labels"
-msgstr ""
+msgstr "라벨에 사용되는 글꼴 #%i"
 
 #: ../Sensors/FontSelector/__init__.py:93
 #, python-format
 msgid "Font color #%i:"
-msgstr ""
+msgstr "글꼴 색 #%i:"
 
 #: ../Sensors/FontSelector/__init__.py:95
 #, python-format
 msgid "Font color #%i used in the labels"
-msgstr ""
+msgstr "레이블에 사용할 글꼴 색상 #%i"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:16
 #, python-format
 msgid "%s Control"
-msgstr ""
+msgstr "%s 콘트롤"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:54
 msgid "Interface Name"
-msgstr ""
+msgstr "인터페이스 이름"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:57
 msgid "Property Name"
-msgstr ""
+msgstr "속성 이름"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:60
 msgid "Property Access"
-msgstr ""
+msgstr "속성 액세스"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:63
 msgid "Property Description"
-msgstr ""
+msgstr "속성 설명"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:27
 msgid "by interface"
-msgstr ""
+msgstr "인터페이스 순"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:28
 #: ../shell/plugins/DisplayBrowser/__init__.py:85
 msgid "alphabetically"
-msgstr ""
+msgstr "알파벳순"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:72
 #, python-format
 msgid "Found %d controls."
-msgstr ""
+msgstr "%d개의 컨트롤을 찾았습니다."
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
 #: ../shell/plugins/DisplayBrowser/__init__.py:190
 msgid "Invalid search expression."
-msgstr ""
+msgstr "검색식이 잘못되었습니다."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:43
 msgid "R_emove selected desklet"
-msgstr ""
+msgstr "선택한 데스크렛 제거(_E)"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:46
 msgid "_Run (remote) desklet..."
-msgstr ""
+msgstr "데스크렛 실행 (원격) (_R)..."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:48
 msgid "R_un selected desklet"
-msgstr ""
+msgstr "선택한 데스크렛 실행(_U)"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:83
 msgid "by category"
-msgstr ""
+msgstr "분류 순"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
-msgstr ""
+msgstr "제작자 순"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:148
 msgid "There is a saved instance of this display."
@@ -722,47 +750,47 @@ msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
-msgstr ""
+msgstr "제거할 수 없음"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:163
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
-msgstr ""
+msgstr "데스크렛 파일을 제거할 수 없습니다. 아마 쓰기 권한을 가지고 있지는 않은 것 같습니다."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:175
 msgid ""
 "The desklet will be removed from your system and no longer be available."
-msgstr ""
+msgstr "시스템에서 데스크렛을 제거했기 때문에 다시 사용할 수 없습니다."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:187
 #, python-format
 msgid "Found %d desklets"
-msgstr ""
+msgstr "%d개의 데스크렛을 찾았습니다."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
-msgstr ""
+msgstr "설명이 없음"
 
 #: ../shell/plugins/Help/__init__.py:37
 msgid "_Help"
-msgstr ""
+msgstr "도움말(_H)"
 
 #: ../shell/plugins/Help/__init__.py:38
 msgid "_Contents"
-msgstr ""
+msgstr "내용(_C)"
 
 #: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
-msgstr ""
+msgstr "오늘의 팁(_T)"
 
 #: ../shell/plugins/Help/TipOfTheDay.py:24
 msgid "Tip of the Day"
-msgstr ""
+msgstr "오늘의 팁"
 
 #: ../shell/plugins/Help/TipOfTheDay.py:32
 msgid "Show tips at startup"
-msgstr ""
+msgstr "시작 시에 팁 보기"
 
 #: ../shell/plugins/Help/tips.py:2
 msgid ""
@@ -786,6 +814,8 @@ msgid ""
 "Click the right mouse button on a desktop\n"
 "applet or press F10 to open the popup menu."
 msgstr ""
+"데스크톱 애플릿에서 오른쪽 클릭하거나\n"
+"F10을 누르면 팝업 메뉴가 나타납니다."
 
 #: ../shell/plugins/Help/tips.py:16
 msgid ""
@@ -796,6 +826,12 @@ msgid ""
 "hold down both of them simultaneously\n"
 "in order to simulate the middle button."
 msgstr ""
+"마우스 단추를 아래로 하면서\n"
+"드래그하여 애플릿을 이동할 수 있습니다.\n"
+"\n"
+"만약 두 단추 마우스를 사용하고 있다면,\n"
+"좌우 두 딘추를 동시에 누루는 것이\n"
+"가운데 단추 누름의 대안입니다."
 
 #: ../shell/plugins/Help/tips.py:23
 msgid ""
@@ -813,6 +849,8 @@ msgid ""
 "The search bar accepts complex search\n"
 "expressions for finding your applets."
 msgstr ""
+"검색 창에서 애플릿을 검색할 수 있는\n"
+"복잡한 검색 식을 입력할 수 있습니다."
 
 #: ../shell/plugins/Help/tips.py:34
 msgid ""
@@ -821,6 +859,10 @@ msgid ""
 " ? matches any one character\n"
 " * matches zero or more characters"
 msgstr ""
+"검색 식은 다음과 같은 와일드 카드를 사용할 수 있습니다:\n"
+"\n"
+" ? 한 개 문자와 일치합니다\n"
+" * 0개 이상의 문자와 일치합니다"
 
 #: ../shell/plugins/Help/tips.py:39
 msgid ""
@@ -831,38 +873,38 @@ msgstr ""
 
 #: ../shell/plugins/PackageInstaller/Downloader.py:29
 msgid "Retrieving:"
-msgstr ""
+msgstr "되찾는 중:"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:26
 msgid "I_nstall remote package..."
-msgstr ""
+msgstr "원격 패키지를 설치(_N)..."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:27
 msgid "_Install package..."
-msgstr ""
+msgstr "패키지 설치(_I)..."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:97
 msgid "Invalid package"
-msgstr ""
+msgstr "잘못된 패키지"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:98
 msgid ""
 "The supplied file could not be opened as a package. It is either corrupted "
 "or not of the correct file type."
-msgstr ""
+msgstr "지정된 파일을 패키지로 열 수 없습니다. 파일 자체가 손상되거나 올바른 파일이 아닐 것 같습니다."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:115
 msgid "Installation failed"
-msgstr ""
+msgstr "설치 실패"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:116
 msgid ""
 "The package could not be installed because it contained no installable files."
-msgstr ""
+msgstr "설 치 가능한 파일이 없기 때문에 패키지를 설치하지 못했습니다."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:119
 msgid "Installation complete"
-msgstr ""
+msgstr "설치 완료"
 
 #: ../shell/plugins/Profiles/__init__.py:18
 msgid "_Profiles"
@@ -870,74 +912,74 @@ msgstr ""
 
 #: ../shell/plugins/Profiles/__init__.py:20
 msgid "New profile..."
-msgstr ""
+msgstr "새 프로파일..."
 
 #: ../shell/plugins/Profiles/__init__.py:75
 msgid "New profile"
-msgstr ""
+msgstr "새로운 프로파일"
 
 #: ../shell/plugins/Profiles/__init__.py:76
 msgid "Enter the name for a new profile"
-msgstr ""
+msgstr "새 프로필의 이름을 입력하세요"
 
 #: ../shell/plugins/Shell/__init__.py:62
 msgid "_File"
-msgstr ""
+msgstr "파일(_F)"
 
 #: ../shell/SearchBar.py:20
 msgid "Search"
-msgstr ""
+msgstr "검색"
 
 #: ../utils/dialog.py:46
 #, python-format
 msgid "_Details (%d lines)"
-msgstr ""
+msgstr "자세히 (%d 선들)(_D)"
 
 #: ../utils/dialog.py:194
 msgid "_Ignore errors from this desklet"
-msgstr ""
+msgstr "이 데스크렛 오류를 무시(_I)"
 
 #: ../utils/DOM.py:32
 msgid "An invalid graphics code was loaded into a canvas."
-msgstr ""
+msgstr "재미있는 그래픽 코드를 캔버스에 불러 왔습니다."
 
 #: ../utils/DOM.py:153
 #, python-format
 msgid "No such element: %s"
-msgstr ""
+msgstr "그런 요소가 없습니다: %s"
 
 #: ../utils/DOM.py:154
 #, python-format
 msgid "The element with ID <b>%s</b> does not exist in the SVG image."
-msgstr ""
+msgstr "SVG 이미지에는 ID <b>%s</b> 요소가 없습니다."
 
 #: ../utils/DOM.py:182 ../utils/Element.py:91
 #, python-format
 msgid "No such property: %s"
-msgstr ""
+msgstr "그런 속성은 없습니다: %s"
 
 #: ../utils/DOM.py:183
 #, python-format
 msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
-msgstr ""
+msgstr "SVG 요소 <b>%s</b>에 속성 <b>%s</b>이 없습니다."
 
 #: ../utils/Element.py:92
 #, python-format
 msgid "The element <b>%s</b> does not have the <b>%s</b> property."
-msgstr ""
+msgstr "요소 <b>%s</b>에 속성 <b>%s</b>이 없습니다."
 
 #: ../utils/Element.py:96 ../utils/Element.py:126
 msgid "Permission Error"
-msgstr ""
+msgstr "권한 오류"
 
 #: ../utils/Element.py:97
 #, python-format
 msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
-msgstr ""
+msgstr "속성 <b>%s</b>의 요소 <b>%s</b>은 쓸 수 없습니다."
 
 #: ../utils/Element.py:105
 msgid "Type Error"
-msgstr ""
+msgstr "형식 오류"
 
 #: ../utils/Element.py:106
 #, python-format
@@ -945,16 +987,18 @@ msgid ""
 "The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
 "Expected <b>%s</b>, but got <b>%s</b>."
 msgstr ""
+"속성 <b>%s</b> 요소 <b>%s</b>가 잘못된 형식의 값을 받았습니다.\n"
+"<b>%s</b>이 분명하다고 생각되지만 받은 것은 <b>%s</b>입니다."
 
 #: ../utils/Element.py:127
 #, python-format
 msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
-msgstr ""
+msgstr "속성 <b>%s</b> 요소 <b>%s</b>를 불러올 수 없습니다."
 
 #: ../utils/error.py:158
 msgid "Runtime Error"
-msgstr ""
+msgstr "런타임 오류"
 
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
-msgstr ""
+msgstr "데스크렛을 실행할 때 오류가 발생했습니다."

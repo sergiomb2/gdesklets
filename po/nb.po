@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: gdesklets 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-07-30 01:57+0000\n"
-"Last-Translator: Kenneth Langdalen <Unknown>\n"
+"PO-Revision-Date: 2010-05-19 09:29+0000\n"
+"Last-Translator: Smart Viking <smart_viking@live.com>\n"
 "Language-Team: Norwegian <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
@@ -54,7 +54,7 @@ msgstr ""
 
 #: ../config/DaemonConfigger.py:18
 msgid "Your favorite editor"
-msgstr ""
+msgstr "Din favoritt tekstredigerer"
 
 #: ../config/DaemonConfigger.py:20
 msgid "Screen Resolution (DPI)"
@@ -121,7 +121,7 @@ msgstr ""
 
 #: ../display/Display.py:101
 msgid "_About"
-msgstr ""
+msgstr "_Om"
 
 #: ../display/Display.py:340
 msgid "_Readme"
@@ -169,7 +169,7 @@ msgstr "Visningsfilen inneholder ugyldig XML-syntaks."
 
 #: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
-msgstr ""
+msgstr "Filen eksisterer ikke eller kunne ikke lastes"
 
 #: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
@@ -346,7 +346,7 @@ msgstr ""
 
 #: ../gdesklets:282
 msgid "Shutting down gdesklets-daemon..."
-msgstr ""
+msgstr "Slår av gdesklets-daemon..."
 
 #: ../gdesklets:294
 #, c-format
@@ -360,11 +360,11 @@ msgstr ""
 
 #: ../gdesklets:303
 msgid "Restarting gdesklets-daemon..."
-msgstr ""
+msgstr "Restarter gdesklets-daemon..."
 
 #: ../gdesklets:316
 msgid "gdesklets-daemon is running"
-msgstr ""
+msgstr "gdesklets-daemon kjører"
 
 #: ../gdesklets:318
 msgid "gdesklets-daemon is not running"

@@ -409,20 +409,25 @@ class DisplayTarget(DataTarget):
             try:
                 parent = self._get_parent()
                 my_id = self._getp("id")
+
                 if (not parent or not parent.get_child_by_id(my_id)):
                     return
 
                 obj = self._get_parent().get_child_by_id(name)
-                if (not obj):
+
+                # if it is not a child of our parent and not the parent itself, something is wrong
+                if (not obj and not (parent._getp("id") == name)):
                     raise UserError(_("Element \"%s\" does not exist") % name,
                                    _("The <tt>relative-to</tt> property "
                                      "requires a reference to an existing "
                                      "display element within the same parent "
                                      "container."))
 
-                relative = obj.get_layout_object()
-
-                self.__layout_object.set_relative_to(relative, rx, ry)
+                # FIXME ?! So far 'relative-to' only works for "siblings".
+                #          Would a 'relative-to' parents make any sense ?!
+                if obj:
+                    relative = obj.get_layout_object()
+                    self.__layout_object.set_relative_to(relative, rx, ry)
             except:
                 import traceback; traceback.print_exc()
                 pass

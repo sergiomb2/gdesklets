@@ -70,10 +70,15 @@ render_to_image (GtkImage *image, GdkPixbuf *pbuf,
   const gint srcheight = gdk_pixbuf_get_height (pbuf);
 
   /* scale pixbuf */
+  scaled = gdk_pixbuf_scale_simple (pbuf, width, height, GDK_INTERP_BILINEAR);
+
+// the "original" code, causing Bug #260288 :
+/*
   if (srcwidth != width || srcheight != height)
     scaled = gdk_pixbuf_scale_simple (pbuf, width, height, GDK_INTERP_BILINEAR);
   else
     scaled = pbuf;
+*/
 
   /* set opacity */
   filter_opacity (scaled, opacity);

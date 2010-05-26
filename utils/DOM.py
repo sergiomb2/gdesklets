@@ -7,7 +7,7 @@ The DOM object can be serialized to a XML string at any time.
 """
 
 from xml import sax
-    
+from error import UserError    
 
 class DOM(sax.handler.ContentHandler):
 

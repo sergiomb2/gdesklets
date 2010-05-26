@@ -1119,8 +1119,7 @@ class Display(gtk.HBox, Observable):
         def remove_display(*args):
             self.update_observer(self.OBS_CLOSE, self.__id)
 
-        utils.dialog.question(None,
-                              _("Do you really want to remove this desklet ?"),
+        utils.dialog.question(_("Do you really want to remove this desklet?"),
                               _("This desklet will no longer be displayed "
                                 "and its configuration will be purged."),
                               (gtk.STOCK_CANCEL, None),

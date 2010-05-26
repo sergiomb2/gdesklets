@@ -9,18 +9,18 @@ msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-02-09 22:56+0000\n"
-"Last-Translator: Volkan Esgel <Unknown>\n"
+"PO-Revision-Date: 2010-05-18 08:31+0000\n"
+"Last-Translator: Cihan Ersoy <Unknown>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
-msgstr ""
+msgstr "Geçersiz İşlev Çağrısı"
 
 #: ../config/ConfigDialog.py:116
 #, python-format
@@ -29,6 +29,9 @@ msgid ""
 "This means that there's an error in the desklet's code. You should inform "
 "the author of the desklet about this problem."
 msgstr ""
+"<b>%s</b> isminde bir işlev yok.\n"
+"Bu durum desklet'in kodunda bir hata olduğunu gösterir. Desklet'in "
+"geliştiricisine bu problem hakkında bilgi vermelisiniz."
 
 #: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
@@ -36,19 +39,19 @@ msgstr "Bu desklet yapılandırılabilir değil."
 
 #: ../config/ConfigUnit.py:57
 msgid "pixel"
-msgstr ""
+msgstr "benek"
 
 #: ../config/ConfigUnit.py:58
 msgid "point"
-msgstr ""
+msgstr "punto"
 
 #: ../config/ConfigUnit.py:59
 msgid "cm"
-msgstr ""
+msgstr "cm"
 
 #: ../config/ConfigUnit.py:60
 msgid "inch"
-msgstr ""
+msgstr "inç"
 
 #: ../config/DaemonConfigger.py:17
 msgid "Editor to view/edit the desklet source code"
@@ -70,11 +73,11 @@ msgstr ""
 
 #: ../config/DaemonConfigger.py:26
 msgid "Behavior"
-msgstr ""
+msgstr "İşleyiş"
 
 #: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
-msgstr ""
+msgstr "_Tepsi simgesini göster (yeniden başlatma sonrası etkin olur)"
 
 #: ../config/DaemonConfigger.py:29
 msgid "Show _notification while loading a desklet"
@@ -127,11 +130,11 @@ msgstr "_Hakkında"
 
 #: ../display/Display.py:340
 msgid "_Readme"
-msgstr ""
+msgstr "_Benioku"
 
 #: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
-msgstr "Bu deskleti kaldırmak istediğinize emin misiniz?"
+msgstr "Bu desklet'i kaldırmak istediğinize emin misiniz?"
 
 #: ../display/Display.py:1124
 msgid ""
@@ -142,7 +145,7 @@ msgstr ""
 #: ../display/DisplayTarget.py:417
 #, python-format
 msgid "Element \"%s\" does not exist"
-msgstr ""
+msgstr "\"%s\" öğesi mevcut değil"
 
 #: ../display/DisplayTarget.py:418
 msgid ""
@@ -153,7 +156,7 @@ msgstr ""
 #: ../display/targetregistry.py:45
 #, python-format
 msgid "Unknown element <b>&lt;%s&gt;</b>"
-msgstr ""
+msgstr "Bilinmeyen öğe <b>&lt;%s&gt;</b>"
 
 #: ../display/targetregistry.py:46
 msgid ""
@@ -163,7 +166,7 @@ msgstr ""
 
 #: ../factory/DisplayFactory.py:89 ../utils/DOM.py:31
 msgid "XML parse error"
-msgstr ""
+msgstr "XML ayrıştırma hatası"
 
 #: ../factory/DisplayFactory.py:90
 msgid "This .display file has invalid XML syntax."
@@ -203,15 +206,15 @@ msgstr ""
 
 #: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
-msgstr ""
+msgstr "gDesklets'i süper kullanıcı (root) olarak çalıştırmamalısınız."
 
 #: ../gdesklets:47
 msgid "Checking requirements:"
-msgstr ""
+msgstr "Gereksinimler kontrol ediliyor:"
 
 #: ../gdesklets:51
 msgid "Python version >= 2.3.0 is required."
-msgstr ""
+msgstr "Python sürümü >= 2.3.0 gerekli."
 
 #: ../gdesklets:55
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
@@ -241,7 +244,7 @@ msgstr "bulundu"
 
 #: ../gdesklets:82
 msgid "missing"
-msgstr ""
+msgstr "eksik"
 
 #: ../gdesklets:88
 msgid "Version check failed."
@@ -253,6 +256,8 @@ msgid ""
 "\n"
 "%s\n"
 msgstr ""
+"\n"
+"%s\n"
 
 #: ../gdesklets:90
 msgid ""
@@ -373,7 +378,7 @@ msgstr "gdesklets-daemon çalışmıyor"
 #: ../gdesklets:322
 #, c-format
 msgid "Current profile: %s"
-msgstr "Güncel profil: %s"
+msgstr "Geçerli profil: %s"
 
 #: ../gdesklets:333
 #, c-format
@@ -434,7 +439,7 @@ msgstr "%.2f kB"
 #: ../libdesklets/convert.py:30
 #, python-format
 msgid "%d B"
-msgstr ""
+msgstr "%d B"
 
 #: ../main/AboutDialog.py:21
 msgid "About gDesklets"
@@ -464,7 +469,7 @@ msgstr ""
 #: ../main/__init__.py:71
 #, python-format
 msgid "Version %s"
-msgstr ""
+msgstr "Sürüm %s"
 
 #: ../main/__init__.py:74
 msgid "Core Programming:"
@@ -472,7 +477,7 @@ msgstr ""
 
 #: ../main/__init__.py:77
 msgid "Architecture Design:"
-msgstr ""
+msgstr "Mimari Dizayn:"
 
 #: ../main/__init__.py:80
 msgid "GNOME Integration:"
@@ -480,7 +485,7 @@ msgstr "GNOME Bütünleşmesi:"
 
 #: ../main/__init__.py:83
 msgid "Additional Programming:"
-msgstr ""
+msgstr "Ek Programlama:"
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
@@ -492,7 +497,7 @@ msgstr ""
 
 #: ../main/__init__.py:92
 msgid "Website:"
-msgstr ""
+msgstr "Web sitesi:"
 
 #: ../main/__init__.py:95
 msgid "Thank you:"
@@ -504,7 +509,7 @@ msgstr ""
 
 #: ../main/Starter.py:106
 msgid "_Configuration"
-msgstr ""
+msgstr "_Yapılandırma"
 
 #: ../main/Starter.py:108
 msgid "_View log"
@@ -512,7 +517,7 @@ msgstr ""
 
 #: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
 msgid "_About..."
-msgstr ""
+msgstr "_Hakkında..."
 
 #: ../main/Starter.py:114
 msgid "_Stop daemon"
@@ -660,15 +665,15 @@ msgstr "%s Kontrolü"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:54
 msgid "Interface Name"
-msgstr ""
+msgstr "Arayüz Adı"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:57
 msgid "Property Name"
-msgstr ""
+msgstr "Özellik Adı"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:60
 msgid "Property Access"
-msgstr ""
+msgstr "Özellik Erişimi"
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:63
 msgid "Property Description"
@@ -743,19 +748,19 @@ msgstr "%d desklet bulundu"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:209
 msgid "No description available"
-msgstr ""
+msgstr "Açıklama yok"
 
 #: ../shell/plugins/Help/__init__.py:37
 msgid "_Help"
-msgstr ""
+msgstr "_Yardım"
 
 #: ../shell/plugins/Help/__init__.py:38
 msgid "_Contents"
-msgstr ""
+msgstr "_İçerikler"
 
 #: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
-msgstr ""
+msgstr "_Günün İpucu"
 
 #: ../shell/plugins/Help/TipOfTheDay.py:24
 msgid "Tip of the Day"
@@ -840,7 +845,7 @@ msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:27
 msgid "_Install package..."
-msgstr ""
+msgstr "Paketi _Yükle..."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:97
 msgid "Invalid package"
@@ -854,7 +859,7 @@ msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:115
 msgid "Installation failed"
-msgstr ""
+msgstr "Yükleme başarısız oldu"
 
 #: ../shell/plugins/PackageInstaller/__init__.py:116
 msgid ""
@@ -863,11 +868,11 @@ msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:119
 msgid "Installation complete"
-msgstr ""
+msgstr "Yükleme tamamlandı"
 
 #: ../shell/plugins/Profiles/__init__.py:18
 msgid "_Profiles"
-msgstr ""
+msgstr "_Profiller"
 
 #: ../shell/plugins/Profiles/__init__.py:20
 msgid "New profile..."
@@ -875,7 +880,7 @@ msgstr "Yeni profil..."
 
 #: ../shell/plugins/Profiles/__init__.py:75
 msgid "New profile"
-msgstr ""
+msgstr "Yeni Profil"
 
 #: ../shell/plugins/Profiles/__init__.py:76
 msgid "Enter the name for a new profile"
@@ -883,16 +888,16 @@ msgstr "Yeni profilin ismini girin"
 
 #: ../shell/plugins/Shell/__init__.py:62
 msgid "_File"
-msgstr ""
+msgstr "_Dosya"
 
 #: ../shell/SearchBar.py:20
 msgid "Search"
-msgstr ""
+msgstr "Ara"
 
 #: ../utils/dialog.py:46
 #, python-format
 msgid "_Details (%d lines)"
-msgstr ""
+msgstr "_Detaylar (%d satır)"
 
 #: ../utils/dialog.py:194
 msgid "_Ignore errors from this desklet"
@@ -905,7 +910,7 @@ msgstr ""
 #: ../utils/DOM.py:153
 #, python-format
 msgid "No such element: %s"
-msgstr ""
+msgstr "Böyle bir öğe yok: %s"
 
 #: ../utils/DOM.py:154
 #, python-format
@@ -915,7 +920,7 @@ msgstr ""
 #: ../utils/DOM.py:182 ../utils/Element.py:91
 #, python-format
 msgid "No such property: %s"
-msgstr ""
+msgstr "Böyle bir özellik yok: %s"
 
 #: ../utils/DOM.py:183
 #, python-format
@@ -929,7 +934,7 @@ msgstr ""
 
 #: ../utils/Element.py:96 ../utils/Element.py:126
 msgid "Permission Error"
-msgstr ""
+msgstr "İzin Hatası"
 
 #: ../utils/Element.py:97
 #, python-format

@@ -129,7 +129,7 @@ class TargetPlotter(TargetCanvas):
                         "font-size=\"%d\" fill=\"%s\">%d</text>" \
                         % (max_value - i, scala_font, 5, scala_color, i)
 
-        gfx = "<svg>" + body + "</svg>"
+        gfx = "<svg width=\"100\" height=\"100\">" + body + "</svg>"
         self.set_prop("graphics", gfx)
 
 

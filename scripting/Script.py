@@ -251,8 +251,7 @@ class Script:
             escaped_command = escaped_command.replace("<", "&lt;")
             escaped_command = escaped_command.replace(">", "&gt;")
 
-            dialog.question(None,
-                            _("Security Risk"),
+            dialog.question(_("Security Risk"),
                             _("The desklet %s wants to execute a system "
                               "command:\n"
                               "\n"

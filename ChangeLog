@@ -1,3 +1,34 @@
+2010-05-24  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* utils/render.c: fixed bug #260288
+	* main/Starter.py: fixed TrayIcon bugs (#151880, #229506, #197991)
+	* display/TargetCanvas.py
+	* display/TargetPlotter.py: fixed Plotter problem (see bug #71085)
+
+2010-05-23  Joe Sapp  <nixphoeni@gmail.com>
+
+	* utils/dialog.py: Made the info dialog box capable of containing
+			configurable buttons; removed icon argument in question()
+	* shell/plugins/DisplayBrowser/__init__.py
+	* scripting/Script.py
+	* display/Display.py: Removed the first argument in the call to
+			dialog.question() as it wasn't being used
+	* README
+	* gdesklets: Updated Python dependency to 2.4
+	* config/settings.py
+	* config/DaemonConfigger.py: Implemented the auto-update config item;
+			see blueprint at
+			https://blueprints.launchpad.net/gdesklets/+spec/new-version-detection
+	* gdesklets-daemon
+	* utils/UpdateChecker.py: Implemented a first pass at the above blueprint
+
+2010-05-13  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* display/DisplayTarget.py: fixed UserError output if relative-to points 
+	    to the parent object
+	* shell/plugins/ControlBrowser/ControlInspector.py: fixed bug #565624
+            (Shell expects PangoWrapMode)
+
 2010-05-01  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* config/ConfigDialog.py: Markup ToolTips (see bug #570267)

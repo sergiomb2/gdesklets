@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-01-01 05:47+0000\n"
-"Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
+"PO-Revision-Date: 2010-02-18 21:21+0000\n"
+"Last-Translator: Tommi Saira <Unknown>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2009-10-14 12:08+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
@@ -124,15 +124,15 @@ msgstr "_Poista sovelma"
 
 #: ../display/Display.py:98
 msgid "_Disable desklet"
-msgstr ""
+msgstr "_Poista desklet käytöstä"
 
 #: ../display/Display.py:101
 msgid "_About"
-msgstr ""
+msgstr "_Tietoja"
 
 #: ../display/Display.py:340
 msgid "_Readme"
-msgstr ""
+msgstr "_Lueminut"
 
 #: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid "Do you really want to remove this desklet ?"
@@ -288,6 +288,8 @@ msgstr ""
 #: ../gdesklets:99
 msgid "Requirements checking done. Your system looks ok!"
 msgstr ""
+"Vaatimusten tarkistus on suoritettu onnistuneesti loppuun. Järjestelmäsi "
+"läpäisi testin!"
 
 #: ../gdesklets:106
 msgid ""
@@ -327,11 +329,13 @@ msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
+"Virhe käynnistettäessä gdesklets-daemon:ia\n"
+"Lisätietoa tästä virheestä saat: \"%s\"."
 
 #: ../gdesklets:161
 #, c-format
 msgid "Exception was: %s\n"
-msgstr ""
+msgstr "Odotus oli: %s\n"
 
 #: ../gdesklets:186 ../gdesklets:272
 #, c-format
@@ -341,11 +345,11 @@ msgstr "Sovelmaa \"%s\" ei voi avata."
 #: ../gdesklets:204
 #, c-format
 msgid "%prog [options] order"
-msgstr ""
+msgstr "%prog [options] järjestys"
 
 #: ../gdesklets:209
 msgid "Avoid to show the icon on the tray"
-msgstr ""
+msgstr "Älä näytä kuvaketta ilmoitusaluella"
 
 #: ../gdesklets:215
 msgid "Debug the application"
@@ -505,11 +509,11 @@ msgstr "Gnome-integrointi:"
 
 #: ../main/__init__.py:83
 msgid "Additional Programming:"
-msgstr ""
+msgstr "Muut ohjelmoijat:"
 
 #: ../main/__init__.py:86
 msgid "Documentation:"
-msgstr ""
+msgstr "Dokumentaario:"
 
 #: ../main/__init__.py:89
 msgid "Artwork:"
@@ -761,7 +765,7 @@ msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:149
 msgid "Would you like to open this?"
-msgstr ""
+msgstr "Haluatko avata tämän?"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid "Could not remove"
@@ -796,7 +800,7 @@ msgstr "O_hje"
 
 #: ../shell/plugins/Help/__init__.py:38
 msgid "_Contents"
-msgstr ""
+msgstr "_Sisältö"
 
 #: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
