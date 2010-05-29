@@ -17,14 +17,23 @@ class ControlWrapper(object):
 
         # We need to deepcopy in order to get individually changeable
         # Control instances
-        self.__dict__["_ControlWrapper__control"] = \
-                     Vault( [ deepcopy(control)
-                              for i in range(size) ] )
-        # Initialize all initial copies
-        for ctl in self.__dict__["_ControlWrapper__control"](open):
-            ctl.__init__()
-        print "debug: original control: %s" % control
-        print "debug: copies: %s" % self.__control(open)
+        try:
+            self.__dict__["_ControlWrapper__control"] = \
+                         Vault( [ deepcopy(control)
+                                  for i in range(size) ] )
+        except:
+            self.__dict__["_ControlWrapper__control"] = \
+                         Vault( [ control ] )
+            if self.__length > 0:
+                log("Error: Control %s can't be replicated! This is a BUG in the Desklet!"
+                    "\nThings probably won't work right for you." % control)
+                self.__dict__["_ControlWrapper__length"] = 0
+                size = 0
+        else:
+            # Initialize all initial copies
+            for ctl in self.__dict__["_ControlWrapper__control"](open):
+                ctl.__init__()
+
         # Keep an original copy around for extending the array
         self.__dict__["_ControlWrapper__original_control"] = Vault(control)
         # Create a property handler for each deep copy of control
