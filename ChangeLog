@@ -1,3 +1,9 @@
+2010-05-29  Joe Sapp  <nixphoeni@gmail.com>
+
+	* config/settings.py: renamed to config/settings.py.in
+	* configure: Added option to configure to disable the version updates
+			check (--disable-update-check)
+
 2010-05-24  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* utils/render.c: fixed bug #260288
@@ -16,8 +22,8 @@
 	* README
 	* gdesklets: Updated Python dependency to 2.4
 	* config/settings.py
-	* config/DaemonConfigger.py: Implemented the auto-update config item;
-			see blueprint at
+	* config/DaemonConfigger.py: Implemented the version update check config
+			item; see blueprint at
 			https://blueprints.launchpad.net/gdesklets/+spec/new-version-detection
 	* gdesklets-daemon
 	* utils/UpdateChecker.py: Implemented a first pass at the above blueprint
