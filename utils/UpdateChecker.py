@@ -8,7 +8,7 @@ class UpdateChecker(sax.handler.ContentHandler):
 
 
     # Length of time between checks, in milliseconds
-    TIMEOUT = 60*60*1000
+    TIMEOUT = 24*60*60*1000
     UPDATE_URI = "http://gdesklets.de/update.xml"
 
 
@@ -72,13 +72,21 @@ class UpdateChecker(sax.handler.ContentHandler):
         if (not self.__in_update) and (name != "update"): return
 
         # Basic tests
-        if (self.__latest_version["major"] > self.__version["major"]) or \
-                (self.__latest_version["minor"] > self.__version["minor"]) or \
-                (self.__latest_version["development"] > self.__version["development"]):
+        if (self.__latest_version["major"],
+                self.__latest_version["minor"],
+                self.__latest_version["development"]) > \
+           (self.__version["major"],
+                self.__version["minor"],
+                self.__version["development"]):
             self.__new_version_available[self.__update_type] = (True, self.__latest_version)
 
         # alpha < beta < rc1 < rc2...
-        elif self.__latest_version["type"] != self.__version["type"]:
+        elif (self.__latest_version["major"],
+                self.__latest_version["minor"],
+                self.__latest_version["development"]) == \
+             (self.__version["major"],
+                self.__version["minor"],
+                self.__version["development"]):
             # Check release candidates
             if self.__latest_version["type"].startswith("rc") and self.__version["type"].startswith("rc"):
                 if int(self.__latest_version["type"][2:]) > int(self.__version["type"][2:]):

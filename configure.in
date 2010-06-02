@@ -17,7 +17,7 @@ AC_PROG_MAKE_SET
 
 CFLAGS="-Os -g"
 
-AC_ARG_ENABLE(debug,[  --enable-debug  Maximum debugging],
+AC_ARG_ENABLE(debug,AS_HELP_STRING([--enable-debug],[Maximum debugging]),
               set_debug="$enableval",[set_debug=no])
 AC_MSG_CHECKING(for more debugging including macro expansion)
 if test "$GCC" = "yes" -a "$set_debug" != "no"; then
@@ -27,7 +27,7 @@ else
   AC_MSG_RESULT(no)
 fi
 
-AC_ARG_ENABLE(more-warnings,[  --enable-more-warnings  More compiler warnings],
+AC_ARG_ENABLE(more-warnings,AS_HELP_STRING([--enable-more-warnings],[More compiler warnings]),
               set_more_warnings="$enableval",[set_more_warnings=no])
 
 AC_MSG_CHECKING(for more warnings, including -Werror)
@@ -41,6 +41,16 @@ if test "$GCC" = "yes" -a "$set_more_warnings" != "no"; then
 else
     AC_MSG_RESULT(no)
 fi
+
+AC_ARG_ENABLE(update-check,
+              AS_HELP_STRING([--disable-update-check], [Version update check]),
+              [
+                AS_IF([test "x$enable_update_check" = "xno"],
+                      [enable_update_check=False],
+                      [enable_update_check=True])
+              ],
+              [enable_update_check=True])
+AC_SUBST(enable_update_check)
 
 AM_PATH_PYTHON([2.3])
 PYTHON_PREFIX=`python -c "import sys; print sys.prefix"`
@@ -107,6 +117,7 @@ Sensors/External/Makefile
 Sensors/FontSelector/Makefile
 Sensors/Makefile
 config/Makefile
+config/settings.py
 data/Makefile
 display/Makefile
 doc/Makefile
@@ -160,4 +171,5 @@ Configuration
   Install location:  ${prefix}
   Enable warnings:   ${set_more_warnings}
   Enable debugging:  ${set_debug}
+  Check for updates: ${enable_update_check}
 "

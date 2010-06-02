@@ -10,10 +10,15 @@ import sys
 import os
 import code
 import __builtin__
+try:
+    from dbus.mainloop.glib import DBusGMainLoop
+except:
+    pass
+else:
+    DBusGMainLoop(set_as_default=True)
 
 if "." not in sys.path: sys.path.append(".")
 if HOME not in sys.path: sys.path.append(HOME)
-
 
 try:
     path = os.path.abspath(sys.argv[1])
