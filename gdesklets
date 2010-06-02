@@ -46,33 +46,46 @@ def check_system():
 
     print _("Checking requirements:")
 
-    for modules, predicate, message in (
+    for modules, predicate, message, required in (
         ( ("sys",), lambda m : m.version_info[:2] >= (2, 4),
-          _("Python version >= 2.4.0 is required.")
+          _("Python version >= 2.4.0 is required."),
+          True
         ),
         ( ("xml.parsers.expat",),
           lambda m: m.parsers.expat.version_info != (1, 95, 7),
-          _("libexpat version 1.95.7 is broken. Please upgrade!")
+          _("libexpat version 1.95.7 is broken. Please upgrade!"),
+          True
         ),
         ( ("xml.sax",), lambda m: m,
-          _("SAX parser is required, some SuSE versions ship without it.")
+          _("SAX parser is required, some SuSE versions ship without it."),
+          True
         ),
         ( ("gtk",), lambda m : m.pygtk_version >= (2, 10, 0) and \
                               m.gtk_version >= (2, 10, 0),
           _("GTK python bindings (pygtk2) version >= 2.10.0 and "
-            "GTK+ version >= 2.10.0 are required.")
+            "GTK+ version >= 2.10.0 are required."),
+          True
         ),
         ( ("ORBit",), lambda m : m.__version__ >= (2, 0, 1),
-          _("ORBit python bindings (pyorbit) version >= 2.0.1 are required.")
+          _("ORBit python bindings (pyorbit) version >= 2.0.1 are required."),
+          True
         ),
         ( ("bonobo.ui",), lambda m : m,
-          _("bonobo python bindings are required.")
+          _("bonobo python bindings are required."),
+          True
+        ),
+        ( ("dbus",), lambda m : m,
+          _("DBus python bindings are useful, but optional."),
+          False
         )
     ):
 
         loaded = None
         for m in modules:
-            print " - %s ..." % m,
+            print " - %s " % m,
+            if not required:
+                print _("(optional) "),
+            print "... ",
             try:
                 loaded = __import__(m)
                 print _("found")
@@ -81,19 +94,20 @@ def check_system():
                 pass
             print _("missing")
 
-        try:
-            if (not predicate(loaded)):
-                raise RuntimeError
-        except Exception:
-            print _("Version check failed.")
-            print _("\n%s\n" % message)
-            print _("Please make sure that the required software is "
-                    "installed.\nAlso try to avoid having multiple versions "
-                    "of a library/binding on your system.\ngDesklets won't "
-                    "work if you don't have all necessary dependencies "
-                    "installed\non your system.\n\nTHE STARTUP WILL BE "
-                    "CANCELLED NOW!\n")
-            return False
+        if required:
+            try:
+                if (not predicate(loaded)):
+                    raise RuntimeError
+            except Exception:
+                print _("Version check failed.")
+                print _("\n%s\n" % message)
+                print _("Please make sure that the required software is "
+                        "installed.\nAlso try to avoid having multiple versions "
+                        "of a library/binding on your system.\ngDesklets won't "
+                        "work if you don't have all necessary dependencies "
+                        "installed\non your system.\n\nTHE STARTUP WILL BE "
+                        "CANCELLED NOW!\n")
+                return False
 
 
     print _("Requirements checking done. Your system looks ok!")

@@ -20,7 +20,12 @@ import os
 import pygtk
 import sys
 import utils
-
+# No big deal if this fails
+try:
+    from dbus.mainloop.glib import DBusGMainLoop
+except:
+    def DBusGMainLoop(set_as_default = True):
+        pass
 
 
 
@@ -106,6 +111,9 @@ def _gdesklets_main():
 
     # build our sockets, trayicon and start them
     Starter()
+
+    # Set the default DBus mainloop
+    DBusGMainLoop(set_as_default = True)
 
     # enter gtk's mainloop
     gtk.gdk.threads_enter()

@@ -1,3 +1,9 @@
+2010-06-01  Joe Sapp  <nixphoeni@gmail.com>
+
+	* gdesklets
+	* gdesklets-daemon
+	* test-control.py: Implemented DBus support for Controls
+
 2010-05-29  Joe Sapp  <nixphoeni@gmail.com>
 
 	* config/settings.py: renamed to config/settings.py.in
