@@ -131,9 +131,9 @@ class UpdateChecker(sax.handler.ContentHandler):
                     dialog.info(_("A " + type + " version update is available"),
                                 _("You are running version ") + self.__format_version(self.__version) +
                                     _(".\n\nVersion ") + self.__format_version(version) +
-                                    _(" is available at <i>http://www.gdesklets.de</i>."),
-                                (gtk.STOCK_STOP, lambda t=type: self.__remind(t, False)),
-                                (gtk.STOCK_OK, None))
+                                    _(" is available at %s." % dialog.urlwrap("http://www.gdesklets.de")),
+                                (_("_Stop reminding me"), lambda t=type: self.__remind(t, False)),
+                                (_("_Remind me again"), None))
                     break
 
         # Run again next timer expiration

@@ -50,11 +50,12 @@ if (not _check_version()):
     elif ("rc" in VERSION):
         msg = _("This is a <b>release candidate</b> of an upcoming gDesklets "
                 "release.\nPlease test it and report bugs to "
-                "<i>https://bugs.launchpad.net/gdesklets</i>\n"
+                "%s\n"
                 "This version might break your configuration or it won't "
                 "restore it from an earlier release. In most cases this is "
                 "intentional, since gDesklets is still in its early stages of "
-                "development.\n\nThanks for testing this release candidate!")
+                "development.\n\nThanks for testing this release candidate!" %
+                dialog.urlwrap("https://bugs.launchpad.net/gdesklets"))
 
     else:
         # our informative transition message which we can change with

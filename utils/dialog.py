@@ -206,8 +206,6 @@ def user_error(ident, primary, secondary, details = ""):
 
     _queue_dialog(ident, dialog)
 
-    
-
 
 #
 # Use the new filechoose if possible, or fallback to the old one
@@ -242,3 +240,19 @@ def fileselector(title, callback_ok, callback_cancel, *args):
 
     fsel.show()
 
+
+#
+# Wrap URLs uniformly for use in a GtkLabel
+# If url isn't set, assume text is the href
+#
+if gtk.gtk_version >= (2, 18, 0):
+    def urlwrap(text, url=None):
+        if not url:
+            url = text
+        return "<a href=\"%s\">%s</a>" % (url, text)
+else:
+    def urlwrap(text, url=None):
+        if url:
+            return "%s (<i>%s</i>)" % (text, url)
+        else:
+            return "<i>%s</i>" % (text)
