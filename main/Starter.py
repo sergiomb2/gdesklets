@@ -108,7 +108,7 @@ class Starter:
                                (None, _("_View log"),
                                 self.__handle_show_log),
                                 (),
-                               (None, _("_About..."),
+                               (gtk.STOCK_ABOUT, _("_About"),
                                 self.__handle_about_dialog),
                                (),
                                (gtk.STOCK_QUIT, _("_Stop daemon"),

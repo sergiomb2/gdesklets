@@ -15,7 +15,7 @@ class TrayIcon:
 #        self.__trayicon.connect("popup-menu", self.__on_button)
         self.__trayicon = gtk.StatusIcon()
         self.__trayicon.set_from_file(ICON)
-        self.__trayicon.set_tooltip("gDesklets StatusIcon")
+        self.__trayicon.set_tooltip("gDesklets")
         self.__trayicon.connect("popup-menu", self.__on_button, self.__traymenu)
         self.__trayicon.set_visible(True)
 
