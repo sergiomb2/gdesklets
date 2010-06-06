@@ -84,22 +84,28 @@ class Display(gtk.HBox, Observable):
         # the display menu
         self.__DISPLAY_MENU = [
             MenuItem("/__cfg", _("_Configure desklet"),
-                     callback = self.__handle_configure),
+                     callback = self.__handle_configure,
+                     icon = gtk.STOCK_PREFERENCES),
             MenuItem("/__move", _("_Move desklet"),
                      callback = self.__handle_move),
             MenuItem("/__sep1"),
             MenuItem("/__src", _("_View Source"),
-                     callback = self.__handle_source),
+                     callback = self.__handle_source,
+                     icon = gtk.STOCK_EDIT),
             MenuItem("/__sep2"),
             MenuItem("/__restart", _("Re_start desklet"),
-                     callback = self.__handle_restart),
+                     callback = self.__handle_restart,
+                     icon = gtk.STOCK_REDO),
             MenuItem("/__remove", _("_Remove desklet"),
-                     callback = self.__handle_remove),
+                     callback = self.__handle_remove,
+                     icon = gtk.STOCK_DELETE),
             MenuItem("/__remove", _("_Disable desklet"),
-                     callback = self.__handle_disable),
+                     callback = self.__handle_disable,
+                     icon = gtk.STOCK_CLOSE),
             MenuItem("/__sep3"),
             MenuItem("/__about", _("_About"),
-                     callback = self.__handle_about)
+                     callback = self.__handle_about,
+                     icon = gtk.STOCK_ABOUT)
             ]
 
         # the layout object
@@ -1030,16 +1036,22 @@ class Display(gtk.HBox, Observable):
                 item = gtk.SeparatorMenuItem()
 
             elif (entry.icon):
-                item = gtk.ImageMenuItem(entry.label)
-                try:
-                    img = Tiling()
-                    data = vfs.read_entire_file(self.get_full_path(entry.icon))
-                    img.set_from_data(data)
-                    img.render(16, 16, 1, 1)
-                    img.show()
-                    item.set_image(img)
-                except:
-                    import traceback; traceback.print_exc()
+                if (gtk.stock_lookup(entry.icon)):
+                    item = gtk.ImageMenuItem(entry.icon)
+                    if (entry.label):
+                        item.get_children()[0].set_text_with_mnemonic(entry.label)
+
+                else:
+                    item = gtk.ImageMenuItem(entry.label)
+                    try:
+                        img = Tiling()
+                        data = vfs.read_entire_file(self.get_full_path(entry.icon))
+                        img.set_from_data(data)
+                        img.render(16, 16, 1, 1)
+                        img.show()
+                        item.set_image(img)
+                    except:
+                        import traceback; traceback.print_exc()
 
             else:
                 item = gtk.MenuItem(entry.label)
