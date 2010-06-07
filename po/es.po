@@ -1092,3 +1092,7 @@ msgstr "Error de ejecución"
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
 msgstr "Ocurrió un error durante la ejecución desklet."
+
+#: ../data/gdesklets.desktop.in:13
+msgid "Desktop Widgets"
+msgstr "Widgets para Escritorio"

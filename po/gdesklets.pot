@@ -84,7 +84,7 @@ msgstr ""
 msgid "Configuration"
 msgstr ""
 
-#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
+#: ../main/__init__.py:68
 msgid "A desktop applet system for GNOME"
 msgstr ""
 
@@ -953,4 +953,12 @@ msgstr ""
 
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
+msgstr ""
+
+#: ../data/gdesklets.desktop.in:13
+msgid "Desktop Widgets"
+msgstr ""
+
+#: ../data/gdesklets.desktop.in:14
+msgid "Eye candy for your desktop"
 msgstr ""
