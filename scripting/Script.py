@@ -199,7 +199,7 @@ class Script:
     #
     # Returns a control readily wrapped for the sandbox.
     #
-    def __script_get_control(self, interface):
+    def __script_get_control(self, interface, size):
 
         # FIXME: ensure that this does not break the sandbox
         from factory.ControlFactory import ControlFactory
@@ -207,13 +207,13 @@ class Script:
         ctrl = factory.get_control(interface)
         if (ctrl):
             self.__loaded_controls.append(ctrl)
-            wrapped = ControlWrapper(ctrl)
+            wrapped = ControlWrapper(ctrl, size)
             return wrapped
 
         raise UserError(_("No Control could be found for interface %s") % \
-                                                                 (interface,),
-                       _("This means that a functionality won't be available "
-                         "during execution!"))
+                                                                  (interface,),
+                        _("This means that a functionality won't be available "
+                          "during execution!"))
         #dialog.warning(_("No Control could be found for interface %s") % \
         #                                                         (interface,),
         #               _("This means that a functionality won't be available "

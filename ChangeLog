@@ -1,3 +1,12 @@
+2010-06-08  Joe Sapp  <nixphoeni@gmail.com>
+
+	* factory/DisplayFactory.py
+	* scripting/ControlWrapper.py
+	* scripting/Makefile.am
+	* scripting/Script.py
+	* scripting/PropertyInterface.py: Implemented the capability for an
+			array (or list) of Controls
+
 2010-06-06  Joe Sapp  <nixphoeni@gmail.com>
 
 	* display/Display.py: Added some stock icons to the desklet menu

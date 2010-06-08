@@ -229,8 +229,13 @@ class _DisplayFactory(sax.handler.ContentHandler):
         elif (state == _STATE_CONTROL):
             ident = attrs["id"]
             interface = attrs["interface"]
-            script = "%s = get_control('%s')" \
-                     % (ident, interface)
+            
+            if not attrs.has_key("length"):
+                attrs["length"] = "0"
+            length = int(attrs["length"])
+
+            script = "%s = get_control('%s', %d)" % \
+                     (ident, interface, length)
             self.__scripts.append((script, self.__filename))
 
         elif (state == _STATE_PREFS):
