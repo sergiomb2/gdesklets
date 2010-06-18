@@ -16,8 +16,11 @@ try:
     # case the DISPLAY variable doesn't contain the screen number)
     DISPLAY = vfs.escape_path(gtk.gdk.Display(os.environ["DISPLAY"]).get_name()).replace("/", "_")
 except:
-    print "Error: could not open display", os.environ["DISPLAY"]
-    sys.exit(1)
+    try:
+        print >> sys.stderr, "Error: could not open display", os.environ["DISPLAY"]
+    except:
+        print >> sys.stderr, "(could not get DISPLAY environment variable)"
+    DISPLAY = "0"
 
 
 # the name of the purge key
