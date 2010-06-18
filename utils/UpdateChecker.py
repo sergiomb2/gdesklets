@@ -1,10 +1,11 @@
+from main import VERSION_MAJOR, VERSION_MINOR, VERSION_DEV, VERSION_TYPE, VERSION
 import vfs
 import dialog
 
 import gtk
 from xml import sax
 
-class UpdateChecker(sax.handler.ContentHandler):
+class _UpdateChecker(sax.handler.ContentHandler):
 
 
     # Length of time between checks, in milliseconds
@@ -12,18 +13,16 @@ class UpdateChecker(sax.handler.ContentHandler):
     UPDATE_URI = "http://gdesklets.de/update.xml"
 
 
-    def __init__(self, v_maj, v_min, v_dev, v_type):
+    def __init__(self):
 
-        # Version to compare against and latest version available and notified
-        # This should prevent multiple notifications
-        self.__version = {"major": v_maj, "minor": v_min, "development": v_dev, "type": v_type}
-        self.__latest_version = {"major": v_maj, "minor": v_min, "development": v_dev, "type": v_type}
+        self.__latest_version = {"major": VERSION_MAJOR, "minor": VERSION_MINOR, 
+                                 "development": VERSION_DEV, "type": VERSION_TYPE}
         # State variables
         self.__in_update = False
         self.__update_type = "minor"
         self.__remind_again = {"major": True, "minor": True}
         # Results
-        self.__new_version_available = {"major": (False, self.__version), "minor": (False, self.__version)}
+        self.__new_version_available = {"major": (False, self.__latest_version), "minor": (False, self.__latest_version)}
 
         sax.handler.ContentHandler.__init__(self)
 
@@ -75,27 +74,27 @@ class UpdateChecker(sax.handler.ContentHandler):
         if (self.__latest_version["major"],
                 self.__latest_version["minor"],
                 self.__latest_version["development"]) > \
-           (self.__version["major"],
-                self.__version["minor"],
-                self.__version["development"]):
+           (VERSION_MAJOR,
+                VERSION_MINOR,
+                VERSION_DEV):
             self.__new_version_available[self.__update_type] = (True, self.__latest_version)
 
         # alpha < beta < rc1 < rc2...
         elif (self.__latest_version["major"],
                 self.__latest_version["minor"],
                 self.__latest_version["development"]) == \
-             (self.__version["major"],
-                self.__version["minor"],
-                self.__version["development"]):
+             (VERSION_MAJOR,
+                VERSION_MINOR,
+                VERSION_DEV):
             # Check release candidates
-            if self.__latest_version["type"].startswith("rc") and self.__version["type"].startswith("rc"):
-                if int(self.__latest_version["type"][2:]) > int(self.__version["type"][2:]):
+            if self.__latest_version["type"].startswith("rc") and VERSION_TYPE.startswith("rc"):
+                if int(self.__latest_version["type"][2:]) > int(VERSION_TYPE[2:]):
                     self.__new_version_available[self.__update_type] = (True, self.__latest_version)
             # Check the other types
-            if (self.__latest_version["type"] == "beta" and self.__version["type"] in ("alpha")) or \
-                    (self.__latest_version["type"].startswith("rc") and self.__version["type"] in ("alpha", "beta")) or \
-                    (self.__latest_version["type"] == "" and (self.__version["type"] in ("alpha", "beta") or \
-                                                              self.__version["type"].startswith("rc"))):
+            if (self.__latest_version["type"] == "beta" and VERSION_TYPE in ("alpha")) or \
+                    (self.__latest_version["type"].startswith("rc") and VERSION_TYPE in ("alpha", "beta")) or \
+                    (self.__latest_version["type"] == "" and (VERSION_TYPE in ("alpha", "beta") or \
+                                                              VERSION_TYPE.startswith("rc"))):
                 self.__new_version_available[self.__update_type] = (True, self.__latest_version)
 
 
@@ -129,7 +128,7 @@ class UpdateChecker(sax.handler.ContentHandler):
                 available, version = self.__new_version_available[type]
                 if available and self.__remind_again[type]:
                     dialog.info(_("A " + type + " version update is available"),
-                                _("You are running version ") + self.__format_version(self.__version) +
+                                _("You are running version ") + VERSION +
                                     _(".\n\nVersion ") + self.__format_version(version) +
                                     _(" is available at %s." % dialog.urlwrap("http://www.gdesklets.de")),
                                 (_("_Stop reminding me"), lambda t=type: self.__remind(t, False)),
@@ -138,3 +137,8 @@ class UpdateChecker(sax.handler.ContentHandler):
 
         # Run again next timer expiration
         return True
+
+
+
+_singleton = _UpdateChecker()
+def UpdateChecker(): return _singleton

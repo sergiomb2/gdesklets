@@ -98,21 +98,27 @@ class Starter:
 
         # setup a nice systray icon
         if (settings.show_tray_icon):
+            menu = [(None, _("_Manage desklets"),
+                self.__handle_manage),
+               (),
+               (gtk.STOCK_PROPERTIES, _("_Configuration"),
+                 self.__handle_configger),
+               (None, _("_View log"),
+                 self.__handle_show_log),
+               (gtk.STOCK_REFRESH, _("Check for _updates"),
+                 self.__handle_update_check),
+               (),
+               (gtk.STOCK_ABOUT, _("_About"),
+                 self.__handle_about_dialog),
+               (),
+               (gtk.STOCK_QUIT, _("_Stop daemon"),
+                 self.__handle_shutdown)]
+            if (not settings.check_for_updates_visible):
+                del menu[4]
+
             from main.TrayIcon import TrayIcon
             self.__trayicon = TrayIcon()
-            self.__trayicon.set_menu([(None, _("_Manage desklets"),
-                                self.__handle_manage),
-                               (),
-                               (gtk.STOCK_PROPERTIES, _("_Configuration"),
-                                 self.__handle_configger),
-                               (None, _("_View log"),
-                                self.__handle_show_log),
-                                (),
-                               (gtk.STOCK_ABOUT, _("_About"),
-                                self.__handle_about_dialog),
-                               (),
-                               (gtk.STOCK_QUIT, _("_Stop daemon"),
-                                self.__handle_shutdown)])
+            self.__trayicon.set_menu(menu)
 
 
 
@@ -383,6 +389,13 @@ class Starter:
 
         cmd = os.path.join(HOME, "gdesklets-logview")
         os.system(cmd + " &")
+
+
+
+    def __handle_update_check(self, *args):
+
+        from utils.UpdateChecker import UpdateChecker
+        UpdateChecker().check()
 
 
 
