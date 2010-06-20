@@ -141,7 +141,7 @@ def _configurable(icon, primary, secondary, *buttons):
 def info(primary, secondary, *buttons):
 
     if not buttons:
-        buttons = (gtk.STOCK_CLOSE, gtk.RESPONSE_CLOSE)
+        buttons = [(gtk.STOCK_CLOSE, gtk.RESPONSE_CLOSE)]
     dialog = _configurable(_INFO, primary, secondary, *buttons)
     _queue_dialog(0, dialog)
 
