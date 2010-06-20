@@ -7,7 +7,7 @@
 # If it doesn't contain our version, we might want to tell the user something.
 #
 
-from main import USERHOME, VERSION
+from main import USERHOME, VERSION, VERSION_TYPE
 from utils import dialog
 
 import os
@@ -35,10 +35,10 @@ def _check_version():
 
 
 if (not _check_version()):
-    if (VERSION.endswith("beta")):
-        msg = _("This is a unstable version of gDesklets. Unstable versions " \
-                "represent the current state of development and might be " \
-                "unstable or cause problems from time to time.\n\n" \
+    if ("beta" in VERSION_TYPE):
+        msg = _("This is a unstable version of gDesklets. Unstable versions "
+                "represent the current state of development and might be "
+                "unstable or cause problems from time to time.\n\n"
                 "If you're new to gDesklets, it is thus highly recommended to "
                 "<b>not</b> use this version, but a stable release!\n\n"
                 "If you still want to run the unstable version instead of a "
@@ -47,15 +47,15 @@ if (not _check_version()):
                 "Experienced users are encouraged to try a bzr version, "
                 "though!")
 
-    elif ("rc" in VERSION):
+    elif ("rc" in VERSION_TYPE):
         msg = _("This is a <b>release candidate</b> of an upcoming gDesklets "
                 "release.\nPlease test it and report bugs to "
-                "%s\n"
+                "%(URL)s\n"
                 "This version might break your configuration or it won't "
                 "restore it from an earlier release. In most cases this is "
                 "intentional, since gDesklets is still in its early stages of "
-                "development.\n\nThanks for testing this release candidate!" %
-                dialog.urlwrap("https://bugs.launchpad.net/gdesklets"))
+                "development.\n\nThanks for testing this release candidate!") % \
+                {"URL": dialog.urlwrap("https://bugs.launchpad.net/gdesklets")}
 
     else:
         # our informative transition message which we can change with

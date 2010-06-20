@@ -127,10 +127,13 @@ class _UpdateChecker(sax.handler.ContentHandler):
             for type in ["major", "minor"]:
                 available, version = self.__new_version_available[type]
                 if available and self.__remind_again[type]:
-                    dialog.info(_("A " + type + " version update is available"),
-                                _("You are running version ") + VERSION +
-                                    _(".\n\nVersion ") + self.__format_version(version) +
-                                    _(" is available at %s." % dialog.urlwrap("http://www.gdesklets.de")),
+                    dialog.info(_("A version update is available"),
+                                _("You are running version %(version)s.\n\n"
+                                  "Version %(newer_version)s is available "
+                                  "at %(URL)s.") %
+                                      {"version": VERSION,
+                                       "newer_version": self.__format_version(version),
+                                       "URL": dialog.urlwrap("http://www.gdesklets.de")},
                                 (_("_Stop reminding me"), lambda t=type: self.__remind(t, False)),
                                 (_("_Remind me again"), None))
                     break

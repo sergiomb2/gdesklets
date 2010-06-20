@@ -39,7 +39,7 @@ class Shell_Help(Plugin):
         menu.set_item("Help/Tip", gtk.STOCK_DIALOG_INFO, _("_Tip of the Day"),
                       self.__show_tip)
         menu.set_separator("Help/Separator2")
-        menu.set_item("Help/About", "gnome-stock-about", _("_About..."),
+        menu.set_item("Help/About", gtk.STOCK_ABOUT, _("_About"),
                       self.__show_about)
 
         self.__about = AboutDialog(os.path.join(HOME, "data"))

@@ -179,9 +179,10 @@ class _DOMNode:
         try:
             return self.__attrs[key]
         except KeyError:
-            raise UserError(_("No such property: %s") % key,
-                           _("The SVG element <b>%s</b> does not have the "
-                             "<b>%s</b> property.") % (self.__name, key))
+            raise UserError(_("No such property: %(property)s") % {"property": key},
+                            _("The SVG element <b>%(tag)s</b> does not have "
+                              "the <b>%(property)s</b> property.")
+                                % {"property": key, "tag": self.__name})
         
     def __setitem__(self, key, value): self.__attrs[key] = value
 

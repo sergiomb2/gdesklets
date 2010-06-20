@@ -88,14 +88,16 @@ class Element(object):
             datatype = self.__property_handlers[key][2]
 
         except KeyError:
-            raise UserError(_("No such property: %s") % key,
-                            _("The element <b>%s</b> does not have the "
-                              "<b>%s</b> property.") % (self.__name, key))
+            raise UserError(_("No such property: %(property)s") % {"property": key},
+                            _("The element <b>%(tag)s</b> does not have the "
+                              "<b>%(property)s</b> property.") % {"tag": self.__name,
+                                                                  "property": key})
         
         if (not setter):
             raise UserError(_("Permission Error"),
-                           _("The property <b>%s</b> of element <b>%s</b> "
-                             "is not writable.") % (key, self.__name))
+                            _("The property <b>%(property)s</b> of element "
+                              "<b>%(tag)s</b> is not writable.") % {"tag": self.__name,
+                                                                    "property": key})
         
         elif (dtype_check(datatype, value)):
             setter(key, value)
@@ -103,11 +105,13 @@ class Element(object):
         else:
             actual_type = dtype_guess(value)
             raise UserError(_("Type Error"),
-                           _("The property <b>%s</b> of element <b>%s</b> "
-                             "got a value of wrong type.\n"
-                             "Expected <b>%s</b>, but got <b>%s</b>."
-                             % (key, self.__name, datatype[0],
-                                actual_type[0])))
+                            _("The property <b>%(property)s</b> of element "
+                              "<b>%(tag)s</b> got a value of wrong type.\n"
+                              "Expected <b>%(guessed_type)s</b>, but got "
+                              "<b>%(actual_type)s</b>.")
+                                % {"tag": self.__name, "property": key,
+                                   "guessed_type": datatype[0], 
+                                   "actual_type": actual_type[0]})
 
 
 
@@ -120,12 +124,14 @@ class Element(object):
         try:
             getter = self.__property_handlers[key] [1]
         except KeyError:
-            raise KeyError("Error: No such property: %s" % key)
+            raise KeyError(_("Error: No such property: %(property)s") % 
+                                {"property": key})
 
         if (not getter):
             raise UserError(_("Permission Error"),
-                           _("The property <b>%s</b> of element <b>%s</b> "
-                             "is not readable.") % (key, self.__name))
+                            _("The property <b>%(property)s</b> of element "
+                              "<b>%(tag)s</b> is not readable.")
+                                % {"property": key, "tag": self.__name})
         
         else:
             return getter(key)

@@ -252,10 +252,10 @@ class Script:
             escaped_command = escaped_command.replace(">", "&gt;")
 
             dialog.question(_("Security Risk"),
-                            _("The desklet %s wants to execute a system "
-                              "command:\n"
+                            _("The desklet %(desklet_name)s wants to execute "
+                              "a system command:\n"
                               "\n"
-                              "     <tt><b>%s</b></tt>\n"
+                              "     <tt><b>%(cmd)s</b></tt>\n"
                               "\n"
                               "To protect your system from malicious "
                               "programs, you can deny the execution of this "
@@ -264,7 +264,7 @@ class Script:
                               "If you are sure that the command is harmless, "
                               "you may permanently allow this desklet "
                               "instance to run it.")
-                            % (self.__dsp_path, escaped_command),
+                            % {"desklet_name": self.__dsp_path, "cmd": escaped_command},
                             (_("Deny!"), None),
                             (_("Allow once"), run_cmd),
                             (_("Allow for this desklet"), run_and_permit))

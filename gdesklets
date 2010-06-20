@@ -48,7 +48,7 @@ def check_system():
 
     for modules, predicate, message, required in (
         ( ("sys",), lambda m : m.version_info[:2] >= (2, 4),
-          _("Python version >= 2.4.0 is required."),
+          _("Python version >= %(pyver)s is required.") % {"pyver": "2.4.0"},
           True
         ),
         ( ("xml.parsers.expat",),
@@ -62,12 +62,14 @@ def check_system():
         ),
         ( ("gtk",), lambda m : m.pygtk_version >= (2, 10, 0) and \
                               m.gtk_version >= (2, 10, 0),
-          _("GTK python bindings (pygtk2) version >= 2.10.0 and "
-            "GTK+ version >= 2.10.0 are required."),
+          _("GTK python bindings (pygtk2) version >= %(pygtk_ver)s and "
+            "GTK+ version >= %(gtk_ver)s are required.") %
+                {"pygtk_ver": "2.10.0", "gtk_ver": "2.10.0"},
           True
         ),
         ( ("ORBit",), lambda m : m.__version__ >= (2, 0, 1),
-          _("ORBit python bindings (pyorbit) version >= 2.0.1 are required."),
+          _("ORBit python bindings (pyorbit) version >= %(pyorbit_ver)s "
+            "are required.") % {"pyorbit_ver": "2.0.1"},
           True
         ),
         ( ("bonobo.ui",), lambda m : m,
@@ -100,7 +102,8 @@ def check_system():
                     raise RuntimeError
             except Exception:
                 print _("Version check failed.")
-                print _("\n%s\n" % message)
+                # 'message' has already been translated
+                print "\n%s\n" % message
                 print _("Please make sure that the required software is "
                         "installed.\nAlso try to avoid having multiple versions "
                         "of a library/binding on your system.\ngDesklets won't "
@@ -351,7 +354,8 @@ class Command(object):
 
         elif (self.__command == "version"):
             name, version = self.__client_daemon().version()
-            print _("This is %s, version %s.") % (name, version)
+            print _("This is %(prog_name)s, version %(prog_version)s.") % \
+                        {"prog_name": name, "prog_version": version}
 
         elif (self.__command == "about"):
             name, copy_right, gnu = self.__client_daemon().about()
