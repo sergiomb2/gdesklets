@@ -395,7 +395,7 @@ class Starter:
     def __handle_update_check(self, *args):
 
         from utils.UpdateChecker import UpdateChecker
-        UpdateChecker().check()
+        UpdateChecker().check(dialog_on_none=True)
 
 
 

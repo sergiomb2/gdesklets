@@ -1,5 +1,10 @@
 2010-06-08  Joe Sapp  <nixphoeni@gmail.com>
 
+	* utils/UpdateChecker.py: Added option to display a dialog box if
+			a version update check returned that there are no new versions
+
+2010-06-08  Joe Sapp  <nixphoeni@gmail.com>
+
 	* factory/DisplayFactory.py
 	* scripting/ControlWrapper.py
 	* scripting/Makefile.am

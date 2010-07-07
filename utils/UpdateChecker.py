@@ -114,10 +114,11 @@ class _UpdateChecker(sax.handler.ContentHandler):
         self.__remind_again[release_type] = reminder_value
 
 
-    def check(self):
+    def check(self, dialog_on_none=False):
         """
         This function should be called whenever a version test is desired
-        (eg. in the mainloop on a timer)
+        (eg. in the mainloop on a timer).  If a dialog is requested, set
+        dialog_on_none.
         """
         data = self.__get_update_file()
         if data:
@@ -126,16 +127,21 @@ class _UpdateChecker(sax.handler.ContentHandler):
 
             for type in ["major", "minor"]:
                 available, version = self.__new_version_available[type]
-                if available and self.__remind_again[type]:
-                    dialog.info(_("A version update is available"),
-                                _("You are running version %(version)s.\n\n"
-                                  "Version %(newer_version)s is available "
-                                  "at %(URL)s.") %
-                                      {"version": VERSION,
-                                       "newer_version": self.__format_version(version),
-                                       "URL": dialog.urlwrap("http://www.gdesklets.de")},
-                                (_("_Stop reminding me"), lambda t=type: self.__remind(t, False)),
-                                (_("_Remind me again"), None))
+                if available:
+                    if self.__remind_again[type]:
+                        dialog.info(_("A version update is available"),
+                                    _("You are running version %(version)s.\n\n"
+                                      "Version %(newer_version)s is available "
+                                      "at %(URL)s.") %
+                                        {"version": VERSION,
+                                         "newer_version": self.__format_version(version),
+                                         "URL": dialog.urlwrap("http://www.gdesklets.de")},
+                                    (_("_Stop reminding me"), lambda t=type: self.__remind(t, False)),
+                                    (_("_Remind me again"), None))
+                elif dialog_on_none:
+                    dialog.info(_("No version updates available"),
+                                _("You are running the latest version (%(version)s).") %
+                                  {"version": VERSION})
                     break
 
         # Run again next timer expiration
