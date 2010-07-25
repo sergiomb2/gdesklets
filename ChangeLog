@@ -1,3 +1,13 @@
+2010-05-24  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* Controls/PopUp/
+	* Controls/PopUp/IPopUp.py
+	* Controls/PopUp/Makefile.am
+	* Controls/PopUp/__init__.py
+	* Controls/Makefile.am: Added first version of the new IPopUp Control
+	* main/MetaData.py: Added new Metadata (website, license, copyright)
+	* main/__init__.py: Updated information
+
 2010-06-08  Joe Sapp  <nixphoeni@gmail.com>
 
 	* utils/UpdateChecker.py: Added option to display a dialog box if

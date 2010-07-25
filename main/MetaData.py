@@ -17,6 +17,9 @@ class MetaData:
     KEY_CATEGORY = "category"
     KEY_ICON = "icon"
     KEY_PREVIEW = "preview"
+    KEY_WEBSITE = "website"
+    KEY_LICENSE = "license"
+    KEY_COPYRIGHT = "copyright"
 
 
     def __init__(self, displayfile):

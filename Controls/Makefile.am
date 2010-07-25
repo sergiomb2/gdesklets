@@ -6,7 +6,8 @@ SUBDIRS = ArrayBuffer \
           Calendar    \
           HDDTemp     \
           URI         \
-          Random
+          Random      \
+          PopUp
 
 installdir = ${coredir}/Controls
 install_DATA = \

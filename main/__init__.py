@@ -85,7 +85,7 @@ CREDITS = (
            ("Martin Grimme", "Christian Meyer", "Jesse Andrews", u"Beno\xeet Dejean",)),
 
            (_("Additional Programming:"),
-           (u"Mario Gonz\u00e1lez", "Lauri Kainulainen", u"Bj\xf6rn Koch", u"Robert Pastierovi\u010d",)),
+           (u"Mario Gonz\u00e1lez", "Lauri Kainulainen", u"Bj\xf6rn Koch", u"Robert Pastierovi\u010d", "Joe Sapp",)),
 
            (_("Architecture Design:"),
            ("Martin Grimme", "Christian Meyer",)),
