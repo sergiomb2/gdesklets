@@ -1,12 +1,17 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.53)
-AC_INIT(configure.in)
-AM_INIT_AUTOMAKE(gDesklets, 0.36.3_beta, https://launchpad.net/gdesklets/+filebug)
-AM_CONFIG_HEADER(config.h)
+AC_INIT([gDesklets], [0.36.3_beta])
+AC_CONFIG_SRCDIR([configure.ac])
+AM_INIT_AUTOMAKE([dist-bzip2 subdir-objects])
+LT_INIT
+AM_CONFIG_HEADER([config.h])
+AC_CONFIG_MACRO_DIR([macros])
+AC_CONFIG_FILES([Makefile])
 AM_MAINTAINER_MODE
 
 dnl Required programs
 AC_PROG_CC
+AM_PROG_CC_C_O
 AC_HEADER_STDC
 AC_DISABLE_STATIC
 IT_PROG_INTLTOOL([0.35.0])
@@ -93,7 +98,7 @@ coredir=${libdir}/gdesklets
 AC_SUBST(coredir)
 
 PIXMAPDIR=${datadir}/pixmaps
-AC_SUBST(PIXMAPDIR)
+AC_SUBST(pixmapdir)
 
 localedir=${datadir}/locale
 AC_SUBST(localedir)
@@ -102,60 +107,8 @@ gnulocaledir=${localedir}
 AC_SUBST(gnulocaledir)
 
 AC_OUTPUT([
-Controls/ArrayBuffer/Makefile
-Controls/Calendar/Makefile
-Controls/EventPipe/Makefile
-Controls/HDDTemp/Makefile
-Controls/Makefile
-Controls/Random/Makefile
-Controls/Sensor/Makefile
-Controls/System/Makefile
-Controls/Time/Makefile
-Controls/URI/Makefile
-Makefile
-Sensors/External/Makefile
-Sensors/FontSelector/Makefile
-Sensors/Makefile
-config/Makefile
-config/settings.py
-data/Makefile
-display/Makefile
-doc/Makefile
-doc/man/Makefile
-doc/basic/Makefile
-doc/basic/Images/Makefile
-factory/Makefile
-layout/Makefile
-libdesklets/Makefile
-libdesklets/controls/Makefile
-libdesklets/system/FreeBSD/Makefile
-libdesklets/system/Linux/Makefile
-libdesklets/system/Makefile
-libdesklets/system/NetBSD/Makefile
-libdesklets/system/OpenBSD/Makefile
-macros/Makefile
-main/Makefile
-plugin/Makefile
 po/Makefile.in
-scripting/Makefile
-sensor/Makefile
-shell/Makefile
-shell/plugins/ControlBrowser/Makefile
-shell/plugins/ControlCollection/Makefile
-shell/plugins/ControlsView/Makefile
-shell/plugins/DisplayBrowser/Makefile
-shell/plugins/DisplayCollection/Makefile
-shell/plugins/DisplayView/Makefile
-shell/plugins/Help/Makefile
-shell/plugins/Makefile
-shell/plugins/Menu/Makefile
-shell/plugins/PackageInstaller/Makefile
-shell/plugins/Profiles/Makefile
-shell/plugins/Shell/Makefile
-shell/plugins/StatusBar/Makefile
-shell/plugins/ViewSwitch/Makefile
-shell/plugins/gDeskletsClient/Makefile
-utils/Makefile
+config/settings.py
 ])
 
 
@@ -173,3 +126,4 @@ Configuration
   Enable debugging:  ${set_debug}
   Check for updates: ${enable_update_check}
 "
+

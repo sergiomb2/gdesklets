@@ -1,0 +1,93 @@
+# Set the LDFLAGS for this section
+AM_LDFLAGS = -module -avoid-version -as-needed
+
+nobase_install_LTLIBRARIES = \
+  libdesklets/system/gtop.la \
+  utils/svg.la               \
+  utils/tiling.la            \
+  utils/x11.la
+
+dist_install_SCRIPTS =             \
+  ctrlinfo                         \
+  gdesklets                        \
+  gdesklets-daemon                 \
+  gdesklets-logview                \
+  contrib/gdesklets-migration-tool \
+  gdesklets-shell                  \
+  test-control.py
+
+dist_noinst_SCRIPTS = autogen.sh
+DISTCLEANFILES =   \
+  intltool-extract \
+  intltool-merge   \
+  intltool-update
+
+EXTRA_DIST =             \
+  AUTHORS                \
+  COPYING                \
+  README                 \
+  TODO                   \
+  NEWS                   \
+  intltool-extract.in    \
+  intltool-merge.in      \
+  intltool-update.in     \
+  contrib/bash/gdesklets
+
+man_MANS = doc/man/gdesklets.1
+
+# The .desktop file
+desktop_in_files = data/gdesklets.desktop.in
+desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+autostart_DATA = $(desktop_in_files:.desktop.in=.desktop)
+@INTLTOOL_DESKTOP_RULE@
+
+# The shared mime XML file
+sharedmimepackage_in_files = data/gdesklets.xml.in
+sharedmimepackage_DATA = $(sharedmimepackage_in_files:.xml.in=.xml)
+@INTLTOOL_XML_RULE@
+
+# And the mime icon
+mimeicon_DATA = data/gnome-mime-application-x-gdesklets-display.png
+
+pixmap_DATA = data/gdesklets.png
+
+libdesklets_system_gtop_la_CFLAGS = $(GLIBTOP_CFLAGS) \
+                                    $(PYTHON_CFLAGS)
+libdesklets_system_gtop_la_LIBADD = $(GLIBTOP_LIBS)
+libdesklets_system_gtop_la_SOURCES = libdesklets/system/gtop.c
+#libdesklets_system_gtop_la_LDFLAGS = -module -avoid-version -as-needed
+
+utils_svg_la_CFLAGS = $(SVG_CFLAGS) \
+                      $(PYTHON_CFLAGS)
+utils_svg_la_SOURCES = utils/svg.c   \
+                       utils/utils.c \
+                       utils/utils.h
+utils_svg_la_LIBADD = $(SVG_LIBS)
+#utils_svg_la_LDFLAGS = -module -avoid-version -as-needed
+
+utils_tiling_la_CFLAGS = $(X11_CFLAGS) \
+                         $(PYTHON_CFLAGS)
+utils_tiling_la_SOURCES = utils/tiling.c \
+                          utils/render.c \
+                          utils/utils.c  \
+                          utils/render.h \
+                          utils/utils.h
+utils_tiling_la_LIBADD = $(TILING_LIBS)
+#utils_tiling_la_LDFLAGS = -module -avoid-version -as-needed
+
+utils_x11_la_CFLAGS = $(X11_CFLAGS) \
+                      $(PYTHON_CFLAGS)
+utils_x11_la_SOURCES = utils/x11.c   \
+                       utils/utils.c \
+                       utils/utils.h
+utils_x11_la_LIBADD = $(X11_LIBS)
+#utils_x11_la_LDFLAGS = -module -avoid-version -as-needed
+
+
+install-data-hook:
+	@if test '!' -d $(DESTDIR)$(bindir); then \
+		$(MKDIR_P) $(DESTDIR)$(bindir); \
+		chmod 0755 $(DESTDIR)$(bindir); \
+	fi
+
+	$(LN_S) -f ${coredir}/gdesklets $(DESTDIR)$(bindir)/gdesklets;
