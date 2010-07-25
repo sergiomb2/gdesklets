@@ -1,4 +1,13 @@
-2010-05-24  Bjoern Koch  <H.Humpel@gmx.de>
+2010-07-25  Joe Sapp  <nixphoeni@gmail.com>
+
+	* */Makefile.am
+	* Makefile_gdesklets.am
+	* Makefile_python.am
+	* configure.in => configure.ac
+	* autogen.sh: Implemented non-recursive make
+	* po/Makefile.in.in: Added support for gettext build system
+
+2010-07-24  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* Controls/PopUp/
 	* Controls/PopUp/IPopUp.py
