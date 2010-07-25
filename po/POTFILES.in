@@ -45,3 +45,4 @@ utils/dialog.py
 utils/DOM.py
 utils/Element.py
 utils/error.py
+utils/UpdateChecker.py
