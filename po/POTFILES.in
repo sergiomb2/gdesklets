@@ -3,7 +3,7 @@ config/ConfigDialog.py
 config/ConfigUnit.py
 config/DaemonConfigger.py
 config/DisplayConfigger.py
-config/settings.py
+config/settings.py.in
 Controls/Calendar/__init__.py
 data/gdesklets.desktop.in
 data/gdesklets.xml.in
@@ -27,6 +27,7 @@ main/Starter.py
 main/transition.py
 plugin/Interface.py
 scripting/Script.py
+scripting/ControlWrapper.py
 sensor/Sensor.py
 Sensors/FontSelector/__init__.py
 shell/plugins/ControlBrowser/ControlInspector.py

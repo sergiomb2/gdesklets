@@ -25,10 +25,10 @@ class ControlWrapper(object):
             self.__dict__["_ControlWrapper__control"] = \
                          Vault( [ control ] )
             if self.__length > 0:
-                log("Error: Control %s can't be replicated! This is a BUG in the Desklet!"
-                    "\nThings probably won't work right for you." % control)
+                log(_("Error: Control %s can't be replicated! This is a BUG in the Desklet!"
+                      "\nThings probably won't work right for you.") % control)
                 self.__dict__["_ControlWrapper__length"] = 0
-                size = 0
+                size = 1
         else:
             # Initialize all initial copies
             for ctl in self.__dict__["_ControlWrapper__control"](open):
@@ -64,7 +64,7 @@ class ControlWrapper(object):
             if name == "length":
                 # A little bounds checking
                 if value <= 0:
-                  log("Warning: Value of property \"length\" must be greater than 0 (setting to 1)")
+                  log(_("Warning: Value of property \"length\" must be greater than 0 (setting to 1)"))
                   value = 1
 
                 # Don't do anything if value isn't changing
@@ -97,7 +97,7 @@ class ControlWrapper(object):
                 # of this class when the length != 0. They should know
                 # better if they've gone and changed the length, but we'll
                 # be nice and print out some informational warnings.
-                log("Warning: Property \"%s\" must be indexed (length == %d)." % (name, self.__length))
+                log(_("Warning: Property \"%s\" must be indexed (length == %d).") % (name, self.__length))
                 return
 
         else: # length <= 0
@@ -122,10 +122,10 @@ class ControlWrapper(object):
             return self.__length
         else:
             # This is the case where someone tries to set a property
-            # of this class when the length != 0. They should know
+            # of this class when the length != 0.  They should know
             # better if they've gone and changed the length, but we'll
             # be nice and print out some informational warnings.
-            log("Warning: Property \"%s\" must be indexed (length == %d)." % (name, self.__length))
+            log(_("Warning: Property \"%s\" must be indexed (length == %d).") % (name, self.__length))
             return
 
 
@@ -134,7 +134,7 @@ class ControlWrapper(object):
 
         if self.__length <= 0:
 
-            log("Warning: Control not initialized as an array.")
+            log(_("Warning: Control not initialized as an array in Desklet."))
             raise IndexError
 
         if (idx >= self.__length) or (idx + self.__length < 0):
@@ -148,7 +148,7 @@ class ControlWrapper(object):
 
         if self.__length <= 0:
 
-            log("Warning: Control not initialized as an array.")
+            log(_("Warning: Control not initialized as an array in Desklet."))
             raise IndexError
 
         if (idx >= self.__length) or (idx + self.__length < 0):
@@ -160,20 +160,29 @@ class ControlWrapper(object):
 
     def __delitem__(self, idx):
 
-        if idx < self.__length and idx >= 1:
+        if self.__length > 0:
 
-            # As long as we delete the same index of __control, there will be
-            # no property that uses that Control
-            del self.__dict__["_ControlWrapper__properties"][idx]
-            new_ctrl_list = self.__dict__["_ControlWrapper__control"](open)
-            del new_ctrl_list[idx]
-            del self.__dict__["_ControlWrapper__control"]
-            self.__dict__["_ControlWrapper__control"] = Vault( new_ctrl_list )
-            self.__dict__["_ControlWrapper__length"] = self.__length - 1
+            if idx < 0:
+                idx = self.__length + idx
+
+            if idx < self.__length and idx >= 0:
+
+                # As long as we delete the same index of __control, there will be
+                # no property that uses that Control
+                del self.__dict__["_ControlWrapper__properties"][idx]
+                new_ctrl_list = self.__dict__["_ControlWrapper__control"](open)
+                del new_ctrl_list[idx]
+                #del self.__dict__["_ControlWrapper__control"]
+                self.__dict__["_ControlWrapper__control"] = Vault( new_ctrl_list )
+                self.__dict__["_ControlWrapper__length"] -= 1
+
+            else:
+
+                log(_("Warning: Trying to delete index %d when length is %d.") % (idx, self.__length))
 
         else:
 
-            log("Warning: Trying to delete index %d when length is %d." % (idx, self.__length))
+            log(_("Warning: Control not initialized as an array in Desklet; not deleting anything."))
 
 
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-19 14:39-0400\n"
+"POT-Creation-Date: 2010-10-05 20:47-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,17 +77,25 @@ msgstr ""
 msgid "Show _notification while loading a desklet"
 msgstr ""
 
+#: ../config/DaemonConfigger.py:31
+msgid "Automatically check for _updates (takes effect after restart)"
+msgstr ""
+
 #: ../config/DaemonConfigger.py:33
 msgid "Key for toggling Float mode:"
 msgstr ""
 
-#: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
-#: ../display/DisplayConfigurator.py:16 ../config/DaemonConfigger.py:45
+#: ../config/DaemonConfigger.py:45 ../config/DisplayConfigger.py:27
+#: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
 msgstr ""
 
-#: ../main/__init__.py:68
-msgid "A desktop applet system for GNOME"
+#: ../data/gdesklets.desktop.in.h:1
+msgid "Desktop Widgets"
+msgstr ""
+
+#: ../data/gdesklets.desktop.in.h:2
+msgid "Eye candy for your desktop"
 msgstr ""
 
 #: ../data/gdesklets.xml.in.h:1
@@ -127,8 +135,8 @@ msgstr ""
 msgid "_Readme"
 msgstr ""
 
-#: ../display/Display.py:1134 ../shell/plugins/DisplayBrowser/__init__.py:173
-msgid "Do you really want to remove this desklet ?"
+#: ../display/Display.py:1134
+msgid "Do you really want to remove this desklet?"
 msgstr ""
 
 #: ../display/Display.py:1135
@@ -226,8 +234,8 @@ msgid ""
 msgstr ""
 
 #: ../gdesklets:71
-msgid "ORBit python bindings (pyorbit) version >= $(pyorbit_ver)s are "
-"required."
+msgid ""
+"ORBit python bindings (pyorbit) version >= %(pyorbit_ver)s are required."
 msgstr ""
 
 #: ../gdesklets:76
@@ -254,19 +262,18 @@ msgstr ""
 msgid "Version check failed."
 msgstr ""
 
-#: ../gdesklets:106
+#: ../gdesklets:107
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
 "system.\n"
-"gDesklets won't work if you don't have all necessary dependencies "
-"installed\n"
+"gDesklets won't work if you don't have all necessary dependencies installed\n"
 "on your system.\n"
 "\n"
 "THE STARTUP WILL BE CANCELLED NOW!\n"
 msgstr ""
 
-#: ../gdesklets:115
+#: ../gdesklets:116
 msgid "Requirements checking done. Your system looks ok!"
 msgstr ""
 
@@ -277,7 +284,7 @@ msgid ""
 "gDesklets will start a requirements check now...\n"
 msgstr ""
 
-#: ../gdesklets:133
+#: ../gdesklets:134
 msgid ""
 "\n"
 "Orders:\n"
@@ -299,98 +306,77 @@ msgid ""
 "\n"
 msgstr ""
 
-#: ../gdesklets:174
-#, c-format, python-format
+#: ../gdesklets:175
+#, c-format
 msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
 
-#: ../gdesklets:177
-#, c-format, python-format
+#: ../gdesklets:178
+#, c-format
 msgid "Exception was: %s\n"
 msgstr ""
 
-#: ../gdesklets:202 ../gdesklets:288
-#, c-format, python-format
+#: ../gdesklets:203 ../gdesklets:289
+#, c-format
 msgid "Could not open desklet %s."
 msgstr ""
 
-#: ../gdesklets:220
-#, c-format
-msgid "%prog [options] order"
-msgstr ""
-
-#: ../gdesklets:225 ../gdesklets:231
-msgid "Avoid to show the icon on the tray"
-msgstr ""
-
-#: ../gdesklets:237
-msgid "Launch pre-existing display "
-msgstr ""
-
-#: ../gdesklets:244
-msgid "Session manager prefix"
-msgstr ""
-
-#: ../gdesklets:249
-msgid "Session manager ID"
-msgstr ""
-
-#: ../gdesklets:292
+#: ../gdesklets:293
 msgid "Starting gdesklets-daemon..."
 msgstr ""
 
-#: ../gdesklets:298
+#: ../gdesklets:299
 msgid "Shutting down gdesklets-daemon..."
 msgstr ""
 
-#: ../gdesklets:310
-#, c-format, python-format
+#: ../gdesklets:311
+#, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr ""
 
-#: ../gdesklets:315
-#, c-format, python-format
+#: ../gdesklets:316
+#, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr ""
 
-#: ../gdesklets:319
+#: ../gdesklets:320
 msgid "Restarting gdesklets-daemon..."
 msgstr ""
 
-#: ../gdesklets:332
+#: ../gdesklets:333
 msgid "gdesklets-daemon is running"
 msgstr ""
 
-#: ../gdesklets:334
+#: ../gdesklets:335
 msgid "gdesklets-daemon is not running"
 msgstr ""
 
-#: ../gdesklets:338
-#, c-format, python-format
+#: ../gdesklets:339
+#, c-format
 msgid "Current profile: %s"
 msgstr ""
 
-#: ../gdesklets:349
-#, c-format, python-format
+#: ../gdesklets:350
+#, c-format
 msgid "New profile: %s"
 msgstr ""
 
-#: ../gdesklets:352
-#, c-format, python-format
+#: ../gdesklets:353
+#, c-format
 msgid "Available profiles: %s"
 msgstr ""
 
-#: ../gdesklets:356
+#: ../gdesklets:357
 msgid "This is %(prog_name)s, version %(prog_version)s."
 msgstr ""
 
-#: ../gdesklets:385
+#: ../gdesklets:386
 msgid "Nothing to slay."
 msgstr ""
 
-#: ../gdesklets:409
+#: ../gdesklets:410
 msgid "Invalid command. Please try one of the following commands:"
 msgstr ""
 
@@ -403,12 +389,8 @@ msgid "Could not fork daemon.\n"
 msgstr ""
 
 #: ../gdesklets-daemon:69 ../gdesklets-daemon:75 ../gdesklets-daemon:92
-#, c-format, python-format
+#, c-format
 msgid "The following error occurred: %s\n"
-msgstr ""
-
-#: ../gdesklets-logview:28
-msgid "Log Messages"
 msgstr ""
 
 #: ../libdesklets/convert.py:22
@@ -461,6 +443,10 @@ msgstr ""
 msgid "Connected to daemon in %d milliseconds."
 msgstr ""
 
+#: ../main/__init__.py:68
+msgid "A desktop applet system for GNOME"
+msgstr ""
+
 #: ../main/__init__.py:81
 #, python-format
 msgid "Version %s"
@@ -470,16 +456,16 @@ msgstr ""
 msgid "Core Programming:"
 msgstr ""
 
+#: ../main/__init__.py:87
+msgid "Additional Programming:"
+msgstr ""
+
 #: ../main/__init__.py:90
 msgid "Architecture Design:"
 msgstr ""
 
 #: ../main/__init__.py:93
 msgid "GNOME Integration:"
-msgstr ""
-
-#: ../main/__init__.py:87
-msgid "Additional Programming:"
 msgstr ""
 
 #: ../main/__init__.py:96
@@ -524,8 +510,7 @@ msgid "Could not open desklet file \"%s\""
 msgstr ""
 
 #: ../main/Starter.py:237
-msgid ""
-"The desklet file could not be opened because the file was not readable."
+msgid "The desklet file could not be opened because the file was not readable."
 msgstr ""
 
 #: ../main/transition.py:39
@@ -550,8 +535,8 @@ msgid ""
 "This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
 "Please test it and report bugs to %(URL)s\n"
 "This version might break your configuration or it won't restore it from an "
-"earlier release. In most cases this is intentional, since gDesklets is "
-"still in its early stages of development.\n"
+"earlier release. In most cases this is intentional, since gDesklets is still "
+"in its early stages of development.\n"
 "\n"
 "Thanks for testing this release candidate!"
 msgstr ""
@@ -566,17 +551,15 @@ msgid ""
 "The default keybinding is &lt;Shift&gt; &lt;F12&gt;, but you can easily "
 "change that in the configuration dialog.\n"
 "\n"
-"Please note that due to limitations of older X servers, you might see "
-"blocks around desklets in Float mode. This cannot be solved in a satisfying "
-"way."
+"Please note that due to limitations of older X servers, you might see blocks "
+"around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
 
 #: ../main/transition.py:76
 msgid "Please note (this message will appear only once):"
 msgstr ""
 
-#: ../plugin/Interface.py:227
-#: ../plugin/Interface.py:239
+#: ../plugin/Interface.py:212 ../plugin/Interface.py:239
 msgid "no description"
 msgstr ""
 
@@ -608,6 +591,7 @@ msgid "Security Risk"
 msgstr ""
 
 #: ../scripting/Script.py:255
+#, python-format
 msgid ""
 "The desklet %(desklet_name)s wants to execute a system command:\n"
 "\n"
@@ -616,8 +600,8 @@ msgid ""
 "To protect your system from malicious programs, you can deny the execution "
 "of this command.\n"
 "\n"
-"If you are sure that the command is harmless, you may permanently allow "
-"this desklet instance to run it."
+"If you are sure that the command is harmless, you may permanently allow this "
+"desklet instance to run it."
 msgstr ""
 
 #: ../scripting/Script.py:268
@@ -630,6 +614,38 @@ msgstr ""
 
 #: ../scripting/Script.py:270
 msgid "Allow for this desklet"
+msgstr ""
+
+#: ../scripting/ControlWrapper.py:28
+#, python-format
+msgid ""
+"Error: Control %s can't be replicated! This is a BUG in the Desklet!\n"
+"Things probably won't work right for you."
+msgstr ""
+
+#: ../scripting/ControlWrapper.py:67
+msgid ""
+"Warning: Value of property \"length\" must be greater than 0 (setting to 1)"
+msgstr ""
+
+#: ../scripting/ControlWrapper.py:100 ../scripting/ControlWrapper.py:129
+#, python-format
+msgid "Warning: Property \"%s\" must be indexed (length == %d)."
+msgstr ""
+
+#: ../scripting/ControlWrapper.py:138 ../scripting/ControlWrapper.py:152
+msgid "Warning: Control not initialized as an array in Desklet."
+msgstr ""
+
+#: ../scripting/ControlWrapper.py:182
+#, python-format
+msgid "Warning: Trying to delete index %d when length is %d."
+msgstr ""
+
+#: ../scripting/ControlWrapper.py:186
+msgid ""
+"Warning: Control not initialized as an array in Desklet; not deleting "
+"anything."
 msgstr ""
 
 #: ../Sensors/FontSelector/__init__.py:86
@@ -696,7 +712,6 @@ msgid "Found %d controls."
 msgstr ""
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
-#: ../shell/plugins/DisplayBrowser/__init__.py:190
 #: ../shell/plugins/DisplayBrowser/__init__.py:189
 msgid "Invalid search expression."
 msgstr ""
@@ -721,41 +736,38 @@ msgstr ""
 msgid "by author"
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:148
 #: ../shell/plugins/DisplayBrowser/__init__.py:147
 msgid "There is a saved instance of this display."
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:149
 #: ../shell/plugins/DisplayBrowser/__init__.py:148
 msgid "Would you like to open this?"
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:162
 #: ../shell/plugins/DisplayBrowser/__init__.py:161
 msgid "Could not remove"
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:163
 #: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:175
+#: ../shell/plugins/DisplayBrowser/__init__.py:173
+msgid "Do you really want to remove this desklet ?"
+msgstr ""
+
 #: ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid ""
 "The desklet will be removed from your system and no longer be available."
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:187
 #: ../shell/plugins/DisplayBrowser/__init__.py:186
 #, python-format
 msgid "Found %d desklets"
 msgstr ""
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:209
 #: ../shell/plugins/DisplayBrowser/__init__.py:208
 msgid "No description available"
 msgstr ""
@@ -873,8 +885,7 @@ msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:116
 msgid ""
-"The package could not be installed because it contained no installable "
-"files."
+"The package could not be installed because it contained no installable files."
 msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:119
@@ -928,19 +939,16 @@ msgstr ""
 msgid "The element with ID <b>%s</b> does not exist in the SVG image."
 msgstr ""
 
-#: ../utils/Element.py:91 ../utils/DOM.py:182
+#: ../utils/DOM.py:182 ../utils/Element.py:91
 #, python-format
 msgid "No such property: %(property)s"
 msgstr ""
 
-#: ../utils/Element.py:127
-#, python-format
-msgid "Error: No such property: %(property)s"
-msgstr ""
-
 #: ../utils/DOM.py:183
+#, python-format
 msgid ""
-"The SVG element <b>%(tag)s</b> does not have the <b>%(property)s</b> property."
+"The SVG element <b>%(tag)s</b> does not have the <b>%(property)s</b> "
+"property."
 msgstr ""
 
 #: ../utils/Element.py:92
@@ -971,6 +979,17 @@ msgid ""
 "Expected <b>%(guessed_type)s</b>, but got <b>%(actual_type)s</b>."
 msgstr ""
 
+#: ../utils/Element.py:127
+#, python-format
+msgid "Error: No such property: %(property)s"
+msgstr ""
+
+#: ../utils/Element.py:132
+#, python-format
+msgid ""
+"The property <b>%(property)s</b> of element <b>%(tag)s</b> is not readable."
+msgstr ""
+
 #: ../utils/error.py:158
 msgid "Runtime Error"
 msgstr ""
@@ -979,33 +998,31 @@ msgstr ""
 msgid "An error occurred while executing a desklet."
 msgstr ""
 
-#: ../data/gdesklets.desktop.in:13
-msgid "Desktop Widgets"
-msgstr ""
-
-#: ../data/gdesklets.desktop.in:14
-msgid "Eye candy for your desktop"
-msgstr ""
-
-#: ../config/DaemonConfigger.py:31
-msgid "Automatically check for _updates (takes effect after restart)"
-msgstr ""
-
-#: ../utils/UpdateChecker.py:130
+#: ../utils/UpdateChecker.py:132
 msgid "A version update is available"
 msgstr ""
 
-#: ../utils/UpdateChecker.py:131
+#: ../utils/UpdateChecker.py:133
+#, python-format
 msgid ""
 "You are running version %(version)s.\n"
 "\n"
 "Version %(newer_version)s is available at %(URL)s."
 msgstr ""
 
-#: ../utils/UpdateChecker.py:137
+#: ../utils/UpdateChecker.py:139
 msgid "_Stop reminding me"
 msgstr ""
 
-#: ../utils/UpdateChecker.py:138
+#: ../utils/UpdateChecker.py:140
 msgid "_Remind me again"
+msgstr ""
+
+#: ../utils/UpdateChecker.py:142
+msgid "No version updates available"
+msgstr ""
+
+#: ../utils/UpdateChecker.py:143
+#, python-format
+msgid "You are running the latest version (%(version)s)."
 msgstr ""
