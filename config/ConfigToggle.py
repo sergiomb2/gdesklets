@@ -34,8 +34,8 @@ class ConfigToggle(ConfigWidget):
      
         value = self._get_config()
 
-	self.__buttons = []
-	button = None
+        self.__buttons = []
+        button = None
         for k, v in items:
            button = gtk.ToggleButton(k)
            button.show()
