@@ -11,6 +11,7 @@ class ConfigButton(ConfigWidget):
         self.__initialized = False
 
         ConfigWidget.__init__(self, name, getter, setter, caller)
+        self.__orig_id = self.get_prop("id")
 
 
     def update(self): pass
@@ -30,7 +31,11 @@ class ConfigButton(ConfigWidget):
 
     def __on_click(self, src):
 
-        self.call_callback()
+        id = self.get_prop("id")
+        if id != self.__orig_id:
+            self.call_callback(id)
+        else:
+            self.call_callback()
 
 
     def _set_label(self, value): self.__button.set_label(value)

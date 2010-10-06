@@ -1,3 +1,8 @@
+2010-10-05  Joe Sapp  <nixphoeni@gmail.com>
+
+	* config/ConfigButton.py: Implemented a feature that calls the
+			callback with the 'id' property as an argument, if it's specified
+
 2010-07-25  Joe Sapp  <nixphoeni@gmail.com>
 
 	* */Makefile.am
