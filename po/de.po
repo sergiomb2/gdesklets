@@ -12,14 +12,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2009-10-04 23:37+0000\n"
-"Last-Translator: Christoph Vieth <christoph.vieth@googlemail.com>\n"
+"POT-Creation-Date: 2010-10-05 20:47-0400\n"
+"PO-Revision-Date: 2010-11-12 19:08+0000\n"
+"Last-Translator: Rainer Endres <Unknown>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
+"X-Launchpad-Export-Date: 2010-11-13 20:56+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
@@ -90,17 +90,26 @@ msgid "Show _notification while loading a desklet"
 msgstr "_Mitteilung beim Laden eines Desklets anzeigen"
 
 #: ../config/DaemonConfigger.py:31
+msgid "Automatically check for _updates (takes effect after restart)"
+msgstr ""
+"Automatisch nach _Updates suchen (Neustart des Programms erforderlich)"
+
+#: ../config/DaemonConfigger.py:33
 msgid "Key for toggling Float mode:"
 msgstr "Tastenkombination zur Schwebemodus-Umschaltung:"
 
-#: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
+#: ../config/DaemonConfigger.py:45 ../config/DisplayConfigger.py:27
 #: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
 msgstr "Konfiguration"
 
-#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
-msgid "A desktop applet system for GNOME"
-msgstr "Ein Desktop-Applet-System für GNOME"
+#: ../data/gdesklets.desktop.in.h:1
+msgid "Desktop Widgets"
+msgstr "Desktop-Widgets"
+
+#: ../data/gdesklets.desktop.in.h:2
+msgid "Eye candy for your desktop"
+msgstr "Augenweide für deine Arbeitsfläche"
 
 #: ../data/gdesklets.xml.in.h:1
 msgid "gDesklets display"
@@ -110,39 +119,40 @@ msgstr "gDesklets-Display"
 msgid "_Configure desklet"
 msgstr "Desklet _konfigurieren"
 
-#: ../display/Display.py:88
+#: ../display/Display.py:89
 msgid "_Move desklet"
 msgstr "Desklet _verschieben"
 
-#: ../display/Display.py:91
+#: ../display/Display.py:92
 msgid "_View Source"
 msgstr "Quellcode _anzeigen"
 
-#: ../display/Display.py:94
+#: ../display/Display.py:96
 msgid "Re_start desklet"
 msgstr "Desklet _neu starten"
 
-#: ../display/Display.py:96
+#: ../display/Display.py:99
 msgid "_Remove desklet"
 msgstr "Desklet _entfernen"
 
-#: ../display/Display.py:98
+#: ../display/Display.py:102
 msgid "_Disable desklet"
 msgstr "Desklet _deaktivieren"
 
-#: ../display/Display.py:101
+#: ../display/Display.py:106 ../main/Starter.py:111
+#: ../shell/plugins/Help/__init__.py:42
 msgid "_About"
 msgstr "_Info …"
 
-#: ../display/Display.py:340
+#: ../display/Display.py:346
 msgid "_Readme"
 msgstr "_Lies mich"
 
-#: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
-msgid "Do you really want to remove this desklet ?"
-msgstr "Wollen Sie dieses Desklet wirklich entfernen ?"
+#: ../display/Display.py:1134
+msgid "Do you really want to remove this desklet?"
+msgstr "Möchten Sie dieses Desklet wirklich entfernen?"
 
-#: ../display/Display.py:1124
+#: ../display/Display.py:1135
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
@@ -150,12 +160,12 @@ msgstr ""
 "Dieses Desklet wird in Zukunft nicht mehr angezeigt und seine Konfiguration "
 "gelöscht."
 
-#: ../display/DisplayTarget.py:417
+#: ../display/DisplayTarget.py:420
 #, python-format
 msgid "Element \"%s\" does not exist"
 msgstr "Element »%s« ist nicht vorhanden"
 
-#: ../display/DisplayTarget.py:418
+#: ../display/DisplayTarget.py:421
 msgid ""
 "The <tt>relative-to</tt> property requires a reference to an existing "
 "display element within the same parent container."
@@ -198,12 +208,12 @@ msgstr ""
 msgid "Could not load sensor"
 msgstr "Der Sensor konnte nicht geladen werden."
 
-#: ../factory/DisplayFactory.py:243
+#: ../factory/DisplayFactory.py:248
 #, python-format
 msgid "&lt;%s&gt; needs a bind attribute"
 msgstr "&lt;%s&gt; benötigt ein »bind«-Attribut"
 
-#: ../factory/DisplayFactory.py:245
+#: ../factory/DisplayFactory.py:250
 msgid "The &lt;prefs&gt; section of this desklet file is broken."
 msgstr "Der &lt;prefs&gt;-Abschnitt dieser Desklet-Datei ist fehlerhaft."
 
@@ -229,57 +239,58 @@ msgid "Checking requirements:"
 msgstr "Überprüfung der Abhängigkeiten:"
 
 #: ../gdesklets:51
-msgid "Python version >= 2.3.0 is required."
-msgstr "Python Version >= 2.3.0 wird benötigt."
+msgid "Python version >= %(pyver)s is required."
+msgstr "Python Version >= %(pyver)s wird benötigt."
 
-#: ../gdesklets:55
+#: ../gdesklets:56
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr ""
 "Version 1.95.7 von libexpat ist nicht funktionsfähig. Bitte aktualisieren!"
 
-#: ../gdesklets:58
+#: ../gdesklets:60
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr ""
 "SAX-Parser wird benötigt. Einige SuSE-Versionen werden ohne ihn ausgeliefert."
 
-#: ../gdesklets:62
+#: ../gdesklets:65
 msgid ""
-"GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
-"are required."
+"GTK python bindings (pygtk2) version >= %(pygtk_ver)s and GTK+ version >= "
+"%(gtk_ver)s are required."
 msgstr ""
-"GTK-Python-Anbindungen (pygtk2) Version >= 2.10.0 und GTK+ Version >= 2.10.0 "
-"werden benötigt."
+"GTK Python Bindings (pygtk2) Version >= %(pygtk_ver)s und GTK+ Version >= "
+"%(gtk_ver)s werden benötigt."
 
-#: ../gdesklets:66
-msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
-msgstr "ORBit-Python-Anbindungen (pyorbit) Version >= 2.0.1 werden benötigt."
+#: ../gdesklets:71
+msgid ""
+"ORBit python bindings (pyorbit) version >= %(pyorbit_ver)s are required."
+msgstr ""
+"ORBit python bindings (pyorbit) version >= %(pyorbit_ver)s ist benötigt."
 
-#: ../gdesklets:69
+#: ../gdesklets:76
 msgid "bonobo python bindings are required."
 msgstr "Bonobo-Python-Anbindungen werden benötigt."
 
-#: ../gdesklets:78
+#: ../gdesklets:80
+msgid "DBus python bindings are useful, but optional."
+msgstr "DBus Python Bindings sind hilfreich aber optional."
+
+#: ../gdesklets:89
+msgid "(optional) "
+msgstr "(optional) "
+
+#: ../gdesklets:93
 msgid "found"
 msgstr "gefunden"
 
-#: ../gdesklets:82
+#: ../gdesklets:97
 msgid "missing"
 msgstr "nicht vorhanden"
 
-#: ../gdesklets:88
+#: ../gdesklets:104
 msgid "Version check failed."
 msgstr "Versionsüberprüfung fehlgeschlagen."
 
-#: ../gdesklets:89
-#, c-format
-msgid ""
-"\n"
-"%s\n"
-msgstr ""
-"\n"
-"%s\n"
-
-#: ../gdesklets:90
+#: ../gdesklets:107
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -297,12 +308,12 @@ msgstr ""
 "\n"
 "DER START VON gDESKLETS WIRD JETZT ABGEBROCHEN!\n"
 
-#: ../gdesklets:99
+#: ../gdesklets:116
 msgid "Requirements checking done. Your system looks ok!"
 msgstr ""
 "Überprüfung der Mindestvoraussetzungen abgeschlossen. Ihr System ist OK!"
 
-#: ../gdesklets:106
+#: ../gdesklets:123
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
@@ -312,7 +323,7 @@ msgstr ""
 "gDesklets wurde das erste Mal gestartet.\n"
 "Eine Überprüfung der Abhängigkeiten wird jetzt durchgeführt...\n"
 
-#: ../gdesklets:117
+#: ../gdesklets:134
 msgid ""
 "\n"
 "Orders:\n"
@@ -353,7 +364,7 @@ msgstr ""
 "benutzen)\n"
 "\n"
 
-#: ../gdesklets:158
+#: ../gdesklets:175
 #, c-format
 msgid ""
 "Error while starting gdesklets-daemon\n"
@@ -362,109 +373,83 @@ msgstr ""
 "Es ist ein Fehler beim Starten des gdesklets-Daemons aufgetreten\n"
 "Mehr Informationen über den Fehler sind in \"%s\" zu finden."
 
-#: ../gdesklets:161
+#: ../gdesklets:178
 #, c-format
 msgid "Exception was: %s\n"
 msgstr "Fehlermeldung: %s\n"
 
-#: ../gdesklets:186 ../gdesklets:272
+#: ../gdesklets:203 ../gdesklets:289
 #, c-format
 msgid "Could not open desklet %s."
 msgstr "Desklet »%s« konnte nicht geöffnet werden."
 
-#: ../gdesklets:204
-#, c-format
-msgid "%prog [options] order"
-msgstr "%prog [Optionen] Reihenfolge"
-
-#: ../gdesklets:209
-msgid "Avoid to show the icon on the tray"
-msgstr "Zeige kein Icon im Benachrichtigungsfeld an"
-
-#: ../gdesklets:215
-msgid "Debug the application"
-msgstr "Suche und beseitige Programmfehler"
-
-#: ../gdesklets:221
-msgid "Launch pre-existing display "
-msgstr "Starte ein bereits existierendes Display "
-
-#: ../gdesklets:228
-msgid "Session manager prefix"
-msgstr "Prefix des Session Managers"
-
-#: ../gdesklets:233
-msgid "Session manager ID"
-msgstr "ID des Session Managers"
-
-#: ../gdesklets:276
+#: ../gdesklets:293
 msgid "Starting gdesklets-daemon..."
 msgstr "gdesklets-daemon wird gestartet …"
 
-#: ../gdesklets:282
+#: ../gdesklets:299
 msgid "Shutting down gdesklets-daemon..."
 msgstr "gdesklets-daemon wird beendet …"
 
-#: ../gdesklets:294
+#: ../gdesklets:311
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr "Momentan sind folgende Displays im Profil »%s« geöffnet:\n"
 
-#: ../gdesklets:299
+#: ../gdesklets:316
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr "Momentan sind keine Desklets im Profil »%s« enthalten"
 
-#: ../gdesklets:303
+#: ../gdesklets:320
 msgid "Restarting gdesklets-daemon..."
 msgstr "gdesklets-daemon wird neu gestartet …"
 
-#: ../gdesklets:316
+#: ../gdesklets:333
 msgid "gdesklets-daemon is running"
 msgstr "Der gDesklets-Daemon läuft"
 
-#: ../gdesklets:318
+#: ../gdesklets:335
 msgid "gdesklets-daemon is not running"
 msgstr "Der gDesklets-Daemon läuft nicht"
 
-#: ../gdesklets:322
+#: ../gdesklets:339
 #, c-format
 msgid "Current profile: %s"
 msgstr "Momentanes Profil: %s"
 
-#: ../gdesklets:333
+#: ../gdesklets:350
 #, c-format
 msgid "New profile: %s"
 msgstr "Neues Profil: %s"
 
-#: ../gdesklets:336
+#: ../gdesklets:353
 #, c-format
 msgid "Available profiles: %s"
 msgstr "Verfügbare Profile: %s"
 
-#: ../gdesklets:340
-#, c-format
-msgid "This is %s, version %s."
-msgstr "Dies ist %s, Version %s"
+#: ../gdesklets:357
+msgid "This is %(prog_name)s, version %(prog_version)s."
+msgstr "Dies ist %(prog_name)s, Version %(prog_version)s."
 
-#: ../gdesklets:368
+#: ../gdesklets:386
 msgid "Nothing to slay."
 msgstr "Nichts abzuwürgen."
 
-#: ../gdesklets:392
+#: ../gdesklets:410
 msgid "Invalid command. Please try one of the following commands:"
 msgstr "Ungültiger Befehl. Bitte verwenden Sie einen der folgenden Befehle:"
 
-#: ../gdesklets-daemon:27
+#: ../gdesklets-daemon:35
 msgid "You need a recent version of PyGTK to run this program.\n"
 msgstr ""
 "Sie brauchen eine neuere Version von PyGTK, um dieses Programm auszuführen.\n"
 
-#: ../gdesklets-daemon:52
+#: ../gdesklets-daemon:60
 msgid "Could not fork daemon.\n"
 msgstr "Daemon konnte nicht abgespalten werden.\n"
 
-#: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
+#: ../gdesklets-daemon:69 ../gdesklets-daemon:75 ../gdesklets-daemon:92
 #, c-format
 msgid "The following error occurred: %s\n"
 msgstr "Folgender Fehler ist aufgetreten: %s\n"
@@ -523,69 +508,73 @@ msgstr "In %d Mikrosekunden mit dem Daemon verbunden."
 msgid "Connected to daemon in %d milliseconds."
 msgstr "In %d Millisekunden mit dem Daemon verbunden."
 
-#: ../main/__init__.py:71
+#: ../main/__init__.py:68
+msgid "A desktop applet system for GNOME"
+msgstr "Ein Desktop-Applet-System für GNOME"
+
+#: ../main/__init__.py:81
 #, python-format
 msgid "Version %s"
 msgstr "Version %s"
 
-#: ../main/__init__.py:74
+#: ../main/__init__.py:84
 msgid "Core Programming:"
 msgstr "Kernprogrammierung"
 
-#: ../main/__init__.py:77
-msgid "Architecture Design:"
-msgstr "Architektur-Design:"
-
-#: ../main/__init__.py:80
-msgid "GNOME Integration:"
-msgstr "GNOME-Integration:"
-
-#: ../main/__init__.py:83
+#: ../main/__init__.py:87
 msgid "Additional Programming:"
 msgstr "Zusätzliche Programmierung"
 
-#: ../main/__init__.py:86
+#: ../main/__init__.py:90
+msgid "Architecture Design:"
+msgstr "Architektur-Design:"
+
+#: ../main/__init__.py:93
+msgid "GNOME Integration:"
+msgstr "GNOME-Integration:"
+
+#: ../main/__init__.py:96
 msgid "Documentation:"
 msgstr "Dokumentation"
 
-#: ../main/__init__.py:89
+#: ../main/__init__.py:99
 msgid "Artwork:"
 msgstr "Künstlerische Gestaltung:"
 
-#: ../main/__init__.py:92
+#: ../main/__init__.py:102
 msgid "Website:"
 msgstr "Internetauftritt:"
 
-#: ../main/__init__.py:95
+#: ../main/__init__.py:105
 msgid "Thank you:"
 msgstr "Dank an:"
 
-#: ../main/Starter.py:103
+#: ../main/Starter.py:101
 msgid "_Manage desklets"
 msgstr "Desklets _verwalten"
 
-#: ../main/Starter.py:106
+#: ../main/Starter.py:104
 msgid "_Configuration"
 msgstr "_Konfiguration"
 
-#: ../main/Starter.py:108
+#: ../main/Starter.py:106
 msgid "_View log"
 msgstr "Protokoll _anzeigen"
 
-#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
-msgid "_About..."
-msgstr "_Info …"
+#: ../main/Starter.py:108
+msgid "Check for _updates"
+msgstr "Suche nach _Updates"
 
 #: ../main/Starter.py:114
 msgid "_Stop daemon"
 msgstr "Daemon _stoppen"
 
-#: ../main/Starter.py:230
+#: ../main/Starter.py:236
 #, python-format
 msgid "Could not open desklet file \"%s\""
 msgstr "Die Desklet-Datei »%s« konnte nicht geöffnet werden"
 
-#: ../main/Starter.py:231
+#: ../main/Starter.py:237
 msgid ""
 "The desklet file could not be opened because the file was not readable."
 msgstr ""
@@ -622,27 +611,29 @@ msgstr ""
 "auszuprobieren!"
 
 #: ../main/transition.py:51
+#, python-format
 msgid ""
 "This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
-"Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
+"Please test it and report bugs to %(URL)s\n"
 "This version might break your configuration or it won't restore it from an "
 "earlier release. In most cases this is intentional, since gDesklets is still "
 "in its early stages of development.\n"
 "\n"
 "Thanks for testing this release candidate!"
 msgstr ""
-"Dies ist ein <b>Release-Candidate</b> einer anstehenden Veröffentlichung von "
-"gDesklets. Bitte testen Sie ihn und melden Sie auftretende Fehler über "
-"<i>http://bugzilla.gnome.org</i>\n"
-"Diese Version könnte Ihre Konfiguration verändern oder sie nicht von einer "
-"früheren Version übernehmen. In den meisten Fällen geschieht dies bewusst, "
-"da sich gDesklets noch in einem frühen Stadium der Entwicklung befindet.\n"
+"Dies ist ein sogenannter <b>release candidate</b> einer kommenden gDesklets "
+"Version.\n"
+"Bitte testen Sie sie und melden Fehler unter %(URL)s.\n"
+"Es kann passieren, daß diese Version Ihre aktuelle Konfiguration beschädigt "
+"oder eine Konfiguration einer älteren Version nicht übernimmt. In den "
+"meisten Fällen ist dieses beabsichtig, da gDesklets immer noch in einer "
+"früher Phase der Entwicklung steht.\n"
 "\n"
-"Vielen Dank für das Testen dieses Release-Candidate!"
+"Vielen Dank, daß Sie diesen \"release candidate\" testen!"
 
 #. our informative transition message which we can change with
 #. every release
-#: ../main/transition.py:62
+#: ../main/transition.py:63
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -665,44 +656,49 @@ msgstr ""
 "Problem gibt es, außer dem Umschalten des X-Servers auf echte Transparenz "
 "(Xorg 6.8 und neuer), keine zufrieden stellende Lösung."
 
-#: ../main/transition.py:75
+#: ../main/transition.py:76
 msgid "Please note (this message will appear only once):"
 msgstr "Bitte beachten (diese Nachricht wird nur einmal erscheinen):"
 
-#: ../plugin/Interface.py:200 ../plugin/Interface.py:227
+#: ../plugin/Interface.py:212 ../plugin/Interface.py:239
 msgid "no description"
 msgstr "keine Beschreibung"
 
-#: ../scripting/Script.py:155
+#: ../scripting/Script.py:157
 msgid "Error in add_timer function"
 msgstr "Fehler in der »add_timer«-Funktion"
 
-#: ../scripting/Script.py:156
+#: ../scripting/Script.py:158
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
 msgstr "»%s« ist keine gültige Ganzzahl-Variable!"
 
-#: ../scripting/Script.py:200
+#: ../scripting/Script.py:177
+#, python-format
+msgid "Timer ident '%s' was not found"
+msgstr "Timer Ident '%s' gefunden."
+
+#: ../scripting/Script.py:213
 #, python-format
 msgid "No Control could be found for interface %s"
 msgstr "Für die Schnittstelle %s wurde kein Control gefunden"
 
-#: ../scripting/Script.py:202
+#: ../scripting/Script.py:215
 msgid "This means that a functionality won't be available during execution!"
 msgstr ""
 "Das bedeutet, dass eine Funktionalität während der Ausführung nicht "
 "verfügbar sein wird!"
 
-#: ../scripting/Script.py:242
+#: ../scripting/Script.py:254
 msgid "Security Risk"
 msgstr "Sicherheitsrisiko"
 
-#: ../scripting/Script.py:243
+#: ../scripting/Script.py:255
 #, python-format
 msgid ""
-"The desklet %s wants to execute a system command:\n"
+"The desklet %(desklet_name)s wants to execute a system command:\n"
 "\n"
-"     <tt><b>%s</b></tt>\n"
+"     <tt><b>%(cmd)s</b></tt>\n"
 "\n"
 "To protect your system from malicious programs, you can deny the execution "
 "of this command.\n"
@@ -710,27 +706,64 @@ msgid ""
 "If you are sure that the command is harmless, you may permanently allow this "
 "desklet instance to run it."
 msgstr ""
-"Das Desklet %s möchte einen Systembefehl ausführen:\n"
+"Das Desklet %(desklet_name)s möchte folgenden Befehl ausführen:\n"
 "\n"
-"     <tt><b>%s</b></tt>\n"
+"     <tt><b>%(cmd)s</b></tt>\n"
 "\n"
-"Um das System vor Schaden verursachenden Programmen zu bewahren, können Sie "
-"die Ausführung dieses Befehls verweigern.\n"
+"Um Ihr System vor schädlichen Programmen zu schützen können Sie die "
+"Ausführung dieses Befehls verweigern.\n"
 "\n"
-"Wenn Sie sicher sind, dass der Befehl harmlos ist, können Sie dieser Desklet-"
-"Instanz die Ausführung dauerhaft erlauben."
+"Sollten Sie sicher sein, daß dieser Befehl harmlos ist, können Sie dieser "
+"Instanz des Desklets permanent dessen Ausführung erlauben."
 
-#: ../scripting/Script.py:256
+#: ../scripting/Script.py:268
 msgid "Deny!"
 msgstr "Verweigern!"
 
-#: ../scripting/Script.py:257
+#: ../scripting/Script.py:269
 msgid "Allow once"
 msgstr "Einmal erlauben"
 
-#: ../scripting/Script.py:258
+#: ../scripting/Script.py:270
 msgid "Allow for this desklet"
 msgstr "Für dieses Desklet erlauben"
+
+#: ../scripting/ControlWrapper.py:28
+#, python-format
+msgid ""
+"Error: Control %s can't be replicated! This is a BUG in the Desklet!\n"
+"Things probably won't work right for you."
+msgstr ""
+"Fehler: Control% s kann nicht kopiert werden! Das ist ein Fehler in der "
+"Desklet!\n"
+"Das wird bei ihnen wahrscheinlich nicht richtig funktionieren... Schade :-("
+
+#: ../scripting/ControlWrapper.py:67
+msgid ""
+"Warning: Value of property \"length\" must be greater than 0 (setting to 1)"
+msgstr ""
+"Warnung: Wert der Eigenschaft \"Länge\" muss größer als 0 sein (Standart: 1)"
+
+#: ../scripting/ControlWrapper.py:100 ../scripting/ControlWrapper.py:129
+#, python-format
+msgid "Warning: Property \"%s\" must be indexed (length == %d)."
+msgstr "Achtung: Die Einstellung \"%s\" muss indiziert sein (length == %d)."
+
+#: ../scripting/ControlWrapper.py:138 ../scripting/ControlWrapper.py:152
+msgid "Warning: Control not initialized as an array in Desklet."
+msgstr ""
+"Warnung: Control wurde nicht als ein Array im Desklet initialisiert ."
+
+#: ../scripting/ControlWrapper.py:182
+#, python-format
+msgid "Warning: Trying to delete index %d when length is %d."
+msgstr ""
+
+#: ../scripting/ControlWrapper.py:186
+msgid ""
+"Warning: Control not initialized as an array in Desklet; not deleting "
+"anything."
+msgstr ""
 
 #: ../Sensors/FontSelector/__init__.py:86
 msgid "Fonts"
@@ -796,7 +829,7 @@ msgid "Found %d controls."
 msgstr "%d Controls gefunden"
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
-#: ../shell/plugins/DisplayBrowser/__init__.py:190
+#: ../shell/plugins/DisplayBrowser/__init__.py:189
 msgid "Invalid search expression."
 msgstr "Ungültiger Suchausdruck"
 
@@ -820,19 +853,19 @@ msgstr "nach Kategorie"
 msgid "by author"
 msgstr "nach Autor"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:148
+#: ../shell/plugins/DisplayBrowser/__init__.py:147
 msgid "There is a saved instance of this display."
 msgstr "Es gibt eine gespeicherte Instanz von diesem Display."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:149
+#: ../shell/plugins/DisplayBrowser/__init__.py:148
 msgid "Would you like to open this?"
 msgstr "Möchten Sie diese öffnen?"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:162
+#: ../shell/plugins/DisplayBrowser/__init__.py:161
 msgid "Could not remove"
 msgstr "Konnte nicht entfernen"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:163
+#: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
@@ -840,17 +873,21 @@ msgstr ""
 "Die Desklet-Datei konnte nicht entfernt werden. Vermutlich haben Sie hierzu "
 "keine Schreibrechte."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:175
+#: ../shell/plugins/DisplayBrowser/__init__.py:173
+msgid "Do you really want to remove this desklet ?"
+msgstr "Wollen Sie dieses Desklet wirklich entfernen ?"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid ""
 "The desklet will be removed from your system and no longer be available."
 msgstr "Das Desklet wird entfernt und steht dann nicht mehr zur Verfügung."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:187
+#: ../shell/plugins/DisplayBrowser/__init__.py:186
 #, python-format
 msgid "Found %d desklets"
 msgstr "%d Desklets gefunden"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:209
+#: ../shell/plugins/DisplayBrowser/__init__.py:208
 msgid "No description available"
 msgstr "Keine Beschreibung vorhanden"
 
@@ -1044,7 +1081,7 @@ msgstr "Suchen"
 msgid "_Details (%d lines)"
 msgstr "_Details (%d Zeilen)"
 
-#: ../utils/dialog.py:194
+#: ../utils/dialog.py:202
 msgid "_Ignore errors from this desklet"
 msgstr "Fehler dieses Desklets _ignorieren"
 
@@ -1064,46 +1101,64 @@ msgstr "Das Element mit der ID <b>%s</b> existiert nicht im SVG-Bild."
 
 #: ../utils/DOM.py:182 ../utils/Element.py:91
 #, python-format
-msgid "No such property: %s"
-msgstr "Property »%s« existiert nicht"
+msgid "No such property: %(property)s"
+msgstr "Unbekanntes Merkmal: %(property)s"
 
 #: ../utils/DOM.py:183
 #, python-format
-msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
-msgstr "Das SVG-Element <b>%s</b> besitzt kein <b>%s</b> Property."
+msgid ""
+"The SVG element <b>%(tag)s</b> does not have the <b>%(property)s</b> "
+"property."
+msgstr ""
+"Das SVG Element <b>%(tag)s</b> besitzt das Merkmal <b>%(property)s</b> nicht."
 
 #: ../utils/Element.py:92
 #, python-format
-msgid "The element <b>%s</b> does not have the <b>%s</b> property."
-msgstr "Das Element <b>%s</b> besitzt kein <b>%s</b> Property."
+msgid ""
+"The element <b>%(tag)s</b> does not have the <b>%(property)s</b> property."
+msgstr ""
+"Das Element <b>%(tag)s</b> besitzt das Merkmal <b>%(property)s</b> nicht."
 
-#: ../utils/Element.py:96 ../utils/Element.py:126
+#: ../utils/Element.py:97 ../utils/Element.py:131
 msgid "Permission Error"
 msgstr "Rechte-Fehler"
 
-#: ../utils/Element.py:97
+#: ../utils/Element.py:98
 #, python-format
-msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
-msgstr "Das Property <b>%s</b> des Elements <b>%s</b> ist nicht »writeable«."
+msgid ""
+"The property <b>%(property)s</b> of element <b>%(tag)s</b> is not writable."
+msgstr ""
+"Das Merkmal <b>%(tag)s</b> des Elements <b>%(property)s</b> ist nicht "
+"schreibbar."
 
-#: ../utils/Element.py:105
+#: ../utils/Element.py:107
 msgid "Type Error"
 msgstr "Typfehler"
 
-#: ../utils/Element.py:106
+#: ../utils/Element.py:108
 #, python-format
 msgid ""
-"The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
-"Expected <b>%s</b>, but got <b>%s</b>."
+"The property <b>%(property)s</b> of element <b>%(tag)s</b> got a value of "
+"wrong type.\n"
+"Expected <b>%(guessed_type)s</b>, but got <b>%(actual_type)s</b>."
 msgstr ""
-"Das Property <b>%s</b> des Elements <b>%s</b> hat eine Variable des falschen "
-"Typs erhalten.\n"
-"<b>%s</b> erwartet, aber <b>%s</b> erhalten."
+"Das Merkmal <b>%(property)s</b> des Elements <b>%(tag)s</b> erhielt einen "
+"Wert vom falschen Typ.\n"
+"Es wurde <b>%(guessed_type)s</b> erwartet, aber <b>%(actual_type)s</b> "
+"übergeben."
 
 #: ../utils/Element.py:127
 #, python-format
-msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
-msgstr "Das Property <b>%s</b> des Elements <b>%s</b> ist nicht »readable«."
+msgid "Error: No such property: %(property)s"
+msgstr "Fehler: unbekanntes Merkmal: %(property)s"
+
+#: ../utils/Element.py:132
+#, python-format
+msgid ""
+"The property <b>%(property)s</b> of element <b>%(tag)s</b> is not readable."
+msgstr ""
+"Die Einstellung <b>%(property)s</b> des Elements <b>%(tag)s</b> ist nicht "
+"lesbar"
 
 #: ../utils/error.py:158
 msgid "Runtime Error"
@@ -1112,3 +1167,125 @@ msgstr "Laufzeitfehler"
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
 msgstr "Beim Ausführen eines Desklets ist ein Fehler aufgetreten."
+
+#: ../utils/UpdateChecker.py:132
+msgid "A version update is available"
+msgstr "Eine neuere Version is verfügbar"
+
+#: ../utils/UpdateChecker.py:133
+#, python-format
+msgid ""
+"You are running version %(version)s.\n"
+"\n"
+"Version %(newer_version)s is available at %(URL)s."
+msgstr ""
+"Sie benutzen Version %(version)s.\n"
+"\n"
+"Die Version %(newer_version)s ist unter %(URL)s verfügbar."
+
+#: ../utils/UpdateChecker.py:139
+msgid "_Stop reminding me"
+msgstr "_Nicht mehr nachfragen"
+
+#: ../utils/UpdateChecker.py:140
+msgid "_Remind me again"
+msgstr "_Frag mich später noch einmal."
+
+#: ../utils/UpdateChecker.py:142
+msgid "No version updates available"
+msgstr "Keine neuere Version verfügbar"
+
+#: ../utils/UpdateChecker.py:143
+#, python-format
+msgid "You are running the latest version (%(version)s)."
+msgstr "Sie benutzen die neueste Version (%(version)s)."
+
+#~ msgid "Python version >= 2.3.0 is required."
+#~ msgstr "Python Version >= 2.3.0 wird benötigt."
+
+#~ msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
+#~ msgstr "ORBit-Python-Anbindungen (pyorbit) Version >= 2.0.1 werden benötigt."
+
+#, c-format
+#~ msgid ""
+#~ "\n"
+#~ "%s\n"
+#~ msgstr ""
+#~ "\n"
+#~ "%s\n"
+
+#, c-format
+#~ msgid "This is %s, version %s."
+#~ msgstr "Dies ist %s, Version %s"
+
+#~ msgid "_About..."
+#~ msgstr "_Info …"
+
+#~ msgid ""
+#~ "This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
+#~ "Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
+#~ "This version might break your configuration or it won't restore it from an "
+#~ "earlier release. In most cases this is intentional, since gDesklets is still "
+#~ "in its early stages of development.\n"
+#~ "\n"
+#~ "Thanks for testing this release candidate!"
+#~ msgstr ""
+#~ "Dies ist ein <b>Release-Candidate</b> einer anstehenden Veröffentlichung von "
+#~ "gDesklets. Bitte testen Sie ihn und melden Sie auftretende Fehler über "
+#~ "<i>http://bugzilla.gnome.org</i>\n"
+#~ "Diese Version könnte Ihre Konfiguration verändern oder sie nicht von einer "
+#~ "früheren Version übernehmen. In den meisten Fällen geschieht dies bewusst, "
+#~ "da sich gDesklets noch in einem frühen Stadium der Entwicklung befindet.\n"
+#~ "\n"
+#~ "Vielen Dank für das Testen dieses Release-Candidate!"
+
+#, python-format
+#~ msgid ""
+#~ "The desklet %s wants to execute a system command:\n"
+#~ "\n"
+#~ "     <tt><b>%s</b></tt>\n"
+#~ "\n"
+#~ "To protect your system from malicious programs, you can deny the execution "
+#~ "of this command.\n"
+#~ "\n"
+#~ "If you are sure that the command is harmless, you may permanently allow this "
+#~ "desklet instance to run it."
+#~ msgstr ""
+#~ "Das Desklet %s möchte einen Systembefehl ausführen:\n"
+#~ "\n"
+#~ "     <tt><b>%s</b></tt>\n"
+#~ "\n"
+#~ "Um das System vor Schaden verursachenden Programmen zu bewahren, können Sie "
+#~ "die Ausführung dieses Befehls verweigern.\n"
+#~ "\n"
+#~ "Wenn Sie sicher sind, dass der Befehl harmlos ist, können Sie dieser Desklet-"
+#~ "Instanz die Ausführung dauerhaft erlauben."
+
+#, python-format
+#~ msgid "No such property: %s"
+#~ msgstr "Property »%s« existiert nicht"
+
+#, python-format
+#~ msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
+#~ msgstr "Das SVG-Element <b>%s</b> besitzt kein <b>%s</b> Property."
+
+#, python-format
+#~ msgid "The element <b>%s</b> does not have the <b>%s</b> property."
+#~ msgstr "Das Element <b>%s</b> besitzt kein <b>%s</b> Property."
+
+#, python-format
+#~ msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
+#~ msgstr "Das Property <b>%s</b> des Elements <b>%s</b> ist nicht »writeable«."
+
+#, python-format
+#~ msgid ""
+#~ "The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
+#~ "Expected <b>%s</b>, but got <b>%s</b>."
+#~ msgstr ""
+#~ "Das Property <b>%s</b> des Elements <b>%s</b> hat eine Variable des falschen "
+#~ "Typs erhalten.\n"
+#~ "<b>%s</b> erwartet, aber <b>%s</b> erhalten."
+
+#, python-format
+#~ msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
+#~ msgstr "Das Property <b>%s</b> des Elements <b>%s</b> ist nicht »readable«."

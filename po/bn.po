@@ -1,16 +1,16 @@
-# Finnish messages for gdesklets.
-# Copyright (C) 2006 Ilkka Tuohela.
-# Suomennos: http://gnome-fi.sourceforge.net/
-# Ilkka Tuohela <hile@iki.fi>, 2006.
+# Bengali translation for gdesklets
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the gdesklets package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gdesklets\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2010-10-05 20:47-0400\n"
-"PO-Revision-Date: 2010-08-27 17:24+0000\n"
-"Last-Translator: Heikki Kulhia <Unknown>\n"
-"Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2010-11-08 15:57+0000\n"
+"Last-Translator: Aniruddha Adhikary <Unknown>\n"
+"Language-Team: Bengali <bn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../config/ConfigDialog.py:115
 msgid "Invalid Function Call"
-msgstr "Virheellinen funktiokutsu"
+msgstr "অবৈধ ফাংশন কল"
 
 #: ../config/ConfigDialog.py:116
 #, python-format
@@ -28,122 +28,117 @@ msgid ""
 "This means that there's an error in the desklet's code. You should inform "
 "the author of the desklet about this problem."
 msgstr ""
-"Funktiota <b>%s</b> ei ole määritelty.\n"
-"Tämä tarkoittaa että sovelman koodissa on virhe. Ole hyvä ja kerro tästä "
-"ongelmasta sovelman kehittäjälle."
+"<b>%s</b> নামের কোন ফাংশন নেই।\n"
+"এর অর্থ ডেস্কলেট কোডে সমস্যা আছে। আপনার ডেস্কলেটের প্রোগ্রামারকে এ সমস্যা "
+"সম্পর্কে জানানো উচিৎ।"
 
 #: ../config/ConfigDialog.py:230 ../display/DisplayConfigurator.py:32
 msgid "This desklet is not configurable."
-msgstr "Tällä sovelmalla ei ole asetuksia."
+msgstr "ডেস্কলেটটি কনফিগারেবল নয়"
 
 #: ../config/ConfigUnit.py:57
 msgid "pixel"
-msgstr "pikseliä"
+msgstr "পিক্সেল"
 
 #: ../config/ConfigUnit.py:58
 msgid "point"
-msgstr "pistettä"
+msgstr "পয়েন্ট"
 
 #: ../config/ConfigUnit.py:59
 msgid "cm"
-msgstr "cm"
+msgstr "সে.মি."
 
 #: ../config/ConfigUnit.py:60
 msgid "inch"
-msgstr "tuumaa"
+msgstr "ইঞ্চি"
 
 #: ../config/DaemonConfigger.py:17
 msgid "Editor to view/edit the desklet source code"
-msgstr "Muokkain sovelman lähdekoodin katseluun ja muokkaukseen"
+msgstr "ডেস্কলেট সোর্স কোড দেখা/সম্পাদনা করার এডিটর"
 
 #: ../config/DaemonConfigger.py:18
 msgid "Your favorite editor"
-msgstr "Suosimasi muokkain"
+msgstr "আপনার পছন্দের এডিটর"
 
 #: ../config/DaemonConfigger.py:20
 msgid "Screen Resolution (DPI)"
-msgstr "Näytön tarkkuus (DPI)"
+msgstr "স্ক্রীণ রেজুল্যুশন"
 
 #: ../config/DaemonConfigger.py:22
 msgid ""
 "Adjust the value above so that the bar will be exactly <b>5 cm</b> or "
 "<b>1.97\"</b> wide"
 msgstr ""
-"Säädä ylläolevaa arvoa siten että palkki on tarkalleen <b>5cm</b> tai "
-"<b>1.97\"</b> leveä"
 
 #: ../config/DaemonConfigger.py:26
 msgid "Behavior"
-msgstr "Toiminta"
+msgstr ""
 
 #: ../config/DaemonConfigger.py:27
 msgid "Show _tray icon (takes effect after restart)"
 msgstr ""
-"Näytä _ilmoitusalueen kuvake (tulee voimaan käynnistettäessä uudestaan)"
 
 #: ../config/DaemonConfigger.py:29
 msgid "Show _notification while loading a desklet"
-msgstr "Näytä _huomautus ladattaessa työpöytäsovelmaa"
+msgstr ""
 
 #: ../config/DaemonConfigger.py:31
 msgid "Automatically check for _updates (takes effect after restart)"
 msgstr ""
-"Tarkista _päivitykset automaattisesti (tulee voimaan uudelleenkäynnistyksen "
-"yhteydessä)"
 
 #: ../config/DaemonConfigger.py:33
 msgid "Key for toggling Float mode:"
-msgstr "Kelluntatilaa vaihtava näppäin:"
+msgstr ""
 
 #: ../config/DaemonConfigger.py:45 ../config/DisplayConfigger.py:27
 #: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
-msgstr "Asetukset"
+msgstr ""
 
 #: ../data/gdesklets.desktop.in.h:1
 msgid "Desktop Widgets"
-msgstr "Työpöytäsovelmat"
+msgstr ""
 
 #: ../data/gdesklets.desktop.in.h:2
 msgid "Eye candy for your desktop"
-msgstr "Silmänruokaa työpöydällesi"
+msgstr ""
 
 #: ../data/gdesklets.xml.in.h:1
 msgid "gDesklets display"
-msgstr "gDesklets-näyttö"
+msgstr ""
 
 #: ../display/Display.py:86
 msgid "_Configure desklet"
-msgstr "Sovelman _asetukset"
+msgstr ""
 
 #: ../display/Display.py:89
 msgid "_Move desklet"
-msgstr "_Siirrä sovelmaa"
+msgstr ""
 
 #: ../display/Display.py:92
 msgid "_View Source"
-msgstr "_Näytä lähde"
+msgstr "_উৎস দেখাও"
 
 #: ../display/Display.py:96
 msgid "Re_start desklet"
-msgstr "Käynnistä sovelma _uudestaan"
+msgstr "ডেস্কলেট্‌ পুনরায় শুরু কর"
 
 #: ../display/Display.py:99
 msgid "_Remove desklet"
-msgstr "_Poista sovelma"
+msgstr "_ডেস্কলেট্‌ বাদ দাও"
 
 #: ../display/Display.py:102
 msgid "_Disable desklet"
-msgstr "_Poista desklet käytöstä"
+msgstr "_ডেস্কলেট্‌ নিষ্ক্রিয় কর"
 
 #: ../display/Display.py:106 ../main/Starter.py:111
 #: ../shell/plugins/Help/__init__.py:42
 msgid "_About"
-msgstr "_Tietoja"
+msgstr "পরিচিতি (_A)"
 
 #: ../display/Display.py:346
 msgid "_Readme"
-msgstr "_Lueminut"
+msgstr "_সহায়িকা"
 
 #: ../display/Display.py:1134
 msgid "Do you really want to remove this desklet?"
@@ -153,102 +148,97 @@ msgstr ""
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
-msgstr "Tätä sovelmaa ei enää näytetä ja sen asetukset poistetaan."
+msgstr ""
 
 #: ../display/DisplayTarget.py:420
 #, python-format
 msgid "Element \"%s\" does not exist"
-msgstr "Elementtiä \"%s\" ei ole olemassa"
+msgstr ""
 
 #: ../display/DisplayTarget.py:421
 msgid ""
 "The <tt>relative-to</tt> property requires a reference to an existing "
 "display element within the same parent container."
 msgstr ""
-"Ominaisuus <tt>relative-to</tt> vaatii viitteen aiemmin määriteltyyn "
-"näyttöelementtiin samassa elementtilaatikossa."
 
 #: ../display/targetregistry.py:45
 #, python-format
 msgid "Unknown element <b>&lt;%s&gt;</b>"
-msgstr "Tuntematon elementti <b>&lt;%s&gt;</b>"
+msgstr "অজানা বস্তু <b>&lt;%s&gt;</b>"
 
 #: ../display/targetregistry.py:46
 msgid ""
 "Either there is a typo in the .display file or you have an incompatible "
 "version of gDesklets."
 msgstr ""
-"Joko .display-tiedostossa on kirjoitusvirhe, tai gDesklets-versiosi ei ole "
-"yhteensopiva tiedoston kanssa."
+"হয় .display ফাইলে কোনো ত্রুটি আছে অথবা আপনার gDesklets-এর একটি সামঞ্জস্যহীন "
+"সংস্করণ আছে।"
 
 #: ../factory/DisplayFactory.py:89 ../utils/DOM.py:31
 msgid "XML parse error"
-msgstr "Virhe XML-tulkinnassa"
+msgstr "XML parse-এ ত্রুটি"
 
 #: ../factory/DisplayFactory.py:90
 msgid "This .display file has invalid XML syntax."
-msgstr "Tässä .display-tiedostossa on virheellinen XML-syntaksi."
+msgstr "এই .display ফাইলটিতে অবৈধ XML বাক্যরীতি আছে।"
 
 #: ../factory/DisplayFactory.py:202
 msgid "File doesn't exist or couldn't be loaded"
-msgstr "Tiedostoa ei ole tai sitä ei voi ladata"
+msgstr "এই ফাইলের অস্তিত্ব নেই অথবা এটিকে লোড করা যাচ্ছেনা"
 
 #: ../factory/DisplayFactory.py:204
 msgid "A file which contains a script isn't available for further execution."
-msgstr "Tiedosto, jossa skripti on, ei ole saatavilla suoritusta varten."
+msgstr ""
 
 #: ../factory/DisplayFactory.py:227
 msgid "Could not load sensor"
-msgstr "Ilmaisinta ei voi ladata"
+msgstr ""
 
 #: ../factory/DisplayFactory.py:248
 #, python-format
 msgid "&lt;%s&gt; needs a bind attribute"
-msgstr "&lt;%s&gt; vaatii attribuutin bind"
+msgstr ""
 
 #: ../factory/DisplayFactory.py:250
 msgid "The &lt;prefs&gt; section of this desklet file is broken."
-msgstr "Sovelmatiedoston osio &lt;prefs&gt; on rikki."
+msgstr ""
 
 #: ../factory/SensorFactory.py:75
 #, python-format
 msgid "Could not find sensor '%(name)s'"
-msgstr "Ilmaisinta \"%(name)s\" ei löydy"
+msgstr "'%(name)s' সেন্সর খুঁজে পাওয়া যাচ্ছেনা"
 
 #: ../factory/SensorFactory.py:76
 msgid ""
 "A sensor could not be found. This usually means that it has not been "
 "installed."
 msgstr ""
-"Ilmaisinta ei löytynyt. Tämä yleensä tarkoittaa ettei sitä ole asennettu."
 
 #: ../gdesklets:27
 msgid "You must NOT run gDesklets as super user (root)."
-msgstr "gDeskletsiä EI tule ajaa ylläpitäjänä (root-käyttäjä)."
+msgstr ""
 
 #: ../gdesklets:47
 msgid "Checking requirements:"
-msgstr "Tarkistetaan riippuvuuksia:"
+msgstr ""
 
 #: ../gdesklets:51
 msgid "Python version >= %(pyver)s is required."
-msgstr "Pythonin versio >=%(pyver)s vaaditaan"
+msgstr ""
 
 #: ../gdesklets:56
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
-msgstr "Versio 1.95.7 ohjelmasta libexpat on rikki, päivitä se!"
+msgstr ""
 
 #: ../gdesklets:60
 msgid "SAX parser is required, some SuSE versions ship without it."
-msgstr "SAX-parseri vaaditaan: jotkut SuSE-versiot toimitetaan ilman sitä."
+msgstr ""
 
 #: ../gdesklets:65
 msgid ""
 "GTK python bindings (pygtk2) version >= %(pygtk_ver)s and GTK+ version >= "
 "%(gtk_ver)s are required."
 msgstr ""
-"GTK pythonsidonnat (pygtk2) versio >=%(pygtk_ver)s ja GTK+ versio "
-">=%(gtk_ver)s vaaditaan."
 
 #: ../gdesklets:71
 msgid ""
@@ -257,27 +247,27 @@ msgstr ""
 
 #: ../gdesklets:76
 msgid "bonobo python bindings are required."
-msgstr "Bonobon pythonsidokset vaaditaan."
+msgstr ""
 
 #: ../gdesklets:80
 msgid "DBus python bindings are useful, but optional."
-msgstr "DBus pythonsidonnat ovat käyttökelpoisia, mutta valinnaisia"
+msgstr ""
 
 #: ../gdesklets:89
 msgid "(optional) "
-msgstr "(valinnainen) "
+msgstr ""
 
 #: ../gdesklets:93
 msgid "found"
-msgstr "löytyi"
+msgstr ""
 
 #: ../gdesklets:97
 msgid "missing"
-msgstr "puuttuu"
+msgstr ""
 
 #: ../gdesklets:104
 msgid "Version check failed."
-msgstr "Versioiden tarkistus epäonnistui."
+msgstr ""
 
 #: ../gdesklets:107
 msgid ""
@@ -289,19 +279,10 @@ msgid ""
 "\n"
 "THE STARTUP WILL BE CANCELLED NOW!\n"
 msgstr ""
-"Varmista että vaaditut ohjelmat on asennettu.\n"
-"Yritä myös pitää huolta että samasta ohjelmasta tai kirjastosta ei ole\n"
-"useita versiota asennettuna.\n"
-"gDesklets ei toimi, jos kaikkia tarvittavia osia ei ole asennettu\n"
-"järjestelmääsi.\n"
-"\n"
-"gDeskletsin käynnistys keskeytetään nyt!\n"
 
 #: ../gdesklets:116
 msgid "Requirements checking done. Your system looks ok!"
 msgstr ""
-"Vaatimusten tarkistus on suoritettu onnistuneesti loppuun. Järjestelmäsi "
-"läpäisi testin!"
 
 #: ../gdesklets:123
 msgid ""
@@ -309,9 +290,6 @@ msgid ""
 "You're running gDesklets for the first time.\n"
 "gDesklets will start a requirements check now...\n"
 msgstr ""
-"\n"
-"Suoritat ohjelman gDesklets ensimmäistä kertaa.\n"
-"gDesklets tarkistaa aluksi riippuuvuutensa...\n"
 
 #: ../gdesklets:134
 msgid ""
@@ -334,24 +312,6 @@ msgid ""
 "  check             (Checks requirements)\n"
 "\n"
 msgstr ""
-"\n"
-"Tilaukset:\n"
-"  avaa <files> (Avaa annetun työpöytäkilkkeen tiedostot)\n"
-"  aloita (Suorittaa gDesklets-velhon, tämä on oletus)\n"
-"  pysäytä (Pysäyttää gDesklet-velhon)\n"
-"  lista (Listaa avoimet kilkkeet)\n"
-"  käynnistä uudelleen (Käynnistää uudelleen gDesklet-velhon)\n"
-"  profiili <profile> (Vaihtaa annettuun profiiliin\n"
-"  profiili (Näyttää nykyisen ja tarjolla olevat profiilit)\n"
-"  komentoikkuna (Avaa graafisen komentoikkunan)\n"
-"  lopeta (Lopettaa velhon -- käytä hätätilanteessa)\n"
-"  tila (Tarkistaa velhon tilan)\n"
-"  tietoja (Näyttää tietoa ohjelmasta gDeskelets)\n"
-"  versio (Näyttää ohjelman gDesklets version\n"
-"  asetukset (Avaa asetusten valintaikkunan)\n"
-"  ohje (Näyttää tämän tekstin)\n"
-"  tarkista (Tarkistaa vaatimukset\n"
-"\n"
 
 #: ../gdesklets:175
 #, c-format
@@ -359,211 +319,207 @@ msgid ""
 "Error while starting gdesklets-daemon\n"
 "More information about this crash is available in \"%s\"."
 msgstr ""
-"Virhe käynnistettäessä gdesklets-daemon:ia\n"
-"Lisätietoa tästä virheestä saat: \"%s\"."
 
 #: ../gdesklets:178
 #, c-format
 msgid "Exception was: %s\n"
-msgstr "Odotus oli: %s\n"
+msgstr ""
 
 #: ../gdesklets:203 ../gdesklets:289
 #, c-format
 msgid "Could not open desklet %s."
-msgstr "Sovelmaa \"%s\" ei voi avata."
+msgstr ""
 
 #: ../gdesklets:293
 msgid "Starting gdesklets-daemon..."
-msgstr "Käynnistetään gdesklets-daemon..."
+msgstr ""
 
 #: ../gdesklets:299
 msgid "Shutting down gdesklets-daemon..."
-msgstr "Sammutetaan gdesklets-daemon..."
+msgstr ""
 
 #: ../gdesklets:311
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
-msgstr "Nyt avoimet näytöt profiilissa \"%s\":\n"
+msgstr ""
 
 #: ../gdesklets:316
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
-msgstr "Tällä hetkellä profiilissa \"%s\" ei ole sovelmia"
+msgstr ""
 
 #: ../gdesklets:320
 msgid "Restarting gdesklets-daemon..."
-msgstr "Käynnistetään gdesklets-daemon uudestaan..."
+msgstr ""
 
 #: ../gdesklets:333
 msgid "gdesklets-daemon is running"
-msgstr "gdesklets-daemon on käynnissä"
+msgstr ""
 
 #: ../gdesklets:335
 msgid "gdesklets-daemon is not running"
-msgstr "gdesklets-daemon ei ole käynnissä"
+msgstr ""
 
 #: ../gdesklets:339
 #, c-format
 msgid "Current profile: %s"
-msgstr "Nykyinen profiili: %s"
+msgstr ""
 
 #: ../gdesklets:350
 #, c-format
 msgid "New profile: %s"
-msgstr "Uusi profiili: %s"
+msgstr ""
 
 #: ../gdesklets:353
 #, c-format
 msgid "Available profiles: %s"
-msgstr "Tarjolla olevat profiilit: %s"
+msgstr ""
 
 #: ../gdesklets:357
 msgid "This is %(prog_name)s, version %(prog_version)s."
-msgstr "Tämä on %(prog_name), versio %(prog_version)s"
+msgstr ""
 
 #: ../gdesklets:386
 msgid "Nothing to slay."
-msgstr "Ei mitään poistettavaa."
+msgstr ""
 
 #: ../gdesklets:410
 msgid "Invalid command. Please try one of the following commands:"
-msgstr "Virheellinen komento, kokeile jotain seuraavista komennoista:"
+msgstr ""
 
 #: ../gdesklets-daemon:35
 msgid "You need a recent version of PyGTK to run this program.\n"
-msgstr "Tarvitset PyGTK:n uuden version ajaaksesi tämän ohjelman.\n"
+msgstr ""
 
 #: ../gdesklets-daemon:60
 msgid "Could not fork daemon.\n"
-msgstr "Taustaprosessia ei voitu käynnistää.\n"
+msgstr ""
 
 #: ../gdesklets-daemon:69 ../gdesklets-daemon:75 ../gdesklets-daemon:92
 #, c-format
 msgid "The following error occurred: %s\n"
-msgstr "Tapahtui seuraava virhe: %s\n"
+msgstr ""
 
 #: ../libdesklets/convert.py:22
 #, python-format
 msgid "%.2f TB"
-msgstr "%.2f Tt"
+msgstr ""
 
 #: ../libdesklets/convert.py:24
 #, python-format
 msgid "%.2f GB"
-msgstr "%.2f Gt"
+msgstr ""
 
 #: ../libdesklets/convert.py:26
 #, python-format
 msgid "%.2f MB"
-msgstr "%.2f Mt"
+msgstr ""
 
 #: ../libdesklets/convert.py:28
 #, python-format
 msgid "%.2f kB"
-msgstr "%.2f kt"
+msgstr ""
 
 #: ../libdesklets/convert.py:30
 #, python-format
 msgid "%d B"
-msgstr "%d t"
+msgstr ""
 
 #: ../main/AboutDialog.py:21
 msgid "About gDesklets"
-msgstr "Tietoja gDeskletsistä"
+msgstr ""
 
 #: ../main/client.py:276
 #, python-format
 msgid "Connecting to daemon [%s]"
-msgstr "Otetaan yhteyttä palveimeen [%s]"
+msgstr ""
 
 #: ../main/client.py:293
 msgid ""
 "Cannot establish connection to daemon: timeout!\n"
 "The log file might help you solving the problem."
 msgstr ""
-"Yhteyttä taustaprosessiin ei saada: aikaviivekatkaisu!\n"
-"Lokitiedosto voi auttaa ongelman ratkaisemisessa."
 
 #: ../main/client.py:299
 #, python-format
 msgid "Connected to daemon in %d microseconds."
-msgstr "Yhdistettiin taustaprosessiin %d mikrosekunnissa."
+msgstr ""
 
 #: ../main/client.py:302
 #, python-format
 msgid "Connected to daemon in %d milliseconds."
-msgstr "Yhdistettiin taustaprosessiin %d millisekunnissa."
+msgstr ""
 
 #: ../main/__init__.py:68
 msgid "A desktop applet system for GNOME"
-msgstr "Työpöytäsovelat Gnomelle"
+msgstr ""
 
 #: ../main/__init__.py:81
 #, python-format
 msgid "Version %s"
-msgstr "Versio %s"
+msgstr ""
 
 #: ../main/__init__.py:84
 msgid "Core Programming:"
-msgstr "Ytimen ohjelmointi:"
+msgstr ""
 
 #: ../main/__init__.py:87
 msgid "Additional Programming:"
-msgstr "Muut ohjelmoijat:"
+msgstr ""
 
 #: ../main/__init__.py:90
 msgid "Architecture Design:"
-msgstr "Arkkitehtuurisuunnittelu:"
+msgstr ""
 
 #: ../main/__init__.py:93
 msgid "GNOME Integration:"
-msgstr "Gnome-integrointi:"
+msgstr ""
 
 #: ../main/__init__.py:96
 msgid "Documentation:"
-msgstr "Dokumentaario:"
+msgstr ""
 
 #: ../main/__init__.py:99
 msgid "Artwork:"
-msgstr "Grafiikat:"
+msgstr ""
 
 #: ../main/__init__.py:102
 msgid "Website:"
-msgstr "WWW-sivut:"
+msgstr ""
 
 #: ../main/__init__.py:105
 msgid "Thank you:"
-msgstr "Kiitokset:"
+msgstr ""
 
 #: ../main/Starter.py:101
 msgid "_Manage desklets"
-msgstr "_Hallitse työpöytäsovelmia"
+msgstr ""
 
 #: ../main/Starter.py:104
 msgid "_Configuration"
-msgstr "_Asetukset"
+msgstr ""
 
 #: ../main/Starter.py:106
 msgid "_View log"
-msgstr "_Näytä loki"
+msgstr ""
 
 #: ../main/Starter.py:108
 msgid "Check for _updates"
-msgstr "Tarkista _päivitykset"
+msgstr ""
 
 #: ../main/Starter.py:114
 msgid "_Stop daemon"
-msgstr "Py_säytä taustaprosessi"
+msgstr ""
 
 #: ../main/Starter.py:236
 #, python-format
 msgid "Could not open desklet file \"%s\""
-msgstr "Sovelmatiedostoa \"%s\" ei voi avata"
+msgstr ""
 
 #: ../main/Starter.py:237
 msgid ""
 "The desklet file could not be opened because the file was not readable."
-msgstr "Sovelman tiedostoa ei voi avata, koska tiedosto ei ole luettavissa."
+msgstr ""
 
 #: ../main/transition.py:39
 msgid ""
@@ -580,19 +536,6 @@ msgid ""
 "\n"
 "Experienced users are encouraged to try a bzr version, though!"
 msgstr ""
-"Tämä on epävakaa versio ohjelmasta gDesklets. Epävakaat versiot edustavat "
-"kehityksen tämänhetkistä tilaa ja voivat olla epävaikaita tai aiheuttaa "
-"ajoittain ongelmia.\n"
-"\n"
-"Jos olet uusi gDesklets-ohjelman käyttäjä, on siten erittäin suositeltavaa "
-"että <b>et</b> käyttäisi tätä versiota, vaan vakaata julkaisua!\n"
-"\n"
-"Jos kuitenkin haluat käyttää epävakaata versiota vakaan sijaan, "
-"arvostaisimme jos raportoisit kaikista epätavallisista ominaisuuksista "
-"kehittäjille.\n"
-"\n"
-"Haluamme rohkaista edistyneempiä käyttäjiä kuitenkin kokeilemaan bzr-"
-"versiota!"
 
 #: ../main/transition.py:51
 #, python-format
@@ -605,13 +548,6 @@ msgid ""
 "\n"
 "Thanks for testing this release candidate!"
 msgstr ""
-"Tämä on <b>julkaisuehdokas</b> tulevasta gDesklets-julkaisusta.\n"
-"Kokeile sitä, ja raportoi virheet osoitteeseen %(URL)s\n"
-"Tämä versio saattaa sekoittaa asetuksesi tai se ei palauta niitä "
-"aikaisemmasta julkaisusta. Useimmissa tapauksissa tämä on tarkoituksellista, "
-"sillä gDesklets on vielä kehityksensä alkuvaiheessa.\n"
-"\n"
-"Kiitos julkaisuehdokkaan kokeilusta!"
 
 #. our informative transition message which we can change with
 #. every release
@@ -626,50 +562,41 @@ msgid ""
 "Please note that due to limitations of older X servers, you might see blocks "
 "around desklets in Float mode. This cannot be solved in a satisfying way."
 msgstr ""
-"Tässä gDesklets-ohjelman versiossa on Leijunta-ominaisuus: paina näppäintä "
-"ja kaikki kilkkeesi tulevat eteen, leijuvat ohjelmiesi yllä, kunnes painat "
-"mitä tahansa näppäintä uudelleen!\n"
-"Oletusarvoinen näppäinyhdistelmä on &lt;Shift&gt; &lt;F12&gt;,mutta voit "
-"muuttaa sen helposti asetusikkunasta.\n"
-"\n"
-"Ole hyvä ja ota huomioon että vanhemman X-palvelinten rajoituksista johtuen "
-"saatat huomata estoja Leijunta-ominaisuudessa. Tätä ei saa korjattua "
-"tyydyttävällä tavalla."
 
 #: ../main/transition.py:76
 msgid "Please note (this message will appear only once):"
-msgstr "Huomautus (tämä viesti näytetään vain kerran):"
+msgstr ""
 
 #: ../plugin/Interface.py:212 ../plugin/Interface.py:239
 msgid "no description"
-msgstr "ei kuvausta"
+msgstr ""
 
 #: ../scripting/Script.py:157
 msgid "Error in add_timer function"
-msgstr "Virhe funktiossa add_timer"
+msgstr ""
 
 #: ../scripting/Script.py:158
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
-msgstr "\"%s\" ei ole kelvollinen kokonaisluku!"
+msgstr ""
 
 #: ../scripting/Script.py:177
 #, python-format
 msgid "Timer ident '%s' was not found"
-msgstr "Ajastintunnistetta '%s' ei löytynyt"
+msgstr ""
 
 #: ../scripting/Script.py:213
 #, python-format
 msgid "No Control could be found for interface %s"
-msgstr "Ohjainta liittymälle %s ei löydy"
+msgstr ""
 
 #: ../scripting/Script.py:215
 msgid "This means that a functionality won't be available during execution!"
-msgstr "Tämä tarkoittaa että osa toiminnoista ei ole käytettävissä!"
+msgstr ""
 
 #: ../scripting/Script.py:254
 msgid "Security Risk"
-msgstr "Turvallisuusriski"
+msgstr ""
 
 #: ../scripting/Script.py:255
 #, python-format
@@ -684,27 +611,18 @@ msgid ""
 "If you are sure that the command is harmless, you may permanently allow this "
 "desklet instance to run it."
 msgstr ""
-"Kilke %(desklet_name)s haluaa suorittaa järjestelmäkomennon:\n"
-"\n"
-"     <tt><b>(cmd)s</b></tt>\n"
-"\n"
-"Suojellaksesi järjestelmääsi haittaohjelmilta, voit estää tämän toiminnon "
-"suorittamisen.\n"
-"\n"
-"Jos olet varma, että komento on vaaraton, voit sallia pysyvästi tämän kilke-"
-"esimerkin suorittamaan sitä."
 
 #: ../scripting/Script.py:268
 msgid "Deny!"
-msgstr "Estä!"
+msgstr ""
 
 #: ../scripting/Script.py:269
 msgid "Allow once"
-msgstr "Salli kerran"
+msgstr ""
 
 #: ../scripting/Script.py:270
 msgid "Allow for this desklet"
-msgstr "Salli tälle sovelmalle"
+msgstr ""
 
 #: ../scripting/ControlWrapper.py:28
 #, python-format
@@ -740,150 +658,147 @@ msgstr ""
 
 #: ../Sensors/FontSelector/__init__.py:86
 msgid "Fonts"
-msgstr "Kirjasinlajit"
+msgstr ""
 
 #: ../Sensors/FontSelector/__init__.py:87
 msgid "Fonts settings"
-msgstr "Kirjasinasetukset"
+msgstr ""
 
 #: ../Sensors/FontSelector/__init__.py:90
 #, python-format
 msgid "Font #%i:"
-msgstr "Kirjasin #%i:"
+msgstr ""
 
 #: ../Sensors/FontSelector/__init__.py:92
 #, python-format
 msgid "Font #%i used in the labels"
-msgstr "Otsikoissa käytettävä kirjasin #%i"
+msgstr ""
 
 #: ../Sensors/FontSelector/__init__.py:93
 #, python-format
 msgid "Font color #%i:"
-msgstr "Kirjasimen väri #%i:"
+msgstr ""
 
 #: ../Sensors/FontSelector/__init__.py:95
 #, python-format
 msgid "Font color #%i used in the labels"
-msgstr "Otsikoissa käytetyn kirjasimen väri #%i"
+msgstr ""
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:16
 #, python-format
 msgid "%s Control"
-msgstr "%s ohjain"
+msgstr ""
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:54
 msgid "Interface Name"
-msgstr "Liittymän nimi"
+msgstr ""
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:57
 msgid "Property Name"
-msgstr "Ominaisuuden nimi"
+msgstr ""
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:60
 msgid "Property Access"
-msgstr "Ominaisuuden pääsyoikeus"
+msgstr ""
 
 #: ../shell/plugins/ControlBrowser/ControlInspector.py:63
 msgid "Property Description"
-msgstr "Ominaisuuden kuvaus"
+msgstr ""
 
 #: ../shell/plugins/ControlBrowser/__init__.py:27
 msgid "by interface"
-msgstr "liittymän mukaan"
+msgstr ""
 
 #: ../shell/plugins/ControlBrowser/__init__.py:28
 #: ../shell/plugins/DisplayBrowser/__init__.py:85
 msgid "alphabetically"
-msgstr "aakkosjärjestyksessä"
+msgstr ""
 
 #: ../shell/plugins/ControlBrowser/__init__.py:72
 #, python-format
 msgid "Found %d controls."
-msgstr "Löytyi %d ohjainta."
+msgstr ""
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
 #: ../shell/plugins/DisplayBrowser/__init__.py:189
 msgid "Invalid search expression."
-msgstr "Virheellinen hakulauseke."
+msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:43
 msgid "R_emove selected desklet"
-msgstr "_Poista valittu sovelma"
+msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:46
 msgid "_Run (remote) desklet..."
-msgstr "_Suorita (etä)sovelma..."
+msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:48
 msgid "R_un selected desklet"
-msgstr "S_uorita valittu sovelma"
+msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:83
 msgid "by category"
-msgstr "luokan mukaan"
+msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:84
 msgid "by author"
-msgstr "kirjoittajan mukaan"
+msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:147
 msgid "There is a saved instance of this display."
-msgstr "Tästä näytöstä tallennettu esimerkki."
+msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:148
 msgid "Would you like to open this?"
-msgstr "Haluatko avata tämän?"
+msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:161
 msgid "Could not remove"
-msgstr "Ei voi poistaa"
+msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
 msgstr ""
-"Sovelmatiedostoa ei voitu poistaa. Tämä tarkoittaa yleensä ettei sinulla ole "
-"siihen kirjoitusoikeuksia."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:173
 msgid "Do you really want to remove this desklet ?"
-msgstr "Haluatko varmasti poistaa tämän sovelman?"
+msgstr "আপনি কি সত্যি এই ডেস্কলেটকে বাদ দিতে চান?"
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid ""
 "The desklet will be removed from your system and no longer be available."
 msgstr ""
-"Sovelma poistetaan tietokoneeltasi eikä se ole enää myöhemmin käytettävissä."
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:186
 #, python-format
 msgid "Found %d desklets"
-msgstr "Löytyi %d työpöytäsovelmaa"
+msgstr ""
 
 #: ../shell/plugins/DisplayBrowser/__init__.py:208
 msgid "No description available"
-msgstr "Kuvausta ei ole saatavilla"
+msgstr ""
 
 #: ../shell/plugins/Help/__init__.py:37
 msgid "_Help"
-msgstr "O_hje"
+msgstr ""
 
 #: ../shell/plugins/Help/__init__.py:38
 msgid "_Contents"
-msgstr "_Sisältö"
+msgstr ""
 
 #: ../shell/plugins/Help/__init__.py:39
 msgid "_Tip of the Day"
-msgstr "_Päivän vihje"
+msgstr ""
 
 #: ../shell/plugins/Help/TipOfTheDay.py:24
 msgid "Tip of the Day"
-msgstr "Päivän vihje"
+msgstr ""
 
 #: ../shell/plugins/Help/TipOfTheDay.py:32
 msgid "Show tips at startup"
-msgstr "Näytä vihjeet käynnistettäessä"
+msgstr ""
 
 #: ../shell/plugins/Help/tips.py:2
 msgid ""
@@ -894,12 +809,6 @@ msgid ""
 "and\n"
 "http://gdesklets.zencomputer.ca/"
 msgstr ""
-"Löydät useita sovelmia gDeskletsin kanssa\n"
-"käytettäväksi osoitteista\n"
-"\n"
-"http://www.gdesklets.org\n"
-"ja\n"
-"http://gdesklets.zencomputer.za/"
 
 #: ../shell/plugins/Help/tips.py:9
 msgid ""
@@ -907,17 +816,12 @@ msgid ""
 "dragging the download link for the package\n"
 "from your web browser into the gDesklets Shell."
 msgstr ""
-"Voit asentaa uusia sovelmia helposti raahaamalla\n"
-"paketin noutolinkin selaimestasi gDeskletsin\n"
-"ikkunaan."
 
 #: ../shell/plugins/Help/tips.py:13
 msgid ""
 "Click the right mouse button on a desktop\n"
 "applet or press F10 to open the popup menu."
 msgstr ""
-"Napsauta oikeata hiiren painiketta sovelman\n"
-"kohdalla tai paina F10 avataksesi ponnahdusikkunan."
 
 #: ../shell/plugins/Help/tips.py:16
 msgid ""
@@ -928,12 +832,6 @@ msgid ""
 "hold down both of them simultaneously\n"
 "in order to simulate the middle button."
 msgstr ""
-"Voit siirtää sovelmia näytöllä pitämällä\n"
-"hiiren keskinappia pohjassa ja raahaamalla.\n"
-"\n"
-"Jos hiiressäsi on vain kaksi painiketta,\n"
-"voit simuloida keskipainiketta pitämällä\n"
-"molempia painikkeita samanaikaisesti alhaalla."
 
 #: ../shell/plugins/Help/tips.py:23
 msgid ""
@@ -945,21 +843,12 @@ msgid ""
 "\n"
 "Empty profiles get discarded automatically."
 msgstr ""
-"Sinulla voi olla erilaisia työpöytäsovelmien\n"
-"profiileja ja voit vaihdella niiden välillä.\n"
-"\n"
-"Valitse \"Profiilit->Uusi profiili...\" valikosta, \n"
-"jos haluat luoda uusia profiileja.\n"
-"\n"
-"Tyhjät profiilit poistetaan automaattisesti."
 
 #: ../shell/plugins/Help/tips.py:31
 msgid ""
 "The search bar accepts complex search\n"
 "expressions for finding your applets."
 msgstr ""
-"Hakupalkki hyväksyy monimutkaisia haku-\n"
-"lausekkeita sovelmien etsimiseksi."
 
 #: ../shell/plugins/Help/tips.py:34
 msgid ""
@@ -968,10 +857,6 @@ msgid ""
 " ? matches any one character\n"
 " * matches zero or more characters"
 msgstr ""
-"Hakulausekkeet voivat sisältää jokerimerkkejä:\n"
-"\n"
-" ? täsmää yhteen merkkiin\n"
-" * täsmää yhteen tai useampaan merkkiin"
 
 #: ../shell/plugins/Help/tips.py:39
 msgid ""
@@ -979,99 +864,93 @@ msgid ""
 "Write your own!  See the Developer's\n"
 "book for more details."
 msgstr ""
-"Onko sinulla hyvä idea sovelmasta?\n"
-"Toteuta omasi! Katso lisäohjeita\n"
-"kehittäjän käsikirjasta."
 
 #: ../shell/plugins/PackageInstaller/Downloader.py:29
 msgid "Retrieving:"
-msgstr "Noudetaan:"
+msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:26
 msgid "I_nstall remote package..."
-msgstr "Asenna _etäpaketti..."
+msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:27
 msgid "_Install package..."
-msgstr "_Asenna paketti..."
+msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:97
 msgid "Invalid package"
-msgstr "Virheellinen paketti"
+msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:98
 msgid ""
 "The supplied file could not be opened as a package. It is either corrupted "
 "or not of the correct file type."
 msgstr ""
-"Annettua tiedostoa ei voi avata pakettina. Se on joko vioittunut tai ei ole "
-"oikean tyyppinen tiedosto."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:115
 msgid "Installation failed"
-msgstr "Asennus epäonnistui"
+msgstr ""
 
 #: ../shell/plugins/PackageInstaller/__init__.py:116
 msgid ""
 "The package could not be installed because it contained no installable files."
 msgstr ""
-"Pakettia ei voitu asentaa, koska se ei sisältänyt asenuskelpoisia tiedostoja."
 
 #: ../shell/plugins/PackageInstaller/__init__.py:119
 msgid "Installation complete"
-msgstr "Asennus on valmis"
+msgstr ""
 
 #: ../shell/plugins/Profiles/__init__.py:18
 msgid "_Profiles"
-msgstr "_Profiiilit"
+msgstr ""
 
 #: ../shell/plugins/Profiles/__init__.py:20
 msgid "New profile..."
-msgstr "Uusi profiili..."
+msgstr ""
 
 #: ../shell/plugins/Profiles/__init__.py:75
 msgid "New profile"
-msgstr "Uusi profiili"
+msgstr ""
 
 #: ../shell/plugins/Profiles/__init__.py:76
 msgid "Enter the name for a new profile"
-msgstr "Syötä nimi uudelle profiilille"
+msgstr ""
 
 #: ../shell/plugins/Shell/__init__.py:62
 msgid "_File"
-msgstr "_Tiedosto"
+msgstr ""
 
 #: ../shell/SearchBar.py:20
 msgid "Search"
-msgstr "Etsi"
+msgstr ""
 
 #: ../utils/dialog.py:46
 #, python-format
 msgid "_Details (%d lines)"
-msgstr "_Yksityiskohdat (%d riviä)"
+msgstr ""
 
 #: ../utils/dialog.py:202
 msgid "_Ignore errors from this desklet"
-msgstr "Älä huomioi virheitä sovelmalta"
+msgstr ""
 
 #: ../utils/DOM.py:32
 msgid "An invalid graphics code was loaded into a canvas."
-msgstr "Virheellinen grafiikkakoodi ladattiin kankaaseen."
+msgstr ""
 
 #: ../utils/DOM.py:153
 #, python-format
 msgid "No such element: %s"
-msgstr "Elementtiä ei löydy: %s"
+msgstr ""
 
 #: ../utils/DOM.py:154
 #, python-format
 msgid "The element with ID <b>%s</b> does not exist in the SVG image."
-msgstr "Elementtiä tunnisteella <b>%s</b> ei löydy SVG-kuvasta."
+msgstr ""
 
 #: ../utils/DOM.py:182 ../utils/Element.py:91
 #, python-format
 msgid "No such property: %(property)s"
-msgstr "Ei tällaista ominaisuutta: %(property)s"
+msgstr ""
 
 #: ../utils/DOM.py:183
 #, python-format
@@ -1079,29 +958,26 @@ msgid ""
 "The SVG element <b>%(tag)s</b> does not have the <b>%(property)s</b> "
 "property."
 msgstr ""
-"SVG-elementillä <b>%(tags</b> ei ole ominaisuutta <b>%(property)s</b>"
 
 #: ../utils/Element.py:92
 #, python-format
 msgid ""
 "The element <b>%(tag)s</b> does not have the <b>%(property)s</b> property."
-msgstr "Elementillä <b>%(tag)s</b> ei ole ominaisuutta <b>%(property)s</b>."
+msgstr ""
 
 #: ../utils/Element.py:97 ../utils/Element.py:131
 msgid "Permission Error"
-msgstr "Pääsyvirhe"
+msgstr ""
 
 #: ../utils/Element.py:98
 #, python-format
 msgid ""
 "The property <b>%(property)s</b> of element <b>%(tag)s</b> is not writable."
 msgstr ""
-"Elementin <b>%(tag)s</b> ominaisuus <b>%(property)s</b> ei ole "
-"kirjoituskelpoinen."
 
 #: ../utils/Element.py:107
 msgid "Type Error"
-msgstr "Tyyppivirhe"
+msgstr ""
 
 #: ../utils/Element.py:108
 #, python-format
@@ -1110,14 +986,11 @@ msgid ""
 "wrong type.\n"
 "Expected <b>%(guessed_type)s</b>, but got <b>%(actual_type)s</b>."
 msgstr ""
-"Elementin <b>%(tag)s</b> ominaisuudella <b>%(property)s</b> on "
-"vääräntyyppinen arvo.\n"
-"Oletettu arvo: <b>%(guessed_type)s</b>, mutta arvo on <b>%(actual_type)s</b>"
 
 #: ../utils/Element.py:127
 #, python-format
 msgid "Error: No such property: %(property)s"
-msgstr "Virhe: ei tuollaista ominaisuutta: %(property)s"
+msgstr ""
 
 #: ../utils/Element.py:132
 #, python-format
@@ -1127,15 +1000,15 @@ msgstr ""
 
 #: ../utils/error.py:158
 msgid "Runtime Error"
-msgstr "Ajonaikainen virhe"
+msgstr ""
 
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
-msgstr "Tapahtui virhe suoritettaessa sovelmaa."
+msgstr ""
 
 #: ../utils/UpdateChecker.py:132
 msgid "A version update is available"
-msgstr "Versiopäivitys on saatavilla"
+msgstr ""
 
 #: ../utils/UpdateChecker.py:133
 #, python-format
@@ -1144,16 +1017,14 @@ msgid ""
 "\n"
 "Version %(newer_version)s is available at %(URL)s."
 msgstr ""
-"Käytät versiota %(version)s.\n"
-"Versio %(newer_version)s on saatavilla osoitteesta %(URL)s"
 
 #: ../utils/UpdateChecker.py:139
 msgid "_Stop reminding me"
-msgstr "_Lopeta muistuttaminen"
+msgstr ""
 
 #: ../utils/UpdateChecker.py:140
 msgid "_Remind me again"
-msgstr "_Muistuta minua uudestaan"
+msgstr ""
 
 #: ../utils/UpdateChecker.py:142
 msgid "No version updates available"
@@ -1163,93 +1034,3 @@ msgstr ""
 #, python-format
 msgid "You are running the latest version (%(version)s)."
 msgstr ""
-
-#~ msgid "Python version >= 2.3.0 is required."
-#~ msgstr "Vaaditaan python-versio 2.3.0 tai uudempi."
-
-#~ msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
-#~ msgstr ""
-#~ "Vaaditaan ORBitin python-sidokset (pyorbit) versio 2.0.1 tai uudempi."
-
-#, c-format
-#~ msgid ""
-#~ "\n"
-#~ "%s\n"
-#~ msgstr ""
-#~ "\n"
-#~ "%s\n"
-
-#, c-format
-#~ msgid "This is %s, version %s."
-#~ msgstr "Tämä on %s, versio %s."
-
-#~ msgid "_About..."
-#~ msgstr "_Tietoja..."
-
-#~ msgid ""
-#~ "This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
-#~ "Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
-#~ "This version might break your configuration or it won't restore it from an "
-#~ "earlier release. In most cases this is intentional, since gDesklets is still "
-#~ "in its early stages of development.\n"
-#~ "\n"
-#~ "Thanks for testing this release candidate!"
-#~ msgstr ""
-#~ "Tämä on <b>julkaisuehdokas</b> tulevalle gdesklets-julkaisulle.\n"
-#~ "Testaa sitä ja raportoi löytämäsi ongelmat osoitteessa "
-#~ "i>http://bugzilla.gnome.org</i>.\n"
-#~ "Tämä versio saattaa rikkoa asetuksesi tai se ei ehkä osaa palautua aiemman "
-#~ "julkaisun asetuksista. Useimmissa tapauksissa tämä on tarkoituksellista, "
-#~ "koska gDesklets on vielä varhaisessa kehitysvaiheessa.\n"
-#~ "\n"
-#~ "Kiitos tämän julkaisuehdokkaan testaamisesta!"
-
-#, python-format
-#~ msgid ""
-#~ "The desklet %s wants to execute a system command:\n"
-#~ "\n"
-#~ "     <tt><b>%s</b></tt>\n"
-#~ "\n"
-#~ "To protect your system from malicious programs, you can deny the execution "
-#~ "of this command.\n"
-#~ "\n"
-#~ "If you are sure that the command is harmless, you may permanently allow this "
-#~ "desklet instance to run it."
-#~ msgstr ""
-#~ "Sovelma %s haluaa suorittaa järjestelmäkomennon:\n"
-#~ "\n"
-#~ "     <tt><b>%s</b></tt>\n"
-#~ "\n"
-#~ "Jotta voit suojata järjestelmääsi haittaohjelmilta, voit estää tämän "
-#~ "komennon suorittamisen.\n"
-#~ "\n"
-#~ "Jos olet varma että komento on harmiton, voit pysyvästi sallia tämän "
-#~ "sovelman suorituksen tälle komennolle."
-
-#, python-format
-#~ msgid "No such property: %s"
-#~ msgstr "Ominaisuutta ei löydy: %s"
-
-#, python-format
-#~ msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
-#~ msgstr "SVG-elementti <b>%s</b> ei sisällä ominaisuutta <b>%s</b>."
-
-#, python-format
-#~ msgid "The element <b>%s</b> does not have the <b>%s</b> property."
-#~ msgstr "Elementti <b>%s</b> ei sisällä ominaisuutta <b>%s</b>."
-
-#, python-format
-#~ msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
-#~ msgstr "Ominaisuus <b>%s</b> elementissä <b>%s</b> ei ole kirjoitettavissa."
-
-#, python-format
-#~ msgid ""
-#~ "The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
-#~ "Expected <b>%s</b>, but got <b>%s</b>."
-#~ msgstr ""
-#~ "Ominaisuus <b>%s</b> elementissä <b>%s</b> sisälsi vääräntyyppisen arvon.\n"
-#~ "Oletettiin <b>%s</b> mutta saatiin <b>%s</b>."
-
-#, python-format
-#~ msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
-#~ msgstr "Ominaisuus <b>%s</b> elementissä <b>%s</b> ei ole luettavissa."

@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-29 09:28-0300\n"
-"PO-Revision-Date: 2010-01-16 23:11+0000\n"
+"POT-Creation-Date: 2010-10-05 20:47-0400\n"
+"PO-Revision-Date: 2010-08-28 20:30+0000\n"
 "Last-Translator: Kārlis Šteinbergs <Unknown>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-05-23 03:04+0000\n"
+"X-Launchpad-Export-Date: 2010-11-13 20:56+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../config/ConfigDialog.py:115
@@ -86,17 +86,25 @@ msgid "Show _notification while loading a desklet"
 msgstr "Parādīt brīdi_nājumus, kamēr ielādē deskletu"
 
 #: ../config/DaemonConfigger.py:31
+msgid "Automatically check for _updates (takes effect after restart)"
+msgstr "Automātiski pārbaudīt atja_uninājumus (stājas spējā pēc restarta)"
+
+#: ../config/DaemonConfigger.py:33
 msgid "Key for toggling Float mode:"
 msgstr "Atslēga, lai pārslēgtos peldošajā režīmā:"
 
-#: ../config/DaemonConfigger.py:43 ../config/DisplayConfigger.py:27
+#: ../config/DaemonConfigger.py:45 ../config/DisplayConfigger.py:27
 #: ../display/DisplayConfigurator.py:16
 msgid "Configuration"
 msgstr "Konfigurācija"
 
-#: ../data/gdesklets.desktop.in.h:1 ../main/__init__.py:58
-msgid "A desktop applet system for GNOME"
-msgstr "Ekrāna sīklietotņu sistēma GNOME videi"
+#: ../data/gdesklets.desktop.in.h:1
+msgid "Desktop Widgets"
+msgstr "Darbvirsmas sīkrīki"
+
+#: ../data/gdesklets.desktop.in.h:2
+msgid "Eye candy for your desktop"
+msgstr "Jūsu darba virsmas skaistumam"
 
 #: ../data/gdesklets.xml.in.h:1
 msgid "gDesklets display"
@@ -106,50 +114,51 @@ msgstr "gDeskleta ekrāns"
 msgid "_Configure desklet"
 msgstr "_Konfigurēt deskletu"
 
-#: ../display/Display.py:88
+#: ../display/Display.py:89
 msgid "_Move desklet"
 msgstr "_Pārvietot deskletu"
 
-#: ../display/Display.py:91
+#: ../display/Display.py:92
 msgid "_View Source"
 msgstr "_Aplūkot pirmkodu"
 
-#: ../display/Display.py:94
+#: ../display/Display.py:96
 msgid "Re_start desklet"
 msgstr "Pār_startēt deskletu"
 
-#: ../display/Display.py:96
+#: ../display/Display.py:99
 msgid "_Remove desklet"
 msgstr "_Aizvākt deskletu"
 
-#: ../display/Display.py:98
+#: ../display/Display.py:102
 msgid "_Disable desklet"
 msgstr "Atslēgt _deskletu"
 
-#: ../display/Display.py:101
+#: ../display/Display.py:106 ../main/Starter.py:111
+#: ../shell/plugins/Help/__init__.py:42
 msgid "_About"
 msgstr "P_ar"
 
-#: ../display/Display.py:340
+#: ../display/Display.py:346
 msgid "_Readme"
 msgstr "_Lasi mani"
 
-#: ../display/Display.py:1123 ../shell/plugins/DisplayBrowser/__init__.py:174
-msgid "Do you really want to remove this desklet ?"
-msgstr "Vai Jūs tiešām vēlaties aizvākt šo deskletu ?"
+#: ../display/Display.py:1134
+msgid "Do you really want to remove this desklet?"
+msgstr ""
 
-#: ../display/Display.py:1124
+#: ../display/Display.py:1135
 msgid ""
 "This desklet will no longer be displayed and its configuration will be "
 "purged."
 msgstr "Šis desklets vairāk netiks rādīts un tā uzstādījumi tiks dzēsti."
 
-#: ../display/DisplayTarget.py:417
+#: ../display/DisplayTarget.py:420
 #, python-format
 msgid "Element \"%s\" does not exist"
 msgstr "Elements \"%s\" neeksistē"
 
-#: ../display/DisplayTarget.py:418
+#: ../display/DisplayTarget.py:421
 msgid ""
 "The <tt>relative-to</tt> property requires a reference to an existing "
 "display element within the same parent container."
@@ -190,12 +199,12 @@ msgstr "Fails, kurš satur skriptu nav derīgs tālākai izpildei."
 msgid "Could not load sensor"
 msgstr "Nespēja ielādēt sensoru"
 
-#: ../factory/DisplayFactory.py:243
+#: ../factory/DisplayFactory.py:248
 #, python-format
 msgid "&lt;%s&gt; needs a bind attribute"
 msgstr "&lt;%s&gt; nepieciešams piesaistīts atribūts"
 
-#: ../factory/DisplayFactory.py:245
+#: ../factory/DisplayFactory.py:250
 msgid "The &lt;prefs&gt; section of this desklet file is broken."
 msgstr "&lt;prefs&gt; sektors šai deskleta datnei ir sabojāts."
 
@@ -219,55 +228,53 @@ msgid "Checking requirements:"
 msgstr "Pārbauda vajadības:"
 
 #: ../gdesklets:51
-msgid "Python version >= 2.3.0 is required."
-msgstr "Nepieciešama Python versija >= 2.3.0"
+msgid "Python version >= %(pyver)s is required."
+msgstr "Nepieciešama Python >= %(pyver)"
 
-#: ../gdesklets:55
+#: ../gdesklets:56
 msgid "libexpat version 1.95.7 is broken. Please upgrade!"
 msgstr "libexpat versija 1.95.7 ir bojāta. Lūdzu atjaunojiet!"
 
-#: ../gdesklets:58
+#: ../gdesklets:60
 msgid "SAX parser is required, some SuSE versions ship without it."
 msgstr "Ir nepieciešams SAX parsētājs, dažas SuSE versijas iztiek bez tā."
 
-#: ../gdesklets:62
+#: ../gdesklets:65
 msgid ""
-"GTK python bindings (pygtk2) version >= 2.10.0 and GTK+ version >= 2.10.0 "
-"are required."
+"GTK python bindings (pygtk2) version >= %(pygtk_ver)s and GTK+ version >= "
+"%(gtk_ver)s are required."
 msgstr ""
-"Ir nepieciešama GTK python saites (pygtk2) versija >= 2.10.0 un GTK+ versija "
-">= 2.10.0."
 
-#: ../gdesklets:66
-msgid "ORBit python bindings (pyorbit) version >= 2.0.1 are required."
-msgstr "Ir nepieciešama ORBit python saites (pyorbit) versija >= 2.0.1."
+#: ../gdesklets:71
+msgid ""
+"ORBit python bindings (pyorbit) version >= %(pyorbit_ver)s are required."
+msgstr ""
 
-#: ../gdesklets:69
+#: ../gdesklets:76
 msgid "bonobo python bindings are required."
 msgstr "Ir nepieciešami bonobo python saistījumi."
 
-#: ../gdesklets:78
+#: ../gdesklets:80
+msgid "DBus python bindings are useful, but optional."
+msgstr ""
+
+#: ../gdesklets:89
+msgid "(optional) "
+msgstr "(izvēles) "
+
+#: ../gdesklets:93
 msgid "found"
 msgstr "atrasts"
 
-#: ../gdesklets:82
+#: ../gdesklets:97
 msgid "missing"
 msgstr "trūkst"
 
-#: ../gdesklets:88
+#: ../gdesklets:104
 msgid "Version check failed."
 msgstr "Versijas pārbaude nav izdevusies."
 
-#: ../gdesklets:89
-#, c-format
-msgid ""
-"\n"
-"%s\n"
-msgstr ""
-"\n"
-"%s\n"
-
-#: ../gdesklets:90
+#: ../gdesklets:107
 msgid ""
 "Please make sure that the required software is installed.\n"
 "Also try to avoid having multiple versions of a library/binding on your "
@@ -285,11 +292,11 @@ msgstr ""
 "\n"
 "STARTĒŠANA TIKS ATCELTA TAGAD!\n"
 
-#: ../gdesklets:99
+#: ../gdesklets:116
 msgid "Requirements checking done. Your system looks ok!"
 msgstr "Prasību pārbaude pabeigta. Jūsu sistēma izskatās atbilstoša!"
 
-#: ../gdesklets:106
+#: ../gdesklets:123
 msgid ""
 "\n"
 "You're running gDesklets for the first time.\n"
@@ -299,7 +306,7 @@ msgstr ""
 "Jūs palaižat gDeskletu pirmo reizi.\n"
 "gDesklets sāks prasību pārbaudi tagad...\n"
 
-#: ../gdesklets:117
+#: ../gdesklets:134
 msgid ""
 "\n"
 "Orders:\n"
@@ -339,7 +346,7 @@ msgstr ""
 "  check             (Pārbauda prasības)\n"
 "\n"
 
-#: ../gdesklets:158
+#: ../gdesklets:175
 #, c-format
 msgid ""
 "Error while starting gdesklets-daemon\n"
@@ -348,109 +355,83 @@ msgstr ""
 "Kļūda palaižot gdesklets-daemon\n"
 "Vairāk informācijas par šo kļūdu varat iegūt \"%s\"."
 
-#: ../gdesklets:161
+#: ../gdesklets:178
 #, c-format
 msgid "Exception was: %s\n"
 msgstr "Izņēmums bija: %s\n"
 
-#: ../gdesklets:186 ../gdesklets:272
+#: ../gdesklets:203 ../gdesklets:289
 #, c-format
 msgid "Could not open desklet %s."
 msgstr "Nevarēja atvērt dekletu %s."
 
-#: ../gdesklets:204
-#, c-format
-msgid "%prog [options] order"
-msgstr "%prog [opcijas] kārtība"
-
-#: ../gdesklets:209
-msgid "Avoid to show the icon on the tray"
-msgstr "Nerādīt šo ikonu sistēmas ikonu joslā"
-
-#: ../gdesklets:215
-msgid "Debug the application"
-msgstr "Atkļūdot programmu"
-
-#: ../gdesklets:221
-msgid "Launch pre-existing display "
-msgstr "Palaist eksistējošu ekrānu "
-
-#: ../gdesklets:228
-msgid "Session manager prefix"
-msgstr "Sesiju pārvaldnieka prefikss"
-
-#: ../gdesklets:233
-msgid "Session manager ID"
-msgstr "Sesiju pārvaldnieka ID"
-
-#: ../gdesklets:276
+#: ../gdesklets:293
 msgid "Starting gdesklets-daemon..."
 msgstr "Startē gdeskleta dēmonu..."
 
-#: ../gdesklets:282
+#: ../gdesklets:299
 msgid "Shutting down gdesklets-daemon..."
 msgstr "Izslēdz gdeskleta dēmonu..."
 
-#: ../gdesklets:294
+#: ../gdesklets:311
 #, c-format
 msgid "Currently open displays in profile \"%s\":\n"
 msgstr "Pašlaik atvērtie ekrāni profilā \"%s\":\n"
 
-#: ../gdesklets:299
+#: ../gdesklets:316
 #, c-format
 msgid "Currently there aren't any desklets in profile \"%s\""
 msgstr "Pašlaik profilā \"%s\" nav neviena deskleta"
 
-#: ../gdesklets:303
+#: ../gdesklets:320
 msgid "Restarting gdesklets-daemon..."
 msgstr "Pārstartē gdeskleta dēmonu..."
 
-#: ../gdesklets:316
+#: ../gdesklets:333
 msgid "gdesklets-daemon is running"
 msgstr "gdesklets dēmons darbojas"
 
-#: ../gdesklets:318
+#: ../gdesklets:335
 msgid "gdesklets-daemon is not running"
 msgstr "gdeskleta dēmons nedarbojas"
 
-#: ../gdesklets:322
+#: ../gdesklets:339
 #, c-format
 msgid "Current profile: %s"
 msgstr "Pašreizējais profils: %s"
 
-#: ../gdesklets:333
+#: ../gdesklets:350
 #, c-format
 msgid "New profile: %s"
 msgstr "Jauns profils: %s"
 
-#: ../gdesklets:336
+#: ../gdesklets:353
 #, c-format
 msgid "Available profiles: %s"
 msgstr "Pieejamie profili: %s"
 
-#: ../gdesklets:340
-#, c-format
-msgid "This is %s, version %s."
-msgstr "Šis ir %s, versija %s."
+#: ../gdesklets:357
+msgid "This is %(prog_name)s, version %(prog_version)s."
+msgstr "Šī ir %(prog_name)s, versija %(prog_version)s."
 
-#: ../gdesklets:368
+#: ../gdesklets:386
 msgid "Nothing to slay."
 msgstr "Nav ko aizvērt."
 
-#: ../gdesklets:392
+#: ../gdesklets:410
 msgid "Invalid command. Please try one of the following commands:"
 msgstr "Nederīga komanda. Lūdzu mēģiniet kādu no sekojošajām komandām:"
 
-#: ../gdesklets-daemon:27
+#: ../gdesklets-daemon:35
 msgid "You need a recent version of PyGTK to run this program.\n"
 msgstr ""
 "Jums ir nepieciešama jaunāka PyGTK versija, lai palaistu šo programmu.\n"
 
-#: ../gdesklets-daemon:52
+#: ../gdesklets-daemon:60
 msgid "Could not fork daemon.\n"
 msgstr "Nevarēja staklēt dēmonu.\n"
 
-#: ../gdesklets-daemon:61 ../gdesklets-daemon:67 ../gdesklets-daemon:84
+#: ../gdesklets-daemon:69 ../gdesklets-daemon:75 ../gdesklets-daemon:92
 #, c-format
 msgid "The following error occurred: %s\n"
 msgstr "Notika sekojoša kļūda: %s\n"
@@ -507,69 +488,73 @@ msgstr "Savienosies ar dēmonu pēc %d mikrosekundēm."
 msgid "Connected to daemon in %d milliseconds."
 msgstr "Savienosies ar dēmonu pēc %d milisekundēm."
 
-#: ../main/__init__.py:71
+#: ../main/__init__.py:68
+msgid "A desktop applet system for GNOME"
+msgstr "Ekrāna sīklietotņu sistēma GNOME videi"
+
+#: ../main/__init__.py:81
 #, python-format
 msgid "Version %s"
 msgstr "Versija %s"
 
-#: ../main/__init__.py:74
+#: ../main/__init__.py:84
 msgid "Core Programming:"
 msgstr "Kodola programmēšana:"
 
-#: ../main/__init__.py:77
-msgid "Architecture Design:"
-msgstr "Sistēmas arhitektūras skice:"
-
-#: ../main/__init__.py:80
-msgid "GNOME Integration:"
-msgstr "GNOME koordinēšana:"
-
-#: ../main/__init__.py:83
+#: ../main/__init__.py:87
 msgid "Additional Programming:"
 msgstr "Papildus programmēšana:"
 
-#: ../main/__init__.py:86
+#: ../main/__init__.py:90
+msgid "Architecture Design:"
+msgstr "Sistēmas arhitektūras skice:"
+
+#: ../main/__init__.py:93
+msgid "GNOME Integration:"
+msgstr "GNOME koordinēšana:"
+
+#: ../main/__init__.py:96
 msgid "Documentation:"
 msgstr "Dokumentācija:"
 
-#: ../main/__init__.py:89
+#: ../main/__init__.py:99
 msgid "Artwork:"
 msgstr "Makslas darbs:"
 
-#: ../main/__init__.py:92
+#: ../main/__init__.py:102
 msgid "Website:"
 msgstr "Tīmekļa vietne:"
 
-#: ../main/__init__.py:95
+#: ../main/__init__.py:105
 msgid "Thank you:"
 msgstr "Paldies:"
 
-#: ../main/Starter.py:103
+#: ../main/Starter.py:101
 msgid "_Manage desklets"
 msgstr "Pāvaldīt deskletus"
 
-#: ../main/Starter.py:106
+#: ../main/Starter.py:104
 msgid "_Configuration"
 msgstr "Konfigurācija"
 
-#: ../main/Starter.py:108
+#: ../main/Starter.py:106
 msgid "_View log"
 msgstr "Skatīt log"
 
-#: ../main/Starter.py:111 ../shell/plugins/Help/__init__.py:42
-msgid "_About..."
-msgstr "Par..."
+#: ../main/Starter.py:108
+msgid "Check for _updates"
+msgstr "Pārbaudīt atja_uninājumus"
 
 #: ../main/Starter.py:114
 msgid "_Stop daemon"
 msgstr "Apstādināt dēmonu"
 
-#: ../main/Starter.py:230
+#: ../main/Starter.py:236
 #, python-format
 msgid "Could not open desklet file \"%s\""
 msgstr "Nevarēja atvērt deskleta failu  \"%s\""
 
-#: ../main/Starter.py:231
+#: ../main/Starter.py:237
 msgid ""
 "The desklet file could not be opened because the file was not readable."
 msgstr "Deskleta failu nevarēja atvērt, jo fails nebija lasāms."
@@ -601,26 +586,20 @@ msgstr ""
 "Pieredzējuši lietotāji ir laipni lūgti lietot  bzr versiju!"
 
 #: ../main/transition.py:51
+#, python-format
 msgid ""
 "This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
-"Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
+"Please test it and report bugs to %(URL)s\n"
 "This version might break your configuration or it won't restore it from an "
 "earlier release. In most cases this is intentional, since gDesklets is still "
 "in its early stages of development.\n"
 "\n"
 "Thanks for testing this release candidate!"
 msgstr ""
-"Šis ir <b>laidiena kandidāts<b> gaidāmajam gDaskleta laidienam.\n"
-"Lūdzu izmēģiniet to un ziņojiet par kļūdām <i>http://bugzilla.gnome.org</i>\n"
-"Šī versija var bojāt jūsu konfigurācijas vai tā tās neatjaunos no agrāka "
-"laiduma.Vairumā gadījumu tas ir ar nolūku, jo gDesklets vēl joprojām ir "
-"attīstības sākumposmos.\n"
-"\n"
-"Paldies par laidiena kandidāta izmēģināšanu!"
 
 #. our informative transition message which we can change with
 #. every release
-#: ../main/transition.py:62
+#: ../main/transition.py:63
 msgid ""
 "This version of gDesklets features the Float mode: press a key and all your "
 "desklets will come to front, floating above your applications, until you "
@@ -640,42 +619,47 @@ msgstr ""
 "Lūdzu ievērojiet, ka sakarā ar vecāku X serveru ierobežojumiem jūs varēsiet "
 "redzēt blokus apkārt deskletiem \"peldošajā\" režīmā. Šo defektu nevar labot."
 
-#: ../main/transition.py:75
+#: ../main/transition.py:76
 msgid "Please note (this message will appear only once):"
 msgstr "Lūdzu ievērojiet (šis ziņojums parādīsies tikai vienreiz):"
 
-#: ../plugin/Interface.py:200 ../plugin/Interface.py:227
+#: ../plugin/Interface.py:212 ../plugin/Interface.py:239
 msgid "no description"
 msgstr "nav apraksta"
 
-#: ../scripting/Script.py:155
+#: ../scripting/Script.py:157
 msgid "Error in add_timer function"
 msgstr "Kļūda add_timer funkcijā"
 
-#: ../scripting/Script.py:156
+#: ../scripting/Script.py:158
 #, python-format
 msgid "\"%s\" isn't a valid integer value!"
 msgstr "\"%s\" nav vesels skaitlis!"
 
-#: ../scripting/Script.py:200
+#: ../scripting/Script.py:177
+#, python-format
+msgid "Timer ident '%s' was not found"
+msgstr ""
+
+#: ../scripting/Script.py:213
 #, python-format
 msgid "No Control could be found for interface %s"
 msgstr "Neviena vadības iespēja netika atrasta %s saskarnei"
 
-#: ../scripting/Script.py:202
+#: ../scripting/Script.py:215
 msgid "This means that a functionality won't be available during execution!"
 msgstr "Tas nozīmē, ka izildes laikā funkcionēšana nebūs pieejama!"
 
-#: ../scripting/Script.py:242
+#: ../scripting/Script.py:254
 msgid "Security Risk"
 msgstr "Risks drošībai"
 
-#: ../scripting/Script.py:243
+#: ../scripting/Script.py:255
 #, python-format
 msgid ""
-"The desklet %s wants to execute a system command:\n"
+"The desklet %(desklet_name)s wants to execute a system command:\n"
 "\n"
-"     <tt><b>%s</b></tt>\n"
+"     <tt><b>%(cmd)s</b></tt>\n"
 "\n"
 "To protect your system from malicious programs, you can deny the execution "
 "of this command.\n"
@@ -683,27 +667,50 @@ msgid ""
 "If you are sure that the command is harmless, you may permanently allow this "
 "desklet instance to run it."
 msgstr ""
-"Desklets %s vēlas izpildīt sistēmas komandu:\n"
-"\n"
-"     <tt><b>%s</b></tt>\n"
-"\n"
-"Lai aizsargātu jūsu sistēmu no ļaundabīgām programmām, jūs varat neatļaut "
-"šīs komandas izpildi.\n"
-"\n"
-"Ja jūs esat pārliecinats par komandas nekaitīgumu, jūs varat atļaut šai "
-"deskleta instancei to palaist."
 
-#: ../scripting/Script.py:256
+#: ../scripting/Script.py:268
 msgid "Deny!"
 msgstr "Aizliegt!"
 
-#: ../scripting/Script.py:257
+#: ../scripting/Script.py:269
 msgid "Allow once"
 msgstr "Atļaut vienreiz"
 
-#: ../scripting/Script.py:258
+#: ../scripting/Script.py:270
 msgid "Allow for this desklet"
 msgstr "Atļaut šim deskletam"
+
+#: ../scripting/ControlWrapper.py:28
+#, python-format
+msgid ""
+"Error: Control %s can't be replicated! This is a BUG in the Desklet!\n"
+"Things probably won't work right for you."
+msgstr ""
+
+#: ../scripting/ControlWrapper.py:67
+msgid ""
+"Warning: Value of property \"length\" must be greater than 0 (setting to 1)"
+msgstr ""
+
+#: ../scripting/ControlWrapper.py:100 ../scripting/ControlWrapper.py:129
+#, python-format
+msgid "Warning: Property \"%s\" must be indexed (length == %d)."
+msgstr ""
+
+#: ../scripting/ControlWrapper.py:138 ../scripting/ControlWrapper.py:152
+msgid "Warning: Control not initialized as an array in Desklet."
+msgstr ""
+
+#: ../scripting/ControlWrapper.py:182
+#, python-format
+msgid "Warning: Trying to delete index %d when length is %d."
+msgstr ""
+
+#: ../scripting/ControlWrapper.py:186
+msgid ""
+"Warning: Control not initialized as an array in Desklet; not deleting "
+"anything."
+msgstr ""
 
 #: ../Sensors/FontSelector/__init__.py:86
 msgid "Fonts"
@@ -769,7 +776,7 @@ msgid "Found %d controls."
 msgstr "Atrastas %d vadības."
 
 #: ../shell/plugins/ControlBrowser/__init__.py:75
-#: ../shell/plugins/DisplayBrowser/__init__.py:190
+#: ../shell/plugins/DisplayBrowser/__init__.py:189
 msgid "Invalid search expression."
 msgstr "Nederīga meklēšanas izteiksme."
 
@@ -793,19 +800,19 @@ msgstr "pēc kategorijas"
 msgid "by author"
 msgstr "pēc autora"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:148
+#: ../shell/plugins/DisplayBrowser/__init__.py:147
 msgid "There is a saved instance of this display."
 msgstr "Šim displejam nav saglabāto instanču."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:149
+#: ../shell/plugins/DisplayBrowser/__init__.py:148
 msgid "Would you like to open this?"
 msgstr "Vēlaties šo atvērt?"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:162
+#: ../shell/plugins/DisplayBrowser/__init__.py:161
 msgid "Could not remove"
 msgstr "Nevarēja aizvākt"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:163
+#: ../shell/plugins/DisplayBrowser/__init__.py:162
 msgid ""
 "The desklet file could not be removed. This most likely means that you do "
 "not have write permission on it."
@@ -813,17 +820,21 @@ msgstr ""
 "Šo deskleta failu nevarēja likvidēt.  tas ļoti iespejams nozīmē, ka jumsuz "
 "to nav rakstīšanas tiesību."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:175
+#: ../shell/plugins/DisplayBrowser/__init__.py:173
+msgid "Do you really want to remove this desklet ?"
+msgstr "Vai Jūs tiešām vēlaties aizvākt šo deskletu ?"
+
+#: ../shell/plugins/DisplayBrowser/__init__.py:174
 msgid ""
 "The desklet will be removed from your system and no longer be available."
 msgstr "Desklets tiks aizvākts no jūsu sistēmas un vairs nebūs pieejams."
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:187
+#: ../shell/plugins/DisplayBrowser/__init__.py:186
 #, python-format
 msgid "Found %d desklets"
 msgstr "Atrasti %d deskleti"
 
-#: ../shell/plugins/DisplayBrowser/__init__.py:209
+#: ../shell/plugins/DisplayBrowser/__init__.py:208
 msgid "No description available"
 msgstr "Apraksts nav pieejams"
 
@@ -1009,7 +1020,7 @@ msgstr "Meklēt"
 msgid "_Details (%d lines)"
 msgstr "Detaļas (%d rindiņas)"
 
-#: ../utils/dialog.py:194
+#: ../utils/dialog.py:202
 msgid "_Ignore errors from this desklet"
 msgstr "Ignorēt šī deskleta kļūdas"
 
@@ -1029,45 +1040,54 @@ msgstr "Elements ar ID <b>%s</b> neeksistē SVG attēlā."
 
 #: ../utils/DOM.py:182 ../utils/Element.py:91
 #, python-format
-msgid "No such property: %s"
-msgstr "Nav tādas īpašības: %s"
+msgid "No such property: %(property)s"
+msgstr ""
 
 #: ../utils/DOM.py:183
 #, python-format
-msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
-msgstr "SVG elementam <b>%s</b> nepiemīt <b>%s</b> īpašība."
+msgid ""
+"The SVG element <b>%(tag)s</b> does not have the <b>%(property)s</b> "
+"property."
+msgstr ""
 
 #: ../utils/Element.py:92
 #, python-format
-msgid "The element <b>%s</b> does not have the <b>%s</b> property."
-msgstr "Elementam <b>%s</b> nepiemīt <b>%s</b> īpašība."
+msgid ""
+"The element <b>%(tag)s</b> does not have the <b>%(property)s</b> property."
+msgstr ""
 
-#: ../utils/Element.py:96 ../utils/Element.py:126
+#: ../utils/Element.py:97 ../utils/Element.py:131
 msgid "Permission Error"
 msgstr "Atļaujas kļūda"
 
-#: ../utils/Element.py:97
+#: ../utils/Element.py:98
 #, python-format
-msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
-msgstr "Īpašība <b>%s</b> elementam <b>%s</b> nav rediģējama."
+msgid ""
+"The property <b>%(property)s</b> of element <b>%(tag)s</b> is not writable."
+msgstr ""
 
-#: ../utils/Element.py:105
+#: ../utils/Element.py:107
 msgid "Type Error"
 msgstr "Tipa kļūda"
 
-#: ../utils/Element.py:106
+#: ../utils/Element.py:108
 #, python-format
 msgid ""
-"The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
-"Expected <b>%s</b>, but got <b>%s</b>."
+"The property <b>%(property)s</b> of element <b>%(tag)s</b> got a value of "
+"wrong type.\n"
+"Expected <b>%(guessed_type)s</b>, but got <b>%(actual_type)s</b>."
 msgstr ""
-"Īpašībai <b>%s</b> elementā <b>%s</b> ir nepareiza tipa vērtība.\n"
-"Paredzēts <b>%s</b>, bet ir <b>%s</b>."
 
 #: ../utils/Element.py:127
 #, python-format
-msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
-msgstr "Īpašība <b>%s</b> elementā <b>%s</b> nav salasāma."
+msgid "Error: No such property: %(property)s"
+msgstr ""
+
+#: ../utils/Element.py:132
+#, python-format
+msgid ""
+"The property <b>%(property)s</b> of element <b>%(tag)s</b> is not readable."
+msgstr ""
 
 #: ../utils/error.py:158
 msgid "Runtime Error"
@@ -1076,3 +1096,114 @@ msgstr "Izpildlaika kļūda"
 #: ../utils/error.py:160
 msgid "An error occurred while executing a desklet."
 msgstr "Parādījās kļūda deskleta izpildes laikā."
+
+#: ../utils/UpdateChecker.py:132
+msgid "A version update is available"
+msgstr "Ir pieejams atjauninājums"
+
+#: ../utils/UpdateChecker.py:133
+#, python-format
+msgid ""
+"You are running version %(version)s.\n"
+"\n"
+"Version %(newer_version)s is available at %(URL)s."
+msgstr ""
+
+#: ../utils/UpdateChecker.py:139
+msgid "_Stop reminding me"
+msgstr "Pārtraukt atgādinājumu"
+
+#: ../utils/UpdateChecker.py:140
+msgid "_Remind me again"
+msgstr "Atgādināt atkal"
+
+#: ../utils/UpdateChecker.py:142
+msgid "No version updates available"
+msgstr ""
+
+#: ../utils/UpdateChecker.py:143
+#, python-format
+msgid "You are running the latest version (%(version)s)."
+msgstr ""
+
+#, c-format
+#~ msgid ""
+#~ "\n"
+#~ "%s\n"
+#~ msgstr ""
+#~ "\n"
+#~ "%s\n"
+
+#, c-format
+#~ msgid "This is %s, version %s."
+#~ msgstr "Šis ir %s, versija %s."
+
+#~ msgid "_About..."
+#~ msgstr "Par..."
+
+#~ msgid ""
+#~ "This is a <b>release candidate</b> of an upcoming gDesklets release.\n"
+#~ "Please test it and report bugs to <i>http://bugzilla.gnome.org</i>\n"
+#~ "This version might break your configuration or it won't restore it from an "
+#~ "earlier release. In most cases this is intentional, since gDesklets is still "
+#~ "in its early stages of development.\n"
+#~ "\n"
+#~ "Thanks for testing this release candidate!"
+#~ msgstr ""
+#~ "Šis ir <b>laidiena kandidāts<b> gaidāmajam gDaskleta laidienam.\n"
+#~ "Lūdzu izmēģiniet to un ziņojiet par kļūdām <i>http://bugzilla.gnome.org</i>\n"
+#~ "Šī versija var bojāt jūsu konfigurācijas vai tā tās neatjaunos no agrāka "
+#~ "laiduma.Vairumā gadījumu tas ir ar nolūku, jo gDesklets vēl joprojām ir "
+#~ "attīstības sākumposmos.\n"
+#~ "\n"
+#~ "Paldies par laidiena kandidāta izmēģināšanu!"
+
+#, python-format
+#~ msgid ""
+#~ "The desklet %s wants to execute a system command:\n"
+#~ "\n"
+#~ "     <tt><b>%s</b></tt>\n"
+#~ "\n"
+#~ "To protect your system from malicious programs, you can deny the execution "
+#~ "of this command.\n"
+#~ "\n"
+#~ "If you are sure that the command is harmless, you may permanently allow this "
+#~ "desklet instance to run it."
+#~ msgstr ""
+#~ "Desklets %s vēlas izpildīt sistēmas komandu:\n"
+#~ "\n"
+#~ "     <tt><b>%s</b></tt>\n"
+#~ "\n"
+#~ "Lai aizsargātu jūsu sistēmu no ļaundabīgām programmām, jūs varat neatļaut "
+#~ "šīs komandas izpildi.\n"
+#~ "\n"
+#~ "Ja jūs esat pārliecinats par komandas nekaitīgumu, jūs varat atļaut šai "
+#~ "deskleta instancei to palaist."
+
+#, python-format
+#~ msgid "No such property: %s"
+#~ msgstr "Nav tādas īpašības: %s"
+
+#, python-format
+#~ msgid "The SVG element <b>%s</b> does not have the <b>%s</b> property."
+#~ msgstr "SVG elementam <b>%s</b> nepiemīt <b>%s</b> īpašība."
+
+#, python-format
+#~ msgid "The element <b>%s</b> does not have the <b>%s</b> property."
+#~ msgstr "Elementam <b>%s</b> nepiemīt <b>%s</b> īpašība."
+
+#, python-format
+#~ msgid "The property <b>%s</b> of element <b>%s</b> is not writable."
+#~ msgstr "Īpašība <b>%s</b> elementam <b>%s</b> nav rediģējama."
+
+#, python-format
+#~ msgid ""
+#~ "The property <b>%s</b> of element <b>%s</b> got a value of wrong type.\n"
+#~ "Expected <b>%s</b>, but got <b>%s</b>."
+#~ msgstr ""
+#~ "Īpašībai <b>%s</b> elementā <b>%s</b> ir nepareiza tipa vērtība.\n"
+#~ "Paredzēts <b>%s</b>, bet ir <b>%s</b>."
+
+#, python-format
+#~ msgid "The property <b>%s</b> of element <b>%s</b> is not readable."
+#~ msgstr "Īpašība <b>%s</b> elementā <b>%s</b> nav salasāma."
