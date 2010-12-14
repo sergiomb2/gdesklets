@@ -20,7 +20,8 @@ dist_noinst_SCRIPTS = autogen.sh
 DISTCLEANFILES =   \
   intltool-extract \
   intltool-merge   \
-  intltool-update
+  intltool-update	\
+  po/.intltool-merge-cache
 
 EXTRA_DIST =             \
   AUTHORS                \
@@ -31,7 +32,8 @@ EXTRA_DIST =             \
   intltool-extract.in    \
   intltool-merge.in      \
   intltool-update.in     \
-  contrib/bash/gdesklets
+  contrib/bash/gdesklets \
+  doc/man/gdesklets.1
 
 man_MANS = doc/man/gdesklets.1
 

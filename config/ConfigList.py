@@ -187,19 +187,25 @@ class ConfigList(ConfigWidget):
 
 
     def _setp_items(self, key, items):
+        # set the items property 
+        self._set_items(items)
+        self._set_config(items)
+        self._setp(key, items)
+        # re-set the selection
+        self.set_prop("value", self.get_prop("value"))
 
+
+
+    def _set_items(self, items):
+        # re-build the items list and fill the liststore accordingly
         self.__items_values = []
         self.__listview.get_model().clear()
         for k, v in items:
             self.__liststore.append([False, str(k), str(v)])
             self.__items_values.append(v)
-        #end for
-
-        self._setp(key, items)
-        self.set_prop("value", self.get_prop("value"))
         # show min. 4 and max. 8 rows
         w, h = self.__listview.size_request()
-        if len(items) < 4: newheight = 4*h/len(items)
+        if len(items) > 0 and len(items) < 4: newheight = 4*h/len(items)
         elif len(items) > 8: newheight = 8*h/len(items)
         else: newheight = h
         self.__scrolledwindow.set_size_request(-1, newheight)
@@ -208,7 +214,7 @@ class ConfigList(ConfigWidget):
 
 
     def _set_selection(self, key, value):
-
+        # set the selection: mark items selected if they are in the selection
         item = self.__liststore.get_iter_first()
         while item:
           path = self.__liststore.get_path(item)
@@ -218,14 +224,16 @@ class ConfigList(ConfigWidget):
           item = self.__liststore.iter_next(item)
              
 
-    def _setp_value(self, key, value):
 
+    def _setp_value(self, key, value):
+        # set the value (selection) property
         try:
             index = self.__items_values.index(value)
         except:
             index = 0
 
-        self.__listview.set_cursor(index)
-        self.__listview.scroll_to_cell(index)
+        if index:
+            self.__listview.set_cursor(index)
+            self.__listview.scroll_to_cell(index)
         self._set_config(value)
         self._setp(key, value)

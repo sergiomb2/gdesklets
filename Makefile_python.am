@@ -11,8 +11,6 @@ nobase_dist_install_DATA =              \
 	Controls/HDDTemp/IHDDTemp.py \
 	Controls/Random/__init__.py \
 	Controls/Random/IRandom.py \
-	Controls/PopUp/__init__.py \
-	Controls/PopUp/IPopUp.py \
 	Controls/Sensor/__init__.py \
 	Controls/Sensor/ISensor.py \
 	Controls/System/__init__.py \

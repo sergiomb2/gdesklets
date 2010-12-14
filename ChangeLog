@@ -1,3 +1,13 @@
+2010-12-14  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* Makefile.am
+	* Makefile_gdesklets.am
+	* Makefile_python.am
+	* main/__init__.py
+	* configure.ac: preparing 0.36.3_rc1
+	* config/ConfigList.py: small fixes
+
+
 2010-10-05  Joe Sapp  <nixphoeni@gmail.com>
 
 	* config/ConfigButton.py: Implemented a feature that calls the

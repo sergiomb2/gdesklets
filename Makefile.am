@@ -11,8 +11,14 @@ desktopdir = $(datadir)/applications
 autostartdir = $(sysconfdir)/xdg/autostart
 sharedmimepackagedir = $(datadir)/mime/packages
 mimeicondir = $(datadir)/icons/gnome/48x48/mimetypes
+basicdeskletsdir = ${installdir}
 
 include Makefile_gdesklets.am
 include Makefile_python.am
+
+# uncomment the following 'include' line if you want to build a full release
+# (you will have to copy the desklets-basic to the basedir first !)
+
+# include Makefile_basicdesklets.am
 
 .DELETE_ON_ERROR:
