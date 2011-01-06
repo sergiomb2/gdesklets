@@ -1,3 +1,4 @@
+
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.53)
 AC_INIT([gDesklets], [0.36.3_rc1])
@@ -57,7 +58,7 @@ AC_ARG_ENABLE(update-check,
               [enable_update_check=True])
 AC_SUBST(enable_update_check)
 
-AM_PATH_PYTHON([2.3])
+AM_PATH_PYTHON([2.4])
 PYTHON_PREFIX=`python -c "import sys; print sys.prefix"`
 PYTHON_CFLAGS="-I$PYTHON_PREFIX/include/python$PYTHON_VERSION"
 AC_CHECK_HEADER([$PYTHON_PREFIX/include/python$PYTHON_VERSION/Python.h],,
