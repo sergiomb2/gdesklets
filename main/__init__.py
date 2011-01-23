@@ -61,10 +61,10 @@ NAME = "gDesklets"
 VERSION_MAJOR = "0"
 VERSION_MINOR = "36"
 VERSION_DEV   = "3"
-VERSION_TYPE  = "rc1"
+VERSION_TYPE  = ""
 VERSION = VERSION_MAJOR + "." + VERSION_MINOR + "." + VERSION_DEV
 if (VERSION_TYPE): VERSION += "_" + VERSION_TYPE
-COPYRIGHT = u"Copyright \xa9 2003 - 2010 The gDesklets Team"
+COPYRIGHT = u"Copyright \xa9 2003 - 2011 The gDesklets Team"
 DESCRIPTION = _("A desktop applet system for GNOME")
 AUTHORS = ( "Martin Grimme <martin@pycage.de>",
             "Christian Meyer <chrisime@gnome-de.org>",
@@ -79,7 +79,7 @@ DOCUMENTERS = ("Martin Grimme <martin@pycage.de>",
 ICON = os.path.join(HOME, "data", "gdesklets.png")
 CREDITS = (
            (_("Version %s") % (VERSION,),
-           (u"Copyright \xa9 2003 - 2010", "The gDesklets Team")),
+           (u"Copyright \xa9 2003 - 2011", "The gDesklets Team")),
 
            (_("Core Programming:"),
            ("Martin Grimme", "Christian Meyer", "Jesse Andrews", u"Beno\xeet Dejean",)),

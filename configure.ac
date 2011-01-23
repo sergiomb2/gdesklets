@@ -1,7 +1,7 @@
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.53)
-AC_INIT([gDesklets], [0.36.3_rc1])
+AC_INIT([gDesklets], [0.36.3])
 AC_CONFIG_SRCDIR([configure.ac])
 AM_INIT_AUTOMAKE([dist-bzip2 subdir-objects])
 LT_INIT
