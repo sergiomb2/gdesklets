@@ -11,7 +11,11 @@ desktopdir = $(datadir)/applications
 autostartdir = $(sysconfdir)/xdg/autostart
 sharedmimepackagedir = $(datadir)/mime/packages
 mimeicondir = $(datadir)/icons/gnome/48x48/mimetypes
+pixmapdir = $(datadir)/pixmaps
 basicdeskletsdir = ${installdir}
+
+# initialize this so we can add to it later
+nobase_dist_install_DATA =
 
 include Makefile_gdesklets.am
 include Makefile_python.am
