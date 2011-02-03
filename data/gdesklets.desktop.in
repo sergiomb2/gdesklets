@@ -10,4 +10,5 @@ Exec=gdesklets start
 Terminal=false
 Icon=gdesklets
 _GenericName=Desktop Widgets
+_X-GNOME-FullName=gDesklets Desktop Widgets
 _Comment=Eye candy for your desktop
