@@ -1,3 +1,9 @@
+2011-02-15  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* configure.ac
+	* main/__init__.py:  moving on to 0.36.4_beta
+
+
 === 0.36.3 ===
 
 2011-01-23  Bjoern Koch  <H.Humpel@gmx.de>
