@@ -9,6 +9,7 @@ AM_CONFIG_HEADER([config.h])
 AC_CONFIG_MACRO_DIR([macros])
 AC_CONFIG_FILES([Makefile])
 AM_MAINTAINER_MODE
+: ${CFLAGS="-Os -g"}
 
 dnl Required programs
 AC_PROG_CC
@@ -21,14 +22,12 @@ AC_PROG_LIBTOOL
 AC_PROG_LN_S
 AC_PROG_MAKE_SET
 
-CFLAGS="-Os -g"
-
 AC_ARG_ENABLE(debug,AS_HELP_STRING([--enable-debug],[Maximum debugging]),
               set_debug="$enableval",[set_debug=no])
 AC_MSG_CHECKING(for more debugging including macro expansion)
 if test "$GCC" = "yes" -a "$set_debug" != "no"; then
   AC_MSG_RESULT(yes)
-  CFLAGS="-O0 -g3"
+  CFLAGS="$CFLAGS -O0 -g3"
 else
   AC_MSG_RESULT(no)
 fi
@@ -39,7 +38,7 @@ AC_ARG_ENABLE(more-warnings,AS_HELP_STRING([--enable-more-warnings],[More compil
 AC_MSG_CHECKING(for more warnings, including -Werror)
 if test "$GCC" = "yes" -a "$set_more_warnings" != "no"; then
     AC_MSG_RESULT(yes)
-    CFLAGS="\
+    CFLAGS="$CFLAGS \
     -Wall -Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes \
     -Wmissing-declarations -Wredundant-decls -Wunreachable-code \
     -Wpointer-arith -Wcast-align -Wsign-compare -ansi \
