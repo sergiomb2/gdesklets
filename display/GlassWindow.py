@@ -45,6 +45,13 @@ class GlassWindow(gtk.Window):
         self.__layout.put(self.__background, 0, 0)
         
         self.__on_screen_changed (self, None)
+        # Workaround for Ubuntu >= 11.04
+        # Thanks screenlets
+        # (http://bazaar.launchpad.net/~screenlets-dev/screenlets/trunk/revision/646)
+        try:
+            self.set_property('has-resize-grip', False)
+        except TypeError:
+            pass
         self.set_app_paintable (True)
         
         self.__bg_watcher = BGWatcher()
@@ -125,6 +132,7 @@ class GlassWindow(gtk.Window):
     def __on_expose_event (self, widget, event = None, user_data = None):
 
         cr = widget.window.cairo_create ()
+        # Fill with fully transparent white
         cr.set_source_rgba (1.0, 1.0, 1.0, 0.0)
         cr.set_operator (cairo.OPERATOR_SOURCE)
         cr.paint ()
