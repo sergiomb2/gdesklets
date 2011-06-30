@@ -123,7 +123,7 @@ def _gdesklets_main():
 _detach_as_daemon()
 _write_pid()
 _redirect_to_logfile()
-if (settings.check_for_updates_visible and settings.check_for_updates):
+if (settings.build_time.check_for_updates_visible and settings.check_for_updates):
     __checker = UpdateChecker()
     gobject.timeout_add(__checker.TIMEOUT, __checker.check)
 _gdesklets_main()
