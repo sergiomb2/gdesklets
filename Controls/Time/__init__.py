@@ -16,6 +16,8 @@ class Time(Control, ITime):
         self.__timezone = ""
         self.__timezone_offset = time.timezone
 
+        self.__format = ""
+
         Control.__init__(self)
 
         self.__yesterday = None
@@ -27,6 +29,7 @@ class Time(Control, ITime):
 
         self._update("time")
         self.__try_tick_date()
+        self._update("strftime")
         return True
 
 
@@ -63,7 +66,15 @@ class Time(Control, ITime):
         #self._update("date")
 
 
-    def __get_timezone(self): return self.__timezone
+    def __set_format(self, f):
+
+        self.__format = f
+        self.__get_strftime()
+
+
+    def __get_timezone(self):
+
+        return self.__timezone
 
 
     def __get_time_and_date(self):
@@ -106,11 +117,24 @@ class Time(Control, ITime):
         return time.time()
 
 
+    def __get_format(self):
 
-    timezone = property(__get_timezone, __set_timezone, doc = "the timezone")
-    time     = property(__get_time, doc = "the current time (h, m, s)")
-    date     = property(__get_date, doc = "the current date (y, m, d)")
-    ticks    = property(__get_ticks, doc = "the current ticks in floating point numbers")
+        return self.__format
+
+
+    def __get_strftime(self):
+
+        strftime = time.strftime(self.__format)
+        return strftime
+
+
+
+    timezone = property(__get_timezone, __set_timezone, doc = "The timezone")
+    time     = property(__get_time, doc = "The current time, (h, m, s)")
+    date     = property(__get_date, doc = "The current date, (y, m, d)")
+    ticks    = property(__get_ticks, doc = "The current ticks in floating point numbers")
+    format   = property(__get_format, __set_format, doc = "The output format for strftime")
+    strftime = property(__get_strftime, doc = "strftime output")
 
 
 

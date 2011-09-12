@@ -7,3 +7,5 @@ class ITime(Interface):
     date = Permission.READ
     ticks = Permission.READ
     timezone = Permission.READWRITE
+    format = Permission.READWRITE
+    strftime = Permission.READ
