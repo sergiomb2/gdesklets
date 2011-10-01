@@ -4,8 +4,8 @@ gDesklets - GNOME Desktop Applets
 1. Introduction
 ---------------
   'gDesklets' provides an advanced architecture for desktop applets - tiny
-  displays that sit on your desktop in a symbiotic relationship of eye candy and
-  usefulness.
+  displays that sit on your desktop in a symbiotic relationship of eye candy
+  and usefulness.
   Populate your desktop with status meters, icon bars, weather sensors,
   news tickers... whatever you can imagine! Virtually anything is possible and
   may even be available some day.
@@ -14,11 +14,8 @@ gDesklets - GNOME Desktop Applets
 
 2. Requirements (the package names are the debian ones!)
 ---------------
-  * Python 2.4 or higher, if you want to compile gdesklets you'll have to
-    install the development package, too!
-
-  * SuSE users will need the additional python-xml package, gDesklets won't
-    work without it!
+  * Python 2.4 or higher with XML support; if you want to compile gdesklets
+    you'll have to install the development package, too!
 
   * python-gtk2 2.10 or higher (*)
 
@@ -40,7 +37,7 @@ gDesklets - GNOME Desktop Applets
 
   * librsvg-dev if you want to compile gDesklets
 
-  * some sensors or controls may have extra requirements
+  * some Controls may have extra requirements
 
 The following remarks apply to Mandrake 10.1, SuSE 9.2 and Fedora Core 3. Of
 course, they apply to older versions as well:

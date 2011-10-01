@@ -1,3 +1,7 @@
+2010-10-05  Joe Sapp  <nixphoeni@gmail.com>
+
+	* README: removed pyxml dependency
+
 2011-02-15  Bjoern Koch  <H.Humpel@gmx.de>
 
 	* configure.ac
