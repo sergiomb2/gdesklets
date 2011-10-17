@@ -8,8 +8,17 @@ from plugin import Permission
 
 import sys
 import os
-import code
+# Interactive shell
+try:
+    from IPython.Shell import IPShellEmbed
+    def InteractiveConsole(banner):
+        (IPShellEmbed('', banner=banner))()
+except:
+    import code
+    InteractiveConsole = code.InteractiveConsole().interact
 import __builtin__
+
+# DBus
 try:
     from dbus.mainloop.glib import DBusGMainLoop
 except:
@@ -25,7 +34,7 @@ try:
     folder, base = os.path.split(path)
 except:
     sys.exit("Usage: test-control.py <control-directory>")
-    
+
 
 cwd = os.getcwd()
 os.chdir(folder)
@@ -34,7 +43,7 @@ try:
     os.chdir(base)
     clss = module.get_class()
     ctrl = clss()
-    
+
 except IOError:
     sys.exit("Could not load control %s." % (path))
 
@@ -42,5 +51,5 @@ print
 print Interface.text_describe(clss)
 
 __builtin__.ctrl = ctrl
-code.InteractiveConsole().interact("Use 'ctrl' to access the control. "
-                                   "Press Ctrl+D to quit.")
+InteractiveConsole("Use 'ctrl' to access the control. "
+                   "Press Ctrl+D to quit.")
