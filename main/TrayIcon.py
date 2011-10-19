@@ -1,7 +1,10 @@
 from main import ICON
+from config import settings
 
 import gtk
 
+if settings.build_time.appindicator:
+  import appindicator
 
 class TrayIcon:
 
@@ -11,13 +14,22 @@ class TrayIcon:
 
         self.__traymenu = gtk.Menu()
 
-#        self.__trayicon = gtk.status_icon_new_from_file(ICON)
-#        self.__trayicon.connect("popup-menu", self.__on_button)
-        self.__trayicon = gtk.StatusIcon()
-        self.__trayicon.set_from_file(ICON)
-        self.__trayicon.set_tooltip("gDesklets")
-        self.__trayicon.connect("popup-menu", self.__on_button, self.__traymenu)
-        self.__trayicon.set_visible(True)
+        if not settings.build_time.appindicator:
+            # Not Ubuntu
+#            self.__trayicon = gtk.status_icon_new_from_file(ICON)
+#            self.__trayicon.connect("popup-menu", self.__on_button)
+            self.__trayicon = gtk.StatusIcon()
+            self.__trayicon.set_from_file(ICON)
+            self.__trayicon.set_tooltip("gDesklets")
+            self.__trayicon.connect("popup-menu", self.__on_button, self.__traymenu)
+            self.__trayicon.set_visible(True)
+        else:
+            # Ubuntu
+            self.__appindicator = appindicator.Indicator("gDesklets",
+                                      "gdesklets",
+                                      appindicator.CATEGORY_APPLICATION_STATUS)
+            self.__appindicator.set_status(appindicator.STATUS_ACTIVE)
+            self.__appindicator.set_icon("gdesklets", "gDesklets")
 
 
 
@@ -53,5 +65,9 @@ class TrayIcon:
 
             item.show()
             self.__traymenu.append(item)
-        self.__trayicon.set_visible(True)
+
+        if (not settings.build_time.appindicator):
+            self.__trayicon.set_visible(True)
+        else:
+            self.__appindicator.set_menu(self.__traymenu)
 

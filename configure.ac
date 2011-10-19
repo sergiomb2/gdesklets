@@ -22,6 +22,9 @@ AC_PROG_LIBTOOL
 AC_PROG_LN_S
 AC_PROG_MAKE_SET
 
+# Minimum version of Application indicator, made popular in Ubuntu
+APPINDICATOR_REQUIRED=0.0.7
+
 AC_ARG_ENABLE(debug,AS_HELP_STRING([--enable-debug],[Maximum debugging]),
               set_debug="$enableval",[set_debug=no])
 AC_MSG_CHECKING(for more debugging including macro expansion)
@@ -56,6 +59,32 @@ AC_ARG_ENABLE(update-check,
               ],
               [enable_update_check=True])
 AC_SUBST(enable_update_check)
+
+AC_ARG_ENABLE(appindicator,
+              AS_HELP_STRING([--enable-appindicator[=@<:@no/auto/yes@:>@]],[Build support for application indicators]),
+              [enable_appindicator=$enableval],
+              [enable_appindicator="auto"])
+
+if test x$enable_appindicator = xauto ; then
+  PKG_CHECK_EXISTS([appindicator-0.1 >= $APPINDICATOR_REQUIRED],
+                   enable_appindicator="yes",
+                   enable_appindicator="no")
+fi
+
+if test x$enable_appindicator = xyes ; then
+  appindicator_available=True
+  PKG_CHECK_EXISTS([appindicator-0.1 >= $APPINDICATOR_REQUIRED],,
+                   AC_MSG_ERROR([appindicator-0.1 is not installed]))
+  PKG_CHECK_MODULES(APP_INDICATOR,
+                    appindicator-0.1 >= $APPINDICATOR_REQUIRED)
+  AC_SUBST(APP_INDICATOR_CFLAGS)
+  AC_SUBST(APP_INDICATOR_LIBS)
+  AC_DEFINE(HAVE_APP_INDICATOR, 1, [Have AppIndicator])
+else
+  appindicator_available=False
+fi
+AM_CONDITIONAL(HAVE_APP_INDICATOR, test x"$enable_appindicator" = xyes)
+AC_SUBST(appindicator_available)
 
 AM_PATH_PYTHON([2.4])
 PYTHON_PREFIX=`python -c "import sys; print sys.prefix"`
@@ -125,5 +154,6 @@ Configuration
   Enable warnings:   ${set_more_warnings}
   Enable debugging:  ${set_debug}
   Check for updates: ${enable_update_check}
+  App indicator:     ${appindicator_available}
 "
 

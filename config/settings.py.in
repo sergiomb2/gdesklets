@@ -15,6 +15,7 @@ class __build_time_singleton(object):
 
     # Build-time settings
     check_for_updates_visible = @enable_update_check@
+    appindicator = @appindicator_available@
 
     def __setattr__(self, obj, type=None):
 
