@@ -1,4 +1,10 @@
-2010-10-05  Joe Sapp  <nixphoeni@gmail.com>
+2011-11-06  Joe Sapp  <nixphoeni@gmail.com>
+
+	* scripting/Script.py: Add methods to the Desklet's sandbox for
+		getting the Desklet's absolute path and for sanitizing a string to
+		use in the XML environment
+
+2011-10-05  Joe Sapp  <nixphoeni@gmail.com>
 
 	* README: removed pyxml dependency
 

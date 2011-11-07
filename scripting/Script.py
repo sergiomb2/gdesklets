@@ -25,8 +25,10 @@ class Script:
         # ID of the display
         self.__dsp_id = dsp_id
 
-        # path of the display
+        # paths of the display
         self.__dsp_path = dsp_path
+        import os
+        self.__dsp_dir = os.path.dirname(dsp_path) + os.path.sep
 
         # the state saver
         self.__state_saver = StateSaver(dsp_id)
@@ -62,6 +64,10 @@ class Script:
         self.__environment["get_config"] = self.__script_get_config
         self.__environment["get_control"] = self.__script_get_control
         self.__environment["set_config"] = self.__script_set_config
+        self.__environment["get_desklet_path"] = \
+            self.__script_get_desklet_path
+        self.__environment["sanitize_string"] = \
+            self.__script_sanitize_string
         self.__environment["launch"] = self.__script_launch
 
         # see end of file
@@ -221,6 +227,27 @@ class Script:
 
         #return ""
 
+
+    #
+    # Gets the desklet's path
+    #
+    def __script_get_desklet_path(self):
+
+        return self.__dsp_dir
+
+
+    #
+    # Sanitizes a string for the XML environment.
+    #
+    def __script_sanitize_string(self, s):
+
+        sanitized_string = s.replace("&", "&amp;")
+        sanitized_string = sanitized_string.replace("<", "&lt;")
+        sanitized_string = sanitized_string.replace(">", "&gt;")
+        sanitized_string = sanitized_string.replace("\'", "&apos;")
+        sanitized_string = sanitized_string.replace("\"", "&quot;")
+
+        return sanitized_string
 
     #
     # Launches the given command if it's safe.
