@@ -37,7 +37,11 @@ class Script:
         self.__environment = {}
 
         # the list of loaded controls
+        # (deprecated since we create lists of wrapped controls)
         self.__loaded_controls = []
+
+        # the list of created control wrappers
+        self.__control_wrappers = []
 
         # flag indicating whether the display has been stopped
         self.__is_stopped = False
@@ -212,8 +216,11 @@ class Script:
         factory = ControlFactory()
         ctrl = factory.get_control(interface)
         if (ctrl):
-            self.__loaded_controls.append(ctrl)
+            #self.__loaded_controls.append(ctrl)
+            # created a list of wrapped controls from the template
             wrapped = ControlWrapper(ctrl, size)
+            # remember the control wrapper for cleanup on stop()
+            self.__control_wrappers.append(wrapped)
             return wrapped
 
         raise UserError(_("No Control could be found for interface %s") % \
@@ -304,13 +311,25 @@ class Script:
 
         self.__is_stopped = True
         del self.__environment
+
+        # delete all wrapped controls
+        for w in self.__control_wrappers:
+            try:
+                w.stop()
+            except StandardError, exc:
+                import traceback; traceback.print_exc()
+                log("Could not stop control wrapper %s" % w)
+            del w
+        del self.__control_wrappers
+
+        # delete other controls
         for c in self.__loaded_controls:
             try:
                 c.stop()
             except StandardError, exc:
                 import traceback; traceback.print_exc()
                 log("Could not stop control %s" % c)
-                del c
+            del c
         del self.__loaded_controls
 
 

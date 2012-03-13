@@ -36,6 +36,9 @@ class ControlWrapper(object):
 
         # Keep an original copy around for extending the array
         self.__dict__["_ControlWrapper__original_control"] = Vault(control)
+        # deactivate the original control
+        ctl = self.__dict__["_ControlWrapper__original_control"](open)
+        ctl.stop()
         # Create a property handler for each deep copy of control
         self.__dict__["_ControlWrapper__properties"] = \
                      [ PropertyInterface(self.__control(open)[i])
@@ -50,7 +53,6 @@ class ControlWrapper(object):
                                                   Vault( tuple(ids + taz_ids) )
 
 
-
     def __len__(self):
 
         return self.__length
@@ -63,33 +65,36 @@ class ControlWrapper(object):
 
             if name == "length":
                 # A little bounds checking
-                if value <= 0:
-                  log(_("Warning: Value of property \"length\" must be greater than 0 (setting to 1)"))
-                  value = 1
+                size = value
+                if value < 0:
+                  value = 0
+                  log(_("Warning: Value of property \"length\" must be greater than or equal to 0 (setting to 0)"))
+                if value == 0:
+                  log(_("Warning: Value of property \"length\" set to 0 disables list mode"))
+                  size = 1
 
                 # Don't do anything if value isn't changing
-                if value != self.__length:
-                    if value > self.__length:
+                if size != self.__length:
+                    if size > self.__length:
                         # Append new copies of the control
                         self.__dict__["_ControlWrapper__control"] = \
                             Vault( self.__control(open) +           \
                                    [ deepcopy(self.__original_control(open))    \
-                                     for i in range(self.__length, value) ] )
+                                     for i in range(self.__length, size) ] )
                         # Initialize all new copies of the control
                         for ctl in [ self.__dict__["_ControlWrapper__control"](open)[i] \
-                                     for i in range(self.__length, value) ]:
+                                     for i in range(self.__length, size) ]:
                             ctl.__init__()
                         # Append new PropertyInterface instances
                         self.__dict__["_ControlWrapper__properties"] = \
                             self.__properties +                        \
                             [ PropertyInterface(self.__control(open)[i])    \
-                              for i in range(self.__length, value) ]
-                    elif value < self.__length:
+                              for i in range(self.__length, size) ]
+                    elif size < self.__length:
                         # We want to leave the "0th" item alone, which is 
                         # handled by the above conditionals
-                        start_deleting_at = value #if value != 0 else 1
-                        for i in range(start_deleting_at, self.__length):
-                            del self[i]
+                        for i in range(size, self.__length):
+                            del self[size]
 
                     self.__dict__["_ControlWrapper__length"] = value
             else: # name != "length"
@@ -171,6 +176,7 @@ class ControlWrapper(object):
                 # no property that uses that Control
                 del self.__dict__["_ControlWrapper__properties"][idx]
                 new_ctrl_list = self.__dict__["_ControlWrapper__control"](open)
+                new_ctrl_list[idx].stop()
                 del new_ctrl_list[idx]
                 #del self.__dict__["_ControlWrapper__control"]
                 self.__dict__["_ControlWrapper__control"] = Vault( new_ctrl_list )
@@ -183,6 +189,21 @@ class ControlWrapper(object):
         else:
 
             log(_("Warning: Control not initialized as an array in Desklet; not deleting anything."))
+
+    def stop(self):
+
+        for c in self.__dict__["_ControlWrapper__control"](open):
+            try:
+                c.stop()
+            except StandardError, exc:
+                import traceback; traceback.print_exc()
+                log("Could not stop control %s" % c)
+            del c
+
+        # original control is already stopped
+        c = self.__dict__["_ControlWrapper__original_control"](open)
+        del c
+
 
 
 

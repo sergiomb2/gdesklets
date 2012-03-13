@@ -89,7 +89,10 @@ render_to_image (GtkImage *image, GdkPixbuf *pbuf,
   /* set image */
   gtk_image_set_from_pixbuf (image, scaled);
 
+// this condition is causing a memory leak since rev. 142
+/*
   if (srcwidth != width || srcheight != height)
+*/
     g_object_unref (scaled);
 }
 

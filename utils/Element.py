@@ -14,7 +14,7 @@ class Element(object):
 
       and can be read with
 
-        get_prop(key, value)
+        get_prop(key)
 
 
       If you don't need any special setter or getter methods, then you can use

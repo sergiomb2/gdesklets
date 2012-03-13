@@ -187,12 +187,36 @@ class ConfigList(ConfigWidget):
 
 
     def _setp_items(self, key, items):
-        # set the items property 
+
+        # just for convenience we compare the former items
+        # and selection with the new one such that adding/
+        # removing an item to/from the list does not destroy
+        # the complete old selection
+        # Renaming items in the item list however always
+        # unchecks the renamed item
+        old_selection = self.get_prop("value")
+        old_items = self.get_prop("items")
+        new_selection = []
+
+        # doing it this way results in the behavior that if
+        # values in the old_items list appear multiple times
+        # and one of them is selected, all items in the new
+        # item list with the same value are selected duplicates
+        # within the list will be removed in the _setp_value()
+        # method anyway
+        for v, k in items:
+            for ov, ok in old_items:
+                if ok == k:
+                    if ok in old_selection:
+                        new_selection.append(k)
+
+        # set the items property
         self._set_items(items)
-        self._set_config(items)
+        # we store values but no item lists
+        #self._set_config(items)
         self._setp(key, items)
-        # re-set the selection
-        self.set_prop("value", self.get_prop("value"))
+        # re-set the selection according to new selection
+        self.set_prop("value", new_selection)
 
 
 
@@ -210,7 +234,9 @@ class ConfigList(ConfigWidget):
         else: newheight = h
         self.__scrolledwindow.set_size_request(-1, newheight)
         self.__scrolledwindow.resize_children()
-        self._set_selection('value', self._getp('value'))
+
+        # do not update the selection pattern here but in _setp_items()
+        #self._set_selection('value', self._getp('value'))
 
 
     def _set_selection(self, key, value):
@@ -222,18 +248,30 @@ class ConfigList(ConfigWidget):
             if str(v) == str(self.__liststore[path][2]):
               self.__liststore[path][0] = True
           item = self.__liststore.iter_next(item)
-             
 
 
     def _setp_value(self, key, value):
-        # set the value (selection) property
-        try:
-            index = self.__items_values.index(value)
-        except:
-            index = 0
+        # remove all selections that do not refer
+        # to any item key currently known
+        tmplist = []
+        for v in value:
+            if v in self.__items_values:
+                tmplist.append(v)
 
-        if index:
-            self.__listview.set_cursor(index)
-            self.__listview.scroll_to_cell(index)
+        # remove duplicates from the list
+        tmplist = list(set(tmplist))
+
+        # update the selection according to tmplist
+        self._set_selection(key, tmplist)
+
+        # set the value (selection) property
+        #try:
+        #    index = self.__items_values.index(value)
+        #except:
+        #    index = 0
+
+        #if index:
+        #    self.__listview.set_cursor(index)
+        #    self.__listview.scroll_to_cell(index)
         self._set_config(value)
         self._setp(key, value)
