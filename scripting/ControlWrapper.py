@@ -104,7 +104,9 @@ class ControlWrapper(object):
                 # of this class when the length != 0. They should know
                 # better if they've gone and changed the length, but we'll
                 # be nice and print out some informational warnings.
-                log(_("Warning: Property \"%s\" must be indexed (length == %d).") % (name, self.__length))
+                log(_("Warning: Property \"%(property)s\" must be " \
+                      "indexed (length == %(length)d).") % \
+                      {'property': name, 'length': self.__length})
                 return
 
         else: # length <= 0
@@ -132,7 +134,9 @@ class ControlWrapper(object):
             # of this class when the length != 0.  They should know
             # better if they've gone and changed the length, but we'll
             # be nice and print out some informational warnings.
-            log(_("Warning: Property \"%s\" must be indexed (length == %d).") % (name, self.__length))
+            log(_("Warning: Property \"%(property)s\" must be " \
+                  "indexed (length == %(length)d).") % \
+                  {'property': name, 'length': self.__length})
             return
 
 
@@ -186,7 +190,9 @@ class ControlWrapper(object):
 
             else:
 
-                log(_("Warning: Trying to delete index %d when length is %d.") % (idx, self.__length))
+                log(_("Warning: Trying to delete index %(index)d " \
+                      "when length is %(length)d.") % \
+                      {'index': idx, 'length': self.__length})
 
         else:
 
