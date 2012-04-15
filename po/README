@@ -1,0 +1,32 @@
+About Translations in gDesklets
+-------------------------------
+Translations in gDesklets are done using gettext [1] and are coordinated
+through launchpad [2].  The gettext template (gdesklets.pot) is not kept
+under revision control because it is updated by launchpad automatically
+after every commit; it may be downloaded if desired.
+
+Updating the PO Files
+---------------------
+The PO files (in the 'po' directory) should be updated before every
+release.  They can be downloaded from the launchpad translations page
+and committed normally, after updating the ChangeLog file of course.
+They may be configured to automatically commit to a bzr branch, but this
+is not enabled for a few reasons.  It does not facilitate review by a
+developer and, if a separate branch is used for translation commits, one
+might as well download and commit separately.  Though if revision
+control is desired for translations, the latter path could be taken.
+
+Ensuring a File is Translated Properly
+--------------------------------------
+In order for a file to be translated, it needs to be added to the
+'po/POTFILES.in' file.  I am unsure of the role of 'po/POTFILES.skip'.
+Strings in this file need to be wrapped in the _() function.  If there
+are multiple arguments, name them in the string and pass a dict as the
+last argument.  This may help translators if they have to rearrange
+arguments.  For example:
+
+  log(_("Desklet %(name)s ran for %(time)d seconds" % \
+        {'name': desklet_name, 'time': t_in_seconds}))
+
+[1] https://www.gnu.org/software/gettext/manual/gettext.html
+[2] https://translations.launchpad.net/gdesklets/
