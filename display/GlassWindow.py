@@ -65,6 +65,12 @@ class GlassWindow(gtk.Window):
         self.__on_composited_changed (self)
 
 
+    def shutdown(self):
+        print "Shutting down Glass Window"
+        import objgraph,inspect, random
+        objgraph.show_backrefs(self.__bg_watcher, refcounts=True, filename='/tmp/bgwback.png')
+        self.__bg_watcher.drop_observers()
+        del self.__bg_watcher
 
     #
     # Override add method.

@@ -21,6 +21,7 @@ except ImportError:
         OPEN_WRITE = gnomevfs.OPEN_WRITE
 
     except ImportError:
+        log("Using urllib, because gnomevfs isn't available")
         OPEN_READ = "r"
         OPEN_WRITE = "w"
 

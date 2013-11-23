@@ -69,6 +69,12 @@ class TargetImage(DisplayTarget):
 
     def delete(self):
 
+        self.__widget.destroy()
+        del self.__widget
+        del self.__size
+        del self.__original_size
+        del self.__current_saturation
+        del self.__current_opacity
         DisplayTarget.delete(self)
 
 

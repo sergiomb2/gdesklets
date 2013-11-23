@@ -26,6 +26,7 @@ import random
 import sys
 import os
 import re
+import gc
 
 try:
     from utils.tiling import Tiling
@@ -111,6 +112,10 @@ class Display(gtk.HBox, Observable):
         # the layout object
         self.__layout_object = LayoutObject(None)
 
+        self.__menu = []
+
+        self.__swindow = []
+
         # the stack of current mouse cursors
         self.__cursor_stack = []
 
@@ -167,6 +172,8 @@ class Display(gtk.HBox, Observable):
         self.__readme_buffer = textview.get_buffer()
         sw.add(textview)
         sw.show()
+        self.__swindow.append(sw)
+
         textview.show()
         self.__readme.vbox.add(sw)
         self.__readme.connect("response", self.__readme_response_callback)
@@ -360,7 +367,6 @@ class Display(gtk.HBox, Observable):
             self.__about.set_website(website)
             self.__about.set_authors([author])
             self.__about.set_logo(pbuf)
-
 
 
     #
@@ -639,13 +645,50 @@ class Display(gtk.HBox, Observable):
         self.__script.stop()
         for s in self.__sensor_controls.values():
             s.stop = True
+        del self.__script
 
         self.__group.delete()
 
         del self.__sensor_controls
         del self.__mapping
         del self.__group
+        del self.__configurator
+        self.__about.destroy()
+        del self.__about
+        self.__readme.destroy()
+        del self.__readme
+        del self.__DISPLAY_MENU
+        for m in self.__menu: m.destroy()
+        del self.__menu
+        self.__layout_object.destroy()
+        del self.__layout_object
+        del self.__readme_buffer
+        del self.__readme_button
+        del self.__scriptlets
+        del self.__content
+        del self.__action_stamp
+        del self.__id
+        del self.__display_file
+        del self.__path
+        del self.__is_sensitive
+        for w in self.__swindow:
+            w.destroy()
+        del self.__swindow
 
+        del self.__arrays
+        del self.__last_pointer_pos
+        del self.__pointer_pos
+        del self.__cursor_stack
+
+        gc.collect()
+#        import objgraph,inspect, random
+#        print "growth"
+#        objgraph.show_growth()
+#        print "common"
+#        objgraph.show_most_common_types()
+#        objgraph.show_chain(objgraph.find_backref_chain(random.choice(objgraph.by_type('Display')), inspect.ismodule), filename='/tmp/chain.png')
+#        objgraph.show_refs(random.choice(objgraph.by_type('Display')), refcounts=True, filename='/tmp/roots.png')
+#        objgraph.show_backrefs(random.choice(objgraph.by_type('Display')), refcounts=True, filename='/tmp/rootsback.png')
 
 
     #
@@ -667,6 +710,7 @@ class Display(gtk.HBox, Observable):
         # remove the configuration
         self.__configurator.remove_config()
 
+        gc.collect()
 
 
     #
@@ -1065,6 +1109,7 @@ class Display(gtk.HBox, Observable):
             if (not entry.active): item.set_sensitive(False)
 
             menupath = "/".join(entry.path.split("/")[:-1])
+
             if (menupath):
                 parentitem = tree.get(menupath)
 
@@ -1081,7 +1126,7 @@ class Display(gtk.HBox, Observable):
             tree["/".join(entry.path.split("/"))] = item
 
         mainmenu.popup(None, None, None, 0, 0)
-
+        self.__menu.append(mainmenu)
 
 
     def __handle_configure(self, *args):
@@ -1106,7 +1151,7 @@ class Display(gtk.HBox, Observable):
     def __handle_restart(self, *args):
 
         self.update_observer(self.OBS_RESTART, self.__id)
-
+        gc.collect()
 
 
     def __handle_remove(self, *args):

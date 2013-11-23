@@ -55,7 +55,7 @@ class ConfigDate(ConfigWidget):
         self.__labelbox.pack_start(vsep, False, False, 3)
         self.__labelbox.pack_start(image, False, False, 3)
         self.__btn_label.show()
-	vsep.show()
+        vsep.show()
         image.show()
         return self.__labelbox
 
@@ -104,14 +104,14 @@ class ConfigDate(ConfigWidget):
 
     def calendar_get_fulldate(self):
         year, month, day = self.calendar.get_date()
-	hour = self.spinner_hour.get_value_as_int()
-	minute = self.spinner_min.get_value_as_int()
-	second = self.spinner_sec.get_value_as_int()
+        hour = self.spinner_hour.get_value_as_int()
+        minute = self.spinner_min.get_value_as_int()
+        second = self.spinner_sec.get_value_as_int()
         mytime = time.mktime((year, month+1, day, hour, minute, second, 0, 0, -1))
         return mytime
 
     def calendar_set_info_strings(self, widget):
-	self.new_date.set_text(self.__date_to_string(self.calendar_get_fulldate()))
+        self.new_date.set_text(self.__date_to_string(self.calendar_get_fulldate()))
 
     def calendar_day_selected(self, widget):
         self.__current_selection = self.calendar_get_fulldate()
@@ -140,7 +140,7 @@ class ConfigDate(ConfigWidget):
 
     def calendar_goto_date(self, date):
         self.calendar.select_month(int(date[1]-1), int(date[0]))
-	self.calendar_mark_selected_day(self, date)
+        self.calendar_mark_selected_day(self, date)
 
     def calendar_reset_date(self, widget):
         self.calendar_goto_date(self.__string_to_date(self.__value))
@@ -190,7 +190,7 @@ class ConfigDate(ConfigWidget):
 # Calendar widget
         self.calendar = gtk.Calendar()
         hbbox.pack_start(self.calendar, False, True, self.DEF_PAD)
-	self.calendar.set_display_options(11)
+        self.calendar.set_display_options(11)
 # 11 = gtk.CALENDAR_SHOW_HEADING, gtk.CALENDAR_SHOW_DAY_NAMES, gtk.CALENDAR_SHOW_WEEK_NUMBERS
         self.calendar.connect("month_changed", self.calendar_mark_selected_day, self.__current_selection)
         self.calendar.connect("day_selected", self.calendar_day_selected)

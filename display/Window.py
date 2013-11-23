@@ -187,6 +187,8 @@ class Window(GlassWindow):
         elif (cmd == src.OBS_CLOSED):
             wx, wy, w, h = self.__window_bbox
             self.__window_snapper.remove(wx, wy, w, h)
+            del self.__display
+            self.shutdown()
             self.destroy()
     
 
@@ -541,6 +543,7 @@ class Window(GlassWindow):
             bx, by, bw, bh = self.__window_bbox
             self.__window_snapper.insert(bx, by, bw, bh)
 
+        return False
 
 
     #

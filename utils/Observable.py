@@ -32,8 +32,12 @@ class Observable(object):
 
     def drop_observers(self):
 
-        self.__ensure_init()
-        self.__handlers = []
+        print "dropping observers"
+
+        del self.__handlers
+#        self.__ensure_init()
+
+#        self.__handlers = []
 
 
 

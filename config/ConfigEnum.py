@@ -17,7 +17,7 @@ class ConfigEnum(ConfigWidget):
                                 doc = "List of (label, value) items")
 
         self._register_property("selection", TYPE_INT, self._setp_selection,
-                                self._getp, 0,
+                                self._getp, -1,
                                 doc = "Current selection index")
 
         self._register_property("value", TYPE_STRING, self._setp_value,
@@ -38,7 +38,7 @@ class ConfigEnum(ConfigWidget):
         self.__optmenu = gtk.combo_box_new_text()
         self.__optmenu.show()
         self.__optmenu.connect("changed", self.__on_change)
-        
+
         return (align, self.__optmenu)
 
 
@@ -51,7 +51,7 @@ class ConfigEnum(ConfigWidget):
     def _set_label(self, value):
 
         self.__label.set_text(value)
-        
+
 
     def __on_change(self, src):
 
@@ -63,29 +63,61 @@ class ConfigEnum(ConfigWidget):
 
     def _setp_items(self, key, items):
 
+        old_selection = self.__optmenu.get_active()
+
+        if old_selection != -1:
+            old_key = self.__items_values[old_selection]
+
         self.__items_values = []
         self.__optmenu.get_model().clear()
-        for k, v in items:
-            self.__optmenu.append_text(k)
-            self.__items_values.append(v)
-        #end for
+
+        for v, k in items:
+            self.__optmenu.append_text(v)
+            self.__items_values.append(k)
 
         self._setp(key, items)
-        self.set_prop("value", self.get_prop("value"))
+
+        if old_selection != -1:
+
+            # if the old key is still present in the new items
+            # list, we leave it as it is
+            if old_key in self.__items_values:
+                self.set_prop("value", old_key)
+
+            # otherwise, if the items list contains at least one
+            # element we selectt the last item
+            # we could also select any other, e.g. the 0'th
+            elif len(items) > 0:
+                self.set_prop("value", self.__items_values[len(items)-1])
+
+            # finally, if the list is empty we select
+            # nothing at all
+            else:
+                self.__optmenu.set_active(-1)
+                self._set_config("")
+        elif len(items) > 0:
+            self.set_prop("value", self.__items_values[len(items)-1])
 
 
     def _setp_selection(self, key, value):
 
         self.__optmenu.set_active(value)
-            
+
 
     def _setp_value(self, key, value):
+        old_value = self._getp("value")
 
-        try:
+        if value in self.__items_values:
             index = self.__items_values.index(value)
-        except:
-            index = 0
+#            self.__optmenu.set_active(-1)  # make sure to get a change event
+            self.__optmenu.set_active(index)
+        else:
+            value = ""
+            self.__optmenu.set_active(-1)
 
-        self.__optmenu.set_active(-1)  # make sure to get a change event
-        self.__optmenu.set_active(index)
+        # produce a callback for changed value
+        # in the bound variable, i.e. enum.value
+        self._set_config(value)
+
         self._setp(key, value)
+

@@ -87,7 +87,7 @@ AM_CONDITIONAL(HAVE_APP_INDICATOR, test x"$enable_appindicator" = xyes)
 AC_SUBST(appindicator_available)
 
 AM_PATH_PYTHON([2.4])
-PYTHON_PREFIX=`python -c "import sys; print sys.prefix"`
+PYTHON_PREFIX=`$PYTHON -c "import sys; print sys.prefix"`
 PYTHON_CFLAGS="-I$PYTHON_PREFIX/include/python$PYTHON_VERSION"
 AC_CHECK_HEADER([$PYTHON_PREFIX/include/python$PYTHON_VERSION/Python.h],,
     AC_ERROR([Can't find Python.h! You will need python's development package to compile gDesklets.]))

@@ -55,7 +55,7 @@ class Starter:
 
         # float mode
         self.__float_mode = False
-        self.__containers = []
+        self.__containers = {}
 
         # keybinder
         self.__prev_key = (0, 0)
@@ -217,7 +217,7 @@ class Starter:
             self.__close_display(ident)
             return None
 
-        self.__containers.append(container)
+        self.__containers[ident] = container
         container.set_float_mode(self.__float_mode)
         return container
 
@@ -260,16 +260,40 @@ class Starter:
             % (self.__display_paths[ident], ident))
         display.remove_display()
         Error().forget(ident)
-
+        print "backrefs"
+        import objgraph,inspect, random
+        objgraph.show_backrefs(display)
+        del display
+        a = self.__containers[ident]
+        b = self.__open_displays[ident]
+        c = self.__display_paths[ident]
+        objgraph.show_backrefs(a, refcounts=True, filename='/tmp/WindowBackref_before.png')
+        objgraph.show_backrefs(b, refcounts=True, filename='/tmp/DisplayBackref_before.png')
+        objgraph.show_backrefs(c, refcounts=True, filename='/tmp/DisplayPathBackref_before.png')
         try:
             del self.__open_displays[ident]
             del self.__display_paths[ident]
+            self.__containers[ident].destroy()
+            del self.__containers[ident]
+            print "deleted from Starter"
         except StandardError:
             pass
 
         import gc
         gc.collect()
-
+        objgraph.show_backrefs(a, refcounts=True, filename='/tmp/WindowBackref_after.png')
+        objgraph.show_backrefs(b, refcounts=True, filename='/tmp/DisplayBackref_after.png')
+        objgraph.show_backrefs(c, refcounts=True, filename='/tmp/DisplayPathBackref_after.png')
+        del a
+        del b
+        del c
+        print "growth"
+        objgraph.show_growth()
+        print "common"
+        objgraph.show_most_common_types()
+        objgraph.show_chain(objgraph.find_backref_chain(random.choice(objgraph.by_type('Window')), inspect.ismodule), filename='/tmp/chain.png')
+        objgraph.show_refs(random.choice(objgraph.by_type('Window')), refcounts=True, filename='/tmp/roots.png')
+        objgraph.show_backrefs(random.choice(objgraph.by_type('Window')), refcounts=True, filename='/tmp/rootsback.png')
 
 
     #

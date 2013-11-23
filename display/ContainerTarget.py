@@ -121,6 +121,11 @@ class ContainerTarget(DisplayTarget):
         self.__children = []
         self.__children_id.clear()
         self.__ids.clear()
+
+        del self.__children
+        del self.__children_id
+        del self.__ids
+        del self.__relatives
         DisplayTarget.delete(self)
 
 

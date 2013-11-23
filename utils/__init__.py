@@ -145,11 +145,13 @@ def _request_call(when_idle, function, *args):
     import gobject
 
     def f(tstamp, function, args):
-        if (_timestamps[function] > tstamp): return
-        else: function(*args)
+        if (_timestamps[str(function)] > tstamp):
+            return
+        else:
+            function(*args)
 
     tstamp = time.time()
-    _timestamps[function] = tstamp
+    _timestamps[str(function)] = tstamp
     if (when_idle):
         gobject.idle_add(f, tstamp, function, args)
     else:

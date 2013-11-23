@@ -364,6 +364,15 @@ class ConfigDialog(HIGDialog):
         # run the updater
         gobject.timeout_add(500, self.__updater)
 
+    #
+    # Refine the show() method to update the configuration widgets.
+    #
+    def purge(self):
+
+        # have the children update themselves
+        for c in self.get_config_items():
+          del c
+
 
 
     def __updater(self):

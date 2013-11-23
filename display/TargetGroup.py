@@ -45,6 +45,8 @@ class TargetGroup(ContainerTarget):
 
     def delete(self):
 
+        self.__image.destroy()
+        self.__layout.destroy()
         del self.__image
         del self.__layout
         del self.__block

@@ -32,7 +32,13 @@ class Control(object):
 
         lst = self.__handlers.get(prop, [])
         for handler, args in lst:
-            utils.run_in_main_thread(handler, getattr(self, prop), *args)
+            try:
+                is_callable = hasattr(handler, '__call__')
+            except NameError:
+                is_callable = False
+
+            if is_callable:
+                utils.run_in_main_thread(handler, getattr(self, prop), *args)
 
 
     def bind(self, prop, handler, *args):
@@ -45,14 +51,13 @@ class Control(object):
     def _add_timer(self, interval, callback, *args):
 
         """ Runs a timer callback at the given intervals. """
-
-        def func():
+        def func(self):
             """ callback function for gobject.timeout_add """
             if self.__is_stopped:
                 return False
             return bool(callback(*args))
 
-        return gobject.timeout_add(interval, func)
+        return gobject.timeout_add(interval, func, self)
 
 
     def _remove_timer(self, ident):

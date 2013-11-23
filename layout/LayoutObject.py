@@ -78,6 +78,25 @@ class LayoutObject(object):
         self.__action_callback = None
 
 
+    def destroy(self):
+        print "destroying layout object"
+        del self.__margin_right
+        del self.__margin_bottom
+        del self.__margin_ids
+        del self.__enabled
+        del self.__children
+        del self.__parent
+        del self.__relative
+        del self.__is_relative
+        del self.__relatives
+        del self.__anchor
+        del self.__real_geometry
+        del self.__old_real_geometry
+        del self.__geometry
+        del self.__border_width
+        del self.__bbox
+        del self.__geometry_callback
+        del self.__action_callback
 
     def new_child(self):
         """

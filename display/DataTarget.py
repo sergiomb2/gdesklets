@@ -80,7 +80,12 @@ class DataTarget(Element, Observable):
 
         self.drop_observers()
         self.__unbind_sensors()
-
+        del self.__actions
+        del self.__index
+        del self.__index_path
+        del self.__parent
+        del self.__display
+        del self.__watch_bindings
 
 
     #
