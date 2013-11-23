@@ -35,5 +35,5 @@ INSTALL
 *.lo
 *.la
 *.gmo
-.bzrignore
+.gitignore
 
