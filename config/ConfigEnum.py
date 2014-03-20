@@ -38,7 +38,7 @@ class ConfigEnum(ConfigWidget):
         self.__optmenu = gtk.combo_box_new_text()
         self.__optmenu.show()
         self.__optmenu.connect("changed", self.__on_change)
-        
+
         return (align, self.__optmenu)
 
 

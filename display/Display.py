@@ -362,7 +362,6 @@ class Display(gtk.HBox, Observable):
             self.__about.set_logo(pbuf)
 
 
-
     #
     # Adds the given scriptlet.
     #
@@ -1065,6 +1064,7 @@ class Display(gtk.HBox, Observable):
             if (not entry.active): item.set_sensitive(False)
 
             menupath = "/".join(entry.path.split("/")[:-1])
+
             if (menupath):
                 parentitem = tree.get(menupath)
 
