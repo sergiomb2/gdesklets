@@ -317,6 +317,16 @@ class Script:
             del w
         del self.__control_wrappers
 
+        # delete other controls
+        for c in self.__loaded_controls:
+            try:
+                c.stop()
+            except StandardError, exc:
+                import traceback; traceback.print_exc()
+                log(_("Could not stop control %s" % c))
+            del c
+        del self.__loaded_controls
+
 
 
     #
