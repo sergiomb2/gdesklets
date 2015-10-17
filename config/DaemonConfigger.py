@@ -29,7 +29,7 @@ class DaemonConfigger(ConfigDialog):
       ("boolean", {"label": _("Show _notification while loading a desklet"),
                               "bind": "loadsplash"}, True),
       ("boolean", {"label": _("Automatically check for _updates (takes effect after restart)"),
-                              "bind": "update_check"}, settings.build_time.check_for_updates_visible),
+                              "bind": "update_check"}, settings.check_for_updates_visible),
       ("keybinding", {"label": _("Key for toggling Float mode:"),
                       "bind": "float_key"}, True)
 
@@ -98,7 +98,7 @@ class DaemonConfigger(ConfigDialog):
             return settings.show_tray_icon
 
         elif (key == "update_check"):
-            if (settings.build_time.check_for_updates_visible):
+            if (settings.check_for_updates_visible):
                 return settings.check_for_updates
             else:
                 return False
@@ -120,7 +120,7 @@ class DaemonConfigger(ConfigDialog):
                                                     settings.show_load_splash)
         settings.show_tray_icon = self.__backend.get_key("trayicon",
                                                     settings.show_tray_icon)
-        if settings.build_time.check_for_updates_visible:
+        if settings.check_for_updates_visible:
             settings.check_for_updates = self.__backend.get_key("update_check",
                                                         settings.check_for_updates)
         else:

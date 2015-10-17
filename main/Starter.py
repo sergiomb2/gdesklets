@@ -113,7 +113,7 @@ class Starter:
                (),
                (gtk.STOCK_QUIT, _("_Stop daemon"),
                  self.__handle_shutdown)]
-            if (not settings.build_time.check_for_updates_visible):
+            if (not settings.check_for_updates_visible):
                 del menu[4]
 
             from main.TrayIcon import TrayIcon

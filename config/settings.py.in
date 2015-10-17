@@ -1,24 +1,12 @@
 #
 # @configure_input@
-# Module for holding runtime and build-time settings.
+# Module for holding runtime settings.
 #
 
-# Runtime settings
+check_for_updates_visible = @enable_update_check@
 check_for_updates = True
 show_tray_icon = True
 show_load_splash = False
 dpi = 96
 editor = "gnome-text-editor"
 float_key = (96, 1)  # <Shift> <F12>
-
-class __build_time_singleton(object):
-
-    # Build-time settings
-    check_for_updates_visible = @enable_update_check@
-
-    def __setattr__(self, obj, type=None):
-
-        """Raise AttributeError; make this class read-only"""
-        raise AttributeError
-
-build_time = __build_time_singleton()
