@@ -68,11 +68,9 @@ class ControlWrapper(object):
                 size = value
                 if value < 0:
                   value = 0
-                  log(_("Warning: Value of property \"length\" must " \
-                        "be >= 0 (setting to %d)" % value))
+                  log(_("Warning: Value of property \"length\" must be greater than or equal to 0 (setting to 0)"))
                 if value == 0:
-                  log(_("Warning: Setting value of property " \
-                        "\"length\" to 0 would disable list mode"))
+                  log(_("Warning: Value of property \"length\" set to 0 disables list mode"))
                   size = 1
 
                 # Don't do anything if value isn't changing
@@ -93,7 +91,7 @@ class ControlWrapper(object):
                             [ PropertyInterface(self.__control(open)[i])    \
                               for i in range(self.__length, size) ]
                     elif size < self.__length:
-                        # We want to leave the "0th" item alone, which is
+                        # We want to leave the "0th" item alone, which is 
                         # handled by the above conditionals
                         for i in range(size, self.__length):
                             del self[size]
@@ -199,7 +197,7 @@ class ControlWrapper(object):
                 c.stop()
             except StandardError, exc:
                 import traceback; traceback.print_exc()
-                log(_("Could not stop control %s" % c))
+                log("Could not stop control %s" % c)
             del c
 
         # original control is already stopped
