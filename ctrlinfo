@@ -12,6 +12,7 @@ from plugin.Interface import Interface
 
 import os
 import sys
+import traceback
 
 
 def output(key, value):
@@ -42,6 +43,7 @@ try:
         output("ID1", tazifaces)
 
 except:
+    print traceback.format_exc()
     sys.exit(1)
 
 os.chdir(cwd)
