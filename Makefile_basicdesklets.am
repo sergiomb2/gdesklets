@@ -206,6 +206,7 @@ nobase_dist_basicdesklets_DATA =     \
 	Displays/Calendar/events.script	\
 	Displays/Calendar/lang.script	\
 	Displays/Calendar/README \
+	Displays/Calendar/general.ics \
 	Displays/Calendar/months/0.png	\
 	Displays/Calendar/months/1.png	\
 	Displays/Calendar/months/2.png	\

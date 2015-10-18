@@ -1,4 +1,4 @@
-Clock gDesklet 0.54
+Clock gDesklet 0.55
 A scalable and configurable clock
 Copyright (C) 2008-2011  Martin Grimme, Robert Pastierovic
 
@@ -35,6 +35,8 @@ timezones.script - timezone information
 README - this file
 
 ==Changelog==
+ver. 0.55 (Bjoern Koch) 12-11-2011
+ - uses new ITime Control 'strftime' attribute to format the date (needs gDesklets 0.36.4+)
 ver. 0.54 (Bjoern Koch) 22-01-2011
  - updated Metadata
 ver. 0.53 (Bjoern Koch) 20-06-2010
