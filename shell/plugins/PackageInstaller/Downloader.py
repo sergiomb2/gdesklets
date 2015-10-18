@@ -61,16 +61,22 @@ class Downloader(gtk.Dialog):
 
         dest_fd = open(dest, "w")
 
-        import gconf
-        client = gconf.client_get_default()
-        use_proxy = client.get_bool('/system/http_proxy/use_http_proxy')
-        if (use_proxy != 0):
-           host = client.get_string('/system/http_proxy/host')
-           port = client.get_int('/system/http_proxy/port')
-           if (host != ""):
-               http_proxy = "http://" + host + ':' + str(port)
-           else:
-               http_proxy = None
+        try:
+            import gconf
+        except ImportError:
+            gconf = None
+        if gconf:
+            client = gconf.client_get_default()
+            use_proxy = client.get_bool('/system/http_proxy/use_http_proxy')
+            if (use_proxy != 0):
+               host = client.get_string('/system/http_proxy/host')
+               port = client.get_int('/system/http_proxy/port')
+               if (host != ""):
+                   http_proxy = "http://" + host + ':' + str(port)
+               else:
+                   http_proxy = None
+            else:
+                http_proxy = None
         else:
             http_proxy = None
 
