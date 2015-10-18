@@ -18,6 +18,8 @@ BuildRequires:  libgnome-devel > 2.6.0, desktop-file-utils, libcap-devel
 BuildRequires:  autoconf automake libtool
 BuildRequires:  libappstream-glib
 
+Requires: python-icalendar
+
 
 %description
 'gDesklets' provides an advanced architecture for desktop applets -
