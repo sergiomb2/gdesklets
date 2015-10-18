@@ -66,10 +66,7 @@ if (not _check_version()):
                 "you press that key again!\n"
                 "The default keybinding is &lt;Shift&gt; &lt;F12&gt;, "
                 "but you can easily change that in the configuration "
-                "dialog.\n\n"
-                "Please note that due to limitations of older X servers, "
-                "you might see blocks around desklets in Float mode. "
-                "This cannot be solved in a satisfying way.")
+                "dialog.\n\n")
 
     # show the dialog
     dialog.info(
