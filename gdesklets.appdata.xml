@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>gdesklets.desktop</id>
+  <name>gDesklets</name>
+  <summary>Eye candy for your desktop</summary>
+  <url type="homepage">https://launchpad.net/gdesklets</url>
+  <url type="bugtracker">https://bugs.launchpad.net/gdesklets</url>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <description>
+    <p>
+     gDesklets provides an advanced architecture for desktop applets -
+     tiny displays that sit on your desktop such as status meters, icon
+     bars, weather sensors, news tickers.
+    </p>
+    <p>
+     gDesklets is a system for bringing mini programs (desklets), such as
+     weather forecasts, news tickers, system information displays, or music
+     player controls, onto your desktop, where they are sitting there in a
+     symbiotic relationship of eye candy and usefulness. The possibilities are
+     really endless and they are always there to serve you whenever you need
+     them, just one key-press away. The system is not restricted to one desktop
+     environment, but currently works on most of the modern Unix desktops
+     (including GNOME, KDE, Xfce).
+    </p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+     <image>http://en.wikipedia.org/wiki/File:Gdesklets.png</image>
+     <caption>Desktop with running gDesklets</caption>
+    </screenshot>
+  </screenshots>
+</component>
