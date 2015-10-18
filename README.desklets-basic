@@ -1,0 +1,25 @@
+This directory contains some basic desklets that should be provided with the gDesklets distribution
+so that users can see the system in action without installing additional stuff.
+
+They should be under free software license preferably GNU/GPL version 2 so that other can improve
+them and fix the bugs.
+
+Some ideas:
+
+- clock - everybody needs a clock :)
+- calendar
+- POP/IMAP mail notification - it's so handy
+- image - some people like pinning images to their desktops
+- sticky notes - you can't live without
+- sysinfo (disk, memory/swap, network monitor, ...) not too much. keep it simple! cpu load and memory should be enough for most users
+- a template desklet (like sidecandy)
+- quote of the day
+- ...
+
+Please use this guidelines when creating desklets for this branch:
+1. use generic names for desklets (e.g. clock, calendar ...),
+2. look at the log file if there are any errors that need to be fixed when desklet is running,
+3. create simple icon for desklet (187x161 px),
+4. keep preferences simple, use tabs if necessary rather than one big page,
+5. discuss the addition in gDesklets-list mailing list (gDesklets-list@gnome.org)
+6. adjust the Makefiles according to your changes

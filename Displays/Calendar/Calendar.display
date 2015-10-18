@@ -8,14 +8,14 @@
         name="Calendar"
         category="Date/Time"
         description="A navigable calendar showing the entire month."
-        dependency="0.36.2"
+        dependency="0.36.4"
         website="http://www.gdesklets.de/?q=desklet/view/121"
         license="GPL-2"
-        copyright="(C) 2008-2011 Dave Minogue, Joe Sapp, Robert Pastierovic, Alessandro Vincenzi"
+        copyright="2008-2011 Dave Minogue, Joe Sapp, Robert Pastierovic, Alessandro Vincenzi"
         preview="gfx/preview.png"/>
 
-  # Loads the time control.
   <control id="TimeControl" interface="ITime"/>
+  <control id="ical" interface="IiCalendarEvent"/>
 
   # "Dsp.CalendarFrame"
   #
@@ -347,7 +347,7 @@
 
         <enum id="EventsEnumeration"
               label="Event Set:" bind="EventSetChoosed">
-           <!-- Put event sets in here! -->
+           <item label="General" value="general.ics"/>
         </enum>
 
         # "Prefs.EventColor"
@@ -380,9 +380,6 @@
   # Loads calendar functions and weekdays names.
   <script uri="calendar_mod.script"/>
 
-  # Loads events data functions.
-  <script uri="events.script"/>
-
   <script>
     #<![CDATA[
 
@@ -414,18 +411,16 @@
     CalendarWidth         = 200
     Separator             = " - "
     FirstWeekDay          = str(0)
+    path                  = get_desklet_path()
 
     # The following two variables are referred (as global declaration) by functions
     # in events.script and lang.script. Be carefull when dealing with them!!.
-    EventSetChoosed       = DefaultEventSet()
+    EventSetChoosed       = "general.ics"
     LanguageChoosed       = DefaultLanguage()
 
     RealYear,RealMonth,RealDay  = TimeControl.date
     ShowedYear  = RealYear
     ShowedMonth = RealMonth
-
-    # Fills the Events choice in the preference element Prefs.EventsEnumeration
-    Prefs.EventsEnumeration.items = [ item for item in EventsItemList() ]
 
     # Fills the language choice in the preference element Prefs.LanguageEnumeration
     Prefs.LanguageEnumeration.items = [ item for item in LanguagesItemList() ]
@@ -493,9 +488,20 @@
         #
         if (key == "ShowEvents"):
             Prefs.EventsEnumeration.enabled   = value
+            if (not value):
+                ical.uri = None
+            else:
+                ical.uri = path + EventSetChoosed
             Prefs.EventColor.enabled          = value
             Prefs.EventInfoLabelColor.enabled = value
             Prefs.EventInfoLabelFont.enabled  = value
+
+        #
+        # Reaction to change in selected events list
+        #
+        if (key == "EventSetChoosed"):
+            if (ShowEvents):
+                ical.uri = path + value
 
         # We finally redraw the calendar
 
@@ -565,16 +571,18 @@
 
         # Highlight the events if user wants it.
         if ShowEvents:
-            for Event in EventsOfTheMonth(ShowedYear, ShowedMonth):
-                Dsp.DayBackgroundGroup[Event[0]-1].bg_color = EventBackgroundColor
+            for Event in ical.events:
+                day_idx = Event.start_date['day'] - 1
+                Dsp.DayBackgroundGroup[day_idx].bg_color = EventBackgroundColor
+                summary = sanitize_string(Event.summary)
                 # yes ... it could happen!! See 1st May 2008 for german events (Ascension and Worker Days)
-                if Dsp.DayBackgroundGroup[Event[0]-1].on_enter == "":
-                    Dsp.DayBackgroundGroup[Event[0]-1].on_enter = ''.join( ["Dsp.EventInfoLabel.value='", Event[1], "'"] )
+                if Dsp.DayBackgroundGroup[day_idx].on_enter == "":
+                    Dsp.DayBackgroundGroup[day_idx].on_enter = ''.join( ["Dsp.EventInfoLabel.value='", summary, "'"] )
                 else:
-                    Dsp.DayBackgroundGroup[Event[0]-1].on_enter = ''.join( ["Dsp.EventInfoLabel.value='",
-                                                                            Dsp.DayBackgroundGroup[Event[0]-1].on_enter.split("'")[1],
-                                                                            ", ", Event[1], "'"] )
-                Dsp.DayBackgroundGroup[Event[0]-1].on_leave = "Dsp.EventInfoLabel.value=''"
+                    Dsp.DayBackgroundGroup[day_idx].on_enter = ''.join( ["Dsp.EventInfoLabel.value='",
+                                                                            Dsp.DayBackgroundGroup[day_idx].on_enter.split("'")[1],
+                                                                            ", ", summary, "'"] )
+                Dsp.DayBackgroundGroup[day_idx].on_leave = "Dsp.EventInfoLabel.value=''"
 
         # Highlight the current day if we are showing the current month.
         #
@@ -595,6 +603,7 @@
         global ShowedYear, ShowedMonth
         ShowedYear  = RealYear
         ShowedMonth = RealMonth
+        ical.month = (ShowedYear, ShowedMonth)
         DrawCalendar()
 
     def ShowNextMonth():
@@ -604,6 +613,7 @@
         else:
             ShowedYear += 1
             ShowedMonth = 1
+        ical.month = (ShowedYear, ShowedMonth)
         DrawCalendar()
 
     def ShowPreviousMonth():
@@ -613,6 +623,7 @@
         else:
             ShowedMonth = 12
             ShowedYear -= 1
+        ical.month = (ShowedYear, ShowedMonth)
         DrawCalendar()
 
     def ScrollMonth(d):
@@ -638,6 +649,7 @@
             ShowedMonth = RealMonth
         else:
             RealYear,RealMonth,RealDay = value
+        ical.month = (RealYear, RealMonth)
         DrawCalendar()
 
     #

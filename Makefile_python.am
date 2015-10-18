@@ -19,6 +19,12 @@ nobase_dist_install_DATA +=             \
 	Controls/Time/ITime.py \
 	Controls/URI/__init__.py \
 	Controls/URI/IURI.py \
+	Controls/iCalendarEvent/__init__.py \
+	Controls/iCalendarEvent/myProduct.py \
+	Controls/iCalendarEvent/events.py \
+	Controls/iCalendarEvent/CalDAVbackend.py \
+	Controls/iCalendarEvent/IiCalendarEvent.py \
+	Controls/iCalendarEvent/iCalendarBackend.py \
 	Sensors/External/__init__.py \
 	Sensors/FontSelector/__init__.py \
 	config/__init__.py       \

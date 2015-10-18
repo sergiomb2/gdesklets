@@ -3,11 +3,11 @@
 <display window-flags="sticky, below" anchor="center">
 
   <meta author="Martin Grimme, Robert Pastierovic"
-        version="0.54"
+        version="0.55"
         category="Date/Time"
         name="Clock"
         description="A scalable and configurable clock for your desktop."
-        dependency="0.36.2"
+        dependency="0.36.4"
         website="http://www.gdesklets.de/index.php?q=desklet/view/201"
         license="GPL-2"
         copyright="(C) 2008-2011 Martin Grimme, Robert Pastierovic"
@@ -32,12 +32,13 @@
   <label id="date" relative-to="main, y" x="50%" anchor="n"
          font="Sans bold 10" color="white" visible="False"/>
   <label id="tz" relative-to="date, y" anchor="n" font="Sans bold 10"
-           color="white" visible="False"/>
+         color="white" visible="False"/>
 
 
   <!-- the preferences dialog -->
   <prefs callback="prefs_cb">
 
+    <!-- the Appearance page -->
     <page label="Appearance" icon="gfx/icons/gnome-settings-background.png">
       <title label="Clock Face:"/>
       <enum label="Clock Face:" bind="clockface" help="What the clock looks like.">
@@ -65,6 +66,7 @@
       <boolean label="Display seconds" bind="show_seconds"/>
     </page>
 
+    <!-- the Clock Hands page -->
     <page label="Clock Hands" icon="gfx/icons/appointment.png">
       <title label="Clock Hands Style:"/>
       <enum label="Clock Hands Style:" bind="hand_hour_style" help="What the clock-hand looks like.">
@@ -79,14 +81,16 @@
       <color label="Seconds" bind="hand_color_sec"/>
     </page>
 
+    <!-- the Date page -->
     <page label="Date" icon="gfx/icons/calendar.png">
       <boolean label="Display date" bind="Dsp.date.visible"/>
       <font id="date_font" label="Font:" bind="Dsp.date.font"/>
       <color id="date_color" label="Text color:" bind="Dsp.date.color"/>
-      <string id="output_format" label="Output format:" bind="date_format"
+      <string id="output_format" label="Output format:" bind="format"
               help="The ouput format of the date."/>
     </page>
     
+    <!-- the Timezone page -->
     <page label="Timezone" icon="gfx/icons/gnome-globe.png">
       <enum id="continent" label="Region:" bind="tz_continent" callback="continent_cb">
         <item label="System Default" value=""/>
@@ -120,6 +124,7 @@
     clockface = "default.png"
     size = 3.5
     date_format = "%d. %m. %y"
+    format = "%x"
     show_seconds = True
     tz_continent = ""
     tz_city = ""
@@ -129,6 +134,7 @@
 
         if (key == "clockface"): set_face(value)
         if (key == "size"): set_scale(value)
+        if (key == "format"): time.format = value
         Prefs.date_font.enabled = Prefs.output_format.enabled = Prefs.date_color.enabled = Dsp.date.visible
         Prefs.tz_color.enabled = Prefs.tz_font.enabled = Dsp.tz.visible
 
@@ -213,9 +219,17 @@
         Dsp.date.value = out
 
 
+    def do_strftime(value):
+
+        Dsp.date.value = value
+
+
+    time.format = format
+
     # watch date and time
-    time.bind("date", do_date)
+    #time.bind("date", do_date)
     time.bind("time", do_time)
+    time.bind("strftime", do_strftime)
 
     # set_scale(size)
     # set_face(clockface)
