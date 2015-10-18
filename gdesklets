@@ -67,14 +67,9 @@ def check_system():
                 {"pygtk_ver": "2.10.0", "gtk_ver": "2.10.0"},
           True
         ),
-        ( ("ORBit",), lambda m : m.__version__ >= (2, 0, 1),
-          _("ORBit python bindings (pyorbit) version >= %(pyorbit_ver)s "
-            "are required.") % {"pyorbit_ver": "2.0.1"},
-          True
-        ),
         ( ("bonobo.ui",), lambda m : m,
           _("bonobo python bindings are required."),
-          True
+          False
         ),
         ( ("dbus",), lambda m : m,
           _("DBus python bindings are useful, but optional."),
