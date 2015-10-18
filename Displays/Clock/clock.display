@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display window-flags="sticky, below" anchor="center">
+
+  <meta author="Martin Grimme, Robert Pastierovic"
+        version="0.54"
+        category="Date/Time"
+        name="Clock"
+        description="A scalable and configurable clock for your desktop."
+        dependency="0.36.2"
+        website="http://www.gdesklets.de/index.php?q=desklet/view/201"
+        license="GPL-2"
+        copyright="(C) 2008-2011 Martin Grimme, Robert Pastierovic"
+        preview="gfx/pocketwatch.png"/>
+
+  <!--  retrieve the time control -->
+  <control id="time" interface="ITime"/>
+
+
+  <!-- clock face consisting of a background image and a canvas for displaying
+       the hands -->
+  <group id="main">
+
+    <image id="face" uri="gfx/default.png"
+           image-width="100%" image-height="100%" width="100%" height="100%"/>
+
+    <canvas id="clock" width="4cm" height="4cm"/>
+
+  </group>
+
+  <!-- date and timezone labels beneath the clock -->
+  <label id="date" relative-to="main, y" x="50%" anchor="n"
+         font="Sans bold 10" color="white" visible="False"/>
+  <label id="tz" relative-to="date, y" anchor="n" font="Sans bold 10"
+           color="white" visible="False"/>
+
+
+  <!-- the preferences dialog -->
+  <prefs callback="prefs_cb">
+
+    <page label="Appearance" icon="gfx/icons/gnome-settings-background.png">
+      <title label="Clock Face:"/>
+      <enum label="Clock Face:" bind="clockface" help="What the clock looks like.">
+        <item label="Default" value="default.png"/>
+        <item label="Aero" value="aero.png"/>
+        <item label="Chrome" value="chrome.png"/>
+        <item label="Dull" value="dull.png"/>
+        <item label="FX" value="fx.png"/>
+        <item label="FX with tux" value="fxtux.png"/>
+        <item label="gDesklets" value="gd.png"/>
+        <item label="GNOME" value="gnome.png"/>
+        <item label="Grandpa's pocket watch" value="pocketwatch.png"/>
+        <item label="Modern" value="modern.png"/>
+        <item label="Moon" value="moon.png"/>
+        <item label="OS-X" value="osX.png"/>
+        <item label="Royal Air Force" value="raf.png"/>
+        <item label="Rome" value="rome.png"/>
+        <item label="Station" value="station.png"/>
+        <item label="Tux" value="tux.png"/>
+      </enum>
+
+      <title label="Other Options:"/>
+      <float label="Size:" bind="size" min="0.5" max="50.0"
+             help="The size of the clockface."/>
+      <boolean label="Display seconds" bind="show_seconds"/>
+    </page>
+
+    <page label="Clock Hands" icon="gfx/icons/appointment.png">
+      <title label="Clock Hands Style:"/>
+      <enum label="Clock Hands Style:" bind="hand_hour_style" help="What the clock-hand looks like.">
+        <item label="Default" value="Default"/>
+        <item label="Futuristic" value="Futuristic"/>
+        <item label="Round" value="Round"/>
+        <item label="Sharp" value="Sharp"/>
+      </enum>
+
+      <title label="Clock Hands Color:"/>
+      <color label="Hours and Minutes" bind="hand_color"/>
+      <color label="Seconds" bind="hand_color_sec"/>
+    </page>
+
+    <page label="Date" icon="gfx/icons/calendar.png">
+      <boolean label="Display date" bind="Dsp.date.visible"/>
+      <font id="date_font" label="Font:" bind="Dsp.date.font"/>
+      <color id="date_color" label="Text color:" bind="Dsp.date.color"/>
+      <string id="output_format" label="Output format:" bind="date_format"
+              help="The ouput format of the date."/>
+    </page>
+    
+    <page label="Timezone" icon="gfx/icons/gnome-globe.png">
+      <enum id="continent" label="Region:" bind="tz_continent" callback="continent_cb">
+        <item label="System Default" value=""/>
+        <item label="Africa" value="Africa"/>
+        <item label="America" value="America"/>
+        <item label="Antarctica" value="Antarctica"/>
+        <item label="Arctic" value="Arctic"/>
+        <item label="Asia" value="Asia"/>
+        <item label="Atlantic Ocean" value="Atlantic"/>
+        <item label="Australia" value="Australia"/>
+        <item label="Europe" value="Europe"/>
+        <item label="Indian Ocean" value="Indian"/>
+        <item label="Pacific Ocean" value="Pacific"/>
+      </enum>
+      <enum id="city" label="Location:" bind="tz_city" callback="city_cb"/>
+      <boolean label="Display timezone" bind="Dsp.tz.visible"/>
+      <font id="tz_font" label="Font:" bind="Dsp.tz.font"/>
+      <color id="tz_color" label="Text color:" bind="Dsp.tz.color"/>
+    </page>
+    
+  </prefs>
+
+
+  <script uri="timezones.script"/>
+  <script>
+    #<![CDATA[
+
+    hand_color = "#1D1D1DFF"
+    hand_color_sec = "#FF0000FF"
+    hand_hour_style = "Default"
+    clockface = "default.png"
+    size = 3.5
+    date_format = "%d. %m. %y"
+    show_seconds = True
+    tz_continent = ""
+    tz_city = ""
+
+
+    def prefs_cb(key, value):
+
+        if (key == "clockface"): set_face(value)
+        if (key == "size"): set_scale(value)
+        Prefs.date_font.enabled = Prefs.output_format.enabled = Prefs.date_color.enabled = Dsp.date.visible
+        Prefs.tz_color.enabled = Prefs.tz_font.enabled = Dsp.tz.visible
+
+    def continent_cb(key, value):
+
+        Prefs.city.items = CITIES[value]
+
+    def city_cb(key, value):
+
+        if (tz_continent and tz_city):
+            tz = tz_continent + "/" + tz_city
+        else:
+            tz = tz_city
+        time.timezone = tz
+        Dsp.tz.value = time.timezone
+
+
+    def set_face(face):
+
+        Dsp.face.uri = "gfx/" + face
+
+
+    def do_time(value):
+
+        h, m, s = value
+        h_angle = 360 / 12 * (h + (m / 60.0))
+        m_angle = 360 / 60 * (m + (s / 60.0))
+        s_angle = 360 / 60 * s
+        w = Dsp.clock.width.as_px()
+        h = Dsp.clock.height.as_px()
+        scalex = float(w) / 100
+        scaley = float(h) / 100
+
+        hand_style = " style='stroke:none;fill:" + hand_color[0:7] + ";fill-opacity:" + str(float(int(hand_color[7:9],16))/255) + "; ' transform='rotate(%f)'/>"
+        hand_style_sec = " style='stroke:none;fill:" + hand_color_sec[0:7] + ";fill-opacity:" + str(float(int(hand_color_sec[7:9],16))/255) + "; ' transform='rotate(%f)'/>"
+
+        #setting the hand types
+        if (hand_hour_style == "Sharp"):
+            hand_hour_path = "M -1.7,4 L 0.0,-21 L 1.7,4 L -1.7,4 z"
+            hand_minute_path = "M -1.7,4 L 0.0,-31 L 1.75,4 L -1.7,4 z"
+            hand_second_path = "M 0.0,-31 L -1,6.0 L 1,6.0 L 0.0,-31 z"
+        elif (hand_hour_style == "Round"):
+            hand_hour_path = "M 0.104,-20.554 C -1.005,-16.892 -1.952,-6.336 -2.05,-2.200 C -1.887,1.462 -1.959,3.730 -0.003,6.546 C 1.730,3.801 2.179,1.990 2.020,-2.006 C 1.987,-5.904 1.287,-16.985 0.104,-20.554 z"
+            hand_minute_path = "M 0.0,-32.447 C -1.162,-27.267 -2.112,-12.181 -2.193,-6.253 C -1.998,-0.986 -2.062,2.265 0.042,6.439 C 1.877,2.618 2.345,0.049 2.153,-5.696 C 2.096,-11.294 1.284,-27.244 0.0,-32.447 z"
+            hand_second_path = "M 0.0,-32.607 C -0.584,-27.385 -1.063,-12.174 -1.103,-6.197 C -1.005,-0.887 -1.038,2.390 0.021,6.599 C 0.944,2.747 1.180,0.156 1.083,-5.636 C 1.054,-11.280 0.646,-27.362 0.0,-32.607 z"
+        elif (hand_hour_style == "Futuristic"):
+            hand_hour_path = "M -1.3333333,-13.21042 L -2,-20 L 2,-20 L 1.3333333,-13.21042 L -1.3333333,-13.21042 z"
+            hand_minute_path = "M -1,-21 L -1.5,-30 L 1.5,-30 L 1,-21 L -1,-21 z"
+            hand_second_path = "M -1,-31 L -1,-33 L 1,-33 L 1,-31 L -1,-31 z"
+        else:
+            hand_hour_path = "M-1 8 L-1.5 -20 L1.5 -20 L1 8Z"
+            hand_minute_path = "M-1 9 L-1.5 -29 L1.5 -29 L1 9Z"
+            hand_second_path = "M-0.5 10 L-0.5 -30 L0.5 -30 L0.5 10Z"
+
+        hand_hour = "<path d='" + hand_hour_path + "'" + hand_style
+        hand_minute = "<path d='" + hand_minute_path + "'" + hand_style
+        hand_second = "<path d='" + hand_second_path + "'" + hand_style_sec
+
+        body = hand_hour % (h_angle) + hand_minute % (m_angle)
+        if (show_seconds): body += hand_second % (s_angle)
+
+        Dsp.clock.graphics = \
+                 "<svg width='100' height='100'>" + \
+                 "<g transform='translate(50,50)'>" + \
+                 body + \
+                 "</g></svg>"
+
+
+    def set_scale(value):
+
+        Dsp.clock.width = Unit(value, CM)
+        Dsp.clock.height = Unit(value, CM)
+        do_time(time.time)
+
+
+    def do_date(value):
+
+        y, m, d = value
+        out = date_format.replace("%y", `y`) \
+                         .replace("%m", `m`) \
+                         .replace("%d", `d`)
+        Dsp.date.value = out
+
+
+    # watch date and time
+    time.bind("date", do_date)
+    time.bind("time", do_time)
+
+    # set_scale(size)
+    # set_face(clockface)
+    # do_time(time.time)
+    
+    ]]>
+  </script>
+
+</display>

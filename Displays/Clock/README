@@ -1,0 +1,54 @@
+Clock gDesklet 0.54
+A scalable and configurable clock
+Copyright (C) 2008-2011  Martin Grimme, Robert Pastierovic
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; version 2
+of the License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+==Included files==
+[gfx] - directory containing clock images
+   gnomeclock by Henrik Hellerstedt <henrik@katedral.se>
+   gDesklets clock by Johannes Rebhan <waldgeist@gnome-de.org>
+   default and raf by Tuomas Kuosmanen <tigert@ximian.com>
+    - rafclock represents the RAF (Royal Air Force) wartime briefing room clock for pilots as far as I know, a nice colorful clock face ;-)
+   pocket-watch by GrandMasta
+   osX-clock by Pablo
+   chrome, dull, fx, modern, and station clock faces were taken from KClock karamba widget (author linuxbob) - GPL license
+   rome clock face is from ClockThemed karamba widget (author Sacus) - GPL license
+   moon clock face is from DashClock karamba widget (author egon1984) - GPL license
+   aero clock face is from Aero-G for Kclock karamba widget (author mirdakas01) - GPL license
+   tux and fxtux clock faces by Robert Pastierovic
+   [icons] - directory containing icon images for the prefs menu
+clock.display - mainsource file
+timezones.script - timezone information
+README - this file
+
+==Changelog==
+ver. 0.54 (Bjoern Koch) 22-01-2011
+ - updated Metadata
+ver. 0.53 (Bjoern Koch) 20-06-2010
+ - fixed Control import error
+ - added icons to the prefs menu
+ver. 0.52 (Robert Pastierovic)
+ - added clock hands styles
+ver. 0.51 (Robert Pastierovic)
+ - added more clock faces
+ - added possibility to change color of clock hands
+ver. 0.50.2 (Robert Pastierovic)
+ - added disabling some menu entries according to if the date or timezone is displayed 
+until ver. 0.50.1 (Martin Grimme)
+
+==Other Information==
+Latest release of this gDeklet can be found at http://www.gdesklets.de/index.php?q=desklet/view/201
+Gdesklet project on launchpad: https://launchpad.net/gdesklets/

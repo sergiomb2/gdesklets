@@ -1,0 +1,92 @@
+15pieces gDesklet ver. 0.9
+
+15 pieces (also known as 16 pieces) puzzle game where you have to
+arrange pieces in order from 1-15 counting from top left corner to
+bottom right corner.
+Copyright (C) 2008-2011 Robert Pastierovic
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; version 2
+of the License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+==Included files==
+[gfx - puzzles] 
+  /gDesklets       - gDesklets puzzle images
+  /Gimp-Splash-1.2 - Gimp Splash Screen v1.2 images
+  /Gimp-Splash-2.1 - Gimp Splash Screen v2.1 images
+  /Gimp-Splash-2.2 - Gimp Splash Screen v2.2 images
+  /Gimp-Splash-2.3 - Gimp Splash Screen v2.3 images
+  /Globe           - globe images
+  /Gnome           - gnome images
+  /GNU             - GNU images
+  /Numbers         - numbers images (taken from karamba widget - GPL, written by Chryse)
+  /Tux             - tux images
+[gfx - general]
+  /gfx/dummy.png - 1px transparent dummy png 
+15pieces.display - main source file
+COPYING          - license
+make_tiles.sh    - simple bash script to generate a new set ot puzzle tiles from a picture
+README           - this file
+
+==Installation==
+This application requires gDesklets shell to be installed
+To install, copy the whole directory to /usr/share/.gdesklets/Displays/
+or run gDesklets shell and select File - > Install package and search for
+gDesklet archive package (for e.g. 15pieces-0.1.tar.gz) - this will install
+the desklet to your /home/[user name]/.gdesklets/Displays directory.
+
+Then run gDesklets Shell and choose 15pieces gdesklet from Fun category
+
+==Changelog==
+ver. 0.9 (Bjoern Koch) 22-01-2011
+  - added Gimp-Splash images (v2.1, v2.2) to solve
+  - updated Metadata
+  - new Control call w/o ID (needs gDesklets 0.36.2+ now)
+ver. 0.8 (Bjoern Koch) 28-02-2010
+  - fixed un-solvable puzzle problem
+  - added click and time counter
+  - updated make_tiles.sh (v0.4.1)
+ver. 0.7 (Bjoern Koch) 29-09-2008
+  - added Gimp-Splash images (v1.2, v2.3) to solve
+  - added support for custom images
+  - updated make_tiles.sh (v0.4)
+ver. 0.6 (Bjoern Koch) 07-03-2008
+  - randomize tiles on restart/startup
+  - added GNU image to solve
+  - updated make_tiles.sh (v0.3)
+ver. 0.5.2 (Bjoern Koch) 07-03-2008
+  - some code optimization to eliminate startup errors in the log file
+ver. 0.5.1 (Bjoern Koch) 28-02-2008
+  - make_tiles.sh added
+  - made Restart image visible only when puzzle is (actually) solved
+ver. 0.5 (Bjoern Koch) 11-02-2008
+  - Gnome image added
+ver. 0.4 (Robert Pastierovic) 26-01-2008
+  - added Globe image to solve
+  - some code optimization for better performance
+ver. 0.3 (Robert Pastierovic) 18-01-2008
+  - added gDesklets image to solve
+ver. 0.2 (Robert Pastierovic) 17-01-2008
+  - added possibility to configure gdesklet size and puzzle to solve
+  - added Tux image to solve
+ver. 0.1 (Robert Pastierovic) 16-01-2008
+  - initial version
+
+==ToDo==
+- add some more backgrounds to solve
+- Hi-Score list
+
+==Other==
+For more information see http://www.gdesklets.de/
+Latest release of this gDeklet can be found at http://www.gdesklets.de/index.php?q=desklet/view/228
+Gdesklet project on launchpad: https://launchpad.net/gdesklets/

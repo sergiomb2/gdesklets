@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display id="win" anchor="ne"
+         window-flags="sticky, below">
+
+  <meta author="Dave Minogue, Joe Sapp, Robert Pastierovic, Alessandro Vincenzi"
+        version="0.75"
+        name="Calendar"
+        category="Date/Time"
+        description="A navigable calendar showing the entire month."
+        dependency="0.36.2"
+        website="http://www.gdesklets.de/?q=desklet/view/121"
+        license="GPL-2"
+        copyright="(C) 2008-2011 Dave Minogue, Joe Sapp, Robert Pastierovic, Alessandro Vincenzi"
+        preview="gfx/preview.png"/>
+
+  # Loads the time control.
+  <control id="TimeControl" interface="ITime"/>
+
+  # "Dsp.CalendarFrame"
+  #
+  # The frame showed around the calendar.
+  #
+  # User can change the width (.width) and the color (.color).
+
+  <frame id="CalendarFrame"
+         color="#000000ff" width="200">
+
+    # "Dsp.CalendarGroup"
+    #
+    # It groups together all the elements of the calendar.
+    #
+    # User can scroll with the mouse (.on-scroll) on this element to see a different month in the calendar
+    # or change the background color (.bg-color). If the user wants to see a color as background, the image
+    # (Dsp.BackgroundImage) must be hided.
+
+    <group id="CalendarGroup"
+           width="100%" on-scroll="ScrollMonth(self.event.direction)">
+
+      # "Dsp.BackgroundImage"
+      #
+      # The background image of the calendar.
+      #
+      # User can choose to show it or not (.visible), and its file path too (.uri). If this image is showed,
+      # the background color of the calendar (Dsp.CalendarGroup.bg-color) must be set to transparent.
+
+      <image id="BackgroundImage"
+             image-width="100%" image-height = "100%"/>
+
+      # "Dsp.MonthImage"
+      #
+      # The caption image for the current month.
+      #
+      # User can choose to show it or not (.visible). If showed, user can choose to show a default image for
+      # each month or to select directly its file path (.uri).
+      #
+      # FIXME: If both BackgroundImage and MonthImage are showed, the latter is layed upon the former. Is this acceptable?
+
+      <image id="MonthImage"
+             width="100%" x="0" y="0" anchor="nw"/>
+
+      # "Dsp.MonthAndYearGroup"
+      #
+      # It simply groups three labels together to show them aligned to the center of the calendar.
+
+      <group id="MonthAndYearGroup"
+             relative-to="MonthImage,y" anchor="n" x="50%" y="5">
+
+        # "Dsp.ShowPreviousMonthLabel"
+        #
+        # A label that shows a left arrow.
+        #
+        # If user clicks on it (.on-click), the calendar will show the previous month. When the mouse pointer
+        # enters its area, its color change (.on-enter and .on-leave).
+
+        <label id="ShowPreviousMonthLabel"
+               font="Sans Bold 8" color="#90909020" value="&amp;lt;&amp;lt;  "
+               on-click="ShowPreviousMonth()" on-enter="self.color='#000000'" on-leave="self.color='#90909020'"/>
+
+        # "Dsp.MonthAndYearLabel"
+        #
+        # A label that shows the current month and year.
+        #
+        # User can change its font (.font) and color (.color). The ShowPreviousMonthLabel and ShowNextMonthLabel
+        # labels change accordingly (only the "on-enter" color). Its value is set by means of the DrawCalendar() script,
+        # according to the current month, year and language. Month and year strings are separated by a "separator"
+        # chosen by the user (see preferences).
+
+        <label id="MonthAndYearLabel"
+               font="Sans Bold 10" color="#a0a0a0" value=""
+               relative-to="ShowPreviousMonthLabel,x" on-click="ResetShowedMonth()"/>
+
+        # "Dsp.ShowNextMonthLabel"
+        #
+        # A label that shows a right arrow.
+        #
+        # If user clicks on it (.on-click), the calendar will show the next month. When the mouse pointer
+        # enetrs its area, its color change (.on-enter and .on-leave).
+
+        <label id="ShowNextMonthLabel"
+               font="Sans Bold 8" color="#90909020" value="  &amp;gt;&amp;gt;"
+               relative-to="MonthAndYearLabel,x"
+               on-click="ShowNextMonth()" on-enter="self.color='#000000'" on-leave="self.color='#90909020'"/>
+
+      </group> # Dsp.MonthAndYearGroup
+
+      # "Dsp.WeekDaysArray"
+      #
+      # An array of seven labels, one for each noun of the day of the week.
+
+      <array id="WeekDaysArray"
+             length="7" relative-to="MonthAndYearGroup,y" y="0.1cm" anchor="n">
+
+        # "Dsp.WeekDayLabel"
+        #
+        # A label that shows the noun of the day.
+        #
+        # User can change its font (.font) and color (.color); its value# is set by means of the DrawCalendar()
+        # script, according to the current language.
+
+        <label id="WeekDayLabel"
+               font="Sans Bold 7" color="#a0a0a0" value=""/>
+
+      </array> # Dsp.WeekDaysArray
+
+      # "Dsp.MonthDaysArray"
+      #
+      # An array of 31 labels, one for each day of the month.
+
+      <array id="MonthDaysArray"
+             length="31" relative-to="WeekDaysArray,y" y="0.1cm" anchor="n">
+
+        # "Dsp.DayBackgroundGroup"
+        #
+        # A wrapper around the label
+        #
+        # Used for positioning the label (.x and .y) of the days, to print a colored reactangle (.bg-color)
+        # to highlight the current day and events and to show the description of the event when the mouse
+        # pointer enters the area of an event (.on-enter and .on-leave).
+
+        <group id="DayBackgroundGroup">
+
+          # "Dsp.DayNumberLabel"
+          #
+          # A label that shows the numbers of the days
+          #
+          # User can change its font (.font) and color (.color); its value is set by means of the DrawCalendar() script.
+
+          <label id="DayNumberLabel"
+                 font="Sans Bold 7" color="#a0a0a0" value=""/>
+
+        </group> # Dsp.DayBackgroundGroup
+
+      </array> # Dsp.MonthDaysArray
+
+      # "Dsp.EmptyBefore"
+      #
+      # An empty image used to keep a distance between the previous array and the following label
+
+      <image id="EmptyBefore"
+             height="10" width="100%" x="0" y="0" relative-to="MonthDaysArray,y"/>
+
+      # "Dsp.EventInfoLabel"
+      #
+      # A label that shows a description of an event
+      #
+      # It has a value only if events must be showed and the mouse pointer is over a day with an event.
+      # User can change its font (.font) and color (.color).
+
+      <label id="EventInfoLabel"
+             anchor="n" relative-to="EmptyBefore,y" y="0.1cm"
+             value="" color="#808080ff" font="Sans Bold 7"/>
+
+      # "Dsp.EmptyAfter"
+      #
+      # An empty image used to keep a distance between the previous label and the bottom of the calendar.
+
+      <image id="EmptyAfter"
+             height="5" width="100%" x="0" y="0" relative-to="EventInfoLabel,y"/>
+
+    </group> # Dsp.CalendarGroup
+
+  </frame> # Dsp.CalendarFrame
+
+  #
+  # Preferences
+  #
+  <prefs callback="PreferencesCallback">
+
+    #
+    # A page with settings about images and background color:
+    #
+    <page label="Images" icon="gfx/emblem-photos.png">
+
+      <title label="Month Image"/>
+
+        # Show a caption image of the month or not?
+
+        <boolean label="Show Month Image" bind="ShowMonthImage"
+                 help="Show the image at the top?"/>
+
+        # "Prefs.ImageForEachMonth"
+        #
+        # Show a default image for each month?
+        #
+        # "ShowMonthImage" true  --> ImageForEachMonth enabled
+        # "ShowMonthImage" false --> ImageForEachMonth disabled
+
+        <boolean id="ImageForEachMonth"
+                 label="Default image of the Month" bind="ShowImageForEachMonth"
+                 help="Show default image for each month?"/>
+
+        # "Prefs.CaptionImageUri"
+        #
+        # The path to the image to put as caption.
+        #
+        # "ShowMonthImage" false  -->  "CaptionImageUri" disabled
+        # "ShowMonthImage" true and "ImageForEachMonth" true   -->  "CaptionImageUri" disabled
+        # "ShowMonthImage" true and "ImageForEachMonth" false  -->  "CaptionImageUri" enabled
+
+        <uri id="CaptionImageUri"
+             label="Month image:" bind="CaptionImagePath"/>
+
+      <title label="Background"/>
+
+        # Show a background image or not?
+        #
+        # If this value is true, the image is showed; otherwise, user can select a background color.
+
+        <boolean label="Show Background Image" bind="ShowBackgroundImage"
+                 help="Show the background image?"/>
+
+        # "Prefs.BackgroundImageUri"
+        #
+        # The path to an image to show as background.
+        #
+        # "ShowBackgroundImage" true   -->  "BackgroundImageUri" enabled
+        # "ShowBackgroundImage" false  -->  "BackgroundImageUri" disabled
+
+        <uri id="BackgroundImageUri"
+             label="Background Image:" bind="BackgroundImagePath"/>
+
+        # "Prefs.BackgroundColorColor"
+        #
+        # The background color of the calendar.
+        #
+        # "ShowBackgroundImage" true   -->  "BackgroundColorColor" disabled
+        # "ShowBackgroundImage" false  -->  "BackgroundColorColor" enabled
+
+        <color id="BackgroundColorColor"
+               label="Background Colour" bind="BackgroundColor"/>
+
+    </page> # Image
+
+    #
+    # A page with settins about fonts and colors of labels
+    #
+    <page label="Text" icon="gfx/stock_font.png">
+
+      <title label="Language"/>
+
+        # "Prefs.LanguageEnumeration"
+        #
+        # The list of languages availabe. The items of this list are filled with a loop in the file lang.script.
+
+        <enum id="LanguageEnumeration"
+              label="Language:" bind="LanguageChoosed">
+           <!-- Put languages in here! -->
+        </enum>
+
+      <title label="Fonts and Colors"/>
+
+        # The font and color of Dsp.MonthAndYearLabel
+        <font label="Month and Year:"  bind="MonthAndYearLabelFont"/>
+        <color                         bind="MonthAndYearLabelColor"/>
+
+        # The font and color of Dsp.WeekDayLabel
+        <font label="Week Days:"       bind="WeekDayLabelFont"/>
+        <color                         bind="WeekDayLabelColor"/>
+
+        # The font and color of the Dsp.DayNumberLabel
+        <font label="Month Days:"      bind="DayNumberLabelFont"/>
+        <color                         bind="DayNumberLabelColor"/>
+
+    </page> # Text
+
+    #
+    # A page with settins about the appearance of the calendar
+    #
+    <page label="Appearance" icon="gfx/preferences-desktop-wallpaper.png">
+
+      <title label="Colors"/>
+
+        # The color of Dsp.CalendarFrame.
+        <color label="Frame's Color:" bind="Dsp.CalendarFrame.color"/>
+
+        # The color used to highlight the current day.
+        <color label="Today's Color:" bind="TodayBackgroundColor"/>
+
+      <title label="Labels"/>
+
+        # The length in characters of Dsp.WeekDayLabel.
+        <integer label="Day of week characters:" bind="WeekDayLabelChars"
+                 min="1" max="3"
+                 help="Number of characters the days of the week should be"/>
+
+        # The separator between the name of the month and the year in Dsp.MonthAndYearLabel.
+        <enum label="Month and Year separator:" bind="Separator">
+          <item label="None"              value=" "/>
+          <item label="Hyphen (-)"        value=" - "/>
+          <item label="Colon (:)"         value=" : "/>
+          <item label="Double Colon (::)" value=" :: "/>
+          <item label="Tilde (~)"         value=" ~ "/>
+          <item label="Slash (/)"         value=" / "/>
+          <item label="Backslash (\)"     value=" \ "/>
+        </enum>
+
+      <title label="Others"/>
+
+        # The width of Dsp.CalendarFrame.
+        <integer label="Calendar Width:" bind="CalendarWidth" min="160"
+                 help="Set the width of the calander."/>
+
+        # Which is the first day of the week?
+        <enum label="First Weekday:" bind="FirstWeekDay">
+          <item label="Sunday" value="1"/>
+          <item label="Monday" value="0"/>
+        </enum>
+
+    </page> # Appearance
+
+    #
+    # Preferences about the events in the calendar
+    #
+    <page label="Events" icon="gfx/appointment.png">
+
+        # Show the events in the calendar or not?
+
+        <boolean label="Show Events" bind="ShowEvents"/>
+
+        # "Prefs.EventsEnumeration"
+        #
+        # The list of events sets availabe. The items of this list are filled with a loop in the file events.script
+        #
+        # "ShowEvents" true   -->  "EventsEnumeration" enabled
+        # "ShowEvents" false  -->  "EventsEnumeration" disabled
+
+        <enum id="EventsEnumeration"
+              label="Event Set:" bind="EventSetChoosed">
+           <!-- Put event sets in here! -->
+        </enum>
+
+        # "Prefs.EventColor"
+        #
+        # The color used to highlight an event.
+        #
+        # "ShowEvents" true   -->  "EventColor" enabled
+        # "ShowEvents" false  -->  "EventColor" disabled
+
+        <color id="EventColor"
+               label="Event Color:" bind="EventBackgroundColor"/>
+
+        # "Prefs.EventLabelFont" and "Prefs.EventLabelColor"
+        #
+        # The font and color of Dsp.EventInfoLabel.
+        #
+        # "ShowEvents" true   -->  "EventInfoLabelFont" and "EventInfoLabelColor" enabled
+        # "ShowEvents" false  -->  "EventInfoLabelFont" and "EventInfoLabelColor" disabled
+
+        <font  id="EventInfoLabelFont"  label="Event Description:"  bind="Dsp.EventInfoLabel.font"/>
+        <color id="EventInfoLabelColor"                             bind="Dsp.EventInfoLabel.color"/>
+
+    </page> # Events
+
+  </prefs>
+
+  # Load the language functions.
+  <script uri="lang.script"/>
+
+  # Loads calendar functions and weekdays names.
+  <script uri="calendar_mod.script"/>
+
+  # Loads events data functions.
+  <script uri="events.script"/>
+
+  <script>
+    #<![CDATA[
+
+    # Fonts
+    WeekDayLabelFont       = "Sans Bold 7"
+    DayNumberLabelFont     = "Sans Bold 7"
+    MonthAndYearLabelFont  = "Sans Bold 10"
+
+    # Colors
+    WeekDayLabelColor      = "#a0a0a0"
+    DayNumberLabelColor    = "#a0a0a0"
+    MonthAndYearLabelColor = "#a0a0a0"
+    TodayBackgroundColor   = "#ccffffff"
+    EventBackgroundColor   = "#e0e0e0ff"
+    BackgroundColor        = "#ffffffff"
+
+    # Paths
+    CaptionImagePath      = "months/0.png"
+    BackgroundImagePath   = "../Additions/bg/glass.svg"
+
+    # Boolean settings
+    ShowEvents            = True
+    ShowMonthImage        = True
+    ShowImageForEachMonth = False
+    ShowBackgroundImage   = False
+
+    #Other variables
+    WeekDayLabelChars     = 3
+    CalendarWidth         = 200
+    Separator             = " - "
+    FirstWeekDay          = str(0)
+
+    # The following two variables are referred (as global declaration) by functions
+    # in events.script and lang.script. Be carefull when dealing with them!!.
+    EventSetChoosed       = DefaultEventSet()
+    LanguageChoosed       = DefaultLanguage()
+
+    RealYear,RealMonth,RealDay  = TimeControl.date
+    ShowedYear  = RealYear
+    ShowedMonth = RealMonth
+
+    # Fills the Events choice in the preference element Prefs.EventsEnumeration
+    Prefs.EventsEnumeration.items = [ item for item in EventsItemList() ]
+
+    # Fills the language choice in the preference element Prefs.LanguageEnumeration
+    Prefs.LanguageEnumeration.items = [ item for item in LanguagesItemList() ]
+
+    #
+    # This function defines behaviour of preferences keys
+    #
+    def PreferencesCallback(key,value):
+
+        #
+        # Reactions to "Images" page
+        #
+        if (key == "ShowMonthImage"):
+            Dsp.MonthImage.visible          = value
+            Prefs.ImageForEachMonth.enabled = value
+            if (value and ShowImageForEachMonth):
+                Prefs.CaptionImageUri.enabled = not value
+            else:
+                Prefs.CaptionImageUri.enabled = value
+
+        if (key == "ShowImageForEachMonth"):
+            Prefs.CaptionImageUri.enabled = not value
+
+        if (key == "ShowBackgroundImage"):
+            Prefs.BackgroundImageUri.enabled   = value
+            Prefs.BackgroundColorColor.enabled = not value
+
+        #
+        # Reactions to "Text" page
+        #
+        if (key == "MonthAndYearLabelFont"):
+            Dsp.MonthAndYearLabel.font      = value
+            Dsp.ShowPreviousMonthLabel.font = value
+            Dsp.ShowNextMonthLabel.font     = value
+
+        if (key == "MonthAndYearLabelColor"):
+            Dsp.MonthAndYearLabel.color         = value
+            Dsp.ShowPreviousMonthLabel.on_enter = ''.join( ["Dsp.ShowPreviousMonthLabel.color='", value, "'"] )
+            Dsp.ShowNextMonthLabel.on_enter     = ''.join( ["Dsp.ShowNextMonthLabel.color='", value, "'"] )
+
+        if (key == "WeekDayLabelFont"):
+            for j in range(Dsp.WeekDaysArray.length):
+                Dsp.WeekDayLabel[j].font = value
+
+        if (key == "WeekDayLabelColor"):
+            for j in range(Dsp.WeekDaysArray.length):
+                Dsp.WeekDayLabel[j].color = value
+
+        if (key == "DayNumberLabelFont"):
+            for j in range(Dsp.MonthDaysArray.length):
+                Dsp.DayNumberLabel[j].font = value
+
+        if (key == "DayNumberLabelColor"):
+            for j in range(Dsp.MonthDaysArray.length):
+                Dsp.DayNumberLabel[j].color = value
+
+        #
+        # Reactions to "Appearance" page
+        #
+        if (key == "CalendarWidth"):
+            Dsp.CalendarFrame.width = Unit(CalendarWidth, PX)
+
+        #
+        # Reactions to "Events" page
+        #
+        if (key == "ShowEvents"):
+            Prefs.EventsEnumeration.enabled   = value
+            Prefs.EventColor.enabled          = value
+            Prefs.EventInfoLabelColor.enabled = value
+            Prefs.EventInfoLabelFont.enabled  = value
+
+        # We finally redraw the calendar
+
+        DrawCalendar()
+
+    #### end of PreferencesCallback()
+
+    #
+    # Draw the calendar
+    #
+    def DrawCalendar():
+
+        global RealYear,RealMonth,RealDay
+        global ShowedYear, ShowedMonth
+
+        # Build the "MonthAndYearLabel" label
+        Dsp.MonthAndYearLabel.value = ''.join( [MonthName(ShowedMonth), Separator, str(ShowedYear)] )
+
+        # Should we draw a caption image? If yes, a default image or not?
+        if ShowMonthImage:
+            if ShowImageForEachMonth:
+                Dsp.MonthImage.uri          = "months/" + str(ShowedMonth) + ".png"
+            else:
+                Dsp.MonthImage.uri          = CaptionImagePath
+
+        # Should we draw a background image or a background color?
+        if ShowBackgroundImage:
+            Dsp.BackgroundImage.visible      = True
+            Dsp.BackgroundImage.uri          = BackgroundImagePath
+            Dsp.CalendarGroup.bg_color       = "#00000000"
+        else:
+            Dsp.BackgroundImage.visible = False
+            Dsp.BackgroundImage.uri     = ""
+            Dsp.CalendarGroup.bg_color  = BackgroundColor
+
+        deltaX = Dsp.CalendarFrame.width / Unit( 8, PX)
+        deltaY = Dsp.CalendarFrame.width / Unit(12, PX)
+
+        # Build and position the seven "WeekDayLabel"s showing tha name of the day
+        for j in range(Dsp.WeekDaysArray.length):
+            Dsp.WeekDayLabel[j].value = DayNameAbbr((j-int(FirstWeekDay))%7)[0:WeekDayLabelChars]
+            Dsp.WeekDayLabel[j].x = Unit(j, PX) * deltaX
+
+        # Position the "DayNumberLabel"s showing the number of the day.
+        offset  = (WeekdayOfDate(ShowedYear, ShowedMonth, 1) + int(FirstWeekDay))%7
+        ndays = MonthDays(ShowedYear, ShowedMonth)
+        for j in range(Dsp.MonthDaysArray.length):
+
+            # Set bg-color to transparent and erase the on-enter and on-leave action. This must be done to erase
+            # previous settings due to the current day and events background
+            Dsp.DayBackgroundGroup[j].bg_color = "#00000000"
+            Dsp.DayBackgroundGroup[j].on_enter = ""
+            Dsp.DayBackgroundGroup[j].on_leave = ""
+
+            # We set the j's label to j+1 only if the number of the day is less than the number of days of the month.
+            # Otherwise, the label is set to empty and positioned to the same position of the last day of the month.
+            # This avoids the current problem: if a month with 31 days is showed with the 31th label in a new row
+            # and the user change to a month with 30 days, the last label (which is empty) does not create an empty row.
+            if j < ndays:
+                Dsp.DayNumberLabel[j].value = j+1
+                Dsp.DayBackgroundGroup[j].x = Unit((j+offset)%7, PX) * deltaX
+                Dsp.DayBackgroundGroup[j].y = Unit((j+offset)/7, PX) * deltaY
+            else:
+                Dsp.DayNumberLabel[j].value = ""
+                Dsp.DayBackgroundGroup[j].x = Unit((ndays-1+offset)%7, PX) * deltaX
+                Dsp.DayBackgroundGroup[j].y = Unit((ndays-1+offset)/7, PX) * deltaY
+
+        # Highlight the events if user wants it.
+        if ShowEvents:
+            for Event in EventsOfTheMonth(ShowedYear, ShowedMonth):
+                Dsp.DayBackgroundGroup[Event[0]-1].bg_color = EventBackgroundColor
+                # yes ... it could happen!! See 1st May 2008 for german events (Ascension and Worker Days)
+                if Dsp.DayBackgroundGroup[Event[0]-1].on_enter == "":
+                    Dsp.DayBackgroundGroup[Event[0]-1].on_enter = ''.join( ["Dsp.EventInfoLabel.value='", Event[1], "'"] )
+                else:
+                    Dsp.DayBackgroundGroup[Event[0]-1].on_enter = ''.join( ["Dsp.EventInfoLabel.value='",
+                                                                            Dsp.DayBackgroundGroup[Event[0]-1].on_enter.split("'")[1],
+                                                                            ", ", Event[1], "'"] )
+                Dsp.DayBackgroundGroup[Event[0]-1].on_leave = "Dsp.EventInfoLabel.value=''"
+
+        # Highlight the current day if we are showing the current month.
+        #
+        # FIXME: if on the RealDay there is an event and events are showed, then TodayBackgroundColor
+        #        overwrite EventBackgroundColor in label Dsp.DayBackgroundGroup[RealDay-1].bg_color.
+        #        Is this behaviour accepted?? User sees the RealDay highlighted but does not notice the
+        #        event of the day... what about showing a fix value in Dsp.eventInfoLabel ???
+        if RealYear == ShowedYear and RealMonth == ShowedMonth:
+            Dsp.DayBackgroundGroup[RealDay-1].bg_color = TodayBackgroundColor
+
+    #### end of DrawCalendar()
+
+    #
+    # Functions used to change the showed month
+    #
+    def ResetShowedMonth():
+        global RealYear,RealMonth,RealDay
+        global ShowedYear, ShowedMonth
+        ShowedYear  = RealYear
+        ShowedMonth = RealMonth
+        DrawCalendar()
+
+    def ShowNextMonth():
+        global ShowedYear, ShowedMonth
+        if ShowedMonth != 12:
+            ShowedMonth += 1
+        else:
+            ShowedYear += 1
+            ShowedMonth = 1
+        DrawCalendar()
+
+    def ShowPreviousMonth():
+        global ShowedYear, ShowedMonth
+        if ShowedMonth != 1:
+            ShowedMonth -= 1
+        else:
+            ShowedMonth = 12
+            ShowedYear -= 1
+        DrawCalendar()
+
+    def ScrollMonth(d):
+        if d == 0:
+            # scroll up
+            ShowPreviousMonth()
+        else:
+            # scroll down
+            ShowNextMonth()
+
+    #
+    # "change of date" event's handler
+    #
+    # If the real date (month and year) was showed then both the RealXXX and
+    # ShowedXXX variables will change. Otherwise only the RealXXX variables will change.
+    #
+    def UpdateRealDate(value):
+        global RealYear,RealMonth,RealDay
+        global ShowedYear, ShowedMonth
+        if RealYear == ShowedYear and RealMonth == ShowedMonth:
+            RealYear,RealMonth,RealDay = value
+            ShowedYear = RealYear
+            ShowedMonth = RealMonth
+        else:
+            RealYear,RealMonth,RealDay = value
+        DrawCalendar()
+
+    #
+    # bind the previous function to the change of date
+    #
+    TimeControl.bind("date", UpdateRealDate)
+
+    ]]>
+  </script>
+
+</display>
