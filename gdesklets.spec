@@ -9,7 +9,6 @@ License:    GPLv2+
 URL:        https://launchpad.net/gdesklets
 #Source0:    https://launchpad.net/gdesklets/0.3x/release-of-%{version}/+download/%{name}-%{version}.tar.bz2
 Source0:    %{name}-%{version}.tar.bz2
-Source1:    gdesklets.appdata.xml
 
 BuildRequires:  python2-devel > 2.0.0, pygtk2-devel > 2.4.0
 BuildRequires:  librsvg2-devel, libgtop2-devel >= 2.8.0, gettext, gvfs-devel
@@ -18,6 +17,8 @@ BuildRequires:  libgnome-devel > 2.6.0, desktop-file-utils, libcap-devel
 BuildRequires:  autoconf automake libtool
 BuildRequires:  libappstream-glib
 
+Requires(post): desktop-file-utils
+Requires(postun): desktop-file-utils
 Requires: python-icalendar
 
 
@@ -31,37 +32,37 @@ bars, weather sensors, news tickers.
 %setup -q
 
 %build
-autoreconf -fiv
+autoreconf --install
+intltoolize
 %configure \
  --disable-static \
- --enable-debug \
  --disable-update-check
 
 make %{?_smp_mflags}
 
 %install
-make install DESTDIR=%{buildroot}
+%make_install
+#make install DESTDIR=%{buildroot} datadir=/usr/share
 %find_lang %{name}
 desktop-file-install \
     --delete-original \
     --dir=%{buildroot}%{_datadir}/applications \
         %{buildroot}%{_datadir}/applications/%{name}.desktop
 
-mkdir -p  %{buildroot}{%{_bindir},%{_datadir}/%{name}/data/,%{_datadir}/%{name}/Displays/,%{_datadir}/%{name}/Controls/}
-
 # don't want libtool archives
-find %{buildroot} -name \*.la | xargs rm
+find %{buildroot} -name \*.la -delete
 
-install -Dp %{SOURCE1} %{buildroot}/%{_datadir}/appdata/%{name}.appdata.xml
+install -D -m0644 contrib/bash/gdesklets %{buildroot}%{_sysconfdir}/bash_completion.d/gdesklets
+install -Dp gdesklets.appdata.xml %{buildroot}/%{_datadir}/appdata/%{name}.appdata.xml
 appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata.xml
 
 %post
-/bin/touch --no-create %{_datadir}/mime/packages &> /dev/null || :
+/bin/touch --no-create %{_datadir}/mime/packages &>/dev/null || :
 /usr/bin/update-desktop-database &> /dev/null || :
 
 %postun
 if [ $1 -eq 0 ] ; then
- /usr/bin/update-mime-database %{_datadir}/mime &> /dev/null || :
+  /usr/bin/update-mime-database %{_datadir}/mime &> /dev/null || :
 fi
 /usr/bin/update-desktop-database &> /dev/null || :
 
@@ -71,21 +72,21 @@ fi
 %files -f %{name}.lang
 %doc AUTHORS ChangeLog NEWS README
 %license COPYING
-%{_bindir}/%{name}
-%{_datadir}/mime/packages/%{name}.xml
+%{_bindir}/gdesklets
+%{_datadir}/mime/packages/gdesklets.xml
 %{_datadir}/icons/gnome/48x48/mimetypes/*.png
-%{_datadir}/pixmaps/%{name}.png
-%{_sysconfdir}/xdg/autostart/%{name}.desktop
-%{_datadir}/applications/*.desktop
-%{_datadir}/%{name}/
-%{_libdir}/%{name}/
-%{_mandir}/man1/*
-%{_datadir}/appdata/%{name}.appdata.xml
+%{_datadir}/pixmaps/gdesklets.png
+%{_sysconfdir}/xdg/autostart/gdesklets.desktop
+%{_sysconfdir}/bash_completion.d/gdesklets
+%{_datadir}/applications/gdesklets.desktop
+%{_libdir}/gdesklets/
+%{_mandir}/man1/gdesklets.*
+%{_datadir}/appdata/gdesklets.appdata.xml
 
 
 %changelog
 * Sun Oct 18 2015 Sérgio Basto <sergio@serjux.com> - 0.36.4-0.1
-- Bump
+- Update to 0.36.4 Beta.
 
 * Wed Sep 23 2015 Sérgio Basto <sergio@serjux.com> - 0.36.3-24
 - Minor simplification
