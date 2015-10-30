@@ -1,0 +1,74 @@
+Quote of the Day gDesklet 1.3
+Desklet displaying Quote for each day of the year
+Copyright (C) 2008-2011  Robert Pastierovic
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; version 2 or later
+of the License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+==Installation==
+This application requires gDesklets core and shell to be installed
+To install run gDesklets shell, select File - > Install package and search
+for gDesklet archive (for e.g. Quote-0.1.tar.gz) - this will install
+the desklet to your /home/[user name]/.gdesklets/Displays directory.
+
+Then choose Quote of the Day gdesklet from "Misc" category
+
+==Changelog==
+ver. 1.3 (Bjoern Koch) 22-01-2011
+ - added more Chuck Norris 'The Programmer' quotes
+ - updated Metadata
+ - new Control call w/o ID (needs gDesklets 0.36.2+ now)
+ver. 1.3_beta (Bjoern Koch) 05-04-2010
+ - added Chuck Norris 'The Programmer' Jokes database
+ - added icons to the prefs pages
+ver. 1.2 (Robert Pastierovic) 26-12-2008
+ - added database with Murphy's Laws
+ver. 1.1 (Robert Pastierovic) 25-08-2007
+ - added database with bible verses (thanks to R.L.)
+ - some other minor changes and fixes
+ver. 1.0 (Robert Pastierovic) 28-07-2007
+ - more quotes (366 reached)
+ver. 0.9 (Robert Pastierovic) 15-07-2007
+ - more quotes
+ver. 0.8 (Robert Pastierovic) 05-07-2007
+ - more quotes
+ver. 0.7 (Robert Pastierovic) 30-06-2007
+ - added text shadow
+ - more quotes
+ver. 0.6 (Robert Pastierovic) 17-06-2007
+ - added change of the quote at an hourly rate and twice a day
+ - more quotes
+ver. 0.5 (Robert Pastierovic) 27-05-2007
+ - more quotes
+ver. 0.4 (Robert Pastierovic) 19-05-2007
+ - more quotes
+ - "bugfix", failed installation due to the directory containing spaces
+ver. 0.3 (Robert Pastierovic) 06-05-2007
+ - added more quotes
+ - database quotes count added
+ver. 0.2 (Robert Pastierovic) 29-04-2007
+ - added more quotes
+ - desklets width is possible to adjust
+ver. 0.1 (Robert Pastierovic) 28-04-2007
+ - initial version
+
+==ToDo==
+- add change of "--" prefix before author name
+- add some suitable background
+
+==Other==
+For more information see http://www.gdesklets.de/
+gDesklets project on launchpad: https://launchpad.net/gdesklets/
+This desklet can be found at http://www.gdesklets.de/?q=desklet/view/181
+

@@ -1,0 +1,399 @@
+#
+# events.script : file with values and functions for event management
+#
+# NOTE: Functions for date management are used so that the file calendar_mod.script must be loaded before this file
+#
+# Unicode characters are taken from http://en.wikibooks.org/wiki/Unicode/Character_reference
+# Otherwise, this tool works well: http://rishida.net/scripts/uniview/conversion.php
+#
+
+#
+# The list of sets of events.
+#
+# EventsSetList is a list of sets (ordered alphabetically by the name of the set)
+#
+# EventsSetList[i]       is the it-th set. Every set is a couple (Couple, List)
+# EventsSetList[i][0]    is the couple (Name, Identidier) used as item for Prefs.EventsEnumeration
+# EventsSetList[i][1]    is a list of 12 lists (from 0 to 11), one for each month.
+# EventsSetList[i][1][j] is the list of events having a fixed date every year for the month j+1
+#                        Every event is a couple (DayNumber, Description)
+#
+
+EventsSetList = [
+    #
+    # Brazilian Portuguese Events
+    #
+    ( ("Brazilian - Portuguese", "pt_br"),
+    [
+      [ (1, "Ano Novo") ],
+      [ (20, "Carnaval") ],
+      [ ],
+      [ (21, "Tiradentes") ],
+      [ (5, "Dia do Trabalho") ],
+      [ (7, "Corpus Christi") ],
+      [ ],
+      [ ],
+      [ (7, u"Independ\u00eancia do Brasil") ],
+      [ (12, "Nossa Senhora Aparecida") ],
+      [ (2, "Dia de Finados"), (15, u"Proclama\u00e7\u00e3o da Rep\u00fablica") ],
+      [ (25, "Natal") ]
+    ] ),
+    #
+    # British Events
+    #
+    ( ("British", "uk"),
+    [
+      [ (1, "New Year&#39;s Day"), (2, "Bank Holiday (scotland only)"), (25, "Burns Night"), (27, "Holocaust Memorial Day") ],
+      [ (9, "Chinese New Year"), (14, "Valentine&#39;s Day"), (20, "Shrove Tuesday") ],
+      [ (1, "St David&#39;s Day"), (17, "St. Patricks Day"), (18, "Mother&#39;s Day"), (19, "Bank Holiday (Norther&#39;n Ireland Only)"), (20, "1st Day of Spring (North Hemisphere)"), (25, "Summer Time Starts (Clocks Forward)") ],
+      [ (6, "Good Friday"), (9, "Bank Holiday (Not Scotland)"), (23, "St George&#39;s Day") ],
+      [ (7, "Bank Holiday"), (28, "Bank Holiday") ],
+      [ (17, "Father&#39;s Day"), (21, "Summer Begins") ],
+      [ (12, "Bank Holiday (Norther&#39;n Ireland Only)") ],
+      [ (6, "Bank Holiday (Scotland only)"), (27, "Bank Holiday (Not Scotland)") ],
+      [ (22, "Autumn Begins") ],
+      [ (28, "End Summer Time (Clocks Back)"), (31, "Halloween") ],
+      [ (5, "Guy Fawkes Day"), (11, "Remembrance Sunday"), (30, "St Andrew&#39;s day") ],
+      [ (1, "World Aids Day"), (21, "Winter Begins"), (25, "Christmas Day"), (26, "Boxing Day") ]
+    ] ),
+    #
+    # Czech Events
+    #
+    ( ("Czech", "cz"),
+    [
+      [ (1, u"Nov\u00fd rok") ],
+      [ (14, u"Valent\u00edn") ],
+      [ (21, u"Prvn\u00ed jarn\u00ed den") ],
+      [ ],
+      [ (1, u"Sv\u00e1tek pr\u00e1ce"), (8, u"Den osvobozen\u00ed od fa\u0161izmu") ],
+      [ (22, u"Prvn\u00ed letn\u00ed den") ],
+      [ (5, u"Den v\u011brozv\u011bst\u016f Cyrila a Metodeje"), (6, u"Den up\u00e1len\u00ed mistra Jana Husa") ],
+      [ ],
+      [ (23, u"Prvn\u00ed podzimn\u00ed den"), (28, u"Den\u010desk\u00e9 st\u00e1tnosti") ],
+      [ (28, u"Den vzniku\u010dSR") ],
+      [ (17, "Den boje za svobodu a demokracii") ],
+      [ (21, u"Prvn\u00ed zimn\u00ed den"), (24, u"\u0161t\u011bdr\u00fd den"), (25, u"1. Sv\u00e1tek V\u00e1no\u010dn\u00ed"), (26, u"Sv\u00e1tek V\u00e1no\u010dn\u00ed")]
+    ] ),
+    #
+    #
+    # General Events
+    ( ("General", "xx"),
+    [
+      [ (1, "New Year&#39;s Day"), (6, "Epiphany"), (17, "Martin Luther King, Jr&#39;s Birthday"), (21, "(Eid) al Adha") ],
+      [ (2, "Groundhog Day"), (8, "Shrove Tuesday"), (9, "Ash Wednesday/Chinese New Year"), (10, "1st of Muharram"), (14, "Valentine&#39;s Day"), (21, "Presidents Day") ],
+      [ (17, "St. Patricks Day"), (20,"1st Day of Spring (North Hemisphere)"), (25, "Good Friday"), (27,"Easter Sunday") ],
+      [ (3, "Daylight Savings Time Begins"), (23, "Mawlid an-Nabi"), (24, "1st Day of Passover") ],
+      [ (1, "Orthodox Easter"), (8, "Mother&#39;s Day"), (30, "Memorial Day") ],
+      [ (13, "1st Day of Shavuot"), (14, "Flag Day"), (19, "Father&#39;s Day"), (21, "Summer Begins") ],
+      [ (1, "Canada Day"), (4, "Independence Day") ],
+      [ ],
+      [ (5, "Labor Day"), (22, "Autumn Begins") ],
+      [ (4, "Rosh Hashanah"), (5, "Ramadan Begins"), (10, "Columbus Day and Canadian Thanksgiving"), (13, "Yom Kippur"), (18, "1st Day of Sukkot"), (25, "Shemini Atzeret"), (30, "Dailight Savings Time Ends"), (31, "Halloween") ],
+      [ (1, "All Saints&#39; Day"), (4, "Ramadan Ends"), (8, "Election Day"), (11, "Veterans Day"), (24, "Thanksgiving Day(U.S.)"), (27, "1st Sunday of Advent") ],
+      [ (21, "Winter Begins"), (25, "Christmas Day"), (26, "1st Day of Hanukkah & Kwanzaa")]
+    ] ),
+    #
+    # German Events
+    #
+    ( ("German", "ge"),
+    [
+      [ (1, "Neujahr"), (6, u"Heilige Drei K\u00f6nige") ],
+      [ ],
+      [ ],
+      [ ],
+      [ (1, "Tag der Arbeit")],
+      [ (7, "Fronleichnam") ],
+      [ ],
+      [ (8, "Augsburger Friedensfest"), (15, "Maria Himmelfahrt") ],
+      [ ],
+      [ (3, "Tag der Deutschen Einheit"), (31, "Reformationstag") ],
+      [ (1, "Allerheiligen"), (21, "Buss unt bettag") ],
+      [ (24, "Heilig Abend"), (25, "1. Weihnachtstag"), (26, "2. Weihnachtstag"), (31, "Silvester")]
+    ] ),
+    #
+    # Greek Events
+    #
+    ( ("Greek", "el"),
+    [
+      [ (1, u"\u03a0\u03c1\u03c9\u03c4\u03bf\u03c7\u03c1\u03bf\u03bd\u03b9\u03ac"), (6, u"\u03a4\u03b1 \u0386\u03b3\u03b9\u03b1 \u0398\u03b5\u03bf\u03c6\u03ac\u03bd\u03b9\u03b1") ],
+      [ ],
+      [ (25, u"25\u03b7 \u039c\u03b1\u03c1\u03c4\u03af\u03bf\u03c5") ],
+      [ ],
+      [ (1, u"\u03a0\u03c1\u03c9\u03c4\u03bf\u03bc\u03b1\u03b3\u03b9\u03ac") ],
+      [ ],
+      [ ],
+      [ (6, u"\u039c\u03b5\u03c4\u03b1\u03bc\u03cc\u03c1\u03c6\u03c9\u03c3\u03b7 \u03a3\u03c9\u03c4\u03ae\u03c1\u03bf\u03c2"), (15, u"\u039a\u03bf\u03af\u03bc\u03b7\u03c3\u03b7 \u03c4\u03b7\u03c2 \u0398\u03b5\u03bf\u03c4\u03cc\u03ba\u03bf\u03c5") ],
+      [ ],
+      [ (28, u"28\u03b7 \u039f\u03ba\u03c4\u03c9\u03b2\u03c1\u03af\u03bf\u03c5") ],
+      [ (17, u"17\u03b7 \u039d\u03bf\u03ad\u03bc\u03b2\u03c1\u03b7") ],
+      [ (25, u"\u03a7\u03c1\u03b9\u03c3\u03c4\u03bf\u03cd\u03b3\u03b5\u03bd\u03bd\u03b1") ]
+    ] ),
+    #
+    # Italian Events
+    #
+    ( ("Italian", "it"),
+    [
+      [ (1, "Capodanno"), (6, "Epifania") ],
+      [ (14, "San Valentino") ],
+      [ (8, "Festa della Donna"), (18, u"Festa del Pap\u00e0") ],
+      [ (25, "Festa della Liberazione") ],
+      [ (1, "Festa del Lavoro") ],
+      [ (2, "Festa della Repubblica") ],
+      [ ],
+      [ (15, "Ferragosto") ],
+      [ ],
+      [ ],
+      [ (1, "Festa dei Santi") ],
+      [ (8, "Immacolata Concezione"), (25, "Natale"), (26, "Santo Stefano") ]
+    ] ),
+    #
+    # Mexican Events
+    #
+    ( ("Mexican", "mx"),
+    [
+      [ (1, u"A\u00f1o nuevo"), (6, "Santos Reyes") ],
+      [ (14, "Amor y la amistad") ],
+      [ ],
+      [ ],
+      [ (1, u"D\u00eda del Trabajo"), (5, "Batalla de puebla"), (10, "Madre"), (15, "Maestro") ],
+      [ ],
+      [ ],
+      [ ],
+      [ (16, u"Independencia de M\u00e9xico") ],
+      [ ],
+      [ (2, "Muertos") ],
+      [ (12, "Virgen de Guadalupe"), (25, "Navidad") ]
+    ] ),
+    #
+    # Slovak Events
+    #
+    ( ("Slovak", "sk"),
+    [
+      [ (1, u"Nov\u00fd rok - De\u0148 vzniku SR"), (6, u"Traja kr\u00e1li") ],
+      [ (14, u"Valent\u00edn") ],
+      [ (21, u"Prv\u00fd jarn\u00fd de\u0148") ],
+      [ ],
+      [ (1, u"Sviatok pr\u00e1ce"), (8, u"De\u0148 v\u00ed\u0165azstva nad fa\u0161izmom") ],
+      [ (22, u"Prv\u00fd letn\u00fd de\u0148") ],
+      [ (5, "Sviatok sv. Cyrila a sv. Metoda") ],
+      [ (29, u"V\u00fdro\u010die SNP") ],
+      [ (1, u"De\u0148\u00fastavy SR"), (15, u"Sedembolestn\u00e1 Panna M\u00e1ria"), (23, u"Prv\u00fd jesenn\u00fd de\u0148") ],
+      [ ],
+      [ (1, u"Sviatok v\u0161etk\u00fdch sv\u00e4t\u00fdch"), (17, u"De\u0148 boja za slobodu a demokraci") ],
+      [ (21, u"Prv\u00fd zimn\u00fd de\u0148"), (24, u"\u0161tedr\u00fd de\u0148"), (25, u"1. sviatok viano\u010dn\u00fd"), (26, u"2. sviatok viano\u010dn\u00fd") ]
+    ] ),
+    #
+    # Spanish Events
+    #
+    ( ("Spanish", "es"),
+    [
+      [ (1, u"A\u00f1o Nuevo"), (6, u"Epifan\u00eda del Se\u00f1or") ],
+      [ (28, u"D\u00eda de Andaluc\u00eda") ],
+      [ (1, u"D\u00eda de las Islas Baleares"), (19, u"San Jos\u00e9") ],
+      [ (16, u"D\u00eda del Pa\u00eds Vasco"), (23, u"D\u00eda de Arag\u00f3n y Castilla y Le\u00f3n") ],
+      [ (1, u"D\u00eda del Trabajo"), (2, u"D\u00eda de la Comunidad de Madrid"), (30, u"D\u00eda de Canarias"), (31, u"D\u00eda de Castilla La Mancha") ],
+      [ (9, u"D\u00eda de La Rioja y Murcia") ],
+      [ (7, u"San Ferm\u00edn"), (25, u"Santiago Ap\u00f3stol") ],
+      [ (15, u"Asunci\u00f3n de la Virgen") ],
+      [ (8, u"D\u00eda de Extremadura y Asturias"), (11, u"Diada de Catalu\u00f1a"), (15, u"D\u00eda de Cantabria")],
+      [ (9, u"D\u00eda de la Comunidad Valenciana"), (12, "Virgen del Pilar") ],
+      [ (1, "Todos los Santos") ],
+      [ (2, u"D\u00eda de Navarra"), (6, u"D\u00eda de la Constituci\u00f3n"), (8, u"Inmaculada Concepci\u00f3n"), (24, "Nochebuena"), (25, "Navidad"), (31, "Nochevieja") ]
+    ] ),
+    #
+    # Chinese Events
+    #
+    ( (u"\u4e2d\u6587", "zh"),
+    [
+      [ (1, u"\u5143\u65e6") ],
+      [ ],
+      [ ],
+      [ ],
+      [ (1, u"\u52b3\u52a8\u8282"), (4, u"\u9752\u5e74\u8282") ],
+      [ ],
+      [ (1, u"\u5efa\u515a\u8282") ],
+      [ (1, u"\u5efa\u519b\u8282") ],
+      [ ],
+      [ (1, u"\u56fd\u5e86\u8282") ],
+      [ ],
+      [ ]
+    ] )
+]
+
+#
+# This function returns the default value binded to the enumeration of events
+#
+def DefaultEventSet():
+
+    return "xx"
+
+#
+# This function returns a list of couples (Label, Value) used in enumeration
+#
+def EventsItemList():
+
+    itemslist = []
+    for EventSet in EventsSetList:
+        itemslist.append(EventSet[0])
+    return itemslist
+
+#
+# This function takes the Year, the Month and gives a list
+# of both events with fixed and mobile date for that Month and Yaer.
+#
+# Every event in the list returned is a couple (DayNumber, Description)
+#
+# Month must be in [1,12]
+#
+# Notes about events:
+#
+# Easter Sunday (see EasterSunday declaration in calendar_mod.script)
+#
+# Ascension Day (from http://de.wikipedia.org/wiki/Christi_Himmelfahrt)
+#   Ascension Day is the 40th Day of the Easter cycle, ie 39 days after Easter Sunday is celebrated.
+#   Therefore, the festival always falls on a Thursday. The earliest date is 30 April, the latest of the 3rd June.
+#
+# Pentecost Day (from http://de.wikipedia.org/wiki/Pfingsten#Pfingstdatum)
+#  On which day is Pentecost, depends entirely on the date of Easter. According to the ancient practice of counting the
+#  fifty days of Easter Sunday as the first day included. Thus, the Pentecost always is on the time between the 10th May and
+#  the 13th June.
+#
+# The interleaving of easter events is then the following:
+#                |      March      |       April       |   May    |  June   |
+# Holy Thursday  | 19...........31.|.1..22             |          |         |
+# Holy Friday    |    20........31.|.1.....23          |          |         |
+# Easter         |       22.....31.|.1........25       |          |         |
+# Holy Monday    |          23..31.|.1...........26    |          |         |
+# Ascension Day  |                 |                30.|.1.....31 | 1..3    |
+# Pentecost      |                 |                   |   10..31 | 1....13 |
+#
+# WARNING: Be carefull about using the correct list operator. Now += is used and it correspond to list.extend(). Mobile
+#          events of one month must be added only to a local copy of the fixed events list of the same month so they will
+#          not be showed in another year.
+#
+def EventsOfTheMonth(Year, Month):
+
+    global EventSetChoosed
+    Events = []
+
+    #
+    # Add the corresponding list of fixed events
+    #
+
+    for EventSet in EventsSetList:
+        if EventSetChoosed == EventSet[0][1]:
+            Events += EventSet[1][Month-1]
+
+    #
+    # Adding Easter events
+    #
+
+    if Month >= 3 and Month <=6:
+
+        # Easter
+        EasterMonth, EasterDay       = EasterSunday(Year)
+        # Friday before Easter
+        FbEYear, FbEMonth, FbEDay    = SubDaysToDate(2, Year, EasterMonth, EasterDay)
+        # Monday after Easter
+        MaEYear, MaEMonth, MaEDay    = AddDaysToDate(1, Year, EasterMonth, EasterDay)
+        # Ascension Day
+        AscYear, AscMonth, AscDay    = AddDaysToDate(39, Year, EasterMonth, EasterDay)
+        # Pentecost Day
+        PentYear, PentMonth, PentDay = AddDaysToDate(49, Year, EasterMonth, EasterDay)
+
+        if EventSetChoosed == "xx":
+
+            if Month == AscMonth:
+                Events += [(AscDay, "Ascension Day")]
+            if Month == PentMonth:
+                Events += [(PentDay, "Pentecost")]
+
+        elif EventSetChoosed == "sk":
+
+            if Month == EasterMonth:
+                Events += [(EasterDay, u"Ve\u013ekono\u010dn\u00e1 nede\u013ea")]
+            if Month == FbEMonth:
+                Events += [(FbEDay, u"Ve\u013ek\u00fd piatok")]
+            if Month == MaEMonth:
+                Events += [(MaEDay, u"Ve\u013ekono\u010dn\u00fd pondelok")]
+
+        elif EventSetChoosed == "pt_br":
+
+            if Month == EasterMonth:
+                Events += [(EasterDay, u"P\u00e1scoa")]
+            if Month == FbEMonth:
+                Events += [(FbEDay, u"Sexta-feira da Paix\u00e3o")]
+
+        elif EventSetChoosed == "cz":
+
+            if Month == MaEMonth:
+                Events += [(MaEDay, u"Velikono\u010dn\u00ed pond\u011bl\u00ed")]
+
+        elif EventSetChoosed == "ge":
+
+            if Month == EasterMonth:
+                Events += [(EasterDay, "Ostern")]
+            if Month == MaEMonth:
+                Events += [(MaEDay, "Ostermontag")]
+            if Month == FbEMonth:
+                Events += [(FbEDay, "Karfreitag")]
+            if Month == AscMonth:
+                Events += [(AscDay, "Christi Himmelfahrt")]
+            if Month == PentMonth:
+                Events += [(PentDay, "Pfingsten")]
+            # The day after Pentecost Day
+            PentYearP1, PentMonthP1, PentDayP1 = AddDaysToDate(1, PentYear, PentMonth, PentDay)
+            if Month == PentMonthP1:
+                Events += [(PentDayP1, "Pfingstmontag")]
+
+        elif EventSetChoosed == "es":
+
+            if Month == FbEMonth:
+                Events += [(FbEDay, "Viernes Santo")]
+
+        elif EventSetChoosed == "mx":
+
+            if Month == FbEMonth:
+                Events += [(FbEDay, "Viernes Santo")]
+            # Thursday before Easter
+            TbEYear, TbEMonth, TbEDay = SubDaysToDate(3, Year, EasterMonth, EasterDay)
+            if Month == TbEMonth:
+                Events += [(TbEDay, "Jueves Santo")]
+
+        elif EventSetChoosed == "it":
+
+            if Month == EasterMonth:
+                Events += [(EasterDay, "Pasqua")]
+            if Month == MaEMonth:
+                Events += [(MaEDay, u"Luned\u00ec dell&#39;Angelo")]
+
+    #
+    # Adding other kinds of events
+    #
+
+    if EventSetChoosed == "mx":
+
+        # See http://en.wikipedia.org/wiki/Fiestas_Patrias_(Mexico)
+
+        # Constituci\u00f3n Mexicana is the first Monday of February
+        if Month == 2:
+            mondays = WeekDaysOfTheMonth(Year, 2, MONDAY)
+            Events += [(mondays[0], u"Constituci\u00f3n Mexicana")]
+        # Natalicio de Benito Ju\u00e1rez is the third Monday of March
+        if Month == 3:
+            mondays = WeekDaysOfTheMonth(Year, 3, MONDAY)
+            Events += [(mondays[2], u"Natalicio de Benito Ju\u00e1rez")]
+        # Aniversario de la Revoluci\u00f3n is the third Monday of November
+        if Month == 11:
+            mondays = WeekDaysOfTheMonth(Year, 11, MONDAY)
+            Events += [(mondays[2], u"Revoluci\u00f3n Mexicana")]
+
+    elif EventSetChoosed == "it":
+
+        # Mother's day is the second Sunday of May)
+        if Month == 5:
+            sundays = WeekDaysOfTheMonth(Year, 5, SUNDAY)
+            Events += [(sundays[1], "Festa della Mamma")]
+
+    return Events
+

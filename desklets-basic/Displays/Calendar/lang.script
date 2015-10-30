@@ -1,0 +1,140 @@
+#
+# lang.script : file with values and functions for language management
+#
+# Unicode characters are taken from http://en.wikibooks.org/wiki/Unicode/Character_reference
+# Otherwise, this tool works well: http://rishida.net/scripts/uniview/conversion.php
+#
+
+#
+# The list of sets of languages.
+#
+# LanguagesSetList is a list of sets (ordered alphabetically by the name of the set)
+#
+# LanguagesSetList[i]    is the it-th set. Every set is a triple.
+# LanguagesSetList[i][0] is the couple (Name, Identidier) used as item for Prefs.LanguageEnumeration
+# LanguagesSetList[i][1] is a 7-ple with the abbreviation of the weekdays' name
+# LanguagesSetList[i][2] is a 12-ple with the name of the months
+#
+# FIXME: there are some cases where the weekday name abbreviated results as an empty string.
+#
+
+LanguagesSetList = [
+    #
+    # Brazilian Portuguese
+    #
+    ( ("Brazilian - Portuguese", "pt_br"),
+      ("Seg","Ter","Qua","Qui","Sex","Sab","Dom"),
+      ("Janeiro","Fevereiro",u"Mar\u00e7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro") ),
+    #
+    # Czech
+    #
+    ( ("Czech", "cz"),
+      ("Po",u"\u00dat","St",u"\u010ct",u"P\u00e1","So","Ne"),
+      ("Leden",u"\u00danor",u"B\u0159ezen","Duben",u"Kv\u011bten",u"\u010cerven",u"\u010cervenec","Srpen",u"Z\u00e1\u0159\u00ed",u"\u0158\u00edjen","Listopad","Prosinec") ),
+    #
+    # English
+    #
+    ( ("English", "en"),
+      ("Mon","Tue","Wed","Thu","Fri","Sat","Sun"),
+      ("January","February","March","April","May","June","July","August","September","October","November","December") ),
+    #
+    # French
+    #
+    ( ("French", "fr"),
+      ("Lun","Mar","Mer","Jeu","Ven","Sam","Dim"),
+      ("Janvier",u"F\u00e9vrier","Mars","Avril","Mai","Juin","Juillet",u"Ao\u00fbt","Septembre","Octobre","Novembre",u"D\u00e9cembre") ),
+    #
+    # German
+    #
+    ( ("German", "de"),
+      ("Mo","Di","Mi","Do","Fr","Sa","So"),
+      ("Januar","Februar",u"M\u00e4rz","April","Mai","Juni","July","August","September","Oktober","November","Dezember") ),
+    #
+    # Greek
+    #
+    ( ("Greek", "el"),
+      (u"\u0394\u03b5\u03c5",u"\u03a4\u03c1\u03b9",u"\u03a4\u03b5\u03c4",u"\u03a0\u03b5\u03bc",u"\u03a0\u03b1\u03c1",u"\u03a3\u03b1\u03b2",u"\u039a\u03c5\u03c1"),
+      (u"\u0399\u03b1\u03bd\u03bf\u03c5\u03ac\u03c1\u03b9\u03bf\u03c2",u"\u03a6\u03b5\u03b2\u03c1\u03bf\u03c5\u03ac\u03c1\u03b9\u03bf\u03c2",u"\u039c\u03ac\u03c1\u03c4\u03b9\u03bf\u03c2",u"\u0391\u03c0\u03c1\u03af\u03bb\u03b9\u03bf\u03c2",u"\u039c\u03ac\u03b9\u03bf\u03c2",u"\u0399\u03bf\u03cd\u03bd\u03b9\u03bf\u03c2",u"\u0399\u03bf\u03cd\u03bb\u03b9\u03bf\u03c2",u"\u0391\u03cd\u03b3\u03bf\u03c5\u03c3\u03c4\u03bf\u03c2",u"\u03a3\u03b5\u03c0\u03c4\u03ad\u03bc\u03b2\u03c1\u03b9\u03bf\u03c2",u"\u039f\u03ba\u03c4\u03ce\u03b2\u03c1\u03b9\u03bf\u03c2",u"\u039d\u03bf\u03ad\u03bc\u03b2\u03c1\u03b9\u03bf\u03c2",u"\u0394\u03b5\u03ba\u03ad\u03bc\u03b2\u03c1\u03b9\u03bf\u03c2") ),
+    #
+    # Hungarian
+    #
+    ( ("Hungarian(Magyar)", "hu"),
+      ("H  ","K  ","Sze","Cs ","P  ","Szo","V  "),
+      (u"Janu\u00e1r",u"Febru\u00e1r",u"M\u00e1rcius",u"\u00c1prilis",u"M\u00e1jus",u"J\u00fanius",u"J\u00falius","Augusztus","Szeptember",u"Okt\u00f3ber","November","December") ),
+    #
+    # Italian
+    #
+    ( ("Italian", "it"),
+      ("Lun","Mar","Mer","Gio","Ven","Sab","Dom"),
+      ("Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre") ),
+    #
+    # Polish
+    #
+    ( ("Polish", "pl"),
+      ("Pn ","Wt ",u"\u015ar ","Czw","Pt ","Sob","Ndz"),
+      ("Styczen","Luty","Marzec",u"Kwiecie\u0144","Maj","Czerwiec","Lipiec",u"Sierpie\u0144",u"Wrzesie\u0144",u"Pa\u017adziernik","Listopad",u"Grudzie\u0144") ),
+    #
+    # Slovak
+    #
+    ( ("Slovak", "sk"),
+      ("Po","Ut","St",u"\u0160t","Pi","So","Ne"),
+      (u"Janu\u00e1r",u"Febru\u00e1r","Marec",u"Apr\u00edl",u"M\u00e1j",u"J\u00fan",u"J\u00fal","August","September",u"Oct\u00f3ber","November","December") ),
+    #
+    # Spanish
+    #
+    ( ("Spanish", "es"),
+      ("Lu","Ma","Mi","Ju","Vi","Sa","Do"),
+      ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre") ),
+    #
+    # Chinese
+    #
+    ( (u"\u4e2d\u6587", "zh"),
+      (u"\u4e00",u"\u4e8c",u"\u4e09",u"\u56db",u"\u4e94",u"\u516d",u"\u65e5"),
+      (u"\u4e00\u6708",u"\u4e8c\u6708",u"\u4e09\u6708",u"\u56db\u6708",u"\u4e94\u6708",u"\u516d\u6708",u"\u4e03\u6708",u"\u516b\u6708",u"\u4e5d\u6708",u"\u5341\u6708",u"\u5341\u4e00\u6708",u"\u5341\u4e8c\u6708") )
+]
+
+#
+# This function returns the default value binded to the enumeration of languages
+#
+def DefaultLanguage():
+
+    return "en"
+
+#
+# This function returns a list of couples (Label, Value) used in enumeration
+#
+def LanguagesItemList():
+
+    itemslist = []
+    for LanguageSet in LanguagesSetList:
+        itemslist.append(LanguageSet[0])
+    return itemslist
+
+#
+# Returns the list of abbrviations [Mon, ..., Sun] in the language set
+#
+# Day must be in [0,6]
+#
+def DayNameAbbr(Day):
+
+    global LanguageChoosed
+    for LangSet in LanguagesSetList:
+        if LanguageChoosed == LangSet[0][1]:
+          return LangSet[1][Day]
+    # If for some reason there's a failure
+    return []
+
+#
+# Returns (January-December) as string in the language set
+#
+# Month must be in [1,12]
+#
+def MonthName(Month):
+
+    global LanguageChoosed
+    for LangSet in LanguagesSetList:
+        if LanguageChoosed == LangSet[0][1]:
+            return LangSet[2][Month-1]
+    # If for some reason there's a failure
+    return ""
+

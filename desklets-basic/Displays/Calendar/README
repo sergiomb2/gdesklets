@@ -1,0 +1,165 @@
+Calendar gDesklet 0.75
+A navigable calendar showing the entire month
+Copyright (C) 2008-2011  Dave Minogue, Joe Sapp, Robert Pastierovic, Alessandro Vincenzi
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; version 2
+of the License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+==Included files==
+[months] - directory containing images for months
+[gfx] - directory containing the icons
+calendar.display - main source file
+calendar_mod.script - calendar functions (python)
+COPYING - license
+events.script - public holidays and other important days
+lang.script - days, months
+README - this file
+
+==Installation==
+This application requires gDesklets shell to be installed
+To install, copy the whole directory to /usr/share/.gdesklets/Displays/
+or run gDesklets shell and select File - > Install package and search for
+gDesklet archive package (for e.g. Calendar-0.41.tar.gz) - this will install
+the desklet to your /home/[user name]/.gdesklets/Displays directory.
+
+Then run gDesklets Shell and choose Calendar gdesklet from Date/Calendars category
+
+==Some Tips==
+- You may change prev/next month with mouse wheel.
+- Then click on the name of the month and year to come back to the current date.
+
+==Changelog==
+ver. 0.75 (Bjoern Koch) 22-01-2011
+  - updated Metadata
+  - added icons to the prefs pages
+  - new Control call w/o ID (needs gDesklets 0.36.2+ now)
+ver. 0.74 (Alessandro Vincenzi) 26-05-2009
+  - Set Dsp.MonthDaysArray lenght to 31 (there were a useless label).
+  - Simplified things about FirstWeekDay: the loop that print weekday names and the
+    offset of the position of the label showing the 1st day of the month.
+  - Fused functions returning fixed and mobile events into a single one. ShowEvent loop
+    changed accordingly. Now it also manage the case of more than one event in the same day.
+  - Calculation of Easter events is now done only when needed.
+ver. 0.73 (Alessandro Vincenzi) 25-05-2009
+  - Redefined interface of events and language management (i.e the set of functions
+    loaded) so we do not need to know details about the implementation of them when
+    writing code in Calendar.display.
+  - Filling of language and event enumeration moved to calendar.display.
+  - Movable events are now calculated on-the-fly.
+  - Language data structure redefined as done with the events.
+  - Fixed indentation to 4 spaces (for python code).
+ver. 0.72 (Alessandro Vincenzi) 16-05-2009
+  - Get rid of ICalendar control.
+  - Fixed the management of dates. Now we use global variables and every function do its job.
+  - Also rewritten the change of date handler.
+  - Added an on-click action to the MonthAndYearLabel.
+ver. 0.71 (Bjoern Koch) 13-05-2009
+  - correction (introduction) of Pentecost
+ver. 0.70 (Alessandro Vincenzi) 12-05-2009
+  - Redefined the management of events wit a new data structure.
+  - DrawCalendar() modified accordingly (events are managed separately).
+  - Added my name in the author's list. :)
+ver. 0.69 (Alessandro Vincenzi) 11-05-2009
+  - Improved documentation.
+  - Preferences binded directly to "graphical elements" when possible and
+    erased redundand variables.
+  - Improved the PreferencesCallback and DrawCalendar functions: no more
+    redundant code.
+ver. 0.68 (Alessandro Vincenzi) 06-05-2009
+  - Get rid of boolean preference "Show frame?": changing trasparency of the color is enough.
+  - "Language" preference moved to "Text" page
+  - "First Weekday" and "Today's color" preferences moved to "Appearance" page.
+  - Get rid of "Other options" page.
+  - Get rid of random month image (link is broken).
+ver. 0.67 (Alessandro Vincenzi) 15-04-2009
+  - User can change the width of the calendar
+  - User can change the font of the event label
+  - prev/next month labels have the same font and entering color of the month
+ver. 0.66 (Robert Pastierovic) 05-04-2009
+  - code cleanup (draw_cal(y,m)) by Alessandro Vincenzi
+  - added Mexican events (thanks to Alain Bequer Martinez)
+ver. 0.65 (Robert Pastierovic) 17-02-2009
+  - corrected Italian translation (thanks to Alessandro Zigliani)
+ver. 0.64 (Robert Pastierovic) 17-01-2009
+  - added Malaysian events (thanks to Saravanan Murugesu)
+ver. 0.63 (Robert Pastierovic) 24-12-2008
+  - added French events (thanks to Yves Lozinguez) and Hungarian translation and events (thanks to Horvath Zoltan)
+ver. 0.62.1 (Bjoern Koch) 02-11-2008
+  - correction (spelling) of German events
+ver. 0.62 (Robert Pastierovic) 29-03-2008
+  - correction of calculation of daylightsaving time
+ver. 0.61 (Robert Pastierovic) 18-03-2008
+  - fixed Easter in "General" events
+  - added calculation of Daylight saving time in events
+ver. 0.6 (Robert Pastierovic) 17-01-2008
+  - new set of backgrounds
+  - some small changes in layout
+ver. 0.55 (Robert Pastierovic) 10-01-2008
+  - fix of displaying current day in other months
+  - Greek events added (thanks to Sapalidis Kostas)
+ver. 0.54 (Robert Pastierovic) 01-01-2008
+  - fixing Calculation of Easter events
+ver. 0.53 (Robert Pastierovic) 08-12-2007
+  - added calculation of Easter and Ascension in Events
+  - Polish language added (thanks to Paweł Bojakowski)
+  - category change to Date/Time
+ver. 0.52 (Robert Pastierovic) 10-11-2007
+  - bugfix: updating display when events disabled
+  - correction of Slovak events
+ver. 0.51 (Robert Pastierovic) 26-08-2007
+  - Spanish events added (thanks to Pedro Broet)
+ver. 0.5 (Robert Pastierovic) 24-08-2007
+  - Spanish language correction (thanks to Pedro Broet)
+  - change in events turn on/off
+  - bugfix in lang.script of previous version
+ver. 0.43 (Robert Pastierovic) 17-08-2007
+  - French language correction (thanks to Jean-Michel Grimaldi)
+ver. 0.42 (Robert Pastierovic) 27-05-2007
+  - redesign of preferences tabs to fit into 800x600 px window
+ver. 0.41 (Robert Pastierovic) 27-05-2007
+  - added English (thanks to Rune Gallein) and Chinese events (thanks to Xusheng Xou)
+ver. 0.4 (Robert Pastierovic) 15-04-2007
+  - replacement of some images for better ones
+  - added some backgrounds
+  - bugfix: showing of random and default month image after desklet restart
+  - some source code clean up and documentation
+ver. 0.30 (Robert Pastierovic) 08-04-2007
+  - conversion of some strings to unicode
+  - script for picture of the month
+  - some other minor bugfixes
+ver. 0.25 (Robert Pastierovic) 31-03-2007
+  - redesign of preferences tabs, added some new
+  - added other images for months to complete the 12 required
+ver. 0.24 (Robert Pastierovic) 24-03-2007
+  - added GNU/GPL ver. 2 file and README
+  - added 3 other pictures for months
+  - added German events
+  - bugfix: update of image when changing it in preferences
+ver. 0.23 (Robert Pastierovic) 11-03-2007
+  - added new languages and events sets: Brazilian Portuguese (thanks to André Marra) and Czech
+ver. 0.22 (Robert Pastierovic) 03-03-2007
+  - new events handling (you can setup events for different eventsets)
+  - bugfix: update of display after changing language and events color in preferences
+  - added new language and eventset (Slovak)
+until ver. 0.21 was this desklet developed by Dave Minogue and Joe Sapp
+
+==ToDo==
+-more better backgrounds
+-add more languages and events sets
+-source code clean up and documentation
+
+==Other==
+For more information see http://www.gdesklets.de/
+Latest release of this gDeklet can be found at http://www.gdesklets.de/?q=desklet/view/121
+Gdesklet project on launchpad: https://launchpad.net/gdesklets/

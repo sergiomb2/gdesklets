@@ -1,0 +1,176 @@
+#
+# calendar_mod.script : file with values and functions for date management
+#
+
+# Constants for weekdays
+(MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(7)
+
+#
+# Return 1 for leap years, 0 for non-leap years.
+#
+def IsLeap(Year):
+
+    return Year % 4 == 0 and (Year % 100 != 0 or Year % 400 == 0)
+
+#
+# Return the number of days in a given Month
+#
+# Also the Year is necessay: one day more to February if Year is leap.
+#
+# Month must be in [1,12]
+#
+def MonthDays(Year, Month):
+
+    mdays = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    return mdays[Month] + (Month == 2 and IsLeap(Year))
+
+#
+# Return the weekday (0=MONDAY, ..., 6=SUNDAY) of a given date (Year, Month, Day)
+#
+# Method used is one found from http://klausler.com/new-dayofweek.html
+#
+# (Year, Month, Day) must be a valid date
+#
+def WeekdayOfDate(Year, Month, Day):
+
+    Year = Year - 1900
+    wkday = Year + (Year // 4)
+    if IsLeap(Year) and Month <= 2:
+        wkday -= 1
+    wkday += Day
+    mon_skew = 0
+    if Month == 5:
+        mon_skew = 1
+    elif Month == 8:
+        mon_skew = 2
+    elif Month == 2 or Month == 3 or Month == 11:
+        mon_skew = 3
+    elif Month == 6:
+        mon_skew = 4
+    elif Month == 9 or Month == 12:
+        mon_skew = 5
+    elif Month == 4 or Month == 7:
+        mon_skew = 6
+
+    wkday += mon_skew
+    wkday = wkday % 7
+
+    # This date comes `wkday` days after Sunday
+    # Adjust for Sunday = 6, Monday = 0, ...
+    if wkday == 0: wkday = 6
+    else:          wkday -= 1
+
+    return wkday
+
+#
+# Christian Easter (Gregorian Calendar)
+#
+# This is the Gauss algorithm. See http://en.wikipedia.org/wiki/Computus#Gauss_algorithm
+#
+# Gets the Year and returns a couple (Day, Month).
+#
+# NOTE: In Western Christianity, using the Gregorian calendar, Easter always falls on a
+#       Sunday between March 22 and April 25 inclusively.
+#
+def EasterSunday(Year):
+
+    a = Year % 19
+    b = Year % 4
+    c = Year % 7
+    k = Year//100
+    p = (13 + 8 * k)//25
+    q = k//4
+    M = (15 - p + k - q) % 30
+    N = (4 + k - q) % 7
+    d = (19 * a + M) % 30
+    e = (2 * b + 4 * c + 6 * d + N) % 7
+
+    if d + e < 10:
+        Day = d + e + 22
+        Month = 3
+    else:
+        Day = d + e - 9
+        Month = 4
+
+    if d == 29 and e == 6:
+        Day = 19
+    if d == 28 and e == 6 and a > 10:
+        Day = 18
+
+    return (Month, Day)
+
+#
+#  Increment a date by a specified number of days.
+#
+#  N must be positive.
+#  (Year, Month, Day) must be a valid date
+#
+#  Gets the number of days to add (N) and the date (Year, Month, Day)
+#  and returns the new date (Year, Month, Day).
+#
+def AddDaysToDate(N, Year, Month, Day):
+
+    while (N > 0):
+        monthdays = MonthDays(Year, Month)
+        if Day + N <= monthdays:
+            Day += N
+            N = 0
+        else:
+            N -= monthdays - Day + 1
+            Day = 1
+            if Month == 12:
+                Month  = 1
+                Year += 1
+            else:
+                Month += 1
+    return (Year, Month, Day)
+
+#
+#  Decrement a date by a specified number of days.
+#
+#  N must be positive.
+#  (Year, Month, Day) must be a valid date
+#
+#  Gets the number of days to subtract (N) and the date (Year, Month, Day)
+#  and returns the new date (Year, Month, Day).
+#
+def SubDaysToDate(N, Year, Month, Day):
+
+    while (N > 0):
+        if Day > N:
+            Day -= N
+            N = 0
+        else:
+            N -= Day
+            Day = MonthDays(Year, Month)
+            if Month == 1:
+                Month  = 12
+                Year -= 1
+            else:
+                Month -= 1
+    return (Year, Month, Day)
+
+#
+# Gets the weekdays (a list) equal to Weekday for the given Year and Month.
+#
+# Month must be in [1,12]
+# Weekday must be in [0=MONDAY, ..., 6=SUNDAY].
+#
+#     May / 2009
+# Mo Tu We Th Fr Sa Su
+#              1  2  3       WeekDaysOfTheMonth(2009, 5, TUESDAY) gives [5, 12, 19, 26]
+#  4  5  6  7  8  9 10       or
+# 11 12 13 14 15 16 17       WeekDaysOfTheMonth(2009, 5, SUNDAY) gives [3, 10, 17, 24, 31]
+# 18 19 20 21 22 23 24
+# 25 26 27 28 29 30 31
+#
+def WeekDaysOfTheMonth(Year, Month, WeekDay):
+
+    weekday = WeekdayOfDate(Year, Month, 1)
+    result = []
+    for day in range(MonthDays(Year, Month)):
+        if weekday == WeekDay:
+            result.append(day+1)
+        weekday = (weekday+1) % 7
+    return result
+

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display window-flags="sticky, below" anchor="center">
+
+  <meta author="Robert Pastierovic, Bjoern Koch"
+        version="0.9"
+        category="Fun/Amusements"
+        name="15pieces"
+        description="15 pieces puzzle game."
+        dependency="0.36.2"
+        website="http://www.gdesklets.de/index.php?q=desklet/view/228"
+        license="GPL-2"
+        copyright="(C) 2008-2011 Robert Pastierovic"
+        preview="Numbers/15.png"/>
+
+  <control id="randomizer" interface="IRandom" />
+  <control id="timer" interface="ITime" />
+
+  <image id="bg" uri="gfx/dummy.png" width="5cm" height="5cm"/>
+  <group id="main" width="80%" height="80%" relative-to="bg, y" x="10%" y="-90%">
+    <image id="p1" uri="gfx/dummy.png" width="25%" height="25%" x="0%" y="0%" on-click="click_piece(self)"/>
+    <image id="p2" uri="gfx/dummy.png" width="25%" height="25%" x="25%" y="0%" on-click="click_piece(self)"/>
+    <image id="p3" uri="gfx/dummy.png" width="25%" height="25%" x="50%" y="0%" on-click="click_piece(self)"/>
+    <image id="p4" uri="gfx/dummy.png" width="25%" height="25%" x="75%" y="0%" on-click="click_piece(self)"/>
+    <image id="p5" uri="gfx/dummy.png" width="25%" height="25%" x="0%" y="25%" on-click="click_piece(self)"/>
+    <image id="p6" uri="gfx/dummy.png" width="25%" height="25%" x="25%" y="25%" on-click="click_piece(self)"/>
+    <image id="p7" uri="gfx/dummy.png" width="25%" height="25%" x="50%" y="25%" on-click="click_piece(self)"/>
+    <image id="p8" uri="gfx/dummy.png" width="25%" height="25%" x="75%" y="25%" on-click="click_piece(self)"/>
+    <image id="p9" uri="gfx/dummy.png" width="25%" height="25%" x="0%" y="50%" on-click="click_piece(self)"/>
+    <image id="p10" uri="gfx/dummy.png" width="25%" height="25%" x="25%" y="50%" on-click="click_piece(self)"/>
+    <image id="p11" uri="gfx/dummy.png" width="25%" height="25%" x="50%" y="50%" on-click="click_piece(self)"/>
+    <image id="p12" uri="gfx/dummy.png" width="25%" height="25%" x="75%" y="50%" on-click="click_piece(self)"/>
+    <image id="p13" uri="gfx/dummy.png" width="25%" height="25%" x="0%" y="75%" on-click="click_piece(self)"/>
+    <image id="p14" uri="gfx/dummy.png" width="25%" height="25%" x="25%" y="75%" on-click="click_piece(self)"/>
+    <image id="p15" uri="gfx/dummy.png" width="25%" height="25%" x="50%" y="75%" on-click="click_piece(self)"/>
+    <image id="p16" uri="gfx/dummy.png" width="25%" height="25%" x="75%" y="75%" on-click="click_piece(self)"/>
+    <image id="restart_img" uri="gfx/dummy.png" width="75%" height="25%" x="12.5%" y="37.5%" visible="True" on-click="restart()"/>
+  </group>
+  <label id="time_used" x="10%" y="90%" value="time"/>
+  <label id="clicks_used" x="90%" y="90%" value="clicks" anchor="ne"/>
+
+  <prefs callback="prefs_cb">
+    <page label="Appearance" icon="Numbers/15.png">
+      <title label="Puzzle"/>
+      <float label="Size (cm):" bind="size" min="3" max="10" help="The size of the desklet."/>
+      <enum label="Puzzle to Solve:" bind="image_path" help="What puzzle you want to solve.">
+        <item label="gDesklets" value="gDesklets/"/>
+        <item label="Gimp-Splash 1.2" value="Gimp-Splash-1.2/"/>
+        <item label="Gimp-Splash 2.1" value="Gimp-Splash-2.1/"/>
+        <item label="Gimp-Splash 2.2" value="Gimp-Splash-2.2/"/>
+        <item label="Gimp-Splash 2.3" value="Gimp-Splash-2.3/"/>
+        <item label="Globe" value="Globe/"/>
+        <item label="Gnome" value="Gnome/"/>
+        <item label="GNU" value="GNU/"/>
+        <item label="Numbers" value="Numbers/"/>
+        <item label="Tux" value="Tux/"/>
+        <item label="custom ..." value="custom"/>
+      </enum>
+      <uri label="Path to custom Image:" bind="custom_path" id="custom_path_uri" action="select_folder"/>
+      <title label="Score"/>
+      <font label="Timer font:" bind="Dsp.time_used.font"/>
+      <color label="Timer color:" bind="Dsp.time_used.color"/>
+      <integer label="Timer Digits:" bind="timer_digits" min="0" max="9"/>
+      <font label="Clicks font:" bind="Dsp.clicks_used.font"/>
+      <color label="Clicks color:" bind="Dsp.clicks_used.color"/>
+    </page>
+  </prefs>
+
+<script><![CDATA[
+
+number_of_clicks = 0
+start_time = 0.0
+stop_time = 0.0
+timer_digits = 3
+layout = []
+
+image_path = "gDesklets/"
+custom_path = ""
+size = 6
+pieces_image = image_path
+
+
+
+def prefs_cb(key, value):
+  global custom_path, pieces_image
+
+  if (key == "size"):
+    Dsp.bg.width = Unit(value, CM)
+    Dsp.bg.height = Unit(value, CM)
+  elif (key == "image_path"):
+    if (value == "custom"):
+      Prefs.custom_path_uri.enabled = True
+      pieces_image = custom_path+"/"
+    else:
+      Prefs.custom_path_uri.enabled = False
+      pieces_image = value
+    Dsp.restart_img.visible = True
+    restart()
+    Dsp.restart_img.visible = False
+  elif (key == "custom_path" and image_path == "custom"):
+    pieces_image = custom_path+"/"
+    Dsp.restart_img.visible = True
+    restart()
+    Dsp.restart_img.visible = False
+  elif (key == "timer_digits"):
+    timer_digits = value
+
+
+
+def click_piece(piece):
+  global number_of_clicks, start_time, layout
+
+  if (piece.uri != pieces_image + "0.png"):
+    free_piece = find_free_piece(piece)
+    if (free_piece != piece):
+      # OK, we really moved a piece (the piece was not the free tile)
+      piece_index = int(piece.id[1:])-1
+      free_index = int(free_piece.id[1:])-1
+      # start the counters if this is the first click
+      if (number_of_clicks == 0):
+        start_time = timer.ticks
+        add_timer(1000, update_timer)
+      # increase the click counter
+      number_of_clicks += 1
+      Dsp.clicks_used.value = number_of_clicks
+      # switch pieces in the display
+      free_piece.uri = piece.uri
+      piece.uri = pieces_image + "0.png"
+      # switch pieces in the layout
+      layout[piece_index], layout[free_index] = layout[free_index], layout[piece_index]
+  check_layout()
+
+
+
+def find_free_piece(piece=None):
+  # find free piece (range doesn't work somehow)
+
+  if (Dsp.p1.uri == pieces_image + "0.png"): free_p = Dsp.p1
+  if (Dsp.p2.uri == pieces_image + "0.png"): free_p = Dsp.p2
+  if (Dsp.p3.uri == pieces_image + "0.png"): free_p = Dsp.p3
+  if (Dsp.p4.uri == pieces_image + "0.png"): free_p = Dsp.p4
+  if (Dsp.p5.uri == pieces_image + "0.png"): free_p = Dsp.p5
+  if (Dsp.p6.uri == pieces_image + "0.png"): free_p = Dsp.p6
+  if (Dsp.p7.uri == pieces_image + "0.png"): free_p = Dsp.p7
+  if (Dsp.p8.uri == pieces_image + "0.png"): free_p = Dsp.p8
+  if (Dsp.p9.uri == pieces_image + "0.png"): free_p = Dsp.p9
+  if (Dsp.p10.uri == pieces_image + "0.png"): free_p = Dsp.p10
+  if (Dsp.p11.uri == pieces_image + "0.png"): free_p = Dsp.p11
+  if (Dsp.p12.uri == pieces_image + "0.png"): free_p = Dsp.p12
+  if (Dsp.p13.uri == pieces_image + "0.png"): free_p = Dsp.p13
+  if (Dsp.p14.uri == pieces_image + "0.png"): free_p = Dsp.p14
+  if (Dsp.p15.uri == pieces_image + "0.png"): free_p = Dsp.p15
+  if (Dsp.p16.uri == pieces_image + "0.png"): free_p = Dsp.p16
+
+  # check if clicking on nearby piece
+  if (piece):
+    if (abs(int(piece.id[1:]) - int(free_p.id[1:])) == 1) or (abs(int(piece.id[1:]) - int(free_p.id[1:])) == 4):
+      return free_p
+    else:
+      return piece
+  # if no piece is given: just return the empty piece
+  else:
+    return free_p
+
+
+
+def check_layout():
+  global start_time, stop_time, layout
+
+  if (layout == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0]):
+    Dsp.restart_img.visible = True
+    stop_time = timer.ticks
+  else:
+    Dsp.restart_img.visible = False
+
+
+
+def check_even_odd():
+# see if the number of inversions + the row of the empty tile is even or odd
+# this seems to be a way to determine if the puzzle is solvable (even) or not (odd)
+  global layout
+
+  free_piece = find_free_piece().id[1:]
+
+  number_of_inversions = 0
+  empty_in_row = int(float(int(free_piece)-1)/4.0)+1
+
+  for i in range(16):
+    for j in range(i, 16):
+      if (layout[i] > layout[j]):
+        if ((layout[i] > 0) and (layout[j] > 0)):
+          number_of_inversions += 1
+  parity = number_of_inversions + empty_in_row
+  return (parity % 2)
+
+
+
+def update_timer():
+  global number_of_clicks, start_time, stop_time
+
+  if (Dsp.restart_img.visible == False) and number_of_clicks:
+    if (stop_time > 0.0):
+      Dsp.time_used.value = (stop_time - start_time)
+    else:
+      current_time = timer.ticks
+      timer_string = "{0:."+str(timer_digits)+"f}."
+      Dsp.time_used.value = timer_string.format(current_time - start_time)
+      add_timer(1000, update_timer)
+
+
+
+def restart():
+  global number_of_clicks, start_time, stop_time, layout
+
+  layout = randomizer.sample
+  Dsp.bg.uri = pieces_image + "bg.png"
+  Dsp.p1.uri = pieces_image + str(layout[0]) +".png"
+  Dsp.p2.uri = pieces_image + str(layout[1]) +".png"
+  Dsp.p3.uri = pieces_image + str(layout[2]) +".png"
+  Dsp.p4.uri = pieces_image + str(layout[3]) +".png"
+  Dsp.p5.uri = pieces_image + str(layout[4]) +".png"
+  Dsp.p6.uri = pieces_image + str(layout[5]) +".png"
+  Dsp.p7.uri = pieces_image + str(layout[6]) +".png"
+  Dsp.p8.uri = pieces_image + str(layout[7]) +".png"
+  Dsp.p9.uri = pieces_image + str(layout[8]) +".png"
+  Dsp.p10.uri = pieces_image + str(layout[9]) +".png"
+  Dsp.p11.uri = pieces_image + str(layout[10]) +".png"
+  Dsp.p12.uri = pieces_image + str(layout[11]) +".png"
+  Dsp.p13.uri = pieces_image + str(layout[12]) +".png"
+  Dsp.p14.uri = pieces_image + str(layout[13]) +".png"
+  Dsp.p15.uri = pieces_image + str(layout[14]) +".png"
+  Dsp.p16.uri = pieces_image + str(layout[15]) +".png"
+  Dsp.restart_img.uri = pieces_image + "restart.png"
+  Dsp.restart_img.visible = False
+  number_of_clicks = 0
+  start_time = 0.0
+  stop_time = 0.0
+  Dsp.clicks_used.value = number_of_clicks
+  Dsp.time_used.value = start_time
+
+  not_solvable = check_even_odd()
+  if (not_solvable):
+    print "Non-solvable puzzle! Re-randomizing."
+    restart()
+
+
+
+randomizer.sequence = ((0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15), 16)
+
+]]></script>
+
+</display>
