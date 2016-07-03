@@ -1,0 +1,40 @@
+<section id="dsp-about" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>About ADL</title>
+
+  <para>The ADL (Applet Description Language) is the language for describing
+    the user interface of applets
+    in <application>gDesklets</application>. It is based on XML and was
+    carefully designed to be flexible, yet not too verbose. One major goal
+    of the language is to be human-readable.</para>
+
+  <para>In the ADL, a display is setup by composing display elements together.
+    Each display element is represented by an ADL tag and is configurable
+    through properties.</para>
+
+  <programlisting><![CDATA[
+<display>
+
+  <label value="Hello World!" font="Sans 3cm" color="red"/>
+
+</display>
+  ]]></programlisting>
+
+  <para>ADL further supports inline scripting to bring displays to life.
+    Inline scripts are able to modify properties of display elements at
+    run-time.</para>
+
+  <para>Features of the ADL:</para>
+
+  <itemizedlist>
+    <listitem>Human-readable and human-editable</listitem>
+    <listitem>Not too verbose</listitem>
+    <listitem>XML-based</listitem>
+    <listitem>Intuitive design</listitem>
+    <listitem>Independent of screen resolution</listitem>
+    <listitem>Rich layouting capabilities</listitem>
+    <listitem>Inline scripting</listitem>
+    <listitem>Specially designed for the purpose of making applets</listitem>
+    <listitem>Accessibility support (planned)</listitem>
+  </itemizedlist>
+
+</section>

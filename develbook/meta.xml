@@ -1,0 +1,102 @@
+<chapter id="meta" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Meta-Data</title>
+
+<section id="meta-tag"><title>&lt;meta&gt;</title>
+
+  <para>The <literal>meta</literal> tag contains information about your
+    <literal>Desklet</literal> shown in the shell.</para>
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">author</entry>
+        <entry valign="top">The name of the person(s) who wrote the
+          desklet.</entry>
+      </row>
+      <row>
+        <entry valign="top">category</entry>
+        <entry valign="top">The category in which the desklet should
+          be.</entry>
+      </row>
+      <row>
+        <entry valign="top">copyright</entry>
+        <entry valign="top">The person or group to whom the copyright is
+          assigned.</entry>
+      </row>
+      <row>
+        <entry valign="top">dependency</entry>
+        <entry valign="top">The minimum version of <application>gDesklets</application>
+          on which the desklet is dependent.</entry>
+      </row>
+      <row>
+        <entry valign="top">description</entry>
+        <entry valign="top">A short description of the desklet.</entry>
+      </row>
+      <row>
+        <entry valign="top">license</entry>
+        <entry valign="top">The name or comma-seperated list of names of
+          licenses under which the desklet is provided.</entry>
+      </row>
+      <row>
+        <entry valign="top">name</entry>
+        <entry valign="top">The name of the desklet.</entry>
+      </row>
+      <row>
+        <entry valign="top">preview</entry>
+        <entry valign="top">Path to an image representing the display.  This
+          could be an icon or an actual screenshot, for example.</entry>
+      </row>
+      <row>
+        <entry valign="top">version</entry>
+        <entry valign="top">The version of the desklet.</entry>
+      </row>
+      <row>
+        <entry valign="top">website</entry>
+        <entry valign="top">The website for the desklet.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+  <programlisting><![CDATA[
+<display>
+
+  <meta name="MyFirstDesklet"
+        version="0.1"
+        category="misc/utilities"
+        description="A display to show off my Python-writing skills."
+        author="George D. Esklet"
+        dependency="0.36.3"
+        website="http://www.gdesklets.com"
+        license="GPL-2"
+        copyright="(C) 2010-2011 George D. Esklet"
+        preview="gfx/icon.png"/>
+
+</display>
+  ]]></programlisting>
+
+  <warning>
+    <para>The meta tag <literal>name</literal> should start with a letter or a number!</para>
+  </warning>
+
+  <note>
+    <para>Please provide all metadata, even some may be left empty.</para>
+  </note>
+
+</section>
+
+</chapter>

@@ -1,0 +1,114 @@
+<section id="tutor-xml"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>XML Crash Course</title>
+
+<para>by Martin Grimme</para>
+
+
+<section><title>Introduction</title>
+
+  <para>This tutorial shows you the basics of the eXtensible Markup Language
+    <acronym>XML</acronym>, which is an essential part of
+    <application>gDesklets</application>.</para>
+     
+</section>
+
+
+
+<section><title>It's about Trees</title>
+ 
+  <para>Think of an XML document as a tree of genealogy: there are ancestors,
+    children, siblings, and so on. These individuals are known as
+    <emphasis>nodes.</emphasis>
+    Every XML document requires a root node, which is the ancestor of all
+    other nodes.</para>
+      
+  <para>Nodes are represented by pointy braces between which you can find
+    their name. This representation is called a <emphasis>tag.</emphasis>
+    Here you can see some examples of tags:</para>
+      
+  <programlisting><![CDATA[
+<Kronos>
+<Zeus>
+<Artemis>
+<Leda>
+  ]]></programlisting>
+  
+  <para>Their relationship is as follows: Kronos is the father of Zeus, who
+    in turn is the father of Artemis and Leda, who are siblings.</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/genealogy" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>This genealogy with Kronos as the root node can be represented as
+    follows:</para>
+
+  <programlisting><![CDATA[
+<Kronos>
+  <Zeus>
+    <Artemis/>
+    <Leda/>
+  </Zeus>
+</Kronos>
+  ]]></programlisting>
+    
+  <para>The indentation is only there to emphasize the hierarchical structure,
+    it is not needed but strongly recommended to increase readability.</para>
+    
+  <para>Whenever a node has children, then it consists of an opening and a
+    closing tag. The closing tag has to contain a slash (/) as its first
+    character. The children are simply put between the opening and closing
+    tags.</para>
+      
+  <para>For nodes without children, the opening and closing tags are merged
+    into a single tag where the slash is the last character (immediately
+    before the closing brace).</para>
+      
+  <para>That way you can describe hierarchical structures easily using plain
+    text files. The information is well-structured and thus apt for being
+    read by machines as well as by humans.</para>
+
+</section>
+
+
+
+<section><title>Attributes</title>
+      
+  <para>Tags may also have a number of attributes describing the node.
+    Zeus, e.g. lives on the Olymp and may thus have an attribute
+    <property>place</property> telling us about where he lives:</para>
+      
+  <programlisting><![CDATA[
+<Kronos>
+  <Zeus place="Olymp">
+    <Artemis/>
+    <Leda/>
+  </Zeus>
+</Kronos>
+  ]]></programlisting>
+
+</section>
+
+
+
+<section><title>Help the Parser</title>
+
+  <para>You should help the XML parser by putting the following before the
+    root node as the first line in XML documents:</para>
+    
+  <programlisting><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+  ]]></programlisting>
+
+  <para>This specifies that the following document complies with the 1.0
+    version of the XML specification and that text is encoded in UTF-8 unicode,
+    the standard of GNOME (please make sure that the text encoding really is
+    UTF-8 then).</para>
+    
+</section>
+
+</section>

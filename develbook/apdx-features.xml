@@ -1,0 +1,31 @@
+<appendix id="apdx-features"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Versions of gDesklets and Their New Features</title>
+
+  <para>The <application>gDesklets</application> development team has
+    attempted to bring new features with every version release. However,
+    this has not always been communicated very well to the development
+    community on which <application>gDesklets</application> depends for
+    useful <literal>Desklets</literal> and <literal>Controls</literal>. The
+    following lists attempt to summarize these changes since
+    <literal>Controls</literal> came on the scene, before which
+    <application>gDesklets</application> isn't supported. This should help
+    determine the minimum version of <application>gDesklets</application>
+    necessary to support a feature, which is often
+    <link linkend="meta-tag">needed for <literal>Desklets</literal></link>.
+    </para>
+
+  <section id="new-0.36.3"><title>New in 0.36.3</title>
+
+    <itemizedlist>
+      <listitem><link linkend="ctrl-use-multiple">Lists of 
+        <literal>Controls</literal></link>
+      </listitem>
+      <listitem><link linkend="ctrl-write-external-dbus">
+        <application>dbus</application> main loop support</link>
+      </listitem>
+    </itemizedlist>
+
+  </section>
+
+
+</appendix>

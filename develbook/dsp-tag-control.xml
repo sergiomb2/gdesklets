@@ -1,0 +1,83 @@
+<section id="dsp-tag-control" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title id="tst">&lt;control&gt;</title>
+
+  <para>This tag loads a control by the given interface and binds it to the
+    given ID.</para>
+
+  <note>
+    <para>This does exactly the same as the inline scripting command
+      <command>get_control(interface)</command>. This, however, is the preferred
+      way of loading controls, since it's cleaner.</para>
+  </note>
+
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">id</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">An identifier for accessing the control
+          within inline scripts.</entry>
+      </row>
+    </tbody>
+
+    <tbody>
+      <row>
+        <entry valign="top">interface</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The <link linkend="ctrl-interface">unique identifier</link> 
+          of the interface that you need.
+        </entry>
+      </row>
+    </tbody>
+
+    <tbody>
+      <row>
+        <entry valign="top">length</entry>
+        <entry valign="top">integer</entry>
+        <entry valign="top">See
+          <link linkend="ctrl-use-multiple">Using Multiple Controls</link>
+        </entry>
+        <entry valign="top">The length of the 
+          <link linkend="ctrl-use-multiple">list of Controls</link> you need.
+        </entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+
+  <section><title>Examples</title>
+
+    <programlisting><![CDATA[
+<display>
+
+  <control id="myctrl" interface="ITime:9y703dqtfnv4w373caserz68r"/>
+
+  <label value="click me for time" on-click="self.value=myctrl.time"/>
+
+</display>
+    ]]></programlisting>
+
+  </section>
+
+</section>

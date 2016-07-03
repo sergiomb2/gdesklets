@@ -1,0 +1,116 @@
+<section id="prefs-system" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Preferences System</title>
+
+<section><title>Preferences Dialog</title>
+
+  <para>Every applet can provide a dialog where users can change the
+    configuration.
+    This dialog usually consists of several pages for different categories,
+    and is defined in the <filename>.display</filename> file inside the
+    <link linkend="prefs-tag-prefs"><command>&lt;prefs&gt;</command></link>
+    tag.</para>
+
+  <para>Each of the pages lists a number of configuration elements, such as
+    entry fields, spin buttons, file selectors, font selectors, etc.</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/prefs" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+</section>
+
+
+
+<section><title>Bindings</title>
+
+  <para>Every configuration element is directly bound to a readable and
+    writable object in the scripting environment. This can be a control property
+    as well as a display element's property, or just a variable in the scripts.
+    </para>
+
+  <para>The bound object is where you can read the configuration setting from.
+    The direct binding can be seen in the following example.</para>
+
+  <programlisting><![CDATA[
+<display>
+
+  <label id="mylabel" value="Change me!" font="Serif 1cm"/>
+
+
+  <prefs>
+
+    <string label="Label Text:" bind="Dsp.mylabel.value"/>
+
+  </prefs>
+
+</display>
+  ]]></programlisting>
+
+  <para>After opening the preferences dialog, you can change the value of the
+    label by editing the string configuration element. If you restart the
+    display or <application>gDesklets</application>, you will see that the
+    current label text has been saved.</para>
+
+  <para>That way it is possible to save the configuration of any object across
+    sessions.</para>
+
+</section>
+
+
+
+<section><title>Default Value</title>
+
+  <para>The default value for any configuration setting is the initial value of
+    the object to which it is bound. The settings are read in after the
+    initialization of the display. So, if values were saved, the bound objects
+    will be set to them immediately after the initialization phase.</para>
+
+</section>
+
+
+
+<section><title>Callback Function</title>
+
+  <para>Sometimes, it is neccessary to react to configuration changes in a
+    special way. For example, an URI should be checked for validity before it
+    is actually being used. The
+    <link linkend="prefs-tag-prefs"><command>&lt;prefs&gt;</command></link> tag,
+    as well as all other preferences tags, provides a callback hook for that 
+    purpose.</para>
+  
+  <para>It may also be beneficial to change preferences when others change.  
+    This can be done with the <literal>Prefs</literal> namespace.</para>
+
+  <programlisting><![CDATA[
+<prefs callback="prefs_cb">
+  
+  <page label="Test">
+  
+    <boolean id="ex_bool" label="Checkbox!" bind="ex_bool_is_set" callback="check_ex_bool"/>
+  
+    <enum id="e" label="some enum" bind="foo"/>
+  
+  </page>
+  
+</prefs>
+
+<script>
+
+  Prefs.e.items = [(label, value), (label, value), (label, value)]
+  Prefs.ex_bool.value = False
+
+</script>
+
+]]></programlisting>
+
+  <para>The callback function specified in the hook will be called whenever
+    a configuration setting changes its value. The callback function is called
+    with two arguments; the name of the bound object, and the new value.</para>
+
+</section>
+
+</section>

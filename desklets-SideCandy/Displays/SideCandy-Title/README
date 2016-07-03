@@ -1,0 +1,91 @@
+SideCandy-Title
+===============
+
+(Version 0.2, 12.September 2011)
+
+
+Welcome to SideCandy-Title!
+
+SideCandy-Title provides a display for gDesklets in SideCandy style to display a simple title.
+
+
+1. Requirements
+===============
+
+SideCandy-Title v0.2 is based on SideCandy 0.10 (which is included in the archive).
+Furthermore the displays require:
+
+- gDesklets 0.36.3
+
+
+2. Content
+==========
+
+SideCandy-Title v0.2 provides the following Displays:
+- SideCandy-Title.display
+
+
+SideCandy-Title:
+
+This is a basic Title display in SideCandy style. It can display an icon, too.
+
+
+3. ChangeLog
+============
+
+12.September 2011
+- added all metadata
+- added icons to the prefs
+- code cleanup
+
+28.November 2006
+initial release :)
+
+
+4. History
+==========
+
+SideCandy-Title-0.2.tar.gz (12.September 2011)
+- SideCandy-Title.display (v0.2)
+
+
+SideCandy-Title-0.1.tar.gz (28.November 2006)
+- SideCandy-Title.display (v0.1)
+
+
+5. Compatibility
+================
+
+SideCandy-Title.display (v0.2)
+------------------------------
+needs at least gDesklets 0.36.3
+developed under gDesklets 0.36.4_beta
+tested ok: 0.36.4_beta
+
+
+Older versions:
+
+SideCandy-Title.display (v0.1)
+------------------------------
+needs at least gDesklets 0.34.3
+developed under gDesklets 0.35.3
+tested ok: 0.35.3 to 0.36.4_beta
+
+
+6. The Rest
+===========
+
+Contact, Suggestions, Comments etc.:
+
+Suggestions, Comments etc. are welcome.
+Any contact information should be available on the uamod.org or gDesklets homepage.
+Using the gDeskltes forum and/or the official IRC channel is another and good way to contact the author.
+
+
+License:
+
+SideCandy-Title is provided under the terms of the GNU General Public License.
+http://www.gnu.org/copyleft/gpl.html (as of the date mentioned at the top of this ReadMe (Version 2, June 1991)).
+
+
+Greetings, H.Humpel

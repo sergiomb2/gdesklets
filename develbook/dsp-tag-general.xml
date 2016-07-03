@@ -1,0 +1,45 @@
+<section id="dsp-tag-TEMPLATE" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title id="tst">&lt;TEMPLATE&gt;</title>
+
+  <para>A short description...</para>
+
+
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">mttf</entry>
+        <entry valign="top">integer</entry>
+        <entry valign="top">512</entry>
+        <entry valign="top">The mean time to failure in seconds. Use 0 for
+          not-working, and -1 to avoid failures.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+
+  <section><title>Examples</title>
+
+    <para>Examples go here...</para>
+
+  </section>
+
+</section>

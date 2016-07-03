@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   id="svg1"
+   sodipodi:version="0.32"
+   inkscape:version="0.39"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   width="210mm"
+   height="297mm"
+   sodipodi:docbase="/home/pycage/Projects/gDesklets/gdesklets/doc/book/gfx"
+   sodipodi:docname="framework.svg"
+   inkscape:export-filename="/home/pycage/Projects/gDesklets/gdesklets/doc/book/gfx/framework.png"
+   inkscape:export-xdpi="46.180000"
+   inkscape:export-ydpi="46.180000">
+  <defs
+     id="defs3">
+    <marker
+       style="overflow:visible;"
+       id="TriangleOutM"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path2351"
+         sodipodi:nodetypes="cccc" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="DistanceOut"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="DistanceOut">
+      <g
+         id="g990"
+         transform="scale(-0.6,0.6) translate(8,0)">
+        <path
+           style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+           d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+           id="path991"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:1.2pt;marker-start:none;"
+           d="M -14.759949,-7 L -14.759949,65"
+           id="path992" />
+      </g>
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow2L"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2L">
+      <path
+         transform="scale(1.1) translate(-5,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path2399"
+         sodipodi:nodetypes="cccc" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="TriangleInL"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleInL">
+      <path
+         transform="scale(-0.8)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path2359"
+         sodipodi:nodetypes="cccc" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="TriangleOutL"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutL">
+      <path
+         transform="scale(0.8)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path2353"
+         sodipodi:nodetypes="cccc" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.91875479"
+     inkscape:cx="410.99946"
+     inkscape:cy="608.65947"
+     inkscape:window-width="798"
+     inkscape:window-height="579"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-x="91"
+     inkscape:window-y="330" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF
+       id="RDF5">
+      <cc:Work
+         rdf:about=""
+         id="Work6">
+        <dc:format
+           id="format7">image/svg+xml</dc:format>
+        <dc:type
+           id="type9"
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:3.1099494;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000;"
+     id="rect1027"
+     width="510.39859"
+     height="68.903488"
+     x="37.075497"
+     y="132.74236"
+     rx="10" />
+  <text
+     xml:space="preserve"
+     style="font-size:48.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr;"
+     x="103.13515"
+     y="185.28763"
+     id="text1651"
+     sodipodi:linespacing="100%"><tspan
+       id="tspan1652">Scripting</tspan></text>
+  <rect
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:1.9116024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000;"
+     id="rect1654"
+     width="192.84038"
+     height="68.903488"
+     x="36.552853"
+     y="256.19547"
+     rx="10" />
+  <text
+     xml:space="preserve"
+     style="font-size:48.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr;"
+     x="104.86952"
+     y="307.82681"
+     id="text1655"
+     sodipodi:linespacing="100%"><tspan
+       id="tspan1656">XML</tspan></text>
+  <rect
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:2.3059962;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000;"
+     id="rect1658"
+     width="280.62091"
+     height="68.903488"
+     x="267.31161"
+     y="255.93393"
+     rx="10" />
+  <text
+     xml:space="preserve"
+     style="font-size:48.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr;"
+     x="333.91885"
+     y="307.58801"
+     id="text1659"
+     sodipodi:linespacing="100%"><tspan
+       id="tspan1660">Controls</tspan></text>
+  <rect
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:3.1099494;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000;"
+     id="rect1662"
+     width="510.39859"
+     height="68.903488"
+     x="37.075497"
+     y="381.42987"
+     rx="10" />
+  <text
+     xml:space="preserve"
+     style="font-size:48.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr;"
+     x="120.61639"
+     y="431.84256"
+     id="text1663"
+     sodipodi:linespacing="100%"><tspan
+       id="tspan1664">Daemon</tspan></text>
+  <rect
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:2.5806577;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000;"
+     id="rect1670"
+     width="351.45013"
+     height="68.903488"
+     x="639.23553"
+     y="132.81253"
+     rx="10" />
+  <text
+     xml:space="preserve"
+     style="font-size:48.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr;"
+     x="713.94946"
+     y="183.57227"
+     id="text1671"
+     sodipodi:linespacing="100%"><tspan
+       id="tspan1672">OS</tspan></text>
+  <rect
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:2.5811732;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000;"
+     id="rect1678"
+     width="351.59045"
+     height="68.903488"
+     x="639.09149"
+     y="257.67203"
+     rx="10.000000"
+     ry="10.000000" />
+  <text
+     xml:space="preserve"
+     style="font-size:48.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr;"
+     x="720.46411"
+     y="309.30338"
+     id="text1679"
+     sodipodi:linespacing="100%"><tspan
+       id="tspan1680">libdesklets</tspan></text>
+  <rect
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:2.5752361;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000;"
+     id="rect1682"
+     width="349.97491"
+     height="68.903488"
+     x="640.71240"
+     y="381.68777"
+     rx="10" />
+  <text
+     xml:space="preserve"
+     style="font-size:48.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr;"
+     x="723.68262"
+     y="431.60376"
+     id="text1683"
+     sodipodi:linespacing="100%"><tspan
+       id="tspan1684">Client</tspan></text>
+  <path
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.92282438pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;marker-start:none;marker-end:url(#TriangleOutL);"
+     d="M 142.30905,326.56100 L 142.30905,371.82346"
+     id="path1686" />
+  <path
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.92282438pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;marker-start:none;marker-end:url(#TriangleOutL);"
+     d="M 142.30905,202.54525 L 142.30905,247.80771"
+     id="path2425" />
+  <path
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.92282438pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;marker-start:none;marker-end:url(#TriangleOutL);"
+     d="M 406.90355,202.54525 L 406.90355,247.80771"
+     id="path2426" />
+  <path
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.94894676pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;marker-end:url(#TriangleOutL);"
+     d="M 547.35906,291.14425 L 629.57439,291.14425"
+     id="path2428"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.88391666pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;marker-end:url(#TriangleOutL);"
+     d="M 545.27413,258.54549 L 628.06475,176.26594"
+     id="path3087"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.94894676pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;marker-end:url(#TriangleOutL);"
+     d="M 637.20218,415.16000 L 557.43348,415.16000"
+     id="path3745" />
+  <image
+     xlink:href="/usr/share/pixmaps/gdesklets.png"
+     sodipodi:absref="/usr/share/pixmaps/gdesklets.png"
+     width="48.000000"
+     height="48.000000"
+     id="image3755"
+     x="54.158806"
+     y="392.38120" />
+  <image
+     xlink:href="/usr/share/icons/gnome/48x48/filesystems/gnome-fs-executable.png"
+     sodipodi:absref="/usr/share/icons/gnome/48x48/filesystems/gnome-fs-executable.png"
+     width="48.000000"
+     height="48.000000"
+     id="image3766"
+     x="279.90405"
+     y="265.62259" />
+  <image
+     xlink:href="/usr/share/icons/gnome/48x48/filesystems/gnome-fs-client.png"
+     sodipodi:absref="/usr/share/icons/gnome/48x48/filesystems/gnome-fs-client.png"
+     width="48.000000"
+     height="48.000000"
+     id="image3777"
+     x="659.78412"
+     y="392.24927" />
+  <image
+     xlink:href="/usr/share/icons/hicolor/48x48/stock/code/stock_script.png"
+     sodipodi:absref="/usr/share/icons/hicolor/48x48/stock/code/stock_script.png"
+     width="48.000000"
+     height="48.000000"
+     id="image3788"
+     x="48.996552"
+     y="143.46507" />
+  <image
+     xlink:href="/usr/share/icons/hicolor/48x48/apps/gnome-terminal.png"
+     sodipodi:absref="/usr/share/icons/hicolor/48x48/apps/gnome-terminal.png"
+     width="48.000000"
+     height="48.000000"
+     id="image3799"
+     x="652.33551"
+     y="144.95480" />
+  <image
+     xlink:href="/usr/share/icons/gnome/48x48/mimetypes/gnome-mime-text-xml.png"
+     sodipodi:absref="/usr/share/icons/gnome/48x48/mimetypes/gnome-mime-text-xml.png"
+     width="48.000000"
+     height="52.000000"
+     id="image3810"
+     x="46.017117"
+     y="265.11234" />
+  <image
+     xlink:href="/usr/share/icons/gnome/48x48/mimetypes/gnome-package.png"
+     sodipodi:absref="/usr/share/icons/gnome/48x48/mimetypes/gnome-package.png"
+     width="47.000000"
+     height="48.000000"
+     id="image3832"
+     x="661.77386"
+     y="268.60205" />
+</svg>

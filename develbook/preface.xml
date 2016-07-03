@@ -1,0 +1,27 @@
+<preface id="preface"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Preface</title>
+
+  <para>Any good development platform is worthless without documentation.
+    This book attempts to explain the <application>gDesklets</application>
+    platform in detail, and is designed for developers who wish to create
+    their own applets.</para>
+
+  <para>Due to the nature of an evolving project, a documentation book will
+    always be a work-in-progress. This book will continually be revised and
+    extended to reflect the latest state of the
+    <application>gDesklets</application> development platform.
+    Any suggestions or help from the readers is highly appreciated, and
+    would greatly aid to make this book a comprehensive and up-to-date
+    source of information for applet developers.</para>
+
+  <para>If you find some passages to be hard to read or totally incomprehensible,
+    please do not curse about them. Instead, let us know what's bad. That way
+    you can help us to make it better.</para>
+
+  <para>Now let's start with the documentation. We wish you will have as much
+    fun developing on the <application>gDesklets</application> platform,
+    as we are having developing it for you!</para>
+
+  <para>December 2004, The gDesklets Team</para>
+
+</preface>

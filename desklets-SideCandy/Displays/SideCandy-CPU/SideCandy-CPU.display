@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display id="win" anchor="ne" window-flags="sticky, below">
+
+
+<meta name="SideCandy-CPU"
+      version="0.11"
+      category="System/CPU"
+      description="A CPU monitor in SideCandy style."
+      author="Christian Meyer, Martin Grimme, Björn Koch"
+      dependency="0.36.3"
+      website=""
+      license="GPL-2"
+      copyright="(C) 2005-2011 Christian Meyer, Martin Grimme, Björn Koch"
+      preview="gfx/cpu.svg" />
+
+<control id="sys" interface="ISystem"/>
+
+<frame id="border">
+
+  <group id="slider"
+         on-click="if (sc_behavior == 'click'): slide(self, SC_IN, SC_OUT)"
+         on-doubleclick="if (sc_behavior == 'double'): slide(self, SC_IN, SC_OUT)"
+         on-enter="if (sc_behavior == 'enter'): slide(self, SC_IN, SC_OUT)"
+         on-leave="if (sc_behavior == 'enter'): slide(self, SC_IN, SC_OUT)">
+
+    <group id="panel" width="5cm" height="2cm">
+
+      <group id="bg" width="100%" height="100%" bg-uri="gfx/bg/none.png"/>
+
+      <group id="icon_group" y="0.1cm" width="1cm">
+
+        <canvas id="icon" uri="gfx/cpu.svg" width="1cm" height="1cm"
+                on-enter="show_cpu_info(True)" on_leave="show_cpu_info(False)"/>
+        <label id="lbl_load" anchor="center" x="50%" y="1.1cm" value="Load"
+               font="Sans 0.25cm" color="navy"/>
+        <label id="cpu_load" anchor="center" x="50%" y="1.5cm"
+               font="Sans 0.25cm" color="navy"/>
+
+      </group>
+
+      <group id="info_group" y="0.1cm" width="3.8cm">
+
+        <label id="lbl_cpu" x="5%" font="Sans 0.2cm" color="black" wrap-at="3.8cm"/>
+        <label id="lbl_cpu_info" visible="false"
+               font="Sans Bold 0.2cm" color="red" wrap-at="3.8cm"
+               relative-to="lbl_cpu,y" x="5%" y="0.1cm"/>
+        <gauge id="gauge_load" relative-to="lbl_cpu,y" x="5%" y="0.1cm" fill="0">
+            <group id="cpu_gauge" width="3.8cm" height="0.4cm" bg-color="#ffffff80"/>
+        </gauge>
+        <plotter id="plot_load" x="5%" y="1.8cm" anchor="sw" width="90%" height="1cm"
+                 color="navy" bars="False"/>
+
+      </group>
+
+    </group>
+
+  </group>
+
+</frame>
+
+  <prefs callback="sc_prefs_cb">
+
+    <page label="SideCandy">
+      <title label="Desklet behaviour"/>
+      <enum label="Stay on top:" bind="sc_on_top">
+        <item label="Never" value="never"/>
+        <item label="Always" value="always"/>
+        <item label="When slid in" value="whenin"/>
+        <item label="When slid out" value="whenout"/>
+      </enum>
+      <title label="Sliding"/>
+      <enum label="Orientation:" bind="sc_side"
+            help="The orientation of the display.">
+        <item label="Left" value="left"/>
+        <item label="Right" value="right"/>
+      </enum>
+      <integer label="Delay:" bind="sc_slide_timer"/>
+      <enum label="Behavior:" bind="sc_behavior">
+        <item label="Slide on mouse click" value="click"/>
+        <item label="Slide on double click" value="double"/>
+        <item label="Slide on entering" value="enter"/>
+        <item label="Never slide" value="never"/>
+      </enum>
+
+      <title label="Borders"/>
+      <enum label="Border style:" bind="sc_border">
+        <item label="LTVCandy" value="lt"/>
+        <item label="Round" value="round"/>
+        <item label="Drop Shadow" value="tmkt"/>
+      </enum>
+      <boolean label="Left border" bind="sc_border_left"/>
+      <boolean label="Right border" bind="sc_border_right"/>
+      <boolean label="Top border" bind="sc_border_top"/>
+      <boolean label="Bottom border" bind="sc_border_bottom"/>
+
+      <title label="Background"/>
+      <uri label="Background image:" bind="Dsp.bg.bg_uri"/>
+      <boolean label="Show background" bind="Dsp.bg.visible"/>
+    </page>
+
+    <page label="CPU">
+      <title label="Refresh"/>
+      <integer label="Refresh rate in milliseconds:" bind="refresh"
+               min="50" max="5000" increment="10"
+               help="The refresh rate in milliseconds (ms) - Min: 50, Max: 5000 - Default: 500ms."/>
+      <title label="CPU Information"/>
+      <boolean label="Show CPU Info on mouseOver" bind="show_info_cpu" value="True"
+               help="Should the CPU information be shown when the mouse is over the CPU icon?"/>
+      <title label="Animate Icon"/>
+      <boolean label="Animate the CPU icon" bind="animate_cpu_icon" value="True"
+               help="Should the CPU icon be animated according to the CPU usage?"/>
+    </page>
+
+    <page label="Appearance">
+      <title label="Colors"/>
+      <color label="CPU load label" bind="Dsp.cpu_load.color"/>
+      <!-- bug in gDesklets; doesn't work! color label="CPU gauge" bind="Dsp.cpu_gauge.bg_color"/ -->
+      <color label="CPU plotter" bind="Dsp.plot_load.color"/>
+      <color label="CPU information" bind="Dsp.lbl_cpu.color"/>
+      <color label="CPU details" bind="Dsp.lbl_cpu_info.color"/>
+      <title label="Fonts"/>
+      <font label="CPU load label" bind="Dsp.cpu_load.font"/>
+      <font label="CPU information" bind="Dsp.lbl_cpu.font"/>
+      <font label="CPU details" bind="Dsp.lbl_cpu_info.font"/>
+    </page>
+
+  </prefs>
+
+  <script uri="candy.script"/>
+
+  <script><![CDATA[
+
+    show_info_cpu    = True
+    animate_cpu_icon = True
+
+    FADING_STEPS = 5
+    DOM = Dsp.icon.dom
+    cpu_top = DOM.get("Chip_Top")
+    refresh = 500
+    # the fading context; the current color and the destination color
+    fading_context = [(0, 0, 0), (0, 0, 0)]
+
+
+    def show_cpu_info(show):
+
+        if (show_info_cpu):
+            Dsp.lbl_cpu_info.visible = show
+            Dsp.gauge_load.visible = Dsp.plot_load.visible = not show
+            if (show):
+                Dsp.lbl_cpu_info.value = "Bogomips: %.2f\n%s (%dkB cache)" % \
+                                (sys.cpu_bogomips, sys.cpu_model, sys.cpu_cache)
+
+
+    def get_load():
+
+        load = int(sys.cpu_load)
+        if (sys.cpu_clock > 1000.0):
+            clock = sys.cpu_clock / 1000.0
+            clock = str("%4.3f GHz" % clock)
+        else:
+            clock = str("%4.f MHz" % sys.cpu_clock)
+
+        if (len(sys.cpu_model) > 15): cpu_model = sys.cpu_model[:14] + ".."
+        else: cpu_model = sys.cpu_mode
+        Dsp.lbl_cpu.value = "%s @ %s" % (cpu_model, clock)
+        Dsp.cpu_load.value = "%d%%" % load
+        Dsp.plot_load.value = Dsp.gauge_load.fill = load
+
+        if (75 <= load): fade_to(255, 64, 0)
+        else: fade_to(0, 0, 0)
+
+        add_timer(refresh, get_load)
+
+
+    def fade_to(r, g, b):
+
+        fading_context[1] = (r, g, b)
+
+
+    def fader():
+
+        if (animate_cpu_icon):
+            current_color, current_dest = fading_context
+            if (current_color == current_dest): return True
+            cr, cg, cb = current_color
+            r, g, b = current_dest
+
+            if (cr < r): cr += FADING_STEPS
+            elif (cr > r): cr -= FADING_STEPS
+            if (cg < g): cg += FADING_STEPS
+            elif (cg > g): cg -= FADING_STEPS
+            if (cb < b): cb += FADING_STEPS
+            elif (cb > b): cb -= FADING_STEPS
+
+            fading_context[0] = (cr, cg, cb)
+            cpu_top["style"] = "fill:rgb(%d, %d, %d)" % (cr, cg, cb)
+            DOM.update()
+
+            return True
+
+
+    add_timer(0, get_load)
+    add_timer(150, fader)
+
+  ]]></script>
+
+</display>
+

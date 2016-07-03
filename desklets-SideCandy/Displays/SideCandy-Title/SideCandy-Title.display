@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display id="win" anchor="ne" window-flags="sticky, below">
+
+<meta name="SideCandy-Title"
+      version="0.2"
+      category="Misc/Misc"
+      description="A simple Title for SideCandy."
+      author="H.Humpel (Bjoern Koch)"
+      dependency="0.36.3"
+      website="http://www.uamod.org/desklets/sidecandy-title.html"
+      license="GPL-2"
+      copyright="(C) 2006-2011 H.Humpel (Bjoern Koch)"
+      preview="gfx/SideCandy-Title-preview.png" />
+
+<frame id="border">
+
+  <group id="slider" width="5cm" height="1cm"
+         on-click="if (sc_behavior == 'click'): slide(self, SC_IN, SC_OUT)"
+         on-doubleclick="if (sc_behavior == 'double'): slide(self, SC_IN, SC_OUT)"
+         on-enter="if (sc_behavior == 'enter'): slide(self, SC_IN, SC_OUT)"
+         on-leave="if (sc_behavior == 'enter'): slide(self, SC_IN, SC_OUT)">
+
+    <group id="panel" width="100%" height="100%">
+      <group id="bg" width="100%" height="100%" bg-uri="gfx/bg/none.png"/>
+
+        <group id="icon_group" width="1cm" height="100%">
+        <image id="icon" uri="gfx/bg/none.png"
+               image-width="1cm" image-height="1cm"
+               anchor="center" x="50%" y="50%" width="100%" />
+      </group> 
+
+      <group id="info_group" width="4cm" height="100%"> 
+        <label id="title" x="50%" y="50%" anchor="center"
+               wrap-at="100%" font="Sans Bold 8" color="#EFEFEFFF" value="Title"/>
+      </group> 
+    </group>
+  </group>
+</frame>
+
+
+<prefs callback="my_callback">
+  <!-- SideCandy Prefs -->
+  <page label="SideCandy" icon="gfx/icons/SideCandy.png">
+    <enum label="Stay on top:" bind="sc_on_top"
+          help="Should the display stay on top?">
+      <item label="Never" value="never"/>
+      <item label="Always" value="always"/>
+      <item label="When slid in" value="whenin"/>
+      <item label="When slid out" value="whenout"/>
+    </enum>
+
+    <title label="Sliding"/>
+    <enum label="Orientation:" bind="sc_side"
+          help="The orientation of the display.">
+      <item label="Left" value="left"/>
+      <item label="Right" value="right"/>
+    </enum>
+    <integer label="Delay:" bind="sc_slide_timer"
+             min="0" max="100" increment="1"
+             help="The time in milliseconds between the steps when sliding (range: 0 (fast) to 100 (slow))."/>
+    <enum label="Behavior:" bind="sc_behavior"
+             help="When should the display slide?">
+      <item label="Slide on mouse click" value="click"/>
+      <item label="Slide on double click" value="double"/>
+      <item label="Slide on entering" value="enter"/>
+      <item label="Never slide" value="never"/>
+     </enum>
+
+    <title label="Borders"/>
+    <enum label="Border style:" bind="sc_border"
+          help="The border style to be used.">
+      <item label="LTVCandy" value="lt"/>
+      <item label="Round" value="round"/>
+      <item label="Drop Shadow" value="tmkt"/>
+    </enum>
+    <boolean label="Left border" bind="sc_border_left"
+             help="Show the left border."/>
+    <boolean label="Right border" bind="sc_border_right"
+             help="Show the right border."/>
+    <boolean label="Top border" bind="sc_border_top"
+             help="Show the top border."/>
+    <boolean label="Bottom border" bind="sc_border_bottom"
+             help="Show the bottom border."/>
+
+    <title label="Background"/>
+    <uri label="Background image:" bind="Dsp.bg.bg_uri"
+         help="The path to the image to be used as background."/>
+    <boolean label="Show background" bind="Dsp.bg.visible"
+         help="Display the background image."/>
+  </page>
+
+  <!-- Appearance Prefs -->
+  <page label="Appearance" icon="gfx/icons/preferences-desktop-wallpaper.png">
+    <title label="Size"/>
+    <unit label="Width:" bind="width"
+          min="0.5" increment="0.1"
+          help="The width of the display (default: 5cm )."/>
+    <unit label="Height:" bind="height"
+          min="0.5" increment="0.1"
+          help="The height of the display (default: 1cm )."/>
+
+    <title label="Icon"/>
+    <boolean label="Use Icon" bind="icon_use"
+             help="Use the Icon and its space."/>
+    <boolean label="Display Icon" bind="icon_display"
+             help="Display the Icon." />
+    <uri label="Icon image:" bind="Dsp.icon.uri"
+         help="The path to the Icon to be displayed."/>
+    <float label="Scale:" bind="Dsp.icon.scale"
+           min="0.1" max="2.0" increment="0.1"
+           help="Scale the Icon (range: 0.1 to 2.0)."/>
+    <float label="Opacity: " bind="Dsp.icon.opacity"
+           min="0.0" max="1.0" increment="0.1"
+           help="The opacity for the Icon (range: 0.0 to 1.0)."/>
+    <enum label="Anchor:" bind="Dsp.icon.anchor"
+          help="The anchor for the Icon.">
+      <item label="center" value="center"/>
+      <item label="north" value="n"/>
+      <item label="north east" value="ne"/>
+      <item label="east" value="e"/>
+      <item label="south east" value="se"/>
+      <item label="south" value="s"/>
+      <item label="south west" value="sw"/>
+      <item label="west" value="w"/>
+      <item label="north west" value="nw"/>
+     </enum>
+  </page>
+
+  <!-- Title Prefs -->
+  <page label="Title" icon="gfx/icons/stock_font.png">
+    <string label="Title:" bind="Dsp.title.value"
+            help="The Title to be displayed."/>
+    <font label="Title font: " bind="Dsp.title.font"
+          help="The font to be used for the Title" />
+    <color label="Title color:" bind="Dsp.title.color"
+           help="The color to be used for the Title." />
+    <enum label="Anchor:" bind="Dsp.title.anchor"
+          help="The anchor for the Icon.">
+      <item label="center" value="center"/>
+      <item label="north" value="n"/>
+      <item label="north east" value="ne"/>
+      <item label="east" value="e"/>
+      <item label="south east" value="se"/>
+      <item label="south" value="s"/>
+      <item label="south west" value="sw"/>
+      <item label="west" value="w"/>
+      <item label="north west" value="nw"/>
+    </enum>
+  </page>
+
+</prefs>
+
+
+<!-- this loads the SideCandy magic -->
+<script uri="candy.script"/>
+
+<!-- Main Script -->
+<script><![CDATA[
+
+width = get_config("width", Unit(5, CM))
+height = get_config("height", Unit(1, CM))
+icon_use = get_config("icon_use", False)
+icon_display = get_config("icon_display", False)
+
+
+def my_callback(key, value):
+  sc_prefs_cb(key, value)
+  if key == "width":
+    Dsp.slider.width = value
+    Dsp.panel.width = value
+    Dsp.info_group.width = Unit(Dsp.slider.width.as_cm()-Dsp.icon_group.width.as_cm(), CM)
+  elif key == "height":
+    Dsp.slider.height = value
+  elif key == "icon_display":
+    Dsp.icon.visible = value
+  elif key == "icon_use":
+    Dsp.icon_group.visible = value
+    if value:
+      Dsp.icon_group.width = Unit(1, CM)
+    else:
+      Dsp.icon_group.width = Unit(0, CM)
+  if sc_side == "left":
+    icon_group_x = Dsp.slider.width.as_cm()-Dsp.icon_group.width.as_cm()
+    Dsp.icon_group.x = Unit(icon_group_x, CM)
+    Dsp.icon_group.y = Unit(0, CM)
+    Dsp.info_group.x = Unit(0, CM)
+    Dsp.info_group.y = Unit(0, CM)
+    Dsp.info_group.width = Unit(Dsp.slider.width.as_cm()-Dsp.icon_group.width.as_cm(), CM)
+  else:
+    Dsp.icon_group.x = Unit(0, CM)
+    Dsp.icon_group.y = Unit(0, CM)
+    Dsp.info_group.x = Unit(Dsp.icon_group.width.as_cm(), CM)
+    Dsp.info_group.y = Unit(0, CM)
+    Dsp.info_group.width = Unit(Dsp.slider.width.as_cm()-Dsp.icon_group.width.as_cm(), CM)
+  lt = sc_border_left and 5 or 0
+  rt = sc_border_right and 5 or 0
+  win_width = lt + rt + Dsp.slider.width.as_px()
+  Dsp.win.width = Unit(win_width, PX)
+
+
+]]></script>
+</display>

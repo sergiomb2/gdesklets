@@ -1,0 +1,205 @@
+2011-09-12  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* meta.xml: encourage everyone to provide all metadata
+
+2010-05-24  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* prefs-tag-float.xml
+	* prefs-tag-integer.xml: added "increment" attribute
+	* gfx/prefs-unit.png
+	* prefs-tag-unit.xml: added image
+	* gfx/prefs-button.png
+	* prefs-tag-button.xml: added long un-documented button config element
+	* gfx/prefs-toggle.png
+	* prefs-tag-toggle.xml: new Config element: ConfigToggle
+	* prefs.xml: new prefs sites included
+	* apdx-cursors.xml
+	* script-menu.xml: removing old "new in <version>" statements
+	* info.xml: updated copyright information (added missing 2009)
+	* dsp-tag-image.xml: added "saturation" attribute
+
+2010-04-23  Joe Sapp  <nixphoeni@gmail.com>
+
+	* info.xml
+	* tmp.xml
+	* xibook.xml
+	* ctrl-use.xml: Added Control array information
+
+===  0.36.2 Released   ===
+
+2010-04-22  Joe Sapp  <nixphoeni@gmail.com>
+
+	* info.xml
+	* tmp.xml
+	* ctrl-included.xml
+	* dsp-tag-plotter.xml
+	* prefs-tag-date.xml
+	* prefs-tag-info.xml
+	* prefs-tag-list.xml
+	* prefs-tag-radio.xml
+	* prefs-tag-uri.xml
+	* xibook.xml: Moving to 0.36.2; removing old "new in <version>" statements.
+
+
+===  0.36.1 Released   ===
+
+2008-11-02  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* info.xml
+	* meta.xml
+	* tmp.xml
+	* xibook.xml: Moving to 0.36.1.
+
+
+2008-09-24  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* gfx/prefs-list.png
+	* prefs-tag-list.xml: new Config element: ConfigList
+	* ctrl-included.xml
+	* dsp-tag-plotter.xml
+	* info.xml
+	* make-html.sh
+	* prefs-tag-uri.xml
+	* prefs.xml
+	* tmp.xml
+	* xibook.xml: Moving on to 0.36.1(beta).
+
+
+
+2008-06-03  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* info.xml: code cleaning
+	* make-html.sh: bookinfo now working, toc still not
+
+
+2008-04-13  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* book.xml
+	* framework-overview.xml
+	* info.xml
+	* make-html.sh
+	* tmp.xml
+	* xibook.xml
+	* yelp/db2html-info.xsl
+	* yelp/db2html-media.xsl
+	* yelp/db2html.xsl: making the HTML output work (not working yet)
+
+
+2008-03-21  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* make-html.sh: make sure nothing is deleted without asking
+
+
+2008-03-20  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* yelp/db2html-admon.xsl
+	* yelp/db2html-biblio.xsl
+	* yelp/db2html-block.xsl
+	* yelp/db2html-callout.xsl
+	* yelp/db2html-chunk.xsl
+	* yelp/db2html-common.xsl
+	* yelp/db2html-division.xsl
+	* yelp/db2html-ebnf.xsl
+	* yelp/db2html-footnote.xsl
+	* yelp/db2html-glossary.xsl
+	* yelp/db2html-header.xsl
+	* yelp/db2html-html.xsl
+	* yelp/db2html-index.xsl
+	* yelp/db2html-inline.xsl
+	* yelp/db2html-list.xsl
+	* yelp/db2html-math.xsl
+	* yelp/db2html-media.xsl
+	* yelp/db2html-navbar.xsl
+	* yelp/db2html-param.xsl
+	* yelp/db2html-qanda.xsl
+	* yelp/db2html-refentry.xsl
+	* yelp/db2html-suppressed.xsl
+	* yelp/db2html-synopsis.xsl
+	* yelp/db2html-table.xsl
+	* yelp/db2html-title.xsl
+	* yelp/db2html-titlepage.xsl
+	* yelp/db2html-toc.xsl
+	* yelp/db2html-xref.xsl
+	* yelp/db2html.xsl
+	* yelp/gettext.xsl
+	* yelp/l10n.xml
+	* yelp/man2html.xsl
+	* make-html.sh: included missing forked yelp stylesheets
+
+
+=== 2008-03-17  Bjoern Koch <H.Humpel@gmx.de> ===
+===  Released as new branch on launchpad.net  ===
+
+
+2008-03-15  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* doc/book/apdx-cursors.xml
+	* doc/book/ctrl-idea.xml
+	* doc/book/ctrl-included.xml
+	* doc/book/ctrl-interface.xml
+	* doc/book/ctrl-write.xml
+	* doc/book/dsp-tag-common.xml
+	* doc/book/dsp-tag-display.xml
+	* doc/book/dsp-tag-image.xml
+	* doc/book/dsp-tag-label.xml
+	* doc/book/dsp-tag-plotter.xml
+	* doc/book/dsp-tag-script.xml
+	* doc/book/layout-anchors.xml
+	* doc/book/layout-mistakes.xml
+	* doc/book/layout-relative.xml
+	* doc/book/meta.xml
+	* doc/book/prefs-system.xml
+	* doc/book/prefs-tag-boolean.xml
+	* doc/book/prefs-tag-color.xml
+	* doc/book/prefs-tag-date.xml
+	* doc/book/prefs-tag-enum.xml
+	* doc/book/prefs-tag-float.xml
+	* doc/book/prefs-tag-font.xml
+	* doc/book/prefs-tag-info.xml
+	* doc/book/prefs-tag-integer.xml
+	* doc/book/prefs-tag-radio.xml
+	* doc/book/prefs-tag-string.xml
+	* doc/book/prefs-tag-uri.xml
+	* doc/book/script-builtins.xml
+	* doc/book/script-menu.xml
+	* doc/book/script-sandbox.xml
+	* doc/book/script-using.xml
+	* doc/book/tutor-1st-steps.xml
+	* doc/book/tutor-canvas.xml
+	* doc/book/tutor-hello.xml
+	* doc/book/tutor-tutor.xml
+	* doc/book/tutor-xml.xml
+	* doc/book/tutor.xml: code cleaning (almost no errors left)
+
+
+2008-03-14  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* doc/book/ctrl-included.xml: updated documentation
+
+2008-03-02  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* doc/book/book.xml
+	* doc/book/ctrl.xml
+	* doc/book/ctrl-included.xml: updated information, new chapter: included Controls 
+
+
+2007-08-10  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* doc/book/gfx/prefs-info.png:
+	* doc/book/gfx/prefs-page.png:
+	* doc/book/prefs-tag-info.xml:
+	* doc/book/prefs-tag-page.xml: updated documentation
+
+
+2007-07-14  Bjoern Koch  <H.Humpel@gmx.de>
+
+	* doc/book/gfx/prefs-date.png:
+	* doc/book/gfx/prefs-info.png:
+	* doc/book/gfx/prefs-radio.png:
+	* doc/book/prefs-tag-date.xml:
+	* doc/book/prefs-tag-info.xml:
+	* doc/book/prefs-tag-radio.xml:
+	* doc/book/prefs-tag-item.xml:
+	* doc/book/prefs-tag-unit.xml:
+	* doc/book/prefs.xml: added docs for the new config elements (Date, Info and Radio)
+

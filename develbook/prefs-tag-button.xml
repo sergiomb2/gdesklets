@@ -1,0 +1,78 @@
+<section id="prefs-tag-button" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;button&gt;</title>
+
+  <para>A simple button. Its representation is a button widget.</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/prefs-button" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">callback</entry>
+        <entry valign="top">function</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">A callback function which is called every time
+          the button is clicked. The callback takes the name of the bound
+          property and the new value as arguments.</entry>
+      </row>
+      <row>
+        <entry valign="top">enabled</entry>
+        <entry valign="top">boolean</entry>
+        <entry valign="top">true</entry>
+        <entry valign="top">Whether the config item is enabled. Disabled items
+          appear greyed out.</entry>
+      </row>
+      <row>
+        <entry valign="top">help</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The tooltip text for the element in the
+          configuration dialog.</entry>
+      </row>
+      <row>
+        <entry valign="top">label</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The label text for the element in the
+          configuration dialog.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+
+  <section><title>Examples</title>
+
+    <programlisting><![CDATA[
+<button label="I am a button. Please click me ;)."
+        help="Just a simple button."
+        callback="my_personal_callback" />
+    ]]></programlisting>
+
+  </section>
+
+</section>

@@ -1,0 +1,44 @@
+<section id="layout-relative" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Relative Positioning</title>
+
+  <para>Sometimes an element has to be positioned next to another one. This
+    could be achieved by retrieving the other element's geometry values and
+    computing the coordinates of the place next to it. This, however, is
+    tedious and not neccessary.</para>
+
+  <para><application>gDesklets</application> supports
+    <emphasis>relative positioning</emphasis>. With relative positioning,
+    you can use the <property>x</property> and <property>y</property>
+    properties to place an element next to another one.</para>
+
+  <para>Relative placement is enabled by using the
+    <link linkend="dsp-tag-common"><property>relative-to</property></link>
+    property.</para>
+
+  <para>The three directions available for relative positioning are:</para>
+
+  <itemizedlist>
+    <listitem><literal>x</literal> - right to the element</listitem>
+    <listitem><literal>y</literal> - below the element</listitem>
+    <listitem><literal>xy</literal> - below right to the element</listitem>
+  </itemizedlist>
+
+  <para>The new coordinates origin for relative positioning is computed as
+    follows:</para>
+
+  <orderedlist>
+    <listitem>Begin at the anchor of the relative element.</listitem>
+    <listitem>For <literal>x</literal> or <literal>xy</literal>, move to the
+      right edge of the element.</listitem>
+    <listitem>For <literal>y</literal> or <literal>xy</literal>, move to the
+      bottom edge of the element.</listitem>
+    <listitem>This place will be the new coordinates origin.</listitem>
+  </orderedlist>
+
+  <para>The origin thus depends on the position of the
+    <link linkend="layout-anchors">anchor</link> of the relative element.
+    If the anchor is <literal>center</literal>, for example, then the new
+    origin will be at the same x or y coordinate as the anchor.
+    This does not affect the <literal>xy</literal> placement, though.</para>
+
+</section>

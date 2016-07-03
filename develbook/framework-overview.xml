@@ -1,0 +1,54 @@
+<section id="framework-overview" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Overview</title>
+
+  <para>The <application>gDesklets</application> framework consists of several
+    components, as can be seen below.</para>
+
+  <figure><title>The gDesklets Framework</title>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="gfx/framework.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase>Framework</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+  </figure>
+
+  <itemizedlist>
+    <listitem>
+      <para>A daemon is running in the background as a server
+        providing a socket for communication. Clients connect to the socket to
+        give instructions to the daemon, e.g. to have it open an applet.
+      </para>
+      <para>The daemon is responsible for loading and running the applets.
+        Clients, e.g. a command line frontend, can thus be implemented as thin
+        remote controls.
+      </para>
+    </listitem>
+
+    <listitem><para>The user interface of applets, i.e. the things which the
+      user will see and be able to interact with, is defined by
+      <link linkend="dsp">ADL</link>, a simple, yet powerful XML based language.
+      </para></listitem>
+
+    <listitem><para>The XML-defined user interface can be brought to life
+      with <link linkend="script">inline scripts</link>, i.e. Python scripts
+      which are directly written into the XML code or imported there to be
+      executed in a <link linkend="script-sandbox">secure sandbox</link>.
+      </para></listitem>
+
+    <listitem><para>Sandboxed scripting code can use
+      <link linkend="ctrl">controls</link> to access
+      otherwise unreachable data. Controls can, for instance, be used for
+      reading hardware information. Basically they provide a controlled way
+      to access data outside the sandbox.
+      <link linkend="libdesklets"><application>libdesklets</application></link>
+      is a library which can be used to ease their implementation.</para>
+      </listitem>
+
+  </itemizedlist>
+
+</section>

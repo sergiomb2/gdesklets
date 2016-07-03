@@ -1,0 +1,17 @@
+2011-09-11  Bjoern Koch  <H.Humpel@gmx.de>
+
+ * Version 0.11
+ * Renamed to SideCandy-Network
+ * SideCandy-Network.display:
+   * updated and added Metadata
+   * call Controls without ID-string
+   * changed 'bg-uri' in group 'bg'  to existing file 'gfx/bg/none.png'
+   * updated 'color' of plotters to use opacity (#xxxxxxxx)
+
+
+=== INIT ===
+
+2011-09-11  Bjoern Koch  <H.Humpel@gmx.de>
+
+ * Initial release. Original taken from SideCandy 0.10 archive.
+

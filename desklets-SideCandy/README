@@ -1,0 +1,65 @@
+Welcome to the desklet-SideCandy branch.
+========================================
+
+This branch is a collection of (hopefully) all Desklets in SideCandy style.
+The main aim of this collection is to provide a complete set of (SideCandy) themed desklets.
+All desklets should all be running without any errors and messages in the logs with the latest version of gDesklets.
+
+These desklets should meet the general standard of the latest version of gDesklets:
+- provide all metadata (including a preview)
+- provide all files (README and COPYING)
+ 
+Furtheremore these desklets should meet a basic standard for desklets, which include:
+- provide a ChangeLog
+- have "help" attributes for all elements in the preferences
+- use icons for all tabs in the preferences (to be located in gfx/icons)
+
+
+
+=== Templates ===
+In the root directory you will find the vanilla SideCandy 0.10:
+
+SideCandy (Christian Meyer, Martin Grimme) - The original Sidecandy 0.10 release.
+
+
+=== Displays ===
+The following SideCandy Desklets are included (in 'Displays'):
+
+SideCandy-Clock (Christian Meyer, Martin Grimme)
+SideCandy-CPU (Christian Meyer)
+SideCandy-Network (Christian Meyer, Martin Grimme)
+SideCandy-Title (H.Humpel (Bjoern Koch))
+
+Many more to come ....
+
+
+=== Controls ===
+The following needed Controls are included (in 'Controls'):
+
+N/A
+
+
+Please take a look at the included ChangeLog files for further information.
+
+
+
+If you have more SideCandy Desklets, please let us know!
+
+Visit the gDesklets project on launchpad: https://launchpad.net/gdesklets/
+
+
+=== Disclaimer ===
+Please notice that these Desklets are published under the GPL-2 license.
+Although we really like to help these desklets come with
+
+    * no warranty
+    * no description
+    * and no support!
+
+
+
+
+The gDesklets Desklet team
+https://launchpad.net/~gdesklets-desklet-team
+
+Last updated: 12-09-2011

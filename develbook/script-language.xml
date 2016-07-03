@@ -1,0 +1,22 @@
+<section id="script-language" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Scripting Language</title>
+
+  <para>Scripts in <application>gDesklets</application> are written in the
+    Python language. By language, we mean the core language, not the rich
+    set of modules, which is not available in the sandbox for security
+    reasons.</para>
+
+  <para>Python scripts require proper indentation, so the same rule applies to
+    scripts on the <application>gDesklets</application> platform. You have to
+    take care of consistent indentation within the
+    <command>&lt;script&gt;</command> tags.</para>
+
+  <note>
+    <para>If you include scripts in your <filename>.display</filename> file,
+      you have to make sure that the script doesn't use any characters reserved
+      by XML. You can escape them by using the common XML entities, or in case
+      of the <command>&lt;script&gt;</command> tag, by putting the script code
+      into a CDATA section.</para>
+  </note>
+
+</section>

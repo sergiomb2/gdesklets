@@ -1,0 +1,133 @@
+<section id="dsp-tag-plotter" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;plotter&gt;</title>
+
+  <para>This element is for plotting graphs. It represents a specialized handy
+    frontend for the <link linkend="dsp-tag-canvas">&lt;canvas&gt;</link> by
+    taking value by value.</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/dsp-plotter" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">bars</entry>
+        <entry valign="top">bool</entry>
+        <entry valign="top">false</entry>
+        <entry valign="top">Display the graph using bars.</entry>
+      </row>
+      <row>
+        <entry valign="top">bg-color</entry>
+        <entry valign="top">color</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The background color.</entry>
+      </row>
+      <row>
+        <entry valign="top">color</entry>
+        <entry valign="top">color</entry>
+        <entry valign="top">navy</entry>
+        <entry valign="top">The plot color.</entry>
+      </row>
+      <row>
+        <entry valign="top">scala</entry>
+        <entry valign="top">integer</entry>
+        <entry valign="top">0</entry>
+        <entry valign="top">The scale to be used for the scala (0 turns the scala off).</entry>
+      </row>
+      <row>
+        <entry valign="top">scala-color</entry>
+        <entry valign="top">color</entry>
+        <entry valign="top">black</entry>
+        <entry valign="top">The font color to be used for the scala.</entry>
+      </row>
+      <row>
+        <entry valign="top">scala-font</entry>
+        <entry valign="top">font</entry>
+        <entry valign="top">Sans</entry>
+        <entry valign="top">The font to be used for the scala.</entry>
+      </row>
+      <row>
+        <entry valign="top">scale-bidir</entry>
+        <entry valign="top">boolean</entry>
+        <entry valign="top">false</entry>
+        <entry valign="top">Enables scaling of the lower boundary, so negative 
+          values won't 'drop off'.</entry>
+      </row>
+      <row>
+        <entry valign="top">scale-holdmax</entry>
+        <entry valign="top">boolean</entry>
+        <entry valign="top">false</entry>
+        <entry valign="top">Enables a hold-function on the scaling.  When the 
+          scaling is changed because of large values, it will not return to 
+          the default scaling once those large values have disappeared from 
+          the history.</entry>
+      </row>
+      <row>
+        <entry valign="top">size</entry>
+        <entry valign="top">integer</entry>
+        <entry valign="top">50</entry>
+        <entry valign="top">The numbers of values stored in the history.</entry>
+      </row>
+      <row>
+        <entry valign="top">value</entry>
+        <entry valign="top">integer</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The next value to append to the history of values. 
+          Values may range from <literal>0</literal> to
+          <literal>100</literal>, but if you supply values greater than
+          <literal>100</literal>, the graph will scale accordingly.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+
+  <section><title>Examples</title>
+
+    <programlisting><![CDATA[
+<display bg-color="white" anchor="center" x="50%" y="50%">
+
+  <control id="sys" interface="ISystem:4i4p0jtvdz87qx44x2dm97ltj"/>
+
+  <plotter width="100" height="100" size="100" id="plotter" color="black"/>
+
+  <script><![CDATA[
+
+    def cpu_handler():
+      Dsp.plotter.value = sys.cpu_load
+      return True
+
+    add_timer(500, cpu_handler)
+
+  ]]>]]&gt;<![CDATA[</script>
+ 
+</display>
+
+    ]]></programlisting>
+
+  </section>
+
+</section>

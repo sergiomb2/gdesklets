@@ -1,0 +1,69 @@
+<section id="prefs-tag-page" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;page&gt;</title>
+
+  <para>A page of settings in the configuration dialog. Pages can be used
+    for grouping configuration elements together.</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/prefs-page" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">icon</entry>
+        <entry valign="top">URI</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">URI where to load the icon from.</entry>
+      </row>
+
+      <row>
+        <entry valign="top">label</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The label text on the tab.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+
+  <section><title>Examples</title>
+
+    <programlisting><![CDATA[
+<prefs>
+  <page label="gDesklets" icon="gdesklets.png">
+    <boolean label="Foo:" bind="foo"/>
+  </page>
+
+  <page label="No Icon">
+    <boolean label="Bar:" bind="bar"/>
+  </page>
+</prefs>
+    ]]></programlisting>
+
+  </section>
+
+</section>

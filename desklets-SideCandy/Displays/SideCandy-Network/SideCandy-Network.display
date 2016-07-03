@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display id="win" anchor="ne" window-flags="sticky, below">
+
+
+<meta name="SideCandy-Network"
+      version="0.11"
+      category="System/Net"
+      description="A Network monitor in SideCandy style."
+      author="Christian Meyer, Björn Koch"
+      dependency="0.36.3"
+      website=""
+      license="GPL-2"
+      copyright="(C) 2005-2011 Christian Meyer, Björn Koch"
+      preview="gfx/net.png"/>
+
+<control id="sys" interface="ISystem"/>
+
+<frame id="border">
+
+  <group id="slider"
+         on-click="if (sc_behavior == 'click'): slide(self, SC_IN, SC_OUT)"
+         on-doubleclick="if (sc_behavior == 'double'): slide(self, SC_IN, SC_OUT)"
+         on-enter="if (sc_behavior == 'enter'): slide(self, SC_IN, SC_OUT)"
+         on-leave="if (sc_behavior == 'enter'): slide(self, SC_IN, SC_OUT)">
+
+    <group id="panel" width="5cm" height="2cm">
+
+      <group id="bg" width="100%" height="100%" bg-uri="gfx/bg/none.png"/>
+
+      <group id="icon_group" y="0.1cm" width="1cm">
+
+        <image uri="gfx/net.png" image-height="1cm"/>
+        <label id="speed" value="Rate/sec" y="1.0cm" font="MonoSpace 0.2cm"
+               color="#000000"/>
+        <label id="lbl_speedin"  y="1.25cm" font="MonoSpace 0.2cm"
+               color="#00FF00"/>
+        <label id="lbl_speedout" y="1.5cm" font="MonoSpace 0.2cm"
+               color="#FFFF00"/>
+
+      </group>
+
+      <group id="info_group" y="0.1cm">
+
+        <label id="lbl_dev" font="MonoSpace 0.25cm" color="#000000"/>
+        <label id="lbl_adr" y="0.3cm" font="MonoSpace 0.25cm" color="#000000"/>
+        <label id="in" font="MonoSpace Bold 0.2cm" value="IN"
+               y="0.7cm" color="#0000FF"/>
+        <label id="lbl_bytesin" relative-to="in,x" x="0.1cm"
+               font="MonoSpace Bold 0.2cm" color="#000000"/>
+        <label font="MonoSpace Bold 0.2cm" id="out" value="OUT"
+               relative-to="in,x" x="1.6cm" color="#0000FF"/>
+        <label id="lbl_bytesout" relative-to="out,x" x="0.1cm"
+               font="MonoSpace Bold 0.2cm" color="#000000"/>
+        <plotter id="plot_in" anchor="sw" y="1.8cm" width="1.75cm"
+                 height="0.8cm" color="#00FF00FF"/>
+        <plotter id="plot_out" anchor="sw" relative-to="plot_in,x" x="0.1cm"
+                 width="1.75cm" height="0.8cm" color="#FFFF00FF"/>
+
+      </group>
+
+    </group>
+
+  </group>
+
+</frame>
+
+  <prefs callback="prefs_cb">
+
+    <page label="SideCandy">
+      <title label="Desklet behaviour"/>
+      <enum label="Stay on top:" bind="sc_on_top">
+        <item label="Never" value="never"/>
+        <item label="Always" value="always"/>
+        <item label="When slid in" value="whenin"/>
+        <item label="When slid out" value="whenout"/>
+      </enum>
+      <title label="Sliding"/>
+      <enum label="Orientation:" bind="sc_side"
+            help="The orientation of the display.">
+        <item label="Left" value="left"/>
+        <item label="Right" value="right"/>
+      </enum>
+      <integer label="Delay:" bind="sc_slide_timer"/>
+      <enum label="Behavior:" bind="sc_behavior">
+        <item label="Slide on mouse click" value="click"/>
+        <item label="Slide on double click" value="double"/>
+        <item label="Slide on entering" value="enter"/>
+        <item label="Never slide" value="never"/>
+      </enum>
+
+      <title label="Borders"/>
+      <enum label="Border style:" bind="sc_border">
+        <item label="LTVCandy" value="lt"/>
+        <item label="Round" value="round"/>
+        <item label="Drop Shadow" value="tmkt"/>
+      </enum>
+      <boolean label="Left border" bind="sc_border_left"/>
+      <boolean label="Right border" bind="sc_border_right"/>
+      <boolean label="Top border" bind="sc_border_top"/>
+      <boolean label="Bottom border" bind="sc_border_bottom"/>
+
+      <title label="Background"/>
+      <uri label="Background image:" bind="Dsp.bg.bg_uri"/>
+      <boolean label="Show background" bind="Dsp.bg.visible"/>
+    </page>
+
+    <page label="Network device">
+      <string label="Network Device:" bind="iface"
+              help="Enter a valid network device. Fallback is lo!"/>
+      <title label="Refresh"/>
+      <integer label="Refresh rate in milliseconds:" bind="refresh"
+               min="50" max="5000" increment="10"
+               help="The refresh rate in milliseconds (ms) - Min: 50, Max: 5000 - Default: 500ms."/>
+    </page>
+
+    <page label="Appearance">
+      <title label="Colors"/>
+      <color label="Device" bind="Dsp.lbl_dev.color"/>
+      <color label="Address" bind="Dsp.lbl_adr.color"/>
+      <color label="Incoming" bind="Dsp.lbl_bytesin.color"/>
+      <color label="Outgoing" bind="Dsp.lbl_bytesout.color"/>
+      <color label="Speed" bind="Dsp.speed.color"/>
+      <color label="Incoming transfer rate" bind="Dsp.lbl_speedin.color"/>
+      <color label="Outgoing transfer rate" bind="Dsp.lbl_speedout.color"/>
+      <color label="Plotter incoming transfer rate" bind="Dsp.plot_in.color"/>
+      <color label="Plotter outgoing transfer rate" bind="Dsp.plot_out.color"/>
+    </page>
+
+  </prefs>
+
+  <script uri="candy.script"/>
+
+  <script><![CDATA[
+
+    iface = "eth0"
+    refresh = 500
+   
+    def prefs_cb(key, value):
+    
+        if (key == "iface"): sys.iface = value
+        else: sc_prefs_cb(key, value)
+
+
+    def get_load():
+
+        Dsp.lbl_dev.value = "Device: %s" % (sys.iface,)
+        Dsp.lbl_adr.value = "Address: %s" % (sys.net_load.address,)
+        speed = sys.net_speed
+        Dsp.lbl_speedin.value = convert(speed[0])
+        Dsp.lbl_speedout.value = convert(speed[1])
+        Dsp.lbl_bytesin.value = convert(sys.net_load.bytes_in)
+        Dsp.lbl_bytesout.value = convert(sys.net_load.bytes_out)
+        Dsp.plot_in.value = speed[0]
+        Dsp.plot_out.value = speed[1]
+
+        add_timer(refresh, get_load)
+
+
+    def convert(bytes):
+        if (bytes >= 2**40):
+            return "%.2fTB" % (float(bytes) / 2**40)
+        elif (bytes >= 2**30):
+            return "%.2fGB" % (float(bytes) / 2**30)
+        elif (bytes >= 2**20):
+            return "%.2fMB" % (float(bytes) / 2**20)
+        elif (bytes >= 2**10):
+            return "%.2fkB" % (float(bytes) / 2**10)
+        else:
+            return "%dB" % bytes
+
+ 
+    add_timer(0, get_load)
+    prefs_cb("iface", iface)
+
+  ]]></script>
+
+</display>

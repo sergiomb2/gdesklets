@@ -1,0 +1,114 @@
+<section id="dsp-tag-array" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;array&gt;</title>
+
+  <para>This container provides an array of its single child element. The array
+    can grow and shrink dynamically.</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/dsp-array" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>
+    <note>
+      <para><command>&lt;array layout=&quot;grid&quot;&gt;</command> is
+        deprecated and shouldn't be used. Instead you should create your own
+        layout which is quite easy. The third examples shows how to do that.
+      </para>
+    </note>
+  </para>
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">layout</entry>
+        <entry valign="top">string list</entry>
+        <entry valign="top">horizontal</entry>
+        <entry valign="top">Layout algorithm for positioning the array
+          elements.</entry>
+      </row>
+      <row>
+        <entry valign="top">length</entry>
+        <entry valign="top">integer</entry>
+        <entry valign="top">0</entry>
+        <entry valign="top">Sets or gets the length of the array manually.
+          The initial length is <literal>0</literal>, but the array
+          automatically grows as needed. This property is usually only used for
+          making the array shrink (which cannot happen automatically) or for
+          obtaining its current length.</entry>
+      </row>
+
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+
+  <section><title>Examples</title>
+
+    <programlisting><![CDATA[
+<array layout="vertical" length="5">
+  <label value="Some Text"/>
+</array>
+    ]]></programlisting>
+
+    <programlisting><![CDATA[
+<array length="5" layout="vertical">
+  <group>
+    <label id="label1" value="label1"/>
+    <label id="label2" value="label2" relative-to="label1, xy" x="10" y="10"/>
+  </group>
+</array>
+    ]]></programlisting>
+
+    <programlisting><![CDATA[
+<!-- An array with a transparent frame around each element -->
+<array id="my_array" x="0" y="0.9cm" length="15">
+  <frame id="element_border" border-width="0.01cm, 0.01cm, 0.01cm, 0.01cm" \
+         color="#00000000">
+    <!-- Each array element is the following label -->
+    <label id="a" font="Sans 10" color="black" value=""/>
+  </frame>
+</array>
+
+...
+
+    # Arrange the array in an isosceles triangle with
+    # the hypotenuse on the right
+    x = 0
+    y = 1
+
+    for i in range(Dsp.my_array.length):
+        # If you don't want a frame around each element,
+        # you can also use Dsp.a[i].x and Dsp.a[i].y to arrange
+        Dsp.element_border[i].x = Unit(x * 0.65, CM)
+        Dsp.element_border[i].y = Unit( (y-1) * 0.40, CM)
+
+        x += 1
+        if x == y:
+            x = 0
+            y += 1
+    ]]></programlisting>
+
+  </section>
+
+</section>

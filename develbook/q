@@ -1,0 +1,177 @@
+[32m#! /bin/sh[0m
+
+[34m#[0m
+[34m# Creates HTML from docbook files using the yelp XSL stylesheets.[0m
+[34m#[0m
+
+
+if [ -z [31m"[36m$1[0m" -o -z [31m"[36m$2[0m" ]; then
+  echo Usage: `basename [36m$0[0m` bookfile output-directory
+  exit 1
+fi
+
+
+[36m[36mINPUT[0m=[36m$1[0m
+[36m[36mDIR[0m=`dirname [36m$INPUT[0m`
+[36m[36mTMP[0m=[36m$DIR[0m/tmp.xml
+[36m[36mDEST[0m=[36m$2[0m
+
+[34m# location of the stylesheets[0m
+[36m[36mXSL[0m=/usr/share/sgml/docbook/yelp/db2html.xsl
+
+
+[34m#[0m
+[34m# create HTML[0m
+[34m#[0m
+echo [31m"creating HTML"[0m
+rm -rf [36m$DEST[0m/*
+xmllint --xinclude [36m$1[0m >[36m$TMP[0m
+xsltproc -o [36m$DEST[0m/ [36m$XSL[0m [36m$TMP[0m
+
+
+[34m#[0m
+[34m# remove navbar in index.html, set target for <a href="...">
+#
+cat $DEST/index.html \[0m
+    | tr [31m"\n"[0m [31m"\b"[0m \
+    | sed -e [31m"s/<div class=\"navbar-bottom\">.*<\/div>//"[0m \
+    | sed -e [31m"s/<a/<a target=\"main\"/g"[0m \
+    | tr [31m"\b"[0m [31m"\n"[0m \
+  > [36m$DEST[0m/index.html.tmp
+mv [36m$DEST[0m/index.html.tmp [36m$DEST[0m/toc.html
+
+
+[34m#[0m
+[34m# replace stylesheet, remove Contents link
+#
+for F in `ls $DEST/*.html`; do[0m
+[34m#      | sed -e "s/; charset=UTF-8\">/; charset=ISO8859-1\">/" \
+#      | iconv -f ISO-8859-1 -t UTF-8 \
+  cat $F \[0m
+      | sed -e [31m"s/%;/\&/g"[0m \
+      | tr [31m"\n"[0m [31m"\b"[0m \
+      | sed -e [31m"s/<style .*<\/style>/<link rel=\"stylesheet\" type=\"text\/css\" href=\"style.css\">/"[0m \
+      | tr [31m"\b"[0m [31m"\n"[0m \
+      | sed -e [31m"s/<td .*<a href=.*>Contents<\/a><\/td>//"[0m \
+      | sed -e [31m"s/<td .*<a href=.*>About This Book<\/a><\/td>//"[0m \
+    > [36m$F[0m.tmp
+  mv [36m$F[0m.tmp [36m$F[0m
+done
+
+
+[34m#[0m
+[34m# copy graphics[0m
+[34m#[0m
+echo [31m"copying graphics"[0m
+cp -r [36m$DIR[0m/gfx [36m$DEST[0m/gfx
+cp -r /usr/share/yelp/icons [36m$DEST[0m/images
+rename [31m"yelp-icon-"[0m [31m""[0m [36m$DEST[0m/images/*
+rm -rf [36m$DEST[0m/gfx/CVS
+
+
+[34m#[0m
+[34m# setup index.html
+#
+read -p "Your name: " NAME[0m
+cat >[36m$DEST[0m/index.html << EOF
+<html>
+<head><title>gDesklets Developer's Book</title></head>
+<body>
+  <h2>The gDesklets Developer's Book</h2>
+
+  <p>The book can be read online or be downloaded for reading offline.</p>
+
+  <p><img [36m[36msrc[0m=[31m"../img/icons/doc.png"[0m>
+     <a [36m[36mhref[0m=[31m"book.html"[0m>Read online</a></p>
+
+  <p><img [36m[36msrc[0m=[31m"../img/icons/package.png"[0m>
+     <a [36m[36mhref[0m=[31m"develbook.tar.bz2"[0m>Download HTML for reading offline</a></p>
+
+  <hr>
+  <font [36m[36msize[0m=[31m"2"[0m><p>Last updated on `date -R` by [36m$NAME[0m.</p></font>
+</body>
+</html>
+EOF
+
+
+[34m#[0m
+[34m# setup book.html[0m
+[34m#[0m
+cat >[36m$DEST[0m/book.html << EOF
+<frameset [36m[36mcols[0m=[31m"30%,*"[0m>
+  <frame [36m[36msrc[0m=[31m"toc.html"[0m>
+  <frame [36m[36msrc[0m=[31m"titlepage.html"[0m [36m[36mname[0m=[31m"main"[0m>
+</frameset>
+EOF
+
+
+[34m#[0m
+[34m# the stylesheet
+#
+echo "creating stylesheet"[0m
+cat >[36m$DEST[0m/style.css << EOF
+/* CSS stylesheet for gDesklets color style */ 
+/* by Martin Grimme  <martin@gdesklets.org> */ 
+ 
+body * {  
+  background-color:[34m #ffffff; [0m
+  color: black; 
+  font-family: Sans-Serif; 
+  font-size: 8pt; 
+} 
+ 
+div.toc * { font-weight: bold; } 
+ 
+a:link, a:link * { color:[34m #5a799c; } [0m
+a:visited, a:visited * { color: darkred; } 
+a:hover, a:hover * { color: white; background-color:[34m #5a799c; } [0m
+ 
+ul { list-style-type: square; } 
+ 
+div.admonition {  
+  border-color: black; 
+  border-style: solid; 
+  border-width: thin; 
+} 
+ 
+div.admonition * { 
+  font-size: 8pt; 
+  background-color:[34m #fff3ce; [0m
+} 
+ 
+div.programlisting * {  
+  padding: 1ex; 
+  font-family: Monospace; 
+  font-weight: bold; 
+  background-color: fff3ce; 
+} 
+ 
+div.navbar-bottom {  
+  margin-top: 1em; 
+  border-color: black; 
+  border-style: solid; 
+  border-width: thin;   
+} 
+ 
+div.navbar-bottom * {  
+  padding-left: 1pt; 
+  padding-right: 1pt; 
+  color: white; 
+  font-weight: bold; 
+  background-color:[34m #5a799c; [0m
+} 
+ 
+div.navbar-bottom a:link { color: white; } 
+div.navbar-bottom a:visited { color: white; } 
+div.navbar-bottom a:hover { color: black; background-color: white; } 
+ 
+span.emphasize, span.literal, span.parameter, span.property { font-weight: bold\
+; } 
+ 
+h1 { font-size: 1.6em; font-weight: bold; } 
+h2 { font-size: 1.4em; font-weight: bold; } 
+h3 { font-size: 1.2em; font-weight: bold; } 
+ 
+tt { font-family: monospace; } 
+
+EOF

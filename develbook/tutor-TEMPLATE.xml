@@ -1,0 +1,31 @@
+<section id="tutor-TEMPLATE"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Title of the Tutorial</title>
+
+<para>by Your Name</para>
+
+
+<section><title>Introduction</title>
+
+  <para>Some introductory text about what the reader will find in the tutorial.
+    </para>
+     
+</section>
+
+
+
+<section><title>Section 1</title>
+
+  <para>blah blah blah...</para>
+
+</section>
+
+
+
+<section><title>Another Section</title>
+
+  <para>Some more blah blah blah...</para>
+
+</section>
+
+
+</section>
