@@ -1,0 +1,56 @@
+<section id="prefs-tag-item" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;item&gt;</title>
+
+  <para>An enumeration item for use in the
+    <link linkend="prefs-tag-enum">&lt;enum&gt;</link> and
+    <link linkend="prefs-tag-radio">&lt;radio&gt;</link> tag.</para>
+
+
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">label</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The label text for the item in the dropdown list.
+          </entry>
+      </row>
+      <row>
+        <entry valign="top">value</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The value associated with the item.
+          </entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+
+  <section><title>Examples</title>
+
+    <para>Please see
+      <link linkend="prefs-tag-enum"><command>&lt;enum&gt;</command></link>.
+      </para>
+
+  </section>
+
+</section>

@@ -1,0 +1,144 @@
+<section id="script-builtins" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Builtin Functions and Objects</title>
+
+  <para><application>gDesklets</application> provides a few functions and
+    objects for use in the scripting environment.</para>
+
+
+  <informaltable frame="topbot">
+  <tgroup>
+
+  <thead>
+    <row>
+      <entry>Name</entry>
+      <entry>Arguments</entry>
+      <entry>Description</entry>
+    </row>
+  </thead>
+
+  <tbody>
+    <row>
+      <entry valign="top">add_timer</entry>
+      <entry valign="top">
+        <para>interval: integer</para>
+        <para>callback: function</para>
+      </entry>
+      <entry valign="top">Runs the function <literal>callback</literal> after
+        <literal>interval</literal> milliseconds. If the function returns
+        <literal>True</literal>, it will be called again after
+        <literal>interval</literal> milliseconds. This method returns an ID
+        which can be used with <function>remove_timer()</function> to remove
+        the timer.</entry>
+    </row>
+    <row>
+      <entry valign="top">remove_timer</entry>
+      <entry valign="top">
+        <para>ident: integer</para>
+      </entry>
+      <entry valign="top">Removes the timer with the given ID 
+        <literal>ident</literal>.</entry>
+    </row>
+    <row>
+      <entry valign="top">get_config</entry>
+      <entry valign="top">
+        <para>key: string</para>
+        <para>default: any (optional)</para>
+      </entry>
+      <entry valign="top">Retrieves a previously stored configuration value for
+        <literal>key</literal> or the value given by <literal>default</literal>,
+        if the value had not been stored previously.</entry>
+    </row>
+    <row>
+      <entry valign="top">get_control <emphasis>[deprecated]</emphasis></entry>
+      <entry valign="top">
+        <para>interface: string</para>
+      </entry>
+      <entry valign="top">Returns a control implementing the given interface
+        <literal>interface</literal>. The use of this functions is deprecated
+        and should be replaced by the
+        <link linkend="dsp-tag-control"><command>&lt;control&gt;</command></link>
+        tag.</entry>
+    </row>
+    <row>
+      <entry valign="top">launch</entry>
+      <entry valign="top">
+        <para>command: string</para>
+      </entry>
+      <entry valign="top">Allows for safe execution of a command.  A dialog asks
+        the user if they want to allow it before it may run.
+      </entry>
+    </row>
+    <row>
+      <entry valign="top">MenuItem</entry>
+      <entry valign="top">
+        <para>path: string</para>
+        <para>label: string (optional)</para>
+        <para>icon: uri (optional)</para>
+        <para>callback: function (optional)</para>
+        <para>args: list (optional)</para>
+        <para>active: boolean (optional)</para>
+      </entry>
+      <entry valign="top">Constructor for <literal>MenuItem</literal> objects.
+        A menu is a list of <literal>MenuItem</literal> objects.
+        See <link linkend="script-menu">here</link> for how to build
+        custom menus.</entry>
+    </row>
+    <row>
+      <entry valign="top">set_config</entry>
+      <entry valign="top">
+        <para>key: string</para>
+        <para>value: any</para>
+      </entry>
+      <entry valign="top">Stores the value given by <literal>value</literal>
+        for the key given by <literal>key</literal>. Stored values are private
+        to each display instance and are saved across sessions.</entry>
+    </row>
+    <row>
+      <entry valign="top">Unit</entry>
+      <entry valign="top">
+        <para>value: float</para>
+        <para>unit: enum</para>
+      </entry>
+      <entry valign="top">Constructor for <literal>Unit</literal> objects.
+        The <literal>unit</literal> argument must be one of
+        <literal>PX, CM, IN, PT, PERCENT</literal>.</entry>
+    </row>
+    <row>
+      <entry valign="top">CM</entry>
+      <entry valign="top"></entry>
+      <entry valign="top">Enumeration value for centimeters for the
+        <literal>Unit</literal> constructor.</entry>
+    </row>
+    <row>
+      <entry valign="top">IN</entry>
+      <entry valign="top"></entry>
+      <entry valign="top">Enumeration value for inches for the
+        <literal>Unit</literal> constructor.</entry>
+    </row>
+    <row>
+      <entry valign="top">PERCENT</entry>
+      <entry valign="top"></entry>
+      <entry valign="top">Enumeration value for percentages for the
+        <literal>Unit</literal> constructor. The percentage value is always
+        relative to the size of the parent element.</entry>
+    </row>
+    <row>
+      <entry valign="top">PT</entry>
+      <entry valign="top"></entry>
+      <entry valign="top">Enumeration value for (DTP) points for the
+        <literal>Unit</literal> constructor (one DTP point is 1/72 inch).
+        </entry>
+    </row>
+    <row>
+      <entry valign="top">PX</entry>
+      <entry valign="top"></entry>
+      <entry valign="top">Enumeration value for pixels for the
+        <literal>Unit</literal> constructor.</entry>
+    </row>
+
+  </tbody>
+
+  </tgroup>
+  </informaltable>
+ 
+</section>

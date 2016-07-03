@@ -1,0 +1,16 @@
+SideCandy
+=========
+
+This is not only a collection of several desklets for your desktop; SideCandy
+also is a TEMPLATE for creating new desklets in that cute SideCandy style.
+
+For distributing new SideCandies, please distribute
+ - candy.script
+ - and the borders and the bg.png in the gfx/ directory
+along with your creations.
+
+
+Have fun and be creative!
+
+Martin Grimme <martin@pycage.de>
+Christian Meyer <chrisime@gnome.org>

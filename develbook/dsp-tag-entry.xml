@@ -1,0 +1,109 @@
+<section id="dsp-tag-entry" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;entry&gt;</title>
+
+  <para>The <command>&lt;entry&gt;</command> element provides a text entry
+    widget with unicode support.</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/dsp-entry" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">color</entry>
+        <entry valign="top">color</entry>
+        <entry valign="top">(system default)</entry>
+        <entry valign="top">The font color to use. The alpha channel cannot be
+          used here.</entry>
+      </row>
+      <row>
+        <entry valign="top">font</entry>
+        <entry valign="top">font</entry>
+        <entry valign="top">(system default)</entry>
+        <entry valign="top">The font of the entry text.</entry>
+      </row>
+      <row>
+        <entry valign="top">value</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The current value in the entry field.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+  <section><title>Action Handlers</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Event Members</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">on-change</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">Handler for change events. A change occurs every
+          time when the value changes.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+  <section><title>Examples</title>
+
+    <programlisting><![CDATA[
+<display>
+
+  <entry id="entry" on-change="Dsp.lbl.value = self.value"/>
+
+  <label id="lbl" relative-to="entry, y"/>
+
+</display>
+    ]]></programlisting>
+    <programlisting><![CDATA[
+<display>
+
+  <entry id="entry"
+    on-key-press="if self.event.key == 'Return': Dsp.lbl.value = self.value"/>
+
+  <label id="lbl" relative-to="entry, y"/>
+
+</display>
+    ]]></programlisting>
+  </section>
+
+</section>

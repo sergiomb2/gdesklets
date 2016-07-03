@@ -1,0 +1,100 @@
+<section id="dsp-tag-gauge" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;gauge&gt;</title>
+
+  <para>This container turns its child element into a gauge. It will only
+    display a percentual amount of it.</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/dsp-gauge" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>
+    <tip>
+      <para>The gauge only grows from left to right or top to bottom. You can
+        use the <parameter>anchor</parameter> property to turn this around.
+        E.g. a vertically growing gauge with <userinput>anchor="s"
+        </userinput> will grow upwards.</para>
+    </tip>
+  </para>
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">fill</entry>
+        <entry valign="top">integer</entry>
+        <entry valign="top">100</entry>
+        <entry valign="top">A percentual value between <literal>0</literal>
+          (empty) and <literal>100</literal> (full). Only that amount of the
+          child element will be visible.</entry>
+      </row>
+      <row>
+        <entry valign="top">orientation</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top">horizontal</entry>
+        <entry valign="top">Either <literal>horizontal</literal> or
+          <literal>vertical</literal> for horizontally or vertically growing
+          gauges.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+  <section><title>Examples</title>
+
+    <programlisting><![CDATA[
+<display bg-color="grey50" width="100"
+         on-scroll="scroll(self.event.direction)">
+
+  <gauge id="mygauge" fill="50" anchor="sw" y="100%">
+
+    <group width="100" height="10" bg-color="red"/>
+
+  </gauge>
+
+  <label id="mylabel" anchor="center" x="50%" y="50%" font="Sans bold 1cm"
+         value="%"/>
+
+  <script><![CDATA[
+
+    #
+    # This gauge can be adjusted using the vertical mouse wheel.
+    #
+    def scroll(direction):
+
+        fill = Dsp.mygauge.fill
+        if (direction == 0):
+            fill = max(fill - 1, 0)
+        elif (direction == 1):
+            fill = min(fill + 1, 100)
+        Dsp.mygauge.fill = fill
+        Dsp.mylabel.value = "%d%%" % fill
+
+  ]]>]]&gt;<![CDATA[</script>
+
+</display>
+    ]]></programlisting>
+
+  </section>
+
+</section>

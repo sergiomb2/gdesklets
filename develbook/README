@@ -1,0 +1,13 @@
+This is the source of the gDesklets Developer's Book.
+To build the book, you need xmllint and xsltproc as well as our forked yelp
+stylesheets, which are available at <http://www.pycage.de/downloads/yelp-xsl.tar.bz2>.
+
+If necessary, edit make-html.sh to make the XSL variable point to the location of
+the stylesheets.
+
+
+To build the book, run:
+
+  $ ./make-html.sh book.xml output
+
+After that, you will have a directory "output" containing the book.

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<display id="win" anchor="ne" window-flags="sticky, below">
+
+
+<meta name="SideCandy-Time"
+      version="0.11"
+      category="Date/Time"
+      description="A time display in SideCandy style."
+      author="Christian Meyer, Martin Grimme, Björn Koch"
+      dependency="0.36.3"
+      website=""
+      license="GPL-2"
+      copyright="(C) 2005-2011 Christian Meyer, Martin Grimme, Björn Koch"
+      preview="gfx/cal.png"/>
+
+<control id="time" interface="ITime"/>
+<control id="cal" interface="ICalendar"/>
+
+<frame id="border">
+
+  <group id="slider"
+         on-click="if (sc_behavior == 'click'): slide(self, SC_IN, SC_OUT)"
+         on-doubleclick="if (sc_behavior == 'double'): slide(self, SC_IN, SC_OUT)"
+         on-enter="if (sc_behavior == 'enter'): slide(self, SC_IN, SC_OUT)"
+         on-leave="if (sc_behavior == 'enter'): slide(self, SC_IN, SC_OUT)">
+
+    <group id="panel" width="5cm" height="2cm">
+
+      <group id="bg" width="100%" height="100%" bg-uri="gfx/bg/none.png"/>
+
+      <group id="icon_group" y="0.1cm" width="1cm">
+
+        <image uri="gfx/cal.png" image-width="1cm"/>
+        <label id="lbl_wday" font="Sans 0.2cm" y="1cm" color="black"/>
+        <label id="lbl_date" font="Sans 0.2cm" x="20%" y="1.25cm" color="black"/>
+        <label id="lbl_time" font="Sans 0.2cm" y="1.5cm" color="black"/>
+
+      </group>
+
+      <group id="info_group" y="0.1cm">
+
+        <image id="clock_face" anchor="n" x="25%" y="5" image-width="1.5cm"
+               image-height="1.5cm" uri="gfx/clock/clock2.png"/>
+        <canvas id="clock" anchor="n" x="25%" y="5" width="1.5cm" height="1.5cm"/>
+        <label id="lbl_monyear" x="1.8cm" font="Sans 0.2cm" color="blue"/>
+        <array id="array" relative-to="lbl_monyear,y" y="0.1cm" length="32">
+
+          <label id="day" font="Sans 0.175cm"/>
+
+        </array>
+
+      </group>
+
+    </group>
+
+  </group>
+
+</frame>
+
+  <prefs callback="prefs_cb">
+
+    <page label="SideCandy">
+      <title label="Desklet behaviour"/>
+      <enum label="Stay on top:" bind="sc_on_top">
+        <item label="Never" value="never"/>
+        <item label="Always" value="always"/>
+        <item label="When slid in" value="whenin"/>
+        <item label="When slid out" value="whenout"/>
+      </enum>
+      <title label="Sliding"/>
+      <enum label="Orientation:" bind="sc_side"
+            help="The orientation of the display.">
+        <item label="Left" value="left"/>
+        <item label="Right" value="right"/>
+      </enum>
+      <integer label="Delay:" bind="sc_slide_timer"/>
+      <enum label="Behavior:" bind="sc_behavior">
+        <item label="Slide on mouse click" value="click"/>
+        <item label="Slide on double click" value="double"/>
+        <item label="Slide on entering" value="enter"/>
+        <item label="Never slide" value="never"/>
+      </enum>
+
+      <title label="Borders"/>
+      <enum label="Border style:" bind="sc_border">
+        <item label="LTVCandy" value="lt"/>
+        <item label="Round" value="round"/>
+        <item label="Drop Shadow" value="tmkt"/>
+      </enum>
+      <boolean label="Left border" bind="sc_border_left"/>
+      <boolean label="Right border" bind="sc_border_right"/>
+      <boolean label="Top border" bind="sc_border_top"/>
+      <boolean label="Bottom border" bind="sc_border_bottom"/>
+
+      <title label="Background"/>
+      <uri label="Background image:" bind="Dsp.bg.bg_uri"/>
+      <boolean label="Show background" bind="Dsp.bg.visible"/>
+    </page>
+
+    <page label="Appearance">
+      <uri label="Clock face:" bind="Dsp.clock_face.uri"/>
+      <title label="Colors"/>
+      <color label="Weekday" bind="Dsp.lbl_wday.color"/>
+      <color label="Date" bind="Dsp.lbl_date.color"/>
+      <color label="Time" bind="Dsp.lbl_time.color"/>
+      <color label="Month and Year" bind="Dsp.lbl_monyear.color"/>
+      <color label="Calendar" bind="day"/>
+      <color label="Current day" bind="current_day"/>
+
+      <title label="Date format"/>
+      <string label="Specify the format of the date" bind="date_format"/>
+    </page>
+
+  </prefs>
+
+  <script uri="candy.script"/>
+
+  <script><![CDATA[
+
+    MONTH_LENGTHS = (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
+
+    cal.time = time
+    current_day = "red"
+    day = "black"
+    date_format = "%d. %m"
+
+    # layout the calendar
+    x = 0
+    y = 0    
+    for i in range(Dsp.array.length):
+        Dsp.day[i].x = Unit(x * 0.25, CM)
+        Dsp.day[i].y = Unit(y * 0.25, CM)
+        x += 1         # that's why the length of the array has to be 32
+        if (x == 7):
+            x = 0
+            y += 1
+
+
+    def prefs_cb(key, value):
+
+        if (key == "current_day" or key == "day" or key == "date_format"):
+            get_cal(time.date)
+        else: sc_prefs_cb(key, value)
+
+
+    def is_leapyear(year):
+
+        return (year % 4 == 0 and (not year % 100 == 0 or year % 400 == 0))
+
+
+    def get_days_in_month(month, year):
+
+        if (month == 2):
+            if (is_leapyear(year)): return 29
+            else: return 28
+        else:
+            return MONTH_LENGTHS[month - 1]
+
+
+    def create_cal(month, year):
+
+        end = get_days_in_month(month, year)
+        for item in range(1, Dsp.array.length):
+            if (item <= end): Dsp.day[item - 1].value = item
+            else: Dsp.day[item - 1].value = ""
+
+
+    def get_time(mytime):
+ 
+        h, m, s = mytime
+        Dsp.lbl_time.value = "%02d:%02d.%02d" % (h, m, s)
+ 
+        h_angle = 360 / 12 * (h + (m / 60.0))
+        m_angle = 360 / 60 * (m + (s / 60.0))
+        s_angle = 360 / 60 * s
+
+        hand_hour = '<path id="hour" d="M-1 8 L-1.5 -25 L1.5 -25 L1 8Z" stroke="none" fill="black" fill-opacity="100%" transform="rotate('+str(h_angle)+')"/>'
+        hand_minute = '<path id="minute" d="M-1 10 L-1.5 -35 L1.5 -35 L1 10Z" stroke="none" fill="black" fill-opacity="100%" transform="rotate('+str(m_angle)+')"/>'
+        hand_second = '<path id="second" d="M-0.5 10 L-0.5 -35 L0.5 -35 L0.5 10Z" stroke="none" fill="red" fill-opacity="100%" transform="rotate('+str(s_angle)+')"/>'
+
+        body = hand_hour  + hand_minute  + hand_second 
+
+        Dsp.clock.graphics = \
+                 "<svg width='100' height='100'>" + \
+                 "<g transform='translate(50,50)'>" + \
+                 body + \
+                 "</g></svg>"
+
+ 
+    def get_cal(mydate):
+
+        y, m, d = mydate
+        Dsp.lbl_wday.value = cal.day
+        out = date_format.replace("%m", `m`) \
+                         .replace("%d", `d`)
+        Dsp.lbl_date.value = out
+        Dsp.lbl_monyear.value = "%s %d" % (cal.month, y)
+        create_cal(m, y)
+        for i in range(Dsp.array.length):
+            if (i != d - 1):
+                Dsp.day[i].color = day
+            else:
+                Dsp.day[i].color = current_day
+
+
+    add_timer(0, get_cal, time.date)
+    time.bind("date", get_cal)
+    time.bind("time", get_time)
+ 
+  ]]></script>
+
+
+</display>
+

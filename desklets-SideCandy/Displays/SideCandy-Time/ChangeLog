@@ -1,0 +1,17 @@
+2011-09-11  Bjoern Koch  <H.Humpel@gmx.de>
+
+ * Version 0.11
+ * Renamed to SideCandy-Time
+ * SideCandy-Time.display:
+   * updated and added Metadata
+   * call Controls without ID-string
+   * changed 'bg-uri' in group 'bg'  to existing file 'gfx/bg/none.png'
+   * fixed errors in the SVG output
+
+
+=== INIT ===
+
+2011-09-11  Bjoern Koch  <H.Humpel@gmx.de>
+
+ * Initial release. Original taken from SideCandy 0.10 archive.
+

@@ -1,0 +1,155 @@
+<section id="dsp-tag-canvas" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;canvas&gt;</title>
+
+  <para>This is a canvas for arbitrary vector graphics. It renders
+    SVG code and provides a mini-DOM for scripting the SVG.</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/dsp-canvas" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">dom</entry>
+        <entry valign="top">object</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">Read-only property for accessing the mini-DOM
+          representing the current image. Call the method
+          <command>update()</command> after changing the DOM to redraw the
+          image.</entry>
+      </row>
+      <row>
+        <entry valign="top">graphics</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">Drawing commands. Put your SVG graphics code in
+          there.</entry>
+      </row>
+      <row>
+        <entry valign="top">uri</entry>
+        <entry valign="top">URI</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">URI where to load SVG data from.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+  <para>
+    <tip>
+      <para>If you omit the <property>width</property> and
+        <property>height</property> properties in the
+        <command>&lt;svg&gt;</command> tag, then the canvas size will
+        default to <literal>100 x 100</literal>.</para>
+    </tip>
+  </para>
+
+  <section><title>Mini-DOM</title>
+
+    <para>The mini-DOM contains the tree of SVG elements. Every node in the
+      DOM represents one element in the SVG image. By manipulating properties
+      of SVG elements, you can animate the image.</para>
+
+    <para>The properties of each node can be addressed by using a
+      <literal>[name]</literal> notation, where <literal>name</literal> is the
+      name of the property. All property values have to set as strings.</para>
+
+    <para>The nodes of the mini-DOM provide a set of methods which can be
+      invoked.</para>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Method Name</entry>
+        <entry>Arguments</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">get</entry>
+        <entry valign="top">id: string</entry>
+        <entry valign="top">Returns the SVG element by the given ID. This
+          method only has effect when called on the root node of the DOM tree.
+          </entry>
+      </row>
+      <row>
+        <entry valign="top">get_children</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">Returns a list of all child nodes of the DOM node.
+          Using child lists is a way of accessing nodes in the DOM without the
+          need to know their IDs.</entry>
+      </row>
+      <row>
+        <entry valign="top">update</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">Signals that the DOM has been updated. Call this
+          method after modifying SVG properties in order to redraw the
+          image. This method only has effect when called on the root node of
+          the DOM tree.</entry>
+      </row>
+
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+
+  </section>
+
+
+
+  <section><title>Examples</title>
+
+    <programlisting><![CDATA[
+<display bg-color="#ffffffa0">
+
+  <canvas id="cnv" width="200" height="200"
+          on-enter="self.dom.get('rct')['style']='fill:green'; self.dom.update()"
+          on-leave="self.dom.get('rct')['style']='fill:red'; self.dom.update()"/>
+
+  <script>]]>&lt;![CDATA[<![CDATA[
+
+    svg = """
+      <svg>
+
+        <rect id="rct" x="10" y="10" width="80" height="80" style="fill:red"/>
+
+      </svg>
+    """
+
+    Dsp.cnv.graphics = svg
+
+  ]]>]]&gt;<![CDATA[</script>
+
+</display>
+    ]]></programlisting>
+
+  </section>
+
+</section>

@@ -1,0 +1,28 @@
+<chapter id="prefs"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title id="prefs-title">Preferences</title>
+
+  <para>The preferences system allows to save user preferences across sessions.
+    This chapter describes how to setup preferences.</para>
+
+  <xi:include href="prefs-system.xml"/>
+  <xi:include href="prefs-tag-prefs.xml"/>
+  <xi:include href="prefs-tag-page.xml"/>
+  <xi:include href="prefs-tag-title.xml"/>
+  <xi:include href="prefs-tag-boolean.xml"/>
+  <xi:include href="prefs-tag-button.xml"/>
+  <xi:include href="prefs-tag-color.xml"/>
+  <xi:include href="prefs-tag-date.xml"/>
+  <xi:include href="prefs-tag-enum.xml"/>
+  <xi:include href="prefs-tag-float.xml"/>
+  <xi:include href="prefs-tag-font.xml"/>
+  <xi:include href="prefs-tag-info.xml"/>
+  <xi:include href="prefs-tag-integer.xml"/>
+  <xi:include href="prefs-tag-item.xml"/>
+  <xi:include href="prefs-tag-list.xml"/>
+  <xi:include href="prefs-tag-radio.xml"/>
+  <xi:include href="prefs-tag-string.xml"/>
+  <xi:include href="prefs-tag-toggle.xml"/>
+  <xi:include href="prefs-tag-unit.xml"/>
+  <xi:include href="prefs-tag-uri.xml"/>
+
+</chapter>

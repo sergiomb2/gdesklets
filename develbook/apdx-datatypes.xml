@@ -1,0 +1,110 @@
+<appendix id="apdx-datatypes"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Datatypes in gDesklets</title>
+
+  <informaltable frame="topbot">
+  <tgroup>
+
+  <thead>
+    <row>
+      <entry>Datatype</entry>
+      <entry>Description</entry>
+    </row>
+  </thead>
+
+  <tbody>
+    <row>
+      <entry valign="top">boolean</entry>
+      <entry valign="top">Either <literal>true</literal> or
+        <literal>false</literal>.</entry>
+    </row>
+  </tbody>
+
+  <tbody>
+    <row>
+      <entry valign="top">color</entry>
+      <entry valign="top">Can either be a textual name such as "red", or
+        a hexadecimal value initiated by a hash sign (#), consisting of red,
+        green, blue, and alpha values. Each value is 8 bit (between
+        <literal>00</literal> and <literal>FF</literal>. The alpha byte is
+        optional and not supported always.</entry>
+    </row>
+  </tbody>
+
+  <tbody>
+    <row>
+      <entry valign="top">direction</entry>
+      <entry valign="top">One of the strings <literal>nw, n, ne, e, se, s,
+        sw, w, center</literal>. The strings represent the directions
+        north-west, north, north-east, east, south-east, south, south-west,
+        west, center, respectively.</entry>
+    </row>
+  </tbody>
+
+  <tbody>
+    <row>
+      <entry valign="top">float</entry>
+      <entry valign="top">A floating point value.</entry>
+    </row>
+  </tbody>
+
+  <tbody>
+    <row>
+      <entry valign="top">font</entry>
+      <entry valign="top">A font string consists of the font family,
+        some styles (like <literal>bold</literal> or
+        <literal>italic</literal>), and a size value, which is a valid
+        <link linkend="apdx-datatypes-unit">unit</link> value.</entry>
+    </row>
+  </tbody>
+
+  <tbody>
+    <row>
+      <entry valign="top">integer</entry>
+      <entry valign="top">An integer value.</entry>
+    </row>
+  </tbody>
+
+  <tbody>
+    <row>
+      <entry valign="top">object</entry>
+      <entry valign="top">An object with which you can interact with.</entry>
+    </row>
+  </tbody>
+
+  <tbody>
+    <row>
+      <entry valign="top">script</entry>
+      <entry valign="top">A string of Python script.</entry>
+    </row>
+  </tbody>
+
+  <tbody>
+    <row>
+      <entry valign="top">string</entry>
+      <entry valign="top">A string of characters enclosed in single (') or
+        double quotes (").</entry>
+    </row>
+  </tbody>
+
+  <tbody>
+    <row id="apdx-datatypes-unit">
+      <entry valign="top">unit</entry>
+      <entry valign="top">A size or coordinate value with a measurement unit.
+        The measurement units can be <literal>cm, in, pt, %</literal> for
+        centimeters, inches, DTP points, or percentage values, respectively.
+        If no unit is given, pixels are used.</entry>
+    </row>
+  </tbody>
+
+  <tbody>
+    <row>
+      <entry valign="top">URI</entry>
+      <entry valign="top">A Uniform Resource Identifier. This can be a
+        valid URL, a local file path, or a valid VFS path.</entry>
+    </row>
+  </tbody>
+
+  </tgroup>
+  </informaltable>
+
+</appendix>

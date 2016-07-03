@@ -1,0 +1,103 @@
+<section id="prefs-tag-integer" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>&lt;integer&gt;</title>
+
+  <para>An integer value setting. Its representation is a spin button.
+    </para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="gfx/prefs-integer" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+
+  <section><title>Attributes</title>
+
+    <informaltable frame="topbot">
+    <tgroup>
+
+    <thead>
+      <row>
+        <entry>Name</entry>
+        <entry>Type</entry>
+        <entry>Default Value</entry>
+        <entry>Description</entry>
+      </row>
+    </thead>
+
+    <tbody>
+      <row>
+        <entry valign="top">bind</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The name of the variable or property to which the
+          configuration element is bound.</entry>
+      </row>
+      <row>
+        <entry valign="top">callback</entry>
+        <entry valign="top">function</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">A callback function which is called every time
+          the value changes. The callback takes the name of the bound
+          property and the new value as arguments.</entry>
+      </row>
+      <row>
+        <entry valign="top">enabled</entry>
+        <entry valign="top">boolean</entry>
+        <entry valign="top">true</entry>
+        <entry valign="top">Whether the config item is enabled. Disabled items
+          appear greyed out.</entry>
+      </row>
+      <row>
+        <entry valign="top">help</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The tooltip text for the element in the
+          configuration dialog.</entry>
+      </row>
+      <row>
+        <entry valign="top">increment</entry>
+        <entry valign="top">integer</entry>
+        <entry valign="top">1</entry>
+        <entry valign="top">The increment rate when the spin button's
+          arrows are activated.</entry>
+      </row>
+      <row>
+        <entry valign="top">label</entry>
+        <entry valign="top">string</entry>
+        <entry valign="top"></entry>
+        <entry valign="top">The label text for the element in the
+          configuration dialog.</entry>
+      </row>
+      <row>
+        <entry valign="top">max</entry>
+        <entry valign="top">integer</entry>
+        <entry valign="top">9999</entry>
+        <entry valign="top">The maximal value allowed.</entry>
+      </row>
+      <row>
+        <entry valign="top">min</entry>
+        <entry valign="top">integer</entry>
+        <entry valign="top">0</entry>
+        <entry valign="top">The minimal value allowed.</entry>
+      </row>
+    </tbody>
+
+    </tgroup>
+    </informaltable>
+
+  </section>
+
+
+
+  <section><title>Examples</title>
+
+    <programlisting><![CDATA[
+<integer label="MTU:" bind="mtu" min="46" max="1500"/>
+    ]]></programlisting>
+
+  </section>
+
+</section>

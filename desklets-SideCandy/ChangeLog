@@ -1,0 +1,26 @@
+2011-09-12  Bjoern Koch  <H.Humpel@gmx.de>
+
+ * Moved updated Desklets to 'Displays'
+ * added 'Controls' directory
+ * New Desklets:
+   * SideCandy-Title v0.2
+
+
+2011-09-11  Bjoern Koch  <H.Humpel@gmx.de>
+
+ * Updates:
+   * SideCandy-CPU v0.11
+   * SideCandy-Network v0.11
+   * SideCandy-Time v0.11
+
+
+=== INIT ===
+
+2011-09-11  Bjoern Koch  <H.Humpel@gmx.de>
+
+ * Initial release.
+   * SideCandy (SideCandy 0.10 vanilla, to be used as a template),
+   * SideCandy-CPU,
+   * SideCandy-Network and
+   * SideCandy-Time (all taken from SideCandy 0.10)
+

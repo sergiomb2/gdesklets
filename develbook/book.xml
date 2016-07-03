@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+    "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+]>
+
+<book xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+
+  <!-- bookinfo -->
+  <xi:include href="info.xml"/>
+
+  <!--
+    Administration
+      Files and Directories
+      Transferring Configuration
+      Installing Desklets Manually
+      Removing Desklets Manually
+      Uninstalling Desklets Manually
+ 
+  -->
+
+  <!-- preface -->
+  <xi:include href="preface.xml"/>
+
+  <!-- chapters -->
+  <xi:include href="admin.xml"/>
+  <xi:include href="framework.xml"/>
+  <xi:include href="meta.xml"/>
+  <xi:include href="dsp.xml"/>
+  <xi:include href="layout.xml"/>
+  <xi:include href="script.xml"/>
+  <xi:include href="ctrl.xml"/>
+  <xi:include href="prefs.xml"/>
+  <xi:include href="libdesklets.xml"/>
+  <xi:include href="tutor.xml"/>
+
+
+  <!-- appendices -->
+  <xi:include href="apdx-datatypes.xml"/>
+  <xi:include href="apdx-cursors.xml"/>
+  <xi:include href="apdx-features.xml"/>
+
+</book>

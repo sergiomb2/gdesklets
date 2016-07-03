@@ -1,0 +1,113 @@
+<section id="script-menu" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Custom Menus</title>
+
+  <para>Each display element can have its own custom menu by setting the
+    <property>menu</property> property.</para>
+
+        
+<section><title>Menus</title>
+
+  <para>A menu is a list of <literal>MenuItem</literal> objects. To create
+    a menu item, use the <literal>MenuItem</literal> constructor.</para>
+    
+    <programlisting><![CDATA[
+mymenu = [MenuItem("/item1", "New", icon = "gfx/new.png", callback = do_new),
+          MenuItem("/item2", "Open", icon = "gfx/open.png", callback = do_open),
+          MenuItem("/item3", "Save", icon = "gfx/save.png", callback = do_save)]
+]]></programlisting>
+    
+</section>
+
+
+<section><title>The MenuItem Constructor</title>
+    
+  <para>The <literal>MenuItem</literal> constructor takes a bunch of arguments,
+    of which many are optional. Menu items can have:</para>
+    
+  <itemizedlist>
+    <listitem>a path</listitem>
+    <listitem>a label text</listitem>
+    <listitem>an icon</listitem>
+    <listitem>a callback handler</listitem>
+    <listitem>a list of arguments for the callback handler</listitem>
+    <listitem>a flag for being selectable or not (greyed out)</listitem>
+  </itemizedlist>
+  
+  <para>These are arguments to the constructor, but also properties of the
+    <literal>MenuItem</literal> objects. So it's possible to change values any
+    time by assigning new values to the properties.</para>
+    
+  <para>Each item has a unique path within the menu. This path is used for
+    setting submenus. Each path begins with a slash ("/") character and is
+    constructed similar to a filesystem path, e.g. "<literal>/mymenu</literal>".
+    </para>
+    
+</section>
+
+  
+      
+<section><title>Adding Submenus</title>
+
+  <para>In order to add a submenu, you simply add a new item with an extended path,
+    e.g. "<literal>/mymenu/mysubmenu</literal>". <application>gDesklets</application>
+    will setup the menu structure automatically, so you don't have to bother
+    with attaching submenus to menu items manually.</para>
+
+  <programlisting><![CDATA[
+mymenu = [MenuItem("/item1", "New", icon = "gfx/new.png", callback = do_new),
+          MenuItem("/item2", "Open", icon = "gfx/open.png"),
+          MenuItem("/item2/foo", "from file", callback = do_open_file),
+          MenuItem("/item2/bar", "from URL", callback = do_open_url),
+          MenuItem("/item3", "Save", icon = "gfx/save.png", callback = do_save)]
+]]></programlisting>
+
+  <para>Menu items with submenus are not clickable and thus don't need any callback
+    handler, of course.</para>
+
+  <note>
+    <para>Navigating submenus with the mouse is considered difficult by many users.
+      If possible, you should avoid making deeply nested submenus!</para>
+  </note>
+</section>
+
+<section><title>Adding a Separator Line</title>
+
+  <para>A menu item with only a path will be displayed as a separator line.</para>
+
+  <programlisting><![CDATA[
+mymenu = [MenuItem("/item1", "New", icon = "gfx/new.png", callback = do_new),
+          MenuItem("/sep"),
+          MenuItem("/item2", "Open", icon = "gfx/open.png", callback = do_open),
+          MenuItem("/item3", "Save", icon = "gfx/save.png", callback = do_save)]
+]]></programlisting>
+
+</section>
+
+
+
+<section><title>Displaying a Menu</title>
+
+  <para>Whenever you assign a list of <literal>MenuItem</literal> objects to the
+    <property>menu</property> property of a display element, that menu will be
+    displayed.</para>
+
+  <programlisting><![CDATA[
+...
+<label value="Blah" on-menu="self.menu = mymenu"/>
+...
+<script>
+  def do_new(): ...
+  def do_open(): ...
+  def do_save(): ...
+  
+  mymenu = [MenuItem("/item1", "New", icon = "gfx/new.png", callback = do_new),
+            MenuItem("/sep"),
+            MenuItem("/item2", "Open", icon = "gfx/open.png", callback = do_open),
+            MenuItem("/item3", "Save", icon = "gfx/save.png", callback = do_save)]
+</script>
+...
+]]></programlisting>
+
+</section>
+
+</section>

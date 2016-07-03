@@ -1,0 +1,262 @@
+<section id="ctrl-write" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Writing Controls</title>
+
+<section><title>Important Rules!</title>
+
+  <para>Before you start publishing controls, please thoroughly read these
+    rules. They make both your and the users' lives easier.</para>
+
+  <orderedlist>
+    <listitem>Before writing a new control, please check if the functionality
+      you need has already been implemented by somebody else. There's no point
+      in having two or more controls with different interfaces doing the same
+      thing!</listitem>
+
+    <listitem>If there already is a control doing what you want, but you want
+      to make a more efficient implementation, please implement the interfaces
+      of the other control to ensure backwards compatibility.</listitem>
+
+    <listitem><emphasis>Never</emphasis> put applet-specific functionality
+      into a control! Controls are meant to be shared among applets.</listitem>
+
+    <listitem>Never publish a control without obeying rules 1 - 3!</listitem>
+
+  </orderedlist>
+
+</section>
+
+
+
+<section><title>Anatomy of Controls</title>
+
+  <para>Controls are Python classes derived from the <literal>Control</literal>
+    base class and from the interfaces which they implement. The base class
+    can be loaded from <literal>libdesklets.controls</literal>:</para>
+
+  <programlisting>
+from libdesklets.controls import Control
+  </programlisting>
+
+  <para>Each control has its own directory, which at least consists of the
+    <filename>__init__.py</filename> file. That file initializes the control
+    and provides a function <function>get_class()</function> returning the
+    main class (not an instance of the class) of the control.</para>
+
+  <para>The typical directory structure of a control looks like:</para>
+  <programlisting>
+MyControl/
+  IMyInterface.py
+  __init__.py
+  </programlisting>
+
+  <para>The control directory has to include all interface files from which the
+    control inherits.
+    By convention, the filenames of interface files start with an
+    "<filename>I</filename>" to distinguish them from regular files.
+    The file <filename>__init__.py</filename> is also mandatory. If neccessary,
+    a control can also include other files as well, which are loaded by the
+    initialization file. You should, however, keep in mind to design controls
+    as generic as possible.</para>
+
+</section>
+
+
+<section><title>Deriving from Interfaces</title>
+
+  <para>Every control implements one or more interfaces. Since an interface
+    is a simple Python class, you just have to derive your control from the
+    interface classes:</para>
+
+  <programlisting>
+from libdesklets.controls import Control
+from IMyInterface import IMyInterface
+
+class MyControl(Control, IMyInterface):
+
+    def __init__(self):
+
+        Control.__init__(self)
+        ...
+
+    ...
+
+
+def get_class(): return MyControl
+  </programlisting>
+
+  <para>Because interfaces are implementation-less, there is no
+    super-constructor to invoke for them.</para>
+
+  <para>Always remember to derive from the <literal>Control</literal> class and
+    to invoke its constructor to get a valid control class.</para>
+
+</section>
+
+
+
+<section><title>Implementing Properties</title>
+
+  <para>Every property in the interfaces must be implemented by creating
+    appropriate <literal>property</literal> objects.</para>
+
+  <para>Python's <literal>property</literal> constructor takes four arguments,
+    of which are all optional. From the Python inline help:</para>
+
+  <programlisting><![CDATA[
+property(fget=None, fset=None, fdel=None, doc=None) -> property attribute
+
+# fget is a function to be used for getting an attribute value. Likewise,
+# fset is a function for setting an attribute and fdel is a function for
+# deleting an attribute.  Typical use is to define a managed attribute x:
+class C(object):
+    def getx(self): return self.__x
+    def setx(self, value): self.__x = value
+    def delx(self): del self.__x
+    x = property(getx, setx, delx, "I'm the 'x' property.")
+  ]]></programlisting>
+
+  <para>The <literal>fdel</literal> argument is not needed for controls.
+    If a property is not readable, you also omit the <literal>fget</literal>
+    argument or set it to <literal>None</literal>. Likewise, for non-writable
+    properties, omit the <literal>fset</literal> argument. The read-write
+    permissions must match those
+    <link linkend="ctrl-write-interface-declare">declared by the interfaces.</link>
+    </para>
+
+  <para>The <literal>doc</literal> argument can be used for describing the
+    property in human-readable form. It is highly recommended to give a
+    useful description for every property. Doing so makes it easier for
+    others to use your control.</para>
+</section>
+
+
+
+<section><title>Methods of the Control Class</title>
+
+  <para>The <literal>Control</literal> class provides you with all you need for
+    writing compliant controls. The following methods can be used inside
+    controls:</para>
+
+  <informaltable frame="topbot">
+  <tgroup>
+
+  <thead>
+    <row>
+      <entry>Method Name</entry>
+      <entry>Arguments</entry>
+      <entry>Description</entry>
+    </row>
+  </thead>
+
+  <tbody>
+    <row>
+      <entry valign="top">__init__</entry>
+      <entry valign="top"></entry>
+      <entry valign="top">The constructor of the <literal>Control</literal>.
+        This always has to be called as the super-constructor within the
+        constructor.</entry>
+    </row>
+    <row>
+      <entry valign="top">_add_timer</entry>
+      <entry valign="top">
+        <para>interval: integer</para>
+        <para>callback: function</para>
+        <para>*args</para>
+      </entry>
+      <entry valign="top">This is a convenience function for adding a timeout
+        handler which gets called after <literal>interval</literal> milliseconds.
+        If the <literal>callback</literal> function returns
+        <literal>True</literal>, the callback will be called again after the
+        next timeout. This method returns an ID which can be used with
+        <function>_remove_timer()</function> to remove the timer again.</entry>
+    </row>
+    <row>
+      <entry valign="top">_remove_timer</entry>
+      <entry valign="top">
+        <para>ident: integer</para>
+      </entry>
+      <entry valign="top">Removes the timer with the given ID
+        <literal>ident</literal>.</entry>
+    </row>
+    <row>
+      <entry valign="top">_shutdown</entry>
+      <entry valign="top"></entry>
+      <entry valign="top">This is a hook method which can be overridden in
+        order to perform cleanup operations before the control is being closed.
+        </entry>
+    </row>
+    <row>
+      <entry valign="top">_update</entry>
+      <entry valign="top">
+        <para>prop: string</para>
+      </entry>
+      <entry valign="top">Notifies observers of property <literal>prop</literal>
+        that the value has changed. You have to call this method whenever
+        a property which is watchable using
+        <link linkend="ctrl-use-watch"><function>bind()</function></link>
+        changes its value.
+        Of course it does not make sense for all properties to be watchable.
+        Always call this method <emphasis>after</emphasis> the change has
+        actually taken place.</entry>
+    </row>
+
+  </tbody>
+
+  </tgroup>
+  </informaltable>
+
+</section>
+
+
+
+<section id="ctrl-write-external"><title>Other Capabilities of Controls</title>
+
+  <para>In order to use some external Python bindings, the 
+    <literal>Control</literal> class needs support from the core
+    <application>gDesklets</application> program. The following is a
+    short list of supported external programs.</para>
+
+  <section id="ctrl-write-external-dbus"><title>dbus</title>
+
+    <para>The <application>dbus GLib</application> main loop is
+      supported, if the user's system provides the optional
+      <application>dbus-python</application> bindings. For example,
+      in your <literal>Control</literal>'s <filename>__init__.py</filename>
+      you could receive a callback whenever
+      <application>NetworkManager</application> emits the
+      <literal>StateChanged</literal> signal. In this example, the
+      <literal>Control</literal>'s <function>__state_changed()</function>
+      function will be called.</para>
+
+    <programlisting><![CDATA[
+import dbus
+
+class NetworkManager(Control, INetworkManager):
+
+    BUS_NAME = 'org.freedesktop.NetworkManager'
+    OBJ_PATH = '/org/freedesktop/NetworkManager'
+
+    def __init__(self):
+
+        self.__bus = dbus.SystemBus()
+        self.__nm = self.__bus.get_object(self.BUS_NAME, self.OBJ_PATH)
+        self.__bus.add_signal_receiver(self.__state_changed, 'StateChanged',
+                                        bus_name = self.BUS_NAME,
+                                        path = self.OBJ_PATH)
+        Control.__init__(self)
+
+    ...
+
+    def __state_changed(self, *args, **kwargs):
+        print "state changed:"
+        for a in args:
+            print a
+    ]]></programlisting>
+
+    </section>
+
+
+</section>
+
+
+</section>

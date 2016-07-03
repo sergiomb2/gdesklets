@@ -1,0 +1,75 @@
+<section id="ctrl-write-interface" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Writing Interfaces</title>
+
+<section><title>Anatomy of an Interface</title>
+
+  <para>A control interface file is a Python module whose name, by convention,
+    starts with an "<filename>I</filename>". The module contains a class of the
+    same name without any implementations, deriving from the
+    <literal>Interface</literal> base class. It only contains comments and
+    declarations of properties.</para>
+
+  <para>The neccessary classes <literal>Interface</literal> and
+    <literal>Permission</literal> can both be loaded from
+    <literal>libdesklets.controls</literal>:</para>
+
+  <programlisting>
+from libdesklets.controls import Interface, Permission
+  </programlisting>
+
+</section>
+
+
+
+<section id="ctrl-write-interface-declare"><title>Declaring Properties</title>
+
+  <para>A property declaration consist of the property's name along with its
+    access permission. The valid permissions are:</para>
+
+  <itemizedlist>
+    <listitem><literal>Permission.READ</literal>
+      - the property is read-only</listitem>
+    <listitem><literal>Permission.WRITE</literal>
+      - the property is write-only</listitem>
+    <listitem><literal>Permission.READWRITE</literal>
+      - the property is readable and writable</listitem>
+  </itemizedlist>
+
+  <para>A property is declared by assigning the appropriate permission object
+    to its name, like this:</para>
+
+  <programlisting>
+myproperty = Permission.READWRITE
+  </programlisting>
+
+</section>
+
+
+
+<section><title>Deriving from Interfaces</title>
+
+  <para>Interfaces can extend other interfaces by deriving from them. A control
+    implementing the extended interface automatically implements the original
+    interface, too.</para>
+
+  <para>Since interfaces are classes, you just have to load the original class
+    and derive from it:</para>
+
+  <programlisting>
+from IOriginal1 import IOriginal1
+from IOriginal2 import IOriginal2
+
+class IExtended(IOriginal1, IOriginal2):
+
+    ...
+  </programlisting>
+
+  <para>It is an error if a property is declared more than once in the
+    class hierarchy.</para>
+
+  <para>Please include the original interface files with your control as well,
+    since they are required for running the control.</para>
+
+</section>
+
+</section>
