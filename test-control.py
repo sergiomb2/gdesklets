@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/usr/bin/python2
 # A simple script to test controls interactively.
 
 from plugin.Interface import Interface

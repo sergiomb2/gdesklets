@@ -136,7 +136,7 @@ class Installer_Package(Plugin):
             os.system("cp -r %s %s/" % (d, os.path.join(USERHOME, "Displays")))
         sensors = pkg.find_sensors()
         for s in sensors:
-            os.system("python %s --nomsg" % (s))
+            os.system("python2 %s --nomsg" % (s))
 
         return dirs
 
