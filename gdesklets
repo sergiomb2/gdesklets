@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/usr/bin/python2
 
 from main import client, DISPLAY, HOME, USERHOME
 from main import LOGFILE, LOG_PATH, PID_PATH, REGISTRY_PATH, SOCKET_PATH
