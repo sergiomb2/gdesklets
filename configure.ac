@@ -63,7 +63,7 @@ AC_CHECK_HEADER([$PYTHON_PREFIX/include/python$PYTHON_VERSION/Python.h],,
     AC_ERROR([Can't find Python.h! You will need python's development package to compile gDesklets.]))
 AC_SUBST(PYTHON_CFLAGS)
 
-PKG_CHECK_MODULES(GDESKLETS, pygtk-2.0 >= 2.10.0 gnome-python-2.0 >= 2.12.0)
+PKG_CHECK_MODULES(GDESKLETS, pygtk-2.0 >= 2.10.0)
 AC_SUBST(GDESKLETS_CFLAGS)
 AC_SUBST(GDESKLETS_LIBS)
 
