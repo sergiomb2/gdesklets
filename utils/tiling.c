@@ -1,8 +1,6 @@
 #include "render.h"
 #include "utils.h"
-
-#include <pygtk/pygtk.h>
-
+#include <pygobject.h>
 
 /* similar to PyObject_HEAD but for PyGObject */
 #define PyGObject_HEAD PyObject_HEAD \
@@ -10,9 +8,6 @@
                        PyObject *inst_dict; \
                        PyObject *weakreflist; \
                        GSList *closures;
-
-/* type of base class */
-static PyTypeObject *PyGtkImage_Type;
 
 /* type of TImage */
 typedef struct {
@@ -40,8 +35,6 @@ tiling_init (PyObject *self, PyObject *args, PyObject *kwargs)
     PyErr_SetString (PyExc_RuntimeError, "Couldn't create TImage object");
     return -1;
   }
-
-  pygobject_register_wrapper (self);
 
   TIMAGE (self)->invalidated = TRUE;
   TIMAGE (self)->width       = 1;
@@ -394,41 +387,13 @@ static PyTypeObject t_tiling = {
 };
 
 
-static void
-tiling_register_classes (PyObject *obj)
-{
-  PyObject *module = PyImport_ImportModule ("gtk");
-
-  if (G_LIKELY (module != NULL)) {
-    PyObject *moddict = PyModule_GetDict (module);
-
-    PyGtkImage_Type = (PyTypeObject *) PyDict_GetItemString (moddict, "Image");
-    if (G_UNLIKELY (!PyGtkImage_Type)) {
-      PyErr_SetString (PyExc_ImportError, "Can't import name Image from gtk.");
-      return;
-    }
-
-  } else {
-    PyErr_SetString (PyExc_ImportError, "Can't import gtk.");
-    return;
-  }
-
-  pygobject_register_class (obj, "Tiling", GTK_TYPE_IMAGE, &t_tiling,
-                            Py_BuildValue ("(O)", PyGtkImage_Type));
-}
-
-
 void
 inittiling (void)
 {
   PyObject *module, *dict;
 
-  init_pygobject ();
-
   module = Py_InitModule ("tiling", tiling_functions);
   dict = PyModule_GetDict (module);
-
-  tiling_register_classes (dict);
 
   if (PyErr_Occurred ())
     Py_FatalError ("Can't initialise module tiling.");
