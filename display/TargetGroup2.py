@@ -12,7 +12,7 @@ import gtk
 import os
 
 try:
-    from utils.tiling import Tiling
+    from utils.TilingImage import TilingImage as Tiling
 except ImportError:
     import sys
     log("Could not import tiling module!")
@@ -103,7 +103,8 @@ class TargetGroup(ContainerTarget):
 
         r, g, b, a = utils.parse_color(color)
         w, h = self.__layout.size_request()
-        self.__image.set_from_color(r, g, b, a)
+        #self.__image.set_from_color(r, g, b, a)
+        self.__image.set_from_color(color)
         self.__image.tile(w, h)
 
 

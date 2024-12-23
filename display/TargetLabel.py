@@ -9,7 +9,7 @@ import pango
 import re
 
 try:
-    from utils.tiling import Tiling
+    from utils.TilingImage import TilingImage as Tiling
 except ImportError:
     import sys
     log("Could not import tiling module!")
@@ -179,7 +179,7 @@ class TargetLabel(DisplayTarget):
 #        pmap.draw_layout(gc, 0, height, layout)
 
         #  then copy to image
-        self.__widget.set_from_drawable(pmap, True)
+        # self.__widget.set_from_drawable(pmap, True)
         width, height = self.__size
         if (width and height):
             self.__widget.render(width, height, a / 255.0, 1)

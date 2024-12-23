@@ -1,5 +1,5 @@
 try:
-    from utils.tiling import Tiling
+    from utils.TilingImage import TilingImage as Tiling
 except ImportError:
     import sys
     log("Could not import tiling module!")

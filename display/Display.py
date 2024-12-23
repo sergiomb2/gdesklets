@@ -28,7 +28,7 @@ import os
 import re
 
 try:
-    from utils.tiling import Tiling
+    from utils.TilingImage import TilingImage as Tiling
 except ImportError:
     log("Could not import tiling module!")
     sys.exit(1)

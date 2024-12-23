@@ -1,6 +1,6 @@
 from utils import wallpaper
 from utils.BGWatcher import BGWatcher
-from utils.tiling import Tiling
+from utils.TilingImage import TilingImage as Tiling
 
 import gobject
 import gtk

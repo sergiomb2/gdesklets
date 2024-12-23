@@ -8,7 +8,7 @@ import os
 import gtk
 
 try:
-    from utils.tiling import Tiling
+    from utils.TilingImage import TilingImage as Tiling
 except ImportError:
     import sys
     log("Could not import tiling module!")
@@ -35,7 +35,7 @@ class TargetFrame(ContainerTarget):
         for x, y in ((0, 1), (1, 0), (2, 1), (1, 2),
                      (0, 0), (2, 0), (2, 2), (0, 2)):
             img = Tiling()
-            img.set_from_color(r, g, b, a)
+            img.set_from_color("black")
             img.show()
             self.__table.attach(img, x, x + 1, y, y + 1)
             self.__images.append(img)
@@ -142,7 +142,7 @@ class TargetFrame(ContainerTarget):
 
         r, g, b, a = utils.parse_color(color)
         for cnt in range(8):
-            self.__images[cnt].set_from_color(r, g, b, a)
+            self.__images[cnt].set_from_color(color)
 
         self.__redraw_frame()
 
