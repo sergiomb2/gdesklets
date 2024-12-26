@@ -1,26 +1,30 @@
-#%define alphatag beta
+#define alphatag beta
 
 Name:       gdesklets
-Version:    0.36.4
-Release:    0.1%{?dist}
+Version:    0.36.4~beta
+Release:    1%{?dist}
 Summary:    Architecture for desktop applets
-Group:      User Interface/Desktops
 License:    GPLv2+
 URL:        https://launchpad.net/gdesklets
-#Source0:    https://launchpad.net/gdesklets/0.3x/release-of-%{version}/+download/%{name}-%{version}.tar.bz2
-Source0:    %{name}-%{version}.tar.bz2
+Source0:    https://launchpad.net/gdesklets/0.3x/release-of-%{version}/+download/%{name}-%{version}.tar.bz2
 
-BuildRequires:  python2-devel > 2.0.0, pygtk2-devel > 2.4.0
-BuildRequires:  librsvg2-devel, libgtop2-devel >= 2.8.0, gettext, gvfs-devel
-BuildRequires:  libXau-devel, libXdmcp-devel, intltool, gnome-python2-devel
-BuildRequires:  libgnome-devel > 2.6.0, desktop-file-utils, libcap-devel
-BuildRequires:  autoconf automake libtool
+BuildRequires:  python2-devel > 2.0.0
+BuildRequires:  gtk2-devel > 2.4.0
+BuildRequires:  pygtk2-devel > 2.4.0
+BuildRequires:  pygobject2-devel
+BuildRequires:  librsvg2-devel
+BuildRequires:  libgtop2-devel >= 2.8.0
+BuildRequires:  libtool
+BuildRequires:  gettext-devel
+BuildRequires:  intltool
+BuildRequires:  desktop-file-utils
 BuildRequires:  libappstream-glib
 
 Requires(post): desktop-file-utils
 Requires(postun): desktop-file-utils
 Requires: python-icalendar
 
+Requires:   pygtk2
 
 %description
 'gDesklets' provides an advanced architecture for desktop applets -
@@ -32,22 +36,23 @@ bars, weather sensors, news tickers.
 %setup -q
 
 %build
-autoreconf --install
-intltoolize
+autoreconf -fiv
 %configure \
  --disable-static \
+ --enable-debug \
  --disable-update-check
 
-make %{?_smp_mflags}
+%make_build
 
 %install
-%make_install
-#make install DESTDIR=%{buildroot} datadir=/usr/share
+make install DESTDIR=%{buildroot}
 %find_lang %{name}
 desktop-file-install \
     --delete-original \
     --dir=%{buildroot}%{_datadir}/applications \
         %{buildroot}%{_datadir}/applications/%{name}.desktop
+
+mkdir -p  %{buildroot}{%{_bindir},%{_datadir}/%{name}/data/,%{_datadir}/%{name}/Displays/,%{_datadir}/%{name}/Controls/}
 
 # don't want libtool archives
 find %{buildroot} -name \*.la -delete
@@ -55,19 +60,6 @@ find %{buildroot} -name \*.la -delete
 install -D -m0644 contrib/bash/gdesklets %{buildroot}%{_sysconfdir}/bash_completion.d/gdesklets
 install -Dp gdesklets.appdata.xml %{buildroot}/%{_datadir}/appdata/%{name}.appdata.xml
 appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata.xml
-
-%post
-/bin/touch --no-create %{_datadir}/mime/packages &>/dev/null || :
-/usr/bin/update-desktop-database &> /dev/null || :
-
-%postun
-if [ $1 -eq 0 ] ; then
-  /usr/bin/update-mime-database %{_datadir}/mime &> /dev/null || :
-fi
-/usr/bin/update-desktop-database &> /dev/null || :
-
-%posttrans
-/usr/bin/update-mime-database %{?fedora:-n} %{_datadir}/mime &> /dev/null || :
 
 %files -f %{name}.lang
 %doc AUTHORS ChangeLog NEWS README
@@ -77,16 +69,62 @@ fi
 %{_datadir}/icons/gnome/48x48/mimetypes/*.png
 %{_datadir}/pixmaps/gdesklets.png
 %{_sysconfdir}/xdg/autostart/gdesklets.desktop
-%{_sysconfdir}/bash_completion.d/gdesklets
-%{_datadir}/applications/gdesklets.desktop
+%{_datadir}/applications/*.desktop
+%{_datadir}/gdesklets/
 %{_libdir}/gdesklets/
-%{_mandir}/man1/gdesklets.*
+%{_mandir}/man1/*
 %{_datadir}/appdata/gdesklets.appdata.xml
 
 
 %changelog
-* Sun Oct 18 2015 Sérgio Basto <sergio@serjux.com> - 0.36.4-0.1
-- Update to 0.36.4 Beta.
+* Thu Dec 26 2024 Sérgio Basto <sergio@serjux.com> - 0.36.4~beta-1
+- 0.36.4 Beta 1, try 3
+  - try 2, Sun Oct 01 2023 0.36.4-0.1
+  - try 1, Sun Oct 18 2015 0.36.4-0.1
+
+* Tue Dec 24 2024 Sérgio Basto <sergio@serjux.com> - 0.36.3-39
+- pygtk2 is needed provides the import gtk
+
+* Mon Nov 09 2020 Sérgio Basto <sergio@serjux.com> - 0.36.3-37
+- No gnome-python2
+
+* Tue Sep 10 2019 Sérgio Basto <sergio@serjux.com> - 0.36.3-36
+- Remove BR: libXau-devel libXdmcp-devel libgnome-devel gvfs-devel libcap-devel
+  seems they aren't in use.
+
+* Thu Jul 25 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.36.3-35
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
+
+* Thu Jan 31 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.36.3-34
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+
+* Sat Oct 06 2018 Sérgio Basto <sergio@serjux.com> - 0.36.3-33
+- Fix FTBFS
+
+* Fri Jul 13 2018 Fedora Release Engineering <releng@fedoraproject.org> - 0.36.3-32
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
+
+* Wed Feb 07 2018 Fedora Release Engineering <releng@fedoraproject.org> - 0.36.3-31
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
+
+* Fri Jan 12 2018 Leigh Scott <leigh123linux@googlemail.com> - 0.36.3-30
+- Add missing requires pygtk2
+- Fix shebangs so package requires python2
+
+* Wed Aug 02 2017 Fedora Release Engineering <releng@fedoraproject.org> - 0.36.3-29
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Binutils_Mass_Rebuild
+
+* Wed Jul 26 2017 Fedora Release Engineering <releng@fedoraproject.org> - 0.36.3-28
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
+
+* Tue Jun 13 2017 Kalev Lember <klember@redhat.com> - 0.36.3-27
+- Rebuilt for libgtop2 soname bump
+
+* Fri Feb 10 2017 Fedora Release Engineering <releng@fedoraproject.org> - 0.36.3-26
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
+* Wed Feb 03 2016 Fedora Release Engineering <releng@fedoraproject.org> - 0.36.3-25
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
 
 * Wed Sep 23 2015 Sérgio Basto <sergio@serjux.com> - 0.36.3-24
 - Minor simplification
