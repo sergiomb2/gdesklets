@@ -56,6 +56,8 @@ AC_ARG_ENABLE(update-check,
               [enable_update_check=True])
 AC_SUBST(enable_update_check)
 
+# Explicitly find Python 2.x
+AC_PATH_PROG([PYTHON], [python2], [], [$PATH])
 AM_PATH_PYTHON([2.4])
 PYTHON_PREFIX=`python2 -c "import sys; print sys.prefix"`
 PYTHON_CFLAGS="-I$PYTHON_PREFIX/include/python$PYTHON_VERSION"
