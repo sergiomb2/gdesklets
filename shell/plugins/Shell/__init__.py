@@ -145,10 +145,5 @@ class UI_Shell(Plugin,):
 def get_class(): return UI_Shell
 
 
-try:
-    import pygtk; pygtk.require("2.0")
-except:
-    pass
-
 gtk.gdk.threads_init()
 

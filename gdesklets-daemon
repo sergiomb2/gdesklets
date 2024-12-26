@@ -16,7 +16,6 @@ import main
 import gobject
 import gtk
 import os
-import pygtk
 import sys
 import utils
 # No big deal if this fails
@@ -30,7 +29,7 @@ except:
 
 # setup GTK
 try:
-    pygtk.require("2.0")
+    import gtk
 except StandardError:
     print _("You need a recent version of PyGTK to run this program.\n")
     sys.exit(1983)

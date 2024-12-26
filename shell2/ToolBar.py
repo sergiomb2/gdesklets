@@ -1,4 +1,3 @@
-import pygtk
 import gtk
 
 

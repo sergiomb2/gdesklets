@@ -5,7 +5,6 @@ srcdir=`dirname $0`
 test -z "$srcdir" && srcdir=.
 
 PKG_NAME="gDesklets"
-ACLOCAL_FLAGS="-I macros $ACLOCAL_FLAGS"
 
 (test -f "$srcdir/configure.ac") || {
     echo -n "**Error**: Directory "\`$srcdir\'" does not look like the"

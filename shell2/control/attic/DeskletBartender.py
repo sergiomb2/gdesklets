@@ -1,6 +1,5 @@
 ''' DeskletBartender - the GTK-based simple interface to desklets management '''
 
-import pygtk
 import gtk
 import gobject
 import re # just needed for parsing the widget descriptions
