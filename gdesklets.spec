@@ -1,6 +1,6 @@
 %global build_type_safety_c 0
 
-%define prerel beta1
+%define prerel beta2
 %define version_real 0.36.4_%{prerel}
 
 
@@ -37,7 +37,7 @@ bars, weather sensors, news tickers.
 
 
 %prep
-%setup -q -n %{name}-%{version_real}
+%autosetup -p1 -n %{name}-%{version_real}
 
 %build
 autoreconf -fiv
