@@ -56,7 +56,7 @@ AC_ARG_ENABLE(update-check,
               [enable_update_check=True])
 AC_SUBST(enable_update_check)
 
-AM_PATH_PYTHON([2.4])
+AM_PATH_PYTHON([2.4], [], [python2.7 python2])
 PYTHON_PREFIX=`python2 -c "import sys; print sys.prefix"`
 PYTHON_CFLAGS="-I$PYTHON_PREFIX/include/python$PYTHON_VERSION"
 AC_CHECK_HEADER([$PYTHON_PREFIX/include/python$PYTHON_VERSION/Python.h],,
