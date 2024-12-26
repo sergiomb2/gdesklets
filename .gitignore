@@ -34,3 +34,5 @@ INSTALL
 *.lo
 *.la
 *.gmo
+*.orig
+*.rej
