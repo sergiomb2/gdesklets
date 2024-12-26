@@ -1,12 +1,16 @@
-#define alphatag beta
+%global build_type_safety_c 0
+
+%define prerel beta1
+%define version_real 0.36.4_%{prerel}
+
 
 Name:       gdesklets
-Version:    0.36.4~beta
+Version:    0.36.4%{?prerel:~%{prerel}}
 Release:    1%{?dist}
 Summary:    Architecture for desktop applets
 License:    GPLv2+
-URL:        https://launchpad.net/gdesklets
-Source0:    https://launchpad.net/gdesklets/0.3x/release-of-%{version}/+download/%{name}-%{version}.tar.bz2
+URL:        https://github.com/sergiomb2/gdesklets
+Source0:    https://github.com/sergiomb2/gdesklets/archive/v%{version_real}/%{name}-%{version}.tar.gz
 
 BuildRequires:  python2-devel > 2.0.0
 BuildRequires:  gtk2-devel > 2.4.0
@@ -22,7 +26,7 @@ BuildRequires:  libappstream-glib
 
 Requires(post): desktop-file-utils
 Requires(postun): desktop-file-utils
-Requires: python-icalendar
+#Requires: python-icalendar
 
 Requires:   pygtk2
 
@@ -33,7 +37,7 @@ bars, weather sensors, news tickers.
 
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version_real}
 
 %build
 autoreconf -fiv
@@ -57,7 +61,7 @@ mkdir -p  %{buildroot}{%{_bindir},%{_datadir}/%{name}/data/,%{_datadir}/%{name}/
 # don't want libtool archives
 find %{buildroot} -name \*.la -delete
 
-install -D -m0644 contrib/bash/gdesklets %{buildroot}%{_sysconfdir}/bash_completion.d/gdesklets
+install -D -m0644 contrib/bash/gdesklets %{buildroot}/%{_datadir}/bash-completion/completions/gdesklets
 install -Dp gdesklets.appdata.xml %{buildroot}/%{_datadir}/appdata/%{name}.appdata.xml
 appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata.xml
 
@@ -74,6 +78,9 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata
 %{_libdir}/gdesklets/
 %{_mandir}/man1/*
 %{_datadir}/appdata/gdesklets.appdata.xml
+%dir %{_datadir}/bash-completion
+%dir %{_datadir}/bash-completion/completions
+%{_datadir}/bash-completion/completions/gdesklets
 
 
 %changelog
