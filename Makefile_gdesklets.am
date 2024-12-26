@@ -110,4 +110,6 @@ install-data-hook:
 		chmod 0755 $(DESTDIR)$(bindir); \
 	fi
 
-	$(LN_S) -f ${coredir}/gdesklets $(DESTDIR)$(bindir)/gdesklets;
+	$(LN_S) -r ${coredir}/gdesklets $(DESTDIR)$(bindir)/gdesklets;
+	install -D -m0644 contrib/bash/gdesklets $(DESTDIR)${datadir}/bash-completion/completions/gdesklets;
+	install -Dp gdesklets.appdata.xml $(DESTDIR)${datadir}/appdata/gdesklets.appdata.xml;

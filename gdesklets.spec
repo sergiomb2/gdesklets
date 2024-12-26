@@ -61,8 +61,6 @@ mkdir -p  %{buildroot}{%{_bindir},%{_datadir}/%{name}/data/,%{_datadir}/%{name}/
 # don't want libtool archives
 find %{buildroot} -name \*.la -delete
 
-install -D -m0644 contrib/bash/gdesklets %{buildroot}/%{_datadir}/bash-completion/completions/gdesklets
-install -Dp gdesklets.appdata.xml %{buildroot}/%{_datadir}/appdata/%{name}.appdata.xml
 appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata.xml
 
 %files -f %{name}.lang
