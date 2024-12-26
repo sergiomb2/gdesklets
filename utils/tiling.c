@@ -1,70 +1,22 @@
 #include "render.h"
 #include "utils.h"
-#include <pygobject.h>
-
-/* similar to PyObject_HEAD but for PyGObject */
-#define PyGObject_HEAD PyObject_HEAD \
-                       GObject *obj; \
-                       PyObject *inst_dict; \
-                       PyObject *weakreflist; \
-                       GSList *closures;
 
 /* type of TImage */
 typedef struct {
-  PyGObject_HEAD
+  GObject *obj;
+  PyObject *inst_dict;
+  PyObject *weakreflist;
+  GSList *closures;
   guint width;
   guint height;
   gboolean invalidated;
   GdkPixbuf *pbuf;
 } TImage;
+
 #define TIMAGE(object) ((TImage *) object)
 
 /* Declare entry point for python */
 PyMODINIT_FUNC inittiling (void);
-
-
-static int
-tiling_init (PyObject *self, PyObject *args, PyObject *kwargs)
-{
-  if (!PyArg_ParseTuple (args, ""))
-    return -1;
-
-  TIMAGE (self)->obj = g_object_new (GTK_TYPE_IMAGE, NULL);
-
-  if (!G_UNLIKELY (TIMAGE (self)->obj)) {
-    PyErr_SetString (PyExc_RuntimeError, "Couldn't create TImage object");
-    return -1;
-  }
-
-  TIMAGE (self)->invalidated = TRUE;
-  TIMAGE (self)->width       = 1;
-  TIMAGE (self)->height      = 1;
-  TIMAGE (self)->pbuf        = NULL;
-
-  return 0;
-}
-
-
-static void
-tiling_dealloc (TImage *self)
-{
-  GdkPixbuf *pbuf;
-  GObject *obj;
-
-  obj = TIMAGE (self)->obj;
-  pbuf = TIMAGE (self)->pbuf;
-
-  if (G_UNLIKELY (obj != NULL)) {
-    g_object_unref (obj);
-    obj = NULL;
-  }
-  if (G_LIKELY (pbuf != NULL)) {
-    g_object_unref (pbuf);
-    pbuf = NULL;
-  }
-
-  self->ob_type->tp_free ((PyObject *) self);
-}
 
 
 static PyObject *
@@ -327,75 +279,25 @@ set_from_background (PyObject *self, PyObject *args)
 }
 
 
-static PyMethodDef tiling_functions[] = { {NULL} };
-
-
-static PyMethodDef tiling_methods[] = {
-  {"get_size", (PyCFunction) get_size, METH_NOARGS, NULL},
-  {"set_from_color", (PyCFunction) set_from_color, METH_VARARGS, NULL},
-  {"set_from_data", (PyCFunction) set_from_data, METH_VARARGS, NULL},
-  {"set_from_file", (PyCFunction) set_from_file, METH_VARARGS, NULL},
-  {"set_from_drawable", (PyCFunction) set_from_drawable, METH_VARARGS, NULL},
-  {"set_from_background", (PyCFunction) set_from_background, METH_VARARGS, NULL},
-  {"tile", (PyCFunction) tile, METH_VARARGS, NULL},
-  {"render", (PyCFunction) render, METH_VARARGS, NULL},
-  {NULL}
-};
-
-
-static PyTypeObject t_tiling = {
-  PyObject_HEAD_INIT(NULL)
-  0,                                           /*tp_internal*/
-  "tiling.Tiling",                             /*tp_name*/
-  sizeof(TImage),                              /*tp_basicsize*/
-  0,                                           /*tp_itemsize*/
-  (destructor)tiling_dealloc,                  /*tp_dealloc*/
-  0,                                           /*tp_print*/
-  0,                                           /*tp_getattr*/
-  0,                                           /*tp_setattr*/
-  0,                                           /*tp_compare*/
-  0,                                           /*tp_repr*/
-  0,                                           /*tp_as_number*/
-  0,                                           /*tp_as_sequence*/
-  0,                                           /*tp_as_mapping*/
-  0,                                           /*tp_hash*/
-  0,                                           /*tp_call*/
-  0,                                           /*tp_str*/
-  0,                                           /*tp_getattro*/
-  0,                                           /*tp_setattro*/
-  0,                                           /*tp_as_buffer*/
-  Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,    /*tp_flags*/
-  0,                                           /*tp_doc*/
-  0,                                           /*tp_traverse*/
-  0,                                           /*tp_clear*/
-  0,                                           /*tp_richcompare*/
-  offsetof (PyGObject, weakreflist),           /*tp_weaklistoffset*/
-  0,                                           /*tp_iter*/
-  0,                                           /*tp_iternext*/
-  tiling_methods,                              /*tp_methods*/
-  0,                                           /*tp_members*/
-  0,                                           /*tp_getset*/
-  0,                                           /*tp_base*/
-  0,                                           /*tp_dict*/
-  0,                                           /*tp_descr_get*/
-  0,                                           /*tp_descr_set*/
-  offsetof (PyGObject, inst_dict),             /*tp_dictoffset*/
-  tiling_init,                                 /*tp_init*/
-  PyType_GenericAlloc,                         /*tp_alloc*/
-  PyType_GenericNew,                           /*tp_new*/
-  0                                            /*tp_free*/
-};
-
-
-void
+PyMODINIT_FUNC
 inittiling (void)
 {
-  PyObject *module, *dict;
+  static PyMethodDef tiling_methods[] = {
+    {"get_size", get_size, METH_NOARGS, NULL},
+    {"set_from_color", set_from_color, METH_VARARGS, NULL},
+    {"set_from_data", set_from_data, METH_VARARGS, NULL},
+    {"set_from_file", set_from_file, METH_VARARGS, NULL},
+    {"set_from_drawable", set_from_drawable, METH_VARARGS, NULL},
+    {"set_from_background", set_from_background, METH_VARARGS, NULL},
+    {"tile", tile, METH_VARARGS, NULL},
+    {"render", render, METH_VARARGS, NULL},
+    {NULL, NULL, 0, NULL}
+  };
 
-  module = Py_InitModule ("tiling", tiling_functions);
+  module = Py_InitModule ("tiling", (PyMethodDef *) tiling_methods);
   dict = PyModule_GetDict (module);
 
   if (PyErr_Occurred ())
-    Py_FatalError ("Can't initialise module tiling.");
+    Py_FatalError ("Can't initialise module tiling");
 }
 
